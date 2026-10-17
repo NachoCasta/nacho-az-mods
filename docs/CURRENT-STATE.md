@@ -93,7 +93,7 @@ Both CI jobs passed on source commit `6c6e82106de18843b4e242ba49706c61695fe329`.
 `usb-hub-support`; anonymous catalog, package size/SHA256, icon and source checks passed,
 as did the official SDK `repo check --download`. Legacy release assets were not replaced.
 
-## Current release: USB Hub Support 0.1.7
+## Previous release: USB Hub Support 0.1.7
 
 User-authorized metadata-only patch: the manifest now matches the simplified catalog
 summary and description, without internal implementation details or the emulator test count.
@@ -132,3 +132,15 @@ size, hash and retained location. This includes excluded raw research and genera
 those files remain local and must not be uploaded. The preserved SDK tool is under
 `local/core-workspace-cleanup/src/azhub/publishing/sdk-reference/tools/azmod-pack`.
 Active mod development and public documentation continue in this repository.
+
+## Current release: USB Hub Support 0.1.8
+
+Metadata-only patch adds a prominent external PRO DJ LINK incompatibility warning to the
+manifest and catalog. While enabled, the mod filters physical Link packets; turning the
+user's Link setting on does not disable it. Disable the mod and restart the AZ before
+using external players over Link. Hub sources are not shared with external players.
+The user reports hub use also worked with the Link setting on; external-player coexistence
+was not tested or implemented. Automatic disabling on the user setting is not implemented.
+All non-manifest package members are byte-identical to 0.1.7; only version and description
+changed. SDK package validation passed. No new AZ operation or runtime test was performed.
+See [0.1.8 release notes](releases/usb-hub-support-0.1.8.md).
