@@ -3,5 +3,28 @@
   "name": "Nacho AZ Mods",
   "maintainer": "NachoCasta",
   "homepage": "https://github.com/NachoCasta/nacho-az-mods",
-  "mods": []
+  "mods": [
+    {
+      "id": "hub-libraries",
+      "name": "Hub USB Libraries",
+      "version": "0.1.5",
+      "author": "NachoCasta",
+      "summary": "Browse rekordbox libraries from multiple USB sticks connected through a hub.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/hub-libraries-0.1.5/hub-libraries-0.1.5-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/hub-libraries-0.1.5/hub-libraries-0.1.5.azmod",
+      "sha256": "c93e6b35b5da0a0d0dffe45e3d9834287010ff41836b590095dea8393a2ba131",
+      "size": 308564,
+      "firmware": [
+        "ep147-9e9454e357389ece"
+      ],
+      "hooks": true,
+      "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
+      "updated": "2026-10-17",
+      "category": "tools",
+      "license": "GPL-3.0-only",
+      "min_core": "1.2.3",
+      "description": "Adds independent rekordbox libraries for up to eight hub USB sources on the researched XDJ-AZ firmware. Runs inside the AZ using internal member identities and loopback; physical Pro DJ Link packets are filtered. Includes a reversible compatibility patch for kernel4.4.194 and automatic hub mounting. Five sources tested in the emulator. Based on the user-confirmed0.1.4 build; extended hardware testing remains pending.",
+      "assets_kb": 200
+    }
+  ]
 }
