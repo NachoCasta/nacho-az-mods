@@ -19,7 +19,7 @@ The optional Mod Index needs a separate PR; no listing has been submitted.
 
 Each mod owns azmod.json, source/Makefile, icon.png256x256, LICENSE and optional assets/.
 The catalog `azmods-repo.json` is at repository root and can hold many mods. Use independent tags
-such as `hub-libraries-0.1.5`; a future mod uses its own ID/version/tag. Do not use a catch-all
+such as `usb-hub-support-0.1.6`; a future mod uses its own ID/version/tag. Do not use a catch-all
 v* release trigger for multiple mods. Package filename is .azmod, not the development .zip.
 A package is still a ZIP internally, but the official tool validates and constructs it.
 
@@ -45,3 +45,10 @@ The old project keeps its original origin and uncommitted work. This project hol
 One collection repository supports many mods; there is no need for one Orca project per mod.
 Separate worktrees can be used later for different mod tasks. Do not nest this repo in the core
 or replace the core repository's origin. Register the independent checkout with `orca repo add`.
+
+## Authorized ID migration
+
+Version 0.1.6 renames the mod to USB Hub Support (`usb-hub-support`). Remove the legacy
+`hub-libraries` entry from the catalog; keep 0.1.5 artifacts immutable as historical releases.
+Legacy copies must be uninstalled before enabling the new mod. The user authorized this
+rename; no automatic migration or real-device change is performed.

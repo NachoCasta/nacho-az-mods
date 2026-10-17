@@ -74,3 +74,16 @@ The validator warns about /home/root/settings: the mod READS the optional legacy
 override there; it does not write that configuration file. This existing reference remains
 unchanged to preserve the tested implementation. SDK-container CI uses another compiler; its
 output hash/compatibility must not be confused with the bit-identical Linaro acceptance above.
+
+## Current release: USB Hub Support 0.1.6
+
+The user explicitly authorized renaming the mod and ID after the first publication.
+Current name: **USB Hub Support**; ID: `usb-hub-support`; release tag: `usb-hub-support-0.1.6`.
+The 0.1.5 records above remain historical, not the current catalog entry.
+Legacy `hub-libraries` must be uninstalled before enabling the new ID; no remote device
+migration or AZ test was performed. Runtime changes are limited to ID strings used for
+core hook/thread ownership, assets and logging. Current source remains in `src/azhub/linkfake`.
+The rebuilt executable is no longer byte-identical to 0.1.4 because the ID changed.
+Focused tests, direct ELF descriptor/legacy-string checks and SDK package validation passed.
+No new emulator playback session or hardware acceptance is claimed for the renamed build.
+See [release notes](releases/usb-hub-support-0.1.6.md) for hashes and limitations.

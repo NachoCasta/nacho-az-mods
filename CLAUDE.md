@@ -21,11 +21,10 @@ It links to the official SDK publishing guide and its pinned v1.2.3 source. Foll
 for version bumps, exact-artifact testing, packaging, checksums, release assets, and catalog updates.
 The current GitHub workflow only checks builds and packages; pushing a tag does not publish a release.
 
-Keep mod IDs stable. The existing `hub-libraries` ID is already installed on the user's deck;
-renaming it needs a migration plan. New mods use their own IDs and independent version tags.
-
-The repository is private. Do not make it public, publish a release/catalog, or submit a Mod Index
-PR without the user's explicit publishing decision. Prepare the files and validation evidence first.
+Keep `usb-hub-support` stable. The user explicitly authorized the 0.1.6 rename from
+`hub-libraries`; legacy copies must be uninstalled before enabling the renamed mod.
+The repository is public and 0.1.5 publication and the 0.1.6 rename were authorized.
+Future releases and Mod Index submissions still need the user's publishing decision.
 Ask before any real-AZ test, reload, restart, installation, or mutation. Local build/emulator work
 can proceed. Never deploy as an implicit side effect of a build or release script.
 

@@ -2,7 +2,7 @@
 
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
 Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the
-AZ-MODS app or on the deck, then refresh **Browse** to find Hub USB Libraries.
+AZ-MODS app or on the deck, then refresh **Browse** to find USB Hub Support.
 Downloads are hosted in this repository's GitHub Releases. The optional Mod Index
 listing has not been requested.
 
@@ -19,7 +19,7 @@ listing has not been requested.
 Repository documentation, code comments, commit messages, PRs, and release notes are written
 in English. Preserve identifiers and observed test data, including track titles, verbatim.
 
-## Hub USB Libraries
+## USB Hub Support
 
 Browse rekordbox libraries on USB sticks connected through a hub. Each source has its own
 servers and caches inside the AZ; no computer or external players are required during use.
@@ -27,11 +27,14 @@ The implementation currently supports up to eight hub sources. Five were tested 
 in the emulator; eight simultaneous sources have not been validated on hardware.
 
 **0.1.4** was installed over SSH and the user confirmed it works correctly on their AZ.
-**0.1.5** is the first standard `.azmod` release: manifest metadata, an original icon,
-and catalog packaging. Its executable and kernel asset match the accepted 0.1.4 build;
-0.1.5 has not had an additional hardware test. Requires firmware 2.00
-(`ep147-9e9454e357389ece`), kernel 4.4.194 and Community Mods core 1.2.3 or later.
-See the [release notes](docs/releases/hub-libraries-0.1.5.md) for limits.
+**0.1.6** adopts the USB Hub Support name and `usb-hub-support` ID. It rebuilds the
+same implementation with updated core ownership, asset and thread identifiers. Firmware
+compatibility is unchanged: firmware 2.00 (`ep147-9e9454e357389ece`), kernel 4.4.194,
+and Community Mods core 1.2.3 or later. No new hardware test is claimed.
+
+**Migration:** uninstall the old `hub-libraries` mod before enabling `usb-hub-support`.
+They use the same hooks and must not run together. The app treats the new ID as a new mod,
+not an in-place update. See the [release notes](docs/releases/usb-hub-support-0.1.6.md).
 
 Mod source: [src/azhub/linkfake](src/azhub/linkfake).
 Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).

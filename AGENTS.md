@@ -11,8 +11,8 @@
 - Local code/build/emulator work may proceed. Never deploy implicitly from a build or release script.
 - Current stable user-confirmed hardware build is0.1.4. Distinguish user reports from instrumented acceptance.
 - Keep per-source servers, SQL caches and tagged caches independent. Never borrow a local USB library slot.
-- Retain mod ID hub-libraries while preparing this release. Changing it needs an explicit migration plan;
-  two installed copies would contend for the same hooks.
+- The user authorized renaming the mod to USB Hub Support, ID usb-hub-support, in 0.1.6.
+  Keep that ID stable. Uninstall legacy hub-libraries before enabling the new ID; both claim the same hooks.
 - Snapshots/screenshots stay local and gitignored. Do not create screenshot backups or upload them.
 - Never commit firmware, keys, raw firmware decompilation, full disassemblies, USB images or music.
   Document facts (addresses/layouts/control flow) and keep reconstruction scripts instead.

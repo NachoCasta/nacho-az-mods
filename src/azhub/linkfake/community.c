@@ -99,12 +99,12 @@ static int community_init(const az_core_v1 *core) {
     linkfake_init();
     if (lf_hook_failures) return -4;
     if (!AZ_HAS(core,thread_start) || !AZ_HAS(core,assets_dir)) return -27;
-    if (core->thread_start("hub-libraries","HubMount",community_mount_worker,NULL)) return -28;
+    if (core->thread_start("usb-hub-support","HubMount",community_mount_worker,NULL)) return -28;
     return (nfakes || getenv("LINKFAKE_AUTODISCOVER")) ? 0 : -5;
 }
 static const char *const hub_firmware[]={"ep147-9e9454e357389ece",NULL};
 static const az_mod_v1 hub_mod={
-    .abi=AZ_MOD_ABI,.size=sizeof(az_mod_v1),.id="hub-libraries",
+    .abi=AZ_MOD_ABI,.size=sizeof(az_mod_v1),.id="usb-hub-support",
     .fw_tags=hub_firmware,.init=community_init
 };
 AZ_MOD_EXPORT const az_mod_v1 *az_mod_v1_entry(void) { return &hub_mod; }

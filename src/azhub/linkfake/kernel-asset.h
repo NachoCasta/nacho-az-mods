@@ -9,18 +9,18 @@ static int community_prepare_kernel(const az_core_v1 *core) {
     struct utsname kernel;
     if (uname(&kernel)) return -20;
     if (!strcmp(kernel.release,"6.6.138-dirty")) {
-        core->log("hub-libraries","emulator kernel: no hub compatibility module needed");
+        core->log("usb-hub-support","emulator kernel: no hub compatibility module needed");
         return 0;
     }
     if (strcmp(kernel.release,"4.4.194")) {
-        core->log("hub-libraries","unsupported hub kernel %s",kernel.release);
+        core->log("usb-hub-support","unsupported hub kernel %s",kernel.release);
         return -21;
     }
     if (!access("/sys/module/azhub",F_OK)) return 0;
     if (!AZ_HAS(core,assets_dir)) return -22;
-    const char *assets=core->assets_dir("hub-libraries");
+    const char *assets=core->assets_dir("usb-hub-support");
     if (!assets) {
-        core->log("hub-libraries","azhub.ko asset is unavailable on the mod USB");
+        core->log("usb-hub-support","azhub.ko asset is unavailable on the mod USB");
         return -23;
     }
     char module[1024];
@@ -31,10 +31,10 @@ static int community_prepare_kernel(const az_core_v1 *core) {
     int error=errno;
     close(fd);
     if (result && !(error==EEXIST && !access("/sys/module/azhub",F_OK))) {
-        core->log("hub-libraries","azhub.ko refused by kernel: %s",strerror(error));
+        core->log("usb-hub-support","azhub.ko refused by kernel: %s",strerror(error));
         return -26;
     }
-    core->log("hub-libraries","hub compatibility module loaded; reconnect a previously rejected hub");
+    core->log("usb-hub-support","hub compatibility module loaded; reconnect a previously rejected hub");
     return 0;
 }
 #endif

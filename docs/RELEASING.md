@@ -18,8 +18,8 @@ review the guide and validate the resulting binary again.
 ## 1. Establish the release target
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.
-Hub USB Libraries currently lives in `src/azhub/linkfake/`. Its stable user-confirmed hardware
-build is 0.1.4; 0.1.5 is its standard-package release without an additional hardware test.
+USB Hub Support currently lives in `src/azhub/linkfake/`. Its stable user-confirmed hardware
+build is 0.1.4; 0.1.6 is the explicitly authorized name/ID migration.
 
 This repository and its distribution catalog are public, authorized by the user after review.
 The app/deck fetches the root `azmods-repo.json` and package URLs without GitHub authentication.
@@ -34,21 +34,22 @@ If development stays private, perform publication from the reviewed public expor
 
 ## 2. Prepare the version and source
 
-- Keep the existing mod ID stable. `hub-libraries` is already installed; a new ID would install a
-  second mod with conflicting hooks. A new mod needs its own unique ID, not a renamed existing one.
+- Keep `usb-hub-support` stable. The user authorized the 0.1.6 rename from `hub-libraries`.
+  Uninstall the legacy copy before enabling the new ID; both claim the same hooks.
+  An ID migration is a new installation, not an automatic update.
 - Bump `azmod.json` to a strictly greater `MAJOR.MINOR.PATCH` version, without suffixes or leading zeros.
   Do not reuse a published version for different package bytes, including metadata or asset changes.
 - Review the name, author, summary, description, source URL, GPL license, and minimum core version.
   State actual functionality and remaining limits; do not claim eight-source hardware validation.
 - For hooks, both the manifest and descriptor must contain the exact tested firmware tag. Do not
   broaden compatibility just to pass installation checks. Review the kernel asset if firmware changes.
-- Include the original 256x256 PNG icon, LICENSE, and all required assets. Hub USB Libraries needs
+- Include the original 256x256 PNG icon, LICENSE, and all required assets. USB Hub Support needs
   `azhub.ko`, its license, and `mount-hub.sh`. The kernel asset has separate GPL-2.0 source/build notes.
 - Update the current-state notes and write English release notes describing behavior, validation,
   compatibility, and material limitations. Version screenshots only if deliberately approved;
   research screenshots remain local and ignored by default.
 
-Use independent tags: `<mod-id>-<version>`, for example `hub-libraries-0.1.5`.
+Use independent tags: `<mod-id>-<version>`, for example `usb-hub-support-0.1.6`.
 Future mods use their own tags. Avoid a global `v*` trigger in a repository containing several mods.
 
 ## 3. Build, test, and validate the candidate

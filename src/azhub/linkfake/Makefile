@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 # SDK container supplies aarch64 gcc and AZ_SDK_INCLUDE; flags retain0.1.4 behavior.
-MOD_ID := hub-libraries
+MOD_ID := usb-hub-support
 AZ_SDK_INCLUDE ?= ../../azmod
 OUT ?= out
 ifeq ($(origin CC),default)

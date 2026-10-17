@@ -62,7 +62,7 @@ static void *community_mount_worker(void *unused) {
     (void)unused;
     for (;;) {
         hub_cleanup_missing_mounts();
-        const char *assets=lf_core->assets_dir("hub-libraries");
+        const char *assets=lf_core->assets_dir("usb-hub-support");
         char helper[1024];
         if (assets && snprintf(helper,sizeof helper,"%s/mount-hub.sh",assets)<(int)sizeof helper && !access(helper,R_OK)) {
             DIR *blocks=opendir("/sys/class/block"); struct dirent *entry;

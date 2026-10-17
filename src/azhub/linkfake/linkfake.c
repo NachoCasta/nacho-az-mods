@@ -662,7 +662,7 @@ typedef uint64_t (*fn8)(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64
 static void *make_hook(uintptr_t target, void *hook) {
 #ifdef LF_COMMUNITY
     void *original=NULL;
-    if (lf_core->claim_hook("hub-libraries",target,hook,&original)) {
+    if (lf_core->claim_hook("usb-hub-support",target,hook,&original)) {
         lf_hook_failures++;
         return (void *)target;
     }
