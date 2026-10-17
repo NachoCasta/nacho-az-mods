@@ -23,7 +23,7 @@
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "Connect a USB hub to your XDJ-AZ and use several USB sticks at the same time. Browse playlists and tracks from each stick directly on the controller, just as you would with a normally connected USB stick. Supports up to eight sticks; five have been tested together in the emulator. Requires XDJ-AZ firmware 2.00.",
+      "description": "Connect a USB hub to your XDJ-AZ and use several USB sticks at the same time. Browse playlists and tracks from each stick directly on the controller, just as you would with a normally connected USB stick. Supports up to eight sticks. Requires XDJ-AZ firmware 2.00.",
       "assets_kb": 200
     }
   ]
