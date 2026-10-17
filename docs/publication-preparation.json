@@ -1,6 +1,6 @@
 {
   "version": "0.1.5",
-  "status": "approved for public release; verify anonymous download after publication",
+  "status": "public release published; anonymous catalog, package, icon and source verified",
   "sdk_ref": "v1.2.3",
   "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
   "elf_sha256": "6f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98",
@@ -9,5 +9,9 @@
   "package_size": 308564,
   "validator": "SDKv1.2.3: directory, package and empty catalog OK; legacy settings path warning",
   "hardware_modified": false,
-  "release_tag": "hub-libraries-0.1.5"
+  "release_tag": "hub-libraries-0.1.5",
+  "source_commit": "36a32fbf0cbd3a1c96a4197bee3d48a92cc50bc4",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/hub-libraries-0.1.5",
+  "catalog_url": "https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/HEAD/azmods-repo.json",
+  "anonymous_download_verified": true
 }
