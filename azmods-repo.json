@@ -7,13 +7,13 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "author": "NachoCasta",
       "summary": "Connect multiple USB sticks to your XDJ-AZ through a USB hub.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.6/usb-hub-support-0.1.6-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.6/usb-hub-support-0.1.6.azmod",
-      "sha256": "f01aa99d1a0e131c27f2ac45fa20305b6000e2d29359787a0240cf8dedbae996",
-      "size": 308586,
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.7/usb-hub-support-0.1.7-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.7/usb-hub-support-0.1.7.azmod",
+      "sha256": "2b553cbdd452edeee7be4de8a3a47f7b45d6826cbdc8857cace60ab3eed8371f",
+      "size": 308415,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
