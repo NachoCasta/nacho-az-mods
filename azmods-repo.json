@@ -5,15 +5,15 @@
   "homepage": "https://github.com/NachoCasta/nacho-az-mods",
   "mods": [
     {
-      "id": "hub-libraries",
-      "name": "Hub USB Libraries",
-      "version": "0.1.5",
+      "id": "usb-hub-support",
+      "name": "USB Hub Support",
+      "version": "0.1.6",
       "author": "NachoCasta",
       "summary": "Browse rekordbox libraries from multiple USB sticks connected through a hub.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/hub-libraries-0.1.5/hub-libraries-0.1.5-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/hub-libraries-0.1.5/hub-libraries-0.1.5.azmod",
-      "sha256": "c93e6b35b5da0a0d0dffe45e3d9834287010ff41836b590095dea8393a2ba131",
-      "size": 308564,
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.6/usb-hub-support-0.1.6-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.6/usb-hub-support-0.1.6.azmod",
+      "sha256": "f01aa99d1a0e131c27f2ac45fa20305b6000e2d29359787a0240cf8dedbae996",
+      "size": 308586,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
