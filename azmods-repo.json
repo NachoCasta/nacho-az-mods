@@ -7,13 +7,13 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "author": "NachoCasta",
       "summary": "Connect multiple USB sticks to your XDJ-AZ through a USB hub.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.7/usb-hub-support-0.1.7-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.7/usb-hub-support-0.1.7.azmod",
-      "sha256": "2b553cbdd452edeee7be4de8a3a47f7b45d6826cbdc8857cace60ab3eed8371f",
-      "size": 308415,
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.8/usb-hub-support-0.1.8-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.1.8/usb-hub-support-0.1.8.azmod",
+      "sha256": "320949f7178084d98423470bc9888452cdf415c07257d2ec6b7b00d4a623d44f",
+      "size": 308627,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
@@ -23,7 +23,7 @@
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "Connect a USB hub to your XDJ-AZ and use several USB sticks at the same time. Browse playlists and tracks from each stick directly on the controller, just as you would with a normally connected USB stick. Supports up to eight sticks. Requires XDJ-AZ firmware 2.00.",
+      "description": "PRO DJ LINK warning: This mod blocks communication with external players while enabled. Disable the mod and restart the AZ before using external PRO DJ LINK. Switching PRO DJ LINK on does not disable the mod.\n\nConnect a USB hub to your XDJ-AZ and use several USB sticks at the same time. Browse playlists and tracks from each stick directly on the controller, just as you would with a normally connected USB stick. Supports up to eight sticks. Requires XDJ-AZ firmware 2.00.",
       "assets_kb": 200
     }
   ]
