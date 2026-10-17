@@ -1,6 +1,6 @@
 {
   "version": "0.1.7",
-  "status": "0.1.7 metadata-only patch prepared; publication pending",
+  "status": "USB Hub Support 0.1.7 published; anonymous catalog, package, icon and source verified",
   "sdk_ref": "v1.2.3",
   "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
   "elf_sha256": "86f264c27644b399e07226827874b2e41c9a152925ba03c9479c4eb1aa7ee0ba",
@@ -12,7 +12,9 @@
   "release_tag": "usb-hub-support-0.1.7",
   "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.1.7",
   "catalog_url": "https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/HEAD/azmods-repo.json",
-  "anonymous_download_verified": false,
+  "anonymous_download_verified": true,
   "mod_id": "usb-hub-support",
-  "name": "USB Hub Support"
+  "name": "USB Hub Support",
+  "source_commit": "20ce50addf25a2f92924ff6d4720e613973d5a22",
+  "source_ci_run": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39062589983"
 }

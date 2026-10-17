@@ -101,3 +101,7 @@ Only version, summary and description changed in the manifest. All other package
 including the executable and kernel asset, were verified byte-identical to 0.1.6.
 SDK v1.2.3 package validation passed; no additional runtime or hardware test is claimed.
 See [release notes](releases/usb-hub-support-0.1.7.md) for hashes and compatibility.
+
+Release published: https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.1.7.
+Source commit: `20ce50addf25a2f92924ff6d4720e613973d5a22`; both CI jobs passed. Anonymous catalog version,
+package size/SHA256, icon and source access passed after publication. No AZ changes were made.
