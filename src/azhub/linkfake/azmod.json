@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -11,8 +11,8 @@
   ],
   "hooks": true,
   "min_core": "1.2.3",
-  "summary": "Browse rekordbox libraries from multiple USB sticks connected through a hub.",
-  "description": "Adds independent rekordbox libraries for up to eight hub USB sources on the researched XDJ-AZ firmware. Runs inside the AZ using internal member identities and loopback; physical Pro DJ Link packets are filtered. Includes a reversible compatibility patch for kernel4.4.194 and automatic hub mounting. Five sources tested in the emulator. Based on the user-confirmed0.1.4 build; extended hardware testing remains pending.",
+  "summary": "Connect multiple USB sticks to your XDJ-AZ through a USB hub.",
+  "description": "Connect a USB hub to your XDJ-AZ and use several USB sticks at the same time. Browse playlists and tracks from each stick directly on the controller, just as you would with a normally connected USB stick. Supports up to eight sticks. Requires XDJ-AZ firmware 2.00.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }

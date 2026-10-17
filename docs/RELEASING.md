@@ -214,6 +214,6 @@ The catalog's summary and description are storefront text and may be edited with
 repackaging an immutable release. Keep package URLs, ID/version, size and SHA256 unchanged.
 Use plain language about connecting USB sticks, browsing playlists and tracks; keep server,
 loopback, cache and firmware-patching implementation details in technical documentation.
-The current 0.1.6 package retains its original manifest text; on the next release, copy the
-current catalog summary/description into the manifest before packaging. Always validate the
+Version 0.1.7 synchronized the package manifest with the simplified catalog text. For future
+releases, copy the current catalog summary/description into the manifest before packaging. Always validate the
 catalog and verify its package download after an editorial change.

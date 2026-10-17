@@ -27,6 +27,7 @@ USB stick. Supports up to eight sticks; five were tested together in the emulato
 No computer or external players are required during use.
 
 **0.1.4** was installed over SSH and the user confirmed it works correctly on their AZ.
+**0.1.7** updates the package description; its executable and assets are unchanged from 0.1.6.
 **0.1.6** adopts the USB Hub Support name and `usb-hub-support` ID. It rebuilds the
 same implementation with updated core ownership, asset and thread identifiers. Firmware
 compatibility is unchanged: firmware 2.00 (`ep147-9e9454e357389ece`), kernel 4.4.194,
@@ -34,7 +35,7 @@ and Community Mods core 1.2.3 or later. No new hardware test is claimed.
 
 **Migration:** uninstall the old `hub-libraries` mod before enabling `usb-hub-support`.
 They use the same hooks and must not run together. The app treats the new ID as a new mod,
-not an in-place update. See the [release notes](docs/releases/usb-hub-support-0.1.6.md).
+not an in-place update. See the [release notes](docs/releases/usb-hub-support-0.1.7.md).
 
 Mod source: [src/azhub/linkfake](src/azhub/linkfake).
 Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).

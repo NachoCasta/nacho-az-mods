@@ -75,7 +75,7 @@ override there; it does not write that configuration file. This existing referen
 unchanged to preserve the tested implementation. SDK-container CI uses another compiler; its
 output hash/compatibility must not be confused with the bit-identical Linaro acceptance above.
 
-## Current release: USB Hub Support 0.1.6
+## Previous release: USB Hub Support 0.1.6
 
 The user explicitly authorized renaming the mod and ID after the first publication.
 Current name: **USB Hub Support**; ID: `usb-hub-support`; release tag: `usb-hub-support-0.1.6`.
@@ -92,3 +92,12 @@ The renamed release is published at https://github.com/NachoCasta/nacho-az-mods/
 Both CI jobs passed on source commit `6c6e82106de18843b4e242ba49706c61695fe329`. The public catalog lists only
 `usb-hub-support`; anonymous catalog, package size/SHA256, icon and source checks passed,
 as did the official SDK `repo check --download`. Legacy release assets were not replaced.
+
+## Current release: USB Hub Support 0.1.7
+
+User-authorized metadata-only patch: the manifest now matches the simplified catalog
+summary and description, without internal implementation details or the emulator test count.
+Only version, summary and description changed in the manifest. All other package members,
+including the executable and kernel asset, were verified byte-identical to 0.1.6.
+SDK v1.2.3 package validation passed; no additional runtime or hardware test is claimed.
+See [release notes](releases/usb-hub-support-0.1.7.md) for hashes and compatibility.
