@@ -87,3 +87,8 @@ The rebuilt executable is no longer byte-identical to 0.1.4 because the ID chang
 Focused tests, direct ELF descriptor/legacy-string checks and SDK package validation passed.
 No new emulator playback session or hardware acceptance is claimed for the renamed build.
 See [release notes](releases/usb-hub-support-0.1.6.md) for hashes and limitations.
+
+The renamed release is published at https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.1.6.
+Both CI jobs passed on source commit `6c6e82106de18843b4e242ba49706c61695fe329`. The public catalog lists only
+`usb-hub-support`; anonymous catalog, package size/SHA256, icon and source checks passed,
+as did the official SDK `repo check --download`. Legacy release assets were not replaced.
