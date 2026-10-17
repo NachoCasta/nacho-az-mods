@@ -1,0 +1,25 @@
+{
+  "mod_id": "usb-hub-support",
+  "version": "0.1.7",
+  "evidence_type": "user-reported manual hardware acceptance",
+  "device": "XDJ-AZ",
+  "installation": "Installed from NachoCasta/nacho-az-mods through the AZ-MODS app, confirmed by user",
+  "setup": {
+    "hub_usb_sticks": 2,
+    "native_usb1_sticks": 1,
+    "total_simultaneous_usb_sticks": 3
+  },
+  "user_confirmed": [
+    "Playlist browsing",
+    "Track loading",
+    "Playback",
+    "Successful operation with all three USB sticks connected"
+  ],
+  "result": "User reports that 0.1.7 works well",
+  "previously_identified_firmware": "2.00 / ep147-9e9454e357389ece",
+  "firmware_rechecked_during_this_report": false,
+  "theme": "not reported",
+  "agent_instrumented_test": false,
+  "screenshots_or_video_required": false,
+  "scope_note": "Two sticks were on the hub; this is not a claim that three hub sources or eight simultaneous sources were hardware-tested. No new remote AZ operation was performed."
+}

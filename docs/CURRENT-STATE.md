@@ -99,9 +99,22 @@ User-authorized metadata-only patch: the manifest now matches the simplified cat
 summary and description, without internal implementation details or the emulator test count.
 Only version, summary and description changed in the manifest. All other package members,
 including the executable and kernel asset, were verified byte-identical to 0.1.6.
-SDK v1.2.3 package validation passed; no additional runtime or hardware test is claimed.
+SDK v1.2.3 package validation passed. At packaging time, no additional runtime test had been performed; subsequent user hardware acceptance is recorded below.
 See [release notes](releases/usb-hub-support-0.1.7.md) for hashes and compatibility.
 
 Release published: https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.1.7.
 Source commit: `20ce50addf25a2f92924ff6d4720e613973d5a22`; both CI jobs passed. Anonymous catalog version,
 package size/SHA256, icon and source access passed after publication. No AZ changes were made.
+
+## Subsequent user hardware acceptance: 0.1.7
+
+The user confirmed installing 0.1.7 from our repository through the AZ-MODS app and
+successfully browsing playlists, loading tracks and playing music on their XDJ-AZ.
+Two USB sticks were connected through the hub and a third through native USB1,
+for three simultaneous sticks. This confirms two hub sources alongside a native source;
+it does not establish three hub sources or eight simultaneous hardware sources.
+This is user-reported manual acceptance, not an agent-instrumented test. No new AZ
+connection, deployment or mutation was performed by the agent. Firmware was previously
+identified as 2.00 / `ep147-9e9454e357389ece`; it was not rechecked for this report.
+Theme and test duration were not reported. No video or screenshot was requested.
+Structured record: [hardware acceptance](acceptance/usb-hub-support-0.1.7-hardware.json).

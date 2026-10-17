@@ -31,7 +31,8 @@ No computer or external players are required during use.
 **0.1.6** adopts the USB Hub Support name and `usb-hub-support` ID. It rebuilds the
 same implementation with updated core ownership, asset and thread identifiers. Firmware
 compatibility is unchanged: firmware 2.00 (`ep147-9e9454e357389ece`), kernel 4.4.194,
-and Community Mods core 1.2.3 or later. No new hardware test is claimed.
+and Community Mods core 1.2.3 or later. The user confirmed installing 0.1.7 from this repository and browsing, loading and playing
+tracks with two sticks on a hub plus one on native USB1 (three simultaneous sticks).
 
 **Migration:** uninstall the old `hub-libraries` mod before enabling `usb-hub-support`.
 They use the same hooks and must not run together. The app treats the new ID as a new mod,

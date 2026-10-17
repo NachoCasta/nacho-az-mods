@@ -7,7 +7,10 @@ Removes implementation details and the emulator test count from the displayed de
 This is a metadata-only patch. The executable, kernel module, helper, icon and licenses are
 byte-identical to 0.1.6. Only manifest version, summary and description changed.
 Compatibility and known limits remain unchanged; see [0.1.6 notes](usb-hub-support-0.1.6.md).
-No new hardware or emulator runtime test was performed for this copy change.
+No new runtime test was performed during packaging. Subsequently, the user confirmed
+installing 0.1.7 from our repository and successfully browsing playlists, loading tracks and
+playing music on an XDJ-AZ with two sticks on a hub plus one on native USB1 (three total).
+This is user-reported manual acceptance; no additional agent-instrumented test is claimed.
 
 Validated with SDK v1.2.3 and compared every package member with 0.1.6.
 The existing optional legacy settings-path validator warning is unchanged.

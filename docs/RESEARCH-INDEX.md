@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.1.7-hardware.json | User-confirmed repository install, browsing/loading/playback with two hub sticks and one native USB1 stick |
 | ../src/azhub/NOTES-MULTI-USB.md | Chronological working notes/handoffs; earlier status can be superseded |
 | ../src/azhub/research/GHIDRA-FINDINGS.md | Exact addresses, layouts, routing, ABI and tested corrections |
 | ../src/azhub/research/community-014-acceptance.json | Final emulator binary/hash and acceptance |
