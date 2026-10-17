@@ -21,10 +21,10 @@ in English. Preserve identifiers and observed test data, including track titles,
 
 ## USB Hub Support
 
-Browse rekordbox libraries on USB sticks connected through a hub. Each source has its own
-servers and caches inside the AZ; no computer or external players are required during use.
-The implementation currently supports up to eight hub sources. Five were tested simultaneously
-in the emulator; eight simultaneous sources have not been validated on hardware.
+Connect multiple USB sticks to your XDJ-AZ through a USB hub. Browse playlists and tracks
+from each stick directly on the controller, just as you would with a normally connected
+USB stick. Supports up to eight sticks; five were tested together in the emulator.
+No computer or external players are required during use.
 
 **0.1.4** was installed over SSH and the user confirmed it works correctly on their AZ.
 **0.1.6** adopts the USB Hub Support name and `usb-hub-support` ID. It rebuilds the
