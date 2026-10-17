@@ -1,0 +1,7 @@
+source naming: 14 label/port/UTF16 cases passed
+discovered=5
+3 10.0.2.50 3 /media/usb/sdc1 HUB_LIB
+3 10.0.2.50 7 /media/usb/sdb1 HUB_LIB2
+4 10.0.2.51 3 /media/usb/sdd1 HUB_LIB3
+4 10.0.2.51 7 /media/usb/sde1 HUB_LIB4
+3 10.0.2.50 8 /media/usb/sdf1 HUB_LIB

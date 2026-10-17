@@ -1,0 +1,35 @@
+# Local reference media: retained here, deliberately not uploaded.
+**/shots/
+**/screenshots/
+**/hardware-feedback/
+local/
+# Build products and historical development archives.
+**/dist/
+**/out/
+**/out-debug/
+**/__pycache__/
+*.pyc
+*.so
+*.o
+*.ko
+*.mod.c
+.*.cmd
+.tmp_versions/
+Module.symvers
+modules.order
+# Our GPL kernel module is a deliberate release asset, not vendor firmware.
+!src/azhub/linkfake/assets/azhub.ko
+# External SDK / firmware / analysis workspaces never belong in this repository.
+.azmod-sdk/
+vendor/
+*.UPD
+*.upd
+*.gpr
+*.rep/
+*.gdt
+*.gzf
+*.img
+*.qcow2
+*.pem
+*.key
+.env

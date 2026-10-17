@@ -1,0 +1,45 @@
+{
+  "version": "0.1.4",
+  "emulator_pid": 77151,
+  "elf_sha256": "6f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98",
+  "zip_sha256": "c7c7f141b5f406e388bb75bf421ed8ea22a8d872bb185216c00e79819bd39f7c",
+  "native_sources": {
+    "3:USB1": [
+      3,
+      2
+    ],
+    "3:USB2": [
+      3,
+      2
+    ],
+    "3:USB3": [
+      3,
+      2
+    ],
+    "4:USB1": [
+      3,
+      2
+    ],
+    "4:USB2": [
+      3,
+      2
+    ]
+  },
+  "checks": [
+    "five volume labels visible in native source UI",
+    "A and B Algo mas loaded; A playback03:22->01:40 then paused",
+    "B temporarily blue/center; other four sources RGB/bottom",
+    "200 alternating populated/empty status templates over20s;30 native samples stable",
+    "B original DEVSETTING.DAT restored byte-for-byte; live style refresh to RGB/bottom;30 samples stable",
+    "fifth source2547-track browser and Algo mas load deck3",
+    "source settings known export CRC and invalid/truncated input;100 alternating packets;ASan/UBSan",
+    "source names14 cases; browser renewal lifecycle15 cases"
+  ],
+  "hardware": "0.1.3 remains installed; no AZ changes/tests performed preparing0.1.4",
+  "limitations": [
+    "audio output not captured",
+    "real AZ0.1.4 validation pending",
+    "slot8 icon/caption remains blank",
+    "legacy140-byte DEVSETTING format supported; other formats use fallback"
+  ]
+}

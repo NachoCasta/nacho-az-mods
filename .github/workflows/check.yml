@@ -1,0 +1,42 @@
+name: Check mods
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  behavior-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Focused host behavior tests
+        working-directory: src/azhub/linkfake
+        run: |
+          set -eu
+          for test in source-name browser-guard network-identity; do
+            gcc -O2 -Wall -Wno-unused-parameter "test-$test.c" -o "/tmp/test-$test"
+            "/tmp/test-$test"
+          done
+          gcc -O2 -Wall test-source-settings.c -o /tmp/test-source-settings
+          /tmp/test-source-settings ../research/devsetting-fixture.dat
+  sdk-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Kyle-Hosman/az-mods-sdk
+          ref: 62a156abf3a4789e9e3cdd610fe106227a3a8967
+          path: .azmod-sdk
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+      - name: Build and validate with pinned SDK
+        run: python3 .azmod-sdk/tools/azmod-pack build src/azhub/linkfake
+      - name: Package and validate (no publication)
+        run: |
+          python3 .azmod-sdk/tools/azmod-pack package src/azhub/linkfake
+          python3 .azmod-sdk/tools/azmod-pack validate src/azhub/linkfake/dist/*.azmod
+          python3 .azmod-sdk/tools/azmod-pack repo check azmods-repo.json

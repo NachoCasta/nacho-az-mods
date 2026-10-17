@@ -1,0 +1,2881 @@
+{
+  "source_remote": "https://github.com/Kyle-Hosman/xdj-az-mods",
+  "source_head": "d0e83bfce7e378017ed78cc9c53e9e39283af738",
+  "source_workspace": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi",
+  "snapshot": "2026-10-17",
+  "copied": [
+    {
+      "path": "src/azhub/.gitignore",
+      "sha256": "e1fe691e148180d6fec05b7e497bcdfd8094a3192e77999a17f6d4b507533b6e",
+      "size": 68
+    },
+    {
+      "path": "src/azhub/azhub.c",
+      "sha256": "a36f15ab4cdc427f900c1f3d4e97b0b86522c2db52cf1ca18e98ce0b2823fde9",
+      "size": 2845
+    },
+    {
+      "path": "src/azhub/azhub.ko",
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "size": 183848
+    },
+    {
+      "path": "src/azhub/linkfake/assets/mount-hub.sh",
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "size": 1416
+    },
+    {
+      "path": "src/azhub/linkfake/AZ-TEST.md",
+      "sha256": "170813d932a772ac117cbee76410205603a25bf9f672bbc03fa13b5f3312a264",
+      "size": 7645
+    },
+    {
+      "path": "src/azhub/linkfake/azmod.json",
+      "sha256": "2f19cfc0c620c793e8f242490585e58d15f7f0f3ec412ecb1281f5e7d8f540a1",
+      "size": 309
+    },
+    {
+      "path": "src/azhub/linkfake/browser-guard.h",
+      "sha256": "516580f0c02573aecfcae87782b936e7243281e9eae017e10f2e130eb41ba5b8",
+      "size": 4151
+    },
+    {
+      "path": "src/azhub/linkfake/build.sh",
+      "sha256": "6851d8f31381a4bb4e892d079df813a0bb460d38609702cdfd974aada6e630f7",
+      "size": 571
+    },
+    {
+      "path": "src/azhub/linkfake/COMMUNITY-PORT.md",
+      "sha256": "0d5234018f003b05760cff7aa916bc4ada63346b39d0f12ec144d6a6e806622b",
+      "size": 31547
+    },
+    {
+      "path": "src/azhub/linkfake/community.c",
+      "sha256": "413aae67e3a619d4c15ae7dcf5b1f9de4ca63a3daf88ecc380cc059e7037bc72",
+      "size": 4972
+    },
+    {
+      "path": "src/azhub/linkfake/db-cache-probe.h",
+      "sha256": "f77fe8239f362045ed27138947c1603b435c029ccdc5ef815d00684a1bf98698",
+      "size": 2047
+    },
+    {
+      "path": "src/azhub/linkfake/discovery.h",
+      "sha256": "fdc0d99e1020b77835903704901811e7de51856a5c8d9305ab09ace5774b31ac",
+      "size": 4472
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.0-dev.zip",
+      "sha256": "c182a27a12d6253a571cb051a0f4c145a80f8b00458bb867772dc1eb9af31c66",
+      "size": 92252
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.0-dev.zip.sha256",
+      "sha256": "a43994239c4599fba9ff01c7eda9d14f06c5d6fe689dbb736f039846e3c76f58",
+      "size": 95
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.1-dev.zip",
+      "sha256": "9b1cb61650ecef504d5b50c6dab01f0d84c6aa974d4bd5d1ce3db3022c31bc26",
+      "size": 94137
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.1-dev.zip.sha256",
+      "sha256": "768fa1f83a5a2d4cdc45c6c1a8bee13dd37f155d1c2b1e9745a5f3f9ff562ddb",
+      "size": 95
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.2-dev.zip",
+      "sha256": "724ffe5f1c55d94e3d182dbe4f0c3b8c0441e94ab02bfa38c7b18cc598ad470f",
+      "size": 98080
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.2-dev.zip.sha256",
+      "sha256": "1cc39e169aa8c28526cc9da308d99bd4ad641f324ab71d8bada449146fcc528e",
+      "size": 95
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.3-dev.zip",
+      "sha256": "b25a880169abb5bc1d870ea93019c8098333e8caa6057be0dfb6a5cade27f41c",
+      "size": 99263
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.3-dev.zip.sha256",
+      "sha256": "bac8ada4ff9fa8fb83634d653ee7195cd2331d19d38645d46705be85aa144252",
+      "size": 95
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.4-dev.zip",
+      "sha256": "c7c7f141b5f406e388bb75bf421ed8ea22a8d872bb185216c00e79819bd39f7c",
+      "size": 102395
+    },
+    {
+      "path": "src/azhub/linkfake/dist/hub-libraries-0.1.4-dev.zip.sha256",
+      "sha256": "d08e45e87dd5dcf40d6945d7864b863443b2522b63bb09428b3f049cb79729c4",
+      "size": 95
+    },
+    {
+      "path": "src/azhub/linkfake/hubservers.h",
+      "sha256": "17de167c3a5e6affcefd26583d9ead7c5e2f22015beb773786bb936e572e4c7c",
+      "size": 16377
+    },
+    {
+      "path": "src/azhub/linkfake/kernel-asset.h",
+      "sha256": "60a5296cc7ec2e5993b9917987a7d801bbfbeeaf57cda85dc1c5a9a739141e38",
+      "size": 1612
+    },
+    {
+      "path": "src/azhub/linkfake/linkfake.c",
+      "sha256": "b5c55e0cde55ed6739fe5efbec3ce806160fb873ce7b8e0b69f01b0576213f50",
+      "size": 49293
+    },
+    {
+      "path": "src/azhub/linkfake/mount-worker.h",
+      "sha256": "719b112a9c502f6c8afb642d63b31336115277f338e58fb50250c2b19395c62c",
+      "size": 4438
+    },
+    {
+      "path": "src/azhub/linkfake/network-identity.h",
+      "sha256": "e937faa290c868bc5f0272fcb0f014d5c109a0ed98b7fd5d52f0cbf9bb920b98",
+      "size": 2203
+    },
+    {
+      "path": "src/azhub/linkfake/package.py",
+      "sha256": "fd2626f2d51ab8e361b39a1dd5c8322261d96579ac2b3cf0599b320608111a9e",
+      "size": 1916
+    },
+    {
+      "path": "src/azhub/linkfake/README.md",
+      "sha256": "459aec3160e03ff06573a719f595870c3389dd627e389de4ae3d05455dca01ec",
+      "size": 3425
+    },
+    {
+      "path": "src/azhub/linkfake/source-name.h",
+      "sha256": "a616c8ba69346793e2603a65e67463d6aac2d939b872229f371958765368e05b",
+      "size": 5745
+    },
+    {
+      "path": "src/azhub/linkfake/source-settings.h",
+      "sha256": "e7a5b1ff28ce8021633cb6fa1109d54497013ae09b9e727d4386a1aaa7b09711",
+      "size": 3641
+    },
+    {
+      "path": "src/azhub/linkfake/tag-cache-abi.h",
+      "sha256": "13a75bb2d89c025308167dfa068c716a48f57f1422f3b870b624d3fab0bdda94",
+      "size": 5720
+    },
+    {
+      "path": "src/azhub/linkfake/tag-cache.h",
+      "sha256": "254e33b297864e3caad2148033373787ddf92d0294c4b73ad95fd068ff71aba8",
+      "size": 2474
+    },
+    {
+      "path": "src/azhub/linkfake/test-browser-guard.c",
+      "sha256": "f038373764a8536dea9b9ca7af39a8bddb2712d5a5d7bb409a38f8a7eb8923d8",
+      "size": 4087
+    },
+    {
+      "path": "src/azhub/linkfake/test-discovery.c",
+      "sha256": "b600cc01f2853e6fe60cc5eab52a90a229b7a0618aa1d9f8ee4ff9aa312f0981",
+      "size": 907
+    },
+    {
+      "path": "src/azhub/linkfake/test-kernel-asset.c",
+      "sha256": "18a887fb1a8eae1809bf279aab898542b9498d184f250672e5deee1caec0c6db",
+      "size": 2049
+    },
+    {
+      "path": "src/azhub/linkfake/test-mount-worker.c",
+      "sha256": "b5cc6acf63e78b33f4f7a656a79197b6460bec1df8013183592752cb31c5b981",
+      "size": 1040
+    },
+    {
+      "path": "src/azhub/linkfake/test-network-identity.c",
+      "sha256": "0c73a8caadae1ad1da51be833a0ce8eee8cf0b6f195a34621706ee6febada0d2",
+      "size": 1758
+    },
+    {
+      "path": "src/azhub/linkfake/test-source-name.c",
+      "sha256": "b8dc14fb221652b98adf2758cc07bdd1319ac7ba6afb0178412718230675ac1a",
+      "size": 2083
+    },
+    {
+      "path": "src/azhub/linkfake/test-source-settings.c",
+      "sha256": "a49009dbc0db9d3255e2d883fc4204951702519c7f6ab31a7a1c55aa8213f7d7",
+      "size": 2127
+    },
+    {
+      "path": "src/azhub/linkfake/test-tag-cache-abi.c",
+      "sha256": "7af90fa2dc2b721257d4ceda994f5e15dd4f07e6dd332bb68b48e8361dd01743",
+      "size": 1714
+    },
+    {
+      "path": "src/azhub/Makefile",
+      "sha256": "01f5a278e8017cd31ff8134aede7079f5217d0b8db4f9c529f002523102bd508",
+      "size": 17
+    },
+    {
+      "path": "src/azhub/NOTES-MULTI-USB.md",
+      "sha256": "b2dba3cd7951a30b614d4da72b501be0c2b51b75dcf7785cff2afc58a4909e85",
+      "size": 51377
+    },
+    {
+      "path": "src/azhub/README.md",
+      "sha256": "0848e6f685ccb24fe95acb2b6142b30871387963a112de4470e06fb1c78d7af0",
+      "size": 2391
+    },
+    {
+      "path": "src/azhub/research/az-013-usb-install.json",
+      "sha256": "734f357751e5020f8f8beeb7d3fa514ac91ace601c04979d35da2982de143ae1",
+      "size": 442
+    },
+    {
+      "path": "src/azhub/research/az-013-waveform-template-sample.json",
+      "sha256": "6d6ecd592c8121c800ee56648d6300dd63b861359a0df445844822d8dcfdbe60",
+      "size": 5612
+    },
+    {
+      "path": "src/azhub/research/az-014-usb-install.json",
+      "sha256": "982bc5d48634381962c25738f02e490615a790b2614ef0fa6a8c3fd71bda3c88",
+      "size": 493
+    },
+    {
+      "path": "src/azhub/research/community-012-acceptance.json",
+      "sha256": "b69c1c961cf7f917cbcd68d7a3d2e8b0e74193607f447320e228d74769902c13",
+      "size": 1071
+    },
+    {
+      "path": "src/azhub/research/community-013-acceptance.json",
+      "sha256": "b507538eba13c0143cfe749069a657b858b6e56675872200a9bea0503d715e9f",
+      "size": 1475
+    },
+    {
+      "path": "src/azhub/research/community-014-acceptance.json",
+      "sha256": "ac4ca8df208a3587ee27c2fb0352b9ef950b74452e1f0b68354ad76285cd51db",
+      "size": 1372
+    },
+    {
+      "path": "src/azhub/research/devsetting-B-before-test.dat",
+      "sha256": "b07247125d15975b87d0651c39b71f29be04648345f6e5cf1da4effcb630e268",
+      "size": 140
+    },
+    {
+      "path": "src/azhub/research/devsetting-fixture.dat",
+      "sha256": "b07247125d15975b87d0651c39b71f29be04648345f6e5cf1da4effcb630e268",
+      "size": 140
+    },
+    {
+      "path": "src/azhub/research/GHIDRA-FINDINGS.md",
+      "sha256": "4e8802ac136465776198a5bfe16c2ab6e3008f0eb806512be6cb242d60dc3f85",
+      "size": 78669
+    },
+    {
+      "path": "src/azhub/research/ghscripts/Probe.java",
+      "sha256": "58a7f2e3c92b0a47be6c4eff17749e2705f7feb5ba5f292d4f8aec7f22fbab85",
+      "size": 3201
+    },
+    {
+      "path": "src/azhub/research/hublib4-011-crash.log",
+      "sha256": "46a080970a329de649f033b231dc166dc466fd720dbe5082b74977941fd6d001",
+      "size": 66688
+    },
+    {
+      "path": "src/azhub/research/mount-worker-test-device.json",
+      "sha256": "90c4312bb57798e57ec08156f487920c867534ee3352c0c0f75bdcad524458db",
+      "size": 183
+    },
+    {
+      "path": "src/azhub/research/private-tag-removal-state.json",
+      "sha256": "db2043c75499f779da738c68c8e823ec99bb86b10bf7a821506d2e802e256420",
+      "size": 446
+    },
+    {
+      "path": "src/azhub/research/scripts/build-emulator-xhci.py",
+      "sha256": "35b069ceab7bc745d68bf5de4a503d9752f20070dea88fb42d4c1b1e4e04f30f",
+      "size": 949
+    },
+    {
+      "path": "src/azhub/research/scripts/build-mod.sh",
+      "sha256": "aeeda293151ab8b2e18a5c1ed11c05b5ffa1bff18a76757146271b7b5f9f921c",
+      "size": 494
+    },
+    {
+      "path": "src/azhub/research/scripts/calls-in.sh",
+      "sha256": "08c14f8b5d21e1de6e409f024685381e6780447d57bc664a417bc537a2814e53",
+      "size": 578
+    },
+    {
+      "path": "src/azhub/research/scripts/capture.py",
+      "sha256": "c485200b64ae80378a973c10127cdf689b1c3cee87b449d3af0b530f4b3930bf",
+      "size": 1077
+    },
+    {
+      "path": "src/azhub/research/scripts/check-insn.sh",
+      "sha256": "ad18d8572f593433f882c66c0e1480079393e6950cfa31fe135b734ddfc96315",
+      "size": 237
+    },
+    {
+      "path": "src/azhub/research/scripts/device-settings-sample.c",
+      "sha256": "62133a29af2892cfa4ea9ff159c9d7a3a4cdcbaf9811152c155978ce31c9576b",
+      "size": 1765
+    },
+    {
+      "path": "src/azhub/research/scripts/dis-hub.sh",
+      "sha256": "37b817310a7f64bf19fa10c4a342204d7a411b3543d3ee980d0df0dc94f2f1e7",
+      "size": 344
+    },
+    {
+      "path": "src/azhub/research/scripts/ep-dis.sh",
+      "sha256": "6da31113a51883ceea668e7f5b7c41aa0fe24e5035b61b2cd1bdeba97c93ca20",
+      "size": 512
+    },
+    {
+      "path": "src/azhub/research/scripts/ep-rtti.sh",
+      "sha256": "03e20e1abfbc902110a3f3f03ec4166c244a827fe875567383a348fc7fc94042",
+      "size": 743
+    },
+    {
+      "path": "src/azhub/research/scripts/ep-survey.sh",
+      "sha256": "d5aca0123793385cd48af27f12877206cece769f3ce51735ba9672dbafadd78e",
+      "size": 916
+    },
+    {
+      "path": "src/azhub/research/scripts/ep-usb3.sh",
+      "sha256": "cfba104378b61c355f892fd017e993b7b056fbf0ffcdb046df6d441fba6a431a",
+      "size": 519
+    },
+    {
+      "path": "src/azhub/research/scripts/extract-kernel.sh",
+      "sha256": "8d949b2102e0b9c5aab84bf291f9b5dbc5c638868b0bac708bc143f43222cbac",
+      "size": 718
+    },
+    {
+      "path": "src/azhub/research/scripts/fakecdj.py",
+      "sha256": "00e09c052f2d264c1d215700564ee18f59fad6ad1e48a960d265d3719cc901d4",
+      "size": 3227
+    },
+    {
+      "path": "src/azhub/research/scripts/fakecdj2.py",
+      "sha256": "8d61a08b1581e0dcd1c9aa5bbbedf089e64d57c9f02f98db89ca2ced16344343",
+      "size": 5668
+    },
+    {
+      "path": "src/azhub/research/scripts/fakeplayer.c",
+      "sha256": "973913c310da503effb8d3ad20ed2ddee86cb0f57b4ad784dabda79c6cdb9d37",
+      "size": 9353
+    },
+    {
+      "path": "src/azhub/research/scripts/find-udev-proc.sh",
+      "sha256": "0cdca9273ef31f20ed98044a68b293f5cd55b6ab9775551d8ec9decde2bca4fc",
+      "size": 216
+    },
+    {
+      "path": "src/azhub/research/scripts/get-ghidra.sh",
+      "sha256": "46f5a9365b915b6d3adf6bb372fda886549f0ecf294d83ce9814e7c7e230d879",
+      "size": 388
+    },
+    {
+      "path": "src/azhub/research/scripts/gh-analyze.sh",
+      "sha256": "d0aa8c8a05ae4086df4bd8127251d05cebb3678b99bdc0e0152c60e3f54cc2a2",
+      "size": 543
+    },
+    {
+      "path": "src/azhub/research/scripts/gh.sh",
+      "sha256": "7473b6d5021a94f777db2293861e88488df911b2994693e65a9d1c0620d40bf4",
+      "size": 608
+    },
+    {
+      "path": "src/azhub/research/scripts/kenv.sh",
+      "sha256": "f855116462bedbe9509f2a4775e7871e7343dbab43e7b18b9b9e60c66e55d913",
+      "size": 427
+    },
+    {
+      "path": "src/azhub/research/scripts/link-packet-count.c",
+      "sha256": "dfa723ee865d956b50ec53993f526b0c6b82df074c19caf195e5a72b90561b95",
+      "size": 1692
+    },
+    {
+      "path": "src/azhub/research/scripts/list-gpl.sh",
+      "sha256": "472c9c5403dfe01617aa1205cfd5f68aa6f0804af49167e42ac4e216e82695c1",
+      "size": 516
+    },
+    {
+      "path": "src/azhub/research/scripts/nfsd.py",
+      "sha256": "7b1b6be15b1d73954100415d2ce4bd9860fe3399eca40c0038f138d7f0a76635",
+      "size": 860
+    },
+    {
+      "path": "src/azhub/research/scripts/nfstab.py",
+      "sha256": "fdc63f4e7092927c4e5ce3216ee8e4dede7fc6f9944af8dd814a2766220de7c8",
+      "size": 1103
+    },
+    {
+      "path": "src/azhub/research/scripts/prepare-kernel.sh",
+      "sha256": "b06f025c68e42fd12b1d6e752374df8be35c8ae51a10678123deb3303a8ec79a",
+      "size": 959
+    },
+    {
+      "path": "src/azhub/research/scripts/sniff.py",
+      "sha256": "68a43174c31db9057cb8f436fe1d04c5b69b69561b7240d078674c3d1937de76",
+      "size": 1589
+    },
+    {
+      "path": "src/azhub/research/scripts/stress-status-template.c",
+      "sha256": "64e82242444e1cb00c089bfe23a84c517416bda550fe854511a19b0ad7cf37da",
+      "size": 1201
+    },
+    {
+      "path": "src/azhub/research/scripts/test-source-reuse.sh",
+      "sha256": "76dd30086a8742f8045dbef47e57f24aa34979d840e1d2734a169c3ec526b402",
+      "size": 1506
+    },
+    {
+      "path": "src/azhub/research/scripts/usb-renotify-hub-test.patch",
+      "sha256": "2506439d71afa4a67cd1c3d10f0a7b1e496a917c8f10bcc7c1ea009e3763615b",
+      "size": 495
+    },
+    {
+      "path": "src/azhub/research/scripts/usb-renotify-hub-test.sh",
+      "sha256": "7cfc8b4ee61fe300600da104a96d956c3c2692a1c056c8798feca976a082f6a5",
+      "size": 5151
+    },
+    {
+      "path": "src/azhub/research/scripts/vmem.py",
+      "sha256": "07c455831f169de903c26ae63a980e9cfef9e8d4eba8d75c387fdbe159ea9591",
+      "size": 1364
+    },
+    {
+      "path": "src/azhub/research/scripts/vstr.py",
+      "sha256": "3ebcc00500414aa62dd79d67b5504c5f1dd481f8b27e38f0a2c9e0c29ce539d5",
+      "size": 672
+    },
+    {
+      "path": "src/azhub/research/scripts/xref.py",
+      "sha256": "daca5db31a227737ee3b4fa82588edd083ba0bc33f5ef7fcbfa35d32c0745cb0",
+      "size": 2373
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-A-full.png",
+      "sha256": "719231f75bd41ed69c8eed389eba963b16d68663df5d84d81a41366f04feb0f9",
+      "size": 301695
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-A-preview.png",
+      "sha256": "6cbe3c2e0a547b93ba40ec6aa80f861c86a420e9272200f8d3ed27c813dd5ec2",
+      "size": 103739
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-A-root.png",
+      "sha256": "b0524d99c59e5962b680cf0324030716da9c2c72f85b5397d519c447db467bb7",
+      "size": 87746
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-after-load1.png",
+      "sha256": "54c1eb358ae28e9e6f3f29b347113e11665a9e5602cccb2a56a8ba2e5f7555aa",
+      "size": 67012
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-B-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-B-playlist-root.png",
+      "sha256": "b7f16950f22d5880679482870a7c9ad9740f16d90c48c697867bcad5158679c6",
+      "size": 87810
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-B-preview.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-C-full.png",
+      "sha256": "540ed161a8569cdecc5b1d7908de9220c457edbae1ebb070809da4113dcf65c4",
+      "size": 296895
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-C-preview.png",
+      "sha256": "8b98506cea21044a7c88f84f9040bd79a1509da7cfb2286be5c53cb298d36adc",
+      "size": 103645
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-C-root.png",
+      "sha256": "9c4feee9e522905051eeadea9c81ba5236c1481894fdccb8c35c63fdb669aef5",
+      "size": 87637
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-current.png",
+      "sha256": "dc46d584272af9745cd7286ea37c3c289deab8b8fd4c5121423bca4991733a25",
+      "size": 275931
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-D-full.png",
+      "sha256": "a0e428c6a124125fdc480aabb4d7e31d8845d4498d32a3a4fc8ace589bb6e997",
+      "size": 301652
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-D-preview.png",
+      "sha256": "bdf42be1f7dab441ea9402b6fbdd07b822bf828010ef1efb4325cd1d65a6e51f",
+      "size": 103708
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-D-root.png",
+      "sha256": "7943476e335d657e4d0f555d5208b525f2a9559a0c7bc531f0e15d51d0ab3de6",
+      "size": 87700
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-algo-selected.png",
+      "sha256": "e83211afc6de5cca827a0966f6c4f46ea5b76e7e23826b5087e11fa032d78f53",
+      "size": 276889
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-alltracks.png",
+      "sha256": "9f681ac11d1809cdb80ef922cba01c853612bde3706754001962b5d462eedb1d",
+      "size": 275154
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-before-load1.png",
+      "sha256": "09f1992908c4e02dbf44fe801e976a664b149a9611246d449edbc5a188e331f5",
+      "size": 278407
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-deck3-loaded.png",
+      "sha256": "54c1eb358ae28e9e6f3f29b347113e11665a9e5602cccb2a56a8ba2e5f7555aa",
+      "size": 67012
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-full.png",
+      "sha256": "e0203403fdc29e434fe68f47b82e06d8e517e5dd085b7d3d46bb341f91d15f52",
+      "size": 301000
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-play-advanced.png",
+      "sha256": "6d8ae79233f87df72ae4a46c470543134519caba6a35d9f606169f17e47d7890",
+      "size": 92246
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-play-start.png",
+      "sha256": "aeb8dcd12aeb80f1ccd34f6965e3c4402a325062a8e3a2e54545d1743ca2c3b4",
+      "size": 78945
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-preview.png",
+      "sha256": "48a1c05944f0a805b56d40e5667cf9b89a770509845dff2baecde437e922e8c4",
+      "size": 103071
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-root.png",
+      "sha256": "7af6c6c3cd08160f67369c351b4db379ec1e9761601552902f67f623bcfa43ab",
+      "size": 87025
+    },
+    {
+      "path": "src/azhub/research/shots/acceptance-E-two-decks.png",
+      "sha256": "06245304424ce96033f3b3dc7d8d865ee29c671040d564883cf02b94a4c1229f",
+      "size": 89424
+    },
+    {
+      "path": "src/azhub/research/shots/append-discovery-allow.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/appended-five-sources.png",
+      "sha256": "6c465f97828f67f5e6f6d07cc9f5f74ca7bd18ae9ad57eb1c226c6409d5ccd4c",
+      "size": 51264
+    },
+    {
+      "path": "src/azhub/research/shots/autodiscover-allow.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/B-algo-check.png",
+      "sha256": "e662c71dca29bc56fbcff55709b7ec8ca52054d7b38532884b15e30820e4959b",
+      "size": 261324
+    },
+    {
+      "path": "src/azhub/research/shots/B-algo-loaded.png",
+      "sha256": "616812adc259636b73221ac89d2e244e0172b512c107445244faa9d38af5f9a9",
+      "size": 82292
+    },
+    {
+      "path": "src/azhub/research/shots/B-algo-playing.png",
+      "sha256": "5c89670e46bf85dfdf5baa1afaa60521f6f9e45f5707166bb7dacd9806e66d91",
+      "size": 78165
+    },
+    {
+      "path": "src/azhub/research/shots/B-load-selection.png",
+      "sha256": "9aa3ba5ece57cb4f946449084330fa51f578143cfec1a7bc392e91b4eb1d4563",
+      "size": 258659
+    },
+    {
+      "path": "src/azhub/research/shots/B-scroll-actual-file.png",
+      "sha256": "689d8c29b34c75bdb144ac087414994ecab162b5aef570554cd1774fbca38c49",
+      "size": 200089
+    },
+    {
+      "path": "src/azhub/research/shots/B-step-playlists.png",
+      "sha256": "bc7e4fab4768099ecfa24cc596f25254c2f8571a1db2ebcda5c54e3d255e7b20",
+      "size": 103988
+    },
+    {
+      "path": "src/azhub/research/shots/B-step-selected.png",
+      "sha256": "9a506dda9d8add89a2d510ca1f53874ebd7059ff34b4fdaa9c6df9e578420504",
+      "size": 301705
+    },
+    {
+      "path": "src/azhub/research/shots/B-verified-track-selection.png",
+      "sha256": "5a247f49c268ca7356305f069daa2682f10afb5bddc8c5b00e2fc855d436b701",
+      "size": 219497
+    },
+    {
+      "path": "src/azhub/research/shots/browser-guard-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/browser-guard-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/browser-guard-fixed-allow.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/browser-guard-fixed-mod-selection.png",
+      "sha256": "99ad9782cd34104a8c3d7c22de157740810c418c8b07076acd812b8c0591b33f",
+      "size": 44208
+    },
+    {
+      "path": "src/azhub/research/shots/browser-guard-fixed-source.png",
+      "sha256": "36ff0f195b8b6e45748dadd9891d47c6c315ddb40ce027ccd6cdc09f66281b94",
+      "size": 28864
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-caller-D.png",
+      "sha256": "4baecfdb6e117c4849c06e638f12a2f43dbfc2fe55c762b340dca4c8b99a9209",
+      "size": 56548
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-B-playlist-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-B-playlist-selected.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-B-track-from-playlist.png",
+      "sha256": "64c1235e31d85b3eb14629bca1315a4a56c798181da20fb1456bbf2a87cd2fc1",
+      "size": 271289
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-B-tracks.png",
+      "sha256": "dc46d584272af9745cd7286ea37c3c289deab8b8fd4c5121423bca4991733a25",
+      "size": 275931
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-five-sources.png",
+      "sha256": "30cbcda78f27ea0c7599ef9af954703811593baacf383f345f7e89d54a7c3331",
+      "size": 37052
+    },
+    {
+      "path": "src/azhub/research/shots/cancel-trace-source-switch.png",
+      "sha256": "dde24207661cce3831a4c0ef7f9551b1e88f13b47bc7375529e44c112b801e98",
+      "size": 45831
+    },
+    {
+      "path": "src/azhub/research/shots/cancelorigin-D.png",
+      "sha256": "899236543b34d17cec59cef10f0a8c2887430c2dcd63900c26011292cff5fea3",
+      "size": 29673
+    },
+    {
+      "path": "src/azhub/research/shots/canceltrace-D.png",
+      "sha256": "804da21933a59ac9d05eaa243cc4d2fa9d58f7b8fb315801fc09f8ecdb3c12ca",
+      "size": 103525
+    },
+    {
+      "path": "src/azhub/research/shots/clienttrace-A-contents.png",
+      "sha256": "016c19d167e3b24ece11c72a80bd099fa2cc8ae0c36d5e7d06574016af59d1e9",
+      "size": 56585
+    },
+    {
+      "path": "src/azhub/research/shots/clienttrace-B-contents.png",
+      "sha256": "fbb81279c3d46c664a6f4395add05b145d936adc4b1cf98034273f27fc70b965",
+      "size": 103630
+    },
+    {
+      "path": "src/azhub/research/shots/clienttrace-C-contents.png",
+      "sha256": "b90b8cc2d47d8264dbba7626bfcbbc2edf5e5bf3f831677f8467fd3928183b11",
+      "size": 103462
+    },
+    {
+      "path": "src/azhub/research/shots/clienttrace-D.png",
+      "sha256": "804da21933a59ac9d05eaa243cc4d2fa9d58f7b8fb315801fc09f8ecdb3c12ca",
+      "size": 103525
+    },
+    {
+      "path": "src/azhub/research/shots/clienttrace-source.png",
+      "sha256": "0eabbba8106463be71e9b21f70a2a37e6ad4910bd2cd87008b504db3d383f6b3",
+      "size": 50940
+    },
+    {
+      "path": "src/azhub/research/shots/community-allow-page.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/community-allowed.png",
+      "sha256": "4680b267a6d57771b75af823504abe6127513272b72e203e8027a802f0a5802f",
+      "size": 42469
+    },
+    {
+      "path": "src/azhub/research/shots/community-initial.png",
+      "sha256": "350bc7aa744ce61e93b65e11e342a94ff507a08ad049b231ae135abbafd5ec9b",
+      "size": 39761
+    },
+    {
+      "path": "src/azhub/research/shots/community-menu-open.png",
+      "sha256": "cbc5565e0c2d9bb3198cf0258f78a5880812a6b50654ac26ee91b8fd67a555c7",
+      "size": 80680
+    },
+    {
+      "path": "src/azhub/research/shots/community-menu.png",
+      "sha256": "e61aea11ac88c171506b25cc649d2bdb64d3bf38c7dc82fc4d6147c3a8becddc",
+      "size": 62484
+    },
+    {
+      "path": "src/azhub/research/shots/community-page.png",
+      "sha256": "dabf6aba13fa73dbe40035a41bb7bfa54e58094d409f2ac83a507ba298bc8f41",
+      "size": 38920
+    },
+    {
+      "path": "src/azhub/research/shots/community-resume-control.png",
+      "sha256": "021dc210ddfafaa8d8f363b32ea078aacb9d0b658806009d8cc68e63e98b7a40",
+      "size": 43921
+    },
+    {
+      "path": "src/azhub/research/shots/community-resume-page.png",
+      "sha256": "b6a1196f00507b9a5892d023ca3a5edcb371169d220b6c205fde39409c39294e",
+      "size": 44265
+    },
+    {
+      "path": "src/azhub/research/shots/community-resume-screen.png",
+      "sha256": "f625e09fa8f0c96f98ea89008779841789bc22f9698505896f6c7f64a0bf646b",
+      "size": 35102
+    },
+    {
+      "path": "src/azhub/research/shots/consistent-A-contents.png",
+      "sha256": "202a202547e100d101ca26e54a44e6659b2dfb8093ae82aca3221dcd9ed0c47c",
+      "size": 103569
+    },
+    {
+      "path": "src/azhub/research/shots/consistent-D-contents.png",
+      "sha256": "a41a71f2aa56fe27102f596f955ff4d3b95f74cd311ea4203c83275160d9a2e1",
+      "size": 56280
+    },
+    {
+      "path": "src/azhub/research/shots/consistent-D-late.png",
+      "sha256": "4baecfdb6e117c4849c06e638f12a2f43dbfc2fe55c762b340dca4c8b99a9209",
+      "size": 56548
+    },
+    {
+      "path": "src/azhub/research/shots/consistent-D-playlists.png",
+      "sha256": "e185582d43d5b7adfe14eac0f0f2029b2777bed67a9d3c76f4f4a5026ff272da",
+      "size": 56543
+    },
+    {
+      "path": "src/azhub/research/shots/D-reselect.png",
+      "sha256": "925d8b1363333020d4c31a095ae35f86bfd1b0f9c947edecdb23871fc7e43db5",
+      "size": 301598
+    },
+    {
+      "path": "src/azhub/research/shots/db-probe-allow-detail.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/db-probe-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/db-probe-E-tracks.png",
+      "sha256": "9f681ac11d1809cdb80ef922cba01c853612bde3706754001962b5d462eedb1d",
+      "size": 275154
+    },
+    {
+      "path": "src/azhub/research/shots/db-probe-sources-ready.png",
+      "sha256": "4716cbaf98f85d399026e388b5674aa773e69c5d6fedc2b30c86e88a74c1d242",
+      "size": 40940
+    },
+    {
+      "path": "src/azhub/research/shots/defer-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/defer-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/defer-B-alltracks.png",
+      "sha256": "64c1235e31d85b3eb14629bca1315a4a56c798181da20fb1456bbf2a87cd2fc1",
+      "size": 271289
+    },
+    {
+      "path": "src/azhub/research/shots/defer-B-playlist-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/defer-B-playlist-root.png",
+      "sha256": "b7f16950f22d5880679482870a7c9ad9740f16d90c48c697867bcad5158679c6",
+      "size": 87810
+    },
+    {
+      "path": "src/azhub/research/shots/defer-B-playlist-selected.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/defer-ready-sources.png",
+      "sha256": "4cce5b65cd8ef0600986c6ec854bd378185a45c6c80400d6e826414dd0a7ab4a",
+      "size": 40864
+    },
+    {
+      "path": "src/azhub/research/shots/delayed-discovery-allow.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/delayed-five-sources.png",
+      "sha256": "34fcd9ed38eeb13df12b59b5079cf0ea370b4e8d9d6cb3d9e1f8f223c58b9a70",
+      "size": 49525
+    },
+    {
+      "path": "src/azhub/research/shots/delayed-no-sources.png",
+      "sha256": "12d74fda27a81f822cc87ef75b07e1870bd21a6d8e64797189de6909bfe0e7d8",
+      "size": 41438
+    },
+    {
+      "path": "src/azhub/research/shots/discovered-sdk-sources.png",
+      "sha256": "7c9e0c2e3985c501c0d05b7f2514df92f6766b802ed00669ee0929f256fb337c",
+      "size": 52973
+    },
+    {
+      "path": "src/azhub/research/shots/discovery-A-full.png",
+      "sha256": "d9a5aca72b8c0a38d79937a459f0768e5918e07f85a9c4c19ffbd28661fb0a11",
+      "size": 301641
+    },
+    {
+      "path": "src/azhub/research/shots/discovery-A-selected.png",
+      "sha256": "202a202547e100d101ca26e54a44e6659b2dfb8093ae82aca3221dcd9ed0c47c",
+      "size": 103569
+    },
+    {
+      "path": "src/azhub/research/shots/display-restored.png",
+      "sha256": "6cd0cb47eae098b825102858af3f943de2a4bdb565be0d94bdcd08f881216343",
+      "size": 63890
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-algo-loaded.png",
+      "sha256": "9f8bc7efbf000b33ad98499debbf13aa79320bd88ca2f185bf34daae9e89e3ea",
+      "size": 81396
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-algo-playing.png",
+      "sha256": "78c603d979f40ff37edfd31118f0c07e8c59ab3bc59b367b7a6224f6bbdb7f21",
+      "size": 84788
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-algo-selection.png",
+      "sha256": "d3b61c758457e03c8e541a57794d346c6ef341b83caf825117d4e03f7feaf4f8",
+      "size": 272409
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-all-tracks.png",
+      "sha256": "5e9efb32388086752cc83eea48a14c031601adc5ad1ceb817adc8d5ea8c7352e",
+      "size": 275129
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-load-track-view.png",
+      "sha256": "5e9efb32388086752cc83eea48a14c031601adc5ad1ceb817adc8d5ea8c7352e",
+      "size": 275129
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-playlist-full.png",
+      "sha256": "5a7571cddfa91139608b1c2cd73fbbd4202807cbc53cf7bf6239456685890529",
+      "size": 39619
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-playlist-retry-full.png",
+      "sha256": "33d5e6e2a89a2941481dd56f293bf419f2faa1a0c0ef8d369f79014097daaf72",
+      "size": 300946
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-playlist-retry-tree.png",
+      "sha256": "2b37ad9b294fa6bb02e52246871f5679a264be5e8d009454adab0c7395fb05f5",
+      "size": 103228
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-playlist-selected.png",
+      "sha256": "3263a66ec60f842cc48aec0c53a154a2817bcd08ff5e8a7c0e2aa23669cb4d9b",
+      "size": 55858
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-selected.png",
+      "sha256": "dbd3dd2a7e1a63b0beffeba6294dcd9775d9172dc526fd1cfaf7d105dd946499",
+      "size": 45620
+    },
+    {
+      "path": "src/azhub/research/shots/fifth-track-focus.png",
+      "sha256": "6e3f63efcded3fae76e07541f12fb55f65975a8e58e4eed2971030a4c45be396",
+      "size": 274644
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-A-playlists.png",
+      "sha256": "4dc5bc07467661ae627b482c51f4639dc24c07baec5c97a1de8509b7326a8f16",
+      "size": 87613
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-B-playlists.png",
+      "sha256": "31a6276e38530e4144f43e65ec41d4dd409006edb5e0dca9b6a9052f51855525",
+      "size": 87677
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-C-playlists.png",
+      "sha256": "f7ac6928e6f5d9e3db15384f6f71bcce60ea94c840862fc483b2e9fee5695558",
+      "size": 87506
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-capabilities.png",
+      "sha256": "b72ad66ce5be3a6a466d32aecb2582de1740fbcbc9cb18c9e1e6e2ac1f07e4f0",
+      "size": 49450
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-D-playlists.png",
+      "sha256": "036160b59c05a5a9abfe5d3712aed159e16615ea8b5657fea0b8a675ea875b89",
+      "size": 87569
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-serialized.png",
+      "sha256": "5ee2f6c3b12296028327d173ac7143b596bfa500f4b59bea9488f77ca0641ba5",
+      "size": 40135
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-sources-ready.png",
+      "sha256": "6826f0cc1ead3aa83a3721ee2d6e7b3de5e8762dbe7bb3b06d3f330ca70666ed",
+      "size": 40002
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-sources.png",
+      "sha256": "c991745b39ab97d71fc1026e84f4639465cdc2b38f911552597b338b59fe54e6",
+      "size": 20786
+    },
+    {
+      "path": "src/azhub/research/shots/four-hub-with-filter.png",
+      "sha256": "b1be8d77615eed48a94ea095e37dc192b949c600fe74bded6d01e73711935cc5",
+      "size": 48610
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-allow.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-available.png",
+      "sha256": "b91d74a74fa4983626227bf030bcf43287f940a5ffad1ff2574a9e2e291766ea",
+      "size": 49450
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-fifth-loaded-deck3.png",
+      "sha256": "59e83593d961872d571143909cf37d8e695d1a48aa296ed57970e0a7ef6984b3",
+      "size": 61264
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-fifth-selection.png",
+      "sha256": "e83211afc6de5cca827a0966f6c4f46ea5b76e7e23826b5087e11fa032d78f53",
+      "size": 276889
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-five-sources.png",
+      "sha256": "b3f104de47f51e095bdcecef0c0c6978085df95a2f7edfdc6738697252f1d6ef",
+      "size": 30854
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-internal-sources.png",
+      "sha256": "034fbf79c9417f78943d95fc87eb671f158b9b5a5d8667087df03e0d80517441",
+      "size": 40937
+    },
+    {
+      "path": "src/azhub/research/shots/fourdeck-selected.png",
+      "sha256": "d07c480d6d6ace9ee7411efe543eb89abea26902be2d442b9eb673c0574627e5",
+      "size": 50401
+    },
+    {
+      "path": "src/azhub/research/shots/guard-fixed-B-playlist-root.png",
+      "sha256": "b7f16950f22d5880679482870a7c9ad9740f16d90c48c697867bcad5158679c6",
+      "size": 87810
+    },
+    {
+      "path": "src/azhub/research/shots/guard-fixed-B-selected.png",
+      "sha256": "8311cda0c72c4d8e666208a01af89688000fb6c9030fca9f19b9c78ede392cf1",
+      "size": 56732
+    },
+    {
+      "path": "src/azhub/research/shots/guard-fixed-startup.png",
+      "sha256": "4cce5b65cd8ef0600986c6ec854bd378185a45c6c80400d6e826414dd0a7ab4a",
+      "size": 40864
+    },
+    {
+      "path": "src/azhub/research/shots/guard-probe-playlist.png",
+      "sha256": "b7f16950f22d5880679482870a7c9ad9740f16d90c48c697867bcad5158679c6",
+      "size": 87810
+    },
+    {
+      "path": "src/azhub/research/shots/hub-audio-selection.png",
+      "sha256": "aecd6e84b11c57bc50d8137e2164e16f81be80cc6688f55badcca06292bfed2a",
+      "size": 105802
+    },
+    {
+      "path": "src/azhub/research/shots/hub-before-mount.png",
+      "sha256": "7ef90204e1d1c58f927e3db535837c90e7b9be578170866b1f0be12ddd96473d",
+      "size": 48714
+    },
+    {
+      "path": "src/azhub/research/shots/hub-cache-result.png",
+      "sha256": "6419198010747d617aea8014cc3fb3f891634d128ea7329314044a0ce8b588dd",
+      "size": 49494
+    },
+    {
+      "path": "src/azhub/research/shots/hub-cache-selected.png",
+      "sha256": "672f5ecfbdfd41919c88d033e22194d25de0bb50f771d8c11e4834d2b89a1d54",
+      "size": 43960
+    },
+    {
+      "path": "src/azhub/research/shots/hub-choose-audio.png",
+      "sha256": "f9b7792d4516a32e0f1018f2c498fb4ff98dbcc283aabb1e0fb43d13cc09316b",
+      "size": 41371
+    },
+    {
+      "path": "src/azhub/research/shots/hub-enter-library.png",
+      "sha256": "1c4efed383533d00a831246d8fbc242a6a442c13dc518ed1770dbba1751ff424",
+      "size": 47259
+    },
+    {
+      "path": "src/azhub/research/shots/hub-identity-load.png",
+      "sha256": "47ba2255ff6ed0884d2d605aa1ae4821d94c07a7d3e84e0a8413cb91192ffbf1",
+      "size": 52257
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-focused.png",
+      "sha256": "9e35bf66336488dbd32264013c7d999c0eb2da1c29abb06725fa9362c05348c0",
+      "size": 38073
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-load.png",
+      "sha256": "1e6f3a70ec3f4c4669a95e873dfd75dfbff2189cee5611a0b6e9cab22104035d",
+      "size": 52271
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-play-attempt.png",
+      "sha256": "d756b7022d249a06b388836205ac85f994f3d7c3d16118ae4c61201cf2f7a4b4",
+      "size": 51977
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-playlist-tracks.png",
+      "sha256": "202a202547e100d101ca26e54a44e6659b2dfb8093ae82aca3221dcd9ed0c47c",
+      "size": 103569
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-playlists.png",
+      "sha256": "4dc5bc07467661ae627b482c51f4639dc24c07baec5c97a1de8509b7326a8f16",
+      "size": 87613
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-root.png",
+      "sha256": "d8de63411d42ace6fd1c913f3cfb4cd543cd0d9e9ea8210ad0ad8563e8c6aaa2",
+      "size": 72207
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-selected.png",
+      "sha256": "62bca0f73fa9511fe3b0832136d3881289f5cec34af9cbbe67fc13e1a15c9feb",
+      "size": 43843
+    },
+    {
+      "path": "src/azhub/research/shots/hub-independent-tracks.png",
+      "sha256": "6b12c468640f5c8d7f605258274f40236ca4a1474e66df4c299f4ad51109d69a",
+      "size": 113228
+    },
+    {
+      "path": "src/azhub/research/shots/hub-info-test-source.png",
+      "sha256": "c991745b39ab97d71fc1026e84f4639465cdc2b38f911552597b338b59fe54e6",
+      "size": 20786
+    },
+    {
+      "path": "src/azhub/research/shots/hub-knob-enter.png",
+      "sha256": "ad2e423eafd9695a543f95580255592d8224e814a172efc15201edbb12d9e85c",
+      "size": 41075
+    },
+    {
+      "path": "src/azhub/research/shots/hub-knob-two.png",
+      "sha256": "155b67141fb162ffce6c86a90877865a92030ca483d965dfd97295940d6070d1",
+      "size": 41767
+    },
+    {
+      "path": "src/azhub/research/shots/hub-library-open.png",
+      "sha256": "de61007ab9635641d3523d73d10761ea43d1e0f5cb0f032a688dc525fdf0518e",
+      "size": 45153
+    },
+    {
+      "path": "src/azhub/research/shots/hub-native-routing-focus.png",
+      "sha256": "672f5ecfbdfd41919c88d033e22194d25de0bb50f771d8c11e4834d2b89a1d54",
+      "size": 43960
+    },
+    {
+      "path": "src/azhub/research/shots/hub-native-routing-ready.png",
+      "sha256": "6a5809f0e9b87a0e0d70df26c00e3d382f4bdf4e0c1fd258dca5498b913b0dc6",
+      "size": 49424
+    },
+    {
+      "path": "src/azhub/research/shots/hub-native-routing-selected.png",
+      "sha256": "3298819d0c068d4f01cc74a10a3e2037c1d54568ac533d39ac724a53f0d03214",
+      "size": 49689
+    },
+    {
+      "path": "src/azhub/research/shots/hub-no-local-usb2.png",
+      "sha256": "09bea872d15f912c8d2f8d990a63e0a0546c3fe7434563f28bbbf91867b16540",
+      "size": 46868
+    },
+    {
+      "path": "src/azhub/research/shots/hub-original-mount-selected.png",
+      "sha256": "1c4efed383533d00a831246d8fbc242a6a442c13dc518ed1770dbba1751ff424",
+      "size": 47259
+    },
+    {
+      "path": "src/azhub/research/shots/hub-playing-time.png",
+      "sha256": "93006587976838e20f08d16bbe2663421a3490ee0de73ae091007fed20378601",
+      "size": 52043
+    },
+    {
+      "path": "src/azhub/research/shots/hub-row-selection.png",
+      "sha256": "96304b11a99ae010570f4e651b42ee5db719021d87cee00a30541183cf26f2b1",
+      "size": 43598
+    },
+    {
+      "path": "src/azhub/research/shots/hub-sample-track-selected.png",
+      "sha256": "9b3e67e0b86accc8e4623306034e0a5df100d6c8eda0228170c97c7dbd68fd27",
+      "size": 107427
+    },
+    {
+      "path": "src/azhub/research/shots/hub-sample-track.png",
+      "sha256": "1ddbf4361864d5c74bdee625933e01ec1d08cdaf491121e619a539a4b7729d59",
+      "size": 108935
+    },
+    {
+      "path": "src/azhub/research/shots/hub-select.png",
+      "sha256": "128826773827a3f512b0621a8ade54451498e5308041da0655165828a4738234",
+      "size": 41706
+    },
+    {
+      "path": "src/azhub/research/shots/hub-servers-first.png",
+      "sha256": "6a5809f0e9b87a0e0d70df26c00e3d382f4bdf4e0c1fd258dca5498b913b0dc6",
+      "size": 49424
+    },
+    {
+      "path": "src/azhub/research/shots/hub-settled.png",
+      "sha256": "5235ce6a4937e6446be02299fd7935532e8a9f7b434aa76c7b51150b16f1d6c8",
+      "size": 39854
+    },
+    {
+      "path": "src/azhub/research/shots/hub-touch-native.png",
+      "sha256": "23244419ef61586423630216f2717ac29f966176e73dec759d75a5929be5c179",
+      "size": 43554
+    },
+    {
+      "path": "src/azhub/research/shots/hub-track-candidate.png",
+      "sha256": "860b2d3f491d7392c039c8b550350b5df21ce3b2fa74262be88a091f1409d801",
+      "size": 95593
+    },
+    {
+      "path": "src/azhub/research/shots/late-B-full.png",
+      "sha256": "9a506dda9d8add89a2d510ca1f53874ebd7059ff34b4fdaa9c6df9e578420504",
+      "size": 301705
+    },
+    {
+      "path": "src/azhub/research/shots/late-B-selected.png",
+      "sha256": "fbb81279c3d46c664a6f4395add05b145d936adc4b1cf98034273f27fc70b965",
+      "size": 103630
+    },
+    {
+      "path": "src/azhub/research/shots/late-source.png",
+      "sha256": "748cedb6cb2362a98110afe4c70df20020def4629c44f00400f8ff0124adf456",
+      "size": 48824
+    },
+    {
+      "path": "src/azhub/research/shots/linkoff-baseline.png",
+      "sha256": "b3f104de47f51e095bdcecef0c0c6978085df95a2f7edfdc6738697252f1d6ef",
+      "size": 30854
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-A-contents.png",
+      "sha256": "202a202547e100d101ca26e54a44e6659b2dfb8093ae82aca3221dcd9ed0c47c",
+      "size": 103569
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-A-playlists.png",
+      "sha256": "4dc5bc07467661ae627b482c51f4639dc24c07baec5c97a1de8509b7326a8f16",
+      "size": 87613
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-B-contents.png",
+      "sha256": "8a43143aee9713abcf663a2d444de1f962b49355ee696e008b3f787873d8a770",
+      "size": 29774
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-B-playlists.png",
+      "sha256": "8a43143aee9713abcf663a2d444de1f962b49355ee696e008b3f787873d8a770",
+      "size": 29774
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-C-contents.png",
+      "sha256": "f2831229c707ec437af4ee2f2333cf907c91e8575a9cebf5523a97c8bd6495f3",
+      "size": 56481
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-C-playlists.png",
+      "sha256": "f7ac6928e6f5d9e3db15384f6f71bcce60ea94c840862fc483b2e9fee5695558",
+      "size": 87506
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-D-contents.png",
+      "sha256": "4baecfdb6e117c4849c06e638f12a2f43dbfc2fe55c762b340dca4c8b99a9209",
+      "size": 56548
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-D-playlists.png",
+      "sha256": "036160b59c05a5a9abfe5d3712aed159e16615ea8b5657fea0b8a675ea875b89",
+      "size": 87569
+    },
+    {
+      "path": "src/azhub/research/shots/mediafix-start.png",
+      "sha256": "482026132656b26f4e303eef454a1422fb457cb8c5d070cb160f8748df07be5f",
+      "size": 44618
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-allow.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-B-selected.png",
+      "sha256": "171196a8983861f2624198a3be1c92b06987b26e1723993f6720ce951658143b",
+      "size": 45603
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-B-tracks-after-hotplug.png",
+      "sha256": "dc46d584272af9745cd7286ea37c3c289deab8b8fd4c5121423bca4991733a25",
+      "size": 275931
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-boot.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-current-sources.png",
+      "sha256": "f846d76ed32631378ebedcbc50e9b238071a1f2494097419bdd4fbb8bb4e5bbc",
+      "size": 40798
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-five-restored.png",
+      "sha256": "f846d76ed32631378ebedcbc50e9b238071a1f2494097419bdd4fbb8bb4e5bbc",
+      "size": 40798
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-five.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-fixed-allow.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-fixed-reload.png",
+      "sha256": "582468775f2bcfa960b72bf63b0c40dbca4ec5a2c1765f16446384f1a02c118a",
+      "size": 42554
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-fixed-source.png",
+      "sha256": "63e06ac02ab0a8e6e35ef633997ef43a437ab2ff82842a8f1b542916d33a9102",
+      "size": 30917
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-menu-ready.png",
+      "sha256": "63e06ac02ab0a8e6e35ef633997ef43a437ab2ff82842a8f1b542916d33a9102",
+      "size": 30917
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-reinserted.png",
+      "sha256": "f846d76ed32631378ebedcbc50e9b238071a1f2494097419bdd4fbb8bb4e5bbc",
+      "size": 40798
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-reload-requested.png",
+      "sha256": "582468775f2bcfa960b72bf63b0c40dbca4ec5a2c1765f16446384f1a02c118a",
+      "size": 42554
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-source-ready.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/mount-worker-source.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-A-full.png",
+      "sha256": "16adac1ea455efb4bc7e6f1f8456879089d289e21dfe5d2734000fa4486a7adb",
+      "size": 296996
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-A-selected.png",
+      "sha256": "6cbe3c2e0a547b93ba40ec6aa80f861c86a420e9272200f8d3ed27c813dd5ec2",
+      "size": 103739
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-allow-detail.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-B-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-B-selected.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-C-full.png",
+      "sha256": "540ed161a8569cdecc5b1d7908de9220c457edbae1ebb070809da4113dcf65c4",
+      "size": 296895
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-C-selected.png",
+      "sha256": "8b98506cea21044a7c88f84f9040bd79a1509da7cfb2286be5c53cb298d36adc",
+      "size": 103645
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-D-full.png",
+      "sha256": "41a4d195987d8efca08047915634976c0df349d3585798447403dc0a881e3e58",
+      "size": 296946
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-D-selected.png",
+      "sha256": "bdf42be1f7dab441ea9402b6fbdd07b822bf828010ef1efb4325cd1d65a6e51f",
+      "size": 103708
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-algo-selection.png",
+      "sha256": "0f6c942bb8df800b87c10afcbdceba63b3699b91915d63b387ae27ff9af12004",
+      "size": 272413
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-alltracks.png",
+      "sha256": "81533af298ea79cc75ecc0ed1d4e17b20ab2bca1016fb8b7034df4e3003e9d40",
+      "size": 270669
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-deck3-loaded.png",
+      "sha256": "59e83593d961872d571143909cf37d8e695d1a48aa296ed57970e0a7ef6984b3",
+      "size": 61264
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-full.png",
+      "sha256": "b7feb8eecdc9dd4cc35d76055570f900c4e0abdf5f1854aa3a9ad1c1bc7a0b63",
+      "size": 296313
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-playing.png",
+      "sha256": "94bb1f936bba7e14a60cf073bcf3f621ad12d4485831b9a665b9f152ecaa71a4",
+      "size": 92480
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-return-selection.png",
+      "sha256": "94ec8f04c9f357c8febd62c1366448591a53afc7e624141f2422f2c32f746232",
+      "size": 278388
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-selected.png",
+      "sha256": "48a1c05944f0a805b56d40e5667cf9b89a770509845dff2baecde437e922e8c4",
+      "size": 103071
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-E-two-decks-loaded.png",
+      "sha256": "06245304424ce96033f3b3dc7d8d865ee29c671040d564883cf02b94a4c1229f",
+      "size": 89424
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-five-sources.png",
+      "sha256": "4cce5b65cd8ef0600986c6ec854bd378185a45c6c80400d6e826414dd0a7ab4a",
+      "size": 40864
+    },
+    {
+      "path": "src/azhub/research/shots/normal-defer-renamed-source.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/open-playlist-A.png",
+      "sha256": "b43d41f151a5c57e264e932bdc6e2be28f124b3668bd902fd1a5937f3eb1ae31",
+      "size": 296964
+    },
+    {
+      "path": "src/azhub/research/shots/open-playlist-B.png",
+      "sha256": "dea5c4a5602d7dd15c64bc095513841afebf85f84070530cf63507e7d30b1086",
+      "size": 40521
+    },
+    {
+      "path": "src/azhub/research/shots/open-playlist-C.png",
+      "sha256": "a7732671d2e5bb0e2ad7de1f0b32cfcaaac5d52c00c5eb5baf2126c034ba0148",
+      "size": 296864
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-algo-loaded.png",
+      "sha256": "13836d0a040797b24b569d4ae9f93ae134abc5fa4f9ce2be34170683b3e6bb48",
+      "size": 68856
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-algo-playing.png",
+      "sha256": "94bab8bacda5f16a5e4c219767276837b48dc4b0298d403c9816e8e084cece90",
+      "size": 71262
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-algo-selection.png",
+      "sha256": "a1afad0224e032f08d0f54142ebb7367cbffdd95a80458f369476ccdbde0f6ce",
+      "size": 273154
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-alltracks-later.png",
+      "sha256": "ec89dc0737e86dedf9620deea6501f1d39629929bf2c4cf0c5195e3cecbd1a84",
+      "size": 37809
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-alltracks-retry.png",
+      "sha256": "64c1235e31d85b3eb14629bca1315a4a56c798181da20fb1456bbf2a87cd2fc1",
+      "size": 271289
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-alltracks.png",
+      "sha256": "ec89dc0737e86dedf9620deea6501f1d39629929bf2c4cf0c5195e3cecbd1a84",
+      "size": 37809
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-library.png",
+      "sha256": "c21d471e7b9b85db0f412f39563b2abaff15e78783859c53c6c903f05fa5fc70",
+      "size": 72449
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-playlist-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/physical-reinsert-playlist-selected.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-A-while-B-absent.png",
+      "sha256": "86d85b81c5008f9a7cce756f547f1a03abbed166da606b3c5670b486c0801bc7",
+      "size": 275874
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-after-global-resume-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-after-retry.png",
+      "sha256": "10f6ac050774df7ba1bfc6f109b3c833c7b77eee7c8967d57e0e8e04a3e2de30",
+      "size": 32720
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-allow-after-resume.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-allow-detail.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-allow-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-allowed.png",
+      "sha256": "582468775f2bcfa960b72bf63b0c40dbca4ec5a2c1765f16446384f1a02c118a",
+      "size": 42554
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-body-allow-detail.png",
+      "sha256": "3245d2919faede56aefe65ea40fe78a09f595a052e4b139da5a5824ddfdb7d26",
+      "size": 38810
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-body-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-E-while-B-absent.png",
+      "sha256": "9f681ac11d1809cdb80ef922cba01c853612bde3706754001962b5d462eedb1d",
+      "size": 275154
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-global-resume-page.png",
+      "sha256": "9db2c98d212c97015f93d4f8793c9674ce33e79f7509c18dea040806e29a29d3",
+      "size": 44024
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-global-resume-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-global-resumed.png",
+      "sha256": "60b24091e7a0c97ddc748f7fcb8b4f64b21df4d482d95743336cd03375b96fc3",
+      "size": 41259
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-reload-ui.png",
+      "sha256": "ab6cf4c67af1474a144f88a3c16d7bbf00592c42f6f2daf512432fbb6cf84642",
+      "size": 29928
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-resume-detail.png",
+      "sha256": "698228dd859f04dd45b982e24458c0a412ccb532a1a955d16792786b433fc7bc",
+      "size": 32895
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-resume-page.png",
+      "sha256": "534162113801b2d97795352fa72b1e050080f9835510a460f44233cfdcf51bc0",
+      "size": 47359
+    },
+    {
+      "path": "src/azhub/research/shots/private-tag-resume-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/publish-A.png",
+      "sha256": "016c19d167e3b24ece11c72a80bd099fa2cc8ae0c36d5e7d06574016af59d1e9",
+      "size": 56585
+    },
+    {
+      "path": "src/azhub/research/shots/publish-D.png",
+      "sha256": "4baecfdb6e117c4849c06e638f12a2f43dbfc2fe55c762b340dca4c8b99a9209",
+      "size": 56548
+    },
+    {
+      "path": "src/azhub/research/shots/publish-source.png",
+      "sha256": "d2617c9b0291517f87d3355b4e567fe40c75d695478473ca8eecca6b9454455f",
+      "size": 50509
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-B-selected.png",
+      "sha256": "7a8d11e7959bae681c822dc3449c7bd8d216e3bf98be543d289cd7262888e4d3",
+      "size": 29898
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-playlist-single-tap.png",
+      "sha256": "7a8d11e7959bae681c822dc3449c7bd8d216e3bf98be543d289cd7262888e4d3",
+      "size": 29898
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-source-ready.png",
+      "sha256": "16c787390948e1ff3858456acb38f4eb36c2dbef4b2a3b393898341b5b69408e",
+      "size": 42423
+    },
+    {
+      "path": "src/azhub/research/shots/quiet-trace-track-single-tap.png",
+      "sha256": "64c1235e31d85b3eb14629bca1315a4a56c798181da20fb1456bbf2a87cd2fc1",
+      "size": 271289
+    },
+    {
+      "path": "src/azhub/research/shots/receive-D.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/receive-ready.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/receive-source.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/removal-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/removal-approval-source.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/removal-four-sources.png",
+      "sha256": "714569759b2fccb5cf79da4cb4a739051bfb3ff116b1ac52729453fe81a8fd41",
+      "size": 41389
+    },
+    {
+      "path": "src/azhub/research/shots/removal-restored-five.png",
+      "sha256": "4cce5b65cd8ef0600986c6ec854bd378185a45c6c80400d6e826414dd0a7ab4a",
+      "size": 40864
+    },
+    {
+      "path": "src/azhub/research/shots/requesters-D-contents.png",
+      "sha256": "899236543b34d17cec59cef10f0a8c2887430c2dcd63900c26011292cff5fea3",
+      "size": 29673
+    },
+    {
+      "path": "src/azhub/research/shots/resume-mod-selected.png",
+      "sha256": "e61aea11ac88c171506b25cc649d2bdb64d3bf38c7dc82fc4d6147c3a8becddc",
+      "size": 62484
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-after-cycles-source.png",
+      "sha256": "73aabb79ec5bfced35a42a7269d8ff5f6ec056d1b1aaf548b8413a11d28ea302",
+      "size": 39885
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-allow-detail.png",
+      "sha256": "6e22c9ad227e42c8eefe85b33d583c80dd2681ab9a6c64158c6ca9e62d1c3f34",
+      "size": 38846
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-approval-source.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-postrestore-playlist-full.png",
+      "sha256": "dbfc64f7b19f0386c35e66c3515350170d97abf07931d4a0b7c8f68d85340d97",
+      "size": 300892
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-postrestore-playlist-selected.png",
+      "sha256": "6de6b77dae4317448e897cfae5373056edaf51068d6fa2631c36f4851819629d",
+      "size": 55827
+    },
+    {
+      "path": "src/azhub/research/shots/reuse-source-ready.png",
+      "sha256": "e430597fd41ea919d6f561dc5728b763920e1f12be7e23428534fe530093d613",
+      "size": 30975
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-A-full.png",
+      "sha256": "d9a5aca72b8c0a38d79937a459f0768e5918e07f85a9c4c19ffbd28661fb0a11",
+      "size": 301641
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-A-playlist-selected.png",
+      "sha256": "202a202547e100d101ca26e54a44e6659b2dfb8093ae82aca3221dcd9ed0c47c",
+      "size": 103569
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-A-root.png",
+      "sha256": "d8de63411d42ace6fd1c913f3cfb4cd543cd0d9e9ea8210ad0ad8563e8c6aaa2",
+      "size": 72207
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-late.png",
+      "sha256": "dea5c4a5602d7dd15c64bc095513841afebf85f84070530cf63507e7d30b1086",
+      "size": 40521
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-retry-full.png",
+      "sha256": "dea5c4a5602d7dd15c64bc095513841afebf85f84070530cf63507e7d30b1086",
+      "size": 40521
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-retry-selected.png",
+      "sha256": "fbb81279c3d46c664a6f4395add05b145d936adc4b1cf98034273f27fc70b965",
+      "size": 103630
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-retry-tree.png",
+      "sha256": "31a6276e38530e4144f43e65ec41d4dd409006edb5e0dca9b6a9052f51855525",
+      "size": 87677
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-selected.png",
+      "sha256": "8a43143aee9713abcf663a2d444de1f962b49355ee696e008b3f787873d8a770",
+      "size": 29774
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-B-tracks.png",
+      "sha256": "5adc5151dd2310221500a31fadfff5cd30130446502c6e69bec541eee1f1041b",
+      "size": 37735
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-five-sources.png",
+      "sha256": "433753556638b02c8f78e82621d665000412601a236ec09640da074ca3b3c78f",
+      "size": 51283
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-source.png",
+      "sha256": "d2617c9b0291517f87d3355b4e567fe40c75d695478473ca8eecca6b9454455f",
+      "size": 50509
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-trace-allow.png",
+      "sha256": "d49169c6924552856a3b7ceb77108894f962933b1ca81a7d98d230261c5b7512",
+      "size": 38746
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-trace-B-full.png",
+      "sha256": "9a506dda9d8add89a2d510ca1f53874ebd7059ff34b4fdaa9c6df9e578420504",
+      "size": 301705
+    },
+    {
+      "path": "src/azhub/research/shots/sdk-trace-B-selected.png",
+      "sha256": "fd27b540d9bfd6c5056c50ffc3c217ee5d9e1d273595f29e385f6e2922fad0f7",
+      "size": 56650
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-A-full.png",
+      "sha256": "719231f75bd41ed69c8eed389eba963b16d68663df5d84d81a41366f04feb0f9",
+      "size": 301695
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-A-preview.png",
+      "sha256": "6cbe3c2e0a547b93ba40ec6aa80f861c86a420e9272200f8d3ed27c813dd5ec2",
+      "size": 103739
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-allow-final.png",
+      "sha256": "0ee70bbd5b72a2d55876435b53a3fe9029b10daad8a6aeb3c0daef89fcbd777e",
+      "size": 38703
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-B-full.png",
+      "sha256": "0110e47606afdfc4828a1118aa69d5089b98fe8f31998ffc787e78a9082e580d",
+      "size": 301759
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-B-preview.png",
+      "sha256": "5969f8f7a56c76e04dc87002cea49b714f4403024c891e15b81aa356afeea4a9",
+      "size": 103800
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-B-root.png",
+      "sha256": "b7f16950f22d5880679482870a7c9ad9740f16d90c48c697867bcad5158679c6",
+      "size": 87810
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-C-full.png",
+      "sha256": "b1aeef6ad6863c78d90ebf1f4dd577e75042bcab2edad4c4582ee9ba7893748a",
+      "size": 301590
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-C-preview.png",
+      "sha256": "8b98506cea21044a7c88f84f9040bd79a1509da7cfb2286be5c53cb298d36adc",
+      "size": 103645
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-C-revisit.png",
+      "sha256": "540ed161a8569cdecc5b1d7908de9220c457edbae1ebb070809da4113dcf65c4",
+      "size": 296895
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-C-root.png",
+      "sha256": "9c4feee9e522905051eeadea9c81ba5236c1481894fdccb8c35c63fdb669aef5",
+      "size": 87637
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-D-full.png",
+      "sha256": "a0e428c6a124125fdc480aabb4d7e31d8845d4498d32a3a4fc8ace589bb6e997",
+      "size": 301652
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-D-preview.png",
+      "sha256": "bdf42be1f7dab441ea9402b6fbdd07b822bf828010ef1efb4325cd1d65a6e51f",
+      "size": 103708
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-D-revisit.png",
+      "sha256": "a0e428c6a124125fdc480aabb4d7e31d8845d4498d32a3a4fc8ace589bb6e997",
+      "size": 301652
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-D-root.png",
+      "sha256": "7943476e335d657e4d0f555d5208b525f2a9559a0c7bc531f0e15d51d0ab3de6",
+      "size": 87700
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-algo-selected.png",
+      "sha256": "e83211afc6de5cca827a0966f6c4f46ea5b76e7e23826b5087e11fa032d78f53",
+      "size": 276889
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-deck3.png",
+      "sha256": "54c1eb358ae28e9e6f3f29b347113e11665a9e5602cccb2a56a8ba2e5f7555aa",
+      "size": 67012
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-full.png",
+      "sha256": "e0203403fdc29e434fe68f47b82e06d8e517e5dd085b7d3d46bb341f91d15f52",
+      "size": 301000
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-play-advanced.png",
+      "sha256": "44f08f46323bd69bbe5035f8d177fd1fa85be5104e478e5f17aa54cd3b968280",
+      "size": 92263
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-play-start.png",
+      "sha256": "8ea32accaf3e33519f45989f70f205b0174a6712532f45ad659eea6e9b0a6f7f",
+      "size": 78899
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-preview.png",
+      "sha256": "48a1c05944f0a805b56d40e5667cf9b89a770509845dff2baecde437e922e8c4",
+      "size": 103071
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-root.png",
+      "sha256": "7af6c6c3cd08160f67369c351b4db379ec1e9761601552902f67f623bcfa43ab",
+      "size": 87025
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-tracks.png",
+      "sha256": "9f681ac11d1809cdb80ef922cba01c853612bde3706754001962b5d462eedb1d",
+      "size": 275154
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-E-two-decks.png",
+      "sha256": "abcc552be6892cd901bae35484a398d0687c922da5469389800a62266940beca",
+      "size": 77828
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-five-source.png",
+      "sha256": "fb5d0de6357b9b291d1e2440eb491b35b3b66ff82c4149f2c18d60bd6de08460",
+      "size": 46809
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-013-late-source.png",
+      "sha256": "e7f6f0aaf462082fa0082dd1716bd071d9cbd88726854d11cb4d7f982d93f268",
+      "size": 31358
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-allow-ready.png",
+      "sha256": "1354e1d7eef06787f812e6741a03349d8e9b57044cf3959a07baa86d6392b93c",
+      "size": 34437
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-baseline-192-allow.png",
+      "sha256": "48c2fec14fa11d240a4b9f4eefc35f824f473e58af2372548f87054ed8f6628f",
+      "size": 38698
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-baseline-192-source.png",
+      "sha256": "3e185d582e33ea0fe08fdea1195a80f0bc11814033f481e3b30267a4c4bf5a06",
+      "size": 28806
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-baseline-reload.png",
+      "sha256": "8017ba80062e638093b3902d1ef19dd99205cf358a79e8c6430c06aef2629b85",
+      "size": 37751
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-dynamic-allow-source.png",
+      "sha256": "3e185d582e33ea0fe08fdea1195a80f0bc11814033f481e3b30267a4c4bf5a06",
+      "size": 28806
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-dynamic-allow.png",
+      "sha256": "9db2c98d212c97015f93d4f8793c9674ce33e79f7509c18dea040806e29a29d3",
+      "size": 44024
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-mod-allow.png",
+      "sha256": "326d01711adf1a9df78935d92f55b2d3e155e4adee170ac3cf383290a37ecc13",
+      "size": 38964
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-new-hash-source.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/subnet-runtime-source.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/trace-disabled.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "size": 3057
+    },
+    {
+      "path": "src/azhub/research/shots/traceoff-B-full.png",
+      "sha256": "9a506dda9d8add89a2d510ca1f53874ebd7059ff34b4fdaa9c6df9e578420504",
+      "size": 301705
+    },
+    {
+      "path": "src/azhub/research/shots/traceoff-B-selected.png",
+      "sha256": "fbb81279c3d46c664a6f4395add05b145d936adc4b1cf98034273f27fc70b965",
+      "size": 103630
+    },
+    {
+      "path": "src/azhub/research/shots/traceoff-B-tree.png",
+      "sha256": "027a407a915b81a88c8eb40ae883b35ff3aa7427f6a13ab5320ef72698b29eb7",
+      "size": 56651
+    },
+    {
+      "path": "src/azhub/research/shots/traceoff-source.png",
+      "sha256": "d2617c9b0291517f87d3355b4e567fe40c75d695478473ca8eecca6b9454455f",
+      "size": 50509
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-013-before.png",
+      "sha256": "bb0f5015bae1b8d3854e93cd9e85fa167d983871b5319e8d9faa63ff4ab6b019",
+      "size": 81020
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-A-playing.png",
+      "sha256": "2a694a30870a5af975f0d4b95903f1ace3c0a7cca671d7e9938eb70fdc3e37ce",
+      "size": 70847
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-algo-ready.png",
+      "sha256": "caf0729f59ffd7e8ac2a576b1a236e4327a45dbb2fca40bf2ae714d3e74e9248",
+      "size": 294723
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-algo-selection.png",
+      "sha256": "53cd36beb4c989d181fc5333fcb250f4b14c414aed7f4b4426b3a206517e8792",
+      "size": 41543
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-approval-source.png",
+      "sha256": "3e185d582e33ea0fe08fdea1195a80f0bc11814033f481e3b30267a4c4bf5a06",
+      "size": 28806
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-community-nav.png",
+      "sha256": "28ebc35a4d59d3638ede9d189b13f50747be394613049e75f53f80f578ad8317",
+      "size": 59840
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-community.png",
+      "sha256": "ac96f8d84aa71a678f5b0c0258fc0ba051a39c68b54aa2ccfc4919802ef5f75c",
+      "size": 68327
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-detail.png",
+      "sha256": "e0965ee9eb9114aa1765ad532e5c41c0dbe92ddfd986a3e8bd403df3ddbf9cab",
+      "size": 38660
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-fifth-loaded.png",
+      "sha256": "85b136b3ac2fb897e206eed5e67f2c81ed60db2ab241b67f1a9094e7ee4c9422",
+      "size": 97024
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-fifth-selection.png",
+      "sha256": "46cbd62e6fd54b4014c6bc692b1e92374763d60bf5c091dd9808cb008260359a",
+      "size": 307275
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-A-playing.png",
+      "sha256": "591825e8d04d60c05a8e3d1a950bfd4b8bbcea6d70a422a00b72c94c53dfe124",
+      "size": 71638
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-A-selection.png",
+      "sha256": "caf0729f59ffd7e8ac2a576b1a236e4327a45dbb2fca40bf2ae714d3e74e9248",
+      "size": 294723
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-allow-ready.png",
+      "sha256": "e0965ee9eb9114aa1765ad532e5c41c0dbe92ddfd986a3e8bd403df3ddbf9cab",
+      "size": 38660
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-allow.png",
+      "sha256": "6a728ba211a12e7af658cf290b90eed26e655a531829c66572289db4f9c7d40a",
+      "size": 20808
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-B-selection.png",
+      "sha256": "d7a0586334b3a5fe79226a2171cac5c9c5b9e8291e64ec683b02bc79a93fed96",
+      "size": 283586
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-final-source.png",
+      "sha256": "3e185d582e33ea0fe08fdea1195a80f0bc11814033f481e3b30267a4c4bf5a06",
+      "size": 28806
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-independent-A-B.png",
+      "sha256": "73be5281db71f25eaeecbec4f6ba7fa2bc00b4461ce59034f36567a7d4b3f3b1",
+      "size": 90183
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-modmenu-open.png",
+      "sha256": "41d5b90098f68af71209866fe036582b778b9a87e4367ac6c6355ee778765dd8",
+      "size": 65508
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-modmenu.png",
+      "sha256": "2efc1084c45ecec3342d8bba125597934bf657d7da8dae281571a06141cbf414",
+      "size": 60277
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-restored-A-B.png",
+      "sha256": "31ecb75180726180e8279735125cbf7b56d9a362c3f7653210c15cc313cac3a1",
+      "size": 97401
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-source-names-ready.png",
+      "sha256": "4d5548c6002cb1f2acc3b506ba10be308f2006630b67df52fb44db6fbb436c3d",
+      "size": 40606
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-source-names.png",
+      "sha256": "3e185d582e33ea0fe08fdea1195a80f0bc11814033f481e3b30267a4c4bf5a06",
+      "size": 28806
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-track-ready.png",
+      "sha256": "eb4f4119863eebb03359c493cb5e11b5a1d267ba5ff3f45d036bf4a5c79c1bb9",
+      "size": 301296
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-track-root.png",
+      "sha256": "53cd36beb4c989d181fc5333fcb250f4b14c414aed7f4b4426b3a206517e8792",
+      "size": 41543
+    },
+    {
+      "path": "src/azhub/research/shots/waveform-014-tracks.png",
+      "sha256": "e674209395be696716281759203b55e18e2608ade4c014b54d24eb0382d19506",
+      "size": 30062
+    },
+    {
+      "path": "src/azhub/research/source-name-emulator-test.log",
+      "sha256": "ffc311a6bfcf16f4d5deb78fb2106d8742613f7e77f4332de9123a7e78de88d3",
+      "size": 254
+    },
+    {
+      "path": "src/azhub/research/subnet-baseline.log",
+      "sha256": "d636b628dfecbade3539f8730463c209462dbbf5733f257dd20cc1fa07839169",
+      "size": 1812
+    },
+    {
+      "path": "src/azhub/research/subnet-fixed-192-runtime.log",
+      "sha256": "455a534cc8ccde5b701f11b93166c003731a200f8ddf14ca1c3a460c046ce685",
+      "size": 10361
+    },
+    {
+      "path": "src/azhub/research/subnet-mismatch-before.log",
+      "sha256": "3c9d7d22865ea0353ad86c3c5e6ced6cd56135a802604569aee9b537d263289d",
+      "size": 608
+    },
+    {
+      "path": "src/azhub/research/subnet-original-192-baseline.log",
+      "sha256": "eb1c0e869dfc82ca3e53dfb00dd3d8066611096e3321bf900fef41bf8622e28a",
+      "size": 3704
+    },
+    {
+      "path": "src/azhub/research/waveform-013-native-settings.log",
+      "sha256": "59d1b71d42f401454ef2559388fd47752ea61e1405e8e7a09d13b52d6ccabcb9",
+      "size": 1303
+    },
+    {
+      "path": "src/azhub/research/waveform-014-independent-settings.log",
+      "sha256": "5e1d4211fc2e8be9790134a2054be3331c25d24ce3c2d36e8040de758cb64e9f",
+      "size": 2503
+    },
+    {
+      "path": "src/azhub/research/waveform-014-native-settings.log",
+      "sha256": "de8b47398840e5f77112fa0566db72341f9126864f71b3d76590e5329ee1697e",
+      "size": 2203
+    },
+    {
+      "path": "src/azhub/research/waveform-014-restored-settings.log",
+      "sha256": "86a018075e775d8985e1f94b839790ac89ac234c8bd0ec0bebaef8661da452c6",
+      "size": 2803
+    },
+    {
+      "path": "src/azhub/research/waveform-014-stress-native-settings.log",
+      "sha256": "5e1d4211fc2e8be9790134a2054be3331c25d24ce3c2d36e8040de758cb64e9f",
+      "size": 2503
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "bfde1fd94c3b17b89fbbfa6321660c8284f631bf126db1e0a32c897944a842db",
+      "size": 35825
+    },
+    {
+      "path": "src/azmod/azmod-mod.h",
+      "sha256": "6e2490e7bd44633281abe5f52888bfea556a204fa16a36a0d3594107db8b1649",
+      "size": 32633
+    }
+  ],
+  "excluded": [
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\__pycache__\\package.cpython-313.pyc",
+      "reason": "generated Python cache",
+      "size": 3009
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\discover",
+      "reason": "generated executable; C sources retained",
+      "size": 17568
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\hub-libraries.so",
+      "reason": "rebuildable executable; tested mod binaries retained inside versioned dev archives",
+      "size": 66200
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\linkfake.so",
+      "reason": "rebuildable executable; tested mod binaries retained inside versioned dev archives",
+      "size": 63768
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\test-label-discovery-arm64",
+      "reason": "generated executable; C sources retained",
+      "size": 4836608
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\test-network-identity-arm64",
+      "reason": "generated executable; C sources retained",
+      "size": 4878376
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\test-source-name-arm64",
+      "reason": "generated executable; C sources retained",
+      "size": 4857312
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\linkfake\\test-tag-cache-abi",
+      "reason": "generated executable; C sources retained",
+      "size": 4731528
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\prepare_private_repo.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2913
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.clang-format",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 857
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\config",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 246
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\description",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 73
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\HEAD",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 41
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\applypatch-msg.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 478
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\commit-msg.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1972
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\fsmonitor-watchman.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4611
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\post-update.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 189
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-applypatch.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 424
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-commit.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1649
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-merge-commit.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 416
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-push.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1374
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-rebase.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4898
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\pre-receive.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 544
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\prepare-commit-msg.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1492
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\push-to-checkout.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2783
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\sendemail-validate.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2308
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\hooks\\update.sample",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3650
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\index",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 9778
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\info\\exclude",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 240
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\logs\\HEAD",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 201
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\objects\\pack\\pack-5fbfba45d68b8ced647edae455bc17b63a414f5d.idx",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4432
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\objects\\pack\\pack-5fbfba45d68b8ced647edae455bc17b63a414f5d.pack",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 225951
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\objects\\pack\\pack-5fbfba45d68b8ced647edae455bc17b63a414f5d.rev",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 532
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\packed-refs",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 104
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.git\\shallow",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 41
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.gitattributes",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 257
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 364
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\ISSUE_TEMPLATE\\config.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 379
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 259
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\pull_request_template.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 453
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\workflows\\ci.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3974
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\workflows\\core-header.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1222
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\workflows\\docs.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1190
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.github\\workflows\\hygiene.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1241
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.gitignore",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 57
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\.public-hygiene.json",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1279
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\CODE_OF_CONDUCT.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 685
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\CONTRIBUTING.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3002
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docker\\Dockerfile",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2370
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\01-getting-started.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4288
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\02-setup.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 6188
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\03-first-mod.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 13444
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\04-testing.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 16389
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\05-hooks-and-firmware.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 10139
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\06-publishing.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 17322
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\07-faq.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8108
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\08-emulator.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3071
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\09-logs.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 5743
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\_hooks.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 538
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\API.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 45747
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\assets\\extra.css",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2333
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\assets\\favicon.svg",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 261
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\GUIDELINES.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8086
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\index.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2376
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\internals.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1662
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\MOD-MENU-KEYS.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3028
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\README.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1039
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\reference-addresses.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2311
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\reference-frames.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4279
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\reference-objects.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4393
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\reference-static-re.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4904
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\reference.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2972
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\docs\\requirements.txt",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 320
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\include\\azmod-mod.h",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 32149
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\include\\CORE-COMMIT",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 41
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\LICENSE",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 35150
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\mkdocs.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2491
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\README.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 7208
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\reference\\data\\addresses.csv",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 21856
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\reference\\data\\addresses.json",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 63097
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\reference\\data\\bus-fields.csv",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 3939
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\reference\\ghidra\\ImportAzModsLabels.java",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 6195
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\SECURITY.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1141
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\.gitattributes",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 257
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\.github\\workflows\\release.yml",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4424
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\.gitignore",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 51
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\azmod.json",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 751
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\hello-az.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 10711
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\icon.png",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1857
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\LICENSE",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 35150
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\Makefile",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 5106
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\template\\README.md",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1610
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\cxx\\hello-cxx\\azmod.json",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 585
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\cxx\\hello-cxx\\hello-cxx.cpp",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 5493
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\cxx\\hello-cxx\\icon.png",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1857
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\cxx\\hello-cxx\\LICENSE",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 35150
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\cxx\\hello-cxx\\Makefile",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 5143
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\expected\\hello-az.so.sha256",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 78
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\ctor.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8592
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\export-read.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8496
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\export-sqlite.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8504
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\extra-export.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8512
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\good.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8456
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\needs-other.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8504
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\needs-x11.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8504
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\no-entry.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8432
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\not-shared.exe",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8944
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\bin\\uses-libm.so",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 8776
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\build.sh",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1536
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\ctor.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 375
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\exe.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 29
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\export-read.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 499
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\export-sqlite.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 408
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\extra-export.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 412
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\good.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 279
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\needs-other.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 316
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\needs-x11.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 316
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\no-entry.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 319
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\stub-other.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 33
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\stub-x11.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 55
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\fixtures\\src\\uses-libm.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 379
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\test_azmod_pack.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 42801
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tests\\test_check_header.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2762
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\__pycache__\\azmod_pack.cpython-313.pyc",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 104015
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\azmod-pack",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 288
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\azmod-pack.cmd",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 693
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\azmod_pack.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 68689
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\check-doc-snippets.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 6821
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\check-header.py",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 2868
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\harness\\harness.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 46590
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\harness\\iocount.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 13645
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\harness\\planted.c",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 4850
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\harness\\sanitize.sh",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 10086
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\install-hooks.sh",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 1048
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\publishing\\sdk-reference\\tools\\public-hygiene",
+      "reason": "publication preparation workspace / upstream SDK checkout",
+      "size": 9408
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\device-setting-serialize.c",
+      "reason": "raw firmware decompilation; facts documented in GHIDRA-FINDINGS.md instead",
+      "size": 10232
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\publishing-guide.html",
+      "reason": "downloaded third-party web page; retained as a source URL in documentation",
+      "size": 62075
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\scripts\\device-settings-sample-arm64",
+      "reason": "generated executable; C sources retained",
+      "size": 16152
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\scripts\\link-packet-count",
+      "reason": "generated executable; C sources retained",
+      "size": 14672
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\scripts\\stress-status-template-arm64",
+      "reason": "generated executable; C sources retained",
+      "size": 15032
+    },
+    {
+      "path": "C:\\Users\\icast\\orca\\workspaces\\xdj-az-mods\\koi\\src\\azhub\\research\\scripts\\xhci-pci-emulator.ko",
+      "reason": "rebuildable executable; tested mod binaries retained inside versioned dev archives",
+      "size": 82272
+    }
+  ],
+  "originals_untouched": true
+}

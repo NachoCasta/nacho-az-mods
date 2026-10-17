@@ -1,0 +1,38 @@
+# Research map
+
+Read CURRENT-STATE.md first. Then:
+
+| Resource | Purpose |
+|---|---|
+| ../src/azhub/NOTES-MULTI-USB.md | Chronological working notes/handoffs; earlier status can be superseded |
+| ../src/azhub/research/GHIDRA-FINDINGS.md | Exact addresses, layouts, routing, ABI and tested corrections |
+| ../src/azhub/research/community-014-acceptance.json | Final emulator binary/hash and acceptance |
+| ../src/azhub/research/az-014-usb-install.json | SSH installation evidence for hardware USB |
+| ../src/azhub/research/waveform-014-*-settings.log | Per-source native color/position samples |
+| ../src/azhub/research/ghscripts/Probe.java | Headless decompile/xref/string/vtable research helper |
+| ../src/azhub/research/scripts/vmem.py | Read the local firmware ELF by virtual address (not a live hardware writer) |
+| ../src/azhub/research/scripts/device-settings-sample.c | Read-only native settings diagnostic |
+| ../src/azhub/research/scripts/stress-status-template.c | MUTATING emulator-only transport stress helper |
+| ../src/azhub/research/scripts/test-source-reuse.sh | MUTATING lifecycle fixture; read before execution |
+| ../src/azhub/research/scripts/build-emulator-xhci.py | Emulator-only controller-module rebuild |
+| ../src/azhub/linkfake/test-*.c | Focused behavior/lifecycle tests |
+
+All scripts are preserved as research; several early shell scripts reference expired temp
+paths. Check LOCAL-RESOURCES.md for current resource locations instead of rerunning blindly.
+Raw decompiled function device-setting-serialize.c was deliberately not copied; its facts and
+packing offsets are documented in GHIDRA-FINDINGS.md. Firmware and full analysis DBs stay local.
+
+## Local captures (not in Git)
+
+`src/azhub/research/shots/` contains the retained local screenshots. Useful families:
+
+- `waveform-014-source-names-ready.png`: real volume labels in native source UI.
+- `waveform-014-independent-A-B.png`: independent blue and RGB source styles.
+- `waveform-014-restored-A-B.png`: legitimate live restoration to RGB.
+- `waveform-014-fifth-loaded.png`: fifth-source RGB waveform and overview.
+- `acceptance-*-full.png`: five populated playlist views before later fixes.
+- `subnet-013-*.png`: native192.168.1.x regression and recovery.
+- `mount-worker-*`, `physical-reinsert-*`: removal/reinsert acceptance.
+
+Captured filenames/hashes from the migration are indexed in migration-inventory.json; image
+bytes remain local and ignored. The user explicitly does not require screenshot backups.

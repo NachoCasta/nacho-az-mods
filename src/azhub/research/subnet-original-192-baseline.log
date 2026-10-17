@@ -1,0 +1,59 @@
+  647.390 hub announce player 3 slot 3 path=/media/player03/usb
+  659.564 hub announcement retry player 3 slot 3
+ 1039.778 player 3 slot 3 at 10.0.2.50 serves /media/usb/sdb1
+ 1043.853 internal Link library cache enabled; user setting unchanged
+ 1043.892 local-only: blocked physical Link transmit
+ 1052.086 mlookup id 0x0102 -> 0xffff660d7e20 (provider 0xffff6600b190) bt: 0x1376d18 0x237d800 0x237dda4 0x24b4840 0x24b497c
+ 1052.821 hub factory player 3 music=0xffff9ac90800
+ 1052.823 hub initialized player 3 music=0xffff9ac90800 info=0xffff9ad12000
+ 1052.823 hub late construction common=0xffff6616e800 timer=0xffff6f180800
+ 1052.823 hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1052.824 hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1052.824 hub reply sender copied 0x18e3f282bf7788b
+ 1052.824 hub registered 2 servers with 0xffff6f180200 (new 2)
+ 1052.824 dispenser owner 0xffff6f180200 vt 0x2934fe0 msg type 0x3007
+ 1052.824   [0] 0xffff66124c00 vt 0x2bb1268 sdid 0x2/0
+ 1052.824   [1] 0xffff66124e00 vt 0x2bb1268 sdid 0x22/0x3
+ 1052.824   [2] 0xffff6615e000 vt 0x2bb1268 sdid 0x4/0
+ 1052.824   [3] 0xffff6615e400 vt 0x2bb1268 sdid 0x24/0
+ 1052.824   [4] 0xffff6615e800 vt 0x2bb1268 sdid 0x44/0
+ 1052.824   [5] 0xffff6615ec00 vt 0x2b97450 sdid 0x6/0
+ 1052.824   [6] 0xffff6615ee00 vt 0x2b97450 sdid 0x26/0
+ 1052.824   [7] 0xffff662ed000 vt 0x2b97450 sdid 0x46/0
+ 1052.824   [8] 0xffff662ed200 vt 0x2b8bdb0 sdid 0x7/0
+ 1052.824   [9] 0xffff662ed400 vt 0x2b8bdb0 sdid 0x27/0
+ 1052.824   [10] 0xffff662ed600 vt 0x2b8bdb0 sdid 0x47/0
+ 1052.824   [11] 0xffff662ed800 vt 0x2b92f00 sdid 0x8/0
+ 1052.824   [12] 0xffff662eda00 vt 0x2b92f00 sdid 0x28/0
+ 1052.824   [13] 0xffff662edc00 vt 0x2b92f00 sdid 0x48/0
+ 1052.824   [14] 0xffff662ede00 vt 0x2b8a1d8 sdid 0xb/0
+ 1052.824   [15] 0xffff66496000 vt 0x2b8a1d8 sdid 0x2b/0
+ 1052.824   [16] 0xffff66496200 vt 0x2b8a1d8 sdid 0x4b/0
+ 1052.824   [17] 0xffffac052300 vt 0x2cafeb8 sdid 0x2/0
+ 1052.824   [18] 0xffffac052580 vt 0x2cafeb8 sdid 0x22/0x3
+ 1052.824   [19] 0xffffac052800 vt 0x2cafeb8 sdid 0x4/0
+ 1052.824   [20] 0xffffac052a80 vt 0x2cafeb8 sdid 0x24/0
+ 1052.824   [21] 0xffffac052d00 vt 0x2cafeb8 sdid 0x44/0
+ 1052.824   [22] 0xffffac052f80 vt 0x2cb0528 sdid 0x6/0
+ 1052.824   [23] 0xffffac053200 vt 0x2cb0528 sdid 0x26/0
+ 1052.825   [24] 0xffffac053480 vt 0x2cb0528 sdid 0x46/0
+ 1052.825   [25] 0xffffac053700 vt 0x2cb0528 sdid 0x7/0
+ 1052.825   [26] 0xffffac053980 vt 0x2cb0528 sdid 0x27/0
+ 1052.825   [27] 0xffffac053c00 vt 0x2cb0528 sdid 0x47/0
+ 1052.825   [28] 0xffffac053e80 vt 0x2cb0528 sdid 0x8/0
+ 1052.825   [29] 0xffffac054100 vt 0x2cb0528 sdid 0x28/0
+ 1052.825   [30] 0xffffac054380 vt 0x2cb0528 sdid 0x48/0
+ 1052.825   [31] 0xffffac054600 vt 0x2cb0528 sdid 0xb/0
+ 1052.825   [32] 0xffffac054880 vt 0x2cb0528 sdid 0x2b/0
+ 1052.825   [33] 0xffffac054b00 vt 0x2cb0528 sdid 0x4b/0
+ 1052.825   [34] 0xffff9ac90800 vt 0xffffac4264c0 sdid 0x2/0
+ 1052.825   [35] 0xffff9ad12000 vt 0xffffac426f40 sdid 0x2/0
+ 1060.148 hub announce player 3 slot 3 path=/media/player03/usb
+ 1072.302 hub announcement retry player 3 slot 3
+ 1073.407 hub announce player 3 slot 3 path=/media/player03/usb
+ 1085.548 hub announcement retry player 3 slot 3
+ 1086.641 hub announce player 3 slot 3 path=/media/player03/usb
+Oct 17 16:01:19 rk3399 apl_start.sh[31824]: operateNetworkChange Link Up
+Oct 17 16:01:19 rk3399 apl_start.sh[31824]: NetworkManager::operateNetworkChange() ip=192.168.1.115, isCableConnected=1
+Oct 17 16:01:22 rk3399 apl_start.sh[31824]: NetworkManager::onLinkSystemUp: Link system UP, ID = 1, 192.168.1.115
+3 10.0.2.50 3 /media/usb/sdb1 HUB sdb1

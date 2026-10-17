@@ -1,0 +1,7 @@
+{
+  "image": "C:\\Users\\icast\\AppData\\Local\\Temp\\koi-hub-mount-test.img",
+  "node": "koi-mount-test",
+  "device": "koi-mount-test-usb",
+  "port": "1.6",
+  "removed": true
+}

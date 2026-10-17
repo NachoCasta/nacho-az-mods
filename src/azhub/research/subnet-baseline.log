@@ -1,0 +1,31 @@
+   60.907   [15] 0xffff4ab56000 vt 0x2b8a1d8 sdid 0x2b/0
+   60.907   [16] 0xffff4ab56200 vt 0x2b8a1d8 sdid 0x4b/0
+   60.907   [17] 0xffff90852300 vt 0x2cafeb8 sdid 0x2/0
+   60.907   [18] 0xffff90852580 vt 0x2cafeb8 sdid 0x22/0x3
+   60.907   [19] 0xffff90852800 vt 0x2cafeb8 sdid 0x4/0
+   60.907   [20] 0xffff90852a80 vt 0x2cafeb8 sdid 0x24/0
+   60.907   [21] 0xffff90852d00 vt 0x2cafeb8 sdid 0x44/0
+   60.907   [22] 0xffff90852f80 vt 0x2cb0528 sdid 0x6/0
+   60.907   [23] 0xffff90853200 vt 0x2cb0528 sdid 0x26/0
+   60.907   [24] 0xffff90853480 vt 0x2cb0528 sdid 0x46/0
+   60.907   [25] 0xffff90853700 vt 0x2cb0528 sdid 0x7/0
+   60.907   [26] 0xffff90853980 vt 0x2cb0528 sdid 0x27/0
+   60.907   [27] 0xffff90853c00 vt 0x2cb0528 sdid 0x47/0
+   60.907   [28] 0xffff90853e80 vt 0x2cb0528 sdid 0x8/0
+   60.907   [29] 0xffff90854100 vt 0x2cb0528 sdid 0x28/0
+   60.907   [30] 0xffff90854380 vt 0x2cb0528 sdid 0x48/0
+   60.907   [31] 0xffff90854600 vt 0x2cb0528 sdid 0xb/0
+   60.907   [32] 0xffff90854880 vt 0x2cb0528 sdid 0x2b/0
+   60.907   [33] 0xffff90854b00 vt 0x2cb0528 sdid 0x4b/0
+  337.134 player 3 slot 3 at 10.0.2.50 serves /media/usb/sdb1
+  337.134 discovery published 1 hub sources (previous 0)
+  337.251 hub announce player 3 slot 3 path=/media/player03/usb
+  337.781 deck -> player 3 :50004 type 0x20 len 44 (first)
+  337.785 deck -> player 3 :50002 type 0x80 len 44 (first)
+  337.812 deck -> player 3 :50002 type 0xa len 1152 (first)
+  337.812 status template from deck: 1152 B
+  337.871 mount for player 3: mkdir -p /media/player03/usb && { mountpoint -q /media/player03/usb || mount -o bind,ro '/media/usb/sdb1' /media/player03/usb; }
+  342.451 deck -> player 3 :50002 type 0x5 len 48 (first)
+  342.451 media query player 3 slot 3 -> answered
+  343.327 hub announcement acknowledged player 3 slot 3
+3400

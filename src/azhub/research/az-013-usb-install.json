@@ -1,0 +1,10 @@
+{
+  "package": "0.1.3",
+  "usb": "/media/usb/sda1",
+  "backup": "/media/usb/sda1/MODS/backups/hub-libraries-0.1.2-before-0.1.3",
+  "archive_sha256": "b25a880169abb5bc1d870ea93019c8098333e8caa6057be0dfb6a5cade27f41c",
+  "installed_binary_sha256": "89eddbd7fef4fa89b43ddcef6f6bbe487a893641b840cf589eacb100e6a9e54b",
+  "running_before_reload": "0.1.2",
+  "automatic_restart_performed": false,
+  "awaiting_user_approval_reload": true
+}

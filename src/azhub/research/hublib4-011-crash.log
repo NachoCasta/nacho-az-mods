@@ -1,0 +1,747 @@
+
+=== azmod crash: signal 11 at 1792218438 fault 0x0030a5b4f4c52edc tid 291431 "MsgDispenser"
+pc 0x0000ffffae8365e4 lr 0x0000ffffae8363e0 sp 0x0000fffee5b772e0 fp 0x0000fffee5b772e0
+ x0=0x0000ffff67d81800 x1=0x0000000000000000 x2=0x0000ffff67d818d8 x3=0x0030a5b4f4c52ed0
+ x4=0x0030a5b4f4c52edc x5=0x0000ffff70da14c0 x6=0x0000000000000000 x7=0x0030a5b4f4c52ed0
+ x8=0x000000006c3cdf0a x9=0x0000000002cafeb8 x10=0x0000000000000000 x11=0x0101010101010101
+ x12=0x0000000000000020 x13=0x0000000000000000 x14=0x0000000000000000 x15=0x0000000000010000
+ x16=0x0000ffffae848e38 x17=0x0000ffffac963b38 x18=0x0000000000006c88 x19=0x0000ffff67d81790
+ x20=0x0000ffff67d81800 x21=0x0000000000000000 x22=0x0000000000000000 x23=0x0000ffffae848fd0
+ x24=0x0000ffff67d816e8 x25=0x0000ffff89447800 x26=0x0000ffffae8384e8 x27=0x0000000000000000
+ x28=0x0000ffff67d81600
+frames:
+  0x000000000237d800
+  0x000000000237dda4
+  0x00000000024b4840
+  0x00000000024b497c
+  0x0000ffffadb89754
+  0x0000ffffac9f9cfc
+maps:
+00400000-007d6000 r-xp 00000000 00:02 3516                               /home/root/pdj/EP147
+007d6000-007d8000 r-xp 003d6000 00:02 3516                               /home/root/pdj/EP147
+007d8000-00a1a000 r-xp 003d8000 00:02 3516                               /home/root/pdj/EP147
+00a1a000-00a1b000 r-xp 0061a000 00:02 3516                               /home/root/pdj/EP147
+00a1b000-00abd000 r-xp 0061b000 00:02 3516                               /home/root/pdj/EP147
+00abd000-00ac0000 r-xp 006bd000 00:02 3516                               /home/root/pdj/EP147
+00ac0000-00aef000 r-xp 006c0000 00:02 3516                               /home/root/pdj/EP147
+00aef000-00af0000 r-xp 006ef000 00:02 3516                               /home/root/pdj/EP147
+00af0000-00af1000 r-xp 006f0000 00:02 3516                               /home/root/pdj/EP147
+00af1000-00af2000 r-xp 006f1000 00:02 3516                               /home/root/pdj/EP147
+00af2000-00d00000 r-xp 006f2000 00:02 3516                               /home/root/pdj/EP147
+00d00000-00d01000 r-xp 00900000 00:02 3516                               /home/root/pdj/EP147
+00d01000-00e5e000 r-xp 00901000 00:02 3516                               /home/root/pdj/EP147
+00e5e000-00e60000 r-xp 00a5e000 00:02 3516                               /home/root/pdj/EP147
+00e60000-00ef0000 r-xp 00a60000 00:02 3516                               /home/root/pdj/EP147
+00ef0000-00ef2000 r-xp 00af0000 00:02 3516                               /home/root/pdj/EP147
+00ef2000-01116000 r-xp 00af2000 00:02 3516                               /home/root/pdj/EP147
+01116000-01118000 r-xp 00d16000 00:02 3516                               /home/root/pdj/EP147
+01118000-01352000 r-xp 00d18000 00:02 3516                               /home/root/pdj/EP147
+01352000-01354000 r-xp 00f52000 00:02 3516                               /home/root/pdj/EP147
+01354000-01373000 r-xp 00f54000 00:02 3516                               /home/root/pdj/EP147
+01373000-01375000 r-xp 00f73000 00:02 3516                               /home/root/pdj/EP147
+01375000-0137b000 r-xp 00f75000 00:02 3516                               /home/root/pdj/EP147
+0137b000-0137d000 r-xp 00f7b000 00:02 3516                               /home/root/pdj/EP147
+0137d000-01380000 r-xp 00f7d000 00:02 3516                               /home/root/pdj/EP147
+01380000-01382000 r-xp 00f80000 00:02 3516                               /home/root/pdj/EP147
+01382000-01530000 r-xp 00f82000 00:02 3516                               /home/root/pdj/EP147
+01530000-01531000 r-xp 01130000 00:02 3516                               /home/root/pdj/EP147
+01531000-01aeb000 r-xp 01131000 00:02 3516                               /home/root/pdj/EP147
+01aeb000-01aec000 r-xp 016eb000 00:02 3516                               /home/root/pdj/EP147
+01aec000-01b10000 r-xp 016ec000 00:02 3516                               /home/root/pdj/EP147
+01b10000-01b11000 r-xp 01710000 00:02 3516                               /home/root/pdj/EP147
+01b11000-01b3a000 r-xp 01711000 00:02 3516                               /home/root/pdj/EP147
+01b3a000-01b3c000 r-xp 0173a000 00:02 3516                               /home/root/pdj/EP147
+01b3c000-01b3f000 r-xp 0173c000 00:02 3516                               /home/root/pdj/EP147
+01b3f000-01b40000 r-xp 0173f000 00:02 3516                               /home/root/pdj/EP147
+01b40000-01bdf000 r-xp 01740000 00:02 3516                               /home/root/pdj/EP147
+01bdf000-01be0000 r-xp 017df000 00:02 3516                               /home/root/pdj/EP147
+01be0000-01c2f000 r-xp 017e0000 00:02 3516                               /home/root/pdj/EP147
+01c2f000-01c31000 r-xp 0182f000 00:02 3516                               /home/root/pdj/EP147
+01c31000-01c32000 r-xp 01831000 00:02 3516                               /home/root/pdj/EP147
+01c32000-01c34000 r-xp 01832000 00:02 3516                               /home/root/pdj/EP147
+01c34000-01c37000 r-xp 01834000 00:02 3516                               /home/root/pdj/EP147
+01c37000-01c38000 r-xp 01837000 00:02 3516                               /home/root/pdj/EP147
+01c38000-01cc3000 r-xp 01838000 00:02 3516                               /home/root/pdj/EP147
+01cc3000-01cc4000 r-xp 018c3000 00:02 3516                               /home/root/pdj/EP147
+01cc4000-01cf8000 r-xp 018c4000 00:02 3516                               /home/root/pdj/EP147
+01cf8000-01cf9000 r-xp 018f8000 00:02 3516                               /home/root/pdj/EP147
+01cf9000-01cfd000 r-xp 018f9000 00:02 3516                               /home/root/pdj/EP147
+01cfd000-01cfe000 r-xp 018fd000 00:02 3516                               /home/root/pdj/EP147
+01cfe000-01d38000 r-xp 018fe000 00:02 3516                               /home/root/pdj/EP147
+01d38000-01d39000 r-xp 01938000 00:02 3516                               /home/root/pdj/EP147
+01d39000-01d44000 r-xp 01939000 00:02 3516                               /home/root/pdj/EP147
+01d44000-01d45000 r-xp 01944000 00:02 3516                               /home/root/pdj/EP147
+01d45000-01d82000 r-xp 01945000 00:02 3516                               /home/root/pdj/EP147
+01d82000-01d83000 r-xp 01982000 00:02 3516                               /home/root/pdj/EP147
+01d83000-01d89000 r-xp 01983000 00:02 3516                               /home/root/pdj/EP147
+01d89000-01d8a000 r-xp 01989000 00:02 3516                               /home/root/pdj/EP147
+01d8a000-01ed5000 r-xp 0198a000 00:02 3516                               /home/root/pdj/EP147
+01ed5000-01ed6000 r-xp 01ad5000 00:02 3516                               /home/root/pdj/EP147
+01ed6000-01eed000 r-xp 01ad6000 00:02 3516                               /home/root/pdj/EP147
+01eed000-01eee000 r-xp 01aed000 00:02 3516                               /home/root/pdj/EP147
+01eee000-01f49000 r-xp 01aee000 00:02 3516                               /home/root/pdj/EP147
+01f49000-01f4b000 r-xp 01b49000 00:02 3516                               /home/root/pdj/EP147
+01f4b000-01f4c000 r-xp 01b4b000 00:02 3516                               /home/root/pdj/EP147
+01f4c000-01f4e000 r-xp 01b4c000 00:02 3516                               /home/root/pdj/EP147
+01f4e000-01f51000 r-xp 01b4e000 00:02 3516                               /home/root/pdj/EP147
+01f51000-01f52000 r-xp 01b51000 00:02 3516                               /home/root/pdj/EP147
+01f52000-01f54000 r-xp 01b52000 00:02 3516                               /home/root/pdj/EP147
+01f54000-01f56000 r-xp 01b54000 00:02 3516                               /home/root/pdj/EP147
+01f56000-01f57000 r-xp 01b56000 00:02 3516                               /home/root/pdj/EP147
+01f57000-01f5f000 r-xp 01b57000 00:02 3516                               /home/root/pdj/EP147
+01f5f000-01f60000 r-xp 01b5f000 00:02 3516                               /home/root/pdj/EP147
+01f60000-01f62000 r-xp 01b60000 00:02 3516                               /home/root/pdj/EP147
+01f62000-01f63000 r-xp 01b62000 00:02 3516                               /home/root/pdj/EP147
+01f63000-01f67000 r-xp 01b63000 00:02 3516                               /home/root/pdj/EP147
+01f67000-01f68000 r-xp 01b67000 00:02 3516                               /home/root/pdj/EP147
+01f68000-01f6a000 r-xp 01b68000 00:02 3516                               /home/root/pdj/EP147
+01f6a000-01f6b000 r-xp 01b6a000 00:02 3516                               /home/root/pdj/EP147
+01f6b000-01f6e000 r-xp 01b6b000 00:02 3516                               /home/root/pdj/EP147
+01f6e000-01fb2000 r-xp 01b6e000 00:02 3516                               /home/root/pdj/EP147
+01fb2000-01fb3000 r-xp 01bb2000 00:02 3516                               /home/root/pdj/EP147
+01fb3000-020ad000 r-xp 01bb3000 00:02 3516                               /home/root/pdj/EP147
+020ad000-020ae000 r-xp 01cad000 00:02 3516                               /home/root/pdj/EP147
+020ae000-020c9000 r-xp 01cae000 00:02 3516                               /home/root/pdj/EP147
+020c9000-020ca000 r-xp 01cc9000 00:02 3516                               /home/root/pdj/EP147
+020ca000-02115000 r-xp 01cca000 00:02 3516                               /home/root/pdj/EP147
+02115000-02116000 r-xp 01d15000 00:02 3516                               /home/root/pdj/EP147
+02116000-021f2000 r-xp 01d16000 00:02 3516                               /home/root/pdj/EP147
+021f2000-021f4000 r-xp 01df2000 00:02 3516                               /home/root/pdj/EP147
+021f4000-02289000 r-xp 01df4000 00:02 3516                               /home/root/pdj/EP147
+02289000-0228a000 r-xp 01e89000 00:02 3516                               /home/root/pdj/EP147
+0228a000-02351000 r-xp 01e8a000 00:02 3516                               /home/root/pdj/EP147
+02351000-02352000 r-xp 01f51000 00:02 3516                               /home/root/pdj/EP147
+02352000-0236d000 r-xp 01f52000 00:02 3516                               /home/root/pdj/EP147
+0236d000-0236f000 r-xp 01f6d000 00:02 3516                               /home/root/pdj/EP147
+0236f000-0250a000 r-xp 01f6f000 00:02 3516                               /home/root/pdj/EP147
+0250a000-0250b000 r-xp 0210a000 00:02 3516                               /home/root/pdj/EP147
+0250b000-0251c000 r-xp 0210b000 00:02 3516                               /home/root/pdj/EP147
+0251c000-0251e000 r-xp 0211c000 00:02 3516                               /home/root/pdj/EP147
+0251e000-0255a000 r-xp 0211e000 00:02 3516                               /home/root/pdj/EP147
+0255a000-0255c000 r-xp 0215a000 00:02 3516                               /home/root/pdj/EP147
+0255c000-025ff000 r-xp 0215c000 00:02 3516                               /home/root/pdj/EP147
+025ff000-02600000 r-xp 021ff000 00:02 3516                               /home/root/pdj/EP147
+02600000-0260a000 r-xp 02200000 00:02 3516                               /home/root/pdj/EP147
+0260a000-0260b000 r-xp 0220a000 00:02 3516                               /home/root/pdj/EP147
+0260b000-02667000 r-xp 0220b000 00:02 3516                               /home/root/pdj/EP147
+02667000-02669000 r-xp 02267000 00:02 3516                               /home/root/pdj/EP147
+02669000-029de000 r-xp 02269000 00:02 3516                               /home/root/pdj/EP147
+029de000-029df000 r-xp 025de000 00:02 3516                               /home/root/pdj/EP147
+029df000-02b9c000 r-xp 025df000 00:02 3516                               /home/root/pdj/EP147
+02b9c000-02b9d000 r-xp 0279c000 00:02 3516                               /home/root/pdj/EP147
+02b9d000-02bb1000 r-xp 0279d000 00:02 3516                               /home/root/pdj/EP147
+02bb1000-02bb2000 r-xp 027b1000 00:02 3516                               /home/root/pdj/EP147
+02bb2000-02be9000 r-xp 027b2000 00:02 3516                               /home/root/pdj/EP147
+02be9000-02bea000 r-xp 027e9000 00:02 3516                               /home/root/pdj/EP147
+02bea000-02cda000 r-xp 027ea000 00:02 3516                               /home/root/pdj/EP147
+02cda000-02cdb000 r-xp 028da000 00:02 3516                               /home/root/pdj/EP147
+02cdb000-02d53000 r-xp 028db000 00:02 3516                               /home/root/pdj/EP147
+02d53000-02d54000 r-xp 02953000 00:02 3516                               /home/root/pdj/EP147
+02d54000-02d59000 r-xp 02954000 00:02 3516                               /home/root/pdj/EP147
+02d59000-02d5b000 r-xp 02959000 00:02 3516                               /home/root/pdj/EP147
+02d5b000-02d61000 r-xp 0295b000 00:02 3516                               /home/root/pdj/EP147
+02d61000-02d62000 r-xp 02961000 00:02 3516                               /home/root/pdj/EP147
+02d62000-02d91000 r-xp 02962000 00:02 3516                               /home/root/pdj/EP147
+02d91000-02d92000 r-xp 02991000 00:02 3516                               /home/root/pdj/EP147
+02d92000-02e0b000 r-xp 02992000 00:02 3516                               /home/root/pdj/EP147
+02e0b000-02e0c000 r-xp 02a0b000 00:02 3516                               /home/root/pdj/EP147
+02e0c000-02e20000 r-xp 02a0c000 00:02 3516                               /home/root/pdj/EP147
+02e20000-02e21000 r-xp 02a20000 00:02 3516                               /home/root/pdj/EP147
+02e21000-02eb1000 r-xp 02a21000 00:02 3516                               /home/root/pdj/EP147
+02eb1000-02eb2000 r-xp 02ab1000 00:02 3516                               /home/root/pdj/EP147
+02eb2000-02ebe000 r-xp 02ab2000 00:02 3516                               /home/root/pdj/EP147
+02ebe000-02ebf000 r-xp 02abe000 00:02 3516                               /home/root/pdj/EP147
+02ebf000-02ef2000 r-xp 02abf000 00:02 3516                               /home/root/pdj/EP147
+02ef2000-02ef4000 r-xp 02af2000 00:02 3516                               /home/root/pdj/EP147
+02ef4000-02ef9000 r-xp 02af4000 00:02 3516                               /home/root/pdj/EP147
+02ef9000-02efa000 r-xp 02af9000 00:02 3516                               /home/root/pdj/EP147
+02efa000-03093000 r-xp 02afa000 00:02 3516                               /home/root/pdj/EP147
+03093000-03094000 r-xp 02c93000 00:02 3516                               /home/root/pdj/EP147
+03094000-03098000 r-xp 02c94000 00:02 3516                               /home/root/pdj/EP147
+03098000-03099000 r-xp 02c98000 00:02 3516                               /home/root/pdj/EP147
+03099000-030e8000 r-xp 02c99000 00:02 3516                               /home/root/pdj/EP147
+030e8000-030e9000 r-xp 02ce8000 00:02 3516                               /home/root/pdj/EP147
+030e9000-030ea000 r-xp 02ce9000 00:02 3516                               /home/root/pdj/EP147
+030ea000-030eb000 r-xp 02cea000 00:02 3516                               /home/root/pdj/EP147
+030eb000-030ef000 r-xp 02ceb000 00:02 3516                               /home/root/pdj/EP147
+030ef000-030f1000 r-xp 02cef000 00:02 3516                               /home/root/pdj/EP147
+030f1000-03161000 r-xp 02cf1000 00:02 3516                               /home/root/pdj/EP147
+03161000-03162000 r-xp 02d61000 00:02 3516                               /home/root/pdj/EP147
+03162000-03163000 r-xp 02d62000 00:02 3516                               /home/root/pdj/EP147
+03163000-03165000 r-xp 02d63000 00:02 3516                               /home/root/pdj/EP147
+03165000-034f4000 r-xp 02d65000 00:02 3516                               /home/root/pdj/EP147
+034f4000-034f5000 r-xp 030f4000 00:02 3516                               /home/root/pdj/EP147
+034f5000-034f6000 r-xp 030f5000 00:02 3516                               /home/root/pdj/EP147
+034f6000-034f7000 r-xp 030f6000 00:02 3516                               /home/root/pdj/EP147
+034f7000-034ff000 r-xp 030f7000 00:02 3516                               /home/root/pdj/EP147
+034ff000-03500000 r-xp 030ff000 00:02 3516                               /home/root/pdj/EP147
+03500000-03f60000 r-xp 03100000 00:02 3516                               /home/root/pdj/EP147
+03f70000-03f84000 r--p 03b60000 00:02 3516                               /home/root/pdj/EP147
+03f84000-03fa1000 rw-p 03b74000 00:02 3516                               /home/root/pdj/EP147
+ffffae200000-ffffae38b000 r-xp 00000000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffae38b000-ffffae39a000 ---p 0018b000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffae39a000-ffffae39d000 r--p 0018a000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffae39d000-ffffae39e000 rw-p 0018d000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+=== end
+
+=== azmod crash: signal 11 at 1792218452 fault 0x0030a5b4f4c52edc tid 292481 "MsgDispenser"
+pc 0x0000ffff888f95e4 lr 0x0000ffff888f93e0 sp 0x0000fffec03772e0 fp 0x0000fffec03772e0
+ x0=0x0000ffff4256a800 x1=0x0000000000000000 x2=0x0000ffff4256a8d8 x3=0x0030a5b4f4c52ed0
+ x4=0x0030a5b4f4c52edc x5=0x0000ffff4b58a4c0 x6=0x0000000000000000 x7=0x0030a5b4f4c52ed0
+ x8=0x000000007d435f0a x9=0x0000000002cafeb8 x10=0x0000000000000000 x11=0x0101010101010101
+ x12=0x0000000000000020 x13=0x0000000000000000 x14=0x0000000000000000 x15=0x0000000000010000
+ x16=0x0000ffff8890be38 x17=0x0000ffff86a2cb38 x18=0x000000000000fc88 x19=0x0000ffff4256a790
+ x20=0x0000ffff4256a800 x21=0x0000000000000000 x22=0x0000000000000000 x23=0x0000ffff8890bfd0
+ x24=0x0000ffff4256a6e8 x25=0x0000ffff64de6800 x26=0x0000ffff888fb4e8 x27=0x0000000000000000
+ x28=0x0000ffff4256a600
+frames:
+  0x000000000237d800
+  0x000000000237dda4
+  0x00000000024b4840
+  0x00000000024b497c
+  0x0000ffff87c52754
+  0x0000ffff86ac2cfc
+maps:
+00400000-007d6000 r-xp 00000000 00:02 3516                               /home/root/pdj/EP147
+007d6000-007d8000 r-xp 003d6000 00:02 3516                               /home/root/pdj/EP147
+007d8000-00a1a000 r-xp 003d8000 00:02 3516                               /home/root/pdj/EP147
+00a1a000-00a1b000 r-xp 0061a000 00:02 3516                               /home/root/pdj/EP147
+00a1b000-00abd000 r-xp 0061b000 00:02 3516                               /home/root/pdj/EP147
+00abd000-00ac0000 r-xp 006bd000 00:02 3516                               /home/root/pdj/EP147
+00ac0000-00aef000 r-xp 006c0000 00:02 3516                               /home/root/pdj/EP147
+00aef000-00af0000 r-xp 006ef000 00:02 3516                               /home/root/pdj/EP147
+00af0000-00af1000 r-xp 006f0000 00:02 3516                               /home/root/pdj/EP147
+00af1000-00af2000 r-xp 006f1000 00:02 3516                               /home/root/pdj/EP147
+00af2000-00d00000 r-xp 006f2000 00:02 3516                               /home/root/pdj/EP147
+00d00000-00d01000 r-xp 00900000 00:02 3516                               /home/root/pdj/EP147
+00d01000-00e5e000 r-xp 00901000 00:02 3516                               /home/root/pdj/EP147
+00e5e000-00e60000 r-xp 00a5e000 00:02 3516                               /home/root/pdj/EP147
+00e60000-00ef0000 r-xp 00a60000 00:02 3516                               /home/root/pdj/EP147
+00ef0000-00ef2000 r-xp 00af0000 00:02 3516                               /home/root/pdj/EP147
+00ef2000-01116000 r-xp 00af2000 00:02 3516                               /home/root/pdj/EP147
+01116000-01118000 r-xp 00d16000 00:02 3516                               /home/root/pdj/EP147
+01118000-01352000 r-xp 00d18000 00:02 3516                               /home/root/pdj/EP147
+01352000-01354000 r-xp 00f52000 00:02 3516                               /home/root/pdj/EP147
+01354000-01373000 r-xp 00f54000 00:02 3516                               /home/root/pdj/EP147
+01373000-01375000 r-xp 00f73000 00:02 3516                               /home/root/pdj/EP147
+01375000-0137b000 r-xp 00f75000 00:02 3516                               /home/root/pdj/EP147
+0137b000-0137d000 r-xp 00f7b000 00:02 3516                               /home/root/pdj/EP147
+0137d000-01380000 r-xp 00f7d000 00:02 3516                               /home/root/pdj/EP147
+01380000-01382000 r-xp 00f80000 00:02 3516                               /home/root/pdj/EP147
+01382000-01530000 r-xp 00f82000 00:02 3516                               /home/root/pdj/EP147
+01530000-01531000 r-xp 01130000 00:02 3516                               /home/root/pdj/EP147
+01531000-01aeb000 r-xp 01131000 00:02 3516                               /home/root/pdj/EP147
+01aeb000-01aec000 r-xp 016eb000 00:02 3516                               /home/root/pdj/EP147
+01aec000-01b10000 r-xp 016ec000 00:02 3516                               /home/root/pdj/EP147
+01b10000-01b11000 r-xp 01710000 00:02 3516                               /home/root/pdj/EP147
+01b11000-01b3a000 r-xp 01711000 00:02 3516                               /home/root/pdj/EP147
+01b3a000-01b3c000 r-xp 0173a000 00:02 3516                               /home/root/pdj/EP147
+01b3c000-01b3f000 r-xp 0173c000 00:02 3516                               /home/root/pdj/EP147
+01b3f000-01b40000 r-xp 0173f000 00:02 3516                               /home/root/pdj/EP147
+01b40000-01bdf000 r-xp 01740000 00:02 3516                               /home/root/pdj/EP147
+01bdf000-01be0000 r-xp 017df000 00:02 3516                               /home/root/pdj/EP147
+01be0000-01c2f000 r-xp 017e0000 00:02 3516                               /home/root/pdj/EP147
+01c2f000-01c31000 r-xp 0182f000 00:02 3516                               /home/root/pdj/EP147
+01c31000-01c32000 r-xp 01831000 00:02 3516                               /home/root/pdj/EP147
+01c32000-01c34000 r-xp 01832000 00:02 3516                               /home/root/pdj/EP147
+01c34000-01c37000 r-xp 01834000 00:02 3516                               /home/root/pdj/EP147
+01c37000-01c38000 r-xp 01837000 00:02 3516                               /home/root/pdj/EP147
+01c38000-01cc3000 r-xp 01838000 00:02 3516                               /home/root/pdj/EP147
+01cc3000-01cc4000 r-xp 018c3000 00:02 3516                               /home/root/pdj/EP147
+01cc4000-01cf8000 r-xp 018c4000 00:02 3516                               /home/root/pdj/EP147
+01cf8000-01cf9000 r-xp 018f8000 00:02 3516                               /home/root/pdj/EP147
+01cf9000-01cfd000 r-xp 018f9000 00:02 3516                               /home/root/pdj/EP147
+01cfd000-01cfe000 r-xp 018fd000 00:02 3516                               /home/root/pdj/EP147
+01cfe000-01d38000 r-xp 018fe000 00:02 3516                               /home/root/pdj/EP147
+01d38000-01d39000 r-xp 01938000 00:02 3516                               /home/root/pdj/EP147
+01d39000-01d44000 r-xp 01939000 00:02 3516                               /home/root/pdj/EP147
+01d44000-01d45000 r-xp 01944000 00:02 3516                               /home/root/pdj/EP147
+01d45000-01d82000 r-xp 01945000 00:02 3516                               /home/root/pdj/EP147
+01d82000-01d83000 r-xp 01982000 00:02 3516                               /home/root/pdj/EP147
+01d83000-01d89000 r-xp 01983000 00:02 3516                               /home/root/pdj/EP147
+01d89000-01d8a000 r-xp 01989000 00:02 3516                               /home/root/pdj/EP147
+01d8a000-01ed5000 r-xp 0198a000 00:02 3516                               /home/root/pdj/EP147
+01ed5000-01ed6000 r-xp 01ad5000 00:02 3516                               /home/root/pdj/EP147
+01ed6000-01eed000 r-xp 01ad6000 00:02 3516                               /home/root/pdj/EP147
+01eed000-01eee000 r-xp 01aed000 00:02 3516                               /home/root/pdj/EP147
+01eee000-01f49000 r-xp 01aee000 00:02 3516                               /home/root/pdj/EP147
+01f49000-01f4b000 r-xp 01b49000 00:02 3516                               /home/root/pdj/EP147
+01f4b000-01f4c000 r-xp 01b4b000 00:02 3516                               /home/root/pdj/EP147
+01f4c000-01f4e000 r-xp 01b4c000 00:02 3516                               /home/root/pdj/EP147
+01f4e000-01f51000 r-xp 01b4e000 00:02 3516                               /home/root/pdj/EP147
+01f51000-01f52000 r-xp 01b51000 00:02 3516                               /home/root/pdj/EP147
+01f52000-01f54000 r-xp 01b52000 00:02 3516                               /home/root/pdj/EP147
+01f54000-01f56000 r-xp 01b54000 00:02 3516                               /home/root/pdj/EP147
+01f56000-01f57000 r-xp 01b56000 00:02 3516                               /home/root/pdj/EP147
+01f57000-01f5f000 r-xp 01b57000 00:02 3516                               /home/root/pdj/EP147
+01f5f000-01f60000 r-xp 01b5f000 00:02 3516                               /home/root/pdj/EP147
+01f60000-01f62000 r-xp 01b60000 00:02 3516                               /home/root/pdj/EP147
+01f62000-01f63000 r-xp 01b62000 00:02 3516                               /home/root/pdj/EP147
+01f63000-01f67000 r-xp 01b63000 00:02 3516                               /home/root/pdj/EP147
+01f67000-01f68000 r-xp 01b67000 00:02 3516                               /home/root/pdj/EP147
+01f68000-01f6a000 r-xp 01b68000 00:02 3516                               /home/root/pdj/EP147
+01f6a000-01f6b000 r-xp 01b6a000 00:02 3516                               /home/root/pdj/EP147
+01f6b000-01f6e000 r-xp 01b6b000 00:02 3516                               /home/root/pdj/EP147
+01f6e000-01fb2000 r-xp 01b6e000 00:02 3516                               /home/root/pdj/EP147
+01fb2000-01fb3000 r-xp 01bb2000 00:02 3516                               /home/root/pdj/EP147
+01fb3000-020ad000 r-xp 01bb3000 00:02 3516                               /home/root/pdj/EP147
+020ad000-020ae000 r-xp 01cad000 00:02 3516                               /home/root/pdj/EP147
+020ae000-020c9000 r-xp 01cae000 00:02 3516                               /home/root/pdj/EP147
+020c9000-020ca000 r-xp 01cc9000 00:02 3516                               /home/root/pdj/EP147
+020ca000-02115000 r-xp 01cca000 00:02 3516                               /home/root/pdj/EP147
+02115000-02116000 r-xp 01d15000 00:02 3516                               /home/root/pdj/EP147
+02116000-021f2000 r-xp 01d16000 00:02 3516                               /home/root/pdj/EP147
+021f2000-021f4000 r-xp 01df2000 00:02 3516                               /home/root/pdj/EP147
+021f4000-02289000 r-xp 01df4000 00:02 3516                               /home/root/pdj/EP147
+02289000-0228a000 r-xp 01e89000 00:02 3516                               /home/root/pdj/EP147
+0228a000-02351000 r-xp 01e8a000 00:02 3516                               /home/root/pdj/EP147
+02351000-02352000 r-xp 01f51000 00:02 3516                               /home/root/pdj/EP147
+02352000-0236d000 r-xp 01f52000 00:02 3516                               /home/root/pdj/EP147
+0236d000-0236f000 r-xp 01f6d000 00:02 3516                               /home/root/pdj/EP147
+0236f000-0250a000 r-xp 01f6f000 00:02 3516                               /home/root/pdj/EP147
+0250a000-0250b000 r-xp 0210a000 00:02 3516                               /home/root/pdj/EP147
+0250b000-0251c000 r-xp 0210b000 00:02 3516                               /home/root/pdj/EP147
+0251c000-0251e000 r-xp 0211c000 00:02 3516                               /home/root/pdj/EP147
+0251e000-0255a000 r-xp 0211e000 00:02 3516                               /home/root/pdj/EP147
+0255a000-0255c000 r-xp 0215a000 00:02 3516                               /home/root/pdj/EP147
+0255c000-025ff000 r-xp 0215c000 00:02 3516                               /home/root/pdj/EP147
+025ff000-02600000 r-xp 021ff000 00:02 3516                               /home/root/pdj/EP147
+02600000-0260a000 r-xp 02200000 00:02 3516                               /home/root/pdj/EP147
+0260a000-0260b000 r-xp 0220a000 00:02 3516                               /home/root/pdj/EP147
+0260b000-02667000 r-xp 0220b000 00:02 3516                               /home/root/pdj/EP147
+02667000-02669000 r-xp 02267000 00:02 3516                               /home/root/pdj/EP147
+02669000-029de000 r-xp 02269000 00:02 3516                               /home/root/pdj/EP147
+029de000-029df000 r-xp 025de000 00:02 3516                               /home/root/pdj/EP147
+029df000-02b9c000 r-xp 025df000 00:02 3516                               /home/root/pdj/EP147
+02b9c000-02b9d000 r-xp 0279c000 00:02 3516                               /home/root/pdj/EP147
+02b9d000-02bb1000 r-xp 0279d000 00:02 3516                               /home/root/pdj/EP147
+02bb1000-02bb2000 r-xp 027b1000 00:02 3516                               /home/root/pdj/EP147
+02bb2000-02be9000 r-xp 027b2000 00:02 3516                               /home/root/pdj/EP147
+02be9000-02bea000 r-xp 027e9000 00:02 3516                               /home/root/pdj/EP147
+02bea000-02cda000 r-xp 027ea000 00:02 3516                               /home/root/pdj/EP147
+02cda000-02cdb000 r-xp 028da000 00:02 3516                               /home/root/pdj/EP147
+02cdb000-02d53000 r-xp 028db000 00:02 3516                               /home/root/pdj/EP147
+02d53000-02d54000 r-xp 02953000 00:02 3516                               /home/root/pdj/EP147
+02d54000-02d59000 r-xp 02954000 00:02 3516                               /home/root/pdj/EP147
+02d59000-02d5b000 r-xp 02959000 00:02 3516                               /home/root/pdj/EP147
+02d5b000-02d61000 r-xp 0295b000 00:02 3516                               /home/root/pdj/EP147
+02d61000-02d62000 r-xp 02961000 00:02 3516                               /home/root/pdj/EP147
+02d62000-02d91000 r-xp 02962000 00:02 3516                               /home/root/pdj/EP147
+02d91000-02d92000 r-xp 02991000 00:02 3516                               /home/root/pdj/EP147
+02d92000-02e0b000 r-xp 02992000 00:02 3516                               /home/root/pdj/EP147
+02e0b000-02e0c000 r-xp 02a0b000 00:02 3516                               /home/root/pdj/EP147
+02e0c000-02e20000 r-xp 02a0c000 00:02 3516                               /home/root/pdj/EP147
+02e20000-02e21000 r-xp 02a20000 00:02 3516                               /home/root/pdj/EP147
+02e21000-02eb1000 r-xp 02a21000 00:02 3516                               /home/root/pdj/EP147
+02eb1000-02eb2000 r-xp 02ab1000 00:02 3516                               /home/root/pdj/EP147
+02eb2000-02ebe000 r-xp 02ab2000 00:02 3516                               /home/root/pdj/EP147
+02ebe000-02ebf000 r-xp 02abe000 00:02 3516                               /home/root/pdj/EP147
+02ebf000-02ef2000 r-xp 02abf000 00:02 3516                               /home/root/pdj/EP147
+02ef2000-02ef4000 r-xp 02af2000 00:02 3516                               /home/root/pdj/EP147
+02ef4000-02ef9000 r-xp 02af4000 00:02 3516                               /home/root/pdj/EP147
+02ef9000-02efa000 r-xp 02af9000 00:02 3516                               /home/root/pdj/EP147
+02efa000-03093000 r-xp 02afa000 00:02 3516                               /home/root/pdj/EP147
+03093000-03094000 r-xp 02c93000 00:02 3516                               /home/root/pdj/EP147
+03094000-03098000 r-xp 02c94000 00:02 3516                               /home/root/pdj/EP147
+03098000-03099000 r-xp 02c98000 00:02 3516                               /home/root/pdj/EP147
+03099000-030e8000 r-xp 02c99000 00:02 3516                               /home/root/pdj/EP147
+030e8000-030e9000 r-xp 02ce8000 00:02 3516                               /home/root/pdj/EP147
+030e9000-030ea000 r-xp 02ce9000 00:02 3516                               /home/root/pdj/EP147
+030ea000-030eb000 r-xp 02cea000 00:02 3516                               /home/root/pdj/EP147
+030eb000-030ef000 r-xp 02ceb000 00:02 3516                               /home/root/pdj/EP147
+030ef000-030f1000 r-xp 02cef000 00:02 3516                               /home/root/pdj/EP147
+030f1000-03161000 r-xp 02cf1000 00:02 3516                               /home/root/pdj/EP147
+03161000-03162000 r-xp 02d61000 00:02 3516                               /home/root/pdj/EP147
+03162000-03163000 r-xp 02d62000 00:02 3516                               /home/root/pdj/EP147
+03163000-03165000 r-xp 02d63000 00:02 3516                               /home/root/pdj/EP147
+03165000-034f4000 r-xp 02d65000 00:02 3516                               /home/root/pdj/EP147
+034f4000-034f5000 r-xp 030f4000 00:02 3516                               /home/root/pdj/EP147
+034f5000-034f6000 r-xp 030f5000 00:02 3516                               /home/root/pdj/EP147
+034f6000-034f7000 r-xp 030f6000 00:02 3516                               /home/root/pdj/EP147
+034f7000-034ff000 r-xp 030f7000 00:02 3516                               /home/root/pdj/EP147
+034ff000-03500000 r-xp 030ff000 00:02 3516                               /home/root/pdj/EP147
+03500000-03f60000 r-xp 03100000 00:02 3516                               /home/root/pdj/EP147
+03f70000-03f84000 r--p 03b60000 00:02 3516                               /home/root/pdj/EP147
+03f84000-03fa1000 rw-p 03b74000 00:02 3516                               /home/root/pdj/EP147
+ffff88200000-ffff8838b000 r-xp 00000000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8838b000-ffff8839a000 ---p 0018b000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8839a000-ffff8839d000 r--p 0018a000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8839d000-ffff8839e000 rw-p 0018d000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+=== end
+
+=== azmod crash: signal 11 at 1792218467 fault 0x0030a5b4f4c52edc tid 293588 "MsgDispenser"
+pc 0x0000ffffb336f5e4 lr 0x0000ffffb336f3e0 sp 0x0000fffeeab772e0 fp 0x0000fffeeab772e0
+ x0=0x0000ffff6cd81800 x1=0x0000000000000000 x2=0x0000ffff6cd818d8 x3=0x0030a5b4f4c52ed0
+ x4=0x0030a5b4f4c52edc x5=0x0000ffff75da14c0 x6=0x0000000000000000 x7=0x0030a5b4f4c52ed0
+ x8=0x000000006ea3af0a x9=0x0000000002cafeb8 x10=0x0000000000000000 x11=0x0101010101010101
+ x12=0x0000000000000020 x13=0x0000000000000000 x14=0x0000000000000000 x15=0x0000000000010000
+ x16=0x0000ffffb3381e38 x17=0x0000ffffb1498b38 x18=0x0000000000006c88 x19=0x0000ffff6cd81790
+ x20=0x0000ffff6cd81800 x21=0x0000000000000000 x22=0x0000000000000000 x23=0x0000ffffb3381fd0
+ x24=0x0000ffff6cd816e8 x25=0x0000ffff8fde6800 x26=0x0000ffffb33714e8 x27=0x0000000000000000
+ x28=0x0000ffff6cd81600
+frames:
+  0x000000000237d800
+  0x000000000237dda4
+  0x00000000024b4840
+  0x00000000024b497c
+  0x0000ffffb26be754
+  0x0000ffffb152ecfc
+maps:
+00400000-007d6000 r-xp 00000000 00:02 3516                               /home/root/pdj/EP147
+007d6000-007d8000 r-xp 003d6000 00:02 3516                               /home/root/pdj/EP147
+007d8000-00a1a000 r-xp 003d8000 00:02 3516                               /home/root/pdj/EP147
+00a1a000-00a1b000 r-xp 0061a000 00:02 3516                               /home/root/pdj/EP147
+00a1b000-00abd000 r-xp 0061b000 00:02 3516                               /home/root/pdj/EP147
+00abd000-00ac0000 r-xp 006bd000 00:02 3516                               /home/root/pdj/EP147
+00ac0000-00aef000 r-xp 006c0000 00:02 3516                               /home/root/pdj/EP147
+00aef000-00af0000 r-xp 006ef000 00:02 3516                               /home/root/pdj/EP147
+00af0000-00af1000 r-xp 006f0000 00:02 3516                               /home/root/pdj/EP147
+00af1000-00af2000 r-xp 006f1000 00:02 3516                               /home/root/pdj/EP147
+00af2000-00d00000 r-xp 006f2000 00:02 3516                               /home/root/pdj/EP147
+00d00000-00d01000 r-xp 00900000 00:02 3516                               /home/root/pdj/EP147
+00d01000-00e5e000 r-xp 00901000 00:02 3516                               /home/root/pdj/EP147
+00e5e000-00e60000 r-xp 00a5e000 00:02 3516                               /home/root/pdj/EP147
+00e60000-00ef0000 r-xp 00a60000 00:02 3516                               /home/root/pdj/EP147
+00ef0000-00ef2000 r-xp 00af0000 00:02 3516                               /home/root/pdj/EP147
+00ef2000-01116000 r-xp 00af2000 00:02 3516                               /home/root/pdj/EP147
+01116000-01118000 r-xp 00d16000 00:02 3516                               /home/root/pdj/EP147
+01118000-01352000 r-xp 00d18000 00:02 3516                               /home/root/pdj/EP147
+01352000-01354000 r-xp 00f52000 00:02 3516                               /home/root/pdj/EP147
+01354000-01373000 r-xp 00f54000 00:02 3516                               /home/root/pdj/EP147
+01373000-01375000 r-xp 00f73000 00:02 3516                               /home/root/pdj/EP147
+01375000-0137b000 r-xp 00f75000 00:02 3516                               /home/root/pdj/EP147
+0137b000-0137d000 r-xp 00f7b000 00:02 3516                               /home/root/pdj/EP147
+0137d000-01380000 r-xp 00f7d000 00:02 3516                               /home/root/pdj/EP147
+01380000-01382000 r-xp 00f80000 00:02 3516                               /home/root/pdj/EP147
+01382000-01530000 r-xp 00f82000 00:02 3516                               /home/root/pdj/EP147
+01530000-01531000 r-xp 01130000 00:02 3516                               /home/root/pdj/EP147
+01531000-01aeb000 r-xp 01131000 00:02 3516                               /home/root/pdj/EP147
+01aeb000-01aec000 r-xp 016eb000 00:02 3516                               /home/root/pdj/EP147
+01aec000-01b10000 r-xp 016ec000 00:02 3516                               /home/root/pdj/EP147
+01b10000-01b11000 r-xp 01710000 00:02 3516                               /home/root/pdj/EP147
+01b11000-01b3a000 r-xp 01711000 00:02 3516                               /home/root/pdj/EP147
+01b3a000-01b3c000 r-xp 0173a000 00:02 3516                               /home/root/pdj/EP147
+01b3c000-01b3f000 r-xp 0173c000 00:02 3516                               /home/root/pdj/EP147
+01b3f000-01b40000 r-xp 0173f000 00:02 3516                               /home/root/pdj/EP147
+01b40000-01bdf000 r-xp 01740000 00:02 3516                               /home/root/pdj/EP147
+01bdf000-01be0000 r-xp 017df000 00:02 3516                               /home/root/pdj/EP147
+01be0000-01c2f000 r-xp 017e0000 00:02 3516                               /home/root/pdj/EP147
+01c2f000-01c31000 r-xp 0182f000 00:02 3516                               /home/root/pdj/EP147
+01c31000-01c32000 r-xp 01831000 00:02 3516                               /home/root/pdj/EP147
+01c32000-01c34000 r-xp 01832000 00:02 3516                               /home/root/pdj/EP147
+01c34000-01c37000 r-xp 01834000 00:02 3516                               /home/root/pdj/EP147
+01c37000-01c38000 r-xp 01837000 00:02 3516                               /home/root/pdj/EP147
+01c38000-01cc3000 r-xp 01838000 00:02 3516                               /home/root/pdj/EP147
+01cc3000-01cc4000 r-xp 018c3000 00:02 3516                               /home/root/pdj/EP147
+01cc4000-01cf8000 r-xp 018c4000 00:02 3516                               /home/root/pdj/EP147
+01cf8000-01cf9000 r-xp 018f8000 00:02 3516                               /home/root/pdj/EP147
+01cf9000-01cfd000 r-xp 018f9000 00:02 3516                               /home/root/pdj/EP147
+01cfd000-01cfe000 r-xp 018fd000 00:02 3516                               /home/root/pdj/EP147
+01cfe000-01d38000 r-xp 018fe000 00:02 3516                               /home/root/pdj/EP147
+01d38000-01d39000 r-xp 01938000 00:02 3516                               /home/root/pdj/EP147
+01d39000-01d44000 r-xp 01939000 00:02 3516                               /home/root/pdj/EP147
+01d44000-01d45000 r-xp 01944000 00:02 3516                               /home/root/pdj/EP147
+01d45000-01d82000 r-xp 01945000 00:02 3516                               /home/root/pdj/EP147
+01d82000-01d83000 r-xp 01982000 00:02 3516                               /home/root/pdj/EP147
+01d83000-01d89000 r-xp 01983000 00:02 3516                               /home/root/pdj/EP147
+01d89000-01d8a000 r-xp 01989000 00:02 3516                               /home/root/pdj/EP147
+01d8a000-01ed5000 r-xp 0198a000 00:02 3516                               /home/root/pdj/EP147
+01ed5000-01ed6000 r-xp 01ad5000 00:02 3516                               /home/root/pdj/EP147
+01ed6000-01eed000 r-xp 01ad6000 00:02 3516                               /home/root/pdj/EP147
+01eed000-01eee000 r-xp 01aed000 00:02 3516                               /home/root/pdj/EP147
+01eee000-01f49000 r-xp 01aee000 00:02 3516                               /home/root/pdj/EP147
+01f49000-01f4b000 r-xp 01b49000 00:02 3516                               /home/root/pdj/EP147
+01f4b000-01f4c000 r-xp 01b4b000 00:02 3516                               /home/root/pdj/EP147
+01f4c000-01f4e000 r-xp 01b4c000 00:02 3516                               /home/root/pdj/EP147
+01f4e000-01f51000 r-xp 01b4e000 00:02 3516                               /home/root/pdj/EP147
+01f51000-01f52000 r-xp 01b51000 00:02 3516                               /home/root/pdj/EP147
+01f52000-01f54000 r-xp 01b52000 00:02 3516                               /home/root/pdj/EP147
+01f54000-01f56000 r-xp 01b54000 00:02 3516                               /home/root/pdj/EP147
+01f56000-01f57000 r-xp 01b56000 00:02 3516                               /home/root/pdj/EP147
+01f57000-01f5f000 r-xp 01b57000 00:02 3516                               /home/root/pdj/EP147
+01f5f000-01f60000 r-xp 01b5f000 00:02 3516                               /home/root/pdj/EP147
+01f60000-01f62000 r-xp 01b60000 00:02 3516                               /home/root/pdj/EP147
+01f62000-01f63000 r-xp 01b62000 00:02 3516                               /home/root/pdj/EP147
+01f63000-01f67000 r-xp 01b63000 00:02 3516                               /home/root/pdj/EP147
+01f67000-01f68000 r-xp 01b67000 00:02 3516                               /home/root/pdj/EP147
+01f68000-01f6a000 r-xp 01b68000 00:02 3516                               /home/root/pdj/EP147
+01f6a000-01f6b000 r-xp 01b6a000 00:02 3516                               /home/root/pdj/EP147
+01f6b000-01f6e000 r-xp 01b6b000 00:02 3516                               /home/root/pdj/EP147
+01f6e000-01fb2000 r-xp 01b6e000 00:02 3516                               /home/root/pdj/EP147
+01fb2000-01fb3000 r-xp 01bb2000 00:02 3516                               /home/root/pdj/EP147
+01fb3000-020ad000 r-xp 01bb3000 00:02 3516                               /home/root/pdj/EP147
+020ad000-020ae000 r-xp 01cad000 00:02 3516                               /home/root/pdj/EP147
+020ae000-020c9000 r-xp 01cae000 00:02 3516                               /home/root/pdj/EP147
+020c9000-020ca000 r-xp 01cc9000 00:02 3516                               /home/root/pdj/EP147
+020ca000-02115000 r-xp 01cca000 00:02 3516                               /home/root/pdj/EP147
+02115000-02116000 r-xp 01d15000 00:02 3516                               /home/root/pdj/EP147
+02116000-021f2000 r-xp 01d16000 00:02 3516                               /home/root/pdj/EP147
+021f2000-021f4000 r-xp 01df2000 00:02 3516                               /home/root/pdj/EP147
+021f4000-02289000 r-xp 01df4000 00:02 3516                               /home/root/pdj/EP147
+02289000-0228a000 r-xp 01e89000 00:02 3516                               /home/root/pdj/EP147
+0228a000-02351000 r-xp 01e8a000 00:02 3516                               /home/root/pdj/EP147
+02351000-02352000 r-xp 01f51000 00:02 3516                               /home/root/pdj/EP147
+02352000-0236d000 r-xp 01f52000 00:02 3516                               /home/root/pdj/EP147
+0236d000-0236f000 r-xp 01f6d000 00:02 3516                               /home/root/pdj/EP147
+0236f000-0250a000 r-xp 01f6f000 00:02 3516                               /home/root/pdj/EP147
+0250a000-0250b000 r-xp 0210a000 00:02 3516                               /home/root/pdj/EP147
+0250b000-0251c000 r-xp 0210b000 00:02 3516                               /home/root/pdj/EP147
+0251c000-0251e000 r-xp 0211c000 00:02 3516                               /home/root/pdj/EP147
+0251e000-0255a000 r-xp 0211e000 00:02 3516                               /home/root/pdj/EP147
+0255a000-0255c000 r-xp 0215a000 00:02 3516                               /home/root/pdj/EP147
+0255c000-025ff000 r-xp 0215c000 00:02 3516                               /home/root/pdj/EP147
+025ff000-02600000 r-xp 021ff000 00:02 3516                               /home/root/pdj/EP147
+02600000-0260a000 r-xp 02200000 00:02 3516                               /home/root/pdj/EP147
+0260a000-0260b000 r-xp 0220a000 00:02 3516                               /home/root/pdj/EP147
+0260b000-02667000 r-xp 0220b000 00:02 3516                               /home/root/pdj/EP147
+02667000-02669000 r-xp 02267000 00:02 3516                               /home/root/pdj/EP147
+02669000-029de000 r-xp 02269000 00:02 3516                               /home/root/pdj/EP147
+029de000-029df000 r-xp 025de000 00:02 3516                               /home/root/pdj/EP147
+029df000-02b9c000 r-xp 025df000 00:02 3516                               /home/root/pdj/EP147
+02b9c000-02b9d000 r-xp 0279c000 00:02 3516                               /home/root/pdj/EP147
+02b9d000-02bb1000 r-xp 0279d000 00:02 3516                               /home/root/pdj/EP147
+02bb1000-02bb2000 r-xp 027b1000 00:02 3516                               /home/root/pdj/EP147
+02bb2000-02be9000 r-xp 027b2000 00:02 3516                               /home/root/pdj/EP147
+02be9000-02bea000 r-xp 027e9000 00:02 3516                               /home/root/pdj/EP147
+02bea000-02cda000 r-xp 027ea000 00:02 3516                               /home/root/pdj/EP147
+02cda000-02cdb000 r-xp 028da000 00:02 3516                               /home/root/pdj/EP147
+02cdb000-02d53000 r-xp 028db000 00:02 3516                               /home/root/pdj/EP147
+02d53000-02d54000 r-xp 02953000 00:02 3516                               /home/root/pdj/EP147
+02d54000-02d59000 r-xp 02954000 00:02 3516                               /home/root/pdj/EP147
+02d59000-02d5b000 r-xp 02959000 00:02 3516                               /home/root/pdj/EP147
+02d5b000-02d61000 r-xp 0295b000 00:02 3516                               /home/root/pdj/EP147
+02d61000-02d62000 r-xp 02961000 00:02 3516                               /home/root/pdj/EP147
+02d62000-02d91000 r-xp 02962000 00:02 3516                               /home/root/pdj/EP147
+02d91000-02d92000 r-xp 02991000 00:02 3516                               /home/root/pdj/EP147
+02d92000-02e0b000 r-xp 02992000 00:02 3516                               /home/root/pdj/EP147
+02e0b000-02e0c000 r-xp 02a0b000 00:02 3516                               /home/root/pdj/EP147
+02e0c000-02e20000 r-xp 02a0c000 00:02 3516                               /home/root/pdj/EP147
+02e20000-02e21000 r-xp 02a20000 00:02 3516                               /home/root/pdj/EP147
+02e21000-02eb1000 r-xp 02a21000 00:02 3516                               /home/root/pdj/EP147
+02eb1000-02eb2000 r-xp 02ab1000 00:02 3516                               /home/root/pdj/EP147
+02eb2000-02ebe000 r-xp 02ab2000 00:02 3516                               /home/root/pdj/EP147
+02ebe000-02ebf000 r-xp 02abe000 00:02 3516                               /home/root/pdj/EP147
+02ebf000-02ef2000 r-xp 02abf000 00:02 3516                               /home/root/pdj/EP147
+02ef2000-02ef4000 r-xp 02af2000 00:02 3516                               /home/root/pdj/EP147
+02ef4000-02ef9000 r-xp 02af4000 00:02 3516                               /home/root/pdj/EP147
+02ef9000-02efa000 r-xp 02af9000 00:02 3516                               /home/root/pdj/EP147
+02efa000-03093000 r-xp 02afa000 00:02 3516                               /home/root/pdj/EP147
+03093000-03094000 r-xp 02c93000 00:02 3516                               /home/root/pdj/EP147
+03094000-03098000 r-xp 02c94000 00:02 3516                               /home/root/pdj/EP147
+03098000-03099000 r-xp 02c98000 00:02 3516                               /home/root/pdj/EP147
+03099000-030e8000 r-xp 02c99000 00:02 3516                               /home/root/pdj/EP147
+030e8000-030e9000 r-xp 02ce8000 00:02 3516                               /home/root/pdj/EP147
+030e9000-030ea000 r-xp 02ce9000 00:02 3516                               /home/root/pdj/EP147
+030ea000-030eb000 r-xp 02cea000 00:02 3516                               /home/root/pdj/EP147
+030eb000-030ef000 r-xp 02ceb000 00:02 3516                               /home/root/pdj/EP147
+030ef000-030f1000 r-xp 02cef000 00:02 3516                               /home/root/pdj/EP147
+030f1000-03161000 r-xp 02cf1000 00:02 3516                               /home/root/pdj/EP147
+03161000-03162000 r-xp 02d61000 00:02 3516                               /home/root/pdj/EP147
+03162000-03163000 r-xp 02d62000 00:02 3516                               /home/root/pdj/EP147
+03163000-03165000 r-xp 02d63000 00:02 3516                               /home/root/pdj/EP147
+03165000-034f4000 r-xp 02d65000 00:02 3516                               /home/root/pdj/EP147
+034f4000-034f5000 r-xp 030f4000 00:02 3516                               /home/root/pdj/EP147
+034f5000-034f6000 r-xp 030f5000 00:02 3516                               /home/root/pdj/EP147
+034f6000-034f7000 r-xp 030f6000 00:02 3516                               /home/root/pdj/EP147
+034f7000-034ff000 r-xp 030f7000 00:02 3516                               /home/root/pdj/EP147
+034ff000-03500000 r-xp 030ff000 00:02 3516                               /home/root/pdj/EP147
+03500000-03f60000 r-xp 03100000 00:02 3516                               /home/root/pdj/EP147
+03f70000-03f84000 r--p 03b60000 00:02 3516                               /home/root/pdj/EP147
+03f84000-03fa1000 rw-p 03b74000 00:02 3516                               /home/root/pdj/EP147
+ffffb2e00000-ffffb2f8b000 r-xp 00000000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffb2f8b000-ffffb2f9a000 ---p 0018b000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffb2f9a000-ffffb2f9d000 r--p 0018a000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffffb2f9d000-ffffb2f9e000 rw-p 0018d000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+=== end
+
+=== azmod crash: signal 11 at 1792231978 fault 0x0000000000000000 tid 499725 "HubLib4"
+pc 0x00000000012553b0 lr 0x0000000001255370 sp 0x0000fffc21c00bf0 fp 0x0000fffc21c00bf0
+ x0=0x0000000000000002 x1=0x0000000000007008 x2=0x0000fffc21c03dc8 x3=0x0000000014cc3a10
+ x4=0x0000000000000018 x5=0x0000fffc2f137638 x6=0x0000fffc21c03dc8 x7=0x0000fffc2f137640
+ x8=0x000000000003d850 x9=0x0000ffff7ee000c0 x10=0x0000ffff7efec340 x11=0x0000ffff7da17801
+ x12=0x0000000000000000 x13=0x0000000000000000 x14=0x0000ffff8b98b000 x15=0x0000ffff8bb960c0
+ x16=0x0000000000000008 x17=0x0000000014cbd0c0 x18=0x0000000014cbd0c8 x19=0x0000000000000000
+ x20=0x0000ffff7c931020 x21=0x0000000000000000 x22=0x0000000000000000 x23=0x0000000000000820
+ x24=0x0000ffff7c931028 x25=0x0000000001829990 x26=0x0000fffc21c01048 x27=0x0000000000000000
+ x28=0x0000ffff7d8100c0
+frames:
+  0x00000000012fb950
+  0x0000000001303c44
+  0x000000000136016c
+  0x00000000013698a4
+  0x0000ffff8c06c600
+  0x0000000000e6a558
+  0x000000000237d800
+  0x000000000237dda4
+  0x00000000024b4840
+  0x00000000024b497c
+  0x0000ffff8b8f1754
+  0x0000ffff8a761cfc
+maps:
+00400000-00425000 r-xp 00000000 00:02 3516                               /home/root/pdj/EP147
+00425000-00429000 r-xp 00025000 00:02 3516                               /home/root/pdj/EP147
+00429000-007d6000 r-xp 00029000 00:02 3516                               /home/root/pdj/EP147
+007d6000-007d7000 r-xp 003d6000 00:02 3516                               /home/root/pdj/EP147
+007d7000-00a1a000 r-xp 003d7000 00:02 3516                               /home/root/pdj/EP147
+00a1a000-00a1b000 r-xp 0061a000 00:02 3516                               /home/root/pdj/EP147
+00a1b000-00abd000 r-xp 0061b000 00:02 3516                               /home/root/pdj/EP147
+00abd000-00ac0000 r-xp 006bd000 00:02 3516                               /home/root/pdj/EP147
+00ac0000-00aef000 r-xp 006c0000 00:02 3516                               /home/root/pdj/EP147
+00aef000-00af0000 r-xp 006ef000 00:02 3516                               /home/root/pdj/EP147
+00af0000-00af1000 r-xp 006f0000 00:02 3516                               /home/root/pdj/EP147
+00af1000-00af2000 r-xp 006f1000 00:02 3516                               /home/root/pdj/EP147
+00af2000-00d00000 r-xp 006f2000 00:02 3516                               /home/root/pdj/EP147
+00d00000-00d01000 r-xp 00900000 00:02 3516                               /home/root/pdj/EP147
+00d01000-00e5e000 r-xp 00901000 00:02 3516                               /home/root/pdj/EP147
+00e5e000-00e5f000 r-xp 00a5e000 00:02 3516                               /home/root/pdj/EP147
+00e5f000-01530000 r-xp 00a5f000 00:02 3516                               /home/root/pdj/EP147
+01530000-01531000 r-xp 01130000 00:02 3516                               /home/root/pdj/EP147
+01531000-01869000 r-xp 01131000 00:02 3516                               /home/root/pdj/EP147
+01869000-0186a000 r-xp 01469000 00:02 3516                               /home/root/pdj/EP147
+0186a000-01981000 r-xp 0146a000 00:02 3516                               /home/root/pdj/EP147
+01981000-01982000 r-xp 01581000 00:02 3516                               /home/root/pdj/EP147
+01982000-01aeb000 r-xp 01582000 00:02 3516                               /home/root/pdj/EP147
+01aeb000-01aec000 r-xp 016eb000 00:02 3516                               /home/root/pdj/EP147
+01aec000-01b10000 r-xp 016ec000 00:02 3516                               /home/root/pdj/EP147
+01b10000-01b11000 r-xp 01710000 00:02 3516                               /home/root/pdj/EP147
+01b11000-01b3a000 r-xp 01711000 00:02 3516                               /home/root/pdj/EP147
+01b3a000-01b3c000 r-xp 0173a000 00:02 3516                               /home/root/pdj/EP147
+01b3c000-01b3f000 r-xp 0173c000 00:02 3516                               /home/root/pdj/EP147
+01b3f000-01b40000 r-xp 0173f000 00:02 3516                               /home/root/pdj/EP147
+01b40000-01bdf000 r-xp 01740000 00:02 3516                               /home/root/pdj/EP147
+01bdf000-01be0000 r-xp 017df000 00:02 3516                               /home/root/pdj/EP147
+01be0000-01c2f000 r-xp 017e0000 00:02 3516                               /home/root/pdj/EP147
+01c2f000-01c31000 r-xp 0182f000 00:02 3516                               /home/root/pdj/EP147
+01c31000-01c32000 r-xp 01831000 00:02 3516                               /home/root/pdj/EP147
+01c32000-01c34000 r-xp 01832000 00:02 3516                               /home/root/pdj/EP147
+01c34000-01c37000 r-xp 01834000 00:02 3516                               /home/root/pdj/EP147
+01c37000-01c38000 r-xp 01837000 00:02 3516                               /home/root/pdj/EP147
+01c38000-01cc3000 r-xp 01838000 00:02 3516                               /home/root/pdj/EP147
+01cc3000-01cc4000 r-xp 018c3000 00:02 3516                               /home/root/pdj/EP147
+01cc4000-01cf8000 r-xp 018c4000 00:02 3516                               /home/root/pdj/EP147
+01cf8000-01cf9000 r-xp 018f8000 00:02 3516                               /home/root/pdj/EP147
+01cf9000-01cfd000 r-xp 018f9000 00:02 3516                               /home/root/pdj/EP147
+01cfd000-01cfe000 r-xp 018fd000 00:02 3516                               /home/root/pdj/EP147
+01cfe000-01d38000 r-xp 018fe000 00:02 3516                               /home/root/pdj/EP147
+01d38000-01d39000 r-xp 01938000 00:02 3516                               /home/root/pdj/EP147
+01d39000-01d44000 r-xp 01939000 00:02 3516                               /home/root/pdj/EP147
+01d44000-01d45000 r-xp 01944000 00:02 3516                               /home/root/pdj/EP147
+01d45000-01d82000 r-xp 01945000 00:02 3516                               /home/root/pdj/EP147
+01d82000-01d83000 r-xp 01982000 00:02 3516                               /home/root/pdj/EP147
+01d83000-01d89000 r-xp 01983000 00:02 3516                               /home/root/pdj/EP147
+01d89000-01d8a000 r-xp 01989000 00:02 3516                               /home/root/pdj/EP147
+01d8a000-01ed5000 r-xp 0198a000 00:02 3516                               /home/root/pdj/EP147
+01ed5000-01ed6000 r-xp 01ad5000 00:02 3516                               /home/root/pdj/EP147
+01ed6000-01eed000 r-xp 01ad6000 00:02 3516                               /home/root/pdj/EP147
+01eed000-01eee000 r-xp 01aed000 00:02 3516                               /home/root/pdj/EP147
+01eee000-01f49000 r-xp 01aee000 00:02 3516                               /home/root/pdj/EP147
+01f49000-01f4b000 r-xp 01b49000 00:02 3516                               /home/root/pdj/EP147
+01f4b000-01f4c000 r-xp 01b4b000 00:02 3516                               /home/root/pdj/EP147
+01f4c000-01f4e000 r-xp 01b4c000 00:02 3516                               /home/root/pdj/EP147
+01f4e000-01f51000 r-xp 01b4e000 00:02 3516                               /home/root/pdj/EP147
+01f51000-01f52000 r-xp 01b51000 00:02 3516                               /home/root/pdj/EP147
+01f52000-01f54000 r-xp 01b52000 00:02 3516                               /home/root/pdj/EP147
+01f54000-01f56000 r-xp 01b54000 00:02 3516                               /home/root/pdj/EP147
+01f56000-01f57000 r-xp 01b56000 00:02 3516                               /home/root/pdj/EP147
+01f57000-01f5f000 r-xp 01b57000 00:02 3516                               /home/root/pdj/EP147
+01f5f000-01f60000 r-xp 01b5f000 00:02 3516                               /home/root/pdj/EP147
+01f60000-01f62000 r-xp 01b60000 00:02 3516                               /home/root/pdj/EP147
+01f62000-01f63000 r-xp 01b62000 00:02 3516                               /home/root/pdj/EP147
+01f63000-01f67000 r-xp 01b63000 00:02 3516                               /home/root/pdj/EP147
+01f67000-01f68000 r-xp 01b67000 00:02 3516                               /home/root/pdj/EP147
+01f68000-01f6a000 r-xp 01b68000 00:02 3516                               /home/root/pdj/EP147
+01f6a000-01f6b000 r-xp 01b6a000 00:02 3516                               /home/root/pdj/EP147
+01f6b000-01f6e000 r-xp 01b6b000 00:02 3516                               /home/root/pdj/EP147
+01f6e000-01fb2000 r-xp 01b6e000 00:02 3516                               /home/root/pdj/EP147
+01fb2000-01fb3000 r-xp 01bb2000 00:02 3516                               /home/root/pdj/EP147
+01fb3000-01fc9000 r-xp 01bb3000 00:02 3516                               /home/root/pdj/EP147
+01fc9000-01fca000 r-xp 01bc9000 00:02 3516                               /home/root/pdj/EP147
+01fca000-0200f000 r-xp 01bca000 00:02 3516                               /home/root/pdj/EP147
+0200f000-02010000 r-xp 01c0f000 00:02 3516                               /home/root/pdj/EP147
+02010000-0201f000 r-xp 01c10000 00:02 3516                               /home/root/pdj/EP147
+0201f000-02020000 r-xp 01c1f000 00:02 3516                               /home/root/pdj/EP147
+02020000-020ad000 r-xp 01c20000 00:02 3516                               /home/root/pdj/EP147
+020ad000-020ae000 r-xp 01cad000 00:02 3516                               /home/root/pdj/EP147
+020ae000-020c9000 r-xp 01cae000 00:02 3516                               /home/root/pdj/EP147
+020c9000-020ca000 r-xp 01cc9000 00:02 3516                               /home/root/pdj/EP147
+020ca000-02115000 r-xp 01cca000 00:02 3516                               /home/root/pdj/EP147
+02115000-02116000 r-xp 01d15000 00:02 3516                               /home/root/pdj/EP147
+02116000-021f2000 r-xp 01d16000 00:02 3516                               /home/root/pdj/EP147
+021f2000-021f4000 r-xp 01df2000 00:02 3516                               /home/root/pdj/EP147
+021f4000-02289000 r-xp 01df4000 00:02 3516                               /home/root/pdj/EP147
+02289000-0228a000 r-xp 01e89000 00:02 3516                               /home/root/pdj/EP147
+0228a000-02351000 r-xp 01e8a000 00:02 3516                               /home/root/pdj/EP147
+02351000-02352000 r-xp 01f51000 00:02 3516                               /home/root/pdj/EP147
+02352000-0250a000 r-xp 01f52000 00:02 3516                               /home/root/pdj/EP147
+0250a000-0250b000 r-xp 0210a000 00:02 3516                               /home/root/pdj/EP147
+0250b000-0251c000 r-xp 0210b000 00:02 3516                               /home/root/pdj/EP147
+0251c000-0251e000 r-xp 0211c000 00:02 3516                               /home/root/pdj/EP147
+0251e000-0255a000 r-xp 0211e000 00:02 3516                               /home/root/pdj/EP147
+0255a000-0255c000 r-xp 0215a000 00:02 3516                               /home/root/pdj/EP147
+0255c000-025ff000 r-xp 0215c000 00:02 3516                               /home/root/pdj/EP147
+025ff000-02600000 r-xp 021ff000 00:02 3516                               /home/root/pdj/EP147
+02600000-0260a000 r-xp 02200000 00:02 3516                               /home/root/pdj/EP147
+0260a000-0260b000 r-xp 0220a000 00:02 3516                               /home/root/pdj/EP147
+0260b000-02667000 r-xp 0220b000 00:02 3516                               /home/root/pdj/EP147
+02667000-02669000 r-xp 02267000 00:02 3516                               /home/root/pdj/EP147
+02669000-029de000 r-xp 02269000 00:02 3516                               /home/root/pdj/EP147
+029de000-029df000 r-xp 025de000 00:02 3516                               /home/root/pdj/EP147
+029df000-02b9c000 r-xp 025df000 00:02 3516                               /home/root/pdj/EP147
+02b9c000-02b9d000 r-xp 0279c000 00:02 3516                               /home/root/pdj/EP147
+02b9d000-02bb1000 r-xp 0279d000 00:02 3516                               /home/root/pdj/EP147
+02bb1000-02bb2000 r-xp 027b1000 00:02 3516                               /home/root/pdj/EP147
+02bb2000-02be9000 r-xp 027b2000 00:02 3516                               /home/root/pdj/EP147
+02be9000-02bea000 r-xp 027e9000 00:02 3516                               /home/root/pdj/EP147
+02bea000-02cda000 r-xp 027ea000 00:02 3516                               /home/root/pdj/EP147
+02cda000-02cdb000 r-xp 028da000 00:02 3516                               /home/root/pdj/EP147
+02cdb000-02d53000 r-xp 028db000 00:02 3516                               /home/root/pdj/EP147
+02d53000-02d54000 r-xp 02953000 00:02 3516                               /home/root/pdj/EP147
+02d54000-02d59000 r-xp 02954000 00:02 3516                               /home/root/pdj/EP147
+02d59000-02d5b000 r-xp 02959000 00:02 3516                               /home/root/pdj/EP147
+02d5b000-02d61000 r-xp 0295b000 00:02 3516                               /home/root/pdj/EP147
+02d61000-02d62000 r-xp 02961000 00:02 3516                               /home/root/pdj/EP147
+02d62000-02d91000 r-xp 02962000 00:02 3516                               /home/root/pdj/EP147
+02d91000-02d92000 r-xp 02991000 00:02 3516                               /home/root/pdj/EP147
+02d92000-02e0b000 r-xp 02992000 00:02 3516                               /home/root/pdj/EP147
+02e0b000-02e0c000 r-xp 02a0b000 00:02 3516                               /home/root/pdj/EP147
+02e0c000-02e20000 r-xp 02a0c000 00:02 3516                               /home/root/pdj/EP147
+02e20000-02e21000 r-xp 02a20000 00:02 3516                               /home/root/pdj/EP147
+02e21000-02eb1000 r-xp 02a21000 00:02 3516                               /home/root/pdj/EP147
+02eb1000-02eb2000 r-xp 02ab1000 00:02 3516                               /home/root/pdj/EP147
+02eb2000-02ebe000 r-xp 02ab2000 00:02 3516                               /home/root/pdj/EP147
+02ebe000-02ebf000 r-xp 02abe000 00:02 3516                               /home/root/pdj/EP147
+02ebf000-02ef2000 r-xp 02abf000 00:02 3516                               /home/root/pdj/EP147
+02ef2000-02ef4000 r-xp 02af2000 00:02 3516                               /home/root/pdj/EP147
+02ef4000-02ef9000 r-xp 02af4000 00:02 3516                               /home/root/pdj/EP147
+02ef9000-02efa000 r-xp 02af9000 00:02 3516                               /home/root/pdj/EP147
+02efa000-03093000 r-xp 02afa000 00:02 3516                               /home/root/pdj/EP147
+03093000-03094000 r-xp 02c93000 00:02 3516                               /home/root/pdj/EP147
+03094000-03098000 r-xp 02c94000 00:02 3516                               /home/root/pdj/EP147
+03098000-03099000 r-xp 02c98000 00:02 3516                               /home/root/pdj/EP147
+03099000-030e8000 r-xp 02c99000 00:02 3516                               /home/root/pdj/EP147
+030e8000-030e9000 r-xp 02ce8000 00:02 3516                               /home/root/pdj/EP147
+030e9000-030ea000 r-xp 02ce9000 00:02 3516                               /home/root/pdj/EP147
+030ea000-030eb000 r-xp 02cea000 00:02 3516                               /home/root/pdj/EP147
+030eb000-030ef000 r-xp 02ceb000 00:02 3516                               /home/root/pdj/EP147
+030ef000-030f1000 r-xp 02cef000 00:02 3516                               /home/root/pdj/EP147
+030f1000-03161000 r-xp 02cf1000 00:02 3516                               /home/root/pdj/EP147
+03161000-03162000 r-xp 02d61000 00:02 3516                               /home/root/pdj/EP147
+03162000-03163000 r-xp 02d62000 00:02 3516                               /home/root/pdj/EP147
+03163000-03165000 r-xp 02d63000 00:02 3516                               /home/root/pdj/EP147
+03165000-034f4000 r-xp 02d65000 00:02 3516                               /home/root/pdj/EP147
+034f4000-034f5000 r-xp 030f4000 00:02 3516                               /home/root/pdj/EP147
+034f5000-034f6000 r-xp 030f5000 00:02 3516                               /home/root/pdj/EP147
+034f6000-034f7000 r-xp 030f6000 00:02 3516                               /home/root/pdj/EP147
+034f7000-034ff000 r-xp 030f7000 00:02 3516                               /home/root/pdj/EP147
+034ff000-03500000 r-xp 030ff000 00:02 3516                               /home/root/pdj/EP147
+03500000-03f60000 r-xp 03100000 00:02 3516                               /home/root/pdj/EP147
+03f70000-03f84000 r--p 03b60000 00:02 3516                               /home/root/pdj/EP147
+03f84000-03fa1000 rw-p 03b74000 00:02 3516                               /home/root/pdj/EP147
+ffff8a20f000-ffff8a219000 r-xp 00000000 b3:0f 19                         /home/root/settings/az-usbload/community/hub-libraries/hub-libraries.so
+ffff8a219000-ffff8a228000 ---p 0000a000 b3:0f 19                         /home/root/settings/az-usbload/community/hub-libraries/hub-libraries.so
+ffff8a228000-ffff8a229000 rw-p 00009000 b3:0f 19                         /home/root/settings/az-usbload/community/hub-libraries/hub-libraries.so
+ffff8c000000-ffff8c18b000 r-xp 00000000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8c18b000-ffff8c19a000 ---p 0018b000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8c19a000-ffff8c19d000 r--p 0018a000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+ffff8c19d000-ffff8c19e000 rw-p 0018d000 b3:0f 20                         /home/root/settings/az-usbload/azmod.so
+=== end

@@ -1,0 +1,35 @@
+{
+  "version": "0.1.2",
+  "emulator_pid": 544361,
+  "binary_sha256": "a772ff4349f43747b7f60536b826fa09884f5ec22a4c99a92bb990dde5fd6404",
+  "archive_sha256": "724ffe5f1c55d94e3d182dbe4f0c3b8c0441e94ab02bfa38c7b18cc598ad470f",
+  "hooks": 25,
+  "source_count": 5,
+  "playlist_rows_per_source": 284,
+  "all_tracks": 2547,
+  "audio_test": "Algo más (verified-present sparse-fixture file)",
+  "decks_loaded": [
+    1,
+    3
+  ],
+  "deck1_remaining_seconds": [
+    200,
+    187
+  ],
+  "persisted_ProDjLinkMode": 0,
+  "ethernet_10sec_link_signatures": 0,
+  "loopback_10sec_link_signatures": 221,
+  "physical_library_unplug_reinsert_same_pid": true,
+  "fallback_sdg1_automount_cleanup": true,
+  "package_deck_list_pkg": "pass",
+  "hardware_deployed": false,
+  "limitations": [
+    "clone library fixtures",
+    "audio output not captured",
+    "playing-source removal unverified",
+    "same-path replacement without observed absence unverified",
+    "no extended stress test",
+    "slot8 icon blank",
+    "device names and stub capacity"
+  ]
+}

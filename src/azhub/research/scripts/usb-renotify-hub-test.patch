@@ -1,0 +1,13 @@
+--- usb-renotify.sh
++++ usb-renotify.sh
+@@ -62,6 +62,10 @@
+     P=$(ep147); LEFT=0
+     for mp in /media/usb/sd*; do
+         [ -d "$mp" ] || continue
++        # Test-only: hub mounts owned by the independent-library prototype.
++        if [ -f /tmp/azhub-reserved-mounts ] && grep -Fqx "$mp" /tmp/azhub-reserved-mounts; then
++            continue
++        fi
+         line=$(mount | grep " $mp ")
+         [ -n "$line" ] || continue
+         dev=$(echo "$line" | awk '{print $1}')

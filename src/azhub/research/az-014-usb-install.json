@@ -1,0 +1,11 @@
+{
+  "package": "0.1.4",
+  "usb": "/media/usb/sda1",
+  "backup": "/media/usb/sda1/MODS/backups/hub-libraries-0.1.3-before-0.1.4-20261017T171449Z",
+  "archive_sha256": "c7c7f141b5f406e388bb75bf421ed8ea22a8d872bb185216c00e79819bd39f7c",
+  "installed_binary_sha256": "6f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98",
+  "all_seven_package_files_verified": true,
+  "automatic_restart_performed": false,
+  "awaiting_user_approval_reload": true,
+  "running_pid_after_copy": "7595"
+}

@@ -1,0 +1,159 @@
+ 1257.680   [7] 0xffff626ed000 vt 0x2b97450 sdid 0x46/0
+ 1257.680   [8] 0xffff626ed200 vt 0x2b8bdb0 sdid 0x7/0
+ 1257.680   [9] 0xffff626ed400 vt 0x2b8bdb0 sdid 0x27/0
+ 1257.680   [10] 0xffff626ed600 vt 0x2b8bdb0 sdid 0x47/0
+ 1257.680   [11] 0xffff626ed800 vt 0x2b92f00 sdid 0x8/0
+ 1257.680   [12] 0xffff626eda00 vt 0x2b92f00 sdid 0x28/0
+ 1257.680   [13] 0xffff626edc00 vt 0x2b92f00 sdid 0x48/0
+ 1257.680   [14] 0xffff626ede00 vt 0x2b8a1d8 sdid 0xb/0
+ 1257.680   [15] 0xffff62896000 vt 0x2b8a1d8 sdid 0x2b/0
+ 1257.680   [16] 0xffff62896200 vt 0x2b8a1d8 sdid 0x4b/0
+ 1257.680   [17] 0xffffa8452300 vt 0x2cafeb8 sdid 0x2/0
+ 1257.680   [18] 0xffffa8452580 vt 0x2cafeb8 sdid 0x22/0x3
+ 1257.680   [19] 0xffffa8452800 vt 0x2cafeb8 sdid 0x4/0
+ 1257.680   [20] 0xffffa8452a80 vt 0x2cafeb8 sdid 0x24/0
+ 1257.680   [21] 0xffffa8452d00 vt 0x2cafeb8 sdid 0x44/0
+ 1257.680   [22] 0xffffa8452f80 vt 0x2cb0528 sdid 0x6/0
+ 1257.680   [23] 0xffffa8453200 vt 0x2cb0528 sdid 0x26/0
+ 1257.680   [24] 0xffffa8453480 vt 0x2cb0528 sdid 0x46/0
+ 1257.680   [25] 0xffffa8453700 vt 0x2cb0528 sdid 0x7/0
+ 1257.680   [26] 0xffffa8453980 vt 0x2cb0528 sdid 0x27/0
+ 1257.680   [27] 0xffffa8453c00 vt 0x2cb0528 sdid 0x47/0
+ 1257.680   [28] 0xffffa8453e80 vt 0x2cb0528 sdid 0x8/0
+ 1257.680   [29] 0xffffa8454100 vt 0x2cb0528 sdid 0x28/0
+ 1257.680   [30] 0xffffa8454380 vt 0x2cb0528 sdid 0x48/0
+ 1257.680   [31] 0xffffa8454600 vt 0x2cb0528 sdid 0xb/0
+ 1257.680   [32] 0xffffa8454880 vt 0x2cb0528 sdid 0x2b/0
+ 1257.680   [33] 0xffffa8454b00 vt 0x2cb0528 sdid 0x4b/0
+ 1257.680   [34] 0xffff97090800 vt 0xffffa7625d08 sdid 0x2/0
+ 1257.680   [35] 0xffff97113000 vt 0xffffa7626788 sdid 0x2/0
+ 1257.921 hub announcement acknowledged player 3 slot 3
+ 1260.965 hub mount queued player 3 slot 3 id=0x102 path=/media/usb/sdc1
+ 1260.965  1260.965 mlookup id 0x0102 -> 0xffff97009a80 (provider 0xffff6240b190) bt: 0x197ae38 0x237d800 0x237dda4 0x24b4840 0x24b497cmlookup id 0x0102 -> 0xffff97009b20 (provider 0xffff6240b190) bt: 0x1376d18 0x237d800 0x237dda4 0x24b4840 0x24b497c
+
+ 1262.039 private tagged cache source=0 service=0xffffa0c89480 original=0xffffa85b2200 method=0 caller=0x1376f44 thread=HubLib0
+ 1305.815 hub waveform renewal deferred media=0x1010200000202
+ 1305.815 hub waveform renewal deferred media=0x1010200000202
+ 1305.984 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1307.656 player 3 slot 7 at 192.168.1.254 serves /media/usb/sdb1
+ 1307.656 player 4 slot 3 at 192.168.1.253 serves /media/usb/sdd1
+ 1307.656 player 4 slot 7 at 192.168.1.253 serves /media/usb/sde1
+ 1307.656 player 3 slot 8 at 192.168.1.254 serves /media/usb/sdf1
+ 1307.656 discovery published 5 hub sources (previous 1)
+ 1307.735 hub factory player 3 music=0xffff97090e00
+ 1307.772 hub factory player 4 music=0xffff97092000
+ 1307.809 hub factory player 4 music=0xffff97092200
+ 1307.833 hub announce player 3 slot 7 path=/media/player03/usb2
+ 1307.848 hub factory player 3 music=0xffff97092400
+ 1307.851 hub initialized player 3 music=0xffff97090e00 info=0xffff97113280
+ 1307.852 hub initialized player 4 music=0xffff97092000 info=0xffff97113500
+ 1307.854 hub initialized player 4 music=0xffff97092200 info=0xffff97113780
+ 1307.855 hub initialized player 3 music=0xffff97092400 info=0xffff97113a00
+ 1307.855 hub late construction common=0xffff6256e800 timer=0xffff6b580800
+ 1307.855 hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub reply sender copied 0x18e3f282bf7788b
+ 1307.855 hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub reply sender copied 0x18e3f282bf7788b
+ 1307.855 hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub reply sender copied 0x18e3f282bf7788b
+ 1307.855 hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869
+ 1307.855 hub reply sender copied 0x18e3f282bf7788b
+ 1307.856 hub registered 10 servers with 0xffff6b580200 (new 8)
+ 1308.662 media query player 3 slot 7 -> answered
+ 1308.853 hub announcement acknowledged player 3 slot 7
+ 1308.863 deck -> player 4 :50004 type 0x20 len 44 (first)
+ 1308.873 deck -> player 4 :50002 type 0x80 len 44 (first)
+ 1308.876 deck -> player 4 :50002 type 0xa len 1152 (first)
+ 1309.065 mount for player 4: mkdir -p /media/player04/usb && { mountpoint -q /media/player04/usb || mount -o bind,ro '/media/usb/sdd1' /media/player04/usb; }
+ 1312.022 hub announce player 4 slot 3 path=/media/player04/usb
+ 1312.022 hub mount queued player 3 slot 7 id=0x102 path=/media/usb/sdb1
+ 1312.665 deck -> player 4 :50002 type 0x5 len 48 (first)
+ 1312.665 media query player 4 slot 3 -> answered
+ 1312.670 TCP connect for player 4 port 12523 -> loopback: 0 (errno 0)
+ 1312.673 tcp fd 61 closed
+ 1312.673 TCP connect for player 4 port 45325 -> loopback: 0 (errno 0)
+ 1312.761 tcp fd 45 closed
+ 1313.050 hub announcement acknowledged player 4 slot 3
+ 1313.438 private tagged cache source=1 service=0xffff9ee9d540 original=0xffffa85b2200 method=0 caller=0x1376f44 thread=HubLib1
+ 1316.211 hub announce player 4 slot 7 path=/media/player04/usb2
+ 1316.211 hub mount queued player 4 slot 3 id=0x102 path=/media/usb/sdd1
+ 1316.428 TCP connect for player 3 port 12523 -> loopback: 0 (errno 0)
+ 1316.433 tcp fd 54 closed
+ 1316.433 TCP connect for player 3 port 45325 -> loopback: 0 (errno 0)
+ 1316.580 tcp fd 61 closed
+ 1316.669 media query player 4 slot 7 -> answered
+ 1316.676 TCP connect for player 4 port 12523 -> loopback: 0 (errno 0)
+ 1316.677 tcp fd 62 closed
+ 1316.678 TCP connect for player 4 port 45325 -> loopback: 0 (errno 0)
+ 1316.781 TCP connect for player 3 port 12523 -> loopback: 0 (errno 0)
+ 1316.783 tcp fd 63 closed
+ 1316.783 TCP connect for player 3 port 45325 -> loopback: 0 (errno 0)
+ 1316.979 tcp fd 61 closed
+ 1317.226 hub announcement acknowledged player 4 slot 7
+ 1317.431 private tagged cache source=2 service=0xffff9d280480 original=0xffffa85b2200 method=0 caller=0x1376f44 thread=HubLib2
+ 1320.386 hub announce player 3 slot 8 path=/media/player03/usb3
+ 1320.386 hub mount queued player 4 slot 7 id=0x102 path=/media/usb/sde1
+ 1320.674 media query player 3 slot 8 -> answered
+ 1321.408 hub announcement acknowledged player 3 slot 8
+ 1321.629 private tagged cache source=3 service=0xffff9a662480 original=0xffffa85b2200 method=0 caller=0x1376f44 thread=HubLib3
+ 1323.439 hub mount queued player 3 slot 8 id=0x102 path=/media/usb/sdf1
+ 1324.532 private tagged cache source=4 service=0xffff99c86480 original=0xffffa85b2200 method=0 caller=0x1376f44 thread=HubLib4
+ 1359.758 TCP connect for player 4 port 12523 -> loopback: 0 (errno 0)
+ 1359.759 tcp fd 65 closed
+ 1359.759 TCP connect for player 4 port 45325 -> loopback: 0 (errno 0)
+ 1359.828 hub waveform renewal deferred media=0x1010200000302
+ 1359.829 hub waveform renewal deferred media=0x1010200000302
+ 1359.831 tcp fd 63 closed
+ 1360.034 hub waveform renewal deferred media=0x1010200000302
+ 1360.034 hub waveform renewal deferred media=0x1010200000302
+ 1360.323 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1369.594 hub waveform renewal deferred media=0x1012200000302
+ 1369.594 hub waveform renewal deferred media=0x1012200000302
+ 1369.791 hub waveform renewal deferred media=0x1012200000302
+ 1369.792 hub waveform renewal deferred media=0x1012200000302
+ 1369.913 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1378.989 TCP connect for player 3 port 12523 -> loopback: 0 (errno 0)
+ 1378.990 tcp fd 63 closed
+ 1378.991 TCP connect for player 3 port 45325 -> loopback: 0 (errno 0)
+ 1379.157 tcp fd 65 closed
+ 1383.825 hub waveform renewal deferred media=0x1014200000202
+ 1383.825 hub waveform renewal deferred media=0x1014200000202
+ 1383.845 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1431.555 TCP connect for player 4 port 12523 -> loopback: 0 (errno 0)
+ 1431.557 tcp fd 65 closed
+ 1431.557 TCP connect for player 4 port 45325 -> loopback: 0 (errno 0)
+ 1431.626 tcp fd 63 closed
+ 1453.172 TCP connect for player 3 port 12523 -> loopback: 0 (errno 0)
+ 1453.173 tcp fd 63 closed
+ 1453.173 TCP connect for player 3 port 45325 -> loopback: 0 (errno 0)
+ 1453.344 tcp fd 65 closed
+ 1506.982 hub waveform renewal deferred media=0x1014200000202
+ 1506.982 hub waveform renewal deferred media=0x1014200000202
+ 1507.393 hub waveform renewal deferred media=0x1014200000202
+ 1507.394 hub waveform renewal deferred media=0x1014200000202
+ 1509.020 hub waveform renewal deferred media=0x1014200000202
+ 1509.021 hub waveform renewal deferred media=0x1014200000202
+ 1509.225 hub waveform renewal deferred media=0x1014200000202
+ 1509.226 hub waveform renewal deferred media=0x1014200000202
+ 1509.378 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1509.438 hub waveform renewal deferred media=0x1014200000202
+ 1509.438 hub waveform renewal deferred media=0x1014200000202
+ 1509.571 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1509.639 hub waveform renewal deferred media=0x1014200000202
+ 1509.640 hub waveform renewal deferred media=0x1014200000202
+ 1509.817 hub deferred waveform renewal applied handler=0xfffed8699e20
+ 1552.749 deck -> player 3 :50001 type 0xb len 60 (first)
+ 1552.749 deck -> player 4 :50001 type 0xb len 60 (first)
+fw=ep147-9e9454e357389ece
+suspended=0
+off=0
+mod=hub-libraries|1|0.1.3|
+lrwx------    1 root     root            64 Oct 17 16:05 45 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db
+lrwx------    1 root     root            64 Oct 17 16:05 55 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db
+lrwx------    1 root     root            64 Oct 17 16:06 56 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db
+lrwx------    1 root     root            64 Oct 17 16:06 61 -> /media/usb/sde1/PIONEER/rekordbox/exportLibrary.db
+lrwx------    1 root     root            64 Oct 17 16:06 62 -> /media/usb/sdf1/PIONEER/rekordbox/exportLibrary.db

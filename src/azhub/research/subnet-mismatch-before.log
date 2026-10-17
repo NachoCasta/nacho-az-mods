@@ -1,0 +1,10 @@
+internal subnet identity policy: 9 checks passed
+mid-function ABI: all32 SIMD registers, live volatile GPRs and NZCV preserved; private/ordinary masks pass
+  493.541 hub announcement retry player 3 slot 3
+  494.643 hub announce player 3 slot 3 path=/media/player03/usb
+  506.771 hub announcement retry player 3 slot 3
+  507.887 hub announce player 3 slot 3 path=/media/player03/usb
+  519.004 hub announcement retry player 3 slot 3
+  520.107 hub announce player 3 slot 3 path=/media/player03/usb
+  532.257 hub announcement retry player 3 slot 3
+  533.358 hub announce player 3 slot 3 path=/media/player03/usb

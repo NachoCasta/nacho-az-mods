@@ -1,0 +1,1 @@
+obj-m := azhub.o
