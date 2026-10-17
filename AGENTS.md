@@ -1,5 +1,10 @@
 # Working rules
 
+- All repository-facing prose must be in English: documentation, code comments, commit messages,
+  branch/PR/issue descriptions, changelogs, release notes, workflow labels, and agent instruction files.
+  Preserve literal identifiers, native strings, filenames, and observed test data when required for accuracy.
+- Read docs/RELEASING.md before preparing or publishing a version. CLAUDE.md links to the same rules.
+
 - Read docs/CURRENT-STATE.md and docs/RESEARCH-INDEX.md first. Historical notes contain superseded experiments.
 - The user's real AZ must not be tested, reloaded, restarted, patched or changed without asking first.
   Existing authorization is action-specific; permission to copy a package does not authorize a hardware test.

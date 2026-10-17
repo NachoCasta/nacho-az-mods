@@ -27,17 +27,10 @@ Original0.1.4 manifest was accepted for local development but standard publicati
 refused missing summary, license and icon. The0.1.5 preparation adds these fields without
 claiming additional hardware validation. Keep the old dev archive immutable.
 
-Once source hosting is actually public and review is complete:
-
-```sh
-python3 .azmod-sdk/tools/azmod-pack build src/azhub/linkfake
-python3 .azmod-sdk/tools/azmod-pack package src/azhub/linkfake --github OWNER/REPO --tag hub-libraries-0.1.5
-# Create release/tag only after approving the concrete files; attach .azmod and icon.
-python3 .azmod-sdk/tools/azmod-pack repo add azmods-repo.json src/azhub/linkfake/dist/hub-libraries-0.1.5.entry.json
-python3 .azmod-sdk/tools/azmod-pack repo check azmods-repo.json
-# After publication, verify anonymous download like a deck:
-python3 .azmod-sdk/tools/azmod-pack repo check OWNER/REPO --download
-```
+Use the step-by-step [release guide](RELEASING.md) for source/version preparation, build and
+exact-artifact testing, package creation, release tags/assets, catalog updates, and anonymous
+end-to-end verification. [CLAUDE.md](../CLAUDE.md) points future Claude sessions to that procedure.
+The existing CI workflow validates builds/packages; it does not publish releases when a tag is pushed.
 
 The catalog stays empty until real downloadable release URLs exist. A validator passing a URL's
 syntax does not prove it is anonymously accessible. The `source` field must refer to the actual

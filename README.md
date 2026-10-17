@@ -1,47 +1,50 @@
 # Nacho AZ Mods
 
-Colección de mods de **NachoCasta** para el XDJ-AZ, con código, herramientas y notas de investigación.
-Este repositorio es privado. El catálogo de la aplicación y del AZ necesita URLs públicas;
-por ahora no hay una publicación pública ni una entrada en el Mod Index.
+**NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
+This repository is private. Installing through the AZ-MODS app or the deck's catalog
+requires public download URLs; no public release or Mod Index entry exists yet.
 
-## Empezar aquí
+## Start here
 
-- [Estado actual y cómo continuar](docs/CURRENT-STATE.md).
-- [Publicación y organización en Orca](docs/PUBLISHING.md).
-- [Índice de investigación](docs/RESEARCH-INDEX.md).
-- [Recursos externos de Ghidra, firmware y compilación](docs/LOCAL-RESOURCES.md).
-- [Origen, licencias y binario validado](docs/PROVENANCE.md).
+- [Current state and next steps](docs/CURRENT-STATE.md).
+- [Release guide](docs/RELEASING.md): prepare, validate, publish, and verify a new version.
+- [Publishing model and Orca organization](docs/PUBLISHING.md).
+- [Research index](docs/RESEARCH-INDEX.md).
+- [Local Ghidra, firmware, and build resources](docs/LOCAL-RESOURCES.md).
+- [Provenance, licenses, and validated binary](docs/PROVENANCE.md).
+- [Agent instructions](AGENTS.md) and [Claude entry point](CLAUDE.md).
+
+Repository documentation, code comments, commit messages, PRs, and release notes are written
+in English. Preserve identifiers and observed test data, including track titles, verbatim.
 
 ## Hub USB Libraries
 
-Permite navegar las bibliotecas rekordbox de los pendrives de un hub, con servidores y
-cachés propios por fuente, dentro del AZ. No necesita un ordenador ni reproductores externos.
-El límite actual es ocho fuentes del hub. Cinco se probaron simultáneamente en el emulador;
-no afirmamos haber probado ocho en hardware.
+Browse rekordbox libraries on USB sticks connected through a hub. Each source has its own
+servers and caches inside the AZ; no computer or external players are required during use.
+The implementation currently supports up to eight hub sources. Five were tested simultaneously
+in the emulator; eight simultaneous sources have not been validated on hardware.
 
-La **0.1.4** fue instalada por SSH y el usuario confirmó que funciona perfectamente en su AZ.
-La **0.1.5** es la preparación para distribución: metadatos, icono y empaquetado estándar;
-no está instalada en el equipo ni publicada. Ver el estado exacto antes de probar.
+**0.1.4** was installed over SSH and the user confirmed it works correctly on their AZ.
+**0.1.5** is the publishing preparation: manifest metadata, an original icon, and standard
+packaging. It has not been installed or published. Read the current state before testing.
 
-Código: [src/azhub/linkfake](src/azhub/linkfake). Módulo de compatibilidad del kernel:
-[src/azhub/azhub.c](src/azhub/azhub.c). El header del SDK está en
-[src/azmod/azmod-mod.h](src/azmod/azmod-mod.h).
+Mod source: [src/azhub/linkfake](src/azhub/linkfake).
+Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).
+SDK header: [src/azmod/azmod-mod.h](src/azmod/azmod-mod.h).
 
-Se conserva esta estructura para evitar perder referencias y contexto del trabajo original.
-Los futuros mods pueden usar sus propias carpetas bajo `mods/<id>/`; cada uno tendrá su
-manifest, compilación, licencia y versiones independientes.
+The imported layout preserves references from the original research. Future mods can use
+`mods/<id>/`, each with its own manifest, build, license, and independent version history.
 
-## Referencias locales
+## Local references
 
-Las capturas se conservan en `src/azhub/research/shots/`, ignoradas por Git. No se respaldan
-ni se suben a GitHub por decisión del usuario. Tampoco se suben imágenes USB, música,
-firmware, proyectos completos de Ghidra, desensamblados completos ni claves SSH.
-Los índices y las notas sí se versionan. Este repositorio contiene scripts de investigación
-históricos: leer sus comentarios antes de ejecutarlos; algunos modifican el emulador/equipo.
+Screenshots remain in `src/azhub/research/shots/`, ignored by Git. They are neither uploaded
+nor backed up, as requested by the user. USB images, music, firmware, full Ghidra projects,
+complete disassemblies, and SSH keys are also kept outside Git. Research indexes and notes
+are versioned. Read historical scripts before running them: some modify emulator or deck state.
 
-## Compilar y empaquetar
+## Build and package
 
-SDK fijado: `Kyle-Hosman/az-mods-sdk`, `v1.2.3`, commit
+Pinned SDK: `Kyle-Hosman/az-mods-sdk`, `v1.2.3`, commit
 `62a156abf3a4789e9e3cdd610fe106227a3a8967`.
 
 ```sh
@@ -50,9 +53,9 @@ python3 .azmod-sdk/tools/azmod-pack build src/azhub/linkfake
 python3 .azmod-sdk/tools/azmod-pack package src/azhub/linkfake
 ```
 
-En Windows, usar WSL/Docker para compilar. La validación/empaquetado también funciona con
-Python en Windows. `src/azhub/linkfake/build.sh` conserva el método Linaro usado para0.1.4;
-`AZHUB_TOOLCHAIN_PREFIX` permite seleccionar el toolchain.
+On Windows, build through WSL/Docker. Validation and packaging also work with Python on
+Windows. `src/azhub/linkfake/build.sh` retains the Linaro build method used for 0.1.4;
+`AZHUB_TOOLCHAIN_PREFIX` selects a different toolchain.
 
-El código del mod y el SDK usan GPL-3.0-only; `azhub.c` y su módulo de kernel usan
-GPL-2.0-only. Ver [PROVENANCE](docs/PROVENANCE.md). No es un producto oficial de AlphaTheta.
+The mod and SDK use GPL-3.0-only; `azhub.c` and its kernel module use GPL-2.0-only.
+See [provenance](docs/PROVENANCE.md). This is not an official AlphaTheta product.
