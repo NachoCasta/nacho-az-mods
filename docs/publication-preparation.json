@@ -1,6 +1,6 @@
 {
   "version": "0.1.8",
-  "status": "0.1.8 PRO DJ LINK warning prepared; publication pending",
+  "status": "USB Hub Support 0.1.8 published; external PRO DJ LINK warning and anonymous package verified",
   "sdk_ref": "v1.2.3",
   "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
   "elf_sha256": "86f264c27644b399e07226827874b2e41c9a152925ba03c9479c4eb1aa7ee0ba",
@@ -12,7 +12,9 @@
   "release_tag": "usb-hub-support-0.1.8",
   "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.1.8",
   "catalog_url": "https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/HEAD/azmods-repo.json",
-  "anonymous_download_verified": false,
+  "anonymous_download_verified": true,
   "mod_id": "usb-hub-support",
-  "name": "USB Hub Support"
+  "name": "USB Hub Support",
+  "source_commit": "b8f4aba3807cb000da72e70d38de278be55e9c5b",
+  "source_ci_run": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39065581308"
 }

@@ -144,3 +144,7 @@ was not tested or implemented. Automatic disabling on the user setting is not im
 All non-manifest package members are byte-identical to 0.1.7; only version and description
 changed. SDK package validation passed. No new AZ operation or runtime test was performed.
 See [0.1.8 release notes](releases/usb-hub-support-0.1.8.md).
+
+0.1.8 is published. Both CI jobs passed on source commit `b8f4aba3807cb000da72e70d38de278be55e9c5b`.
+The official SDK anonymous catalog/download check passed for 0.1.8. The index PR #4
+was updated to disclose the external Link incompatibility and metadata-only release.
