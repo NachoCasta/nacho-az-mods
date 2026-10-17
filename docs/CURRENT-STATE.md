@@ -53,6 +53,9 @@ is in ignored `local/`; screenshots and external firmware/analysis inputs remain
 
 Release: https://github.com/NachoCasta/nacho-az-mods/releases/tag/hub-libraries-0.1.5
 Catalog: `azmods-repo.json`; app repository identifier: `NachoCasta/nacho-az-mods`.
+Anonymous catalog, package size/SHA256, icon and public source access were verified after
+publication; the official SDK `repo check --download` also passed.
+Source tag commit: `36a32fbf0cbd3a1c96a4197bee3d48a92cc50bc4`.
 No Mod Index submission or new AZ deployment/test is part of publication.
 
 The release contains the accepted Linaro executable, SHA256
