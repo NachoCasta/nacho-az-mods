@@ -1,8 +1,10 @@
 # Nacho AZ Mods
 
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
-This repository is private. Installing through the AZ-MODS app or the deck's catalog
-requires public download URLs; no public release or Mod Index entry exists yet.
+Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the
+AZ-MODS app or on the deck, then refresh **Browse** to find Hub USB Libraries.
+Downloads are hosted in this repository's GitHub Releases. The optional Mod Index
+listing has not been requested.
 
 ## Start here
 
@@ -25,8 +27,11 @@ The implementation currently supports up to eight hub sources. Five were tested 
 in the emulator; eight simultaneous sources have not been validated on hardware.
 
 **0.1.4** was installed over SSH and the user confirmed it works correctly on their AZ.
-**0.1.5** is the publishing preparation: manifest metadata, an original icon, and standard
-packaging. It has not been installed or published. Read the current state before testing.
+**0.1.5** is the first standard `.azmod` release: manifest metadata, an original icon,
+and catalog packaging. Its executable and kernel asset match the accepted 0.1.4 build;
+0.1.5 has not had an additional hardware test. Requires firmware 2.00
+(`ep147-9e9454e357389ece`), kernel 4.4.194 and Community Mods core 1.2.3 or later.
+See the [release notes](docs/releases/hub-libraries-0.1.5.md) for limits.
 
 Mod source: [src/azhub/linkfake](src/azhub/linkfake).
 Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).

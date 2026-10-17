@@ -19,12 +19,12 @@ review the guide and validate the resulting binary again.
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.
 Hub USB Libraries currently lives in `src/azhub/linkfake/`. Its stable user-confirmed hardware
-build is 0.1.4; 0.1.5 is local publishing preparation and has not been released or installed.
+build is 0.1.4; 0.1.5 is its standard-package release without an additional hardware test.
 
-This repository is PRIVATE. The app/deck fetches the root `azmods-repo.json` and package URLs
-without GitHub authentication. A private GitHub URL cannot serve that workflow. Before publishing,
-the user must choose and authorize a public source/catalog repository or another public HTTPS
-host with an accessible source link. See [PUBLISHING.md](PUBLISHING.md).
+This repository and its distribution catalog are public, authorized by the user after review.
+The app/deck fetches the root `azmods-repo.json` and package URLs without GitHub authentication.
+The first release is `hub-libraries-0.1.5`; subsequent publication still requires authorization.
+See [PUBLISHING.md](PUBLISHING.md) for the distribution model.
 
 Local builds, validation, and candidate packaging can proceed while private. Do not change repository
 visibility, publish a release, or submit a Mod Index PR as an automatic consequence of this guide.
@@ -87,7 +87,7 @@ ELF, but an SDK-container rebuild uses another compiler and may produce differen
 Record binary hash, package hash, test environment, and actual results.
 
 For sparse emulator fixtures, the database has 2547 tracks but only 17 audio files. Use confirmed
-present audio such as `Algo más` when checking track loading and playback. Keep waveform preference,
+present audio such as `Algo mÃ¡s` when checking track loading and playback. Keep waveform preference,
 source isolation, browser completion, and removal/reinsert checks separate where relevant.
 
 Read validator warnings. The existing `/home/root/settings` warning refers to the optional legacy

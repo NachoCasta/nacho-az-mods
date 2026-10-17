@@ -3,17 +3,17 @@
 Primary guide: https://kyle-hosman.github.io/az-mods-sdk/06-publishing/#azmod-pack-reference
 Pinned SDK: v1.2.3 (62a156abf3a4789e9e3cdd610fe106227a3a8967).
 
-## Private development vs distribution
+## Public distribution
 
-The repository is private because that is what the user requested. The deck/app fetches
-`https://raw.githubusercontent.com/OWNER/REPO/HEAD/azmods-repo.json` without GitHub authentication.
-Consequently entering this private repository in AZ-MODS cannot provide installs/updates.
-Do not put GitHub tokens in a catalog, URL or USB as a workaround.
+The user authorized public source, research notes, release assets and the catalog after
+review. Personal commit attribution and historical local paths/network addresses are retained
+with the user's agreement. Current machine configuration is ignored in `local/`.
+Screenshots, firmware, music, full analysis databases and keys are excluded.
 
-Before publishing, choose either to make a reviewed source/catalog repository public, or export
-only distributable sources and release metadata to another public repository. Research notes,
-local screenshots and credentials need not accompany the distribution. The SDK's guidelines
-require public source. The Mod Index is optional and is a separate later PR; no PR was submitted.
+Add `NachoCasta/nacho-az-mods` in the desktop app or deck repository list. Both fetch
+`https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/HEAD/azmods-repo.json`
+without authentication. Do not put GitHub tokens in a catalog, URL or USB.
+The optional Mod Index needs a separate PR; no listing has been submitted.
 
 ## Standard release
 
@@ -32,10 +32,10 @@ exact-artifact testing, package creation, release tags/assets, catalog updates, 
 end-to-end verification. [CLAUDE.md](../CLAUDE.md) points future Claude sessions to that procedure.
 The existing CI workflow validates builds/packages; it does not publish releases when a tag is pushed.
 
-The catalog stays empty until real downloadable release URLs exist. A validator passing a URL's
+Add catalog entries only after real downloadable release URLs exist. A validator passing a URL's
 syntax does not prove it is anonymously accessible. The `source` field must refer to the actual
-public source location before distribution. Package size limit16MB. No public release or index
-submission is authorized by preparing this private repository.
+public source location before distribution. Package size limit16MB. Future releases need authorization; preparing a package alone does not authorize publication.
+The first release was explicitly authorized; Mod Index submission is a separate decision.
 
 ## Orca
 

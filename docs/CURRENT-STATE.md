@@ -1,4 +1,4 @@
-# Current state — 2026-10-17
+# Current state â€” 2026-10-17
 
 ## Verified stable build
 
@@ -32,7 +32,7 @@ status templates no longer overwrite color/position. Legitimate preference chang
 ## Evidence and limits
 
 Five sources were tested simultaneously in the emulator, with284-track playlists and2547 total
-DB tracks. Only17 audio files exist in the images: use confirmed-present Algo más for playback.
+DB tracks. Only17 audio files exist in the images: use confirmed-present Algo mÃ¡s for playback.
 0.1.4 tests include separate blue/center vs RGB/bottom preferences,200 alternating status templates
 in20s,30 native-state samples during stress, restoration/live repaint and fifth-source load.
 Audio output was not captured. A played03:22->01:39 then paused; fifth source loaded deck3.
@@ -45,23 +45,27 @@ stubs. Automatic network identity selection needs an UP IPv4 subnet of /29 or sh
 Read-only USB sysfs on the real AZ also confirmed the two connected Type-A buses use EHCI480Mb/s;
 the presence of another xHCI5000Mb/s controller does not prove the Type-A ports are SuperSpeed.
 
-## Next steps
+## Public release 0.1.5
 
-This repository preserves0.1.4 sources and evidence.0.1.5 prepares standard SDK metadata, icon,
-Makefile and .azmod packaging. It is not a new hardware-tested release. Check build identity and
-validator output. Resolve public source/catalog hosting before external distribution. Do not
-publish the current private URL as though unauthenticated decks could fetch it.
+The user authorized public distribution after review. Personal Git attribution and historical
+local paths/network references are retained by agreement. Current device/workstation configuration
+is in ignored `local/`; screenshots and external firmware/analysis inputs remain excluded.
 
-## Publication preparation verification
+Release: https://github.com/NachoCasta/nacho-az-mods/releases/tag/hub-libraries-0.1.5
+Catalog: `azmods-repo.json`; app repository identifier: `NachoCasta/nacho-az-mods`.
+No Mod Index submission or new AZ deployment/test is part of publication.
 
-The migrated source rebuilt with the original Linaro toolchain produces a byte-identical ELF
-SHA2566f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98.
+The release contains the accepted Linaro executable, SHA256
+`6f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98`, and the unchanged accepted kernel asset.
 The only source portability change is the SDK include path; runtime implementation is unchanged.
-The copied SDK header is text-identical to v1.2.3 (raw hashes differ only because of line endings).
-Official SDK v1.2.3 validates the mod directory,0.1.5 .azmod and empty repository catalog.
-Local0.1.5 package:308567bytes, SHA256bf5c5427802672420baa0115ace1b5378ff76f5d73fa1726df4a73819db060a8.
-It is local/ignored and has not been deployed. Source URL currently names a PRIVATE repo, so it
-is not yet suitable for public distribution. No release tag or public release was created.
+The SDK header is text-identical to v1.2.3. CI host behavior tests and SDK-container build/package
+validation passed before publication; the container build uses a different compiler and is not
+the shipped executable. The release package was validated separately with pinned SDK v1.2.3.
+
+Package: 308564 bytes; SHA256 `c93e6b35b5da0a0d0dffe45e3d9834287010ff41836b590095dea8393a2ba131`.
+The official packer regenerated the standard archive from current source assets, including
+correct license-file line endings. This packaging change does not alter the executable or kernel.
+0.1.5 has not been installed or additionally tested on the real AZ.
 
 The validator warns about /home/root/settings: the mod READS the optional legacy azhub.conf
 override there; it does not write that configuration file. This existing reference remains

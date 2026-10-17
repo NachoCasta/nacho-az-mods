@@ -33,3 +33,5 @@ vendor/
 *.pem
 *.key
 .env
+.env.*
+!.env.example

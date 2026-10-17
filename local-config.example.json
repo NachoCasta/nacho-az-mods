@@ -1,0 +1,15 @@
+{
+  "az": {
+    "host": "192.0.2.10",
+    "user": "root",
+    "ssh_identity": "~/.ssh/az_identity"
+  },
+  "paths": {
+    "ghidra_project": "/path/to/ghidra-project",
+    "firmware_elf": "/path/to/EP147",
+    "disassembly": "/path/to/ep147.dis",
+    "gpl_tree": "/path/to/xdjaz-gpl",
+    "ghidra_home": "/path/to/ghidra",
+    "emulator": "C:/path/to/xdj-az-emu"
+  }
+}
