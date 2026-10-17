@@ -118,3 +118,17 @@ connection, deployment or mutation was performed by the agent. Firmware was prev
 identified as 2.00 / `ep147-9e9454e357389ece`; it was not rechecked for this report.
 Theme and test duration were not reported. No video or screenshot was requested.
 Structured record: [hardware acceptance](acceptance/usb-hub-support-0.1.7-hardware.json).
+
+## Original core workspace cleanup
+
+The original Kyle-Hosman core checkout no longer contains `src/azhub`. A local cleanup
+commit removes the 30 tracked research files after migration. Its resulting Git tree
+matches `origin/main` exactly; no cleanup commit was pushed to Kyle-Hosman's repository.
+All 573 files in the original hub workspace were verified by SHA256 after preservation:
+331 screenshot duplicates remain in this checkout's ignored research shots directory;
+the other original files and tooling are in ignored `local/core-workspace-cleanup/src/azhub`.
+The ignored `local/core-workspace-cleanup/inventory.json` records every original file,
+size, hash and retained location. This includes excluded raw research and generated tools;
+those files remain local and must not be uploaded. The preserved SDK tool is under
+`local/core-workspace-cleanup/src/azhub/publishing/sdk-reference/tools/azmod-pack`.
+Active mod development and public documentation continue in this repository.

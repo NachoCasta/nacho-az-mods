@@ -28,3 +28,7 @@ source output. See GHIDRA-FINDINGS for commands and addresses.
 Kernel build instructions are in `src/azhub/README.md` and
 `research/scripts/kenv.sh`. The included release asset `azhub.ko` was built from
 our GPL-2.0-only `azhub.c` against the matching configured vendor GPL kernel tree.
+
+Original core-workspace artifacts and the preserved SDK checkout are now under ignored
+`local/core-workspace-cleanup/`; its inventory provides SHA256 and retained locations.
+The old core checkout no longer contains `src/azhub`. Active source is in this repository.
