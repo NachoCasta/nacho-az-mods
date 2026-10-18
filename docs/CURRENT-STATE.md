@@ -1,13 +1,20 @@
 # Current state â€” 2026-10-18
 
-## USB Hub Support 0.2.1 publication in progress
+## Published release: USB Hub Support 0.2.1
 
-The user explicitly requested publishing the currently accepted progress. Release
-0.2.1 will retain the exact tested package: SHA256
+Release: https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.1
+Source/tag commit: `0c21db0816a6f21bf6eff3aef9ace06b6d7055b7`.
+[Source CI](https://github.com/NachoCasta/nacho-az-mods/actions/runs/39175867655)
+passed behavior-tests and sdk-build; all 43 accepted build-source blobs match the
+commit. The user authorized publishing the accepted progress. The package is
+byte-identical to the selected emulator/hardware candidate: SHA256
 `6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f`
-(355839 bytes), executable SHA256
+(355839 bytes); executable SHA256
 `9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b`.
-No rebuild or further hardware action is part of this publication.
+Release assets exist; the root catalog is being updated and anonymous download
+verification is pending. See [publication evidence](acceptance/usb-hub-support-0.2.1-publication.json).
+No rebuild or further hardware action occurred during publication. Previous
+release assets and tags are retained.
 
 Individual loaded-track eject from NACHO PLUGS passed on the real AZ. The user
 reported complete playback of one track after eject. SSH confirmed absent backing
@@ -27,8 +34,8 @@ request. Two QEMU attempts encountered core input-filter budget enforcement;
 failed attempts are recorded separately from acceptance. The user chose publication
 of the accepted functional progress with these limits disclosed. Broader loaded
 hardware, all-format/cache-capacity and eight-source acceptance are not claimed.
-Further real-AZ tests/restarts require their own authorization. Public 0.2.0 stays
-unchanged until the new assets and catalog are published and verified.
+Further real-AZ tests/restarts require their own authorization. Public 0.2.0
+assets/tag remain available and unchanged.
 
 ## Previous release: USB Hub Support 0.2.0
 

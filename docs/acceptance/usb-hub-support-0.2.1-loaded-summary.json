@@ -1,9 +1,9 @@
 {
   "recorded_at_utc": "2026-10-18T21:45:27.209778+00:00",
-  "status": "Functional loaded-track eject accepted in local QEMU and bounded one-source real-AZ trial; unpublished candidate, expanded release acceptance pending",
+  "status": "Published 0.2.1 accepted progress; anonymous catalog/package verification pending; expanded hardware and long-session acceptance remain open",
   "version": "0.2.1",
   "base_commit": "6482cc10f16ea20e0db05321ddc8d7888868718b",
-  "source_commit": "Uncommitted snapshot; 43 exact source hashes in build record",
+  "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
   "selected_binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
   "selected_package_sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
   "selected_package_bytes": 355839,
@@ -60,10 +60,13 @@
   },
   "publication": {
     "authorized": true,
-    "catalog_version": "0.2.0",
-    "catalog_modified": false,
+    "catalog_version": "0.2.1",
+    "catalog_modified": true,
     "published_assets_replaced": false,
-    "authorization": "User explicitly requested publishing the currently accepted progress; no new AZ testing or source rebuild implied"
+    "authorization": "User explicitly requested publishing the currently accepted progress; no new AZ testing or source rebuild implied",
+    "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.1",
+    "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
+    "publication_record": "usb-hub-support-0.2.1-publication.json"
   },
   "final_emulator_cleanup": {
     "environment": "Local QEMU only",
@@ -76,7 +79,7 @@
     "note": "Fresh normal-candidate process after memory controls; hub fixtures manually unmounted only after stopping the application",
     "real_az_access": false
   },
-  "source_remote_ci": "Not run for uncommitted 0.2.1 snapshot; local gates only",
+  "source_remote_ci": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39175867655",
   "memory_controls": {
     "same_connection_load_unload": "usb-hub-support-0.2.1-load-unload-control.json",
     "warm_to_final_rss_kib": -236,

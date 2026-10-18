@@ -1,0 +1,22 @@
+{
+  "release": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.1",
+  "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
+  "source_ci": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39175867655",
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "accepted_source_blobs_match_commit": 43,
+  "package_sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
+  "package_bytes": 355839,
+  "executable_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "accepted_package_unchanged": true,
+  "hardware_record": "usb-hub-support-0.2.1-az-loaded-eject.json",
+  "hardware_scope": "One individual loaded-source eject; full-track playback user reported for one track; read-only SSH verifies physical source, absent backing/aliases and retained native cache proof",
+  "limits": "Expanded hardware/cache-capacity, native long-session memory and hardware input timing remain unvalidated. Separate QEMU core input-filter budget failures and failed controls are disclosed. External PRO DJ LINK remains incompatible.",
+  "authorization": "User explicitly requested publishing the currently accepted progress",
+  "previous_release_assets_and_tags_untouched": true,
+  "anonymous_download_verification": {
+    "result": "pending catalog push and public end-to-end check"
+  }
+}
