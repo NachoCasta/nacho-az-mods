@@ -2,7 +2,7 @@
 
 ## Current behavior
 
-USB Hub Support 0.1.8 warns users to disable the mod and restart the AZ before
+USB Hub Support 0.2.1 retains the warning asking users to disable the mod and restart the AZ before
 using external PRO DJ LINK players. Automatic disabling and external-player
 coexistence are not implemented. Hub sources are not advertised to external players.
 
@@ -53,6 +53,21 @@ installation or restart requires action-specific user permission. External-CDJ
 coexistence and network sharing of hub sources remain separate research features.
 
 ## Official index status
+
+Latest update, 2026-10-18: the user requested refreshing
+[index PR #4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) for released
+0.2.1 while keeping it draft. Its body now links the pinned release source,
+publication checks, real-AZ acceptance, exact-candidate emulator/sanitizer records
+and known native memory/input-timing/PRO DJ LINK limits. Read-back confirmed
+OPEN + DRAFT, unchanged title and unchanged head `7985a4e873edda72e4d0ae68de6a217d9530e2ba`.
+The diff still only adds our repository URL; no upstream code or list change was
+needed for the new release. No comments, reviews or attached GitHub checks were
+reported. Twelve exact-head local index tests, two-repository schema/version/ID
+checks and anonymous package checks for both repositories passed. Local checks
+are separate from the absence of attached index CI. See [update evidence](acceptance/usb-hub-support-0.2.1-index-pr-update.json).
+No real-AZ operation or release-asset/tag change was part of this PR update.
+
+Historical inspections:
 
 On 2026-10-17, GitHub reported [index PR #4](https://github.com/Kyle-Hosman/az-mods-index/pull/4)
 as open, with no comments, reviews or status checks associated with the PR.

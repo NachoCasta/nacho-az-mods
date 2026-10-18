@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-10-18T23:33:51.779182+00:00",
+  "pr": "https://github.com/Kyle-Hosman/az-mods-index/pull/4",
+  "title": "Add Nacho AZ Mods (USB Hub Support)",
+  "state": "OPEN",
+  "is_draft": true,
+  "index_head_commit": "7985a4e873edda72e4d0ae68de6a217d9530e2ba",
+  "branch_unchanged": true,
+  "scope": "Existing PR description updated to current release and evidence; index diff still only adds https://github.com/NachoCasta/nacho-az-mods",
+  "user_authorization": "User requested updating existing upstream index PR to latest version/evidence and keeping it draft",
+  "release_version": "0.2.1",
+  "release_source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
+  "release_package_sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
+  "body_utf8_lf_sha256": "cd4cc22cac2a017b3e59201642e7f4baf7e276f103f0efc75146ac6e55a64e81",
+  "body_read_back_matches_prepared_text": true,
+  "source_ci": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39175867655",
+  "source_ci_result": "behavior-tests and sdk-build passed",
+  "local_index_validation": {
+    "exact_head_fixture": "7985a4e873edda72e4d0ae68de6a217d9530e2ba",
+    "unit_tests_passed": 12,
+    "fetch_check_repositories": 2,
+    "fetch_check_problems": 0,
+    "case_insensitive_mod_ids_unique": true,
+    "anonymous_sdk_repo_download_checks": {
+      "NachoCasta/nacho-az-mods": "passed, catalog version 0.2.1",
+      "Kyle-Hosman/az-mods-examples": "passed"
+    },
+    "warning_review": "Known optional legacy settings-path reference in USB Hub Support; upstream unit fixtures emitted unclosed-file ResourceWarnings without test failures"
+  },
+  "github_index_ci": {
+    "reported_checks": 0,
+    "interpretation": "No checks attached to the draft index PR; local validation and release-source CI are separate evidence"
+  },
+  "feedback_at_inspection": {
+    "comments": 0,
+    "reviews": 0,
+    "inline_review_comments": 0
+  },
+  "disclosures_updated": [
+    "One-source/one-track loaded-eject hardware acceptance and user-reported full-track audio",
+    "Earlier two-stick safe-eject and repository-install hardware records",
+    "Exact-candidate emulator audio, whole-hub, replacement, retry/race and sanitizer evidence",
+    "Thirty-five exact-firmware hooks, GPL kernel patch, loopback transport, temporary state and mounts",
+    "Native RSS growth, QEMU input-filter budget failures, incomplete controls and expanded hardware gates",
+    "External PRO DJ LINK incompatibility and required mod disable/restart"
+  ],
+  "release_assets_or_tags_modified": false,
+  "real_az_access": false
+}
