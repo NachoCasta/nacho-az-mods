@@ -3,8 +3,31 @@
  * cache. Native cache methods still receive the same LocalMediaID internally;
  * receiver selection prevents mount/unmount from touching another stick. */
 static void *hub_tag_cache_originals[8] __attribute__((used));
-static pthread_mutex_t hub_tag_create_lock=PTHREAD_MUTEX_INITIALIZER;
+static uint64_t hub_tag_caches[MAX_FAKES];
+/* Allocate every independent receiver before hooks are claimed. A failed
+ * allocation must fail initialization rather than borrow a native USB cache. */
+static int hub_tag_cache_prepare(void) {
+    for (int i=0;i<MAX_FAKES;i++) {
+        uint64_t cache=(uint64_t)calloc(1,0xc0);
+        if (!cache) {
+            for (int j=0;j<i;j++) {
+                /* No native constructor has run on these unpublished blocks. */
+                free((void *)hub_tag_caches[j]);hub_tag_caches[j]=0;
+            }
+            return -1;
+        }
+        hub_tag_caches[i]=cache;
+    }
+    for (int i=0;i<MAX_FAKES;i++) {
+        uint64_t cache=hub_tag_caches[i];
+        *(uint64_t *)cache=0x2c6d0f8;
+        ((void (*)(uint64_t))0x2489f50)(cache+8);
+        *(uint64_t *)(cache+0xb8)=100;
+    }
+    return 0;
+}
 __attribute__((used,noinline)) static uint64_t hub_tag_cache_this(uint64_t original,uint64_t method,uint64_t caller) {
+    if (!lf_runtime_ready()) return original;
     char name[32]={0};
     pthread_getname_np(pthread_self(),name,sizeof name);
     for (int i=0;i<nfakes;i++) {
@@ -13,24 +36,9 @@ __attribute__((used,noinline)) static uint64_t hub_tag_cache_this(uint64_t origi
         snprintf(info,sizeof info,"HubInfo%d",i);
         if (strcmp(name,music) && strcmp(name,info) &&
             !(hub_info_library && hub_info_library==fakes[i].srv_music)) continue;
-        uint64_t cache=fakes[i].tag_cache;
-        if (cache) return cache;
-        pthread_mutex_lock(&hub_tag_create_lock);
-        cache=fakes[i].tag_cache;
-        if (!cache) {
-            cache=(uint64_t)calloc(1,0xc0);
-            if (cache) {
-                /* Prefix of native ctor1828db8, before its GLOBAL service-map
-                 * registration. Private instances must not replace that map. */
-                *(uint64_t *)cache=0x2c6d0f8;
-                ((void (*)(uint64_t))0x2489f50)(cache+8);
-                *(uint64_t *)(cache+0xb8)=100;
-                fakes[i].tag_cache=cache;
-                lf_log("private tagged cache source=%d service=%#lx original=%#lx method=%lu caller=%#lx thread=%s",i,cache,original,method,caller,name);
-            }
-        }
-        pthread_mutex_unlock(&hub_tag_create_lock);
-        return cache ? cache : original;
+        /* Readiness guarantees this receiver was prepared before publication.
+         * No allocation or native-slot fallback occurs on a request path. */
+        return hub_tag_caches[i];
     }
     return original;
 }

@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-18T05:48:42.013619+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "original_usb_and_stage_executable_sha256": "6f03e2b5c9a36853f538019d7e4c1dc4123566c7be7cfab47da50e739bae7f98",
+  "original_renotifier_sha256": "c9d55af9d29314575a08c479cfd96aa3aebb7c0fc05870ea06040be2e43f3949",
+  "checks": [
+    "Original USB and staged legacy packages restored and hashes verified",
+    "Original enabled/approved selection restored; experimental owners/packages moved out of active paths",
+    "Temporary service overrides and row trace flag removed; original renotifier restored",
+    "EP147 left stopped; hub fixtures detached only after normal safe unmount",
+    "Native USB1 ordinarily unmounted after restoration and sync"
+  ],
+  "qmp_endpoint": "127.0.0.1:4446",
+  "qmp_quit_result": "success",
+  "host_ports_2222_and_4446_closed": true
+}

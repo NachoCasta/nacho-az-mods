@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-18",
+  "selected_runtime": {
+    "version": "0.2.0",
+    "status": "Local candidate; not published or hardware accepted",
+    "binary_sha256": "c261f636d97ea9d20c7362bda756e136aad0933cf28118a574562b0ef91c931c",
+    "package_sha256": "ed0b566e306b0c1fda7412ac7d2247e25103088fbe232f5fae67c0f57be2dfe5",
+    "package_bytes": 349674,
+    "firmware": [
+      "ep147-9e9454e357389ece"
+    ],
+    "source_manifest_unchanged": true,
+    "catalog_unchanged": true,
+    "assets": {
+      "azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43"
+    }
+  },
+  "independent_sdk_build": {
+    "version": "0.2.0",
+    "status": "Local candidate; not published or hardware accepted",
+    "binary_sha256": "31a50b5e5c0f5d0579b0cd67d5aa2f2a91e1918e52c3634e361056e60c1a3ce5",
+    "package_sha256": "7fd559b359c2195b0a643e096bc118521ada6830237a0d473950d7c1a96ac9ea",
+    "package_bytes": 356210,
+    "firmware": [
+      "ep147-9e9454e357389ece"
+    ],
+    "source_manifest_unchanged": true,
+    "catalog_unchanged": true,
+    "assets": {
+      "azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43"
+    }
+  },
+  "sdk_build_result": "Forced rebuild passed without compiler warnings after restoring local ARM binfmt registration",
+  "sdk_runtime_acceptance": false,
+  "validator_warning_review": "Existing /home/root/settings literal is the optional legacy configuration read. Runtime journal/status/log files are under /run or /tmp; no new persistent bulk file was added.",
+  "publication": false,
+  "hardware_deployment": false,
+  "source_snapshot": {
+    "src/azhub/linkfake/alias-mount.h": "47e89e889c8bb8165d779874598d2e99974626edad4d13c8afea099f4d5d153e",
+    "src/azhub/linkfake/browser-guard.h": "24770e40075dbc96a28dfac8db6d400b34299ec4c22afd94b8e044420ddb6f0a",
+    "src/azhub/linkfake/db-cache-probe.h": "aa22680c95f23921b6655573a738d88de881d0e9070b978c0e3e9e7b815f22bf",
+    "src/azhub/linkfake/discovery.h": "231bc927849ae5c288533246de06795841363c3c43eb5ceeb171ecb8e884e840",
+    "src/azhub/linkfake/eject-gesture.h": "bfa82e0b833854f02e526d2347825c3ab906e8668b482ba1b335b645eff80f95",
+    "src/azhub/linkfake/eject-input-health.h": "84b4abdb4c92d740a3039b5efe3cbbb8af5a1c7123cafd4398b4a4f013851b68",
+    "src/azhub/linkfake/eject-listener.h": "e4cc491c5895f3ac6191a0faf3364c9b63491565bd84fa4d28fa16842bdcf7c4",
+    "src/azhub/linkfake/eject-source.h": "8cb8603b7fb4071d52f0acf104dcb44ee85be835cfcb016cc75e477e13ab4e65",
+    "src/azhub/linkfake/eject-ui-model.h": "c22c4bc1eb16415e26abb0be638ddf521fa6f0a4fa70a4e6a11252e3def98058",
+    "src/azhub/linkfake/eject-ui.h": "37777a79c8c65ff7150ac175afe3d6b0f73ad217a8fee181c832b7b130172cd0",
+    "src/azhub/linkfake/eject-view.h": "848924bbf694c87def51e5a05984b6e616c6a45fb73818fb380effedf575c1cc",
+    "src/azhub/linkfake/hubservers.h": "27e542d8407634eb03efda58167fd3c980e176f12b58e0fce7a0324650d555b8",
+    "src/azhub/linkfake/kernel-asset.h": "aa333d97b766954a0ac867687bf5a3537c2ba626d1ece9b3e98441453b82b01b",
+    "src/azhub/linkfake/mount-worker.h": "88aba97bdb788a55d47f248735df6b535ff7af512cfe344afa320e2de0c4a7f3",
+    "src/azhub/linkfake/network-identity.h": "27c195295262d1b1e9ea4ce5c02aa3931c0a85430f21f037fc84c1282724af91",
+    "src/azhub/linkfake/safe-eject.h": "6f13599a2e734daf63daeb3108555c2e76c6dae943d89396f283c9de3f49a8ab",
+    "src/azhub/linkfake/source-name.h": "b9088f1a5657ec32d2c1de3f64a174045e7af8ad11d5634f8b552ff1879388d9",
+    "src/azhub/linkfake/source-settings.h": "cc01ea9dd5b205ef25c9dcc574ef5a0d6489cc358b687c1e75ad6a98684a289d",
+    "src/azhub/linkfake/tag-cache-abi.h": "4df6bb96acc9d74d8bf7390c45301dd72fb716ada52985422b5f90374680ffad",
+    "src/azhub/linkfake/tag-cache.h": "5f52a6a620e34c4a89f45e3c0da00e93273d9c3d470fee1af5180909c261badc",
+    "src/azhub/linkfake/community.c": "b0e2bc5b53d64584801b62b9b6bbb2648dd1b98ca41db4500a86da299cca759f",
+    "src/azhub/linkfake/linkfake.c": "a5aee23a2693e63d7a51924b7b32acc58ddff3b831c6ee2f0954d2dbd0f799b9",
+    "src/azhub/linkfake/test-alias-mount.c": "7960d2090be5423da817327a680cb9f66db9e75d302f98eda31a2e240ce73cfa",
+    "src/azhub/linkfake/test-browser-guard.c": "44a54f09b5adada14fed0dc2add41861a77d0e909f257d7675aa9b54a7df9ecf",
+    "src/azhub/linkfake/test-discovery.c": "b600cc01f2853e6fe60cc5eab52a90a229b7a0618aa1d9f8ee4ff9aa312f0981",
+    "src/azhub/linkfake/test-eject-gesture.c": "3a5915c517cab0227e29ca7371dd883aa2d893638c1f1ca10d12bb161786c651",
+    "src/azhub/linkfake/test-eject-input-health.c": "d42313510c154a8164b017ed2aa27a5cead72b77debd962218aa82870cf66ed5",
+    "src/azhub/linkfake/test-eject-listener.c": "d13097bffc23440a829e35c8e75f5cfce95aa23d26080ab837799f31e231aa3c",
+    "src/azhub/linkfake/test-eject-source.c": "666f0486e11ecd45ac30a2d201756a9bfa479c755d02235aa4c8d5bcff065006",
+    "src/azhub/linkfake/test-kernel-asset.c": "f321d69d216b3e767c6b5f12dfe481652e72658f0c53f3808ad80c9b1b766d45",
+    "src/azhub/linkfake/test-mount-worker.c": "046be2da8daf3db8b9fae6a913d571ec30d7bf9861d0ff31a8c7b6bb2888cf6d",
+    "src/azhub/linkfake/test-network-identity.c": "169655ef8673ce5ee8e72e3aac5b6cf742ba1a152e60b64c160df1c04260cc9c",
+    "src/azhub/linkfake/test-sdk-ui.c": "02fc0f1ccb6fba49c19acd43442353c167256768b746f8d7548a57149e545cbe",
+    "src/azhub/linkfake/test-source-name.c": "6f313d8d3483df353cfd99046c623fcd05d2c52e0f24e45ff21e452d3ca84c79",
+    "src/azhub/linkfake/test-source-settings.c": "a49009dbc0db9d3255e2d883fc4204951702519c7f6ab31a7a1c55aa8213f7d7",
+    "src/azhub/linkfake/test-tag-cache-abi.c": "0fa4ebd04efc4b8260a1b63d6ca124e609d3e3e7a4bc49e76fe11aa2a82308bf",
+    "src/azhub/linkfake/Makefile": "7bc112835aca3de02506794e99c060ef8222c850a5056ee95867df89973d7f8a",
+    "src/azhub/linkfake/azmod.json": "87a8e8205be463bd02fca72101007f8e2429455fcbe69b52a990b0af7af2f48e"
+  },
+  "source_commit": "Uncommitted development snapshot based on e624d07ee162cd10c121ad01b2d07555b0801aab"
+}

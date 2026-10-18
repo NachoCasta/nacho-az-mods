@@ -1,0 +1,115 @@
+{
+  "timestamp_utc": "2026-10-18T05:33:31.781158+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "experimental_binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "checks": [
+    "100 captured turns and BACK preserve SOURCE without opening Mod Menu",
+    "100 captured turns preserve the underlying BROWSE row; original Algo mas loads from A and still protects its source",
+    "Native knob resumes with one detent each way; original track loads, with no frame-filter disable or process restart"
+  ],
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "eject-ui input-path turns=26 encoder-calls=78 view=1",
+    "eject-ui input-path turns=51 encoder-calls=153 view=1",
+    "eject-ui input-path turns=76 encoder-calls=228 view=1",
+    "eject-ui input-path turns=101 encoder-calls=303 view=1",
+    "eject-ui input-path turns=126 encoder-calls=378 view=1",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "eject-ui input-path turns=26 encoder-calls=78 view=1",
+    "eject-ui input-path turns=51 encoder-calls=153 view=1",
+    "eject-ui input-path turns=76 encoder-calls=228 view=1",
+    "eject-ui cancel",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "eject-ui input-path turns=26 encoder-calls=78 view=1",
+    "eject-ui input-path turns=51 encoder-calls=153 view=1",
+    "eject-ui input-path turns=76 encoder-calls=228 view=1",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=2 location=0x1010200000202:0x1ef time=18324914",
+    "safe-eject unload-completed controller=0xfffeb3a3ce00",
+    "safe-eject load-admitted source=0 controller=0xfffeb3a3ce00 deck=2",
+    "safe-eject load-completed controller=0xfffeb3a3ce00 result=0",
+    "safe-eject unload-completed controller=0xfffeb3a3ce00",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=2",
+    "eject-ui input-path turns=26 encoder-calls=78 view=2",
+    "eject-ui input-path turns=51 encoder-calls=153 view=2",
+    "eject-ui input-path turns=76 encoder-calls=228 view=2",
+    "eject-ui cancel",
+    "safe-eject load-request deck=2 location=0x1010200000202:0x1ef time=18355541",
+    "safe-eject unload-completed controller=0xfffeb3a3ce00",
+    "safe-eject load-admitted source=0 controller=0xfffeb3a3ce00 deck=2",
+    "safe-eject load-completed controller=0xfffeb3a3ce00 result=0",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject result: USB has a loaded or loading track. Unload it first.",
+    "safe-eject unload-completed controller=0xfffeb3a3ce00"
+  ],
+  "final_status": {
+    "pid": 557947,
+    "clock_ms": 18370362,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 62804,
+        "devnum": 101
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 63228,
+        "devnum": 102
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": 0.047,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

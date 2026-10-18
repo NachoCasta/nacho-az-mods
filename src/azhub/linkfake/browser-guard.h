@@ -40,16 +40,25 @@ static void hub_flush_renewals(void) {
     }
 }
 static uint64_t h_browser_reply(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
+#ifdef LF_COMMUNITY
+    if (!lf_runtime_ready()) return o_browser_reply(a,b,c,d,e,f,g,h);
+#endif
     uint64_t result=o_browser_reply(a,b,c,d,e,f,g,h);
     hub_flush_renewals();
     return result;
 }
 static uint64_t h_browser_event_destroy(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
+#ifdef LF_COMMUNITY
+    if (!lf_runtime_ready()) return o_browser_event_destroy(a,b,c,d,e,f,g,h);
+#endif
     for (int i=0;i<HUB_RENEWALS;i++)
         if (hub_renewals[i].event && hub_renewals[i].current==a) hub_drop_renewal(i);
     return o_browser_event_destroy(a,b,c,d,e,f,g,h);
 }
 static uint64_t h_browser_update(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
+#ifdef LF_COMMUNITY
+    if (!lf_runtime_ready()) return o_browser_update(a,b,c,d,e,f,g,h);
+#endif
     uint64_t incoming=b ? *(uint64_t *)b : 0;
     uint64_t current=*(uint64_t *)(a+0x10);
     uint64_t agent=current ? *(uint64_t *)(current+0x28) : 0;

@@ -1,0 +1,111 @@
+{
+  "timestamp_utc": "2026-10-18T12:25:55.179038+00:00",
+  "environment": "Local QEMU emulator, kernel 6.6.138-dirty; FAT hub fixtures; no hardware access",
+  "firmware_tag": "ep147-9e9454e357389ece",
+  "experimental_binary_sha256": "04d5d9a10d7f089ceb6a0ca137e6f4eb325898c0109a0e23e9bef5fc9c8704b4",
+  "hub_ejection_implemented": true,
+  "renotifier_fixture": "Nested USB storage excluded from native USB announcements",
+  "checks": [
+    "New physical connection generations restore both ejected sticks",
+    "Confirmed-present Algo mas loads from hub source A",
+    "Loaded/paused source A refuses eject before withdrawal and remains mounted",
+    "Source B closes both independent servers and unmounts while source A playback advances",
+    "Ejected source B remains inhibited while still physically attached",
+    "Whole-hub hold refuses while source A is loaded, preserving already-ejected B",
+    "Native unload clears source ownership; long USB STOP ejects the whole hub without touching native USB1",
+    "External open file causes real EBUSY; UI reports failure and never safe-to-remove",
+    "Retry finishes the quiesced source after the external busy handle closes",
+    "Whole-hub completion includes both successful and previously-ejected children",
+    "Completed ejection and remount inhibition survive an EP147 restart with sticks attached"
+  ],
+  "observations": [
+    {
+      "check": "Confirmed-present Algo mas loads from hub source A",
+      "deck": {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.047,
+        "content_id": 495,
+        "title": "Algo más"
+      }
+    },
+    {
+      "check": "Source B closes both independent servers and unmounts while source A playback advances",
+      "before": {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 1.318,
+        "content_id": 495,
+        "title": "Algo más"
+      },
+      "after": {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 8.225,
+        "content_id": 495,
+        "title": "Algo más"
+      }
+    },
+    {
+      "check": "Completed ejection and remount inhibition survive an EP147 restart with sticks attached",
+      "previous_pid": "129894",
+      "new_pid": "141884"
+    }
+  ],
+  "events": [],
+  "final_status": {
+    "pid": 141884,
+    "clock_ms": 4710848,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 53016,
+        "devnum": 78
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 53440,
+        "devnum": 79
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "audio_output_captured": false,
+  "screenshots": "Local ignored research/shots; no image bytes in this record"
+}

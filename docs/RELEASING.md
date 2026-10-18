@@ -19,7 +19,10 @@ review the guide and validate the resulting binary again.
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.
 USB Hub Support currently lives in `src/azhub/linkfake/`. Its stable user-confirmed hardware
-build is 0.1.4; 0.1.6 is the explicitly authorized name/ID migration.
+release is 0.1.7, with user-reported browsing, loading and playback using two hub
+sticks alongside native USB1. This is manual acceptance, not an instrumented run.
+Version 0.1.8 is a metadata-only warning update with all non-manifest package members
+byte-identical to 0.1.7; 0.1.6 introduced the explicitly authorized name/ID migration.
 
 This repository and its distribution catalog are public, authorized by the user after review.
 The app/deck fetches the root `azmods-repo.json` and package URLs without GitHub authentication.

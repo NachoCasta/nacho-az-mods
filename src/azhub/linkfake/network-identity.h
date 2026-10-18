@@ -21,7 +21,7 @@ static int hub_network_peers(uint32_t preferred,uint32_t peers[2]) {
     struct ifaddrs *list;
     if (getifaddrs(&list)) return 0;
     char route_if[IF_NAMESIZE]={0};
-    FILE *routes=fopen("/proc/net/route","r");
+    FILE *routes=fopen("/proc/net/route","re");
     if (routes) {
         char line[512],name[64];unsigned destination,flags;
         while(fgets(line,sizeof line,routes)) {

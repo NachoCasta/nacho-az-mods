@@ -45,7 +45,7 @@ static inline int hub_label_from_links(const char *directory,const char *device,
 }
 /* Per-device udev data also works when several volumes share the same label. */
 static inline int hub_label_from_udev(const char *path,char *out,size_t size) {
-    FILE *file=fopen(path,"r");if(!file)return 0;
+    FILE *file=fopen(path,"re");if(!file)return 0;
     char line[2048],plain[128]={0};int found=0;
     while(fgets(line,sizeof line,file)) {
         line[strcspn(line,"\r\n")]=0;
@@ -66,7 +66,7 @@ static inline int hub_label_from_udev(const char *path,char *out,size_t size) {
 static inline int hub_device_label(const char *node,const char *device,char *out,size_t size) {
     char path[PATH_MAX];unsigned major,minor;
     if(snprintf(path,sizeof path,"%s/dev",node)<(int)sizeof path) {
-        FILE *f=fopen(path,"r");
+        FILE *f=fopen(path,"re");
         if(f) {
             int valid=fscanf(f,"%u:%u",&major,&minor)==2;fclose(f);
             if(valid) {

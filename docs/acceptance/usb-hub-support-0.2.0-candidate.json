@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-10-18T05:47:11.134574+00:00",
+  "status": "Local candidate prepared for authorized real-AZ preflight; hardware acceptance and publication pending",
+  "firmware_tag": "ep147-9e9454e357389ece",
+  "binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "package_sha256": "cedecc59c160648e6087d59516d6aec5b6867832b520effdeb3e52b7815b1f06",
+  "package_bytes": 345531,
+  "source_state": "Uncommitted development snapshot; not a release source commit",
+  "source_base_commit": "e624d07ee162cd10c121ad01b2d07555b0801aab",
+  "build_inputs_verified": 21,
+  "runtime_evidence": {
+    "docs/acceptance/usb-hub-support-0.2.0-input.json": {
+      "sha256": "014f1a7707eede64ea8f39af64acd9e17f79bcc2c24d95e30d5340973379d17f",
+      "checks": 3
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-normal-emulator.json": {
+      "sha256": "b298ac7a6a1e3b4d85a3ffaea5cf201ae31b745882e869b785a7927cfbf08e30",
+      "checks": 11
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-normal-boundaries.json": {
+      "sha256": "1a2f98c3366516a1d92c00d44c2bf00233f1363aa5e5cda3540e74b9e5b4e341",
+      "checks": 5
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-load-race.json": {
+      "sha256": "6d3c34f3f32eba80f516b681a23406c42f5d3605c598b00e58ac06885a4558f0",
+      "checks": 3
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-regressions.json": {
+      "sha256": "c491059417b8d493db51bd32d9f58e6981bc57063b3b6b42ded03913232a064e",
+      "checks": 2
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-exfat-library.json": {
+      "sha256": "7bddb3709fff37242954f77c2ca649160c5b234b78bb528b02e731b80ffd927c",
+      "checks": 3
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-topology.json": {
+      "sha256": "ff931a3e7bbf4bbdb25b3aae61a57d64c6e7641ef866ac3352c8f50e2cca1829",
+      "checks": 6
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-partitions.json": {
+      "sha256": "1dba499ff06caa42c9d60bae2dc2b6941c73dee1082cc69d4c74a2ad8d2e4ff8",
+      "checks": 3
+    },
+    "docs/acceptance/usb-hub-support-0.2.0-startup-remount.json": {
+      "sha256": "b2b37c8dd4dfe0d500f1c79ae9a6c1d763df1e8ec9057adffa80762237931dc7",
+      "checks": 3
+    }
+  },
+  "runtime_checklist_statements": 39,
+  "host_behavior_suites_passed": 6,
+  "sdk_build_only_binary_sha256": "79373cc321e8a082b93714a8cb64251b99a70e3366697e3466eabd52d6c23771",
+  "normal_timing_environment": [
+    "AZHUB_EJECT_TRACE_LOAD=1",
+    "AZHUB_EJECT_STATUS=1"
+  ],
+  "final_emulator_status": {
+    "pid": 580093,
+    "clock_ms": 19189879,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 64500,
+        "devnum": 105
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 65348,
+        "devnum": 107
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "physical_AZ_access_performed": false,
+  "hardware_acceptance": "No 0.2.0 hardware acceptance; previous user-reported 0.1.7 acceptance only",
+  "retained_investigations": [
+    "safe-eject-native-stop-investigation.json",
+    "safe-eject-partition-startup-investigation.json",
+    "safe-eject-load-race-focus-investigation.json"
+  ],
+  "limits": [
+    "Emulator kernel 6.6.138-dirty does not instrument the real 4.4.194 kernel module",
+    "No audio output capture",
+    "No eight-source hardware, multi-LUN, extended hardware session or external PRO DJ LINK acceptance"
+  ],
+  "local_review": "Build inputs, package membership, compatibility guards, admission/teardown flow and recorded compiler warnings reviewed; no production source change after runtime acceptance",
+  "emulator_cleanup_record": "docs/acceptance/usb-hub-support-0.2.0-emulator-cleanup.json",
+  "release_source_commit": "Not created; recorded source is an uncommitted development snapshot"
+}

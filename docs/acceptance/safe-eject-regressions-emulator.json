@@ -1,0 +1,115 @@
+{
+  "timestamp_utc": "2026-10-18T00:32:51.470158+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "experimental_binary_sha256": "26641778947a44171063d4077be9aad56e7825685acc796560e06bea61d2eaa5",
+  "checks": [
+    "Repeated knob-selected requests from SOURCE preserve SOURCE and permit reopening",
+    "Native completed load failure with stale SDK metadata permits actual safe eject"
+  ],
+  "failed_load_sdk_snapshot": {
+    "loaded": 1,
+    "playing": 0,
+    "pos_s": 0.0,
+    "content_id": 1345,
+    "title": "Abc's (feat. AntsLive)"
+  },
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui cancel",
+    "safe-eject unload-completed controller=0xfffee6648000",
+    "safe-eject load-admitted source=0 controller=0xfffee6648000 deck=1",
+    "safe-eject load-completed controller=0xfffee6648000 result=1",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject stale-failed-metadata deck=1 content=1345",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x2",
+    "safe-eject server-complete source=1 kind=1",
+    "safe-eject withdrawal source=1",
+    "safe-eject server-complete source=1 kind=0",
+    "safe-eject source-closed source=1",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject stale-failed-metadata deck=1 content=1345",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x2",
+    "safe-eject result: HUB_LIB is safe to remove."
+  ],
+  "final_status": {
+    "pid": 14846,
+    "clock_ms": 396572,
+    "view": 4,
+    "devices": [
+      {
+        "label": "EJECT_EXFAT",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 22721,
+        "devnum": 6
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 22297,
+        "devnum": 5
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 21622,
+        "devnum": 4
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.0,
+        "content_id": 1345,
+        "title": "Abc's (feat. AntsLive)"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

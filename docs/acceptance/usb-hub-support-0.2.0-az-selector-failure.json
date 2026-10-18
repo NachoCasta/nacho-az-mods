@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-18",
+  "version": "0.2.0",
+  "binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "user_report": "Short STOP press showed Hub selector unavailable / restart message instead of opening the selector",
+  "instrumented_followup": {
+    "method": "Read existing logs, mounts and existing scalar counters through /proc/PID/mem; no code injection, control input or settings change",
+    "pid": 34847,
+    "observed_uptime_seconds": 941.34,
+    "eject_enabled": 1,
+    "raw_serial": 0,
+    "edit_serial": 0,
+    "seen_raw": 0,
+    "seen_edit": 0,
+    "raw_seen_ms": 0,
+    "edit_seen_ms": 0,
+    "native_usb1_and_hub_filesystems_still_mounted": true,
+    "core_state": "mod=usb-hub-support|1|0.2.0|",
+    "forced_filter_disable_message_present": false,
+    "ordinary_mod_logs_enabled": false
+  },
+  "conclusion": "The selector health gate correctly refused opening because neither expected input callback has published a heartbeat. Why callbacks are not receiving valid mixer input on hardware remains unresolved; emulator success does not establish hardware acceptance.",
+  "hardware_acceptance": false,
+  "publication_gate": "Blocked by real-AZ selector failure",
+  "next_diagnostic": "Continue local analysis of frame delivery/validation. Any new instrumented AZ build or further control test requires authorization.",
+  "authorized_logging_followup": {
+    "correct_log_flag": "/home/root/settings/azmod-logs.on",
+    "diagnostic": "eject-ui input-unavailable port=2 raw=0 edited=0 raw-age=1183995 edit-age=1183995",
+    "stop_down_captured": true,
+    "stop_up_captured": true,
+    "log_flag_restored_absent": true,
+    "initial_logging_attempt": "Incorrect az-usbload subdirectory flag had no effect and was removed before corrected capture",
+    "sdk_filter_count": 2,
+    "sdk_bus_mask": 8,
+    "sdk_filter_masks": [
+      "0x80000008",
+      "0x8"
+    ],
+    "sdk_filter_disabled": [
+      false,
+      false
+    ],
+    "sdk_filter_strikes": [
+      0,
+      0
+    ],
+    "sdk_filter_owner_states": [
+      1,
+      1
+    ],
+    "tracked_mixer_fd": 14,
+    "tracked_fd_points_to": "/dev/subucom_spi3.0",
+    "core_inert_flag": 0,
+    "mod_read_delegate": "Installed azmod.so read at file offset 0x4a1b8",
+    "interpretation": "STOP routing works; registered callbacks remain unobserved. No filter budget disable or incorrect read delegation detected. Frame delivery/validation remains under investigation."
+  }
+}

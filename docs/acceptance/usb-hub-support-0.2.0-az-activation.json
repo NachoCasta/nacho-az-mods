@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-18",
+  "authorization": "User explicitly authorized apply/reload and subsequently approval over SSH",
+  "version": "0.2.0",
+  "approved_executable_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "approval_method": "Preserved previous approved list, replaced only this mod entry under the core's flock using temporary file, sync and rename",
+  "approval_backup": "/home/root/settings/azmod-community/approved.before-eject-020",
+  "reload_method": "Stock /run/az-community.req apply request; no forced kill or device reboot",
+  "reload_count": 2,
+  "first_reload": "PID 3128 to 29888; candidate detected but withheld as New mod found: allow?",
+  "second_reload": "After hash-specific approval, PID 34847 running candidate",
+  "running_firmware_tag": "ep147-9e9454e357389ece",
+  "core_status": "mod=usb-hub-support|1|0.2.0|",
+  "mod_log_confirmation": "loaded 0.2.0 on ep147-9e9454e357389ece (34 hooks)",
+  "device_uptime_seconds": 663.03,
+  "deck_snapshot_uptime_seconds": 662.17,
+  "deck_states": "EEEE",
+  "native_usb1_and_hub_backing_and_library_alias_mounted": true,
+  "ssh_observation": "Temporary connection loss during both stock reloads; access recovered without additional recovery actions",
+  "loader_ui_status_at_observation": "Final follow-up: state=done, op=apply, serial=2; same PID 34847 and selected executable hash verified",
+  "functional_eject_test_performed": false,
+  "hardware_functional_acceptance": false,
+  "next_gate": "Explicit authorization for bounded manual functional trial",
+  "stable_followup": {
+    "device_uptime_seconds": 689.18,
+    "deck_snapshot_uptime_seconds": 688.53,
+    "pid": 34847,
+    "deck_states": "EEEE",
+    "selected_executable_hash_verified": true
+  }
+}

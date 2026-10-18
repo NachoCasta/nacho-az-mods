@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-18",
+  "authorization": "User explicitly authorized candidate copy and installation; activation and functional tests excluded",
+  "installation_scope": "Mods USB only; running settings cache deliberately unchanged until separately authorized apply/reload",
+  "version": "0.2.0",
+  "package_sha256": "cedecc59c160648e6087d59516d6aec5b6867832b520effdeb3e52b7815b1f06",
+  "installed_executable_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "all_seven_package_members_verified_on_usb": true,
+  "installed_directory": "/media/usb/sda1/MODS/community-mods/usb-hub-support",
+  "original_directory_preserved": "/media/usb/sda1/MODS/backups/usb-hub-support-017-before-020-20261018",
+  "original_executable_sha256": "86f264c27644b399e07226827874b2e41c9a152925ba03c9479c4eb1aa7ee0ba",
+  "running_mod_after_installation": "0.1.7",
+  "settings_cache_executable_unchanged": true,
+  "approval_file_unchanged": true,
+  "origin_metadata": "No public repository origin attached to the manually installed unpublished candidate",
+  "activation_performed": false,
+  "restart_performed": false,
+  "functional_test_performed": false,
+  "transfer_notes": "SCP was unavailable; archive transferred over SSH stdin. Initial shell script stopped at set due to Windows text newline conversion before any install command. Binary stdin retry succeeded with member hashes verified before directory replacement.",
+  "next_gate": "Separate user authorization for apply/reload and candidate approval; then a separately authorized functional hardware trial"
+}

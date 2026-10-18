@@ -4,6 +4,17 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| SAFE-EJECT-AZ-TRIAL.md | Deferred action-specific hardware trial plan; no current authorization |
+| SAFE-EJECT-PUBLICATION-AUDIT.md | Active guideline checklist, sanitizer scope and remaining stability gates |
+| SAFE-EJECT-LIFETIMES.md | Exact-firmware one-shot completion contract and bounded adapter ownership |
+| SAFE-EJECT-RELEASE-CANDIDATE.md | Active publication/AZ-trial preparation, corrected regressions, candidate build and remaining gates |
+| SAFE-EJECT-EMULATOR.md | Actual emulator-only safe-eject coordinator, reproduction, acceptance and production limits |
+| PRO-DJ-LINK.md | Current external Link warning, automatic-handling research gates and latest index PR inspection |
+| DEVELOPMENT-OPTIONS.md | Rear USB-C feasibility, safe-ejection design and separate Link research goals |
+| USB-STOP-UI-PROTOTYPE.md | Emulator-only short/long USB STOP selector, build gates, acceptance and remaining limits |
+| SAFE-EJECT-RESEARCH.md | Native STOP routing, completion listeners and proposed safe-ejection coordinator |
+| USB-C-RESEARCH.md | Rear USB-C role, controller and VBUS read-only findings |
+| PRO-DJ-LINK-COEXISTENCE.md | Native Link mode propagation and coexistence architecture options |
 | acceptance/usb-hub-support-0.1.7-hardware.json | User-confirmed repository install, browsing/loading/playback with two hub sticks and one native USB1 stick |
 | ../src/azhub/NOTES-MULTI-USB.md | Chronological working notes/handoffs; earlier status can be superseded |
 | ../src/azhub/research/GHIDRA-FINDINGS.md | Exact addresses, layouts, routing, ABI and tested corrections |

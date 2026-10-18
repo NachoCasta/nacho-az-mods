@@ -1,0 +1,40 @@
+{
+  "scope": "Local QEMU emulator investigation; not full candidate acceptance or hardware evidence",
+  "firmware_tag": "ep147-9e9454e357389ece",
+  "kernel": "6.6.138-dirty",
+  "binary_sha256": "907e9b2c9df9adda520090caf3d4c6b4c1738553d638601efe4bfdcdc3d509ff",
+  "late_first_connection_failure": {
+    "setup": "Both hub sticks safely ejected; restart EP147; wait 30 seconds; reconnect A, then B",
+    "a_announced_monotonic_s": 9065.87,
+    "first_player3_keepalive_monotonic_s": 9066.374,
+    "a_media_reply_monotonic_s": 9066.682,
+    "first_owned_server_registration_monotonic_s": 9067.003,
+    "native_source_a_visible": false,
+    "native_source_b_visible_after_later_connection": true,
+    "backing_mount_and_owned_alias_present": true
+  },
+  "earlier_first_connection_success": {
+    "setup": "Same executable, but A connects earlier during startup",
+    "first_player3_keepalive_monotonic_s": 8843.83,
+    "first_owned_server_registration_monotonic_s": 8851.121,
+    "a_announced_monotonic_s": 8853.626,
+    "native_source_a_visible": true,
+    "native_source_b_visible_after_later_connection": true
+  },
+  "recovery_observation": "On an earlier failing run, repeating mount alone did not restore A. Sending native media removal followed by mount restored its SOURCE row without physically disconnecting the stick.",
+  "interpretation": "The failing run announced the first source before the internal member keepalive and before native server registration. Registration-before-announcement is a candidate correction, requiring fresh validation.",
+  "probe_source": "src/azhub/research/scripts/probe-member-packets-emulator.c",
+  "screenshots": "Inspected locally under ignored research/shots; no image bytes included",
+  "hardware_accessed": false,
+  "partial_correction": {
+    "binary_sha256": "8f1d3c7b93f28841a5fe0aa5c0cc516a469e317a1bb900eb24cec3353ad676df",
+    "native_member_ready_monotonic_s": 9503.54,
+    "a_announced_monotonic_s": 9504.612,
+    "a_visible_after_first_connection": true,
+    "both_visible_in_a_later_diagnostic_run": true,
+    "accepted": false,
+    "visual_interpretation_inconsistent": true,
+    "b_triggered_native_removal_confirmed": false,
+    "validation_note": "A separate B-triggered removal is not established. Use actual native LOAD identity and backing-mount verification before accepting source availability."
+  }
+}

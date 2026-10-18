@@ -47,13 +47,17 @@ static int azhub_candidate_cmp(const void *a,const void *b) {
 static int azhub_discover(const char *mounts,const char *sysblock,const char *output) {
     struct azhub_candidate found[32];
     unsigned count=0;
-    FILE *table=setmntent(mounts,"r");
+    FILE *table=setmntent(mounts,"re");
     if (!table) return -1;
     struct mntent *m,entry; char mount_buffer[8192];
     while ((m=getmntent_r(table,&entry,mount_buffer,sizeof mount_buffer)) && count<32) {
         if (strncmp(m->mnt_fsname,"/dev/sd",7) || strncmp(m->mnt_dir,"/media/usb/",11)) continue;
         const char *device=strrchr(m->mnt_fsname,'/');
         device=device ? device+1 : m->mnt_fsname;
+#ifdef LF_SAFE_EJECT
+        /* Do not open labels or library files on a reserved/ejected connection. */
+        if (safe_eject_blocked_device(device)) continue;
+#endif
         int safe=1;
         for (const char *p=device;*p;p++) if (!isalnum((unsigned char)*p)) safe=0;
         for (const char *p=m->mnt_dir;*p;p++)
@@ -79,7 +83,7 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
     if (count>8) count=8;
     char temporary[PATH_MAX];
     if (snprintf(temporary,sizeof temporary,"%s.%ld.tmp",output,(long)getpid())>=(int)sizeof temporary) return -1;
-    FILE *config=fopen(temporary,"w");
+    FILE *config=fopen(temporary,"we");
     if (!config) return -1;
     static const unsigned players[]={3,3,4,4,3,4,3,4};
     static const unsigned slots[]={3,7,3,7,8,8,2,2};

@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-10-18T05:28:49.383629+00:00",
+  "scope": "Local host behavior tests, SDK compilation and offline validation; no physical AZ access",
+  "candidate_binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "candidate_package_sha256": "cedecc59c160648e6087d59516d6aec5b6867832b520effdeb3e52b7815b1f06",
+  "host_behavior_suites_passed": [
+    "source-name: 14 label/port/UTF16 cases",
+    "browser-guard: 15 ownership/lifecycle checks",
+    "network-identity: 14 policy cases and live-interface selection",
+    "eject-gesture: ownership, topology change and single-action checks",
+    "eject-source: member/type/instance and native encodings",
+    "source-settings: CRC, invalid/truncated files, defaults, 100 alternating packets and independent USB1/2/3"
+  ],
+  "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "sdk_build": {
+    "result": "passed",
+    "targets": [
+      "all",
+      "az-candidate"
+    ],
+    "output_directory": "out-sdk",
+    "normal_and_explicit_candidate_match": true,
+    "compiler": "GCC 7.5.0",
+    "binutils": "2.30",
+    "libc": "glibc 2.27",
+    "container_architecture": "arm64",
+    "container_image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "container_labels": {
+      "io.github.kyle-hosman.az-mods-sdk.docker": "c55d0db83deffc271b515ab31f98ec32811ab2586f4b66f24a817c28402623b4",
+      "org.opencontainers.image.ref.name": "ubuntu",
+      "org.opencontainers.image.version": "18.04"
+    },
+    "binary_sha256": "79373cc321e8a082b93714a8cb64251b99a70e3366697e3466eabd52d6c23771",
+    "package_sha256": "796137b84e6a2e13166296db110b509920429c60c5af28499990f04ab53a2bed",
+    "directory_and_package_validation": "passed",
+    "runtime_acceptance": "Not performed on SDK output; runtime evidence belongs to the selected Linaro candidate"
+  },
+  "reviewed_warnings": [
+    "Two GCC format-truncation warnings for bounded dirent path formatting in mount-worker.h; both formatting sites are unchanged from the base revision. Warnings were retained, not suppressed.",
+    "SDK settings-partition warning remains the optional legacy configuration read."
+  ],
+  "environment_repair": "Initial ARM64 exec-format failure was resolved by registering the cached qemu-aarch64 interpreter in the local Docker VM; the pinned SDK Dockerfile/toolchain were unchanged."
+}

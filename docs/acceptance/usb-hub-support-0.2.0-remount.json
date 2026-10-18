@@ -1,0 +1,12 @@
+{
+  "date_utc": "2026-10-18T02:14:48.178798+00:00",
+  "scope": "Local emulator only; focused independent-remount regression",
+  "binary_sha256": "907e9b2c9df9adda520090caf3d4c6b4c1738553d638601efe4bfdcdc3d509ff",
+  "checks": [
+    "Startup revokes persisted safe state when backing filesystem is mounted",
+    "Retry unmounts independently reopened filesystem, attempt 1",
+    "Live inventory revokes safe state without reconnecting or restarting",
+    "Retry unmounts independently reopened filesystem, attempt 2"
+  ],
+  "hardware_tested": false
+}

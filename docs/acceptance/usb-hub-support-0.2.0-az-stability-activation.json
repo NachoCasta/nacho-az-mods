@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-18T18:45:30.368096+00:00",
+  "authorization": "User explicitly authorized exact 09b8ffa8 executable installation, hash approval and application restart after automatic approval review requested clarification",
+  "binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+  "package_sha256": "1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09",
+  "seven_usb_members_verified": true,
+  "diagnostic_backup": "/media/usb/sda1/MODS/backups/usb-hub-support-diagnostic-before-stability-09b8",
+  "approval_backup": "/home/root/settings/azmod-community/approved.before-stability-09b8",
+  "activation": "Stock apply request; temporary SSH loss then recovery",
+  "old_pid": 94558,
+  "new_pid": 1320281,
+  "snapshot_uptime": 32577.85,
+  "observed_uptime": 32578.09,
+  "deck_states": "EEEE",
+  "firmware": "ep147-9e9454e357389ece",
+  "loaded_status": "mod=usb-hub-support|1|0.2.0|",
+  "loaded_log": "loaded 0.2.0 on ep147-9e9454e357389ece (34 hooks)",
+  "selected_settings_cache_hash_verified": true,
+  "functional_test_passed": false,
+  "hardware_acceptance": false
+}

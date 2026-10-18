@@ -1,0 +1,136 @@
+{
+  "timestamp_utc": "2026-10-18T05:07:51.241187+00:00",
+  "environment": "Local QEMU emulator only; disposable two-partition FAT image; no physical AZ access",
+  "experimental_binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "checks": [
+    "Two FAT partitions are one physical USB selector item",
+    "First partition unmounts but busy second partition prevents success and retains failed/inhibited state",
+    "Partial failure survives EP147 restart; retry closes the remaining partition and preserves native USB1"
+  ],
+  "restart": {
+    "previous_pid": "516776",
+    "new_pid": "521232"
+  },
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0 time=16794926",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdd1",
+    "safe-eject result: USB is busy or could not unmount: Device or resource busy",
+    "emulator kernel: no hub compatibility module needed",
+    "claim_hook 0x425c60 ok",
+    "claim_hook 0x425e90 ok",
+    "claim_hook 0x426170 ok",
+    "claim_hook 0x4267b0 ok",
+    "claim_hook 0x426840 ok",
+    "claim_hook 0x426860 ok",
+    "claim_hook 0x427430 ok",
+    "claim_hook 0x4275f0 ok",
+    "claim_hook 0x428620 ok",
+    "claim_hook 0x1869b48 ok",
+    "claim_hook 0x1869e98 ok",
+    "claim_hook 0x1981560 ok",
+    "claim_hook 0x1829d38 ok",
+    "claim_hook 0x1828978 ok",
+    "claim_hook 0x1829620 ok",
+    "claim_hook 0x1829990 ok",
+    "claim_hook 0x18282d0 ok",
+    "claim_hook 0x18285b0 ok",
+    "claim_hook 0x1827ff0 ok",
+    "claim_hook 0x1827d20 ok",
+    "claim_hook 0xe5e7d8 ok",
+    "claim_hook 0x7d6e28 ok",
+    "claim_hook 0x201f5d8 ok",
+    "claim_hook 0x1fc9ae0 ok",
+    "claim_hook 0x200f0d0 ok",
+    "claim_hook 0xab2ab8 ok",
+    "claim_hook 0xab35b8 ok",
+    "claim_hook 0xa7d0f8 ok",
+    "claim_hook 0xa7f688 ok",
+    "claim_hook 0xa77ae4 ok",
+    "claim_hook 0xa75bd0 ok",
+    "claim_hook 0x21aeb50 ok",
+    "claim_hook 0x2360f80 ok",
+    "claim_hook 0x2355270 ok",
+    "eject-ui active; hold=1500 ms; mode=safe-eject",
+    "loaded 0.2.0 on ep147-9e9454e357389ece (34 hooks)",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0 time=16820361",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdd2",
+    "safe-eject success targets=1 sources=0",
+    "safe-eject result: EJECT_C (hub port 3) is safe to remove."
+  ],
+  "final_status": {
+    "pid": 521232,
+    "clock_ms": 16829434,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 56085,
+        "devnum": 85
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 56509,
+        "devnum": 86
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-18",
+  "scope": "Local emulator fixture investigation, not acceptance",
+  "binary_sha256": "f711026d3de8f43df1a5421368f63bd6fef2a7639c02dd8e7cea83c959e36eb3",
+  "observations": [
+    "SOURCE capture and cancellation passed after 100 knob turns",
+    "The subsequent load precondition resolved to native player 1/usb2, rather than physical fixture sdb; the suite stopped before BROWSE acceptance",
+    "An inherited root renotifier ExecStartPost remained alongside the filtered fixture helper, announcing hub storage into native USB2",
+    "Fixture correction clears inherited ExecStartPost entries and runs only the filtered helper on the next clean boot"
+  ],
+  "controller_investigations": [
+    "Unloaded xhci-pci module prevented initial hub enumeration",
+    "EHCI rejected the full-speed QEMU hub without a companion controller",
+    "OHCI failed under storage writes with OHCI Unrecoverable Error; snapshot-only writes were discarded",
+    "Historical controller notes and the preserved emulator-only xhci-pci module identify the supported fixture configuration"
+  ],
+  "source_images_modified": null,
+  "physical_AZ_changed": false,
+  "result": "Not accepted; repeat using the corrected xHCI snapshot fixture",
+  "additional_attempts_2026_10_18": {
+    "binary_sha256": "121d6222fd4fa183ea585da5bf1044fd269989755bfca58ce1560d3f2dbc9b31",
+    "stopped_runs": [
+      "Two main runs detected B rather than A using the physical mount-device assertion",
+      "Temporary first-row runner timed out loading because native USB1 appeared after a late announcement shifted the rows"
+    ],
+    "root_fixture_issue": "Filtered ExecStartPost one-shot ran before the EP147 process existed. USB1 was mounted but initially absent from SOURCE. An explicit filtered announcement after mod readiness restored USB1.",
+    "resolution": "Original source-row coordinates retained after visual verification of native USB1, A and B. Current c261f636 candidate then passed all 11 main checks.",
+    "assertion_weakened": false,
+    "real_az_touched": false
+  },
+  "snapshot_claim_correction": "Final inspection found writable raw A/B nodes after hotplug. No baseline hashes exist; original-image immutability is unverified. Historical snapshot-only statements are superseded by the storage-protection acceptance record."
+}

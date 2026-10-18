@@ -2,6 +2,7 @@
 /* EP147 2.00 emulator experiment. Factory returns a nontrivial C++ pointer
  * through x8; a 24-byte C aggregate uses that same indirect-result register.
  * Objects are intentionally retained until process exit. */
+#include "alias-mount.h"
 struct hub_result { uint64_t object, unused[2]; };
 typedef struct hub_result (*hub_factory_fn)(void *, void *, void *, void *);
 static hub_factory_fn hub_factory_original;
@@ -9,6 +10,8 @@ static fn8 hub_holder_original;
 static uint64_t hub_music_vt[MAX_FAKES][42], hub_info_vt[MAX_FAKES][42];
 static uint64_t hub_owners[16];
 static unsigned hub_owner_counts[16];
+static uint64_t *hub_mount_caches[MAX_FAKES];
+static int hub_queue_mount(int source);
 static int hub_slot_code(int player, int slot) {
     if (!getenv("LINKFAKE_HUBSRV")) return 0;
     for (int i=0; i<nfakes; i++) if (fakes[i].player==player && fakes[i].slot==slot) return 0xe0+i;
@@ -18,7 +21,11 @@ static __thread uint64_t hub_matching_message, hub_matching_server;
 static uint64_t hub_matches(uint64_t server, uint64_t message) {
     uint32_t dmst=((uint32_t (*)(uint64_t,int))0xf05680)(message,0);
     for (int i=0; i<nfakes; i++)
-        if (fakes[i].present && (server==fakes[i].srv_music || server==fakes[i].srv_info))
+        if (fakes[i].present
+#ifdef LF_SAFE_EJECT
+            && !fakes[i].eject_reserved
+#endif
+            && (server==fakes[i].srv_music || server==fakes[i].srv_info))
             if (((dmst>>8)&255)==(unsigned)(0xe0+i)) {
                 hub_matching_message=message; hub_matching_server=server;
                 return 1;
@@ -51,6 +58,7 @@ static __thread uint64_t hub_info_library;
 static fn8 hub_identity_lookup_original;
 static uint64_t hub_identity_lookup(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
                                     uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
+    if (!lf_runtime_ready()) return hub_identity_lookup_original(a,b,c,d,e,f,g,h);
     if (hub_info_library) {
         uint64_t *handle=(uint64_t *)a;
         handle[0]=hub_info_library+0x160; /* IFileIdentityInfoGetter */
@@ -61,11 +69,36 @@ static uint64_t hub_identity_lookup(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
 }
 static void hub_info_process(uint64_t server,uint64_t message,uint32_t connection) {
     uint64_t previous=hub_info_library;
+#ifdef LF_SAFE_EJECT
+    int source=-1;
+    for (int i=0;i<nfakes;i++) if (fakes[i].srv_info==server) {
+        source=i;
+        hub_info_library=fakes[i].srv_music;
+    }
+    if (!safe_server_begin(source)) { hub_info_library=previous; return; }
+    if (!hub_queue_mount(source)) {
+        safe_server_end(source); hub_info_library=previous; return;
+    }
+#else
     for (int i=0;i<nfakes;i++) if (fakes[i].srv_info==server)
         hub_info_library=fakes[i].srv_music;
+#endif
     ((void (*)(uint64_t,uint64_t,uint32_t))0x19802c8)(server,message,connection);
+#ifdef LF_SAFE_EJECT
+    safe_server_end(source);
+#endif
     hub_info_library=previous;
 }
+#ifdef LF_SAFE_EJECT
+static void hub_music_process(uint64_t server,uint64_t message,uint32_t connection) {
+    int source=-1;
+    for (int i=0;i<nfakes;i++) if (fakes[i].srv_music==server) source=i;
+    if (!safe_server_begin(source)) return;
+    if (!hub_queue_mount(source)) { safe_server_end(source); return; }
+    ((void (*)(uint64_t,uint64_t,uint32_t))((uint64_t *)0x2bb1268)[0x50/8])(server,message,connection);
+    safe_server_end(source);
+}
+#endif
 static void hub_override(uint64_t server, uint64_t *vt) {
     memcpy(vt,*(uint64_t **)server-2,42*sizeof(uint64_t));
     vt[2+0x80/8]=(uint64_t)hub_matches;
@@ -74,6 +107,14 @@ static void hub_override(uint64_t server, uint64_t *vt) {
 }
 static void hub_create_music(int i) {
     if (fakes[i].srv_music) return;
+        uint64_t *cache=hub_mount_caches[i];
+        if (!cache) {
+            cache=calloc(1,0x50);
+            if (!cache) return;
+            cache[0]=0x2bb6040; cache[1]=0x100000001ULL;
+            cache[2]=0x2bb5f00; cache[3]=0x2bb5f58;
+            hub_mount_caches[i]=cache;
+        }
         uint64_t nm=0;
         uint8_t id=2,alternate=0;
         char label[32];
@@ -82,9 +123,6 @@ static void hub_create_music(int i) {
         /* The factory's vector contains per-source mutable mount caches, NOT
          * global services. Reusing stock vec[0] couples the new library to USB1.
          * Reproduce the in-place shared object built at 0x1380e9c. Retain it. */
-        uint64_t *cache=calloc(1,0x50);
-        cache[0]=0x2bb6040; cache[1]=0x100000001ULL;
-        cache[2]=0x2bb5f00; cache[3]=0x2bb5f58;
         uint64_t entry[2]={(uint64_t)(cache+2),(uint64_t)cache};
         uint64_t ownvec[3]={(uint64_t)entry,(uint64_t)(entry+2),(uint64_t)(entry+2)};
         struct hub_result extra=hub_factory_original(ownvec,&nm,&id,&alternate);
@@ -94,7 +132,7 @@ static void hub_create_music(int i) {
 }
 __attribute__((used,noinline)) static void hub_factory_c(void *vec,void *name,void *sdid,void *flag,uint64_t *out) {
     struct hub_result stock=hub_factory_original(vec,name,sdid,flag);
-    if (*(uint8_t *)sdid==2) for (int i=0;i<nfakes;i++) hub_create_music(i);
+    if (lf_runtime_ready() && *(uint8_t *)sdid==2) for (int i=0;i<nfakes;i++) hub_create_music(i);
     *out=stock.object;
 }
 /* The stock unique_ptr result occupies only 8 bytes. Never return the 24-byte
@@ -109,6 +147,8 @@ static void hub_finish_servers(uint64_t common,uint64_t timer) {
         if (!s || fakes[i].srv_info) continue;
         uint8_t id=2,alternate=0;
         void *tag=calloc(1,0x18);
+        uint64_t info_memory=(uint64_t)calloc(1,0x210);
+        if (!tag || !info_memory) { free(tag); free((void *)info_memory); continue; }
         ((void (*)(void *,void *))0x1384ae8)(tag,&id);
         uint64_t *vt=*(uint64_t **)s;
         ((void (*)(uint64_t,void *))vt[0x88/8])(s,tag);
@@ -116,12 +156,15 @@ static void hub_finish_servers(uint64_t common,uint64_t timer) {
         ((void (*)(uint64_t,uint64_t))vt[0x98/8])(s,timer);
         *(uint64_t *)(s+0x150)=((uint64_t (*)(uint64_t))0x1385378)(s);
         hub_override(s,hub_music_vt[i]);
+#ifdef LF_SAFE_EJECT
+        hub_music_vt[i][2+0x50/8]=(uint64_t)hub_music_process;
+#endif
         ((void (*)(uint64_t))0x137ef60)(s);
         uint64_t nm=0;
         char label[32];
         snprintf(label,sizeof label,"HubInfo%d",i);
         ((void (*)(void *,const char *))0x24876f0)(&nm,label);
-        s=(uint64_t)calloc(1,0x210);
+        s=info_memory;
         ((void (*)(uint64_t,void *,void *,void *))0x1974f50)(s,&nm,&id,&alternate);
 
         fakes[i].srv_info=s;
@@ -136,7 +179,7 @@ static uint64_t hub_holder(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
                            uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     uint64_t result=hub_holder_original(a,b,c,d,e,f,g,h);
     uint64_t *holder=(uint64_t *)a;
-    hub_finish_servers(holder[0x3a],holder[0x27]);
+    if (lf_runtime_ready()) hub_finish_servers(holder[0x3a],holder[0x27]);
     return result;
 }
 /* Register on the dispenser thread, before it traverses the list. */
@@ -144,7 +187,7 @@ static void hub_register(uint64_t owner) {
     unsigned count=nfakes;
     int k;
     for (k=0; k<16 && hub_owners[k] && hub_owners[k]!=owner; k++) {}
-    if (k==16 || !count || hub_owner_counts[k]>=count) return;
+    if (k==16 || !count || count>MAX_FAKES || hub_owner_counts[k]>=count) return;
     unsigned registered=hub_owner_counts[k];
     uint64_t stock_music=0,stock_info=0;
     uint64_t *scanhead=(uint64_t *)(owner+0x2c0);
@@ -166,7 +209,8 @@ static void hub_register(uint64_t owner) {
         hub_finish_servers(common,timer);
         lf_log("hub late construction common=%#lx timer=%#lx",common,timer);
     }
-    if (!fakes[0].srv_info) return;
+    for (unsigned i=registered;i<count;i++)
+        if (!fakes[i].srv_music || !fakes[i].srv_info) return;
     for (unsigned i=registered;i<count;i++) {
         uint64_t targets[2]={fakes[i].srv_music,fakes[i].srv_info};
         uint64_t sources[2]={stock_music,stock_info};
@@ -190,12 +234,25 @@ static void hub_register(uint64_t owner) {
         ((void (*)(uint64_t,uint64_t))vt[0x58/8])(s,sender);
         lf_log("hub reply sender copied %#lx",sender);
     }
+    /* Prepare every list node before changing the native list. Partial
+     * allocation failure must neither dereference NULL nor duplicate entries
+     * on the next registration attempt. The native list owns published nodes. */
+    uint64_t *nodes[MAX_FAKES*2]; unsigned prepared=0;
+    for (unsigned i=registered;i<count;i++) for (int j=0;j<2;j++) {
+        uint64_t *node=malloc(24);
+        if (!node) {
+            while (prepared) free(nodes[--prepared]);
+            return;
+        }
+        nodes[prepared++]=node;
+    }
     hub_owners[k]=owner;
+    unsigned next_node=0;
     uint64_t *head=(uint64_t *)(owner+0x2c0);
     for (unsigned i=registered; i<count; i++) {
         uint64_t objects[2]={fakes[i].srv_music,fakes[i].srv_info};
         for (int j=0; j<2; j++) {
-            uint64_t *node=malloc(24);
+            uint64_t *node=nodes[next_node++];
             node[0]=(uint64_t)head; node[1]=head[1]; node[2]=objects[j];
             ((uint64_t *)head[1])[0]=(uint64_t)node;
             head[1]=(uint64_t)node;
@@ -204,6 +261,31 @@ static void hub_register(uint64_t owner) {
     }
     hub_owner_counts[k]=count;
     lf_log("hub registered %u servers with %#lx (new %u)",count*2,owner,(count-registered)*2);
+}
+/* In the eject profile the caller retains dispatch admission through this call
+ * and its following request enqueue. Serialize both mount producers so a request
+ * cannot observe mounted=1 before the mount tasks have actually been queued. */
+static int hub_queue_mount(int source) {
+    struct fake *f=&fakes[source];
+    if (f->mounted) return 1;
+#ifdef LF_SAFE_EJECT
+    pthread_mutex_lock(&safe_source_mutex);
+#endif
+    int ready=f->present && !f->unmount_pending && f->srv_music && f->srv_info;
+    if (ready && !f->mounted) {
+        uint16_t id=0x102;
+        uint64_t path=0;
+        ((void (*)(void *,const char *))0x24a1180)(&path,f->dir);
+        ((void (*)(uint64_t,void *,void *,int,void *))0x1373ca8)(f->srv_music,&id,&path,0,NULL);
+        ((void (*)(uint64_t,void *,void *))0x1974ff8)(f->srv_info,&id,NULL);
+        ((void (*)(void *))0x2469aa0)(&path);
+        f->mounted=1;
+        lf_log("hub mount queued player %d slot %d id=%#x path=%s",f->player,f->slot,id,f->dir);
+    }
+#ifdef LF_SAFE_EJECT
+    pthread_mutex_unlock(&safe_source_mutex);
+#endif
+    return ready;
 }
 static void hub_mount_poll(void) {
     static time_t started, ready_at;
@@ -217,11 +299,14 @@ static void hub_mount_poll(void) {
      * objects alive and serialize firmware mailbox writes with announcements. */
     for (int i=0;i<nfakes;i++) {
         struct fake *f=&fakes[i];
+#ifdef LF_SAFE_EJECT
+        if (safe_eject_source_poll(f,now,&ready_at,waiting)) continue;
+#endif
         if (f->unmount_pending==1 && waiting<0 && now>=ready_at) {
             uint16_t id=0x102;
             if (f->srv_music) ((void (*)(uint64_t,void *,void *))0x1373928)(f->srv_music,&id,NULL);
             if (f->srv_info) ((void (*)(uint64_t,void *,void *))0x1975468)(f->srv_info,&id,NULL);
-            FILE *box=fopen("/proc/udev_nfs","w");
+            FILE *box=fopen("/proc/udev_nfs","we");
             if (!box) continue;
             fprintf(box,"umount %s nfs",f->mp); fclose(box);
             f->unmount_pending=2; f->removed_at=now;
@@ -231,9 +316,7 @@ static void hub_mount_poll(void) {
             break;
         }
         if (f->unmount_pending==2 && now-f->removed_at>=3) {
-            char command[192];
-            snprintf(command,sizeof command,"! mountpoint -q %s || umount %s",f->mp,f->mp);
-            if (!system(command)) {
+            if (!hub_alias_release(f->mp)) {
                 f->unmount_pending=0;
                 lf_log("hub removal alias released player %d slot %d",f->player,f->slot);
             }
@@ -254,23 +337,15 @@ static void hub_mount_poll(void) {
         for (int i=0;i<nfakes;i++) {
             struct fake *f=&fakes[i];
             if (!f->present || f->unmount_pending || !__atomic_load_n(&f->notify_pending,__ATOMIC_ACQUIRE) || access(f->dir,R_OK)) continue;
-            char command[768];
-            snprintf(command,sizeof command,
-                "mkdir -p %s && { mountpoint -q %s || mount -o bind,ro '%s' %s; }",
-                f->mp,f->mp,f->dir,f->mp);
-            struct stat source_stat,alias_stat;
-            if (!stat(f->dir,&source_stat) && !stat(f->mp,&alias_stat) &&
-                (source_stat.st_dev!=alias_stat.st_dev || source_stat.st_ino!=alias_stat.st_ino)) {
-                /* A prior EP147 run may have assigned this alias to another
-                 * stick. Never let an old bind point playback at that stick. */
-                snprintf(command,sizeof command,
-                    "mkdir -p %s && { ! mountpoint -q %s || umount %s; } && mount -o bind,ro '%s' %s",
-                    f->mp,f->mp,f->mp,f->dir,f->mp);
-            }
-            int rc=system(command);
+            /* Startup grace may already have elapsed when a new member arrives.
+             * Wait until native Link responds to that member before advertising
+             * its media. The first media request constructs its owned servers. */
+            struct fake *member=fake_by_ip(f->ip);
+            if (!member || !__atomic_load_n(&member->link_ready,__ATOMIC_ACQUIRE)) continue;
+            int rc=hub_alias_prepare(f->dir,f->mp);
             if (rc) { lf_log("hub alias failed player %d slot %d rc=%d",f->player,f->slot,rc); continue; }
             __atomic_store_n(&f->announced_at,now,__ATOMIC_RELEASE);
-            FILE *box=fopen("/proc/udev_nfs","w");
+            FILE *box=fopen("/proc/udev_nfs","we");
             if (!box) { __atomic_store_n(&f->announced_at,0,__ATOMIC_RELEASE); continue; }
             fprintf(box,"mount %s nfs",f->mp);
             fclose(box);
@@ -283,21 +358,19 @@ static void hub_mount_poll(void) {
         struct fake *f=&fakes[i];
         if (!f->present || f->unmount_pending || !f->srv_info || f->mounted || !f->mount_at || now<f->mount_at) continue;
         if (access(f->mp,R_OK)) continue;
-        /* Each owned server/cache uses its constructed SDID 2, generation 1.
-         * Registry lookup translates this private context to remote identity. */
-        uint16_t id=0x102;
-        uint64_t path=0;
-        ((void (*)(void *,const char *))0x24a1180)(&path,f->dir);
-        ((void (*)(uint64_t,void *,void *,int,void *))0x1373ca8)(f->srv_music,&id,&path,0,NULL);
-        ((void (*)(uint64_t,void *,void *))0x1974ff8)(f->srv_info,&id,NULL);
-        ((void (*)(void *))0x2469aa0)(&path);
-        f->mounted=1;
-        lf_log("hub mount queued player %d slot %d id=%#x path=%s",f->player,f->slot,id,f->dir);
+#ifdef LF_SAFE_EJECT
+        if (!safe_server_begin(i)) continue;
+#endif
+        hub_queue_mount(i);
+#ifdef LF_SAFE_EJECT
+        safe_server_end(i);
+#endif
     }
 }
 static fn8 hub_usb2_original,hub_usb3_original;
 static uint64_t hub_available(int slot,fn8 original,uint64_t a,uint64_t b,uint64_t c,uint64_t d,
                               uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
+    if (!lf_runtime_ready()) return original(a,b,c,d,e,f,g,h);
     if (getenv("LINKFAKE_SLOT_CAPS") && b>=0xff0000000000ULL && b<0x1000000000000ULL) {
         /* LinkMemberID: kind 2=SinglePlayer, next byte=zero-based player index.
          * Do not change the AZ's own members or real/unconfigured sources. */

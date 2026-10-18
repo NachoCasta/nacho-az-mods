@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-18T04:49:46.803079+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "candidate_binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "accepted": false,
+  "observations": [
+    "Main FAT suite passed 11 checks on the candidate.",
+    "Boundary touch/raw-block refusal and retry reached safe state, but native USB1 remained mounted after forwarded 2.3-second and 5-second holds.",
+    "An explicit EP147 restart with the community enabled list empty confirmed no usb-hub-support mapping; a 5-second native USB1 STOP unmounted sda1.",
+    "The restart changes session state as well as mod enablement; this comparison alone does not identify a runtime cause.",
+    "After restoring the same candidate in another fresh EP147 session, a 5-second native USB1 STOP also unmounted sda1. The failure therefore depends on session history or timing; a general forwarding failure is not established.",
+    "Repeating the complete boundary suite after restoring the candidate passed touch refusal/retry and native USB1 short/2.3-second long STOP, with USB1 restored at the end. The original failed sequential run remains recorded."
+  ],
+  "native_baseline_pid": "477970",
+  "fresh_candidate_pid": "480373"
+}

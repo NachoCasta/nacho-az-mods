@@ -1,0 +1,11 @@
+{
+  "scope": "New disposable 16 MiB image in a separate paused QEMU; no firmware, music or SSH",
+  "cow_overlay_created": true,
+  "base_sha256_before": "080acf35a507ac9849cfcba47dc2ad83e01b75663a516279c8b9d243b719643e",
+  "base_sha256_after": "080acf35a507ac9849cfcba47dc2ad83e01b75663a516279c8b9d243b719643e",
+  "base_read_only_in_cow_graph": true,
+  "guest_write_survived_virtual_device_replacement": true,
+  "same_overlay_reused": true,
+  "writable_raw_node_refused": true,
+  "new_source_fixture_only": true
+}

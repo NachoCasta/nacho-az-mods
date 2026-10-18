@@ -3,8 +3,9 @@
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
 Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the
 AZ-MODS app or on the deck, then refresh **Browse** to find USB Hub Support.
-Downloads are hosted in this repository's GitHub Releases. The optional Mod Index
-listing has not been requested.
+Downloads are hosted in this repository's GitHub Releases. The official Mod Index
+submission is tracked in [index PR #4](https://github.com/Kyle-Hosman/az-mods-index/pull/4);
+see the current-state notes for the latest recorded inspection.
 
 ## Start here
 
@@ -46,7 +47,16 @@ not an in-place update. See the [release notes](docs/releases/usb-hub-support-0.
 
 Mod source: [src/azhub/linkfake](src/azhub/linkfake).
 Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).
-SDK header: [src/azmod/azmod-mod.h](src/azmod/azmod-mod.h).
+SDK header: [pinned v1.2.3 header](https://github.com/Kyle-Hosman/az-mods-sdk/blob/62a156abf3a4789e9e3cdd610fe106227a3a8967/include/azmod-mod.h).
+
+**0.2.0** adds short-press USB STOP selection and background safe ejection.
+Hold USB STOP to eject the whole hub. Unload tracks from the selected sticks
+first and wait for the final safe-to-remove confirmation before unplugging.
+The exact executable passed user-operated hardware tests with two hub sticks
+plus native USB1, including independent eject and whole-hub hold, with SSH mount
+verification. Loaded-track ejection is not supported; its refusal message was
+not visible in the hardware trial. A preparation banner alone never means safe
+to unplug. See [release notes](docs/releases/usb-hub-support-0.2.0.md).
 
 The imported layout preserves references from the original research. Future mods can use
 `mods/<id>/`, each with its own manifest, build, license, and independent version history.

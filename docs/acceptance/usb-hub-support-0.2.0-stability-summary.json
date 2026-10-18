@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-18",
+  "status": "Local preparation complete; ready for a separately authorized AZ trial, not publication",
+  "selected": {
+    "version": "0.2.0",
+    "status": "Local candidate; not published or hardware accepted",
+    "binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+    "package_sha256": "1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09",
+    "package_bytes": 350722,
+    "firmware": [
+      "ep147-9e9454e357389ece"
+    ],
+    "source_manifest_unchanged": true,
+    "catalog_unchanged": true,
+    "assets": {
+      "azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43"
+    }
+  },
+  "evidence": [
+    "usb-hub-support-0.2.0-stability-timeout-build.json",
+    "usb-hub-support-0.2.0-stability-timeout-package.json",
+    "usb-hub-support-0.2.0-stability-timeout-elf.json",
+    "usb-hub-support-0.2.0-stability-timeout-topology.json",
+    "usb-hub-support-0.2.0-stability-timeout-partitions.json",
+    "usb-hub-support-0.2.0-stability-timeout-load-race.json",
+    "usb-hub-support-0.2.0-stability-timeout-regressions.json",
+    "usb-hub-support-0.2.0-stability-timeout-exfat.json",
+    "usb-hub-support-0.2.0-stability-timeout-input.json",
+    "usb-hub-support-0.2.0-stability-timeout-emulator.json",
+    "usb-hub-support-0.2.0-stability-timeout-boundaries.json",
+    "usb-hub-support-0.2.0-stability-timeout-journal.json",
+    "usb-hub-support-0.2.0-stability-timeout-resources.json",
+    "usb-hub-support-0.2.0-stability-timeout-init-failure.json",
+    "usb-hub-support-0.2.0-stability-host.json",
+    "usb-hub-support-0.2.0-mount-timeout.json",
+    "usb-hub-support-0.2.0-storage-protection.json"
+  ],
+  "resource_scope": "12 reconnect/eject cycles in one firmware emulator process; endpoint FDs 58, threads 279, VmData 4272484 KiB unchanged; warm cycle 2 RSS 720040 KiB, final 720024 KiB. Subsequent selector/knob/BACK passed. This does not prove proprietary firmware leak-free.",
+  "fixture_correction": "QMP hotplug could reopen original local A/B fixture images writable, bypassing CLI snapshots. Original image byte identity is unknown because no baseline hashes exist. No write was confirmed. Corrected helper uses a persistent qcow2 node with read-only raw backing; a separate disposable-image test verified write persistence across hotplug, unchanged base SHA256 and refusal of writable raw nodes. Earlier functional evidence remains attributed to its actual environment.",
+  "cleanup": "Firmware emulator stopped after ordinary unmounts and sync. Disposable storage test QEMU exited. No further physical AZ access.",
+  "deferred": [
+    "Action-specific hardware authorization and acceptance including timing, views/decks/themes and long session",
+    "Source commit and remote CI for the final snapshot",
+    "User publishing decision and final release/tag procedure"
+  ],
+  "publication": "Not authorized; public catalog and 0.1.8 assets unchanged",
+  "final_local_hygiene": {
+    "source_sha256_entries_match_selected_build": 38,
+    "canonical_git_blob_hashes_match": true,
+    "all_acceptance_json_parses": true,
+    "modified_hotplug_helper_python_compiles": true,
+    "catalog_diff_empty": true,
+    "unexpected_committable_binary_extensions": [],
+    "expected_icon": "src/azhub/linkfake/icon.png",
+    "qemu_processes_remaining": 0,
+    "git_diff_check": "passed; line-ending normalization warnings only",
+    "changes_committed": false
+  }
+}

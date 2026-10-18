@@ -1,0 +1,71 @@
+{
+  "timestamp_utc": "2026-10-18T04:56:20.977278+00:00",
+  "environment": "Local QEMU emulator only; extra devices are disposable empty FAT volumes, not simultaneous music-source acceptance",
+  "experimental_binary_sha256": "057d45d1758b4aa573d8ca08a997d09725c07ecbc4f970ae40677efbed0ac112",
+  "checks": [
+    "New mounted child during whole-hub eject prevents a whole-hub success claim; completed children stay safe",
+    "Whole-hub retry safely includes the newly connected device",
+    "Unexpected disconnect during an eject never reports safe removal",
+    "Fallback worker automatically mounts sdg, but cannot remount its ejected connection over four worker cycles",
+    "Independent remount revokes completed safety; retry performs a real flush/unmount instead of reusing stale success",
+    "Fallback remount inhibition survives an EP147 restart with the virtual USB still attached"
+  ],
+  "restart": {
+    "previous_pid": "480373",
+    "new_pid": "491837"
+  },
+  "events": [],
+  "final_status": {
+    "pid": 491837,
+    "clock_ms": 16138865,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 56085,
+        "devnum": 85
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 56509,
+        "devnum": 86
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

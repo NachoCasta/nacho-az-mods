@@ -1,0 +1,35 @@
+{
+  "status": "Passed within the stated host coverage; native firmware adapters are excluded",
+  "date": "2026-10-18",
+  "compiler": "Clang 18, Ubuntu 24.04 amd64 Docker image usb-hub-host-tests:local",
+  "runtime": "Container with seccomp=unconfined to permit ThreadSanitizer personality calls; default seccomp failed the sanitizer control, not a mod test",
+  "command": "make test AZ_SDK_INCLUDE=/sdk/include",
+  "portable_suites": 12,
+  "portable_runs": 36,
+  "modes": [
+    "plain",
+    "ASan + UBSan with leak detection",
+    "TSan"
+  ],
+  "sdk_production_surface_checks": {
+    "plain": 10,
+    "asan": 8,
+    "tsan": 8
+  },
+  "sdk_production_surface_exclusions": [
+    "functional scenarios not measured",
+    "no-io and no-alloc measured only in plain mode",
+    "native server teardown is a stub in this host adapter"
+  ],
+  "official_harness_controls": "All plain, ASan/UBSan and TSan planted defects detected in one final Clang run",
+  "earlier_backend_limitation": "GCC did not terminate on the SDK signed-overflow control; GCC results alone were not used to clear the gates",
+  "findings_fixed": [
+    "Unbounded completion-listener retention replaced with 16 static slots",
+    "Surface text drawing clipped to available area after the SDK draw-area check detected overflow"
+  ],
+  "whole_mod_leak_free_claim": false,
+  "real_hardware_access": false,
+  "final_repeat": "All 36 portable runs and SDK surface 10/8/8 checks passed again after tagged-cache preparation and mount path buffer changes",
+  "sdk_launch_regression_repeat": "All 36 portable runs and SDK UI 10/8/8 gates passed again after correcting launch argv. Actual production helper launch was tested for argument shape, launch refusal, normal waiting, bounded timeout and missing services.",
+  "timeout_safety_repeat": "All 36 portable runs and production SDK surface 10/8/8 checks passed after timeout/unknown-state inhibition and persistent marker changes. Actual helper tests cover bounded polling, stop, argument shape and marker restoration."
+}

@@ -1,6 +1,10 @@
-# Hub USB Libraries
+# USB Hub Support
 
-Stable hardware user-confirmed build:0.1.4. Current0.1.5 is publishing preparation.
+Version 0.2.0 adds safe eject through short/long USB STOP. The exact executable
+passed user-operated tests with two hub sticks plus native USB1 and SSH mount
+verification. Unload tracks first and wait for final safe-to-remove confirmation;
+loaded-track eject is not supported and its refusal message was not observed.
+See [release notes](../../../docs/releases/usb-hub-support-0.2.0.md).
 Read [repository state](../../../docs/CURRENT-STATE.md) and
 [publishing notes](../../../docs/PUBLISHING.md) before building/deploying.
 

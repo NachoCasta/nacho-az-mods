@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-18",
+  "scope": "User-authorized read-only SSH preflight; no installation, activation or functional hardware test",
+  "kernel": "4.4.194",
+  "core_deck_version": "1.2.3",
+  "running_firmware_tag": "ep147-9e9454e357389ece",
+  "firmware_metadata_discrepancy": "Resolved by user confirmation: displayed/loader version 2.01 is firmware 2.00 with the AZ-MODS patch. The running exact tag was independently observed over read-only SSH. No broader firmware compatibility is inferred.",
+  "ep147_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+  "app_rev": "05c40500f",
+  "installed_mod": {
+    "id": "usb-hub-support",
+    "version": "0.1.7",
+    "enabled": true,
+    "binary_sha256": "86f264c27644b399e07226827874b2e41c9a152925ba03c9479c4eb1aa7ee0ba",
+    "legacy_mod_enabled": false
+  },
+  "usb_snapshot": {
+    "mounted_removable_filesystems": [
+      {
+        "device": "/dev/sda1",
+        "mount": "/media/usb/sda1",
+        "type": "vfat",
+        "usb_path": "1-1"
+      }
+    ],
+    "hub_present": false,
+    "usb2_child_present": false,
+    "front_host_controllers_present": [
+      "fe380000.usb/usb1",
+      "fe3c0000.usb/usb2"
+    ],
+    "usb2_connector_mapping_independently_verified": false
+  },
+  "deck_snapshot": {
+    "source": "Existing /tmp/az-decks telemetry; no probe installed",
+    "pid_matches_running_ep147": true,
+    "device_uptime_seconds": 249.97,
+    "snapshot_uptime_seconds": 249.77,
+    "states": "EEEE",
+    "interpretation": "All four decks reported empty at the observation time only"
+  },
+  "persisted_pro_dj_link_setting": "Not inspected or changed",
+  "candidate_installed": false,
+  "hardware_functional_acceptance": false,
+  "remaining": [
+    "Obtain separate authorization for candidate copy/installation and activation",
+    "Connect the intended hub/sticks for an explicitly authorized bounded functional trial",
+    "Verify native STOP, loaded-source refusal, individual/whole-hub eject and reconnection on hardware"
+  ],
+  "hub_connected_followup": {
+    "scope": "Read-only follow-up after user connected one hub stick",
+    "hub_usb_path": "2-1",
+    "storage_usb_path": "2-1.4",
+    "device": "/dev/sdb1",
+    "filesystem": "vfat",
+    "backing_mount": "/media/usb/sdb1",
+    "library_alias": "/media/player03/usb",
+    "library_alias_read_only": true,
+    "native_usb1_preserved": true,
+    "existing_mod_announced_source": true,
+    "deck_states": "EEEE",
+    "snapshot_uptime_seconds": 276.8,
+    "device_uptime_seconds": 278.51,
+    "functional_eject_test_performed": false
+  },
+  "firmware_version_user_confirmation": "The user confirmed that 2.01 is 2.00 with the AZ-MODS patch; this interpretation is user-reported, not independently derived from the patch."
+}

@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-10-18T11:33:53.485452+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "experimental_binary_sha256": "c261f636d97ea9d20c7362bda756e136aad0933cf28118a574562b0ef91c931c",
+  "checks": [
+    "Touch selector submits actual eject requests",
+    "Raw block handle refuses before withdrawal and preserves availability",
+    "Eject succeeds after raw handle closes",
+    "Direct USB1 short/long STOP events forward intact and stock long eject unmounts USB1",
+    "Hub safe states remain intact and native USB1 is restored"
+  ],
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=1576610",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdc1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB2 (hub port 2) is safe to remove.",
+    "eject-ui native-forward port=1 down=1",
+    "eject-ui native-forward port=1 down=0",
+    "eject-ui native-forward port=1 down=1",
+    "eject-ui native-forward port=1 down=0"
+  ]
+}

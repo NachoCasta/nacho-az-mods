@@ -1,0 +1,133 @@
+{
+  "timestamp_utc": "2026-10-18T12:01:23.181725+00:00",
+  "environment": "Local QEMU emulator; stock exFAT 1.4.0/libfuse 2.9.9; no physical AZ access",
+  "experimental_binary_sha256": "ab12dcc6f3164a8652f997ae0fdce30298d979e575b2094d9657f535b2915d5b",
+  "checks": [
+    "exFAT raw user prevents success while filesystem daemon remains available",
+    "exFAT file user prevents success while filesystem daemon remains available",
+    "Stock exFAT-FUSE daemon closes normally; device unmounts and remains inhibited; other sticks remain mounted"
+  ],
+  "events": [
+    "player 4 slot 3 at 10.0.2.253 serves /media/usb/sdd",
+    "discovery published 3 hub sources (previous 2)",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "deck -> player 4 :50004 type 0x20 len 44 (first)",
+    "deck -> player 4 :50002 type 0x80 len 44 (first)",
+    "deck -> player 4 :50002 type 0xa len 1152 (first)",
+    "hub member ready player 4",
+    "mount for player 4: mkdir -p /media/player04/usb && { mountpoint -q /media/player04/usb || mount -o bind,ro '/media/usb/sdd' /media/player04/usb; }",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "hub announce player 4 slot 3 path=/media/player04/usb",
+    "deck -> player 4 :50002 type 0x5 len 48 (first)",
+    "media query player 4 slot 3 -> answered",
+    "TCP connect for player 4 port 12523 -> loopback: 0 (errno 0)",
+    "tcp fd 60 closed",
+    "TCP connect for player 4 port 41123 -> loopback: 0 (errno 0)",
+    "eject-ui SOURCE focus pin suppressed",
+    "tcp fd 55 closed",
+    "hub factory player 4 music=0xffff7840fe00",
+    "hub initialized player 4 music=0xffff7840fe00 info=0xffff784c5500",
+    "hub late construction common=0xffff445ce800 timer=0xffff4d5e0800",
+    "hub services kind 0 provider=0 registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869",
+    "hub services kind 1 provider=0x18e3f282bf7788b registry_key=0x30a5b4f4c52ed0 sender_key=0xf3155fb2e8a869",
+    "hub reply sender copied 0x18e3f282bf7788b",
+    "hub registered 6 servers with 0xffff4d5e0200 (new 2)",
+    "hub mount queued player 4 slot 3 id=0x102 path=/media/usb/sdd",
+    "hub announcement acknowledged player 4 slot 3",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x4 time=3219936",
+    "safe-eject withdrawal source=2",
+    "safe-eject server-complete source=2 kind=1",
+    "safe-eject server-complete source=2 kind=0",
+    "safe-eject source-closed source=2",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject result: USB is busy or could not unmount: Device or resource busy",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x4 time=3226770",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdd",
+    "safe-eject success targets=1 sources=0x4",
+    "safe-eject result: EJECT_EXFAT (hub port 3) is safe to remove."
+  ],
+  "final_status": {
+    "pid": 92234,
+    "clock_ms": 3238064,
+    "view": 1,
+    "devices": [
+      {
+        "label": "EJECT_EXFAT",
+        "disk": "sdd",
+        "port": 2,
+        "state": 2,
+        "generation": 43499,
+        "devnum": 55
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 42651,
+        "devnum": 53
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 43075,
+        "devnum": 54
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-10-17T21:56:43.063428+00:00",
+  "environment": "Local QEMU emulator, kernel 6.6.138-dirty; not hardware acceptance",
+  "firmware_tag": "ep147-9e9454e357389ece",
+  "prototype_sha256": "2642dadbd2994eb3080a9fd536ad2097fa782f61d6d79ede07a00a6d7c2d528c",
+  "ep147_pid": "20372",
+  "hub_port_fixture": "USB2 = /sys/bus/usb/devices/2-1; native USB1 = 1-1",
+  "hold_threshold_ms": 1500,
+  "hub_ejection_implemented": false,
+  "checks": [
+    "Short USB2 STOP opens two-stick selector; knob selects only second stick; mounts unchanged",
+    "BACK cancels without recording an eject request",
+    "Touch selects second stick and submits request; mounts unchanged",
+    "Long USB2 STOP records exactly one whole-hub request, without selector or native eject",
+    "Touch Cancel closes selector; subsequent native BROWSE input runs with same EP147 process",
+    "Direct USB1 short/long pairs forwarded intact; stock long eject removes USB1, leaves both hub sticks mounted"
+  ],
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui request-one port=2 disk=sdc label=HUB_LIB2 (no unmount)",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui cancel",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui request-one port=2 disk=sdc label=HUB_LIB2 (no unmount)",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui request-all port=2 (no unmount)",
+    "eject-ui captured port=2 down=0 action=0",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui native-forward port=1 down=1",
+    "eject-ui native-forward port=1 down=0",
+    "eject-ui native-forward port=1 down=1",
+    "eject-ui native-forward port=1 down=0"
+  ],
+  "screenshots": "Local ignored research/shots only; not included in this record"
+}

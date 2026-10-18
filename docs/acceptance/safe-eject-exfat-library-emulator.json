@@ -1,0 +1,110 @@
+{
+  "timestamp_utc": "2026-10-18T00:39:45.402941+00:00",
+  "environment": "Local QEMU emulator; stock exFAT 1.4.0/libfuse 2.9.9; no physical AZ access",
+  "experimental_binary_sha256": "718c6463aa10a00f68361a7cda6469d3e5810bf333250c63531fdd6babeec398",
+  "checks": [
+    "exFAT raw user prevents success while filesystem daemon remains available",
+    "exFAT file user prevents success while filesystem daemon remains available",
+    "Stock exFAT-FUSE daemon closes normally; device unmounts and remains inhibited; other sticks remain mounted",
+    "exFAT Rekordbox library closes both owned servers and its native bind alias before backing unmount"
+  ],
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x4",
+    "safe-eject withdrawal source=2",
+    "safe-eject server-complete source=2 kind=1",
+    "safe-eject server-complete source=2 kind=0",
+    "safe-eject source-closed source=2",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject result: USB is busy or could not unmount: Device or resource busy",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=3",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x4",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdd",
+    "safe-eject success targets=1 sources=0x4",
+    "safe-eject result: EJECT_EXFAT is safe to remove."
+  ],
+  "final_status": {
+    "pid": 30941,
+    "clock_ms": 810719,
+    "view": 1,
+    "devices": [
+      {
+        "label": "EJECT_EXFAT",
+        "disk": "sdd",
+        "port": 2,
+        "state": 2,
+        "generation": 24413,
+        "devnum": 10
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 23567,
+        "devnum": 8
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 21622,
+        "devnum": 4
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

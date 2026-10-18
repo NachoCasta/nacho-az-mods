@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-only */
 #define _GNU_SOURCE
-#include "../../azmod/azmod-mod.h"
+#include "azmod-mod.h"
 #include <errno.h>
 #include <fcntl.h>
 #include <stdarg.h>

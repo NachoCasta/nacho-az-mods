@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-10-18T19:03:15.554619+00:00",
+  "binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+  "pid": 1320281,
+  "user_report": {
+    "short_press_selector_open_and_back": true,
+    "loaded_track_attempt": "Preparing USB for removal displayed; source remained available and subsequent track loading worked. No refusal message observed.",
+    "empty_deck_individual_eject": "User unloaded track, selected safe eject, saw Preparing for removal and source disappeared.",
+    "whole_hub_long_press": "User reports success after instruction to reinsert the previously ejected stick and hold hub-port STOP for 2\u20133 seconds. One hub stick only."
+  },
+  "ssh_observation": {
+    "uptime": 33643.48,
+    "deck_snapshot_uptime": 33641.49,
+    "decks": "EEEE",
+    "hub_backing_sdb1_mounted": false,
+    "player03_or_player04_alias_mounted": false,
+    "native_usb1_sda1_mounted": true,
+    "journal_state": 2,
+    "journal_topology": "/sys/devices/platform/fe3c0000.usb/usb2/2-1/2-1.4"
+  },
+  "scope": "Two hub sticks plus native USB1. User-reported selector, individual eject, continued browsing/loading from remaining source, and whole-hub hold; read-only SSH mount/journal verification. Not full release acceptance.",
+  "remaining": [
+    "Loaded-track refusal message visibility",
+    "Broader trial plan coverage"
+  ],
+  "long_press_ssh_observation": {
+    "uptime": 33856.8,
+    "deck_snapshot_uptime": 33854.76,
+    "pid": 1320281,
+    "decks": "EEEE",
+    "hub_backing_sdb1_mounted": false,
+    "player03_or_player04_alias_mounted": false,
+    "native_usb1_sda1_mounted": true,
+    "journal_state": 2
+  },
+  "two_stick_trial": {
+    "individual_eject": {
+      "user_report": "NACHO PLUGS ejected; browsing and track loading from remaining CAMI confirmed by user.",
+      "ssh_uptime": 34281.6,
+      "pid": 1320281,
+      "native_usb1_mounted": true,
+      "remaining_cami_backing_sdb1_and_player03_mounted": true,
+      "nacho_plugs_journal_state": 2,
+      "deck_snapshot": "EEEE; not instrumented proof of earlier successful load"
+    },
+    "whole_hub_hold": {
+      "user_report": "Both sources disappeared after instructed long press with both connected and tracks unloaded.",
+      "ssh_uptime": 34395.62,
+      "deck_snapshot_uptime": 34394.56,
+      "pid": 1320281,
+      "decks": "EEEE",
+      "only_native_usb1_sda1_remains_mounted": true,
+      "hub_library_aliases_absent": true,
+      "journal_state_by_label": {
+        "CAMI": 2,
+        "NACHO PLUGS": 2
+      }
+    }
+  }
+}

@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Focused host behavior tests
+      - uses: actions/checkout@v4
+        with:
+          repository: Kyle-Hosman/az-mods-sdk
+          ref: 62a156abf3a4789e9e3cdd610fe106227a3a8967
+          path: .azmod-sdk
+      - name: Verify SDK sanitizer controls
+        run: CC=clang sh .azmod-sdk/tools/harness/sanitize.sh --controls
+      - name: Host components and production UI with plain, ASan plus UBSan and TSan
         working-directory: src/azhub/linkfake
         run: |
-          set -eu
-          for test in source-name browser-guard network-identity; do
-            gcc -O2 -Wall -Wno-unused-parameter "test-$test.c" -o "/tmp/test-$test"
-            "/tmp/test-$test"
-          done
-          gcc -O2 -Wall test-source-settings.c -o /tmp/test-source-settings
-          /tmp/test-source-settings ../research/devsetting-fixture.dat
+          make test TEST_CC=clang AZ_SDK_INCLUDE=../../../.azmod-sdk/include
   sdk-build:
     runs-on: ubuntu-latest
     steps:
@@ -35,6 +36,8 @@ jobs:
           platforms: arm64
       - name: Build and validate with pinned SDK
         run: python3 .azmod-sdk/tools/azmod-pack build src/azhub/linkfake
+      - name: Compile safe-eject AZ candidate with pinned SDK
+        run: python3 .azmod-sdk/tools/azmod-pack build --no-validate src/azhub/linkfake -- az-candidate
       - name: Package and validate (no publication)
         run: |
           python3 .azmod-sdk/tools/azmod-pack package src/azhub/linkfake

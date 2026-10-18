@@ -1,0 +1,34 @@
+{
+  "scope": "Offline seven-member package and source-byte identity; no real AZ access",
+  "packages": [
+    {
+      "package_sha256": "1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09",
+      "binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+      "members": {
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+        "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+        "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+        "azmod.json": "318fa75382f3991522af6930a953c44ba039df8cabf8d8ad5e26d3602d894457",
+        "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+        "usb-hub-support.so": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b"
+      }
+    },
+    {
+      "package_sha256": "472b3f87cef6f74b2912ba4dab07b0bb3a158e5b5d421d32fc67bc45c9bedeb7",
+      "binary_sha256": "e57966f51a62dddd490f117bbe13f8c3081a5a5893b3de51d7f46fbcfa5e0022",
+      "members": {
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+        "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+        "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+        "azmod.json": "318fa75382f3991522af6930a953c44ba039df8cabf8d8ad5e26d3602d894457",
+        "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+        "usb-hub-support.so": "e57966f51a62dddd490f117bbe13f8c3081a5a5893b3de51d7f46fbcfa5e0022"
+      }
+    }
+  ],
+  "normal_and_explicit_candidate_match": true,
+  "selected_binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+  "public_catalog_version": "0.1.8"
+}

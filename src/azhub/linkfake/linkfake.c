@@ -13,10 +13,12 @@
  *   to the player's fake ip, so EP147 sees a remote member
  * - sendto: datagrams EP147 sends to a fake ip are swallowed; its status (0x0a) becomes our
  *   template and a media slot query (0x05) is answered with a media slot response (0x06)
- * - connect: a TCP connect to a fake ip is refused at once
+ * - connect: the community profile routes private library TCP through loopback
  * - msgsnd: EP147's "FuseFilsine <fake ip> 111 <mp> C 0" command to FuseMountDaemon is
  *   rewritten into a bind mount of the player's local dir on <mp>
- * Needs Pro DJ Link Mode on. Log: /tmp/linkfake.log.
+ * The community profile enables only the internal Link cache; the persisted
+ * user Link setting stays unchanged. Its logs use the SDK. Standalone research
+ * runs retain /tmp/linkfake.log.
  */
 #define _GNU_SOURCE
 #include <arpa/inet.h>
@@ -39,6 +41,13 @@
 #ifndef LF_NEXT
 #define LF_NEXT RTLD_NEXT
 #endif
+static int lf_runtime_ready(void) {
+#ifdef LF_COMMUNITY
+    return __atomic_load_n(&community_ready,__ATOMIC_ACQUIRE)==1;
+#else
+    return 1;
+#endif
+}
 
 static const char MAGIC[] = "Qspt1WmJOL";
 static const char *MODEL = "CDJ-3000"; /* $LINKFAKE_MODEL overrides */
@@ -53,18 +62,24 @@ struct fake {
     unsigned char device_settings[8]; /* source DEVSETTING.DAT; zero means unspecified */
     int sock;          /* loopback socket the player's packets come from */
     uint16_t port;     /* its local port, network order */
+    _Atomic int link_ready; /* native status received for this member transport */
     /* LINKFAKE_HUBSRV: this player's own library servers inside EP147 */
     uint64_t srv_music;   /* music_library::MusicLibraryServer */
     uint64_t srv_info;    /* track_info_repository::PersistentStorageServer */
     _Atomic uint64_t tag_cache; /* private TaggedTrackCacheService */
     char mp[64];          /* the LINK mount point, once EP147 asked for it */
     long mount_at;        /* epoch seconds when to mount the servers on mp, 0 = not yet */
-    int mounted;
+    _Atomic int mounted;
     _Atomic int present;
     int unmount_pending;
     long removed_at;
     int notify_pending;
     long announced_at, queried_at;
+#ifdef LF_SAFE_EJECT
+    _Atomic int eject_reserved, eject_withdraw, eject_done, eject_dispatching;
+    int eject_phase; /* Injector-owned; the worker communicates through atomics. */
+    _Atomic(void *) eject_music_listener, eject_info_listener;
+#endif
 };
 
 static struct fake fakes[MAX_FAKES];
@@ -96,6 +111,12 @@ static ssize_t (*real_recv)(int, void *, size_t, int);
 /* traced[]: TCP fds connected to a fake player (LINKFAKE_TCP_LOG), declared above */
 
 static void lf_log(const char *fmt, ...) {
+#ifdef LF_COMMUNITY
+    if (!lf_core || !lf_core->log) return;
+    char message[512]; va_list args;
+    va_start(args,fmt);vsnprintf(message,sizeof message,fmt,args);va_end(args);
+    lf_core->log("usb-hub-support","%s",message);
+#else
     if (!logf) return;
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
@@ -106,6 +127,7 @@ static void lf_log(const char *fmt, ...) {
     fputc('\n', logf);
     fflush(logf);
     va_end(ap);
+#endif
 }
 
 #include "network-identity.h"
@@ -268,20 +290,23 @@ static void *injector(void *arg) {
     (void)arg;
     for (unsigned tick = 0;; tick++) {
 #ifdef LF_COMMUNITY
+        int state=__atomic_load_n(&community_ready,__ATOMIC_ACQUIRE);
+        if (state<0) return NULL;
+        if (!state) { usleep(100000); continue; }
         if (tick%20==0) community_discovery_poll();
 #endif
         if (tick % 10 == 0 && access("/tmp/lf.scan", F_OK) == 0) {
             rename("/tmp/lf.scan", "/tmp/lf.scan.req");
             mem_scan();
         }
-        FILE *mq = tick % 10 == 0 ? fopen("/tmp/lf.media", "r") : NULL;
+        FILE *mq = tick % 10 == 0 ? fopen("/tmp/lf.media", "re") : NULL;
         if (mq) { /* hex LocalMediaIDs (sdid | member << 8): ask EP147's media registry */
             unsigned id;
             while (fscanf(mq, "%x", &id) == 1) media_lookup(id);
             fclose(mq);
             unlink("/tmp/lf.media");
         }
-        FILE *dq = tick % 10 == 0 ? fopen("/tmp/lf.dump", "r") : NULL;
+        FILE *dq = tick % 10 == 0 ? fopen("/tmp/lf.dump", "re") : NULL;
         if (dq) { /* "<hex addr> <qwords>" per line: log memory (research) */
             unsigned long at;
             int cnt;
@@ -312,10 +337,11 @@ static void *injector(void *arg) {
  * Check packet signature as well as address: ordinary Internet traffic passes. */
 static int foreign_link_packet(const void *data,size_t size,const struct sockaddr *peer,socklen_t length) {
     const struct sockaddr_in *a=as_in(peer,length);
-    return getenv("LINKFAKE_LOCAL_ONLY") && a && size>=10 &&
+    return lf_runtime_ready() && getenv("LINKFAKE_LOCAL_ONLY") && a && size>=10 &&
            !memcmp(data,MAGIC,10) && (ntohl(a->sin_addr.s_addr)>>24)!=127;
 }
 ssize_t sendto(int fd, const void *buf, size_t n, int flags, const struct sockaddr *to, socklen_t tl) {
+    if (!lf_runtime_ready()) return real_sendto(fd,buf,n,flags,to,tl);
     const struct sockaddr_in *a = as_in(to, tl);
     if (a && n==54 && !memcmp(buf,MAGIC,10) && ((const uint8_t *)buf)[10]==6 && ntohs(a->sin_port)==50000) {
         uint32_t own;memcpy(&own,(const uint8_t *)buf+0x2c,4);
@@ -353,6 +379,8 @@ ssize_t sendto(int fd, const void *buf, size_t n, int flags, const struct sockad
             memcpy(tmpl, d, n);
             tmpl_len = n;
             pthread_mutex_unlock(&lock);
+            if (ntohs(a->sin_port)==50002 && !__atomic_exchange_n(&f->link_ready,1,__ATOMIC_RELEASE))
+                lf_log("hub member ready player %d",f->player);
         } else if (d[0x0a] == 0x05 && n >= 0x30 && ntohs(a->sin_port) == 50002) {
             struct fake *source=fake_by_source(f->player,d[n-1]);
             lf_log("media query player %d slot %d -> %s",f->player,d[n-1],source ? "answered" : "unconfigured");
@@ -378,6 +406,7 @@ static void fix_source(struct sockaddr *sa, socklen_t len) {
 
 ssize_t recvfrom(int fd, void *buf, size_t n, int flags, struct sockaddr *from, socklen_t *fl) {
     ssize_t r = real_recvfrom(fd, buf, n, flags, from, fl);
+    if (!lf_runtime_ready()) return r;
     if (r>0 && from && fl && foreign_link_packet(buf,(size_t)r,from,*fl)) {
         errno=EAGAIN; return -1;
     }
@@ -387,6 +416,7 @@ ssize_t recvfrom(int fd, void *buf, size_t n, int flags, struct sockaddr *from, 
 
 ssize_t recvmsg(int fd, struct msghdr *m, int flags) {
     ssize_t r = real_recvmsg(fd, m, flags);
+    if (!lf_runtime_ready()) return r;
     if (r>0 && m && m->msg_name) {
         unsigned char prefix[10]; size_t copied=0;
         for (size_t i=0;i<m->msg_iovlen && copied<sizeof prefix;i++) {
@@ -403,6 +433,7 @@ ssize_t recvmsg(int fd, struct msghdr *m, int flags) {
 }
 
 int connect(int fd, const struct sockaddr *to, socklen_t tl) {
+    if (!lf_runtime_ready()) return real_connect(fd,to,tl);
     if (fd >= 0 && fd < 4096) traced[fd] = 0; /* a reused fd number is a new connection */
     const struct sockaddr_in *a = as_in(to, tl);
     struct fake *f = a ? fake_by_ip(a->sin_addr) : NULL;
@@ -440,9 +471,17 @@ static void dump(const char *dir, int fd, const void *p, ssize_t n) {
     lf_log("tcp fd %d %s %zd: %s", fd, dir, n, hex);
 }
 
+#ifdef LF_EJECT_UI
+static void eject_input_read_note(int fd,const void *buffer,ssize_t returned);
+static void eject_input_closed(int fd);
+#endif
 ssize_t read(int fd, void *b, size_t n) {
     if (!real_read) real_read = dlsym(LF_NEXT, "read");
     ssize_t r = real_read(fd, b, n);
+    if (!lf_runtime_ready()) return r;
+#ifdef LF_EJECT_UI
+    eject_input_read_note(fd,b,r);
+#endif
     note_srv_read(fd, r, __builtin_return_address(0));
     if (fd >= 0 && fd < 4096 && traced[fd]) { fix_setup_reply(fd, b, r); dump("<", fd, b, r); }
     return r;
@@ -486,6 +525,7 @@ static void patch_slot(int fd, uint8_t *p, size_t n) {
 
 ssize_t write(int fd, const void *b, size_t n) {
     if (!real_write) real_write = dlsym(LF_NEXT, "write");
+    if (!lf_runtime_ready()) return real_write(fd,b,n);
     if (fd >= 0 && fd < 4096 && traced[fd]) {
         uint8_t tmp[4096];
         if (n <= sizeof tmp) { memcpy(tmp, b, n); patch_slot(fd, tmp, n); b = tmp; }
@@ -497,12 +537,14 @@ ssize_t write(int fd, const void *b, size_t n) {
 ssize_t recv(int fd, void *b, size_t n, int fl) {
     if (!real_recv) real_recv = dlsym(LF_NEXT, "recv");
     ssize_t r = real_recv(fd, b, n, fl);
+    if (!lf_runtime_ready()) return r;
     note_srv_read(fd, r, __builtin_return_address(0));
     if (fd >= 0 && fd < 4096 && traced[fd]) { fix_setup_reply(fd, b, r); dump("<", fd, b, r); }
     return r;
 }
 ssize_t send(int fd, const void *b, size_t n, int fl) {
     if (!real_send) real_send = dlsym(LF_NEXT, "send");
+    if (!lf_runtime_ready()) return real_send(fd,b,n,fl);
     if (fd >= 0 && fd < 4096 && traced[fd]) {
         uint8_t tmp[4096];
         if (n <= sizeof tmp) { memcpy(tmp, b, n); patch_slot(fd, tmp, n); b = tmp; }
@@ -549,7 +591,7 @@ static unsigned char srv_fd[4096];
 static void thread_name(char *b, size_t n) {
     char path[64];
     snprintf(path, sizeof path, "/proc/self/task/%ld/comm", (long)syscall(SYS_gettid));
-    FILE *f = fopen(path, "r");
+    FILE *f = fopen(path, "re");
     b[0] = 0;
     if (f) { if (fgets(b, n, f)) b[strcspn(b, "\n")] = 0; fclose(f); }
 }
@@ -603,6 +645,9 @@ static void note_srv_read(int fd, ssize_t r, void *lr) {
 }
 
 int close(int fd) {
+#ifdef LF_EJECT_UI
+    eject_input_closed(fd);
+#endif
     static int (*real_close)(int);
     if (!real_close) real_close = dlsym(LF_NEXT, "close");
     if (fd >= 0 && fd < 4096) srv_fd[fd] = 0;
@@ -612,6 +657,7 @@ int close(int fd) {
 
 /* FuseMountDaemon message: long mtype; 4 bytes; command text. */
 int msgsnd(int q, const void *msgp, size_t sz, int flg) {
+    if (!lf_runtime_ready()) return real_msgsnd(q,msgp,sz,flg);
     const char *cmd = (const char *)msgp + sizeof(long) + 4;
     const char *key = "/home/root/pdj/FuseFilsine ";
     if (sz > 4 + strlen(key) && !strncmp(cmd, key, strlen(key))) {
@@ -697,14 +743,14 @@ static uint64_t srv_seen[4]; /* library servers seen in onMediaMounted, for mem_
  * (empty file: the servers seen in onMediaMounted), plus the words around it */
 static void mem_scan(void) {
     uint64_t want[4] = { 0 };
-    FILE *w = fopen("/tmp/lf.scan.req", "r");
+    FILE *w = fopen("/tmp/lf.scan.req", "re");
     if (w) {
         for (int i = 0; i < 4 && fscanf(w, "%lx", (unsigned long *)&want[i]) == 1; i++) {}
         fclose(w);
         unlink("/tmp/lf.scan.req");
     }
     if (!want[0]) memcpy(want, srv_seen, sizeof want);
-    FILE *m = fopen("/proc/self/maps", "r");
+    FILE *m = fopen("/proc/self/maps", "re");
     if (!m) return;
     char line[512];
     int hits = 0;
@@ -799,6 +845,7 @@ static uint64_t h_warn(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t 
  * task[1] = owner, whose list at +0x2c0 holds the servers tried in turn (FUN_00e6b1c8). */
 static fn8 o_dispense;
 static uint64_t h_dispense(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e, uint64_t f, uint64_t g, uint64_t h) {
+    if (!lf_runtime_ready()) return o_dispense(a,b,c,d,e,f,g,h);
     const uint64_t *t = (const uint64_t *)a;
     if (getenv("LINKFAKE_HUBSRV")) hub_register(t[1]);
     static uint64_t seen[16];
@@ -821,6 +868,7 @@ static uint64_t h_dispense(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint6
 /* FUN_00e5e7d8(provider, LocalMediaID*): media registry lookup */
 static fn8 o_mlookup;
 static uint64_t h_mlookup(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e, uint64_t f, uint64_t g, uint64_t h) {
+    if (!lf_runtime_ready()) return o_mlookup(a,b,c,d,e,f,g,h);
     media_provider = a;
     uint64_t r = o_mlookup(a, b, c, d, e, f, g, h);
     if (r && getenv("LINKFAKE_HUBSRV")) {
@@ -961,7 +1009,7 @@ static int is_ep147(void) {
 
 static int linkfake_load_config(void) {
     const char *conf=getenv("LINKFAKE_CONF") ? getenv("LINKFAKE_CONF") : "/home/root/linkfake.conf";
-    FILE *c=fopen(conf,"r");
+    FILE *c=fopen(conf,"re");
     if (!c) { lf_log("no %s, inactive",conf); return 0; }
     int parsed=nfakes;
     int automatic=getenv("LINKFAKE_AUTODISCOVER")!=NULL;
@@ -979,13 +1027,20 @@ static int linkfake_load_config(void) {
         for (const unsigned char *ch=(const unsigned char *)f->dir;*ch;ch++)
             if (!isalnum(*ch) && !strchr("/._-",*ch)) valid=0;
         if (!valid) { lf_log("invalid source path"); continue; }
+#ifdef LF_SAFE_EJECT
+        if (safe_eject_blocked_path(f->dir)) continue;
+#endif
         snprintf(f->name,sizeof f->name,"%s",line+used);
         f->name[strcspn(f->name,"\r\n")]=0;
         if (automatic) {
             int known=0,reuse=-1;
             for (int i=0;i<parsed;i++) {
                 if (!strcmp(fakes[i].dir,f->dir)) known=1;
-                if (!fakes[i].present && !fakes[i].unmount_pending && reuse<0) reuse=i;
+                if (!fakes[i].present && !fakes[i].unmount_pending && reuse<0
+#ifdef LF_SAFE_EJECT
+                    && !fakes[i].eject_reserved
+#endif
+                ) reuse=i;
             }
             if (known) continue;
             if (reuse>=0) {
@@ -1057,9 +1112,13 @@ static void linkfake_init(void) {
     real_send = dlsym(LF_NEXT, "send");
     real_recv = dlsym(LF_NEXT, "recv");
     if (!is_ep147()) return; /* children (sh, FuseFilsine...) inherit LD_PRELOAD */
-    logf = fopen("/tmp/linkfake.log", "a");
+#ifndef LF_COMMUNITY
+    logf = fopen("/tmp/linkfake.log", "ae");
+#endif
     if (getenv("LINKFAKE_MODEL")) MODEL = getenv("LINKFAKE_MODEL");
+#ifndef LF_COMMUNITY
     if (getenv("LINKFAKE_PROBE")) probe_install();
+#endif
 #ifdef LF_COMMUNITY
     if (lf_hook_failures) return; /* Never publish sources/start injection with partial hooks. */
 #endif
@@ -1068,7 +1127,9 @@ static void linkfake_init(void) {
     if (lf_hook_failures) return;
 #endif
     if (nfakes || getenv("LINKFAKE_AUTODISCOVER")) {
+#ifndef LF_COMMUNITY
         pthread_t t;
-        pthread_create(&t, NULL, injector, NULL);
+        if (!pthread_create(&t, NULL, injector, NULL)) pthread_detach(t);
+#endif
     }
 }

@@ -1,0 +1,118 @@
+{
+  "date_utc": "2026-10-18T11:46:04.181850+00:00",
+  "environment": "Local snapshot QEMU only; no real AZ access",
+  "binary_sha256": "43d4e45ec3020f1e6430674514682f58c61f13c390fac26a2263469013f90fcc",
+  "completed_reconnect_eject_cycles": 12,
+  "samples": [
+    {
+      "VmSize": 14427004,
+      "VmRSS": 778760,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 0
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 779248,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 1
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 776804,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 2
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 776972,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 3
+    },
+    {
+      "VmSize": 14423004,
+      "VmRSS": 772968,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 4
+    },
+    {
+      "VmSize": 14423004,
+      "VmRSS": 772804,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 5
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 776964,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 59,
+      "cycle": 6
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 777104,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 7
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 777036,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 59,
+      "cycle": 8
+    },
+    {
+      "VmSize": 14423004,
+      "VmRSS": 773048,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 9
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 776924,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 10
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 777404,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 11
+    },
+    {
+      "VmSize": 14427004,
+      "VmRSS": 777368,
+      "VmData": 4337508,
+      "Threads": 279,
+      "fds": 58,
+      "cycle": 12
+    }
+  ],
+  "same_process": true,
+  "native_usb1_mount_preserved": true,
+  "whole_mod_leak_free_claim": false,
+  "limitation": "RSS observations cannot prove no leaks; native caches and allocator retention affect memory. Host sanitizer coverage is recorded separately.",
+  "fd_growth_after_warmup": 0,
+  "thread_growth_after_warmup": 0
+}
