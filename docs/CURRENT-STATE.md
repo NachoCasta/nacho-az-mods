@@ -1,5 +1,25 @@
 # Current state â€” 2026-10-18
 
+## Published release: USB Hub Support 0.2.0
+
+Release: https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.0
+Source/tag commit: `1c75601c527fbdd821b5872a334f345aecb60396`.
+Source CI: https://github.com/NachoCasta/nacho-az-mods/actions/runs/39158328964
+Both behavior-tests and sdk-build passed. All 38 accepted source blobs match the
+release commit. Package SHA256:
+`1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09`
+(350722 bytes); ELF SHA256:
+`09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b`.
+The published package is byte-identical to the locally accepted and hardware-tested
+candidate. Two-stick hardware observations are recorded below. Loaded-track
+source eject remains unsupported; its refusal-banner visibility issue is disclosed.
+The user explicitly chose publication of this progress and deferred loaded-track
+support. Earlier draft/no-publication statements below preserve historical state.
+
+Next development: research native cached playback and safe eject with loaded
+tracks locally first; real-AZ changes/tests still require action-specific approval.
+
+
 ## 0.2.0 publication decision
 
 The user explicitly requested committing and publishing the current progress after

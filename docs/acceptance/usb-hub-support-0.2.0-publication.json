@@ -1,0 +1,19 @@
+{
+  "release": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.0",
+  "source_commit": "1c75601c527fbdd821b5872a334f345aecb60396",
+  "source_ci": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39158328964",
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "accepted_source_blobs_match_commit": 38,
+  "package_sha256": "1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09",
+  "package_bytes": 350722,
+  "executable_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+  "accepted_package_unchanged": true,
+  "hardware_record": "usb-hub-support-0.2.0-az-stability-functional.json",
+  "limits": "Loaded-track eject unsupported, missing refusal banner disclosed; no eight-source or exhaustive hardware acceptance",
+  "authorization": "User explicitly requested publishing current progress and committing it",
+  "previous_release_assets_and_tags_untouched": true,
+  "anonymous_download_verification": "Pending catalog push"
+}
