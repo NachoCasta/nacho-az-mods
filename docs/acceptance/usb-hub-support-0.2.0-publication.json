@@ -15,5 +15,13 @@
   "limits": "Loaded-track eject unsupported, missing refusal banner disclosed; no eight-source or exhaustive hardware acceptance",
   "authorization": "User explicitly requested publishing current progress and committing it",
   "previous_release_assets_and_tags_untouched": true,
-  "anonymous_download_verification": "Pending catalog push"
+  "anonymous_download_verification": {
+    "result": "passed",
+    "command": "azmod-pack repo check NachoCasta/nacho-az-mods --download",
+    "catalog_version": "0.2.0",
+    "package_size_hash_and_contents_validated": true,
+    "known_optional_legacy_settings_read_warning_reviewed": true,
+    "pinned_public_source_manifest_http_status": 200,
+    "verified_at": "2026-10-18T19:23:02.751873+00:00"
+  }
 }

@@ -10,6 +10,8 @@ release commit. Package SHA256:
 `1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09`
 (350722 bytes); ELF SHA256:
 `09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b`.
+Anonymous catalog/package download, size/hash/content validation and pinned public
+source access passed. See [publication record](acceptance/usb-hub-support-0.2.0-publication.json).
 The published package is byte-identical to the locally accepted and hardware-tested
 candidate. Two-stick hardware observations are recorded below. Loaded-track
 source eject remains unsupported; its refusal-banner visibility issue is disclosed.
