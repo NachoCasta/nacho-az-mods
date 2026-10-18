@@ -11,8 +11,9 @@ byte-identical to the selected emulator/hardware candidate: SHA256
 `6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f`
 (355839 bytes); executable SHA256
 `9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b`.
-Release assets exist; the root catalog is being updated and anonymous download
-verification is pending. See [publication evidence](acceptance/usb-hub-support-0.2.1-publication.json).
+The root catalog now advertises 0.2.1. Anonymous catalog/package download,
+size/hash/content validation, all seven package members, the icon and pinned
+public source manifest passed. See [publication evidence](acceptance/usb-hub-support-0.2.1-publication.json).
 No rebuild or further hardware action occurred during publication. Previous
 release assets and tags are retained.
 

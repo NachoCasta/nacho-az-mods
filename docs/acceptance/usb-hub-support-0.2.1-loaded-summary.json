@@ -1,6 +1,6 @@
 {
   "recorded_at_utc": "2026-10-18T21:45:27.209778+00:00",
-  "status": "Published 0.2.1 accepted progress; anonymous catalog/package verification pending; expanded hardware and long-session acceptance remain open",
+  "status": "Published 0.2.1; source CI and anonymous catalog/package/source verification passed; expanded hardware and long-session acceptance remain open",
   "version": "0.2.1",
   "base_commit": "6482cc10f16ea20e0db05321ddc8d7888868718b",
   "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
@@ -66,7 +66,8 @@
     "authorization": "User explicitly requested publishing the currently accepted progress; no new AZ testing or source rebuild implied",
     "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.1",
     "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
-    "publication_record": "usb-hub-support-0.2.1-publication.json"
+    "publication_record": "usb-hub-support-0.2.1-publication.json",
+    "anonymous_verification": "passed; see usb-hub-support-0.2.1-publication.json"
   },
   "final_emulator_cleanup": {
     "environment": "Local QEMU only",
@@ -156,9 +157,14 @@
     "functional_result": "achieved",
     "remaining_release_validation": [
       "Expanded loaded-track hardware scenarios and cache-capacity/format coverage",
-      "Long-session native memory and hardware input timing",
-      "User publication decision, source commit and remote CI before any release"
+      "Long-session native memory and hardware input timing"
     ],
-    "publication_implied": false
+    "publication_implied": false,
+    "publication_gate_resolution": {
+      "decision": "authorized by user",
+      "source_commit": "0c21db0816a6f21bf6eff3aef9ace06b6d7055b7",
+      "source_ci": "both jobs passed",
+      "publication_and_public_download": "verified; no package bytes changed"
+    }
   }
 }

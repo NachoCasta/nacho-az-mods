@@ -1,6 +1,6 @@
 # Deferred real-AZ loaded-track trial
 
-Status: unpublished 0.2.1. The user authorized preflight, exact selected
+Status: published 0.2.1; the initial one-source trial is accepted. The user authorized preflight, exact selected
 installation/hash approval, application restart and a bounded one-hub-stick
 loaded-track eject trial. Activation and the initial loaded-source trial succeeded. The user reported
 full-track playback after individual NACHO PLUGS eject; SSH confirmed absent

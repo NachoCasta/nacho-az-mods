@@ -1,13 +1,15 @@
 # Safe-eject publication and stability audit
 
-Publication decision: the user explicitly requested publishing the accepted 0.2.1
-progress. Exact candidate bytes are retained. Native long-session memory/input
-behavior and expanded hardware cases remain follow-up work, disclosed in the
-[release notes](releases/usb-hub-support-0.2.1.md). Earlier deferred/unauthorized
-statements below preserve the research and acceptance chronology.
+Publication: [USB Hub Support 0.2.1](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.1)
+is published with the exact accepted package. Source CI and anonymous catalog,
+package, icon and pinned-source checks passed. The user explicitly authorized
+publishing the accepted functional progress with native long-session memory/input
+and expanded hardware limits disclosed in the [release notes](releases/usb-hub-support-0.2.1.md).
+See [publication evidence](acceptance/usb-hub-support-0.2.1-publication.json).
+Earlier deferred/unauthorized statements below preserve the research chronology.
 
 
-## Unpublished 0.2.1 loaded-track candidate
+## Historical 0.2.1 candidate preparation
 
 Public release is 0.2.0. Current loaded-track source, exact candidate hashes and
 local acceptance are in [the active research/evidence ledger](LOADED-TRACK-EJECT.md).

@@ -17,6 +17,26 @@
   "authorization": "User explicitly requested publishing the currently accepted progress",
   "previous_release_assets_and_tags_untouched": true,
   "anonymous_download_verification": {
-    "result": "pending catalog push and public end-to-end check"
+    "result": "passed",
+    "command": "azmod-pack repo check NachoCasta/nacho-az-mods --download",
+    "catalog_version": "0.2.1",
+    "package_size_hash_and_contents_validated": true,
+    "all_seven_downloaded_members_match_selected_package": true,
+    "icon_sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+    "known_optional_legacy_settings_read_warning_reviewed": true,
+    "pinned_public_source_manifest_http_status": 200,
+    "pinned_source_manifest_matches_package": true,
+    "verified_at_utc": "2026-10-18T23:21:20.032559+00:00",
+    "authentication": "Anonymous urllib requests and official SDK repo check; no authorization headers"
+  },
+  "catalog_commit": "f12847f",
+  "previous_release_verification": {
+    "version": "0.2.0",
+    "release_id": 416650297,
+    "package_asset_id": 654277622,
+    "icon_asset_id": 654277625,
+    "package_sha256": "1c24d4ea3e73dbfc7650e4ac9c47ee310a10ee883c1efbea41455458e6f41f09",
+    "source_tag_commit": "1c75601c527fbdd821b5872a334f345aecb60396",
+    "unchanged": true
   }
 }
