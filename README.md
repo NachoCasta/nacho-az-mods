@@ -49,14 +49,22 @@ Mod source: [src/azhub/linkfake](src/azhub/linkfake).
 Kernel compatibility module: [src/azhub/azhub.c](src/azhub/azhub.c).
 SDK header: [pinned v1.2.3 header](https://github.com/Kyle-Hosman/az-mods-sdk/blob/62a156abf3a4789e9e3cdd610fe106227a3a8967/include/azmod-mod.h).
 
-**0.2.0** adds short-press USB STOP selection and background safe ejection.
-Hold USB STOP to eject the whole hub. Unload tracks from the selected sticks
-first and wait for the final safe-to-remove confirmation before unplugging.
-The exact executable passed user-operated hardware tests with two hub sticks
-plus native USB1, including independent eject and whole-hub hold, with SSH mount
-verification. Loaded-track ejection is not supported; its refusal message was
-not visible in the hardware trial. A preparation banner alone never means safe
-to unplug. See [release notes](docs/releases/usb-hub-support-0.2.0.md).
+**0.2.1** allows safe eject with tracks loaded. Short-press USB STOP to select a
+stick, or hold it to eject the whole hub. Wait for the final safe-to-remove
+confirmation before unplugging. Loaded tracks use the firmware's native playback
+cache, whose capacity and available playback functions can vary.
+
+The user confirmed individual loaded-track eject and complete playback of one
+track from NACHO PLUGS on the real AZ. SSH confirmed the filesystem and library
+alias were unmounted while the device remained connected; CAMI and native USB1
+stayed mounted. Whole-hub eject with two playing decks passed in the emulator.
+Long-session native memory behavior and QEMU input-filter timing failures remain
+under investigation; broader hardware/cache-capacity coverage is pending.
+See [0.2.1 release notes](docs/releases/usb-hub-support-0.2.1.md).
+
+**0.2.0** introduced the short/long USB STOP safe-eject controls and passed
+user-operated two-stick hardware trials after unloading tracks. Loaded-track
+eject is introduced in 0.2.1.
 
 The imported layout preserves references from the original research. Future mods can use
 `mods/<id>/`, each with its own manifest, build, license, and independent version history.

@@ -1,0 +1,780 @@
+{
+  "timestamp_utc": "2026-10-18T21:01:40.067717+00:00",
+  "environment": "Local QEMU only; explicit protected COW backings",
+  "binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "pid": 103475,
+  "old_media": "0x30200000202",
+  "replacement_media": "0x40200000202",
+  "checks": [
+    "Playing A ejects and cached seek works with all hub filesystems absent",
+    "Different image on same hub port remains distinct from the old cached track",
+    "Duplicate volume labels select by disk identity rather than name",
+    "Replacement eject preserves old and new cached decks",
+    "Normal unload and original fixture restoration succeed"
+  ],
+  "audio": {
+    "seconds": 6.17795918367347,
+    "format": "8-channel PCM32 at 44100 Hz; pre-mixer",
+    "dropped_blocks": 0,
+    "statistics": [
+      {
+        "channel": 0,
+        "rms_full_scale": 0.16462795375515193,
+        "peak_full_scale": 0.9999999995343387
+      },
+      {
+        "channel": 1,
+        "rms_full_scale": 0.17628637538353398,
+        "peak_full_scale": 0.9999999995343387
+      },
+      {
+        "channel": 2,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      },
+      {
+        "channel": 3,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      },
+      {
+        "channel": 4,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      },
+      {
+        "channel": 5,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      },
+      {
+        "channel": 6,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      },
+      {
+        "channel": 7,
+        "rms_full_scale": 0.0,
+        "peak_full_scale": 0.0
+      }
+    ],
+    "raw_music_deleted": true
+  },
+  "observations": [
+    {
+      "case": "all hub backings absent before cached seek and audio",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5582200,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 2,
+            "generation": 25689,
+            "devnum": 13
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 9.414,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": 21.127,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    },
+    {
+      "case": "cached audio start",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5586408,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 2,
+            "generation": 25689,
+            "devnum": 13
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 78.0,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": 21.127,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    },
+    {
+      "case": "cached audio end",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5595080,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 2,
+            "generation": 25689,
+            "devnum": 13
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 85.658,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": 21.127,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    },
+    {
+      "case": "different physical image connected while old cached track plays",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5599807,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdb",
+            "port": 2,
+            "state": 0,
+            "generation": 26113,
+            "devnum": 14
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 89.807,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": 21.127,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+        "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    },
+    {
+      "case": "old and replacement media loaded on different decks",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5661809,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdb",
+            "port": 2,
+            "state": 0,
+            "generation": 26113,
+            "devnum": 14
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 143.292,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 2.374,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+        "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+        "/dev/sdb1 /media/player03/usb vfat ro,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    },
+    {
+      "case": "replacement unmounted with both cached contexts retained",
+      "status": {
+        "pid": 103475,
+        "clock_ms": 5670058,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdb",
+            "port": 2,
+            "state": 2,
+            "generation": 26113,
+            "devnum": 14
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 2,
+            "generation": 25265,
+            "devnum": 12
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 150.568,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 9.714,
+            "content_id": 495,
+            "title": "Algo m\u00e1s"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      "mounts": [
+        "rootfs / rootfs rw 0 0",
+        "devtmpfs /dev devtmpfs rw,relatime,size=1807904k,nr_inodes=451976,mode=755 0 0",
+        "sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "proc /proc proc rw,relatime 0 0",
+        "securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0",
+        "devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0",
+        "tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0",
+        "tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0",
+        "cgroup2 /sys/fs/cgroup/unified cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0",
+        "cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,name=systemd 0 0",
+        "pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0",
+        "bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0",
+        "cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0",
+        "cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0",
+        "cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0",
+        "cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0",
+        "cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0",
+        "cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0",
+        "cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0",
+        "cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0",
+        "cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0",
+        "hugetlbfs /dev/hugepages hugetlbfs rw,relatime,pagesize=2M 0 0",
+        "mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0",
+        "debugfs /sys/kernel/debug debugfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0",
+        "fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0",
+        "configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0",
+        "tmpfs /var/log tmpfs rw,relatime 0 0",
+        "tmpfs /var/volatile tmpfs rw,relatime 0 0",
+        "/dev/mmcblk1p7 /home/root/settings ext4 rw,relatime 0 0",
+        "/dev/mmcblk1p8 /mnt ext4 rw,relatime 0 0",
+        "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+      ]
+    }
+  ],
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "hub source returned player 3 slot 3 path=/media/usb/sdb1",
+    "hub announce player 3 slot 3 path=/media/player03/usb",
+    "media query player 3 slot 3 -> answered",
+    "hub mount queued player 3 slot 3 id=0x102 path=/media/usb/sdb1",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=4",
+    "hub announcement acknowledged player 3 slot 3",
+    "eject-ui input-path turns=26 encoder-calls=78 view=4",
+    "eject-ui input-path turns=51 encoder-calls=153 view=4",
+    "eject-ui input-path turns=76 encoder-calls=225 view=4",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=1 location=0x1030200000202:0x1ef time=5567971",
+    "safe-eject unload-completed controller=0xfffedbe2e000",
+    "safe-eject load-admitted source=0 controller=0xfffedbe2e000 deck=1",
+    "safe-eject load-completed controller=0xfffedbe2e000 result=0",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=1 media=0x30200000202 kind=1",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5576235",
+    "safe-eject native-detach ticket=0 media=0x30200000202",
+    "safe-eject unload-completed controller=0xfffedbe2e000",
+    "safe-eject native-complete ticket=0 media=0x30200000202 serial=149",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject unload-completed controller=0xfffedbe2e000",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=1 media=0x30200000202 kind=1",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB (hub port 1) is safe to remove.",
+    "hub source returned player 3 slot 3 path=/media/usb/sdb1",
+    "hub announce player 3 slot 3 path=/media/player03/usb",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "media query player 3 slot 3 -> answered",
+    "hub mount queued player 3 slot 3 id=0x102 path=/media/usb/sdb1",
+    "hub announcement acknowledged player 3 slot 3",
+    "eject-ui input-path turns=1 encoder-calls=3 view=4",
+    "eject-ui input-path turns=26 encoder-calls=78 view=4",
+    "eject-ui input-path turns=51 encoder-calls=153 view=4",
+    "eject-ui input-path turns=76 encoder-calls=228 view=4",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=2 location=0x1040200000202:0x1ef time=5655610",
+    "safe-eject unload-completed controller=0xfffedbe2ee00",
+    "safe-eject load-admitted source=0 controller=0xfffedbe2ee00 deck=2",
+    "safe-eject load-completed controller=0xfffedbe2ee00 result=0",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=1 media=0x30200000202 kind=1",
+    "safe-eject deck=2 loaded=1 media=0x40200000202 kind=1",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5664210",
+    "safe-eject native-detach ticket=1 media=0x40200000202",
+    "safe-eject unload-completed controller=0xfffedbe2ee00",
+    "safe-eject native-complete ticket=1 media=0x40200000202 serial=188",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject unload-completed controller=0xfffedbe2ee00",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=1 media=0x30200000202 kind=1",
+    "safe-eject deck=2 loaded=1 media=0x40200000202 kind=1",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB2 (hub port 1) is safe to remove.",
+    "safe-eject unload-completed controller=0xfffedbe2e000",
+    "safe-eject unload-completed controller=0xfffedbe2ee00",
+    "hub source returned player 3 slot 3 path=/media/usb/sdb1",
+    "hub announce player 3 slot 3 path=/media/player03/usb",
+    "media query player 3 slot 3 -> answered",
+    "hub mount queued player 3 slot 3 id=0x102 path=/media/usb/sdb1",
+    "hub announcement acknowledged player 3 slot 3",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5690729",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB (hub port 1) is safe to remove."
+  ],
+  "final_status": {
+    "pid": 103475,
+    "clock_ms": 5695899,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 26537,
+        "devnum": 15
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 25265,
+        "devnum": 12
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": 151.384,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": 16.185,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  }
+}

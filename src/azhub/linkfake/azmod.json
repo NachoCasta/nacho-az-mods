@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -12,7 +12,7 @@
   "hooks": true,
   "min_core": "1.2.3",
   "summary": "Connect multiple USB sticks to your XDJ-AZ through a USB hub.",
-  "description": "PRO DJ LINK: External-player communication is blocked while this mod is enabled. Disable the mod and restart the AZ before using external PRO DJ LINK. Switching Link on does not disable it.\n\nBrowse playlists and load music from USB sticks connected through a hub. Short-press USB STOP to select one stick; hold it to eject the whole hub. Unload its tracks first and wait for 'safe to remove' before unplugging. Supports up to eight hub sources. Requires XDJ-AZ firmware 2.00. Uses loopback servers/caches, changes USB STOP, writes temporary state, and loads a checked GPL kernel module.",
+  "description": "PRO DJ LINK: Disable this mod and restart the AZ before using external players. Their communication is blocked while enabled; switching Link on does not disable it.\n\nBrowse and load music from USB sticks through a hub. Short-press USB STOP to select one stick; hold to eject the hub. Loaded tracks use native cached playback, which can limit player functions. Wait for 'safe to remove' before unplugging. Supports eight hub sources; firmware 2.00 only. Uses independent loopback servers/caches, changes USB STOP, writes temporary state, and loads a checked GPL kernel module.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }

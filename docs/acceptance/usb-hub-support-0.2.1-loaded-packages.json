@@ -1,0 +1,87 @@
+{
+  "scope": "Offline package/source/ELF checks; no physical AZ access",
+  "packages": [
+    {
+      "variant": "usb-hub-support-0.2.1-loaded-tracks",
+      "package_sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
+      "package_bytes": 355839,
+      "binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+      "members": {
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+        "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+        "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+        "azmod.json": "c775ad9dcf6efa4ac2ac0585428f744bd72a4233bda37d96d411427364efcf01",
+        "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+        "usb-hub-support.so": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b"
+      },
+      "init_array": [
+        "frame_dummy"
+      ],
+      "dynamic_defined_exports": [
+        "__bss_end__",
+        "__bss_start",
+        "__bss_start__",
+        "__end__",
+        "_bss_end__",
+        "_edata",
+        "_end",
+        "_fini",
+        "_init",
+        "az_mod_v1_entry"
+      ],
+      "forbidden_execution_imports_absent": [
+        "clone",
+        "fork",
+        "popen",
+        "posix_spawn",
+        "pthread_create",
+        "system",
+        "vfork"
+      ],
+      "runtime_acceptance": "Matching tests recorded separately; SDK variant has no runtime acceptance"
+    },
+    {
+      "variant": "usb-hub-support-0.2.1-loaded-sdk",
+      "package_sha256": "24ca5e53d463f7f7e7c2a21aaa015bc1d31fb1b194ff5a5e67db02f1bb57d509",
+      "package_bytes": 360847,
+      "binary_sha256": "369e8886eed1660773f0aedc70796819af7df67c7fde651634a230bd716ac5f1",
+      "members": {
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+        "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+        "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+        "azmod.json": "c775ad9dcf6efa4ac2ac0585428f744bd72a4233bda37d96d411427364efcf01",
+        "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+        "usb-hub-support.so": "369e8886eed1660773f0aedc70796819af7df67c7fde651634a230bd716ac5f1"
+      },
+      "init_array": [
+        "frame_dummy"
+      ],
+      "dynamic_defined_exports": [
+        "__bss_end__",
+        "__bss_start",
+        "__bss_start__",
+        "__end__",
+        "_bss_end__",
+        "_edata",
+        "_end",
+        "_fini",
+        "_init",
+        "az_mod_v1_entry"
+      ],
+      "forbidden_execution_imports_absent": [
+        "clone",
+        "fork",
+        "popen",
+        "posix_spawn",
+        "pthread_create",
+        "system",
+        "vfork"
+      ],
+      "runtime_acceptance": "Matching tests recorded separately; SDK variant has no runtime acceptance"
+    }
+  ],
+  "validator": "Both passed pinned SDK validator; known optional legacy settings-read warning reviewed",
+  "public_catalog_unchanged_version": "0.2.0"
+}

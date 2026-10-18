@@ -1,0 +1,242 @@
+{
+  "scope": "Deliberate emulator-only delayed delivery overlay, not normal binary acceptance",
+  "base_binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "fault_binary_sha256": "cece3d6a40ed34ef46d9e19ccf56f7910bae7129f6e5ece6dba3220f912dd66a",
+  "fault": "Forward actual native completion; hold its receipt outside pool; 1.5 second test timeout",
+  "pid": 137421,
+  "source_disk": "sdb",
+  "first_timeout": {
+    "status": {
+      "pid": 137421,
+      "clock_ms": 5958936,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 3,
+          "generation": 26961,
+          "devnum": 16
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 27385,
+          "devnum": 17
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo m\u00e1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "events": "eject-ui captured port=2 down=1 action=0\neject-ui captured port=2 down=0 action=2\neject-ui selector port=2 count=2\nsafe-eject deck=1 loaded=1 media=0x10200000202 kind=0\nsafe-eject deck=2 loaded=0 media=0 kind=0\nsafe-eject deck=3 loaded=0 media=0 kind=0\nsafe-eject deck=4 loaded=0 media=0 kind=0\nsafe-eject reserved targets=1 sources=0x1 time=5956622\nsafe-eject native-detach ticket=0 media=0x10200000202\nsafe-eject unload-completed controller=0xfffed522f000\nsafe-eject result: USB tracks are still closing. Leave it connected and retry.\n"
+  },
+  "second_timeout": {
+    "status": {
+      "pid": 137421,
+      "clock_ms": 5965436,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 3,
+          "generation": 26961,
+          "devnum": 16
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 27385,
+          "devnum": 17
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo m\u00e1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "events": "eject-ui captured port=2 down=1 action=0\neject-ui captured port=2 down=0 action=2\neject-ui selector port=2 count=2\nsafe-eject deck=1 loaded=1 media=0x10200000202 kind=0\nsafe-eject deck=2 loaded=0 media=0 kind=0\nsafe-eject deck=3 loaded=0 media=0 kind=0\nsafe-eject deck=4 loaded=0 media=0 kind=0\nsafe-eject reserved targets=1 sources=0x1 time=5963121\nsafe-eject result: USB tracks are still closing. Leave it connected and retry.\n"
+  },
+  "released_retry_status": {
+    "pid": 137421,
+    "clock_ms": 5973392,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 26961,
+        "devnum": 16
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 27385,
+        "devnum": 17
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.047,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "eject-ui input-path turns=26 encoder-calls=78 view=1",
+    "eject-ui input-path turns=51 encoder-calls=153 view=1",
+    "eject-ui input-path turns=76 encoder-calls=228 view=1",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=1 location=0x1010200000202:0x1ef time=5953036",
+    "safe-eject unload-completed controller=0xfffed522f000",
+    "safe-eject load-admitted source=0 controller=0xfffed522f000 deck=1",
+    "safe-eject load-completed controller=0xfffed522f000 result=0",
+    "deck -> player 3 :50001 type 0xb len 60 (first)",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=1 media=0x10200000202 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5956622",
+    "safe-eject native-detach ticket=0 media=0x10200000202",
+    "safe-eject unload-completed controller=0xfffed522f000",
+    "safe-eject result: USB tracks are still closing. Leave it connected and retry.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=1 media=0x10200000202 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5963121",
+    "safe-eject result: USB tracks are still closing. Leave it connected and retry.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=1 media=0x10200000202 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=5967808",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject unload-completed controller=0xfffed522f000",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=1 media=0x10200000202 kind=0",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB (hub port 1) is safe to remove."
+  ],
+  "checks": [
+    "Native callback timeout never reports safe or starts server withdrawal",
+    "Backing remains mounted; other source and native USB1 remain available",
+    "Repeated pending retry does not enqueue native disconnect twice",
+    "Releasing the recorded actual receipt lets retry complete ordinary eject with track retained"
+  ],
+  "real_az_access": false,
+  "reproduction": {
+    "overlay_generator": "src/azhub/research/scripts/prepare-loaded-detach-fault.py",
+    "test": "src/azhub/research/scripts/test-loaded-detach-fault.py",
+    "stage": "Explicit localhost-only installation required; never install this fault overlay on physical hardware"
+  }
+}

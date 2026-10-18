@@ -18,11 +18,14 @@ review the guide and validate the resulting binary again.
 ## 1. Establish the release target
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.
-USB Hub Support currently lives in `src/azhub/linkfake/`. Its stable user-confirmed hardware
-release is 0.1.7, with user-reported browsing, loading and playback using two hub
-sticks alongside native USB1. This is manual acceptance, not an instrumented run.
-Version 0.1.8 is a metadata-only warning update with all non-manifest package members
-byte-identical to 0.1.7; 0.1.6 introduced the explicitly authorized name/ID migration.
+USB Hub Support lives in `src/azhub/linkfake/`. The selected 0.2.1 executable
+passed individual loaded-source eject on the real AZ: the user reported complete
+playback of one track after eject, while SSH confirmed retained exact-media cache
+proof and absent backing/alias mounts. Earlier 0.2.0 hardware trials covered two
+hub sticks plus native USB1 after unloading. Audio is user-reported, not captured
+by the agent. Long-session memory/input timing and broader hardware acceptance
+remain open. Preserve the stable ID introduced in 0.1.6; do not extrapolate to
+eight-source hardware acceptance or broader firmware compatibility.
 
 This repository and its distribution catalog are public, authorized by the user after review.
 The app/deck fetches the root `azmods-repo.json` and package URLs without GitHub authentication.

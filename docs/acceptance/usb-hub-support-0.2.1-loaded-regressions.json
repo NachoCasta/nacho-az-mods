@@ -1,0 +1,137 @@
+{
+  "timestamp_utc": "2026-10-18T21:36:08.244904+00:00",
+  "environment": "Local QEMU emulator only; no physical AZ access",
+  "experimental_binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "checks": [
+    "Repeated knob-selected requests from SOURCE preserve SOURCE and permit reopening",
+    "Native completed load failure with stale SDK metadata permits actual safe eject"
+  ],
+  "failed_load_sdk_snapshot": {
+    "loaded": 1,
+    "playing": 0,
+    "pos_s": 0.0,
+    "content_id": 1345,
+    "title": "Abc's (feat. AntsLive)"
+  },
+  "events": [
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=2 view=1",
+    "safe-eject result: Another process is using the USB device. Leave it connected.",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=1",
+    "eject-ui input-path turns=26 encoder-calls=78 view=1",
+    "eject-ui input-path turns=51 encoder-calls=153 view=1",
+    "eject-ui input-path turns=76 encoder-calls=228 view=1",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=1 location=0x1010200000202:0x1ef time=7685982",
+    "safe-eject unload-completed controller=0xfffee222f000",
+    "safe-eject load-admitted source=0 controller=0xfffee222f000 deck=1",
+    "safe-eject load-completed controller=0xfffee222f000 result=0",
+    "deck -> player 3 :50001 type 0xb len 60 (first)",
+    "safe-eject unload-completed controller=0xfffee222f000",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "eject-ui input-path turns=1 encoder-calls=3 view=4",
+    "eject-ui input-path turns=26 encoder-calls=78 view=4",
+    "eject-ui input-path turns=51 encoder-calls=153 view=4",
+    "eject-ui input-path turns=76 encoder-calls=228 view=4",
+    "eject-ui cancel",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject load-request deck=1 location=0x1010200000202:0x541 time=7754665",
+    "safe-eject unload-completed controller=0xfffee222f000",
+    "safe-eject load-admitted source=0 controller=0xfffee222f000 deck=1",
+    "safe-eject load-completed controller=0xfffee222f000 result=1",
+    "eject-ui captured port=2 down=1 action=0",
+    "eject-ui captured port=2 down=0 action=2",
+    "eject-ui selector port=2 count=2",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject stale-failed-metadata deck=1 content=1345",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject reserved targets=1 sources=0x1 time=7759242",
+    "safe-eject withdrawal source=0",
+    "safe-eject server-complete source=0 kind=1",
+    "safe-eject server-complete source=0 kind=0",
+    "eject-ui SOURCE focus pin suppressed",
+    "safe-eject unload-completed controller=0xfffee222f000",
+    "safe-eject source-closed source=0",
+    "safe-eject deck=1 loaded=0 media=0 kind=0",
+    "safe-eject stale-failed-metadata deck=1 content=1345",
+    "safe-eject deck=2 loaded=0 media=0 kind=0",
+    "safe-eject deck=3 loaded=0 media=0 kind=0",
+    "safe-eject deck=4 loaded=0 media=0 kind=0",
+    "safe-eject unmounted path=/media/usb/sdb1",
+    "safe-eject success targets=1 sources=0x1",
+    "safe-eject result: HUB_LIB (hub port 1) is safe to remove."
+  ],
+  "final_status": {
+    "pid": 189677,
+    "clock_ms": 7764498,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 35442,
+        "devnum": 36
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 35866,
+        "devnum": 37
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.0,
+        "content_id": 1345,
+        "title": "Abc's (feat. AntsLive)"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "earlier_attempt": {
+    "accepted": false,
+    "reason": "After the separate twelve-cycle test, the core disabled the input filter after eight >200 us observations. First busy refusal succeeded; second selector request timed out. A fresh process repeat produced this acceptance record.",
+    "physical_az_access": false
+  }
+}

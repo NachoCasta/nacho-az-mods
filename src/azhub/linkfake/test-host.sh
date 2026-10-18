@@ -16,7 +16,7 @@ for pass in $passes; do
         tsan) flags='-g -O1 -fsanitize=thread'; symbol='__tsan_init' ;;
         *) echo "Unknown sanitizer pass: $pass" >&2; exit 2 ;;
     esac
-    for name in source-name browser-guard network-identity eject-gesture eject-source eject-input-health eject-listener alias-mount discovery kernel-asset mount-worker source-settings; do
+    for name in source-name browser-guard network-identity eject-gesture eject-source eject-input-health eject-listener eject-detach alias-mount discovery kernel-asset mount-worker source-settings; do
         echo "TEST $pass $name"
         # flags is an intentional list of compiler options, not shell code.
         # shellcheck disable=SC2086

@@ -4,10 +4,11 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
-| SAFE-EJECT-AZ-TRIAL.md | Deferred action-specific hardware trial plan; no current authorization |
+| LOADED-TRACK-EJECT.md | 0.2.1 native cache detach, exact-candidate QEMU evidence, fault receipts and remaining hardware/memory gates |
+| SAFE-EJECT-AZ-TRIAL.md | Initial one-source trial accepted; expanded hardware trials need separate authorization |
 | SAFE-EJECT-PUBLICATION-AUDIT.md | Active guideline checklist, sanitizer scope and remaining stability gates |
 | SAFE-EJECT-LIFETIMES.md | Exact-firmware one-shot completion contract and bounded adapter ownership |
-| SAFE-EJECT-RELEASE-CANDIDATE.md | Active publication/AZ-trial preparation, corrected regressions, candidate build and remaining gates |
+| SAFE-EJECT-RELEASE-CANDIDATE.md | 0.2.0 publication chronology; links to current 0.2.1 release evidence and gates |
 | SAFE-EJECT-EMULATOR.md | Actual emulator-only safe-eject coordinator, reproduction, acceptance and production limits |
 | PRO-DJ-LINK.md | Current external Link warning, automatic-handling research gates and latest index PR inspection |
 | DEVELOPMENT-OPTIONS.md | Rear USB-C feasibility, safe-ejection design and separate Link research goals |
@@ -27,6 +28,9 @@ Read CURRENT-STATE.md first. Then:
 | ../src/azhub/research/scripts/stress-status-template.c | MUTATING emulator-only transport stress helper |
 | ../src/azhub/research/scripts/test-source-reuse.sh | MUTATING lifecycle fixture; read before execution |
 | ../src/azhub/research/scripts/build-emulator-xhci.py | Emulator-only controller-module rebuild |
+| ../src/azhub/research/scripts/test-loaded-eject-*.py | Localhost loaded-track eject, replacement, repeated-cycle, load-race and failed-load regressions; read fixture prerequisites first |
+| ../src/azhub/research/scripts/prepare-loaded-detach-fault.py | Generates guarded emulator-only delayed-native-receipt source overlay; does not compile or install |
+| ../src/azhub/research/scripts/test-loaded-detach-fault.py | Requires that fault overlay explicitly staged in localhost QEMU; tests timeout/retry without duplicate native enqueue |
 | ../src/azhub/linkfake/test-*.c | Focused behavior/lifecycle tests |
 
 All scripts are preserved as research; several early shell scripts reference expired temp

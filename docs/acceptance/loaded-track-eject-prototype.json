@@ -1,0 +1,137 @@
+{
+  "scope": "Local emulator-only research prototype; NOT release or production acceptance",
+  "binary_sha256": "4e59b2050dbf540d61ff7dd99a1b64947fb20b87da90bfe822a96dfe703b9d69",
+  "base_production_binary_sha256": "09b8ffa89b73ff9c5c402d81955bd6c567c2b520edb5c3f38fd00adcf865bd5b",
+  "physical_AZ_access": false,
+  "production_source_changed": false,
+  "individual": {
+    "source": "A / physical sdb1",
+    "loaded_content_id": 495,
+    "paused_loaded_before_eject": true,
+    "backing_and_alias_unmounted": true,
+    "other_hub_and_native_usb_remain_mounted": true,
+    "deck_retained_loaded_track": true,
+    "post_eject_playback_position_observed": 19.299,
+    "post_eject_search_forward_position": 160.285,
+    "loop4_positions": [
+      164.9,
+      163.589,
+      164.292,
+      164.997,
+      163.924,
+      164.615,
+      163.301,
+      163.998
+    ]
+  },
+  "reinsert": "A reinserted while cached A deck continued its loop; same image/port only",
+  "whole_hub": {
+    "before_decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 164.587,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 2.509,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ],
+    "after_decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 164.26,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 12.25,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ],
+    "later_decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 164.933,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 121.697,
+        "content_id": 495,
+        "title": "Algo m\u00e1s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ],
+    "two_backings_and_aliases_unmounted": true,
+    "native_usb1_mounted": true,
+    "same_process": 25035
+  },
+  "measurement_limits": [
+    "Visual normal waveform and SDK position, not captured audio proof",
+    "One known short AAC file from two fixture libraries; not every format/long-file cache limit",
+    "Completion/retry/generation policy intentionally incomplete in prototype",
+    "First native file baseline overlapped load and subsequently entered emergency loop; not counted as full-song cache success"
+  ],
+  "remaining": [
+    "Integrate a bounded native detach coordinator with correct ownership and completion correlation",
+    "Resolve reservation/discovery publication window before relaxing production guards",
+    "Preserve in-flight/unknown-media refusal and safely handle failures/timeouts/retry",
+    "Different-stick replacement while cached decks remain loaded",
+    "Host sanitizers and matching exact-binary integration",
+    "Fresh action-specific authorization for any real AZ trial"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "scope": "Sample-exact pre-mixer capture after A unmount, intermediate c21d8833 only",
+  "seconds": 84.8732879818594,
+  "sample_rate": 44100,
+  "channels": 8,
+  "stats": [
+    {
+      "channel": 0,
+      "rms": 397917219.5546904,
+      "peak": 2147483647
+    },
+    {
+      "channel": 1,
+      "rms": 435755826.77247435,
+      "peak": 2147483647
+    },
+    {
+      "channel": 2,
+      "rms": 0.0,
+      "peak": 0
+    },
+    {
+      "channel": 3,
+      "rms": 0.0,
+      "peak": 0
+    },
+    {
+      "channel": 4,
+      "rms": 0.0,
+      "peak": 0
+    },
+    {
+      "channel": 5,
+      "rms": 0.0,
+      "peak": 0
+    },
+    {
+      "channel": 6,
+      "rms": 0.0,
+      "peak": 0
+    },
+    {
+      "channel": 7,
+      "rms": 0.0,
+      "peak": 0
+    }
+  ],
+  "binary_sha256": "c21d88337b217d3416edc61b11e8f3767b888a96d4010bce70ca078bfc0daf0c",
+  "source_backing_and_alias_unmounted": true,
+  "capture_dropped_blocks": 0,
+  "track_later_reached_end_seconds": 202.693,
+  "host_mixed_capture": "Initial HMP mixed recording contained only zeros; not used as audio success evidence. Sample-exact pre-mixer capture used instead.",
+  "raw_audio_policy": "Only local ignored capture; never committed or uploaded."
+}

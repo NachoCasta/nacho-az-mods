@@ -1,0 +1,47 @@
+{
+  "recorded_at_utc": "2026-10-18T23:05:40.088742+00:00",
+  "pid": 1876957,
+  "binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "scope": "One individual loaded-source hardware eject; user-observed full-track audio plus read-only SSH mount/journal and own-mod proof observations",
+  "before_record": "usb-hub-support-0.2.1-az-before-loaded-eject.json",
+  "target": {
+    "label": "NACHO PLUGS",
+    "disk": "sdc",
+    "opaque_media_id": "0x12200000202",
+    "physical_device_still_present": true,
+    "backing_and_all_alias_mounts_absent": true,
+    "journal_state": 2
+  },
+  "cached_deck": {
+    "deck": 1,
+    "proof_valid": true,
+    "load_epoch": 1,
+    "ticket": 0,
+    "phase": "DONE",
+    "submitted": true,
+    "references": 1,
+    "physical_connection_token": 1,
+    "sdk_snapshot_after_eject": "LEEE"
+  },
+  "other_sources": {
+    "native_usb1_backing_mounted": true,
+    "cami_backing_and_alias_mounted": true
+  },
+  "process_restarted_during_eject": false,
+  "user_report": {
+    "eject_succeeded": true,
+    "track_remained_playable": true,
+    "full_track_playback": true,
+    "provenance": "Manual user report; no agent audio capture or full-duration audio measurement on hardware",
+    "statement_english": "It unmounted successfully. I also tested that the track keeps playing and I can play it in full, so it appears to be cached correctly."
+  },
+  "acceptance": {
+    "one_loaded_source_eject": true,
+    "full_track_audio": "User reported for this one track only",
+    "whole_hub_loaded_hardware": false,
+    "all_formats_or_durations": false,
+    "eight_source_hardware": false,
+    "long_session_memory": false
+  },
+  "publication_authorized": false
+}

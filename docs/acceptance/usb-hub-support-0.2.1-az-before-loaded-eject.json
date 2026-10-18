@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-18T23:00:00.581927+00:00",
+  "pid": 1876957,
+  "binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "scope": "Read-only bounded own-mod metadata; two matching ledger reads, no firmware function invocation or process writes",
+  "deck": 1,
+  "source_index": 1,
+  "source_path": "/media/usb/sdc1",
+  "source_label": "NACHO PLUGS",
+  "content_id": 1156,
+  "load_epoch": 1,
+  "opaque_media_id": "0x12200000202",
+  "loading": false,
+  "failed": false,
+  "user_report": "Loaded from NACHO PLUGS",
+  "hardware_eject_performed": false
+}

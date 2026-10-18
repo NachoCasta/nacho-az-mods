@@ -1,0 +1,161 @@
+{
+  "recorded_at_utc": "2026-10-18T21:45:27.209778+00:00",
+  "status": "Functional loaded-track eject accepted in local QEMU and bounded one-source real-AZ trial; unpublished candidate, expanded release acceptance pending",
+  "version": "0.2.1",
+  "base_commit": "6482cc10f16ea20e0db05321ddc8d7888868718b",
+  "source_commit": "Uncommitted snapshot; 43 exact source hashes in build record",
+  "selected_binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+  "selected_package_sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
+  "selected_package_bytes": 355839,
+  "host_gate": {
+    "portable_suites": 13,
+    "portable_runs": 39,
+    "modes": [
+      "plain",
+      "ASan+UBSan",
+      "TSan"
+    ],
+    "production_sdk_surface_checks": {
+      "plain": 10,
+      "asan": 8,
+      "tsan": 8
+    },
+    "result": "passed",
+    "scope": "Portable components and production view; native firmware adapters excluded",
+    "backend": "Clang18, amd64 Ubuntu container, seccomp unconfined for TSan personality",
+    "first_attempt": "Shell rejected CRLF in edited test-host.sh; normalized to LF and repeated successfully"
+  },
+  "normal_executable_evidence": [
+    "usb-hub-support-0.2.1-loaded-build.json",
+    "usb-hub-support-0.2.1-loaded-packages.json",
+    "usb-hub-support-0.2.1-loaded-eject-emulator.json",
+    "usb-hub-support-0.2.1-loaded-replacement.json",
+    "usb-hub-support-0.2.1-loaded-resources.json",
+    "usb-hub-support-0.2.1-loaded-regressions.json",
+    "usb-hub-support-0.2.1-loaded-load-race.json"
+  ],
+  "portable_model_evidence": "loaded-track-eject-tickets-host.json",
+  "separate_fault_overlay_evidence": "usb-hub-support-0.2.1-native-timeout.json",
+  "earlier_prototypes_are_not_selected_candidate_acceptance": true,
+  "known_limits": [
+    "Native cached playback functions/capacity vary; not every track is guaranteed to remain fully available",
+    "Native process RSS rose 244580 KiB over settled cycles 2 through 12; long-session bound and cache/allocator cause unresolved",
+    "QEMU core disabled input filter after eight >200 us observations in one later regression attempt; fresh-process repeat passed, hardware timing remains unvalidated",
+    "Firmware remains exact ep147-9e9454e357389ece; no broader firmware acceptance",
+    "External PRO DJ LINK coexistence remains unsupported; disable mod and restart AZ before external Link",
+    "A second QEMU filter-budget failure interrupted the unload-first memory control; only one cycle completed. Same-connection four-cycle control passed; neither control closes hardware timing or long-session gates."
+  ],
+  "hardware": {
+    "new_candidate_installed": true,
+    "new_candidate_tested": true,
+    "real_az_access_this_feature_work": true,
+    "last_installed_version": "0.2.1",
+    "new_action_specific_authorization_required": "For actions beyond the authorized bounded trial",
+    "activation_record": "usb-hub-support-0.2.1-az-activation.json",
+    "authorized_scope": "Preflight, selected install/approval, one application restart and one-hub-stick loaded-track trial",
+    "functional_acceptance": true,
+    "functional_acceptance_record": "usb-hub-support-0.2.1-az-loaded-eject.json",
+    "full_track_playback": "User reported for one track; not instrumented audio acceptance",
+    "scope": "One individual loaded-source eject; physical target remained connected, backing/alias absent; exact native cached proof retained; CAMI/native USB1 mounted"
+  },
+  "publication": {
+    "authorized": true,
+    "catalog_version": "0.2.0",
+    "catalog_modified": false,
+    "published_assets_replaced": false,
+    "authorization": "User explicitly requested publishing the currently accepted progress; no new AZ testing or source rebuild implied"
+  },
+  "final_emulator_cleanup": {
+    "environment": "Local QEMU only",
+    "pid": 235417,
+    "binary_sha256": "9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b",
+    "decks_empty": true,
+    "native_usb1_mounted": true,
+    "fault_overlay_active": false,
+    "test_pause_active": false,
+    "note": "Fresh normal-candidate process after memory controls; hub fixtures manually unmounted only after stopping the application",
+    "real_az_access": false
+  },
+  "source_remote_ci": "Not run for uncommitted 0.2.1 snapshot; local gates only",
+  "memory_controls": {
+    "same_connection_load_unload": "usb-hub-support-0.2.1-load-unload-control.json",
+    "warm_to_final_rss_kib": -236,
+    "warm_to_final_vmdata_kib": 0,
+    "scope": "Four ordinary load/unload cycles, no detach or replug during cycles; not long-session proof",
+    "unload_before_eject_control": {
+      "record": "usb-hub-support-0.2.1-unload-first-control.json",
+      "accepted": false,
+      "completed_cycles": 1,
+      "requested_cycles": 4,
+      "rss_first_cycle_delta_kib": 49564,
+      "native_detach_requests": 0,
+      "failure": "Core input filter budget enforcement in second cycle; selector timeout",
+      "interpretation": "RSS growth can occur without the new loaded-track native detach; root cause and bound remain unproven"
+    }
+  },
+  "functional_goal_audit": {
+    "recorded_at_utc": "2026-10-18T23:06:47.766380+00:00",
+    "objective": "Allow hub USB eject with loaded tracks",
+    "requirements": [
+      {
+        "requirement": "Exact supported firmware, kernel, core and candidate",
+        "evidence": [
+          "usb-hub-support-0.2.1-loaded-build.json",
+          "usb-hub-support-0.2.1-loaded-packages.json",
+          "usb-hub-support-0.2.1-az-activation.json"
+        ],
+        "result": "proven for selected executable and exact hardware target"
+      },
+      {
+        "requirement": "Loaded source eject without clearing the loaded track",
+        "evidence": [
+          "usb-hub-support-0.2.1-az-before-loaded-eject.json",
+          "usb-hub-support-0.2.1-az-loaded-eject.json"
+        ],
+        "result": "proven by matching physical source and full media identity, completed native cache ticket, retained deck, absent mounts and still-present device"
+      },
+      {
+        "requirement": "Playback after source filesystem removal",
+        "evidence": [
+          "usb-hub-support-0.2.1-loaded-replacement.json",
+          "usb-hub-support-0.2.1-az-loaded-eject.json"
+        ],
+        "result": "QEMU sample-exact audio with zero drops; user confirmed complete hardware playback for one track only"
+      },
+      {
+        "requirement": "Individual/whole-hub behavior and source isolation",
+        "evidence": [
+          "usb-hub-support-0.2.1-loaded-eject-emulator.json",
+          "usb-hub-support-0.2.1-loaded-replacement.json",
+          "usb-hub-support-0.2.1-az-loaded-eject.json"
+        ],
+        "result": "Whole-hub two-playing-deck behavior proven locally; individual hardware trial preserves other-source mounts. No two-loaded-source hardware claim."
+      },
+      {
+        "requirement": "Fail safely on pending completion, reserved LOAD and failed-load metadata",
+        "evidence": [
+          "usb-hub-support-0.2.1-native-timeout.json",
+          "usb-hub-support-0.2.1-loaded-load-race.json",
+          "usb-hub-support-0.2.1-loaded-regressions.json"
+        ],
+        "result": "Passed explicit fault/race and normal-binary regressions; fault overlay kept separate from selected runtime acceptance"
+      },
+      {
+        "requirement": "Bounded owned ticket/callback lifecycle and source preservation",
+        "evidence": [
+          "loaded-track-eject-tickets-host.json",
+          "usb-hub-support-0.2.1-loaded-resources.json",
+          "usb-hub-support-0.2.1-loaded-build.json"
+        ],
+        "result": "Portable sanitizer/model gates and exact-binary 12-cycle owned-resource observations passed; proprietary long-session behavior remains a separate unvalidated release gate"
+      }
+    ],
+    "functional_result": "achieved",
+    "remaining_release_validation": [
+      "Expanded loaded-track hardware scenarios and cache-capacity/format coverage",
+      "Long-session native memory and hardware input timing",
+      "User publication decision, source commit and remote CI before any release"
+    ],
+    "publication_implied": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Portable detach ticket model; integrated native coordinator is covered separately by exact-candidate emulator records",
+  "modes": [
+    "plain",
+    "Clang ASan+UBSan with leak detection",
+    "Clang TSan"
+  ],
+  "result": "passed",
+  "checks": [
+    "Exact controller plus opaque lower-48-bit MediaID; byte 5 retained",
+    "Task serial at/below acquisition fence ignored",
+    "Timeout keeps pending ticket and same-connection retry resumes it",
+    "Different physical connection cannot reuse a pending or cache-pinned identity",
+    "Completed unreferenced ticket can be reclaimed; older completion rejected by serial fence",
+    "100000 completed/released reuse cycles",
+    "Fixed sixteen-ticket capacity; exhaustion and invalid bounds fail closed",
+    "Completion ignored until submission; retries do not resubmit",
+    "Unsubmitted preparation can be canceled; submitted timeout cannot",
+    "Old unload notification cannot clear a newer load or a different opaque media identity"
+  ],
+  "synchronization": "Every operation requires caller serialization; host model tests do not establish native callback locking",
+  "source_sha256": {
+    "src/azhub/linkfake/eject-detach.h": "8580c8524c3cfbeac929eb93f322e82a63464074606e04efc94bdf09e730c0e7",
+    "src/azhub/linkfake/test-eject-detach.c": "ad8015f5b9f8f2229280f2c3beff9d0d9ed67dfe6fb0331b9240242bceec543c"
+  },
+  "native_abi_acceptance": false,
+  "real_az_access": false,
+  "full_host_gate": "13 suites in plain, Clang ASan+UBSan and TSan: 39 passing runs; native firmware code is outside sanitizer instrumentation"
+}

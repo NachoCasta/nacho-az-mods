@@ -1,6 +1,36 @@
 # Current state â€” 2026-10-18
 
-## Published release: USB Hub Support 0.2.0
+## USB Hub Support 0.2.1 publication in progress
+
+The user explicitly requested publishing the currently accepted progress. Release
+0.2.1 will retain the exact tested package: SHA256
+`6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f`
+(355839 bytes), executable SHA256
+`9feec49c06f10dd01e191ed5094f68eb1e7e7b35cd9ed76d757a8477a37a945b`.
+No rebuild or further hardware action is part of this publication.
+
+Individual loaded-track eject from NACHO PLUGS passed on the real AZ. The user
+reported complete playback of one track after eject. SSH confirmed absent backing
+and library-alias mounts while the physical device remained connected, retained
+exact-media cache proof, unchanged PID 1876957 and mounted CAMI/native USB1.
+See [hardware acceptance](acceptance/usb-hub-support-0.2.1-az-loaded-eject.json).
+The exact candidate also passed individual and two-playing-deck whole-hub eject,
+seek/loop, replacement-media, reserved LOAD and failed-load regressions in QEMU.
+Portable sanitizer/model, two-compiler and package checks passed. The source
+snapshot and evidence are in [the ledger](acceptance/usb-hub-support-0.2.1-loaded-summary.json).
+
+Long-session native memory and input timing remain unvalidated. Twelve local
+cycles kept owned tickets/proofs/FDs/threads bounded, but native RSS grew 244580 KiB
+from cycle 2 to 12. Same-connection load/unload controls stayed stable; a partial
+unload-before-eject control reproduced growth without a loaded native-detach
+request. Two QEMU attempts encountered core input-filter budget enforcement;
+failed attempts are recorded separately from acceptance. The user chose publication
+of the accepted functional progress with these limits disclosed. Broader loaded
+hardware, all-format/cache-capacity and eight-source acceptance are not claimed.
+Further real-AZ tests/restarts require their own authorization. Public 0.2.0 stays
+unchanged until the new assets and catalog are published and verified.
+
+## Previous release: USB Hub Support 0.2.0
 
 Release: https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.2.0
 Source/tag commit: `1c75601c527fbdd821b5872a334f345aecb60396`.

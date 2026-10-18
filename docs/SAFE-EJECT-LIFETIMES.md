@@ -101,3 +101,26 @@ internals, allocator retention and firmware-owned threads are separate dependenc
 coverage; host sanitizer runs do not instrument them. Exact-binary native churn
 and resource observations complement source ownership review without proving
 absence of every possible vendor-side leak.
+
+## Unpublished 0.2.1 loaded-track detach ownership
+
+The new native disconnect bridge owns sixteen static 48-byte tickets and four
+24-byte cached-deck proofs. Every pool/proof access is serialized with the eject
+ledger lock. Native calls and waits occur outside that lock. Tickets match the
+controller owner, full opaque 48-bit media identity and a post-enqueue-fence task
+serial. The final native task is forwarded before pool completion is published.
+
+A worker reference and a cached-deck reference have separate lifetimes. Timeout
+releases the worker reference but never reclaims a pending native task; retry
+resumes that task without another enqueue. Completed cached tickets remain
+pinned until native unload or a successful replacement load. Failed replacement
+loads retain the earlier cached proof. Physical connection tokens forbid reuse
+of that proof by a replacement stick at the same port. Fixed capacity refuses
+new work rather than overwriting a live ticket.
+
+Load completion forwards the native callback before clearing its loading guard,
+and then verifies the same request epoch. Unload completion additionally requires
+native idle state, no newer load and matching full media identity. Native states
+that advance a queued load cannot clear that newer reservation. These are exact-
+firmware adapters; host sanitizers cover the portable ticket model, not firmware
+internals. Local emulator evidence is linked from LOADED-TRACK-EJECT.md.

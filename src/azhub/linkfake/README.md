@@ -1,10 +1,11 @@
 # USB Hub Support
 
-Version 0.2.0 adds safe eject through short/long USB STOP. The exact executable
-passed user-operated tests with two hub sticks plus native USB1 and SSH mount
-verification. Unload tracks first and wait for final safe-to-remove confirmation;
-loaded-track eject is not supported and its refusal message was not observed.
-See [release notes](../../../docs/releases/usb-hub-support-0.2.0.md).
+Version 0.2.1 adds safe eject with loaded tracks through the native playback
+cache. Wait for final safe-to-remove confirmation before unplugging. One loaded
+source passed user-operated real-AZ eject and full-track playback, with SSH
+mount/cache-proof verification. Two playing sources passed whole-hub eject in
+QEMU. Native cache limits and long-session memory/input timing remain documented.
+See [release notes](../../../docs/releases/usb-hub-support-0.2.1.md).
 Read [repository state](../../../docs/CURRENT-STATE.md) and
 [publishing notes](../../../docs/PUBLISHING.md) before building/deploying.
 

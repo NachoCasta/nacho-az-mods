@@ -5,11 +5,13 @@
 #include <fcntl.h>
 #include <sys/sysmacros.h>
 #include "eject-source.h"
+#include "eject-detach.h"
 
 #define SAFE_RECORDS 16
 #define SAFE_MOUNTS 128
 #define SAFE_JOURNAL "/run/azhub-eject-state"
-struct safe_record { struct eject_item item; unsigned sources; };
+struct safe_record { struct eject_item item; unsigned sources; uint64_t connection; };
+static uint64_t safe_next_connection=1;
 struct safe_request { struct eject_item items[EJECT_MAX]; int count,all_port,pending; };
 static pthread_mutex_t safe_lock=PTHREAD_MUTEX_INITIALIZER;
 static struct safe_record safe_records[SAFE_RECORDS];
@@ -22,8 +24,14 @@ struct safe_load {
     uintptr_t controller,request;
     int source,loading,deck,failed;
     uint32_t content_id;
+    uint64_t epoch,media;
 };
 static struct safe_load safe_loads[16];
+static struct hub_detach_pool safe_detach_pool;
+static struct { uintptr_t controller; uint64_t epoch; int valid,ticket; } safe_cached_decks[4];
+static void safe_cached_forget_locked(int deck);
+static int safe_cached_known(int deck);
+static fn8 safe_original_detach_complete;
 static void (*safe_original_load)(uintptr_t);
 static fn8 safe_original_load_complete,safe_original_unload_complete;
 static void (*safe_original_load_common)(uintptr_t,uintptr_t,uintptr_t);
@@ -124,6 +132,11 @@ static void safe_load_hook(uintptr_t controller) {
     if (source>=0) {
         denied=!load || fakes[source].eject_reserved;
     }
+    if (load && !denied) {
+        load->media=hub_detach_media(*(uint64_t *)(record+0x38));
+        load->epoch++;
+        if (!load->epoch) { load->failed=1; denied=source>=0; }
+    }
     pthread_mutex_unlock(&safe_lock);
     if (!denied) {
         if (source>=0) lf_core->log(EJECT_ID,"safe-eject load-admitted source=%d controller=%#lx deck=%d",source,controller,deck+1);
@@ -144,34 +157,52 @@ static uint64_t safe_load_complete_hook(uint64_t a,uint64_t b,uint64_t c,uint64_
     if (!lf_runtime_ready()) return safe_original_load_complete(a,b,c,d,e,f,g,h);
     uintptr_t root=*(uintptr_t *)a; unsigned result=*(unsigned *)(a+0x10);
     uintptr_t completed=*(uintptr_t *)(a+8);
-    /* The payload owns a copied WherefromPtr. Compare its native map entry,
-     * rather than smart-pointer storage or the controller's already-cleared
-     * pending field, before changing the current request's ledger. */
     uintptr_t record=completed ? ((uintptr_t (*)(uintptr_t,uintptr_t))0xa5d968)(root+0x298,a+8):0;
     pthread_mutex_lock(&safe_lock);
     struct safe_load *load=safe_load_slot(root);
     int matched=load && record && record==load->request;
+    uint64_t epoch=load ? load->epoch:0;
+    pthread_mutex_unlock(&safe_lock);
+    /* Native publication must finish before releasing the admission guard.
+     * A reentrant newer request must not inherit this completion. */
+    uint64_t returned=safe_original_load_complete(a,b,c,d,e,f,g,h);
+    pthread_mutex_lock(&safe_lock);
+    load=safe_load_slot(root);
+    matched=matched && load && load->request==record && load->epoch==epoch;
     if (matched) {
-        load->loading=0; load->failed=result!=0 && result!=4;
+        load->loading=0;load->failed=result!=0 && result!=4;
         if (load->failed) load->source=-1;
+        else safe_cached_forget_locked(load->deck);
     }
     pthread_mutex_unlock(&safe_lock);
-    if (!matched)
-        lf_core->log(EJECT_ID,"safe-eject completion-unmatched controller=%#lx",root);
-    uint64_t returned=safe_original_load_complete(a,b,c,d,e,f,g,h);
+    if (!matched) lf_core->log(EJECT_ID,"safe-eject completion-unmatched controller=%#lx",root);
     lf_core->log(EJECT_ID,"safe-eject load-completed controller=%#lx result=%u",root,result);
     return returned;
 }
 static uint64_t safe_unload_complete_hook(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     if (!lf_runtime_ready()) return safe_original_unload_complete(a,b,c,d,e,f,g,h);
     uintptr_t root=*(uintptr_t *)a;
+    int native_state=*(int *)(root+0x230);
+    unsigned native_mode=*(unsigned char *)(root+0xca8);
+    uint64_t media=*(uint64_t *)(root+0xca0);
     pthread_mutex_lock(&safe_lock);
     struct safe_load *load=safe_load_slot(root);
-    /* Media withdrawal can complete an unload without clearing the SDK's
-     * already-failed track metadata. Keep that proof until the next load. */
-    if (load) { load->source=-1; load->loading=0; }
+    uint64_t epoch=load ? load->epoch:0;
     pthread_mutex_unlock(&safe_lock);
     uint64_t returned=safe_original_unload_complete(a,b,c,d,e,f,g,h);
+    pthread_mutex_lock(&safe_lock);
+    load=safe_load_slot(root);
+    /* State-zero notification and exact media must match; queued/new loads
+     * retain their guard even if the old unload finishes afterward. */
+    if (load && load->epoch==epoch) {
+        if (hub_detach_unload_matches(native_state,load->loading,load->media,media)) load->source=-1;
+        int deck=load->deck;
+        if (native_state==0 && !load->loading && native_mode!=2 && deck>=0 && deck<4 && safe_cached_decks[deck].valid) {
+            const struct hub_detach_ticket *ticket=&safe_detach_pool.slots[safe_cached_decks[deck].ticket];
+            if (ticket->media==hub_detach_media(media)) safe_cached_forget_locked(deck);
+        }
+    }
+    pthread_mutex_unlock(&safe_lock);
     lf_core->log(EJECT_ID,"safe-eject unload-completed controller=%#lx",root);
     return returned;
 }
@@ -368,13 +399,15 @@ static void safe_eject_capture_controller(void *button) {
     }
     if (iface && *(uintptr_t *)iface==0x2a58570) safe_controller=iface-0x18;
 }
+#include "native-detach.h"
+
 static int safe_busy(unsigned sources,char *reason,size_t size) {
     pthread_mutex_lock(&safe_lock);
     int tracked_busy=0;
     for (int i=0;i<16;i++) if (safe_loads[i].controller && safe_loads[i].source>=0 &&
-        (sources&(1u<<safe_loads[i].source))) tracked_busy=1;
+        (sources&(1u<<safe_loads[i].source)) && safe_loads[i].loading) tracked_busy=1;
     pthread_mutex_unlock(&safe_lock);
-    if (tracked_busy) { snprintf(reason,size,"USB has a loaded or loading track. Unload it first."); return 1; }
+    if (tracked_busy) { snprintf(reason,size,"USB is still loading a track. Retry after loading finishes."); return 1; }
     uintptr_t controller=safe_controller;
     if (!controller) { snprintf(reason,size,"Cannot check decks. Leave USB connected."); return 1; }
     for (int deck=0;deck<4;deck++) {
@@ -383,7 +416,7 @@ static int safe_busy(unsigned sources,char *reason,size_t size) {
         uint64_t identity=0; memcpy(&identity,id,8); identity&=0x0000ffffffffffffULL;
         lf_core->log(EJECT_ID,"safe-eject deck=%d loaded=%d media=%#lx kind=%u",deck+1,loaded,identity,kind);
         if (!loaded) {
-            if (lf_core->deck_loaded(deck)!=0) {
+            if (lf_core->deck_loaded(deck)!=0 && !safe_cached_known(deck)) {
                 az_deck_info info={.size=sizeof info}; int failed_metadata=0;
                 if (AZ_HAS(lf_core,deck_info) && !lf_core->deck_info(deck,&info) && info.content_id) {
                     pthread_mutex_lock(&safe_lock);
@@ -403,9 +436,6 @@ static int safe_busy(unsigned sources,char *reason,size_t size) {
         int source=safe_source_identity(identity);
         if (source<0 && !hub_eject_known_native_usb(identity)) {
             snprintf(reason,size,"Cannot identify the USB loaded on deck %d. Leave it connected.",deck+1); return 1;
-        }
-        if (source>=0 && (sources&(1u<<source))) {
-            snprintf(reason,size,"USB is loaded on deck %d. Unload that track first.",deck+1); return 1;
         }
     }
     return 0;
@@ -624,8 +654,10 @@ static void safe_eject_submit(const struct eject_item *item,int all_port) {
         pthread_mutex_unlock(&safe_lock); safe_message("USB ejection is already in progress."); return;
     }
     safe_request=request;
+    safe_request.pending=2; /* Reserve admission while publishing preparation. */
     pthread_mutex_unlock(&safe_lock);
     lf_core->banner(EJECT_ID,"Preparing USB for removal...",2000);
+    pthread_mutex_lock(&safe_lock); safe_request.pending=1; pthread_mutex_unlock(&safe_lock);
 }
 static void safe_eject_tick(void) {
     static int mount_fault_announced;
@@ -641,7 +673,7 @@ static void safe_eject_worker_step(void) {
     safe_reconcile();
     struct safe_request request;
     pthread_mutex_lock(&safe_lock);
-    if (!safe_request.pending) { pthread_mutex_unlock(&safe_lock); return; }
+    if (safe_request.pending!=1) { pthread_mutex_unlock(&safe_lock); return; }
     request=safe_request; safe_request.pending=0; safe_running=1;
     pthread_mutex_unlock(&safe_lock);
     unsigned sources=0; int records[EJECT_MAX],previous[EJECT_MAX],reserved=0,started=0; char reason[256]={0};
@@ -655,12 +687,24 @@ static void safe_eject_worker_step(void) {
         if (!safe_connected(item)) { snprintf(reason,sizeof reason,"USB changed. Open the selector again."); goto failed; }
         safe_revalidate_result(item);
         if (safe_preflight(item,reason,sizeof reason)) goto failed;
+        /* Discovery must not observe the physical inhibition record before the
+         * matching sources are reserved: that window can withdraw a loaded
+         * source through normal disappearance handling. Lock order is source
+         * ownership, then the admission ledger. */
+        pthread_mutex_lock(&safe_source_mutex);
         pthread_mutex_lock(&safe_lock);
         int record=-1;
         for (int i=0;i<SAFE_RECORDS;i++) if (safe_records[i].item.state && safe_same(&safe_records[i].item,item)) record=i;
         if (record<0) for (int i=0;i<SAFE_RECORDS;i++) if (!safe_records[i].item.state) { record=i; break; }
-        if (record<0) { pthread_mutex_unlock(&safe_lock); snprintf(reason,sizeof reason,"USB tracking is full. Leave the hub connected."); goto failed; }
-        if (safe_records[record].item.state==2) { pthread_mutex_unlock(&safe_lock); continue; }
+        if (record<0) { pthread_mutex_unlock(&safe_lock); pthread_mutex_unlock(&safe_source_mutex); snprintf(reason,sizeof reason,"USB tracking is full. Leave the hub connected."); goto failed; }
+        if (safe_records[record].item.state==2) { pthread_mutex_unlock(&safe_lock); pthread_mutex_unlock(&safe_source_mutex); continue; }
+        if (!safe_records[record].connection) {
+            if (safe_next_connection==UINT64_MAX) {
+                pthread_mutex_unlock(&safe_lock); pthread_mutex_unlock(&safe_source_mutex);
+                snprintf(reason,sizeof reason,"USB connection tracking is full. Leave it connected."); goto failed;
+            }
+            safe_records[record].connection=safe_next_connection++;
+        }
         previous[reserved]=safe_records[record].item.state;
         safe_records[record].item=*item; safe_records[record].item.state=1;
         sources|=safe_records[record].sources;
@@ -669,13 +713,13 @@ static void safe_eject_worker_step(void) {
         /* Bind the physical connection to source paths atomically with config
          * reconciliation/reuse. Release this mutex before waiting on the
          * injector thread: that same thread owns discovery and server teardown. */
-        pthread_mutex_lock(&safe_source_mutex);
         for (int s=0;s<nfakes;s++) {
             struct stat st; if (stat(fakes[s].dir,&st)) continue;
             char node[64]; snprintf(node,sizeof node,"/sys/dev/block/%u:%u",major(st.st_dev),minor(st.st_dev));
             char resolved[PATH_MAX]; if (!realpath(node,resolved) || !eject_under(resolved,item->usb)) continue;
-            sources|=1u<<s; safe_records[record].sources|=1u<<s;
+            sources|=1u<<s;
             pthread_mutex_lock(&safe_lock);
+            safe_records[record].sources|=1u<<s;
             fakes[s].eject_reserved=1;
             pthread_mutex_unlock(&safe_lock);
         }
@@ -685,6 +729,7 @@ static void safe_eject_worker_step(void) {
     int persisted=safe_persist();
     if (persisted) { snprintf(reason,sizeof reason,"Could not preserve USB eject state. Leave it connected."); goto failed; }
     lf_core->log(EJECT_ID,"safe-eject reserved targets=%d sources=%#x time=%llu",reserved,sources,(unsigned long long)eject_clock_ms());
+    if (safe_native_detach(sources,&started,reason,sizeof reason)) goto failed;
     /* Explicit emulator fault/race fixture; absent in ordinary operation. */
     const char *test_pause=getenv("AZHUB_EJECT_TEST_PAUSE_MS");
     unsigned pause_ms=test_pause ? strtoul(test_pause,NULL,10):0;
@@ -788,6 +833,7 @@ static int safe_eject_prepare(void) {
     return 0;
 }
 static int safe_eject_init(void) {
+    if (lf_core->claim_hook(EJECT_ID,0xa59e80,safe_detach_complete_hook,(void **)&safe_original_detach_complete)) return -81;
     if (lf_core->claim_hook(EJECT_ID,0xab2ab8,safe_track_execute_hook,(void **)&safe_original_track_execute) ||
         lf_core->claim_hook(EJECT_ID,0xab35b8,safe_track_execute_range_hook,(void **)&safe_original_track_execute_range)) return -78;
     if (lf_core->claim_hook(EJECT_ID,0xa7d0f8,safe_load_common_hook,(void **)&safe_original_load_common)) return -75;

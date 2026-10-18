@@ -1,5 +1,27 @@
 # Safe-eject publication and stability audit
 
+Publication decision: the user explicitly requested publishing the accepted 0.2.1
+progress. Exact candidate bytes are retained. Native long-session memory/input
+behavior and expanded hardware cases remain follow-up work, disclosed in the
+[release notes](releases/usb-hub-support-0.2.1.md). Earlier deferred/unauthorized
+statements below preserve the research and acceptance chronology.
+
+
+## Unpublished 0.2.1 loaded-track candidate
+
+Public release is 0.2.0. Current loaded-track source, exact candidate hashes and
+local acceptance are in [the active research/evidence ledger](LOADED-TRACK-EJECT.md).
+The new portable detach model raises the host gate to 13 suites / 39 runs;
+production SDK checks remain 10/8/8. Both candidate packages passed validation.
+No new real-AZ access or 0.2.1 publication is authorized. Native long-session
+memory behavior remains unvalidated; a local QEMU regression also encountered
+core input-filter budget enforcement, with a fresh-process repeat recorded.
+
+The 0.2.0 status, counts and hashes below preserve its publication chronology;
+they do not validate the new 0.2.1 executable. Follow the updated
+[deferred loaded-track AZ trial](SAFE-EJECT-AZ-TRIAL.md) only after authorization.
+
+
 ## 0.2.0 publication decision
 
 The user explicitly requested committing and publishing the current progress after
