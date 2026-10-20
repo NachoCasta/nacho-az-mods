@@ -1,0 +1,91 @@
+{
+  "recorded_at_utc": "2026-10-20T09:24:31.633375+00:00",
+  "scope": "Exact v5 five-source physical virtual-USB replug, both private member retention, four/two local decks and fresh post-transition loads; emulator only",
+  "version": "0.3.2",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 891874,
+  "observations": [
+    "After successful safe eject, only five named hub fixtures are unplugged/replugged; native USBs remain",
+    "A/B and retained D node reconnect; QEMU removes legacy C/E drive handles, so fresh child COWs restore them with verified read-only unchanged parent files",
+    "Five hub source rows and seven USB partitions return in the same native process",
+    "Fresh source2 member8/slot3 loads complete on decks4 and2; fresh source0/1 loads complete on decks1/3",
+    "LLLL is observed with loaded waveforms on all four local decks in Link Off",
+    "On epoch4 yields LLEE and native LINK PLAYER lanes3/4; five hub source rows remain and retained mask0x180 has replay0",
+    "Fresh source3 member8/slot7 load completes on deck2 after On",
+    "Off epoch5 retains mask0x180 and replay0; five source rows remain",
+    "Fresh source4 member7/slot8 loads complete on decks3/4 after Off, restoring LLLL",
+    "Seven distinct library DB descriptors are open for the two native and five hub roots"
+  ],
+  "source_admissions": [
+    {
+      "source": 0,
+      "deck": 1
+    },
+    {
+      "source": 1,
+      "deck": 2
+    },
+    {
+      "source": 2,
+      "deck": 4
+    },
+    {
+      "source": 2,
+      "deck": 2
+    },
+    {
+      "source": 0,
+      "deck": 1
+    },
+    {
+      "source": 1,
+      "deck": 3
+    },
+    {
+      "source": 3,
+      "deck": 2
+    },
+    {
+      "source": 4,
+      "deck": 3
+    },
+    {
+      "source": 4,
+      "deck": 4
+    }
+  ],
+  "library_descriptors": [
+    "52 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db",
+    "56 -> /media/usb/sda1/PIONEER/rekordbox/exportLibrary.db",
+    "60 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db",
+    "64 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db",
+    "74 -> /media/usb/sde1/PIONEER/rekordbox/exportLibrary.db",
+    "76 -> /media/usb/sdf1/PIONEER/rekordbox/exportLibrary.db",
+    "77 -> /media/usb/sdg1/PIONEER/rekordbox/exportLibrary.db"
+  ],
+  "setup_notes": [
+    "Early LOAD4 reads were not settled admissions. Explicit fresh Browser selection and a0.7s native press later produce deck4 completion result0 with no mod change",
+    "A dense in-guest LOAD injection experiment failed and was abandoned; successful loads use the existing native input helper"
+  ],
+  "limits": [
+    "No PCM or physical hardware capture",
+    "Same test song is used across several libraries; this is source/routing/lifecycle coverage, not a full cache-content collision audit",
+    "Eight-source hardware and actual-CDJ/phase synchronization remain unvalidated"
+  ],
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-replug-source.png": "aabeac6b1315d614c58af42397a549204c47dab329e6b0f83876b8b8038b1319",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-member8-browse.png": "1f4cffb33118b3652bff7c4cb8d643a67e53bf9b5a3219a4dd8cdb50fc62a1b4",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-member8-return-browse.png": "b7d17b2f5c5cb03c6561bb6359b5890b7661d718dc044a5c3e86d0ffe806c25c",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-four-local-loaded.png": "8f615c3361c97c7966b6d91887216e593a245491ffe5664f11235688022ea19e",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-members78-on.png": "8932c6321bf7a905025d5636b42f4efd05836eb079aa65f14a27f8a8f1e5ef6c",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-on-sources.png": "f6acbebe5c17fdb0d6b75c8d66428523f7fdc9d496d8a04b216760a983da814a",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-member8-usb2-browse.png": "3f3e454e16080d244d468f0522b844802850c32b742768b8e4aeb2f03fe52617",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-off-sources.png": "a34d2ef125bb0ab292000236d08f4c2c171162bbae7f9dca5e940dfa59382e11",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-usb3-slot-browse.png": "a67789cfaa6690c45504413b3d68162e3640e49ef2c283c9c6938264073e0366",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-source-off-final.png": "1b0b92da22457f556c3e0d79a5a34beb6f301933d8b1e43cf5fb8679305abecd",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-source-modes.log": "1ba2adec545d7bc204830442f572bb910e96c23a6f14aee7869f69a62105514f",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-five-source-state.json": "ca1388e8a2e58108edb1b514327ba28a33f10c57158c597bad6e457d2ba6d596",
+    "local\\diagnostics\\link-mode-continuity\\replug-five-v5.json": "1b88cc28959cac2ef923fdc82866b57f4542d338c3b43d8b08edc743366464bf",
+    "local\\integration\\link-mode-continuity-replug-v5\\restore.json": "667932ab1de7c1122959f1d1698afe9c4e9a6fb940dfb4f5012e1e92271f247a"
+  }
+}

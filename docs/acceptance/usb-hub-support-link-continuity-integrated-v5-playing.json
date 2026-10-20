@@ -1,0 +1,82 @@
+{
+  "recorded_at_utc": "2026-10-20T08:40:35.433025+00:00",
+  "scope": "Exact integrated v5 two repeated playing On/Off cycles; visual and native lifecycle evidence, not audio capture",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 854179,
+  "deck_sources": {
+    "1": "Hub USB1 member7/slot3, source0",
+    "2": "Native USB1"
+  },
+  "observations": [
+    "Both tracks restarted with native CUE/PLAY before the bounded sequence",
+    "Two On/Off cycles keep LLEE throughout, with member7 retained and replay0 after epochs8 through11",
+    "Five reviewed Waveform screenshots retain H USB1/native USB1 labels and contain no source-warning icons",
+    "Both remaining-time counters decrease across each transition without reaching track end"
+  ],
+  "samples": [
+    {
+      "name": "before-cycles-playing",
+      "host_monotonic": 496987.6155294,
+      "state": "azdecks 1\r\npid 854179\r\nup 36377.02\r\ndecks LLEE\r\n36379.76 158905.98\r\nmode recovery: native completion mode=0 epoch=5\r\nmode recovery: mode=0 epoch=5 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=6\r\nmode recovery: mode=1 epoch=6 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=7\r\nmode recovery: mode=0 epoch=7 retained=0x80 replay=0\r\n",
+      "image_sha256": "589377a3023f37ea0e7300c12c0e7d06fde469dff8f7aa11b125546327b395d2",
+      "observed_remaining_time": {
+        "hub_deck1": "04:21.978",
+        "native_deck2": "04:24.790"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-1-on-playing",
+      "host_monotonic": 496999.7569033,
+      "state": "azdecks 1\r\npid 854179\r\nup 36391.18\r\ndecks LLEE\r\n36391.92 158953.71\r\nmode recovery: native completion mode=1 epoch=6\r\nmode recovery: mode=1 epoch=6 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=7\r\nmode recovery: mode=0 epoch=7 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=8\r\nmode recovery: mode=1 epoch=8 retained=0x80 replay=0\r\n",
+      "image_sha256": "5dc572c8ffdf06d59f15d59f44d209d4d0566018d4b5aeb7330208f9abe49a9e",
+      "observed_remaining_time": {
+        "hub_deck1": "04:11.343",
+        "native_deck2": "04:14.061"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-1-off-playing",
+      "host_monotonic": 497023.8376186,
+      "state": "azdecks 1\r\npid 854179\r\nup 36415.45\r\ndecks LLEE\r\n36416.00 159049.62\r\nmode recovery: native completion mode=0 epoch=7\r\nmode recovery: mode=0 epoch=7 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=8\r\nmode recovery: mode=1 epoch=8 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=9\r\nmode recovery: mode=0 epoch=9 retained=0x80 replay=0\r\n",
+      "image_sha256": "1871ef4f52dd8a1a23c6df1540aab1f358655485ba324424388d6d57f0eb6859",
+      "observed_remaining_time": {
+        "hub_deck1": "03:50.299",
+        "native_deck2": "03:52.829"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-2-on-playing",
+      "host_monotonic": 497035.9311603,
+      "state": "azdecks 1\r\npid 854179\r\nup 36427.58\r\ndecks LLEE\r\n36428.09 159097.30\r\nmode recovery: native completion mode=1 epoch=8\r\nmode recovery: mode=1 epoch=8 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=9\r\nmode recovery: mode=0 epoch=9 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=10\r\nmode recovery: mode=1 epoch=10 retained=0x80 replay=0\r\n",
+      "image_sha256": "57a4414edef6c70e19c964ce6f4a93685eac11a795f9474c18663fcdf757b237",
+      "observed_remaining_time": {
+        "hub_deck1": "03:39.683",
+        "native_deck2": "03:42.119"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-2-off-playing",
+      "host_monotonic": 497060.0706424,
+      "state": "azdecks 1\r\npid 854179\r\nup 36451.86\r\ndecks LLEE\r\n36452.20 159193.00\r\nmode recovery: native completion mode=0 epoch=9\r\nmode recovery: mode=0 epoch=9 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=10\r\nmode recovery: mode=1 epoch=10 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=11\r\nmode recovery: mode=0 epoch=11 retained=0x80 replay=0\r\n",
+      "image_sha256": "5dbfd93a5e2d28a8b270abe37bdcf551154b9a145baffefa78517bb14505f42b",
+      "observed_remaining_time": {
+        "hub_deck1": "03:18.625",
+        "native_deck2": "03:20.874"
+      },
+      "warning_icons_observed": false
+    }
+  ],
+  "limits": [
+    "No captured audio or sample-accurate discontinuity measurement",
+    "Point-in-time visual captures do not prove visibility at every instant",
+    "This sequence has no external peer; the separate peer scope exercises a mixed member table",
+    "Member8, eject and complete native four-deck coverage remain pending"
+  ],
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\loaded-cycles-v5\\samples.json": "2d0dedbcab4f1abd3636e22dda1c4a51fc14181020f421e819f09657640f4cf3"
+  }
+}

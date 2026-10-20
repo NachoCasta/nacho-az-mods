@@ -1,0 +1,83 @@
+{
+  "recorded_at_utc": "2026-10-20T09:41:23.275177+00:00",
+  "scope": "Exact v5 isolated software master/SYNC/reconnect and five-live-source whole-hub loaded eject; emulator only",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 891874,
+  "observations": [
+    "Peer3 negotiated master handoff from native1; both decks follow70BPM with synced status",
+    "Long STOP2 reserves all five live sources (mask0x1f), detaches two loaded private media, closes all ten servers and completes five-source eject",
+    "Only native sda1/sdb1 remain mounted; cached decks remain LLEE and keep70BPM SYNC",
+    "After peer exit and12-second gap, same peer3 negotiates handoff from native2; both decks follow72BPM from cached tracks",
+    "Screenshots show advancing remaining positions; triangles appear only after deliberate safe eject",
+    "Both peers stop normally; transport and observer exit0, namespace is removed and emulator SSH remains healthy"
+  ],
+  "known_field_privacy": {
+    "result": "passed",
+    "complete_outgoing_statuses": 2165
+  },
+  "setup_failure": "Initial isolated bridge could not bind15120; it exited before ready and namespace cleanup ran. Retry uses15125, without changing production mod.",
+  "limits": [
+    "No PCM audio capture, physical AZ, actual-CDJ or phase-sync acceptance",
+    "Packet privacy covers known fields in complete1152-byte statuses, not every undocumented field",
+    "SDK timing guard long-session limit remains open; not bypassed",
+    "Same content fixture across sources does not prove complete cache collision coverage"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/results.json",
+      "sha256": "aaca4169f76846292735c252fc3842f8fed0f855899c79f63f975e495b8311fc"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/transport.stdout",
+      "sha256": "b5bd35057387e315f21fbc62149e5ac7f396dccb3e0dd349bbf9cc84da6bbb69"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/peer.stdout",
+      "sha256": "1a281c301aa4816ed76e7817981ee265f8aeaeebe7470269a3160169cc72471d"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/peer-reconnect.stdout",
+      "sha256": "c3cbce9e4b08778930ea6b86a155f1f1c6a42a1b82d162c8465707adcbb3c6ff"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/peer-reconnect.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/wire.stdout",
+      "sha256": "5006094f90655ed097e3a49431c3d986dfa2ed49a9ae1c13d00724e450ed2058"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/privacy-final.json",
+      "sha256": "008676d73136368eb2b7b9709a2e3d11f0cc72617abb235e1d172db0eed9b442"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/runtime.log",
+      "sha256": "be4d411dfa16db8b0723dd3b6a7c3c756c0a67216ab7b52b272eb8cb066addf5"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/after-eject-state.txt",
+      "sha256": "3a9712f5b35e0783e9740b878e4d99ef3f800307fa2143b4e6210ac7637af2d7"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/reconnect-state.txt",
+      "sha256": "b16ef2d4eea53402c550dcb1feb283c6a8f58e68cf0cd4441e5a87434cc0a68d"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/sync-before-eject.png",
+      "sha256": "b78f6bd0cb78b3915770526c7146a36749b23457c92bee157bf8534947d8402f"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/after-five-eject.png",
+      "sha256": "038a20ac0e52342ba1af57be85a8358ed5f3c951276dc5f22af74c6d9b08c122"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/peer-v5-master-eject-retry/reconnect-72.png",
+      "sha256": "ab559a5fc8340e100e56fbc152c73281df59cd0e367b57d54745fe1fff3b7a2c"
+    }
+  ]
+}

@@ -10,7 +10,7 @@
 #include <string.h>
 typedef uint64_t (*fn8)(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static pthread_mutex_t safe_source_mutex=PTHREAD_MUTEX_INITIALIZER;
-static struct fake {int eject_reserved,eject_done,unmount_pending,present,slot,link_ready,notify_pending;time_t announced_at,queried_at;} fakes[8];
+static struct fake {int eject_reserved,eject_done,unmount_pending,present,player,slot,link_ready,notify_pending;time_t announced_at,queried_at;} fakes[8];
 static int nfakes=8;
 static atomic_int native_busy,violations,stop_writer,writes;
 static void community_enable_internal_link_unlocked(void) {
@@ -94,5 +94,23 @@ int main(void) {
             assert(!fakes[i].announced_at && !fakes[i].queried_at);
         }
     }
-    puts("PASS: 20000 native transition/write races; stale-epoch/eject deferral and all8 owned-slot replay with absent/reserved exclusion");
+    /* Retained membership must preserve every live slot's announcement state,
+     * including a mount already waiting for its query acknowledgement. */
+    for(int i=0;i<nfakes;i++) fakes[i]=(struct fake){.present=1,.player=i<4?7:8,
+        .slot=slots[i],.link_ready=1,.announced_at=9,.queried_at=9};
+    assert(probe_mode_request((uintptr_t)task,0,0,0,0,0,0,0)==123);
+    __atomic_store_n(&probe_mode_retained_mask,(1u<<7)|(1u<<8),__ATOMIC_RELEASE);
+    assert(probe_mode_complete((uintptr_t)task,0,0,0,0,0,0,0)==456);
+    waiting=3;ready=99;probe_mode_reset_sources(&ready,&waiting);
+    assert(waiting==3 && ready==99);
+    for(int i=0;i<nfakes;i++) assert(fakes[i].link_ready && fakes[i].announced_at==9 &&
+        fakes[i].queried_at==9 && !fakes[i].notify_pending);
+    /* A fallback for member8 must not invalidate retained member7. */
+    assert(probe_mode_request((uintptr_t)task,0,0,0,0,0,0,0)==123);
+    __atomic_store_n(&probe_mode_retained_mask,1u<<7,__ATOMIC_RELEASE);
+    assert(probe_mode_complete((uintptr_t)task,0,0,0,0,0,0,0)==456);
+    probe_mode_reset_sources(&ready,&waiting);assert(waiting==-1);
+    for(int i=0;i<nfakes;i++) if(i<4) assert(fakes[i].link_ready && !fakes[i].notify_pending);
+        else assert(!fakes[i].link_ready && fakes[i].notify_pending);
+    puts("PASS: 20000 native transition/write races; epoch/eject guards, all8-slot replay and retained-member selective exclusion");
 }

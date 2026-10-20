@@ -17,6 +17,7 @@ INSTALLERS = {
     'probe_private_admission_install': {0x13df908: 'probe_network_snapshot', 0x13f22b8: 'probe_operate'},
     'probe_library_ownership_install': {0xf00de0: 'probe_message_destroy', 0xeee540: 'probe_handshake'},
     'probe_mode_recovery_install': {0x140a088: 'probe_mode_complete', 0x1408ef0: 'probe_mode_request', 0x13fa7a8: 'probe_mode_network'},
+    'probe_member_continuity_install': {0x13e0448: 'probe_member_disconnect', 0x13e18d8: 'probe_member_clear'},
     'probe_queue_install': dict(zip(
         (0xaae298, 0x237f900, 0xaab598, 0xaab818, 0xa692e0, 0xa693c0,
          0xa7c848, 0xa7c9d8, 0x6d1838, 0xa77390, 0xa69db0),
@@ -78,8 +79,11 @@ def check(source, directory):
     harness += 'static void hub_install(void){} static void hub_tag_cache_install(void){}\n'
     harness += ''.join('static fn ' + name + ';\n' for name in variables)
     harness += ''.join('static void ' + name + '(void){}\n' for name in callbacks)
+    harness += ''.join('static void ' + name + '(void);\n' for name in bodies)
     harness += ''.join('static void ' + name + '(void){' + content + '}\n' for name, content in bodies.items())
-    harness += 'int main(void){' + ''.join(name + '();' for name in INSTALLERS)
+    # The member installer must be reached through the mode installer; calling
+    # it separately would hide a missing nested installation or double claims.
+    harness += 'int main(void){' + ''.join(name + '();' for name in INSTALLERS if name != 'probe_member_continuity_install')
     harness += 'assert(o_dbparse==native);'
     for expected in INSTALLERS.values():
         for address, callback in expected.items():

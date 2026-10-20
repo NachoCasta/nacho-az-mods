@@ -1,0 +1,54 @@
+{
+  "recorded_at_utc": "2026-10-20T09:11:23.893046+00:00",
+  "scope": "Fresh-session exact v5 individual loaded eject, surviving-source load/mode cycle and whole-hub loaded eject; emulator only",
+  "version": "0.3.2",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 891874,
+  "framework_apply_serial": 27,
+  "input_health": "Selector opens after native UI unload and one normal framework apply; no core/settings/memory changes or filter-guard bypass",
+  "individual": {
+    "source": 0,
+    "loaded_deck": 1,
+    "media_id": "0x10200000602",
+    "result": "Native detach completes, both servers close, all source aliases and sdc1 unmount, success sources0x1",
+    "other_sources": "Hub USB2 and both native USB mounts remain; a fresh source1 deck2 load completes result0"
+  },
+  "partial_mode_cycle": {
+    "epochs": [
+      2,
+      3
+    ],
+    "retained_mask": "0x80",
+    "replay": 0,
+    "result": "Ejected USB1 does not reappear; live USB2 retains its label and remains available through On/Off"
+  },
+  "whole_hub": {
+    "gesture": "USB2 STOP held1.7s",
+    "remaining_source": 1,
+    "loaded_deck": 2,
+    "media_id": "0x12200000602",
+    "result": "Native detach/server close/unmount complete; success sources0x2 and Hub is safe to remove",
+    "mounts_after": "Only native sda1/sdb1 remain among USB roots; no player07 aliases",
+    "cached_decks": "LLEE remains; post-eject waveform shows deck2 still advancing with22.266seconds remaining; deck1 has reached its natural end"
+  },
+  "expected_warning_behavior": "Intentional physical source withdrawal still produces native warning triangles; these are distinct from unwanted warnings during Link changes while a source remains active",
+  "limits": [
+    "Visual/native lifecycle evidence only; no captured PCM or physical acceptance",
+    "Full prefill-cache memory expansion and long-session timing remain separate limits",
+    "First long-session eject gate failed closed after SDK frame-filter strikes; this fresh-session pass does not erase that observation"
+  ],
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-selector-health.png": "78b56b2a9f7b51844e35b6df59126a7729fbaf241f4621352d51791af26c3d14",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-loaded-eject-browse.png": "1dfe1b7591b6bd48c03287ce97c3954c06083d36017ef92dedc9b956586dfcdd",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-loaded-eject-selector.png": "ffc37cc5d0fde43a3894db62b7ab7642e03b2f5567f733324d12bf2d97728b04",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-individual-eject-submitted.png": "ed85e91263d1c8f9bbc2b573b33acd8e9ba9b9ad400080fc74829367d2e56be8",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-individual-eject-sources.png": "9b9010ae3e4e56c4332842440dc8ebdd5713c5f211c379704ad238f3d95a8489",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-remaining-source-browse.png": "7360dc569447aff85ee532bbc6d9eb25d766f100ae9db97a6806786a1b09652c",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-partial-on.png": "c330eb6a44f0aada2b43d701a33881909f8e144d43b3110cda7fd5cec8da25e3",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-partial-off-early.png": "91adf226cf43303aa266230e482f1f4bb30cafb5226ff4a3bd1e4016b4d3333a",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-whole-eject-sources.png": "3bcffc5052d75198bae7ade2cee164d1552c46ae51fff52be4ce96b2fad5b305",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-whole-eject-cached.png": "5555ea5bbd4d9e9a29fc8a82196b6d40262978d9b5f566066f4232205b913a46",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-eject-complete.log": "a60079ea86998fc56d1103f4807bd7a66ea4e70b9625395bce6d1d0f3a757241",
+    "local\\diagnostics\\link-mode-continuity\\fresh-v5-eject-final-state.json": "390bec0c40a9c57179f3f512b1b338c99c7cedf665a485f80f9026f8c8e62eb3"
+  }
+}

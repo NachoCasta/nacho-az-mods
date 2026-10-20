@@ -34,10 +34,13 @@ local and are not shared with external CDJs. Real-AZ tests covered a software pe
 over Wi-Fi, master/tempo/SYNC, reconnect and a fresh hub-track load. Actual CDJ
 interoperability and audible phase alignment remain unvalidated.
 
-**Known issue:** changing Link On/Off briefly disconnects and reannounces hub
-sources; previously loaded hub tracks can retain the source-unavailable triangle
-and rely on finite native caches. Select the intended Link mode before loading hub
-tracks. This remains unresolved. See [0.3.0 release notes](docs/releases/usb-hub-support-0.3.0.md).
+**0.3.2 preserves hub sources across PRO DJ LINK On/Off changes.** The owner
+confirmed the loaded-track continuity trial works on the physical AZ. Repeated
+emulator checks retain source identities without announcement replay, preserve
+loaded decks1/2 and permit fresh loads after either transition. Native disabling
+of decks3/4 with Link On remains expected. See
+[0.3.2 release notes](docs/releases/usb-hub-support-0.3.2.md) for evidence and limits.
+Actual-CDJ, phase-sync and long-session validation remain open.
 The external-player blocking warning in older release notes applies to0.2.1 and earlier.
 
 Connect multiple USB sticks to your XDJ-AZ through a USB hub. Browse playlists and tracks

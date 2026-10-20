@@ -1,5 +1,64 @@
 # Current state
 
+## Continuity candidate installed on the physical AZ
+
+The user explicitly requested installation, exact pre-approval and reload.
+Exact0.3.2 v5 was copied to the mods USB with0.3.1 rollback preserved, staged
+through the normal loader, approved under the narrow SSH exception and activated
+through one framework apply. Framework serial10 completes; PID3776252 loads
+59 hooks with empty decks. USB, staged and reviewed ELF hashes match. See the
+[delivery record](acceptance/usb-hub-support-link-continuity-az-delivery.json).
+The user reports "works perfectly" after the requested loaded hub-track On/Off
+continuity trial (continued playback, no warning triangle and fresh loading).
+This is manual user-reported acceptance, not captured audio or an instrumented
+physical test. No exact source count/cycle count or actual-CDJ/phase/long-session
+acceptance is inferred.
+No release, tag or catalog change was performed. Earlier statements that the
+physical AZ was untouched describe the preceding emulator-only goal.
+
+## Link continuity candidate ready for physical trial
+
+Exact unpublished0.3.2 v5 is built and locally validated. It preserves owned
+private members7/8 through the native mode reset and restores the separate
+internal library gate immediately after the native setter. Native external
+member removal and deck topology still execute; this is retention rather than
+faster reannouncement or hidden warnings.
+
+The [readiness audit](acceptance/usb-hub-support-link-continuity-readiness-audit.json)
+maps every local goal gate to evidence. Plain/ASan+UBSan/TSan each pass31 portable
+checks; SDK UI passes10/8/8. The94 source snapshot files and79 referenced local
+evidence hashes match. Package SHA256:
+`d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81`;
+ELF SHA256:
+`a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add`.
+The exact firmware tag, stable mod ID and kernel asset remain unchanged.
+
+Empty, paused, playing native+hub, repeated On/Off and both private-member checks
+pass in the emulator. Reviewed captures preserve labels and advancing positions
+without mode-induced source warnings; fresh post-transition loads succeed.
+Five hub sources and seven separate library DB descriptors are observed, with
+four loaded local decks Off and native decks3/4 disabled On. Isolated software
+peer master/SYNC70BPM, loss and reconnect72BPM pass. Individual loaded eject and
+five-live-source whole-hub eject pass;2165 complete outgoing status messages pass
+known-field privacy checks in the latter scope. See the
+[plan](LINK-MODE-CONTINUITY-PLAN.md) and linked version-specific records.
+
+Final emulator PID967182, normal framework apply serial28, has Link Off, EEEE,
+five hub sources and seven library DB descriptors. Isolated network helpers
+have exited and their namespace/QMP guard/channel are removed. One same-process
+post-eject/replug capture had only four rows despite seven mounts/DBs; after
+explicit unload and normal framework apply all five return. Keep this separate
+replug observation visible. The existing cumulative core input-filter timing
+guard remains unchanged; a fresh session passes eject but does not prove
+long-session timing acceptance.
+
+The [physical trial](LINK-MODE-CONTINUITY-AZ-TRIAL.md) is prepared. Emulator
+lifecycle and sampled positions do not prove uninterrupted physical audio or
+phase sync. Actual-CDJ, eight-source hardware and long-session acceptance remain
+open. The physical AZ and published0.3.1 are untouched. This completes local
+candidate readiness; physical testing needs separate action-specific permission,
+and publication requires a later user decision.
+
 ## Official index PR updated for0.3.1
 
 [Index PR4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) remains open and

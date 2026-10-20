@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-20T08:46:43.565339+00:00",
+  "scope": "Exact integrated v5 eject regression gate did not run because SDK input-filter health failed closed",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 854179,
+  "observed": "Short USB2 STOP displays Hub selector input is unavailable; no removal was submitted",
+  "core_diagnostic": "Frame filter disabled for the session after eight calls exceeding200us",
+  "input_diagnostic": "raw20524 edited25626 raw-age274180ms edit-age5413ms",
+  "baseline_observation": "Same budget-disable warning appears in preserved logs from before selective-retention integration",
+  "source_review": "Raw/edit mod frame callbacks perform short field/atomic operations; unchanged by continuity code. Inspected core implementation times callbacks using the architectural virtual counter and keeps cumulative strikes until EP147 restart. Source inspection does not prove which scheduling event caused these overruns.",
+  "next_action": "Preserve the guard. Unload both tracks through native UI, use one normal emulator framework apply of the same exact candidate, verify fresh health, and run eject before a long stress sequence. Do not patch core, internal settings or memory.",
+  "acceptance": "Pending; neither individual nor whole-hub eject has passed on integrated v5",
+  "physical_AZ_touched": false,
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\trace-v1-runtime.log": "f4ac02041e45475f13b71abae3482561f7d69f2520f951617179e27e75168d2c",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-eject-input-unavailable.log": "6a81e0b32681301d159893a3601c016d081b72ca1d7e7f363e0d4f95318b371e",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-eject-selector.png": "e3a1b1320374477b6ea1e3663c069c740efb9127959dce0e2d49197f2ebdcbf5"
+  }
+}

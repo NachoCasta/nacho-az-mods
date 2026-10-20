@@ -4,6 +4,21 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-link-continuity-az-delivery.json | Exact0.3.2 physical installation/approval/reload and user-reported loaded hub-track Link On/Off continuity acceptance |
+| acceptance/usb-hub-support-link-continuity-readiness-audit.json | Requirement-by-requirement candidate audit,94 source hashes,79 local evidence hashes and explicit pending physical limits |
+| LINK-MODE-CONTINUITY-PLAN.md | Active goal: preserve real hub source availability across native Link On/Off transitions; baseline investigation and candidate evidence gates |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-master-eject.json | Exact v5 peer master/SYNC70, reconnect72, five-live-source loaded whole eject, complete-status privacy and bounded isolated cleanup |
+| LINK-MODE-CONTINUITY-AZ-TRIAL.md | Exact candidate hashes and separate user-assisted physical continuity/eject trial; no deployment or hardware acceptance |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-both-members-playing.json | Exact v5 playing On/Off across members7/8 preserves labels, seven library descriptors and advancing sampled positions without warnings |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-five-source.json | Five reconnected virtual hub USBs, fresh loads after both transitions and four-local-deck Off behavior |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-eject.json | Fresh normal apply restores guarded selector; individual loaded and remaining-source whole eject preserve native USBs and cached tracks |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-peer.json | Exact v5 mixed member transition preserves hub/removes external, software-peer status/beat exchange,1500 known-field privacy checks and bounded network cleanup |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-playing.json | Exact v5 two bounded On/Off cycles with advancing loaded native/hub tracks, no sampled warnings and retained announcements |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-paused.json | Exact v5 paused On/Off retains both positions and four distinct native/hub library file descriptors |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-input-gate.json | Eject test refused safely after cumulative core frame-filter timing strikes; fresh-session eject still required |
+| acceptance/usb-hub-support-link-continuity-integrated-v5-build.json | Integrated selective-retention0.3.2 exact hashes,31/31/31 portable checks, SDK UI10/8/8 and meaningful native callback-unwind control; runtime matrix remains open |
+| acceptance/usb-hub-support-link-continuity-cache-probe-v4.json | Private-only hypothesis: gate restoration retains member7 across empty/loaded On/Off, sampled warnings absent and fresh second-source load passes; mixed peers and final regression matrix remain open |
+| ../src/azhub/research/scripts/prepare-link-mode-continuity-trace.py | Reconstruct isolated forwarding-only mode/disconnect/table-clear diagnostic; source preparation only, no deployment |
 | acceptance/usb-hub-support-0.3.1-index-pr-update.json | Official draft index PR4 updated for0.3.1,57 hooks and physical UI approval; head/diff unchanged,12 index tests and description read-back pass |
 | acceptance/usb-hub-support-0.3.1-publication.json | Published native-body UI release, exact accepted bytes, source CI and anonymous catalog/package/icon/source verification |
 | acceptance/hub-source-ui-native-az-delivery.json | User-approved native-body v14 installed/pre-approved and activated on the AZ through one framework apply; exact hashes and57 hooks, physical functional acceptance pending |

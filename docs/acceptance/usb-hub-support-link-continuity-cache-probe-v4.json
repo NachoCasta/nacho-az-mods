@@ -1,0 +1,47 @@
+{
+  "recorded_at_utc": "2026-10-20T08:06:59.211108+00:00",
+  "scope": "Local QEMU private-only hypothesis probe; not a release candidate or completed goal",
+  "version": "0.3.2",
+  "pid": 825122,
+  "framework_apply_serial": 25,
+  "hooks": 61,
+  "elf_sha256": "8f9b4af6fb2856a217c5960a34056120fd7afc0acf7fad01d55f7c8ecd36c814",
+  "package_sha256": "0d82f7c8c3b1151cbc163cc0d3b1969314a71020a4fab0a6fe40f637ace6e91d",
+  "changes": [
+    "Retain whole native member table only for a mode transition containing exclusively active owned members",
+    "Suppress the traced mode-specific private disconnect",
+    "Restore internal library gate immediately after forwarding native mode setter",
+    "Skip replay only after retained clear"
+  ],
+  "observations": [
+    "Empty Off/On/Off: member7 remains through deferred Off clear at34182.242; no replay for retained epochs2/3",
+    "Fresh hub USB1 browsing and deck1 load, then native USB1 browsing/deck2 load",
+    "Both native PLAY controls used; Waveform positions advance across loaded On epoch4 and Off epoch5 without warning icons in sampled screenshots",
+    "Off epoch5 clear at34358.408 retains member7; no announcement replay for epoch5",
+    "Fresh hub USB2 browsing after Off, followed by deck2 load-admitted source1 and load-completed result0",
+    "Read-only native table observation finds member7 with address127.77.0.7 at descriptor offset8"
+  ],
+  "limits": [
+    "No captured audio or proof of zero audio discontinuity",
+    "Sampled screenshots do not prove every instant of visibility",
+    "Mixed external-peer member tables not implemented",
+    "No peer, eject, four-deck, member8, eight-source or physical AZ acceptance for this probe",
+    "Production mod source and published release unchanged"
+  ],
+  "next_step": "Implement selective member retention for mixed tables with correct native record/string lifetime and concurrency; validate with software peer and regression matrix",
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-before.png": "98c81ee01a69e92b488db041c75302dc188447a1efeaecdab20f5ae2a45da252",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-on-early.png": "98c81ee01a69e92b488db041c75302dc188447a1efeaecdab20f5ae2a45da252",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-off-early.png": "98c81ee01a69e92b488db041c75302dc188447a1efeaecdab20f5ae2a45da252",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-off-browse.png": "1dfe1b7591b6bd48c03287ce97c3954c06083d36017ef92dedc9b956586dfcdd",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-native-browse.png": "9193d576cb576adfe99da051654ab8a6544818fd62755dde528c4c832ca895b5",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-playing-before.png": "3992414c35df79a72110deea44d7a082718b3d45039d9a51823ac6f69e3b8719",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-playing-on.png": "0caa69c8f52d8f16a7ec97644fd9fd87772f63ad2616e942f17d6d041fe2d2e1",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-playing-off-early.png": "46ed69d8c0700a051f0f304dec0e1f0710d4607d49621490dd28e27de1cdd9ff",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-playing-off-settled.png": "6ea7b29801d557763c4b4048598952071e220637e51088bda144b21683e01821",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-fresh-b-browse.png": "56f96c357697539a10bb740008c299bda82d1e6feb216cd8805bf6b02ba10b18",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-fresh-b-loaded.png": "7a07a72d46df9a3d5371cb79f83ec749fd23cf5205f77cfb9ba53342a9b7da1a",
+    "local\\diagnostics\\link-mode-continuity\\cache-v4-runtime.log": "5817f97564cd695ce7a4110c37a13cb6a41c891b12c28b226a1bc7bfa41ae5f8",
+    "local\\diagnostics\\link-mode-continuity\\network-listeners.json": "fbe30e2398920fa6c1bf0395fdef9b0f5a87037806ee8452f679c84200837d82"
+  }
+}

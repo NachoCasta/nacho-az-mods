@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-10-20T09:43:52.891068+00:00",
+  "scope": "Candidate readiness audit, not hardware acceptance or publication",
+  "package_sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "source_snapshot_files_verified": 94,
+  "evidence_hashes_verified": 79,
+  "requirements": [
+    {
+      "requirement": "Reproduce loss and identify native lifecycle",
+      "evidence": "LINK-MODE-CONTINUITY-PLAN.md forwarding-only baseline and setter/table-clear trace",
+      "result": "proven in emulator"
+    },
+    {
+      "requirement": "Real source retention, not hidden warnings or replay speed",
+      "evidence": "Selective exact-address member retention; actual C adapter unwind tests; v5 runtime retained masks0x80/0x180 with replay0; fresh loads",
+      "result": "proven for tested emulator sources"
+    },
+    {
+      "requirement": "Empty, paused, playing, native+hub and repeated On/Off",
+      "evidence": "integrated-v5-peer/paused/playing/both-members-playing records",
+      "result": "emulator lifecycle and sampled visual checks pass; physical audio deferred"
+    },
+    {
+      "requirement": "Fresh browse/load after both directions, stable labels and native deck topology",
+      "evidence": "integrated-v5-five-source record: five hub sources, LLLL Off/LLEE On, fresh loads after both directions",
+      "result": "passed"
+    },
+    {
+      "requirement": "Independent per-source library servers/caches",
+      "evidence": "Unchanged independent server/cache routing, five pairs of servers, seven separate library DB FDs; native slots not borrowed",
+      "result": "tested ownership preserved; exhaustive content collision audit not claimed"
+    },
+    {
+      "requirement": "Software peer coexistence including native external callbacks",
+      "evidence": "integrated-v5-peer selective external removal and integrated-v5-master-eject70/72BPM handoff/SYNC/reconnect",
+      "result": "bounded software-peer checks pass; actual-CDJ/phase remains separate"
+    },
+    {
+      "requirement": "Individual and multi-source whole-hub safe eject",
+      "evidence": "integrated-v5-eject and integrated-v5-master-eject; success masks0x1/0x2/0x1f; native mounts survive",
+      "result": "passed"
+    },
+    {
+      "requirement": "Build, sanitizers, UI, package and exact hashes",
+      "evidence": "integrated-v5-build:31/31/31 portable tests, SDK UI10/8/8, meaningful unwind negative control,59 hooks,94 source snapshot hashes",
+      "result": "passed"
+    },
+    {
+      "requirement": "Physical AZ trial instructions and boundaries",
+      "evidence": "LINK-MODE-CONTINUITY-AZ-TRIAL.md",
+      "result": "documented; no physical deployment/publication performed"
+    }
+  ],
+  "remaining_limits": [
+    "No physical AZ/audio/actual-CDJ/phase-sync acceptance",
+    "No eight-source hardware or long-session timing acceptance",
+    "Existing core cumulative frame-filter guard remains intact",
+    "Same-process post-eject/replug capture showed four rows with seven mounts/DBs. After explicit unload and normal framework apply, settled Source shows all five. Keep as a separate replug observation; no mode-transition withdrawal was observed in the accepted cycles."
+  ],
+  "publication_authorized": false,
+  "physical_AZ_touched": false,
+  "readiness": "Ready for separately authorized physical AZ trial; not physical/audio acceptance",
+  "final_emulator_state": {
+    "pid": 967182,
+    "framework_apply_serial": 28,
+    "mode": "Off",
+    "decks": "EEEE",
+    "hub_sources_visible": 5,
+    "library_DB_descriptors": 7,
+    "network_helpers": "Exited normally; namespace absent; temporary QMP guard/channel absent",
+    "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add"
+  },
+  "final_local_evidence": [
+    {
+      "path": "local/diagnostics/link-mode-continuity/replug-five-final-v5.json",
+      "sha256": "b58dc5d8a69e1d003c213325f0eb24e36173d860e675488306a03cbd64ba2b1b"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/final-restored-five-v5.png",
+      "sha256": "e76d7e49bf274f984fa4a804aaa749453f63f7e6db48c936d07b534628cc07f4"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/final-restored-five-v5-state.txt",
+      "sha256": "96c6820b9f31143a440a2186d5db575ccfba01dc8f92f759534cdfa71ba7c536"
+    },
+    {
+      "path": "local/diagnostics/link-mode-continuity/final-framework-restored-settled-v5.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-10-20T08:21:16.262468+00:00",
+  "scope": "Integrated mixed-member candidate build and local verification; runtime acceptance pending",
+  "version": "0.3.2",
+  "package_sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "compiler": "Pinned SDK GCC7.5 with explicit -fexceptions; userspace QEMU, no build-time deployment",
+  "expected_hooks": 59,
+  "portable_checks": {
+    "plain": 31,
+    "asan": 31,
+    "tsan": 31
+  },
+  "sdk_ui_checks": {
+    "plain": 10,
+    "asan_ubsan": 8,
+    "tsan": 8
+  },
+  "unwind_negative_control": "Without -fexceptions the actual C adapter misses removed-handle cleanup and the test aborts as expected; enabled builds pass normal/throwing callbacks across100 cycles",
+  "registration_controls": "Actual preprocessed installers, nested member installer reached exactly once through mode installer, zero/double parser negative controls; historical standalone syntax control passes with known warnings",
+  "remaining": [
+    "Exact integrated emulator transitions and fresh loads",
+    "Mixed software peer and preserved external notifications",
+    "Native four/two-deck controls and independent cache/server observations",
+    "Safe-eject and repeated loaded transition matrix",
+    "Final artifact audit and physical trial instructions"
+  ],
+  "published": false,
+  "physical_AZ_touched": false,
+  "local_evidence": {
+    "local\\integration\\link-mode-continuity-integrated-v5\\source-snapshot.json": "566a1a5ae001780c8432cf5a810cfe074f692e0deda053854de069e2f835001a",
+    "local\\integration\\link-mode-continuity-integrated-v5\\test-components.log": "4ea14d68b4f4e75d51e6ecf112e29ab434bc008626c977deaa4bfa77ea77e371",
+    "local\\integration\\link-mode-continuity-integrated-v5\\test-sdk-ui.log": "f1bdb1c5aa10ea52307dec54e80a46940da37343039c40173618a8a80da7c643",
+    "local\\integration\\link-mode-continuity-integrated-v5\\unwind-negative-control.log": "bd0ccdc2056f53f169591009434c9387098ae8ea750391ed41bbc4ee391d0d15"
+  }
+}

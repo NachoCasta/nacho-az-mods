@@ -1,0 +1,61 @@
+{
+  "recorded_at_utc": "2026-10-20T08:42:44.557091+00:00",
+  "scope": "Exact integrated v5 loaded paused On/Off with retained library descriptors; emulator only",
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "pid": 854179,
+  "observations": [
+    "Native CUE pauses both loaded tracks at their start",
+    "Before/On/Off screenshots preserve both positions04:25.514, source labels and no warning icons",
+    "LLEE persists; private member7 retained with replay0 in both directions",
+    "Native USB1/USB2 and hub USB1/USB2 retain four distinct exportLibrary.db file descriptors52/56/64/63 with identical targets before and after each transition"
+  ],
+  "library_descriptors": [
+    "52 -> /media/usb/sda1/PIONEER/rekordbox/exportLibrary.db",
+    "56 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db",
+    "63 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db",
+    "64 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db"
+  ],
+  "samples": [
+    {
+      "name": "before-cycles-paused",
+      "host_monotonic": 497172.4802812,
+      "state": "azdecks 1\r\npid 854179\r\nup 36563.10\r\ndecks LLEE\r\n36564.62 159639.89\r\nmode recovery: native completion mode=0 epoch=9\r\nmode recovery: mode=0 epoch=9 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=10\r\nmode recovery: mode=1 epoch=10 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=11\r\nmode recovery: mode=0 epoch=11 retained=0x80 replay=0\r\nlrwx------    1 root     root            64 Oct 20 05:18 52 -> /media/usb/sda1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 56 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 63 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 64 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db\r\n",
+      "image_sha256": "158e4dc722caa4a050ad7b108a3c76f28bb1a953847a6a92d11167bfe593af94",
+      "observed_remaining_time": {
+        "hub_deck1": "04:25.514",
+        "native_deck2": "04:25.514"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-1-on-paused",
+      "host_monotonic": 497184.6905468,
+      "state": "azdecks 1\r\npid 854179\r\nup 36575.25\r\ndecks LLEE\r\n36576.81 159689.01\r\nmode recovery: native completion mode=1 epoch=10\r\nmode recovery: mode=1 epoch=10 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=11\r\nmode recovery: mode=0 epoch=11 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=12\r\nmode recovery: mode=1 epoch=12 retained=0x80 replay=0\r\nlrwx------    1 root     root            64 Oct 20 05:18 52 -> /media/usb/sda1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 56 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 63 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 64 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db\r\n",
+      "image_sha256": "158e4dc722caa4a050ad7b108a3c76f28bb1a953847a6a92d11167bfe593af94",
+      "observed_remaining_time": {
+        "hub_deck1": "04:25.514",
+        "native_deck2": "04:25.514"
+      },
+      "warning_icons_observed": false
+    },
+    {
+      "name": "cycle-1-off-paused",
+      "host_monotonic": 497208.8685459,
+      "state": "azdecks 1\r\npid 854179\r\nup 36599.50\r\ndecks LLEE\r\n36600.99 159787.27\r\nmode recovery: native completion mode=0 epoch=11\r\nmode recovery: mode=0 epoch=11 retained=0x80 replay=0\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=1 epoch=12\r\nmode recovery: mode=1 epoch=12 retained=0x80 replay=0\r\nmode continuity: retained member disconnect number=7\r\nmode continuity: retained mask=0x80 removed external=0\r\nmode recovery: native completion mode=0 epoch=13\r\nmode recovery: mode=0 epoch=13 retained=0x80 replay=0\r\nlrwx------    1 root     root            64 Oct 20 05:18 52 -> /media/usb/sda1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 56 -> /media/usb/sdb1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 63 -> /media/usb/sdd1/PIONEER/rekordbox/exportLibrary.db\r\nlrwx------    1 root     root            64 Oct 20 05:18 64 -> /media/usb/sdc1/PIONEER/rekordbox/exportLibrary.db\r\n",
+      "image_sha256": "158e4dc722caa4a050ad7b108a3c76f28bb1a953847a6a92d11167bfe593af94",
+      "observed_remaining_time": {
+        "hub_deck1": "04:25.514",
+        "native_deck2": "04:25.514"
+      },
+      "warning_icons_observed": false
+    }
+  ],
+  "limits": [
+    "File descriptor observations establish distinct open library files, not a complete SQL/tag cache content audit",
+    "No audio capture or physical AZ acceptance",
+    "Full runtime member8/eject/four-deck and final artifact gates remain pending"
+  ],
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\paused-cycles-v5\\samples.json": "a6a59b3a913284aa6ee40b9fdd8fcc64c7eec31b22a33c6e90ce31478d0f9a81"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "package_sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
+  "members": {
+    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+    "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+    "azmod.json": "7f354514b18bd123557925d9698312990931d0ef9be7abd834b82475848d6f83",
+    "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+    "usb-hub-support.so": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add"
+  },
+  "USB_target": "/media/usb/sda1/MODS/community-mods/usb-hub-support",
+  "USB_rollback": "/media/usb/sda1/MODS/backups/usb-hub-support-0.3.1-before-continuity-0.3.2-20261020",
+  "result": 0,
+  "output": "/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/LICENSE: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/assets/azhub-LICENSE.txt: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/assets/azhub.ko: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/assets/mount-hub.sh: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/azmod.json: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/icon.png: OK\n/media/usb/sda1/MODS/community-mods/.usb-hub-support-continuity-v5-d461a779/usb-hub-support.so: OK\na3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add  /media/usb/sda1/MODS/community-mods/usb-hub-support/usb-hub-support.so\n60be7a089fe6cc71dcb404cfd80b96e2218da5f7a2ec63d36b8b70741a8bf462  /media/usb/sda1/MODS/backups/usb-hub-support-0.3.1-before-continuity-0.3.2-20261020/usb-hub-support.so\nfw=ep147-9e9454e357389ece\nsuspended=0\noff=0\nmod=usb-hub-support|1|0.3.1|\nazdecks 1\npid 2362076\nup 198496.18\ndecks EEEE\n",
+  "approval": "Exact hash matched USB and framework staging; prior list backed up on USB, lock held, unrelated entries preserved, atomic replace",
+  "activation": "Completed normally: framework state done, serial10, PID3776252,0.3.2,59 hooks,EEEE",
+  "manual_internal_file_writes": "Only explicitly authorized exact-candidate approval exception; staging managed by framework",
+  "recorded_at_utc": "2026-10-20T16:52:48.020645+00:00",
+  "scope": "User-authorized physical AZ candidate installation, exact pre-approval and normal framework reload; functional acceptance pending",
+  "version": "0.3.2",
+  "user_authorization": "Load on AZ, approve and reload",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "core": "1.2.3",
+  "pre_activation_pid": 2362076,
+  "empty_decks_before_reload": "EEEE",
+  "approval_backup_on_USB": "/media/usb/sda1/MODS/backups/usb-hub-support-0.3.1-before-continuity-0.3.2-20261020/approved-before-continuity-v5",
+  "reload_requests": 1,
+  "publication": false,
+  "functional_acceptance": {
+    "type": "User-reported manual physical AZ acceptance",
+    "reported_at_utc": "2026-10-20T16:54:05.188561+00:00",
+    "user_statement": "works perfectly",
+    "context": "After instructions to load/play a hub track on deck1 or2, toggle PRO DJ LINK On/Off, check continued playback/no warning triangle and fresh loading afterward",
+    "scope": "User confirms the requested continuity trial works; no agent-captured audio, exact cycle count, deck assignment or source count supplied",
+    "not_inferred": [
+      "Actual-CDJ interoperability",
+      "Phase-sync accuracy",
+      "Eight-source hardware acceptance",
+      "Long-session acceptance",
+      "New physical safe-eject acceptance"
+    ]
+  },
+  "active_pid": 3776252,
+  "framework_serial": 10,
+  "loaded_hooks": 59,
+  "local_readbacks": {
+    "local/diagnostics/az-continuity-v5-activation-readback.txt": "f06a798d80d6689c9982ab45e7396f24275a2c27f1e9fc93212759bc1f00b80b",
+    "local/diagnostics/az-continuity-v5-final-readback.txt": "a16c43d0aa03a082133db6d46072e14e4cf681e21f20eb0aecf80e3939a5b441"
+  }
+}

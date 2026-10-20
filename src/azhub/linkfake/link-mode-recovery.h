@@ -10,6 +10,7 @@ static int probe_mode_transition_active;
 static pthread_mutex_t probe_mode_cache_mutex=PTHREAD_MUTEX_INITIALIZER;
 static unsigned char probe_network_mode;
 static int probe_network_mode_known;
+static uint32_t probe_mode_retained_mask;
 static void probe_mode_maintain_cache(void) {
     /* Serialize the entire check/write with transition entry. An atomic
      * busy check alone permits a previously admitted writer to run later. */
@@ -22,8 +23,10 @@ static uint64_t probe_mode_request(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     uintptr_t owner=*(uintptr_t *)(a+0x18);
     pthread_mutex_lock(&probe_mode_cache_mutex);
     if (*(unsigned char *)(owner+0x4a1) || !*(unsigned char *)(owner+0x4a0) ||
-        *(unsigned char *)(owner+0x4a4)!=*(unsigned char *)(a+0x20))
+        *(unsigned char *)(owner+0x4a4)!=*(unsigned char *)(a+0x20)) {
         probe_mode_transition_active=1;
+        __atomic_store_n(&probe_mode_retained_mask,0,__ATOMIC_RELEASE);
+    }
     pthread_mutex_unlock(&probe_mode_cache_mutex);
     return probe_mode_request_original(a,b,c,d,e,f,g,h);
 }
@@ -36,6 +39,11 @@ static uint64_t probe_mode_network(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
         *(volatile unsigned char *)0x3f86a08=probe_network_mode;
     uint64_t result=probe_mode_network_original(a,b,c,d,e,f,g,h);
     probe_network_mode=(unsigned char)b;probe_network_mode_known=1;
+    /* Do not leave private keepalives behind a disabled library gate while the
+     * native Off timer runs. The setter still executes with its native shadow. */
+    pthread_mutex_lock(&probe_mode_cache_mutex);
+    community_enable_internal_link_unlocked();
+    pthread_mutex_unlock(&probe_mode_cache_mutex);
     return result;
 }
 static uint64_t probe_mode_epoch;
@@ -74,7 +82,8 @@ static void probe_mode_reset_sources(time_t *ready_at,int *waiting) {
         pthread_mutex_unlock(&probe_mode_cache_mutex);
         return;
     }
-    *waiting=-1;*ready_at=time(NULL)+2;
+    uint32_t retained=__atomic_load_n(&probe_mode_retained_mask,__ATOMIC_ACQUIRE);
+    int replay=0;
     for(int i=0;i<nfakes;i++) {
         struct fake *source=&fakes[i];
         /* The supported five-source transition withdraws USB2/USB3 rows too.
@@ -82,19 +91,29 @@ static void probe_mode_reset_sources(time_t *ready_at,int *waiting) {
          * guard prevents repeated replay of the same completed transition.
          * Reserved/ejected sources must remain withdrawn. */
         if(source->eject_reserved || !source->present) continue;
+        if((source->player==7 || source->player==8) &&
+            (retained & (UINT32_C(1)<<source->player))) continue;
+        replay=1;
         __atomic_store_n(&source->link_ready,0,__ATOMIC_RELEASE);
         __atomic_store_n(&source->announced_at,0,__ATOMIC_RELEASE);
         __atomic_store_n(&source->queried_at,0,__ATOMIC_RELEASE);
         __atomic_store_n(&source->notify_pending,1,__ATOMIC_RELEASE);
     }
+    if(replay) { *waiting=-1;*ready_at=time(NULL)+2; }
     handled=epoch;
     pthread_mutex_unlock(&safe_source_mutex);
     pthread_mutex_unlock(&probe_mode_cache_mutex);
-    lf_log("mode recovery: announcements invalidated mode=%u epoch=%llu",
-        mode,(unsigned long long)epoch);
+    lf_log("mode recovery: mode=%u epoch=%llu retained=%#x replay=%d",
+        mode,(unsigned long long)epoch,retained,replay);
 }
+#ifdef LF_SAFE_EJECT
+#include "link-member-continuity.h"
+#endif
 static void probe_mode_recovery_install(void) {
     probe_mode_complete_original=make_hook(0x140a088,probe_mode_complete);
     probe_mode_request_original=make_hook(0x1408ef0,probe_mode_request);
     probe_mode_network_original=make_hook(0x13fa7a8,probe_mode_network);
+#ifdef LF_SAFE_EJECT
+    probe_member_continuity_install();
+#endif
 }

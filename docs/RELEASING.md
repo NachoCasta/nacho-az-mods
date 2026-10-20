@@ -24,8 +24,9 @@ appearance approval. See [0.3.1 notes](releases/usb-hub-support-0.3.1.md) and it
 [publication record](acceptance/usb-hub-support-0.3.1-publication.json).
 Earlier release0.3.0 adds bounded PRO DJ
 LINK coexistence validation on the real AZ using a software peer over Wi-Fi.
-Changing Link On/Off still briefly disconnects hub sources and can leave loaded
-track warning triangles; describe this known issue prominently. Preserve the exact
+Version0.3.2 preserves hub sources through Link On/Off; its exact candidate passed
+the user-reported physical continuity trial. See its release notes and acceptance
+records. The prior transition-loss issue describes0.3.1 and earlier. Preserve the exact
 accepted package bytes and distinguish user audio reports from protocol evidence.
 See [0.3.0 notes](releases/usb-hub-support-0.3.0.md). Earlier selected0.2.1 executable
 passed individual loaded-source eject on the real AZ: the user reported complete

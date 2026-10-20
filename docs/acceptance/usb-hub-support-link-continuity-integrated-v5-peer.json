@@ -1,0 +1,87 @@
+{
+  "recorded_at_utc": "2026-10-20T08:37:36.550372+00:00",
+  "scope": "Exact integrated v5 mixed-member software-peer and first loaded Off feasibility; not full goal acceptance",
+  "version": "0.3.2",
+  "pid": 854179,
+  "elf_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+  "network": "Isolated azhub-link192.0.2.2/24 against emulator192.0.2.15; no physical NIC",
+  "peer": "Existing beat-link8.0.0 Java status peer, player3, bounded135seconds",
+  "observations": [
+    "Initial Off capture sees native players1/2/3/4; peer3 defense messages are an expected number conflict, not a valid steady four-local-deck external setup",
+    "On epoch4 invokes selective clear: private member7 retained, one external member removed, no announcement replay",
+    "Peer loses native players3/4 on On; native1/2 status reception continues",
+    "Fresh hub USB1 deck1 load completes with source0/result0; native PLAY advances the waveform",
+    "Peer receives68 nonempty-track statuses from native deck1, including69.917 effective BPM, and four beat events",
+    "Later loaded Off epoch5 retains member7 with replay0; sampled waveform advances04:19 to03:42 without a warning triangle"
+  ],
+  "privacy": {
+    "full_outgoing_statuses": 1500,
+    "known_fields_result": "passed",
+    "private_deck": 1,
+    "limits": [
+      "Marker matches outside known media fields require semantic review.",
+      "Absence of selected markers does not identify every extended field.",
+      "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+    ]
+  },
+  "peer_events": {
+    "listening": 1,
+    "found": 5,
+    "started": 1,
+    "status": 1395,
+    "lost": 5,
+    "beat": 4,
+    "stopping": 1,
+    "stopped": 1
+  },
+  "nonempty_status_count": 68,
+  "last_nonempty_status": {
+    "event": "status",
+    "monotonic_ns": 141303046929,
+    "player": 1,
+    "bpm100": 6902,
+    "master": true,
+    "synced": false,
+    "effective_bpm": 69.91722787857056,
+    "pitch": 1062207,
+    "packet_bytes": 512
+  },
+  "transport_frames": {
+    "guest_to_tap": 3412,
+    "tap_to_guest": 2515,
+    "nat_to_guest": 864,
+    "nat_peer_suppressed": 0
+  },
+  "cleanup": {
+    "transport_peer_observer_exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true,
+    "qmp_nat_guard_and_channel_removed": true,
+    "SSH_after_cleanup": true
+  },
+  "limits": [
+    "UDP discovery/status/beat observation only; no TCP library-query coverage",
+    "No master/SYNC or reconnect acceptance in this scope",
+    "No captured audio or continuous visibility proof",
+    "No physical AZ/CDJ or eight-source hardware claim",
+    "Later matrix must validate both loaded native/hub tracks, paused states, member8, eject and full four-local-deck operation"
+  ],
+  "local_evidence": {
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-peer-on.png": "98c81ee01a69e92b488db041c75302dc188447a1efeaecdab20f5ae2a45da252",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-peer-hub-browse.png": "1dfe1b7591b6bd48c03287ce97c3954c06083d36017ef92dedc9b956586dfcdd",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-peer-hub-playing.png": "d0256121061023f15743acee6bcbd658dbca95d080fe1311b05d2b1d897a87c3",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-playing-off-settled.png": "c2614ad3691c578745c78ef4dd2517b0456e91ba6d29c3925095d7c192101a43",
+    "local\\diagnostics\\link-mode-continuity\\integrated-v5-runtime.log": "7730a4031bb01f16918be07b878b7e9d85395a25c1648b2d6b4d3cca4eef19a3",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\peer.stdout": "13d099ea859969857b4409585699d2d82d1a8157c5d4670e0d96939b2a5e3c42",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\peer.stderr": "88a75ac3036795c821b6cbc3a9b892b91959f39681969741ae590864877957d4",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\wire.stdout": "6e7f7cbd63dcda29ee5f60d172c93a72d7ca6634c695361d2282192a7add9473",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\transport.stdout": "6478a13f7e576e738466dec196bb818f17daa233ff444db806c70a6b44ea588b",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\transport.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\ready.json": "d0a87be5b935a10e1a92ec0bbcc6c7135cef77ab28e4fd7b6f30c75f6476fc60",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\results.json": "568074cd1a991fef2882948b8454aa9851bb3506f3a4b43f7a4eff45a7c824c1",
+    "local\\diagnostics\\link-mode-continuity\\peer-v5\\privacy-audit.json": "a06207c15cda0c14bf8e89702d3e06df55252ab88b6abc13989b4e74b195ff91"
+  }
+}
