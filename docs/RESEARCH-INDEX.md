@@ -4,6 +4,8 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.3.2-publication.json | Published exact accepted continuity package, passing source CI, reproducible ELF and anonymous catalog/package/icon/source verification |
+| acceptance/usb-hub-support-0.3.2-index-pr-update.json | Draft index PR4 updated for0.3.2 with unchanged head, matching body read-back,12 tests and two-repository fetch check |
 | acceptance/usb-hub-support-link-continuity-az-delivery.json | Exact0.3.2 physical installation/approval/reload and user-reported loaded hub-track Link On/Off continuity acceptance |
 | acceptance/usb-hub-support-link-continuity-readiness-audit.json | Requirement-by-requirement candidate audit,94 source hashes,79 local evidence hashes and explicit pending physical limits |
 | LINK-MODE-CONTINUITY-PLAN.md | Active goal: preserve real hub source availability across native Link On/Off transitions; baseline investigation and candidate evidence gates |

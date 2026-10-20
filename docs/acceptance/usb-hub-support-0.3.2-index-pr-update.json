@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-20T16:59:39.949377+00:00",
+  "PR": "https://github.com/Kyle-Hosman/az-mods-index/pull/4",
+  "title": "Add Nacho AZ Mods (USB Hub Support)",
+  "state": "OPEN",
+  "draft": true,
+  "unchanged_head": "7985a4e873edda72e4d0ae68de6a217d9530e2ba",
+  "scope": "Description updated for published0.3.2 continuity,59 hooks, exact hashes, user-reported physical acceptance and bounded emulator evidence; PR still only adds repository URL",
+  "body_readback_matches": true,
+  "body_sha256": "7ddf3cb8c56a03bf2e9c59cf06fa3cde66d0f67a28ac43f7b57e87687fc4ffb0",
+  "review_comments": 0,
+  "reviews": 0,
+  "attached_checks": [],
+  "fresh_index_tests": 12,
+  "repository_fetch_check": "2 repositories,0 problems",
+  "limits": "Actual-CDJ, phase, eight-source hardware, long-session/cache and post-eject/replug observations remain explicit"
+}

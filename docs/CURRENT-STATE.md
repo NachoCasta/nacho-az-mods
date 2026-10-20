@@ -1,5 +1,27 @@
 # Current state
 
+## Latest publication: USB Hub Support0.3.2
+
+[Release0.3.2](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.2)
+is published and selected by the root catalog. Source/tag commit
+`b03fcf14e7c1c2d302bffb3c18c9a4215790d410`; catalog commit
+`6bb9348`. Both source CI jobs pass. A committed-archive rebuild reproduces the
+accepted ELF exactly. Anonymous official SDK download checks and independent
+catalog/package/member/icon/pinned-source checks pass. The physically accepted
+package bytes, including candidate manifest wording, are unchanged. Earlier
+release assets and tags are preserved. See the
+[publication record](acceptance/usb-hub-support-0.3.2-publication.json).
+
+[Index PR4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) remains open and
+draft with unchanged head7985a4e. Its body now covers0.3.2 continuity,59 hooks,
+exact hashes, manual physical acceptance, emulator coverage and remaining limits.
+Read-back matches;12 fresh index tests and the two-repository fetch check pass.
+No reviews, comments or attached checks were present. See the
+[PR update](acceptance/usb-hub-support-0.3.2-index-pr-update.json).
+Earlier unpublished/pending-publication statements below are chronological
+preparation history. Actual-CDJ, phase, eight-source hardware and long-session
+acceptance remain open.
+
 ## Continuity candidate installed on the physical AZ
 
 The user explicitly requested installation, exact pre-approval and reload.

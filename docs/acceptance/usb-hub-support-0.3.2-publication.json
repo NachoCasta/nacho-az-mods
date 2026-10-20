@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-10-20T16:59:05.531759+00:00",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.2",
+  "source_commit": "b03fcf14e7c1c2d302bffb3c18c9a4215790d410",
+  "catalog_commit": "6bb9348d75534e5b15b92b8a3bee3a07af0648e7",
+  "package_sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
+  "package_bytes": 416803,
+  "members": {
+    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+    "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+    "azmod.json": "7f354514b18bd123557925d9698312990931d0ef9be7abd834b82475848d6f83",
+    "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+    "usb-hub-support.so": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add"
+  },
+  "source_CI": {
+    "run": 39461751276,
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "anonymous_verification": {
+    "catalog": "0.3.2 selected",
+    "package": "exact accepted bytes",
+    "seven_members": "verified",
+    "icon": "exact bytes",
+    "pinned_source": "verified",
+    "official_SDK_download_check": "passed"
+  },
+  "rebuild_from_committed_archive": "Exact accepted ELF reproduced with pinned GCC7.5 and -fexceptions",
+  "hardware_acceptance": "User-reported manual loaded hub-track On/Off continuity; no audio capture, actual-CDJ, phase or expanded hardware claim",
+  "existing_assets_and_tags": "Preserved; only new0.3.2 assets/tag created"
+}
