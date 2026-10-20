@@ -1,0 +1,463 @@
+{
+  "scope": "Partial exact-artifact functional matrix; not a five-source or complete mode-transition acceptance",
+  "candidate": {
+    "version": "0.3.0",
+    "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+    "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+    "PID": 703,
+    "boot_id": "f80e0be9-921e-469a-9f81-52b8cdbf2ad1",
+    "normal_loader": true,
+    "hook_claims": 54,
+    "initrd_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09"
+  },
+  "fixture": {
+    "launch": "local\\diagnostics\\link-normal-loader\\boot-matrix-off\\launch.json",
+    "native_music_and_mods": "Protected combined music/MODS image on direct EHCI; guest enumerated it as USB2 sda1",
+    "combined_base_sha256": "6ead7e2edd88768a878d6a4e73e6087008e79a15b695a198d7a83191501fc3aa",
+    "hub": "All five protected COW library images attached to nested OHCI hub from power-on; root bus usb1, children1-1.1..5",
+    "runtime_mapping": [
+      "A source0 member7/slot3 sdb1",
+      "B source1 member7/slot7 sdc1",
+      "D source2 member8/slot3 sde1",
+      "C source3 member8/slot7 sdd1",
+      "E source4 member7/slot8 sdf1"
+    ],
+    "mapping_rule": "Runtime bind/server logs define this mapping; later regenerated discovery config changed ordering and is not substituted for the active source map"
+  },
+  "cold_mode_and_source_list": {
+    "mode": "Native UTILITY photographed PRO DJ LINK Mode Off before loads and after Off peer capture",
+    "visible": "Native USB2 Nacho Chips; private A7/3, E7/8, D8/3; MOD MENU",
+    "failed_gate": "Private B7/7 and C8/7 source rows absent despite five distinct native servers and acknowledged announcements; startup cause unresolved",
+    "independent_investigation": "Native USB2 remains present; neither private slot7 row is replaced with a borrowed native library slot"
+  },
+  "four_decks": {
+    "loads": [
+      "Deck1 private A content495 Algo más result0",
+      "Deck2 private E content1944 Are You That Somebody result0",
+      "Deck3 private D content1944 result0",
+      "Deck4 private D content1944 result0"
+    ],
+    "core_state": "LLLL",
+    "playback": "All four UI remaining clocks and waveforms advanced between matrix-four-playing-1.png and matrix-four-playing-2.png",
+    "remaining_first": [
+      "03:12",
+      "04:16",
+      "04:18",
+      "04:20"
+    ],
+    "remaining_second": [
+      "02:34",
+      "03:38",
+      "03:41",
+      "03:43"
+    ],
+    "limits": "No captured or human-confirmed audio. Later advancement occurred across the unexpected controller-loss boundary; cached playback is not continued backing availability. Only A, E and D loaded; no B/C load pass. Historical screenshot matrix-A495-B1944-loaded.png is misnamed: second source was E, not B"
+  },
+  "controller_loss": {
+    "kernel_events": [
+      "726.752925 OHCI Unrecoverable Error, disabled",
+      "726.753008 HC died; cleaning up",
+      "727.278647 irq23 nobody cared; subsequently disabled",
+      "727.283820 hub1-1 disconnect; all five child disks disconnect"
+    ],
+    "later_readonly_state": "QMP still lists all five attached virtual storage devices, but guest USB sysfs/partitions/mounts contain only native sda1; QMP presence alone does not establish guest availability",
+    "unplug_action": "No QMP device removal or physical unplug was requested during this boot",
+    "result": "Hub controller failed before Off peer capture and before On transition; no mode replay bug is established by absent source rows afterward",
+    "independent_review": "docs/acceptance/usb-hub-support-link-matrix-controller-loss-review.json"
+  },
+  "wire_privacy": {
+    "off_window": "matrix-off-peer-full-status.jsonl, guest922.81..953.11; all four decks private and cached after unexpected whole-hub controller loss",
+    "independent_result": "408 exact1152 statuses: deck1=108, deck2=116, deck3=92, deck4=92; all standard tuples zero, all11 known private location rows clean, selected private IP/content495/content1944 markers absent",
+    "on_window": "matrix-on-peer-full-status.jsonl, guest1227.73..1264.04; private deck1A495/deck2E1944 cached",
+    "limits": "Known-field and selected-marker audit only; not full semantic privacy of every byte"
+  },
+  "loaded_mode_transition": {
+    "native_action": "UTILITY Off to On confirmation while all four tracks loaded; decks3/4 were paused",
+    "observed": "Native On photographed; LLLL became LLEE and decks3/4 display LINK PLAYER; decks1/2 retained private tracks",
+    "source_result": "No private source rows after130seconds; controller and all backing disks had already disconnected at727seconds, so this is not a valid healthy-source replay test",
+    "return": "Native UTILITY On to Off confirmation completed; mode0 epoch3 logged"
+  },
+  "native_replacement": {
+    "action": "Native USB2 TRACK browser selected Algo más and loaded deck1, replacing private A495 with the same content495",
+    "result": "Native load-completed result0; USB2 source shown and real waveform/playback; separate full1152 capture matrix-native-same495-full-status.jsonl",
+    "independent_wire_observation": "Deck2 cachedprivate1944 remains masked; deck1 native auxiliary location present in all201 statuses, standard tuple initially zero50 then visible151 as1/2/type1/content495. Cause of initial zero prefix under review; no complete retirement acceptance transferred"
+  },
+  "peer_control": {
+    "handoff": "Peer3 requested master from native1 and obtained it in matrix-on-handoff capture",
+    "tempo_follow": "In matrix-on-handoff-follow, peer3 requested master from native2 and obtained it; synced native deck1 effective BPM changed70.53849 to125.99995",
+    "separate_attempt": "matrix-on-tempo-follow rolemaster attempt did not retain peer master; native1 followed native2 at70.53849. It is not counted as126BPM acceptance",
+    "limits": "Isolated software peer, no real CDJ, audio phase or physical network"
+  },
+  "native_instant_doubles": "A native long LOAD2 gesture with playing native deck1 did not change the target track in this bounded attempt. First helper failed to write a mixer frame; corrected repeated-native-frame attempt also showed no new load. User-flow Instant Doubles remains unverified; no diagnostic API was used on this supported artifact",
+  "restoration_and_shutdown": {
+    "settings": "Accidental MOD MENU selection enabled Stems during source navigation; restored Off through native UI and photographed. Link returned Off; deck1 SYNC toggled back Off",
+    "unload": "Both remaining tracks paused/cued and unloaded through native deck-header UNLOAD TRACK confirmations; EEEE and empty waveform photographed",
+    "shutdown": "Standard poweroff, kernel1876.531190 Power down; no running QEMU after exit"
+  },
+  "remaining": [
+    "Stable healthy-controller rerun of five-source/nativeUSB2 startup including private7/7 and8/7",
+    "Cold On and healthy loaded mode cycles",
+    "All-five independent load/isolation and individual/whole safe eject",
+    "Healthy-source queued reconnect/Instant Doubles user flow on exact supported artifact",
+    "Fresh mounted and safe-eject1152 privacy; fully classified native same-ID retirement",
+    "Requester5/6 collision and TCP admission/fd reuse",
+    "Physical4.4 recovery and real-CDJ/human audio acceptance"
+  ],
+  "local_raw_evidence": [
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-A495-B1944-loaded.png",
+      "bytes": 156238,
+      "sha256": "ef8813166070ec5dd1eaecc9fb9a4cadbb86335cde006349cf46bd8b9425aeb4"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-A495-selected.png",
+      "bytes": 294389,
+      "sha256": "95c9dde75c8fa8822a9af8e662dbcb71583f13723043eb56f02da0db4e058cb9"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-after-on-request-state.txt",
+      "bytes": 239794,
+      "sha256": "1613b111934b5c44e89cd92508f4629077fb105a7e9eb0ab0887a062257d6701"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-after-on-request-utility.png",
+      "bytes": 69415,
+      "sha256": "5e6a1ad6a01a224500d32e64201fea831c4787dbd87cd0e8a15452fafe8f1e9a"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-B1944-artist.png",
+      "bytes": 91804,
+      "sha256": "75d2878bd578ca0059360a1a30f4591a7b0fdc4841f767a9be6f14a33b9541ac"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-cold-mode-utility.png",
+      "bytes": 69716,
+      "sha256": "b89b216e19d6b9920d863137db7b8ec1672806d8610b299524277f5be1440b20"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-controller-loss.json",
+      "bytes": 75751,
+      "sha256": "c665ce8b5a409cb28c4e3b352629aa6ae080f10fa8f13a40b2b6a84effc0ceac"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-D-source-explicit.png",
+      "bytes": 93054,
+      "sha256": "42918c66cfcdc40e82911b0a1f98c3a1688d7d9669540d33b1f27368ec5aee8a"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-D495-selected.png",
+      "bytes": 119941,
+      "sha256": "e05b45d40664f969765405923a8b57a4cfdc9d21ee462c13de26c487c8793190"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-final-empty-state.txt",
+      "bytes": 342432,
+      "sha256": "680ec3113a76567a7d89b539a11542f5bc1c127d85e98988cb49d8d9551676d3"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-final-empty.png",
+      "bytes": 49230,
+      "sha256": "97ae615953ea6abab55db530d72ff8a1743a3501aa28fdc2efd68b060689b306"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-four-advance-state.txt",
+      "bytes": 183716,
+      "sha256": "9b35bd27cca812e7cb92f953e1dc565a893ac7e58ae4e46f72597c1e482a30a2"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-four-loaded.png",
+      "bytes": 146954,
+      "sha256": "17b5e5c8cae2729a44cb297844ade73288af2f9b9f071dab49f59d1b3f478c4e"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-four-playing-1.png",
+      "bytes": 153477,
+      "sha256": "1160e0fa9b0fb7da59c3f9adfcc0b3c9875fc08816a88b790069343c642a230b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-four-playing-2.png",
+      "bytes": 117054,
+      "sha256": "3f4a5b66f796206fc73377e95984b17dd1d983c77b9de58bd76e0ad91cb1779c"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-four-playing-state.txt",
+      "bytes": 145774,
+      "sha256": "3e9427f38b91418b3b006edf4db69802e0f972bb2a98aff2338f368e43ac73ab"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-missing-slot7-state.txt",
+      "bytes": 111992,
+      "sha256": "6a23e5a941d0fe7537cdeaba7900e5b341c1bcf91ada73741f8ff4cc5a67a58e"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-algo-selected-recentered.png",
+      "bytes": 159813,
+      "sha256": "e53a89ffabb9ee04aa4869fc7fa55043f44ae022bb038052a9219b6b4d1a57ea"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-algo-selected.png",
+      "bytes": 314201,
+      "sha256": "a33ebaf32a53d36a25bc022314894a2e12e28af35605e5196399b34ba444a75e"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-longload-retry-state.txt",
+      "bytes": 333699,
+      "sha256": "f939cd97e0b2d7dbec991f472ecb2f4b96b26796c16f0feb433e0920d0a290bc"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-longload-state.txt",
+      "bytes": 331274,
+      "sha256": "437a10606d02f873241e45462f89b0a5beb94b147a0612c8cc1b2e5fa1fbfbaf"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-longload2-retry.png",
+      "bytes": 96330,
+      "sha256": "ed9eaeb7b548b40884630bdf5f73d3be663b8005a8e4ab69bc58954b64272321"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-longload2.png",
+      "bytes": 95295,
+      "sha256": "0a9a0f00208aabc4dd896429187e1ac738ceda5b1abae606194d22fb1536ad95"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-peer-controls-state.txt",
+      "bytes": 322333,
+      "sha256": "e682b0243a16d8c3016fdfb581484807a1974ae1648130a1ff0736646361fdd7"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-capture-state.json",
+      "bytes": 588,
+      "sha256": "15a1020080a3f65dac6be3937f9415641e1c84febbe886ff68b8a8e47046af7f"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-full-status.jsonl",
+      "bytes": 1451217,
+      "sha256": "89626854f6b016feb297fa04d0c0233f8759ec89673556632cbe7d5d4c8bb177"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-loaded.png",
+      "bytes": 86274,
+      "sha256": "60da5fec37bbbcdebf178985df60f25685cdb0df372ebcfb1c19804cc016aa43"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-peer.jsonl",
+      "bytes": 37965,
+      "sha256": "2fa4372747457ccd32cbdb8efb7bed55efbee29c4a1502ea4d973598a41fc365"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-peer.stderr",
+      "bytes": 905,
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-track-list-settled.png",
+      "bytes": 314678,
+      "sha256": "c6da5659875d7ef5e6b9b2551469c66608b359d7de129e33d95839a85e715acc"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-track-list.png",
+      "bytes": 51690,
+      "sha256": "e88170b2ba1ac308caf7bc1204071293a7443cf92300e6e2a73a8fc5af93e7a4"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-network-transport.stderr",
+      "bytes": 178,
+      "sha256": "d1c64dc657ae860084cd8d6adeb2e87f624053ec2aad2542d8d976ddac226d94"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-next-track-selected.png",
+      "bytes": 124882,
+      "sha256": "8ef8e58f8c0ad5968b7c8b89b7474fdda1c207d9888fcc89d069f19d4fa9afe2"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-after-peer-utility.png",
+      "bytes": 69702,
+      "sha256": "b40804044868218ae4b8157b7b8d04dc31024c17f2674b0fbf5d7c3345ebf1f8"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-first.txt",
+      "bytes": 7076,
+      "sha256": "d7ea720bcaea18730967892afee61ba0ea890be6e0385ba1acc882bb08cd377b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-first.txt.ssh-ready.txt",
+      "bytes": 50,
+      "sha256": "60f6ba08a0309fb9a8f8f84eea1f8e10f224dab9d4e2f7f8a1954deaab4d16f7"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-peer-capture-state.json",
+      "bytes": 606,
+      "sha256": "17049b81b7caf679472a5d2efcee0a45e0580be7a10c2d1d7b62366d6829fbac"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-peer-full-status.jsonl",
+      "bytes": 1953203,
+      "sha256": "19542ef56da1128de5d01a473ba3a2ec585901e1e0a0ad51053a8706d120a6a7"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-peer-peer.jsonl",
+      "bytes": 43078,
+      "sha256": "df67d9c7ad6972746570f5bbd4c6e5f8e4cb7226b48769582d7435d4d68f7770"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-peer-peer.stderr",
+      "bytes": 2025,
+      "sha256": "75db956dee048d558d27c8ef4ae32075e62d42d1e910619ce6b895d832b61e20"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-off-peer-playing.png",
+      "bytes": 117600,
+      "sha256": "6c3fb2a7f651618a7eda4ec95a7bd8ca83758db2bafaff77a76f65769f2bf839"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-capture-state.json",
+      "bytes": 634,
+      "sha256": "8f3904a39df842a531c21ae6c1eac0d4e38f5b901471ec9103cdb2e61236b268"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-capture-state.json",
+      "bytes": 599,
+      "sha256": "fc8c957ab417e172593caf60e7999824fc4ea28ad2e2203d192e4860b70e0a0a"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-full-status.jsonl",
+      "bytes": 2421704,
+      "sha256": "dec3425998e2b1c0538cc04b02bd7b009b6f2c1c951e40ee0515162eec6cb6ec"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-peer.jsonl",
+      "bytes": 78931,
+      "sha256": "2ad185fa5a1df221d0564b14e416f5c43a23295f6d3bf8f66a3d736576e9763b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-peer.stderr",
+      "bytes": 1067,
+      "sha256": "104bca7bc1cbe66719e4157051688b9b5e13b5790a769ea87d7c5e8faf989ab4"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-full-status.jsonl",
+      "bytes": 1768774,
+      "sha256": "9deb704357803e2000cb54eb4004489f77b3bbb733c2cdebfe21a28331b731dc"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-peer.jsonl",
+      "bytes": 53737,
+      "sha256": "1c2c908a2567658a4f5308f3679e7fa32227ea14375ed61b1c9a19632a99defd"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-peer.stderr",
+      "bytes": 905,
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-peer-capture-state.json",
+      "bytes": 604,
+      "sha256": "76255cbc2293bbac753b7306654d51308f1feadbbdce5ca81e3725cae8ffc867"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-peer-full-status.jsonl",
+      "bytes": 1471222,
+      "sha256": "211dc0a3df631fe9569db2c75dde735a6ecfbb1b138e0d260b262c2120a654a6"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-peer-peer.jsonl",
+      "bytes": 35199,
+      "sha256": "69641c8f11d2f6b2cf4d1a8ea4580536d17d57d66689a74391cb3c697c0637d6"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-peer-peer.stderr",
+      "bytes": 905,
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-request-dialog.png",
+      "bytes": 73324,
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-settled-state.txt",
+      "bytes": 246904,
+      "sha256": "2181a70a115422664be9342f2df3d17889a8221c26d8390782fe56589637571e"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-source-early.png",
+      "bytes": 51291,
+      "sha256": "a8bf3cb348858b525231edfe029d728ce3e3b48c049a616e0f415cb2b7c6851b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-source-settled.png",
+      "bytes": 51291,
+      "sha256": "a8bf3cb348858b525231edfe029d728ce3e3b48c049a616e0f415cb2b7c6851b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-tempo-follow-active.png",
+      "bytes": 95517,
+      "sha256": "cb7868491d4cbe330fa06832c0821dec418c221d0869cb2a72e3dec1ae075313"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-tempo-follow-capture-state.json",
+      "bytes": 599,
+      "sha256": "62e1f1be40267d40356a3e338722e0eaccc324a56b401c9f8d75d523531ca137"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-tempo-follow-full-status.jsonl",
+      "bytes": 2561723,
+      "sha256": "79a1c1e804a52b8b5a5f10df7760db6faf7f6e6794b08120188992dc7177fa0f"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-tempo-follow-peer.jsonl",
+      "bytes": 83156,
+      "sha256": "5c5fbbb0a0413ee702274a45b8a27acd34e6d0a749c688b01f3968bb59e4339f"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-tempo-follow-peer.stderr",
+      "bytes": 1050,
+      "sha256": "384883c5836153f572df5975fb1dd43c9dd9c917ba113f34f92ea36da934f2d8"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-restore-stems-page.png",
+      "bytes": 124882,
+      "sha256": "8ef8e58f8c0ad5968b7c8b89b7474fdda1c207d9888fcc89d069f19d4fa9afe2"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-return-off-dialog.png",
+      "bytes": 73967,
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-source-map-current.png",
+      "bytes": 119982,
+      "sha256": "4541d8083ca6f7bd224e15c06d5fea1ca66859f171248746fc6864971a818eb7"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-stems-restored-off.png",
+      "bytes": 134381,
+      "sha256": "f85b038536996505dd8a0908fed2911c979276f7e9d3d690eeb8b78b8859e096"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-third-loaded.png",
+      "bytes": 156238,
+      "sha256": "ef8813166070ec5dd1eaecc9fb9a4cadbb86335cde006349cf46bd8b9425aeb4"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-unload1-dialog.png",
+      "bytes": 131128,
+      "sha256": "3b19f63d2b51202b3470c3cf6af17e1a531650cb8c9867d3714dbaa14d0fc4ad"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/boot-matrix-off/launch.json",
+      "bytes": 12116,
+      "sha256": "7850dccd36fcaeb0afe17171866b8dc0114c3c894dbff8ccbb3165dd6f81fa72"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/boot-matrix-off/serial.log",
+      "bytes": 442556,
+      "sha256": "521dba85dd8f292f39adae00016ca33ac064c41cf78f1da84a8047f6d312fe06"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/combined-usb/provenance.json",
+      "bytes": 1169,
+      "sha256": "786d0c4163a6505782bf7302b7ef33e26d0c3d26ee298fbaed4c27eb74035719"
+    }
+  ]
+}

@@ -90,6 +90,9 @@ static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 static FILE *logf;
 static void patch_slot(int fd, uint8_t *p, size_t n);
 static void dump(const char *dir, int fd, const void *p, ssize_t n);
+#include "link-socket-registry.h"
+#include "link-private-requester.h"
+static struct link_socket_registry probe_sockets=LINK_SOCKET_REGISTRY_INIT;
 static unsigned char traced[4096];
 static unsigned char setup_wait[4096]; /* setup sent, server number not yet read */
 static int target_of_fd[4096];
@@ -97,7 +100,11 @@ static void fix_setup_reply(int fd, uint8_t *p, ssize_t r);
 static void note_setup(int fd, const uint8_t *p, size_t n);
 static void note_srv_read(int fd, ssize_t r, void *lr);
 static int hub_slot_code(int player, int slot);
+static int probe_cached_status_private(const uint8_t *,size_t);
+static int probe_message_allowed(uint64_t message,int player);
+static uint64_t probe_dispatch(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static void hub_mount_poll(void);
+static void probe_mode_reset_sources(time_t *,int *);
 
 static ssize_t (*real_sendto)(int, const void *, size_t, int, const struct sockaddr *, socklen_t);
 static ssize_t (*real_recvfrom)(int, void *, size_t, int, struct sockaddr *, socklen_t *);
@@ -201,6 +208,7 @@ static void send_keepalive(struct fake *f) {
 }
 
 /* The deck's own status as template, turned into "player N, idle, USB loaded". */
+#include "link-status.h"
 static void send_status(struct fake *f) {
     uint8_t st[2048];
     pthread_mutex_lock(&lock);
@@ -208,7 +216,7 @@ static void send_status(struct fake *f) {
     memcpy(st, tmpl, n);
     unsigned char defaults[8];memcpy(defaults,hub_default_settings,8);
     pthread_mutex_unlock(&lock);
-    if (!n) return;
+    if (!hub_status_make_idle(st,(size_t)n)) return;
 
     memset(st + 0x0b, 0, 0x14);
     memcpy(st + 0x0b, MODEL, strlen(MODEL));
@@ -218,6 +226,11 @@ static void send_status(struct fake *f) {
     memset(st + 0x28, 0, 3);
     st[0x6a] = 0x04; st[0x6f] = 0x00; st[0x73] = 0x04; st[0x75] = 0x01; st[0xb7] = 0x01;
     memcpy(st + 0x7c, "9.99", 4);
+    unsigned own_slots=0;
+    for(int i=0;i<nfakes;i++)
+        if(fakes[i].player==f->player && fakes[i].present)
+            own_slots|=1u<<fakes[i].slot;
+    if(!hub_status_own_media(st,(size_t)n,own_slots))return;
     /* A local deck template is transport framing, not this peer's preferences.
      * Each media slot owns its exported settings; never rebroadcast other decks. */
     hub_settings_clear_foreign(st,(size_t)n,defaults);
@@ -268,7 +281,7 @@ static void media_lookup(unsigned id) {
         for (int pass=0;pass<2;pass++) {
             if (pass) {
                 unsigned player=id>>8;
-                if (player<3 || player>4) break;
+                if (player<7 || player>8) break;
                 *(uint64_t *)info=((uint64_t)(0x100|(id&255))<<32)|((player-1)<<8)|2;
             }
             uint64_t fields[3]={0};
@@ -360,6 +373,20 @@ ssize_t sendto(int fd, const void *buf, size_t n, int flags, const struct sockad
         dump(">", fd, tmp, n);
         return real_sendto(fd, tmp, n, flags, to, tl);
     }
+    if (!f && a && (ntohl(a->sin_addr.s_addr)>>24)!=127 &&
+        ntohs(a->sin_port)==50002 && n==1152) {
+        uint8_t external_status[1152];
+        memcpy(external_status,buf,n);
+        int private_locations=hub_status_hide_private_locations(external_status,n);
+        if (probe_cached_status_private(external_status,n) &&
+            hub_status_hide_source(external_status,n,external_status[0x28],external_status[0x29]))
+            return real_sendto(fd,external_status,n,flags,to,tl);
+        for (int source=0;source<nfakes;source++)
+            if (hub_status_hide_source(external_status,n,fakes[source].player,fakes[source].slot)) {
+                return real_sendto(fd,external_status,n,flags,to,tl);
+            }
+        if(private_locations) return real_sendto(fd,external_status,n,flags,to,tl);
+    }
     if (!f) return real_sendto(fd, buf, n, flags, to, tl);
     const uint8_t *d = buf;
     static uint32_t seen[64];
@@ -401,39 +428,14 @@ static void fix_source(struct sockaddr *sa, socklen_t len) {
     struct sockaddr_in *a = (struct sockaddr_in *)as_in(sa, len);
     if (!a || a->sin_addr.s_addr != htonl(INADDR_LOOPBACK)) return;
     struct fake *f = fake_by_port(a->sin_port);
-    if (f) a->sin_addr = f->ip;
+    if (f) a->sin_addr.s_addr = hub_peer_ips[f->player-7];
 }
 
-ssize_t recvfrom(int fd, void *buf, size_t n, int flags, struct sockaddr *from, socklen_t *fl) {
-    ssize_t r = real_recvfrom(fd, buf, n, flags, from, fl);
-    if (!lf_runtime_ready()) return r;
-    if (r>0 && from && fl && foreign_link_packet(buf,(size_t)r,from,*fl)) {
-        errno=EAGAIN; return -1;
-    }
-    if (r > 0 && from && fl && nfakes) fix_source(from, *fl);
-    return r;
-}
-
-ssize_t recvmsg(int fd, struct msghdr *m, int flags) {
-    ssize_t r = real_recvmsg(fd, m, flags);
-    if (!lf_runtime_ready()) return r;
-    if (r>0 && m && m->msg_name) {
-        unsigned char prefix[10]; size_t copied=0;
-        for (size_t i=0;i<m->msg_iovlen && copied<sizeof prefix;i++) {
-            size_t take=m->msg_iov[i].iov_len;
-            if (take>sizeof prefix-copied) take=sizeof prefix-copied;
-            memcpy(prefix+copied,m->msg_iov[i].iov_base,take); copied+=take;
-        }
-        if (foreign_link_packet(prefix,copied,m->msg_name,m->msg_namelen)) {
-            errno=EAGAIN; return -1;
-        }
-    }
-    if (r > 0 && m && m->msg_name && nfakes) fix_source(m->msg_name, m->msg_namelen);
-    return r;
-}
+#include "link-udp-ingress.h"
 
 int connect(int fd, const struct sockaddr *to, socklen_t tl) {
     if (!lf_runtime_ready()) return real_connect(fd,to,tl);
+    link_socket_forget(&probe_sockets,fd);
     if (fd >= 0 && fd < 4096) traced[fd] = 0; /* a reused fd number is a new connection */
     const struct sockaddr_in *a = as_in(to, tl);
     struct fake *f = a ? fake_by_ip(a->sin_addr) : NULL;
@@ -448,7 +450,11 @@ int connect(int fd, const struct sockaddr *to, socklen_t tl) {
         /* experiment: send it to EP147's own server on the same port */
         struct sockaddr_in lo = *a;
         lo.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+        struct link_socket_token ownership=link_socket_begin(&probe_sockets,fd,f->player);
         int r = real_connect(fd, (void *)&lo, sizeof lo);
+        int connect_errno=errno;
+        link_socket_finish(&probe_sockets,ownership,r==0 || connect_errno==EINPROGRESS);
+        errno=connect_errno;
         if (fd >= 0 && fd < 4096) { traced[fd] = 1; target_of_fd[fd] = f->player; }
         lf_log("TCP connect for player %d port %d -> loopback: %d (errno %d)", f->player, ntohs(a->sin_port), r, r ? errno : 0);
         return r;
@@ -506,9 +512,7 @@ static void patch_slot(int fd, uint8_t *p, size_t n) {
     const char *e = getenv("LINKFAKE_SLOT"), *rq = getenv("LINKFAKE_REQ");
     /* Multiple virtual peers loop into one native DataStream. Its server-side
      * communicators are keyed by requester number, so each peer needs one. */
-    int requester=rq ? atoi(rq) : 0;
-    if (requester && getenv("LINKFAKE_PEER_REQUESTERS") && fd>=0 && fd<4096 && target_of_fd[fd]>=3)
-        requester+=target_of_fd[fd]-3;
+    int requester=fd>=0 && fd<4096 ? probe_requester_for_player(target_of_fd[fd]):0;
     /* LINKFAKE_REQ=<n>: also present the requester as player <n>, in the setup message
      * (10 00 00 ... 11 00 00 00 01) and in the DMST D byte */
     if (rq && n >= 32 && p[10] == 0x10 && p[11] == 0x00 && p[12] == 0x00 && p[22] == 0x11 && p[26] == 0x01)
@@ -650,6 +654,8 @@ int close(int fd) {
 #endif
     static int (*real_close)(int);
     if (!real_close) real_close = dlsym(LF_NEXT, "close");
+    link_socket_forget(&probe_sockets,fd);
+    probe_udp_forget(fd);
     if (fd >= 0 && fd < 4096) srv_fd[fd] = 0;
     if (fd >= 0 && fd < 4096 && traced[fd]) { traced[fd] = 0; lf_log("tcp fd %d closed", fd); }
     return real_close(fd);
@@ -812,6 +818,7 @@ static uint64_t h_slot2sdid(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint
 /* FUN_00ef05c8(conn): reads one dbserver message, returns a 0x40 B message object that
  * FUN_00ef8258 hands to conn[2]->vtable[+0x10](msg, conn[1]) */
 static fn8 o_dbparse;
+static uint64_t probe_parse(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static uint64_t h_dbparse(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e, uint64_t f, uint64_t g, uint64_t h) {
     uint64_t r = o_dbparse(a, b, c, d, e, f, g, h);
     static int count;
@@ -863,7 +870,7 @@ static uint64_t h_dispense(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint6
                    *(uint8_t *)(s + 0xd0), *(uint8_t *)(s + 0xd1));
         }
     }
-    return o_dispense(a, b, c, d, e, f, g, h);
+    return probe_dispatch(a, b, c, d, e, f, g, h);
 }
 /* FUN_00e5e7d8(provider, LocalMediaID*): media registry lookup */
 static fn8 o_mlookup;
@@ -958,6 +965,8 @@ static void probe_install(void) {
     if (getenv("LINKFAKE_PRIVATE_TAG_CACHE")) hub_tag_cache_install();
     if (getenv("LINKFAKE_TRACE_DB_CACHE")) o_db_cache_query=make_hook(0x12552e0,h_db_cache_query);
 #ifdef LF_COMMUNITY
+    /* One native trampoline serves logging and private message ownership. */
+    o_dbparse=make_hook(0xef05c8,probe_parse);
     o_mlookup=make_hook(0xe5e7d8,h_mlookup);
     o_dispense=make_hook(0x7d6e28,h_dispense);
     if (getenv("LINKFAKE_BROWSER_GUARD")) {
@@ -1058,7 +1067,7 @@ static int linkfake_load_config(void) {
                 continue;
             }
             if (parsed>=MAX_FAKES) continue;
-            static const int players[]={3,3,4,4,3,4,3,4};
+            static const int players[]={7,7,8,8,7,8,7,8};
             static const int slots[]={3,7,3,7,8,8,2,2};
             f->player=players[parsed]; f->slot=slots[parsed];
             if (!hub_peer_ips[0] && !hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),hub_peer_ips)) {
@@ -1066,11 +1075,11 @@ static int linkfake_load_config(void) {
                  * normal poll without publishing unusable fixed-subnet peers. */
                 continue;
             }
-            struct in_addr peer={.s_addr=hub_peer_ips[f->player-3]};
+            struct in_addr peer={.s_addr=htonl(0x7f4d0000u | (unsigned)f->player)};
             if (!inet_ntop(AF_INET,&peer,ip,sizeof ip)) continue;
         }
         if (parsed>=MAX_FAKES) continue;
-        if (f->player<3 || f->player>4 || (f->slot!=2 && f->slot!=3 && f->slot!=7 && f->slot!=8)) {
+        if (f->player<7 || f->player>8 || (f->slot!=2 && f->slot!=3 && f->slot!=7 && f->slot!=8)) {
             lf_log("invalid player/slot in config"); continue;
         }
         if (inet_pton(AF_INET,ip,&f->ip)!=1) continue;
@@ -1089,6 +1098,7 @@ static int linkfake_load_config(void) {
             close(f->sock); continue;
         }
         f->port=address.sin_port;
+        probe_udp_sender_add(f->sock,f->player);
         memcpy(&fakes[parsed],f,sizeof *f);
         lf_log("player %d slot %d at %s serves %s",f->player,f->slot,ip,f->dir);
         parsed++;

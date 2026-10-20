@@ -1,0 +1,42 @@
+{
+  "scope": "Emulator normal-framework setup activation; not cold-boot recovery acceptance",
+  "candidate_version": "0.3.0",
+  "package_sha256": "f6c43ca830bfb2a7935b08720bb211d9955aa95729c3519199f792df615433a7",
+  "elf_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "6.6.138-dirty",
+  "normal_native_process_pid": 22891,
+  "inherited_child_pid": 23293,
+  "systemd_service_main_pid": 22765,
+  "forced_core_result": "loaded 0.3.0 on ep147-9e9454e357389ece (53 hooks)",
+  "workers_observed": ["HubMount", "HubTransport"],
+  "environment": {
+    "AZHUB_EJECT_TEST_PAUSE_MS": "absent",
+    "all_AZHUB_prefix_variables": "absent in both main process and inherited child"
+  },
+  "deck_state": "EEEE; no loaded tracks during installation or restart",
+  "activation": [
+    "Exact seven package members copied to the actual mods USB only; hashes verified",
+    "Legacy hub-libraries 0.1.4 removed through Community Mods UI and unloaded by UI Reload now",
+    "Supported framework enable usb-hub-support and apply IPC selected and staged the package",
+    "UI displayed New mod found: allow?; Allow pressed, then UI Reload now",
+    "Internal persistent staging and approval were performed by the normal framework"
+  ],
+  "normal_loader": {
+    "marker": "stick",
+    "EP147_unit": "normal EP147.service; no kernel mask or transient diagnostic replacement",
+    "agent_internal_file_edits": false,
+    "agent_process_memory_writes": false,
+    "firmware_loader_sha256": "51e0cdcd7379cefd39423e3d3067ede0d10f490c0619f3bb338327e0c5ae0498",
+    "effective_cached_and_USB_loader_sha256": "089b1f521367c6beeb5c984482ce598497fab39bdc42e8a7f50e050f48cc243a"
+  },
+  "local_evidence": "local/diagnostics/link-normal-loader/setup-activated-state.txt",
+  "local_evidence_sha256": "db0fe9f09b5a30486a618c56505c8abe5c42632a72573acd42f5417b02bcd467",
+  "local_screenshots": "gitignored local/diagnostics/link-normal-loader/setup-*.png",
+  "automatic_review": "A direct SDK-documented USB config append was rejected as bypassing managed activation. It did not run. Supported framework IPC succeeded instead; full explanation retained in local/diagnostics/link-normal-loader/activation-review.txt.",
+  "limits": [
+    "Inherited child mapping does not establish a second initialization",
+    "Setup used supported reloads; independent present/absent cold boots remain separate tests",
+    "No hub source, packet privacy, native replacement, audio-phase or physical hardware acceptance from this setup step"
+  ]
+}

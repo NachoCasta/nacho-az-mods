@@ -1,0 +1,144 @@
+{
+  "scope": "Bounded native-input Instant Doubles gesture evidence on the logging diagnostic; not supported-artifact or stale-request cancellation acceptance",
+  "diagnostic_ELF_sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+  "diagnostic_package_sha256": "409a3f7557095eb83d34b5640e25b47609c78225bd987782d53db1c21c9e0613",
+  "PID": 20983,
+  "hook_claims": 55,
+  "runtime_record": "docs/acceptance/usb-hub-support-link-slot7-diagnostic-runtime.json",
+  "method": {
+    "input": "Hold target deck2 BEAT SYNC for1.5guest seconds using repeated native ERP frames in one SSH connection, then release the active ERP bus; preserve mixer levels/encoder by leaving the mixer untouched",
+    "scope": "Ordinary native input only. No direct native API caller, process memory write, async marker or altered firmware/core",
+    "source_condition": "Source deck1 loaded and playing; target2 empty before each accepted attempt",
+    "double_LOAD": "Prepared in helper but not exercised. Earlier long-LOAD attempts do not test the documented Instant Doubles gesture",
+    "type5_logging_limit": "The diagnostic does not log the numeric request option type or accepted-operation epoch. The documented gesture, copied nonzero position and native successful load callbacks establish observed Instant Doubles behavior, not an independent numeric-type trace"
+  },
+  "native_source": {
+    "source": "Native USB1 music+mods sdb1, Algo más content495",
+    "first_attempt": "Held-SYNC input completed; target copied title, source and exact UI remaining02:55.868. Helper then returned1 because an unnecessary mixer-release write in EXIT trap returned Invalid argument; this failure is preserved",
+    "source_preservation": "The correction was already applied when the preservation request arrived. Original helper reconstructed from its exact original tool patch and explicitly labeled reconstructed; it is not represented as a contemporaneous source snapshot",
+    "clean_repeat": "Target2 normally unloaded first. Held-SYNC input at guest1250.94..1252.46 returned0/no stderr, ERP release completed. Both decks show Algo más/nativeUSB1 at identical02:34.136 and matching waveform position",
+    "native_callback": "Target controller0xfffee164ae00 load-completed result0 after the new operation"
+  },
+  "private_source": {
+    "source": "Private A source0/member7/slot3, actual physical sdc1 at3-2.1, Algo más content495",
+    "before": "PrivateA loaded successfully on source deck1 and playing; target2 normally unloaded, core LEEE; screenshot shows LINK7/USB1 and03:17.700 source remaining",
+    "input": "One connection held-SYNC at guest1390.78..1392.29, return0 and empty stderr",
+    "after": "Both deck headers show private LINK7/USB1; both titles Algo más and identical02:58.596 with matching waveforms",
+    "native_origin_and_completion": "source0 admitted on both controller0xfffee164a000/deck1 and0xfffee164ae00/deck2; result0 on both, demonstrating private provenance survived the native gesture/admission path"
+  },
+  "health": "All seven guest partitions/mounts remained healthy after native and private gesture trials: actual direct1-1/2-1 plus five nested3-2.1..5, no controller-fault strings",
+  "cleanup": "Both decks cued/paused, then unloaded using native deck-header UNLOAD TRACK confirmations. Native unload callbacks state0/mode1 recorded; frozen final-state samples report core EEEE at guest1452.92 and1455.96; empty waveform screenshot retained. Link mode and USB presence were unchanged.",
+  "limits": [
+    "No human audio or audio-phase acceptance",
+    "No stale/reconnect cancellation or newer-operation race exercised by these gesture trials",
+    "Final uninstrumented supported candidate must repeat the verified gesture",
+    "Unresolved private slot7 source-row defect remains separate"
+  ],
+  "raw": [
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/native-id-gesture.py",
+      "sha256": "215140b891658264df7e11c749a93511b956a2c81d56d8c8854876cf3da22ecd",
+      "bytes": 2796
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/native-id-gesture-first-attempt-reconstructed.py",
+      "sha256": "2bb141091c8d09bed33ee829981fd2e9ddd656a753fe20e5f147b2619de5b465",
+      "bytes": 2394
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/native-id-helper-preservation.json",
+      "sha256": "e3b24b02af6b437c905725b5b678c11f27d2d444301ca4e3d7abc2d6b2478953",
+      "bytes": 608
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-algo-for-id.png",
+      "sha256": "5f04c00cbcedb495edfff200f430d54780acd9415cbcef83498bddda7c9cc093",
+      "bytes": 293969
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-id-source-playing.png",
+      "sha256": "3d519c811251bce987fe815a6e041cc1acf2f65acd2ee8cae8355270fb24da08",
+      "bytes": 93066
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-input.json",
+      "sha256": "d75aab8d224199da2c3b17f49d9345bb37a00924d70c2b16fc956cc72a906097",
+      "bytes": 364
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-result.png",
+      "sha256": "089990a439cf5aa9ffe163aaa050952b0b69ad598753fbc6d4ae0c35f52bcc29",
+      "bytes": 107856
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-state.txt",
+      "sha256": "89e3bfb9aa5b3a2a3b4919aff981e89fa32b369331e9380dbf9ab120be8b43ca",
+      "bytes": 171583
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-id-repeat-before.png",
+      "sha256": "9eef4accc68753b83057217ebb022b2a88faa1bab48643fad7c9a50a4fa757f4",
+      "bytes": 92894
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-input.json",
+      "sha256": "3baa620a58d6e15c341332dd8b53d6da893a0e902c54ad1e8ae36efc5b4cffb5",
+      "bytes": 306
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-result.png",
+      "sha256": "45818ffebef4c187a9f6f52f04f1b1aa6975d413dee410a3a737cb4caa5d460c",
+      "bytes": 107332
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-state.txt",
+      "sha256": "f82a94d1cfc58820bd88d7ba455b760a4a8aa2de5aa1fcd4a944b686a0e82347",
+      "bytes": 192093
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native-id-gesture-health.json",
+      "sha256": "4d3210441fafe4a6f3dda7acab716a27d55645b75e8b6976af306373241374f9",
+      "bytes": 98888
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-private-algo-for-id.png",
+      "sha256": "33bc5b0aa9278e8e6eba84646401a1eb077ec838cae0af71f410cf341b9af86d",
+      "bytes": 315826
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-private-id-before.png",
+      "sha256": "146485aab9db8fba99d7c36c11600fdc3aa61aa3914b7ef4f954a05ce3f3730f",
+      "bytes": 92630
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-private-held-sync2-input.json",
+      "sha256": "494c79889797cbf2eceaba24696bbf8243c4c1bd7632d25f548a2400badf810b",
+      "bytes": 306
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-private-held-sync2-result.png",
+      "sha256": "4376ac628fbb8f00c7ce861b2f652de6b90079d9b2624a9ef8f706f3569fdb9e",
+      "bytes": 106003
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-private-held-sync2-state.txt",
+      "sha256": "e561e7e7391feab6237db404cd3f1dc785d85d5a1e91241fe88db4761a5ecfd3",
+      "bytes": 219658
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-private-id-gesture-health.json",
+      "sha256": "aa829d39a7be2cec7f7c8df3fbe594514aa7e7244aacae45bad9793f38fbf580",
+      "bytes": 98888
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-id-final-empty.png",
+      "sha256": "961593742921f50fd24db0e642640da918293a6301619f6208010e3e2ff5e2f6",
+      "bytes": 49231
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-id-final-empty-state.txt",
+      "sha256": "8a149cebcfabafb376aa206a35b9164faa2a63100762b397c026be0d659fcb4e",
+      "bytes": 228683
+    }
+  ]
+}

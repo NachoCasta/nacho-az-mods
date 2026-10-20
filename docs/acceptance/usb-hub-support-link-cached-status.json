@@ -1,0 +1,106 @@
+{
+  "timestamp_utc": "2026-10-19T01:56:06.452667+00:00",
+  "scope": "Cached hub source prefix masking, isolated emulator only",
+  "binary_sha256": "3bc529c1c86959aed5109c5c18f4210132bdb62d57044e918ffaf91f8bf73c77",
+  "pid": 126814,
+  "wire_references": [
+    {
+      "player": 0,
+      "slot": 0,
+      "track_type": 0,
+      "content_id": 0,
+      "packets": 1067
+    }
+  ],
+  "synced_effective_bpm": {
+    "125.99995": 518
+  },
+  "peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 4527606355462,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "ejected_state": {
+    "pid": 126814,
+    "clock_ms": 6554665,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 2,
+        "generation": 24283,
+        "devnum": 11
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 23937,
+        "devnum": 9
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 24110,
+        "devnum": 10
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 44.182,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "validation": [
+    "Actual experimental adapter passed portable ASan/UBSan tests with a simulated native interface and ledger",
+    "Production portable suite passed plain and ASan/UBSan",
+    "Pinned Linaro ARM64 build completed without warnings",
+    "All three fixtures reached safe state; deck2 cached playback advanced while peer session remained active",
+    "All observed AZ status standard source tuples and content IDs were zero"
+  ],
+  "limits": [
+    "No full 1152-byte status privacy audit",
+    "Same-content native replacement tested only in portable adapter model, not native integration",
+    "Failed replacement and queued packet/load races remain unresolved",
+    "No audio capture, physical AZ test or real CDJ acceptance",
+    "Existing ingress, socket lifetime and handshake collision gates remain open"
+  ],
+  "local_evidence_sha256": {
+    "cached-status-peer.jsonl": "942541a1f3745cdf6d68af64f887b641adffceb7c3c6549ce76562102087f7e0",
+    "cached-status-wire.jsonl": "65dba6c3d9f0fd07159bd6144b12c11262500f7866533325b57559019cde89a4",
+    "cached-status-final.log": "131c9be07fdb8b7bff40f33f523b469dee5038adc9d9145683c1808d59223130",
+    "cached-status-ejected.json": "8789b9a80dfb7073de60ef6a939b26c95bb645dfd4c31794695902da76340b2c",
+    "cached-status-host-tests.log": "59afa031654216989ab05bc6561fdcb3a08c8b37e23610e7131749ba29f9233a"
+  }
+}

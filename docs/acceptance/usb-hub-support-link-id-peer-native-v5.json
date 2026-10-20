@@ -1,0 +1,294 @@
+{
+  "scope": "Exact supported v5 documented native-input Instant Doubles, attached-hub peer handoff/loss/reconnect and native same-content replacement; bounded emulator UI/protocol only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 848,
+  "boot_id": "bbd73fbd-c90b-46ff-8ace-4b2d28313642",
+  "instant_doubles": {
+    "native": "USB1 Aaliyah1944: documented heldSYNC2~1.51s copies both decks at04:15.247",
+    "private": "Private7/3 Algo495: heldSYNC2~1.52s copies both decks at03:12.403; source0 admitted both controllers and completed0",
+    "initial_negative": "First native gesture with source paused at cue did not copy; native log targetPlayerId.isValid() failed. Retained, not counted as pass. Retry explicitly selected deck2, waited for load completion and established playing source. No mod change between attempts."
+  },
+  "peer": "Player3 at192.0.2.2 obtains master from native1; native removes peer after stop atguest270.5239. Same peer reconnects and obtains master from native2. While connected, private8/7 content1944 loads onto deck1 and follows128 BPM. Both native and five hub backings remain mounted.",
+  "native_replacement": "Private8/7 content1944 replaced through native UI by USB1 content1944. First130 captured deck1 statuses masked during pre-input/loading interval; next189 expose native(1,3,1,1944) continuously. First valid native auxiliary location and first native standard tuple occur in SAME captured packet, with no auxiliary-native/standard-zero gap. Deck2 remains private and masked in266 statuses. This does not establish sub-packet latency or resolve predecessor timing by itself.",
+  "windows": [
+    {
+      "name": "fresh-private-id-handoff",
+      "full_statuses": 366,
+      "players": {
+        "2": 192,
+        "1": 174
+      },
+      "standard_tuples": {
+        "2": {
+          "(0, 0, 0, 0)": 192
+        },
+        "1": {
+          "(0, 0, 0, 0)": 174
+        }
+      },
+      "private_auxiliary_violations": 0,
+      "synced_tempo_samples": 47,
+      "peer_master_results": [
+        {
+          "event": "master_result",
+          "monotonic_ns": 1044738535422,
+          "peer_master": true
+        }
+      ]
+    },
+    {
+      "name": "same-player-reconnect-hub-load",
+      "full_statuses": 654,
+      "players": {
+        "2": 303,
+        "1": 351
+      },
+      "standard_tuples": {
+        "2": {
+          "(0, 0, 0, 0)": 303
+        },
+        "1": {
+          "(0, 0, 0, 0)": 351
+        }
+      },
+      "private_auxiliary_violations": 0,
+      "synced_tempo_samples": 425,
+      "peer_master_results": [
+        {
+          "event": "master_result",
+          "monotonic_ns": 1105729610162,
+          "peer_master": true
+        }
+      ]
+    },
+    {
+      "name": "native-same1944-replacement",
+      "full_statuses": 585,
+      "players": {
+        "2": 266,
+        "1": 319
+      },
+      "standard_tuples": {
+        "2": {
+          "(0, 0, 0, 0)": 266
+        },
+        "1": {
+          "(0, 0, 0, 0)": 130,
+          "(1, 3, 1, 1944)": 189
+        }
+      },
+      "private_auxiliary_violations": 0,
+      "synced_tempo_samples": 554,
+      "peer_master_results": []
+    }
+  ],
+  "limits": [
+    "No audio/phase or real-CDJ interoperability claim",
+    "Native simultaneous same-ID visibility passes this bounded replacement; historical predecessor zero-window negative remains preserved",
+    "No stale queued task cancellation or physical USB replacement in this record",
+    "Exact virtual root image and6.6 emulator only; physical4.4 recovery remains separate"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/fresh-private-id-handoff-run.json",
+      "sha256": "0b1114aea1a0d9ebc5799ea6b9c6bee58cd06e165fe5c0e10c02aa7056f83c5e",
+      "bytes": 1293
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/fresh-private-id-handoff-peer.jsonl",
+      "sha256": "3a8e6285af0a8383e99fcc9c9cb39714168a0815981a85b43d5d495718235f3c",
+      "bytes": 68758
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/fresh-private-id-handoff-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/fresh-private-id-handoff-wire.jsonl",
+      "sha256": "5ddd877a9d04eeaf558949b9b3eb89736caef32e3f6bd0a690308f6cf285431e",
+      "bytes": 1689733
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/fresh-private-id-handoff-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/same-player-reconnect-hub-load-run.json",
+      "sha256": "3a66a9256749dd72cf744592c90a9d6b766e6bbd0874e9f305e095249a193545",
+      "bytes": 1300
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/same-player-reconnect-hub-load-peer.jsonl",
+      "sha256": "0d14eaf1295fe19577d184f205b30cbff1fa95118b12895161a4fdff7710203c",
+      "bytes": 120907
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/same-player-reconnect-hub-load-peer.stderr",
+      "sha256": "104bca7bc1cbe66719e4157051688b9b5e13b5790a769ea87d7c5e8faf989ab4",
+      "bytes": 1067
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/same-player-reconnect-hub-load-wire.jsonl",
+      "sha256": "5be9e57dfb10a0589e342d8133814bdec75725dca86ddf7f82f3988f4cad63f1",
+      "bytes": 2842065
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/same-player-reconnect-hub-load-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/native-same1944-replacement-run.json",
+      "sha256": "dc60326fc9309a0fb9f5a472cf05eaa69c5fdbafac7c02a40f0d56c0a3a2d709",
+      "bytes": 1295
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/native-same1944-replacement-peer.jsonl",
+      "sha256": "6f06843092f983c060fdb2e12886e51fd3bdf96e4272b66f37d2995022cf33c1",
+      "bytes": 109967
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/native-same1944-replacement-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/native-same1944-replacement-wire.jsonl",
+      "sha256": "62773f4b5e8ac384531130d4225175f37ab66eb759dd5f3f7dc787b3338b6aa0",
+      "bytes": 2628753
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/native-same1944-replacement-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-before.png",
+      "sha256": "067bb45d43940c00c614bfbe97569bd60e4693a520b7dea9eda5144f2dd50995",
+      "bytes": 116412
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-after.png",
+      "sha256": "067bb45d43940c00c614bfbe97569bd60e4693a520b7dea9eda5144f2dd50995",
+      "bytes": 116412
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-state.txt",
+      "sha256": "344ccef80cdd8c3b3eb08e344a01f7dbb3c01d6ba131402f9739ebecb144f16f",
+      "bytes": 58649
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-native-held-sync.json",
+      "sha256": "108f76bfafebd6d8ef62fba532999693bf9ef1738e262a589e92adcc6956af0c",
+      "bytes": 300
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-retry-before.png",
+      "sha256": "81630749b929aa1b3e5375ce656b6d0a10b738570f46d51ea5d4582fada662de",
+      "bytes": 118821
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-retry-after.png",
+      "sha256": "063e7894143769adde833c89f97d83b11c050d3f4cb87c75cfd6abdd8ba9d36b",
+      "bytes": 130337
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-native-retry-after-state.txt",
+      "sha256": "0cf404634d708092d1418d9ff3947814cc8ca26dc4968c1dd362fe6bad3f53c2",
+      "bytes": 66692
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-native-retry-held-sync.json",
+      "sha256": "e714ba75b0b60984e8b05f173e5918dcb9f7c2a869ec3131d743a40dd22d2f77",
+      "bytes": 302
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-private-selected.png",
+      "sha256": "2662abfddcb51cf3aee91e7b2d3246cf127ed7172f3bb1c84ae5b51dae0aa42e",
+      "bytes": 330412
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-private-before.png",
+      "sha256": "c6b6404076466f1384c1793dc765a14ed9e102a54c7f79e0e2e63f5869f0cb5b",
+      "bytes": 93162
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-private-after.png",
+      "sha256": "dc5e385a327e736abf394c28c7501ccd663f72e3003ea28bfbae68bdafd06d1c",
+      "bytes": 106283
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-id-private-after-state.txt",
+      "sha256": "c547e1dd7b3e9d8cde71bdf2e6469e5a3904fe393f1e1a9f112bd703e9d5fe27",
+      "bytes": 124621
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-private-held-sync.json",
+      "sha256": "1bc72ea551c407a87609d24e5eb2c93d7d035d976a9f2bac15363b76a78068c3",
+      "bytes": 302
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-peer-loss-state.txt",
+      "sha256": "dc1aaec314533938fdb02f931c1b838ec88529eea8593117d3b827d741818b59",
+      "bytes": 132020
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-peer-loss-browse-other-source.png",
+      "sha256": "eaade2fb74f33ab9784f89ed905a4d8ac0528aecb38f8d4d370660afccfa42c4",
+      "bytes": 93972
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-peer-reconnect-new-hub-playing.png",
+      "sha256": "5a129ff4e2b366f122987a657fefb9bbae7fd787ee7e5d9df6cf985d4a153746",
+      "bytes": 161864
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-peer-reconnect-playing-state.txt",
+      "sha256": "40f0b87a7e601bfc85ddec0e848826e91d5004faca51178c2bbfe5bcaab79a46",
+      "bytes": 143018
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-peer-native-replacement-final-state.txt",
+      "sha256": "f345e1fd11f38b16d8135bce10c0350e023e3f1052574fa6775bacb076427c04",
+      "bytes": 159346
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-same1944-selected.png",
+      "sha256": "a77f7e3af8315c26de47a44c4ea85dd768c7126d5c32abf4a9f0c7afa039c0a5",
+      "bytes": 124383
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-same1944-replacement-playing.png",
+      "sha256": "66459d806bc45e87bd7c1090485645d6411bcd98e5d875e720e9d167b025c97b",
+      "bytes": 162731
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-same1944-playing-later.png",
+      "sha256": "85aeac17f787e21938f2b8b0c60f8a309ad3a39495b03d0f877547e38825d6a2",
+      "bytes": 150808
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-peer-fresh-seven-health.json",
+      "sha256": "0291a2728a79f41525bb7e4d7a93dad7c396392dc1f240d54268e2566645817e",
+      "bytes": 110289
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-peer-reconnect-seven-health.json",
+      "sha256": "5181b36f208066aa34f68846e38014682989e0fe233fa9548d5a6227a9228d84",
+      "bytes": 110290
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-lifecycle/launch.json",
+      "sha256": "729eba3f50dd7d76650a8c721518a0eeae55752a18f55bd7bc40c622d6b43fe3",
+      "bytes": 21136
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/lifecycle-fixtures/fixture.json",
+      "sha256": "61fc2026774d92fbcf96a2a952b8a1ece979a1233235bfb5c89f52909fbcc638",
+      "bytes": 2588
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # PRO DJ LINK handling research
 
+Current0.3.0 coexistence and known loaded-mode warning are documented in the
+[0.3.0 release notes](releases/usb-hub-support-0.3.0.md). The0.2.1 blocking behavior
+and PR inspections below are historical; they do not describe the new candidate.
+
+
 ## Current behavior
 
 USB Hub Support 0.2.1 retains the warning asking users to disable the mod and restart the AZ before

@@ -1,0 +1,351 @@
+{
+  "recorded_at": "2026-10-19T03:53:22.161650+00:00",
+  "scope": "Five-source loaded On/Off/On regression in isolated emulator",
+  "pid": 272304,
+  "binary_sha256": "3e4f4095dac5b67691680ea7466c104c998ba8045dd8a556b6041e2f1b7f32df",
+  "real_az_access": false,
+  "fixtures": "Five COW hub fixtures; native USB1 remains mounted and visible",
+  "observations": {
+    "five_rows_in_on_off_on": true,
+    "fifth_source_member7_slot8_browsed_and_loaded": true,
+    "off_four_loaded_playing_advancing_decks": true,
+    "on_decks3_4_unloaded": true,
+    "on_decks1_2_continue": true,
+    "external_player3_negotiated_master": true,
+    "deck1_synced_nonmaster_127_samples": 176
+  },
+  "samples": [
+    {
+      "pid": 272304,
+      "clock_ms": 13549113,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 34.429,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 45.945,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 11.089,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 6.498,
+          "content_id": 495,
+          "title": "Algo más"
+        }
+      ]
+    },
+    {
+      "pid": 272304,
+      "clock_ms": 13558673,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 43.447,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 54.533,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 19.601,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 15.086,
+          "content_id": 495,
+          "title": "Algo más"
+        }
+      ]
+    },
+    {
+      "pid": 272304,
+      "clock_ms": 13592373,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 75.057,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 84.64,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": 23.693,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": 19.215,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 272304,
+      "clock_ms": 13615876,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 97.58,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 105.763,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": 23.693,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": 19.215,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Same content495 used on all decks; this is not different-track cache-isolation acceptance",
+    "Deck1 used member8/slot3; decks2/3/4 used member7/slot8. Not all five sources were individually loaded in this run",
+    "The slot8 source row lacks a native USB icon/number; browsing and loading still worked",
+    "Loaded deck1 retained the previously observed warning triangle across mode changes; meaning remains unresolved",
+    "No five-source eject, cold-start Off, or full-status privacy acceptance is added by this test",
+    "No audio or physical hardware acceptance"
+  ],
+  "local_evidence_sha256": {
+    "five-on.png": "c0f864d7314d612c1f7348f5b1d25e9e08eab20ea4759b6ca703681594fd69fc",
+    "five-off-setting.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "five-off.png": "1f797af2c4ea69fda7be0a4609bd00cf7751728eb9bdc7b373e462c240287ea8",
+    "five-slot8-track.png": "7f290ca53dc8a1523a900b06fbd7db729764d784d4a3d350f50dfcf81d58a8eb",
+    "five-four-decks-start.json": "fc898967d96e86cf81e46b53bfe65534ca73abc4ecc8f00017ee1b480beab6bd",
+    "five-four-decks-later.json": "fdfa905b5184d67bdbbfee87db8e3019ec354de5756946801153282885961fd8",
+    "five-four-decks-playing.png": "f469fcc549061e48e1468026225fa2b08a7d15a0d9d2479cdb1f47da005bf748",
+    "five-on-transition.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "five-on-restored.png": "d8ddf9dd362acd9a73055d5fa9b7d6bd843c94bdfcb87697cd0681da8d8659ff",
+    "five-on-two-decks.json": "c733e2436ad8dfc0cca7c6e6b8b007d75afcaea9cad9b958546678cb45630082",
+    "five-peer-playing.json": "5fbdb297ce60764c4508d5479e493ed99cf6e3a7bad3d574ff33a3b61725e151",
+    "five-peer.jsonl": "d169839f07daad2b1bc69ae2edb9e08b3491cbc089212ff5c92b97662b908c1e",
+    "five-peer.stderr": "ce904424945dc093f0878273fe432be598d653329ca20e85217f0e7231bc73b8",
+    "five-final.log": "3d27230c18ab091183daa403226d3a9d5f4222e9f0aca49b52c53228362e05ce"
+  }
+}

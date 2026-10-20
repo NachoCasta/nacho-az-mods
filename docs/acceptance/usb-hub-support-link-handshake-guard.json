@@ -1,0 +1,175 @@
+{
+  "timestamp_utc": "2026-10-19T02:03:02.916124+00:00",
+  "scope": "Pre-registration reserved requester guard, isolated emulator only",
+  "binary_sha256": "987c745321262d029faa36b7c50e4d1e24c56e7ff42632002cabdaec74d774f8",
+  "pid": 139380,
+  "hooks": 40,
+  "checks": [
+    {
+      "trial": "handshake",
+      "unchanged_loopback_socket_tuples_and_inodes": [
+        [
+          "0100007F:8FD2",
+          "0100007F:A46B",
+          "01",
+          "621062"
+        ],
+        [
+          "0100007F:A46B",
+          "0100007F:8FD2",
+          "01",
+          "621643"
+        ]
+      ]
+    },
+    {
+      "trial": "handshake-member8",
+      "unchanged_loopback_socket_tuples_and_inodes": [
+        [
+          "0100007F:8FD2",
+          "0100007F:A46B",
+          "01",
+          "621062"
+        ],
+        [
+          "0100007F:A46B",
+          "0100007F:8FD2",
+          "01",
+          "621643"
+        ]
+      ]
+    }
+  ],
+  "native_requester3_usb_response": {
+    "target": "isolated-emulator",
+    "port": 42091,
+    "requester": 3,
+    "private_slot": 3,
+    "greeting": 1,
+    "setup": {
+      "transaction": 4294967294,
+      "type": 0,
+      "arguments": [
+        1,
+        20
+      ]
+    },
+    "media_reply": {
+      "transaction": 2,
+      "type": 16384,
+      "arguments": [
+        12295,
+        0
+      ]
+    }
+  },
+  "external_private_request_response": {
+    "target": "isolated-emulator",
+    "port": 42091,
+    "requester": 3,
+    "private_slot": 224,
+    "greeting": 1,
+    "setup": {
+      "transaction": 4294967294,
+      "type": 0,
+      "arguments": [
+        1,
+        20
+      ]
+    },
+    "media_reply": {
+      "transaction": 2,
+      "type": 16387,
+      "arguments": [
+        12295
+      ]
+    }
+  },
+  "post_collision_loaded_state": {
+    "pid": 139380,
+    "clock_ms": 7004918,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 25806,
+        "devnum": 14
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 25209,
+        "devnum": 12
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 25382,
+        "devnum": 13
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.047,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "static_boundary": {
+    "handshake": "0x00eee540",
+    "caller": "0x00eeec98",
+    "negative_branch": "0x00eeed34",
+    "connected_listener_call": "0x00eeed50",
+    "negative_result": "native destruction before connected-listener registration"
+  },
+  "limits": [
+    "Setup response is sent before rejection; external client observes EOF on its later request",
+    "Tuple registry still has descriptor lifetime and concurrent access races",
+    "Two sequential collision trials, not stress or exhaustive reconnect coverage",
+    "Private requester namespace and external identities beyond tested requester3 need design review",
+    "No real AZ or audio validation; no release candidate acceptance"
+  ],
+  "local_evidence_sha256": {
+    "handshake-native.json": "e8b1105c2509560d7ca2f50bbc45dc8802f878dda61f9a0780dacc944d1bdbfa",
+    "handshake-private-denied.json": "eece96264e840518b97f10a7c3255867200f23c7c8fe327e89f63cb499139e2e",
+    "handshake-spoof.stderr": "e8f9537a4499941a881924a3d91549850e10bd4fe33b538d2ccacbd66bbaddd6",
+    "handshake-member8-spoof.stderr": "e8f9537a4499941a881924a3d91549850e10bd4fe33b538d2ccacbd66bbaddd6",
+    "handshake-loaded.json": "11de33fbbd307402b903c8b717bfbbfa94a15eaa77a018c3f60c09f3f6ecf667",
+    "handshake-final.log": "a8f303aca1484c6f5587f3ed6b7d36a024cde506f76864e2ea136b9c4f52fe25",
+    "handshake-before.tcp": "1f22149da9040d01e94c2967e7d8a479b53e7b9a414c45cbabc25f36ec8e2801",
+    "handshake-after.tcp": "ac270bc886241961d197aab316b85a0908a76c1bdce75dbcf65e3ac9c77a8df3",
+    "handshake-member8-before.tcp": "6cf32edce1f7a42bebc5f03a0e450ad0a31b94c2080bf8b125abd940be0a7637",
+    "handshake-member8-after.tcp": "4acee8a7e1d0248889b40bb0396b189c15da496d804a8c4d2d50c50f6b73e266"
+  }
+}

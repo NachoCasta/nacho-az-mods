@@ -1,0 +1,80 @@
+{
+  "recorded_at": "2026-10-19T03:49:16.406905+00:00",
+  "scope": "Emulator hub-track master fallback with timed UI observations",
+  "real_az_access": false,
+  "pid": 272304,
+  "binary_sha256": "3e4f4095dac5b67691680ea7466c104c998ba8045dd8a556b6041e2f1b7f32df",
+  "sources": {
+    "hub": 3,
+    "native_usb": 1,
+    "loaded_hub_member": 8,
+    "loaded_hub_slot": 3,
+    "track_content_id": 495
+  },
+  "peer": {
+    "player": 3,
+    "role": "handoff",
+    "bpm": 129,
+    "duration_seconds": 20,
+    "synced_nonmaster_samples": 145
+  },
+  "observations": {
+    "plus9_ui_master_label": false,
+    "plus11_ui_master_label": true,
+    "plus9_remaining_seconds": 157.662,
+    "plus11_remaining_seconds": 155.826,
+    "no_ui_input_after_peer_start": true,
+    "clock_reference": "Host observation of the harness stopping event; screenshots have start/end bounds, not exact transition timestamps"
+  },
+  "screenshot_intervals": [
+    {
+      "file": "hub-fallback-plus-0.png",
+      "start_seconds_after_stop_event_observed": 1.4500052202492952e-05,
+      "end_seconds_after_stop_event_observed": 0.5923404000350274
+    },
+    {
+      "file": "hub-fallback-plus-5.png",
+      "start_seconds_after_stop_event_observed": 5.000315000012051,
+      "end_seconds_after_stop_event_observed": 5.592294100031722
+    },
+    {
+      "file": "hub-fallback-plus-9.png",
+      "start_seconds_after_stop_event_observed": 9.000253300007898,
+      "end_seconds_after_stop_event_observed": 9.597193200024776
+    },
+    {
+      "file": "hub-fallback-plus-11.png",
+      "start_seconds_after_stop_event_observed": 11.000386000028811,
+      "end_seconds_after_stop_event_observed": 11.592494600045029
+    },
+    {
+      "file": "hub-fallback-plus-15.png",
+      "start_seconds_after_stop_event_observed": 15.00028660002863,
+      "end_seconds_after_stop_event_observed": 15.615385600016452
+    },
+    {
+      "file": "hub-fallback-plus-25.png",
+      "start_seconds_after_stop_event_observed": 25.000230100005865,
+      "end_seconds_after_stop_event_observed": 25.600334600021597
+    }
+  ],
+  "limits": [
+    "Three hub sources in this test; two further fixtures were added only after capture completed",
+    "Not audio-phase or real-CDJ acceptance",
+    "The bounded visual transition is between the plus9 and plus11 captures, not an exact firmware timeout measurement",
+    "Core-assisted no-mod comparison also showed later MASTER reclamation; its exact timing was not measured"
+  ],
+  "local_evidence_sha256": {
+    "hub-fallback-peer.jsonl": "466765b7fb89cf1b5d65a05a1cc8a377fefe8723f769c1290ea031a9551ce87a",
+    "hub-fallback-peer.stderr": "ce904424945dc093f0878273fe432be598d653329ca20e85217f0e7231bc73b8",
+    "hub-fallback-wire.jsonl": "bb59facf09811d229df28ed94787d9e24f85e874ef6938f9a10917efac468aa0",
+    "hub-fallback-shots.json": "378f08ed4c707df64928ca73788355cdfd47b86d299e2b4c0ea731f71ae64b79",
+    "restored-ready.png": "76addb7a5e7b06fc9f47776c603458fd7d1d50e6b5aaa67e97ab489bc82ea376",
+    "hub-fallback-plus-0.png": "376a044aa97692b07510be7886dd06f1f79bf8f219ca3a9ece838d0dc2cfeb41",
+    "hub-fallback-plus-5.png": "0889e7cf4d6050f1cba94b7f3d95fc2c4474c22215f92aca02c32f989e785526",
+    "hub-fallback-plus-9.png": "6dcfbc03ab38ded54bbeff892b8bceb8295f323f30ce66c003c514df15a75b60",
+    "hub-fallback-plus-11.png": "95ecad1ecb172512d812d54be1657d3e29b1972dae99f243f0869a0002ecd901",
+    "hub-fallback-plus-15.png": "f96e476e2725f17b3a41837c028b210911649c2571339401ed53d47eae453590",
+    "hub-fallback-plus-25.png": "2a25b4c4876678dbe96373835da0855ef7e704038291b7cdaadda3dc997bb854"
+  }
+}

@@ -9,12 +9,12 @@
 #include <mntent.h>
 static int mounted,wrong_source,busy,observe_error,readonly_error,parent_link;
 static int binds,remounts,unmounts;
-static const char *alias="/media/player03/usb";
+static const char *alias="/media/player07/usb";
 static FILE *test_setmntent(const char *path,const char *mode) {
     (void)path;(void)mode;
     if(observe_error) return NULL;
     static char contents[128];
-    snprintf(contents,sizeof contents,"%s",mounted ? "/dev/sdb1 /media/player03/usb vfat rw 0 0\n":"");
+    snprintf(contents,sizeof contents,"%s",mounted ? "/dev/sdb1 /media/player07/usb vfat rw 0 0\n":"");
     return fmemopen(contents,strlen(contents),"r");
 }
 static int test_stat(const char *path,struct stat *st) {
@@ -25,7 +25,7 @@ static int test_stat(const char *path,struct stat *st) {
 }
 static int test_lstat(const char *path,struct stat *st) {
     test_stat(path,st);
-    if(parent_link && !strcmp(path,"/media/player03")) st->st_mode=S_IFLNK|0777;
+    if(parent_link && !strcmp(path,"/media/player07")) st->st_mode=S_IFLNK|0777;
     return 0;
 }
 static int test_mkdir(const char *path,mode_t mode) {(void)path;(void)mode;return 0;}
@@ -52,9 +52,9 @@ static int test_umount(const char *path) {
 #include "alias-mount.h"
 int main(void) {
     assert(!hub_alias_valid("/media/usb/sda1"));
-    assert(!hub_alias_valid("/media/player03/usb/../usb2"));
+    assert(!hub_alias_valid("/media/player07/usb/../usb2"));
     assert(!hub_alias_valid("/media/player01/usb"));
-    assert(hub_alias_valid("/media/player04/usb3"));
+    assert(hub_alias_valid("/media/player08/usb3"));
     observe_error=1;assert(hub_alias_prepare("/media/usb/sdb1",alias)<0 && !binds);observe_error=0;
     mounted=wrong_source=busy=1;
     assert(hub_alias_prepare("/media/usb/sdb1",alias)<0 && !binds && mounted);

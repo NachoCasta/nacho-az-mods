@@ -1,0 +1,40 @@
+{
+  "result": "Bounded protocol handoff and native tempo-follow observation passed",
+  "candidate_elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "native_pid": 703,
+  "mode": "Native Link On, two loaded local decks",
+  "declared_sources": "Deck1 native USB2 content495; deck2 cached private content1944 after OHCI loss",
+  "raw_evidence": [
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-peer.jsonl",
+      "sha256": "2ad185fa5a1df221d0564b14e416f5c43a23295f6d3bf8f66a3d736576e9763b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-full-status.jsonl",
+      "sha256": "dec3425998e2b1c0538cc04b02bd7b009b6f2c1c951e40ee0515162eec6cb6ec"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-on-handoff-follow-capture-state.json",
+      "sha256": "fc8c957ab417e172593caf60e7999824fc4ea28ad2e2203d192e4860b70e0a0a"
+    }
+  ],
+  "peer_log_observations": {
+    "status_events": 402,
+    "beat_events": 93,
+    "master_request_previous_player": 2,
+    "master_result_peer_master": true,
+    "peer_player": 3,
+    "native_deck1_initial_effective_bpm": 70.53849466323852,
+    "native_deck1_settled_effective_bpm": 125.99995327949524,
+    "native_deck1_synced_statuses_within_0_001_of_126_bpm": 208,
+    "native_deck1_settled_master": false,
+    "native_deck1_settled_synced": true,
+    "peer_parser_packet_bytes": 512
+  },
+  "scope_limits": [
+    "The isolated simulated peer supplies protocol evidence, not real-CDJ interoperability or audible phase synchronization.",
+    "This run follows an unexpected OHCI failure; it does not establish simultaneous browsing/loading from attached hub devices.",
+    "BeatLink parses 512-byte status prefixes and warns about the longer native payload. Full 1152-byte privacy analysis is separate; the raw full-status hash above preserves its input without claiming a privacy result here.",
+    "Peer shutdown lost events do not by themselves establish native recovery after external-player loss or reconnect."
+  ]
+}

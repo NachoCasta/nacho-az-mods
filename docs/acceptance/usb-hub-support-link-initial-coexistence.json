@@ -1,0 +1,130 @@
+{
+  "timestamp_utc": "2026-10-19T01:35:16.710231+00:00",
+  "scope": "Initial isolated-emulator external protocol experiment, incomplete coexistence candidate",
+  "binary_sha256": "b167b21a8ad69ff7f4b242f91a19e6d12243219c08ffba839052ad1dd5949b40",
+  "pid": 101391,
+  "real_az_access": false,
+  "physical_network_access": false,
+  "link_off_players": [
+    1,
+    2,
+    3,
+    4,
+    33
+  ],
+  "link_on_players": [
+    1,
+    2,
+    33
+  ],
+  "empty_status_summary": {
+    "event": "stopped",
+    "monotonic_ns": 3121068089528,
+    "statuses": 302,
+    "beats": 0
+  },
+  "loaded_peer_summary": {
+    "event": "stopped",
+    "monotonic_ns": 3201210030239,
+    "statuses": 661,
+    "beats": 14
+  },
+  "loaded_deck": {
+    "pid": 101391,
+    "clock_ms": 5254226,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 23011,
+        "devnum": 8
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 22665,
+        "devnum": 6
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 22838,
+        "devnum": 7
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 11.516,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "private_source_leak_packets": 165,
+  "sync_trial_peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 3279840135631,
+    "peer_master": false,
+    "peer_synced": false
+  },
+  "sync_trial_deck2_states": [
+    {
+      "bpm100": 12021,
+      "master": true,
+      "synced": true,
+      "count": 65
+    },
+    {
+      "bpm100": 12021,
+      "master": true,
+      "synced": false,
+      "count": 192
+    }
+  ],
+  "limitations": [
+    "Native source 8/USB identity leaks in external status; must resolve before acceptance",
+    "Private UDP ingress provenance remains incomplete",
+    "Source-generation and descriptor-race guards remain experimental",
+    "Loaded sync/master adoption is NOT validated: AZ remained master and peer relinquished master; compare a loaded native baseline",
+    "First sync button press was too late for its peer session; excluded as a sync test",
+    "Beat Link status parsing truncates AZ packets to 512 bytes",
+    "No audio phase, real CDJ, hardware, recovery or full regression acceptance"
+  ],
+  "evidence_sha256": {
+    "candidate-link-off-observe.jsonl": "4961bc051958c6b7031a6414e79ce581d5dd3b4f54a1e2ca3b9319d68b54842a",
+    "candidate-link-on-status.jsonl": "8b550f7fa54d08532fc53aab8bb0e8d00c1b75fca165bef31575a5e9b1778213",
+    "candidate-link-loaded-peer.jsonl": "f373632415fd04e2f4bd7fc71b2d0e29e55c616a6470549dfa7c8298cb95987d",
+    "candidate-link-loaded-wire.jsonl": "6df65db629d1383b9db2f4be958a98a4c94f4bcb3a77192dfa5665a0e647e0b7",
+    "candidate-link-sync-peer.jsonl": "0642b2b499f216ad7e374567b7d7f17336b12c4b684875a66551ec513452db3c"
+  }
+}

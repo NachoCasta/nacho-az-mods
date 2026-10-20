@@ -1,0 +1,292 @@
+{
+  "result": "passed",
+  "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+  "complete_outgoing_statuses": 408,
+  "failures": [],
+  "missing_evidence": [],
+  "observations": [
+    {
+      "deck": 1,
+      "packets": 108,
+      "first_ns": 418645698748,
+      "last_ns": 442005162875,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 108
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {},
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0101010101000001"
+        ],
+        "0xf9": [
+          "0103010202000201"
+        ],
+        "0x3fd": [
+          "0101010101000001"
+        ],
+        "0x41d": [
+          "0101010101000000"
+        ],
+        "0x468": [
+          "0103010202000201"
+        ],
+        "0x474": [
+          "0101010101000001"
+        ]
+      }
+    },
+    {
+      "deck": 2,
+      "packets": 116,
+      "first_ns": 418645264156,
+      "last_ns": 441932030203,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 116
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {},
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0000000000000000"
+        ],
+        "0xf9": [
+          "0000000000000000"
+        ],
+        "0x3fd": [
+          "0000000000000000"
+        ],
+        "0x41d": [
+          "0000000000000000"
+        ],
+        "0x468": [
+          "0000000000000000"
+        ],
+        "0x474": [
+          "0000000000000000"
+        ]
+      }
+    },
+    {
+      "deck": 3,
+      "packets": 92,
+      "first_ns": 418649057634,
+      "last_ns": 441849128063,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 92
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {},
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0000000000000000"
+        ],
+        "0xf9": [
+          "0000000000000000"
+        ],
+        "0x3fd": [
+          "0000000000000000"
+        ],
+        "0x41d": [
+          "0000000000000000"
+        ],
+        "0x468": [
+          "0000000000000000"
+        ],
+        "0x474": [
+          "0000000000000000"
+        ]
+      }
+    },
+    {
+      "deck": 4,
+      "packets": 92,
+      "first_ns": 418644088809,
+      "last_ns": 441843494765,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 92
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {},
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0000000000000000"
+        ],
+        "0xf9": [
+          "0000000000000000"
+        ],
+        "0x3fd": [
+          "0000000000000000"
+        ],
+        "0x41d": [
+          "0000000000000000"
+        ],
+        "0x468": [
+          "0000000000000000"
+        ],
+        "0x474": [
+          "0000000000000000"
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Marker matches outside known media fields require semantic review.",
+    "Absence of selected markers does not identify every extended field.",
+    "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+  ],
+  "capture_sha256": "19542ef56da1128de5d01a473ba3a2ec585901e1e0a0ad51053a8706d120a6a7",
+  "capture_path": "local/diagnostics/link-normal-loader/matrix-off-peer-full-status.jsonl",
+  "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "native_PID": 703,
+  "declared_load_state": {
+    "1": "A private content495 playing",
+    "2": "E private content1944 playing",
+    "3": "D private content1944 paused",
+    "4": "D private content1944 paused"
+  },
+  "native_mode": "Off; confirmed separately by native Utility UI",
+  "scope_limit": "Final artifact known standard source fields, eleven auxiliary rows and selected privateIP/content markers pass in this supplied window. This does not identify all tail semantics or pass cached-eject, replacement, native same-ID, missing slot7 rows or source mode recovery.",
+  "capture_timeline_correction": "Owner-correlated guest OHCI controller failure at726.753s and child USB disconnection around727s precede the Off capture at922.81..953.11s. Thus these408 packets cover private cached playback after unexpected whole-hub controller loss; they are not a fresh-mounted window.",
+  "physical_scope": "Virtual controller loss only; no physical AZ unplug or safe-eject action is inferred."
+}

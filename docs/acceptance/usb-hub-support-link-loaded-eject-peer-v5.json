@@ -1,0 +1,133 @@
+{
+  "scope": "Exact supported v5 individual loaded-source eject and remaining whole-hub eject during isolated peer master handoff/sync; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 997,
+  "boot_id": "46130fd7-a1e7-40aa-b445-f01c423dc9e0",
+  "image_record": "docs/acceptance/usb-hub-support-link-emulator-eject-root-image.json",
+  "individual": "Private source3/player8 slot7: native detach completion, both server completions, alias/backing sdf1 removed, success mask0x8. Loaded deck2 and deck1 remain LLEE with advancing UI playback. Other four hub and two native partitions remain mounted.",
+  "whole_hub": "Native long USB STOP2: remaining sources0,1,2,4; success mask0x17. Both loaded tracks retained; four backings and aliases removed. Sources screenshot contains both native rows and MOD MENU only; later mount check has sda1/sdb1 only.",
+  "peer": {
+    "role": "Isolated synthetic player3; no physical LAN",
+    "master_handoff": true,
+    "deck2_synced_126_samples": 195,
+    "full_status_count": 570,
+    "native_player_counts": {
+      "2": 287,
+      "1": 283
+    },
+    "known_private_field_violations": [],
+    "privacy_scope": "Zero standard private source/content, no classified private auxiliary locations; selected private IPs and content495/1944 uint32 BE/LE markers absent across each full1152 payload. Not a complete semantic tail audit."
+  },
+  "limits": [
+    "UI/waveform/clock and protocol evidence, no captured audio or real CDJ interoperability",
+    "Individual eject happened before peer startup; whole-hub eject occurred during capture. Capture starts with deck2 cached and deck1 still live.",
+    "Tracks show native yellow source-unavailable warnings after eject; playback clocks continue.",
+    "No replug, full-track cache duration, cold Off or current-artifact negative recovery result in this record",
+    "Virtual USB STOP2 hub-root mapping only; no physical4.4 recovery claim"
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-before-one-state.txt",
+      "sha256": "37a6b92d0be6e350bd31372adaa2c697023b5f761129b39baea3a5babd03a95d",
+      "bytes": 88169
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-loaded-selector.png",
+      "sha256": "9b9b7f1dde040a428125e8677612aef6d36ce143b8b683927b3e4355353619d1",
+      "bytes": 162135
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-one-preparing.png",
+      "sha256": "df88cfd2af7a86db156f8171be1b3422370ca97eadddc033f06ce8908c6669f4",
+      "bytes": 161068
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-one-cached-playing-first.png",
+      "sha256": "321eecb1b6cb55475b2499e5a04b617c70a9270c6691d32ac95fa26e471ba750",
+      "bytes": 161559
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-one-source-after.png",
+      "sha256": "75fa27d15e2b18efbf5d44d96b085a63852dd8f8d8aa4c203e64a4a79907be43",
+      "bytes": 102769
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-one-settled-state.txt",
+      "sha256": "65e78eb19c9d9e2daaab02ec7eb75d117179660392cf24647cfef63345d07dd2",
+      "bytes": 96762
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-all-peer-settled-state.txt",
+      "sha256": "4d5bd040fe925d6c86bab0db73f3beb44b7fb84c2950299f84be4ddad1548a14",
+      "bytes": 116862
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-all-peer-cached-waveform.png",
+      "sha256": "fbee7493dfdb9c81059ccc4c4081bdb353520956d9eb14d202e6e702e839822a",
+      "bytes": 163638
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-all-source-after.png",
+      "sha256": "63cef95b532547eba50ac26645bffc8895be48684d0efce05de8360b9498f365",
+      "bytes": 91511
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cached-one-eject-all-handoff-wire.jsonl",
+      "sha256": "882eb3782c8d15259b311cca3f7a2d9e9680110615423f73260f38aa4b2d7710",
+      "bytes": 2606201
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cached-one-eject-all-handoff-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cached-one-eject-all-handoff-peer.jsonl",
+      "sha256": "e15deec2678b2b26f71babbd1b8142f7b8e0473336aa421f9576d97250b440a2",
+      "bytes": 107987
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cached-one-eject-all-handoff-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cached-one-eject-all-handoff-run.json",
+      "sha256": "1b9ce2ead9929f46d4d27cfbb6095239cf422408d2145edfc49a1e43e59a4746",
+      "bytes": 1298
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-all-final-state.txt",
+      "sha256": "11703b8c1f00443a7e90739619d49b9edc2a6bcea07c54e8220031e54031803f",
+      "bytes": 120701
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-all-cached-waveform-later.png",
+      "sha256": "a00c3cb3857f6c574e4a0d2030206e79f67d9e6ce7aad38e5eca140a54fb3696",
+      "bytes": 160859
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-ejected-off-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-ejected-off-state.txt",
+      "sha256": "f36c302c7fb775f90182591cb63c616286487ecbee4555a8d3f6250e81c58700",
+      "bytes": 124548
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-ejected-off-source.png",
+      "sha256": "800522f1805e31e0bef2f23a1126e915ed993e92b4dcc93e4a7e8a333f14d42d",
+      "bytes": 90840
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-ejected-off-unloaded-state.txt",
+      "sha256": "72e52613f9d70c353be5eacc851a73876ab8f87b77fbb0593109f2a6bdd37f43",
+      "bytes": 128597
+    }
+  ],
+  "post_eject_mode_change": "Native On-to-Off confirmation after all five sources ejected: source rows do not resurrect, only two native mounts remain. Cached tracks continue; later native UI unload settles EEEE before standard shutdown.",
+  "playback_samples": "Whole-eject waveform remaining1/2:02:31.361/03:09.553; later01:25.901/01:11.586. UI-only, no audio capture."
+}

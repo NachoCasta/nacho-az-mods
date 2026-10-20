@@ -1,0 +1,44 @@
+{
+  "mod_id": "usb-hub-support",
+  "version": "0.3.0",
+  "scope": "User-reported manual hardware acceptance of local hub operation in both native PRO DJ LINK settings",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "core": "1.2.3",
+  "activation_evidence": {
+    "method": "Hash-verified USB copy, explicitly authorized exact-candidate pre-approval and normal AZ-MODS apply",
+    "native_PID_after_reload": 1356103,
+    "hooks": 54,
+    "discovered_source": "CAMI, private player7 slot3",
+    "local_records": [
+      "local/diagnostics/az-link-v5-usb-copy.json",
+      "local/diagnostics/az-link-v5-preapprove-result.txt",
+      "local/diagnostics/az-link-v5-after-authorized-approval.txt",
+      "local/diagnostics/az-link-v5-active-summary.txt"
+    ]
+  },
+  "manual_reports": [
+    {
+      "mode": "PRO DJ LINK Off",
+      "prompt": "Open the hub source, browse, load and play a track; report the Link setting.",
+      "user_response": "funciona. esta apagado",
+      "result": "User confirms local hub operation with Link Off."
+    },
+    {
+      "mode": "PRO DJ LINK On",
+      "prompt": "Enable native PRO DJ LINK; check continued playback on deck1 or2, CAMI source availability and another track load.",
+      "user_response": "funciona",
+      "result": "User confirms the requested local checks after enabling Link; individual timings and audio were not instrumented."
+    }
+  ],
+  "limitations": [
+    "Subsequent user clarification: changing Link Off/On in either direction briefly removes and reannounces the hub source. Its previously loaded track gains the native source-unavailable warning triangle, while a simultaneously loaded native USB track/source remains connected. Earlier confirmations establish basic usability, not uninterrupted source identity or warning-free loaded transitions. The user requested recording this issue and continuing tests; it is not resolved or classified as unavoidable.",
+    "User-reported manual results, not agent-instrumented playback/audio acceptance.",
+    "No external player was reported connected; physical external-player discovery, master/sync and coexistence remain unvalidated.",
+    "No separate four-deck hardware matrix, eight-source hardware acceptance, long-session or cache-capacity claim.",
+    "Candidate loaded-eject regression and full controller cold-start/recovery were not tested in this trial.",
+    "No publication authorized or performed."
+  ]
+}

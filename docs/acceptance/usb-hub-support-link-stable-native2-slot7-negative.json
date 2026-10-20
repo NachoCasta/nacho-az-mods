@@ -1,0 +1,89 @@
+{
+  "scope": "Stable normal-loader exact-artifact negative control: native USB1 and USB2 coexistence suppresses two private slot7 source rows; not a passing five-source functional matrix",
+  "candidate": {
+    "version": "0.3.0",
+    "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+    "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+    "PID": 762,
+    "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3",
+    "normal_loader_claims": 54,
+    "diagnostic_changes": false
+  },
+  "fixture": {
+    "kernel_sha256": "c66e4beaaae7b918d0706be41b27e6aa9e526d9d6f19657a4dbcf97683af3798",
+    "initrd_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+    "topology": "Two built-in EHCI direct native sticks and one module xHCI eight-port hub with five nested libraries; all seven USBs attached from power-on",
+    "protected_storage": "Fresh child COWs of clean prior overlays, all prior/raw parents read-only; identities and parent hashes in fixture.json",
+    "native1": "sdb1 actual1-1, music+mods",
+    "native2": "sda1 actual2-1, music-only/no MODS",
+    "private_runtime_map": [
+      "A source0 member7/slot3 sdc1 at3-2.1",
+      "B source1 member7/slot7 sdd1 at3-2.2",
+      "C source2 member8/slot3 sde1 at3-2.3",
+      "D source3 member8/slot7 sdf1 at3-2.4",
+      "E source4 member7/slot8 sdg1 at3-2.5"
+    ]
+  },
+  "guest_health": "Required xHCI boot unit success. Exactly seven partitions physically mounted at /media/usb: two direct1-1/2-1 and five nested3-2.x. Private sdg1 mounted through existing generic nested fallback despite stock native a..f allowlist. No controller-fault strings in frozen health dmesg. QMP presence is not used alone.",
+  "native_SOURCE_UI": {
+    "present": [
+      "Native USB1 Nacho Chips",
+      "Native USB2 Nacho Chips",
+      "Private A LINK7/USB1 HUB_LIB",
+      "Private E LINK7/additional HUB_LIB",
+      "Private C LINK8/USB1 HUB_LIB3",
+      "MOD MENU"
+    ],
+    "absent": [
+      "Private B LINK7/USB2 HUB_LIB2 (slot7)",
+      "Private D LINK8/USB2 HUB_LIB4 (slot7)"
+    ],
+    "mod_settings": "MOD MENU preview shows Stems and other listed optional mods Off; no settings changed for this source test"
+  },
+  "native_transport": "All five distinct owned media/server replies and announcements acknowledged, including both missing slot7 sources; five backing mounts remain healthy. This repeats the startup symptom under xHCI without the earlier OHCI loss.",
+  "load_state": "EEEE; no track load acceptance in this bounded negative control",
+  "comparison": [
+    "Previous healthy xHCI startup without a registered native source showed all five private rows",
+    "Healthy xHCI with nativeUSB1 alone showed all five private rows",
+    "Prior nativeUSB2 hotplug became sdg and was ignored by stock native a..f rules, so did not establish coexistence",
+    "This cold boot registers both actual native source rows while both private slot7 rows are absent"
+  ],
+  "next_step": "Reviewed local-only diagnostic build may trace availability and native mount completion; production remains unchanged and final acceptance must repeat the uninstrumented artifact",
+  "raw": [
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/both-native-first-state.txt",
+      "bytes": 7392,
+      "sha256": "9e27ec39f08e2d6d4520a83b5e78362e5bf1d42b69db6ada40e647afaa108b92"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/both-native-init-state.txt",
+      "bytes": 52082,
+      "sha256": "f83ff090dfdc65cbcb01477a4b267b6384ae9ddf908843bc7d1834d18a1d50e4"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-both-native-startup-health.json",
+      "bytes": 96315,
+      "sha256": "a4966f9937d09db5167cb4198a400177a08ef93fd3af8760c5b024e901c729f8"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-both-native-source-health.json",
+      "bytes": 97199,
+      "sha256": "3b83bf8713efadb93475b0ebca7a40f05fc4a1b210474874dc0e60338eab071e"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/both-native-source-startup.png",
+      "bytes": 69139,
+      "sha256": "8de66ea3fdaa16a74c3fa49a384c81f244e06f0114c0f1a3d091b3bc83880454"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-both-native-off/launch.json",
+      "bytes": 18373,
+      "sha256": "730187181a93bda535d16d6123bf2988b9f7aeb0b14bf34f06b2d2c02189af92"
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-both-native-fixtures/fixture.json",
+      "bytes": 4511,
+      "sha256": "c7ace58f60c1209efd473c97146bd8086d9c3b69cd2b649c9313d75975ba0e63"
+    }
+  ]
+}

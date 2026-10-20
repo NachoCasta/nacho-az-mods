@@ -1,0 +1,54 @@
+{
+  "scope": "Restore exact supported v5 after controlled request-delay diagnostic; no physical AZ operations",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "native_PID": 69363,
+  "activation": "Diagnostic tracks unloaded through native UI toEEEE; supported package copied to actual mods USBsdb1, normal framework apply, native Allow and Reload. Intermediate65544 unapproved; final69363 enabled with54 hooks,EEEE. No manual internal files/approval/settings edits.",
+  "sources": "Both native rows and all five private rows return; seven physical backings remain mounted, including replugA atsdh1. Early source screenshot shows one row while announcements still settling; later screenshot shows all five and native/mode identity stable.",
+  "limits": [
+    "Restoration/visibility only; earlier exact-v5 functional records retain their own process/boot scope",
+    "No new physical/audio, all-async-race or final-stage cancellation claim"
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/package-38d70598ba81-restore-after-delay/usb-copy.json",
+      "sha256": "0deb4351973f6d5f8909b7a83fc4f1fb0deefee4104469964399bfa3011a103d",
+      "bytes": 1151
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-allow-details.png",
+      "sha256": "d47f32c72dd1d261d1e597a86fdf39ce0b4d81f614597682d8d85f0ada4f7391",
+      "bytes": 41724
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-reload-request-state.txt",
+      "sha256": "46606f2d08e563d8c4758ce314307506733e7feea6c11fce2b3e727481b27dd2",
+      "bytes": 363289
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-after-delay-settled-state.txt",
+      "sha256": "da98bcbbba4c349aa57dfe2a4a6c77e990e9155b1cf2a548a9f24d60d34dc3b9",
+      "bytes": 390565
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-after-delay-source.png",
+      "sha256": "673d4043552adfe0f0c2124de76703754ceeb6f6b8bf7fe9fb91c7623b129748",
+      "bytes": 42296
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-after-delay-source-settled.png",
+      "sha256": "6fc2b888d000a048efaae4aa97def87a7ae4e1df389915a14912c097b3a9147b",
+      "bytes": 48430
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-restored-after-delay-final-state.txt",
+      "sha256": "5183ed77408018206b821bf8a9909b69a4ea3c4cb93f9ab42dfbfdb7a4c52f19",
+      "bytes": 399814
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-restored-after-delay-seven.json",
+      "sha256": "4f0b60bf28fcbc22b1e86aa3cf2826d0346d4d03950e0f3c245c0837fed2178a",
+      "bytes": 117534
+    }
+  ]
+}

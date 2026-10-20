@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-10-19T04:58:07.249469+00:00",
+  "environment": "Local QEMU only, kernel 6.6.138-dirty; protected COW USB fixtures",
+  "binary_sha256": "d68b25186b05a4328f9e58f1950cdfb5828f6fc3b9821b8c8b322c500473f9c9",
+  "pid": 361197,
+  "result": "Bounded common/allowance entry cancellation passes; complete asynchronous load pipeline remains unresolved",
+  "observations": [
+    "Normal direct deck1 content495 request captured generation36888/devnum39 and completed with result0.",
+    "Forced native asynchronous common task serial7 retained generation36888/devnum39. Replug took0.481s and replaced it with generation37312/devnum40. Cancellation occurred before allowance; exact-location browser cleanup ran once. Deck2 stayed empty and screenshot returned to source selection.",
+    "Fresh deck2 request captured generation37312/devnum40 and completed content495 with result0 in the same process.",
+    "Forced native asynchronous allowance task serial1 retained generation37312/devnum40 and completed result0.",
+    "Forced asynchronous allowance reconnect took0.937s and replaced it with generation37736/devnum41. Cancellation occurred before allowance state initialization; browser cleanup ran once and the old cached deck remained loaded.",
+    "Cancellation reports USB changed while loading. Select the track again. No recording alert is dispatched because cancellation does not broadcast to the GUI or Instant Doubles listeners.",
+    "Native executors retain task payload destruction ownership; the probe does not manually delete queued task objects."
+  ],
+  "limitations": [
+    "Research-only emulator guard; no hardware or audio acceptance.",
+    "Instant Doubles type5 source-change cancellation remains native/fail-open and is explicitly logged as unavailable.",
+    "Missing scope/origin and task-registry exhaustion remain diagnostic/fail-open; not suitable for supported promotion.",
+    "Provenance after allowance completion, reply dispatch and download stages is not established by these tests.",
+    "Superseded same-controller cancellation is modeled by epoch tests, not yet exercised in firmware.",
+    "No native failed-post or destructor-only runtime path was forced.",
+    "Deck2 already held content495 for allowance reconnect; no final admission in the captured interval supports cancellation, while retained loaded telemetry alone does not prove a new load.",
+    "Initial full-status observer ran without an active external peer and captured no1152-byte AZ statuses."
+  ],
+  "local_evidence_sha256": {
+    "queue-cancel-allow-after.json": "842d1b4f526d8ff3c04b8637854c01e915ecdfeb6fa57489caff54f128df826b",
+    "queue-cancel-allow-before.json": "9709f490a4fd1ba26b8396d1f8d68588f00d3aa585ca336987e831740e406d62",
+    "queue-cancel-allow-full-status.jsonl": "284cfe45b6584cc9fee1fa3d832ac973f8b18e52811faabc2458255e8c8b360e",
+    "queue-cancel-allow-result.png": "3c5447a884cb52676a8b300ff3479dfaee057994731184bd8a97c52b222f736a",
+    "queue-cancel-allow.log": "193e2a99f36266acd5a4e32bb0d2717feca94cfb3b08a0654e0ef7d46e496c0f",
+    "queue-cancel-common-after.json": "89aec6b852cb54ba5c0738087b6d13ebc6589fbeb3f4cddad40b4d955dadfaca",
+    "queue-cancel-common-before.json": "2126a44d0fb23dbc1cafb59115b56f4140a3e6a395da195878c684c0dd60b9e5",
+    "queue-cancel-common-full-status.jsonl": "1dee0ff7d702c557c76b9228f03686ab3ce478fd8683571b0f0ec6d2e6e12fae",
+    "queue-cancel-common-result.png": "71cb09bdcb04c1373405b8f169b258519b1cf02aee88eddf09f3a03b1b5ed65a",
+    "queue-cancel-common.log": "90d62803526abbc00f17173b0e995993f480bd371dd6e6307a9129e08ed1432a",
+    "queue-cancel-first-track.png": "b283f4c0848c5c74a3c1d5f8659efee65475c6311f11563689e6f3551c930044",
+    "queue-cancel-latest-status.json": "aa7439ce23b7d8de3ed64f1501671e2cf37cdac32e9b0b650afdbccc172f6581",
+    "queue-cancel-normal-retry-allow.log": "d0ba08e8ccf0b2a056c46a89a74f13cd8e1b0c58f9a96212db03256fc7cd3a17",
+    "queue-cancel-retry-selected.png": "32df016a154987cad3e75ed5e1aec9788f13054f97f1b99c696130cb34006695",
+    "queue-cancel-retry-source.png": "df0eb9811bb61f85c82917e78cdd17955191c80fb4350568eadd7df51b6aeadb",
+    "queue-cancel-selected.png": "61a3ddf16e36a1cbadf8e67c217e7ac0365130831aac445fece175b4b5709fdf",
+    "queue-cancel-source-ready.png": "91339a9f8260895f443abdbed8d3f9a53554b73380038af4fd3a94c6a9f9de36",
+    "queue-cancel-source.png": "37e45a163223880ea9c780b2baf0d3eac3a2a3807f9fbf4aaef290d7cbc31af5",
+    "queue-cancel-start.png": "290094c247bcd41f2f5b7db9fba840ab8fcfbde60d83cda877ed2f21ff26eb40"
+  },
+  "source_sha256": {
+    "link-load-queue-probe.h": "4a329151b02b64b745d9c7b889e42f66fc7bde154d905d2d4c0c5ea84621ed9b",
+    "link-request-tasks.h": "ba3e61d8254d8b1734c09a584479a529f6a4baf77ea1d4aa11de57d700dc6ca1",
+    "test-link-request-tasks.c": "bd762df1d28dbdfac112c04cc7eb44d2e6aff935b79bcc938c062a6e80b11c30",
+    "prepare-link-member-probe.py": "54c8af0f5a97858d633d53574b4481a9e7583905b8785d5b805119cca4f6b30c"
+  }
+}

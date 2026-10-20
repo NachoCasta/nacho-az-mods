@@ -1,0 +1,121 @@
+{
+  "scope": "Independent read-only source review of same-content native replacement; no new tests, runtime operations or full-packet audit",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+  "native_PID": 703,
+  "independent_full_packet_review": "docs/acceptance/usb-hub-support-link-matrix-native-same495-status.json",
+  "deck": 1,
+  "content_id": 495,
+  "scenario": "Native USB2 Algo mas495 replaces private member7/USB1 content495 on the same deck/controller; deck2 remains private1944",
+  "source_findings": [
+    {
+      "file": "src/azhub/linkfake/safe-eject.h",
+      "functions": [
+        "safe_source_identity",
+        "safe_load_hook"
+      ],
+      "fact": "Private source classification compares the full configured member7/8 media identity. Native member1 does not match; native admission records source=-1 without changing the prior committed proof until successful completion."
+    },
+    {
+      "file": "src/azhub/linkfake/safe-eject.h",
+      "function": "safe_load_complete_hook",
+      "fact": "Completion must match pending record and epoch before and after forwarding native publication. Matched result0 or4 retires the detach proof and sets committed_valid from the newly completed source/origin under safe_lock. For native source=-1 it becomes false. This happens before the load-completed log."
+    },
+    {
+      "file": "src/azhub/linkfake/native-detach.h",
+      "function": "safe_cached_forget_locked",
+      "fact": "The old per-deck detach ticket reference is released and valid cleared. Pending or failed replacements preserve old proof; a successful native replacement retires it even with identical content ID."
+    },
+    {
+      "file": "src/azhub/linkfake/link-cached-status.h",
+      "function": "probe_cached_status_private",
+      "fact": "Retained proof correlates deck/content with a committed private physical origin or valid detach ticket. No timer, delayed retirement or50-packet threshold exists. The source notes that serialization before retirement followed by later send is not ordered by this proof."
+    },
+    {
+      "file": "src/azhub/linkfake/linkfake.c",
+      "function": "sendto",
+      "fact": "After cached-proof classification, configured-source masking compares wire player/slot with private players7/8. A visible native player1 tuple cannot match that configured-source loop."
+    }
+  ],
+  "frozen_log_observation": {
+    "path": "local/diagnostics/link-normal-loader/matrix-native-peer-controls-state.txt",
+    "native_completion_controller": "0xfffed585c000",
+    "native_completion_result": 0,
+    "completion_unmatched_logged": false,
+    "interpretation": "The same-controller successful completion is recorded without the unmatched marker. This supports the reviewed retirement path; no runtime ledger values or precise pre-mask packet serialization timestamps were captured."
+  },
+  "slot_numbering": {
+    "internal_library_mapping": "media_sdid: libraryslot3->0x02, libraryslot7->0x22, libraryslot8->0x42; historical nativeLocalMediaID USB1=0x0102 andUSB2=0x0122",
+    "wire_observation": "Native USB2 standard bytes0x28/0x29/0x2a plus content ID are(1,2,1,495) in151 packets",
+    "auxiliary_observation": "All201 deck1 packets retain native auxiliary row0x18c:valid1,kind2,member_index0,media_kind2,media_subkind1,track_type1,content495",
+    "distinction": "Internal/library request slot7 is not a demonstrated mapping for standard status byte0x29. The observer reads those raw status bytes without a7-to2 transform.",
+    "general_native_serializer_mapping": "Not established by this source-only review; protocol reviewer owns native serializer analysis. Legacy Beat Link enum2=SD and3=USB has no AZUSB2 mapping and cannot determine the AZ result."
+  },
+  "bounded_wire_sequence": {
+    "complete_deck1_packets": 201,
+    "initial_zero_standard_tuple_packets": 50,
+    "subsequent_visible_native_tuple_packets": 151,
+    "zero_tuple": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visible_tuple": [
+      1,
+      2,
+      1,
+      495
+    ],
+    "first_observer_monotonic_ns": 908805189171,
+    "last_zero_observer_monotonic_ns": 914511742623,
+    "first_visible_observer_monotonic_ns": 914693782880,
+    "last_observer_monotonic_ns": 933572455680,
+    "clock_domain": "Observer/WSL monotonic, not Windows capture helper clock",
+    "causal_attribution": "None. The initial zero run alone does not prove private-proof masking, native serialization lag or any other cause. Later native visibility is observed; exact retirement-to-wire timing is not established."
+  },
+  "limits": [
+    "This is a source-order and numbering review, not complete semantic-payload privacy acceptance.",
+    "No source change is justified by the initial zero run alone.",
+    "The capture followed the independently established OHCI loss of all private library devices; it does not establish live-hub mode/eject behavior.",
+    "No physical AZ, audio or real-CDJ acceptance is claimed."
+  ],
+  "inputs": [
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-full-status.jsonl",
+      "sha256": "89626854f6b016feb297fa04d0c0233f8759ec89673556632cbe7d5d4c8bb177"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-same495-capture-state.json",
+      "sha256": "15a1020080a3f65dac6be3937f9415641e1c84febbe886ff68b8a8e47046af7f"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/matrix-native-peer-controls-state.txt",
+      "sha256": "e682b0243a16d8c3016fdfb581484807a1974ae1648130a1ff0736646361fdd7"
+    },
+    {
+      "path": "src/azhub/linkfake/safe-eject.h",
+      "sha256": "cb5addf6dd944165d8bfdb5d6353eacec2f82303d51238871bda2be621ced359"
+    },
+    {
+      "path": "src/azhub/linkfake/native-detach.h",
+      "sha256": "621e317f7c7d6f8ca0b3962256c24f34ead3408b58d2638b70cb56a5f92705ce"
+    },
+    {
+      "path": "src/azhub/linkfake/link-cached-status.h",
+      "sha256": "58b4091c41eabdc1d006ffb455cbcf5bf5534d8d8d3def5f8b5f9bdbbf917ec8"
+    },
+    {
+      "path": "src/azhub/linkfake/linkfake.c",
+      "sha256": "5ee62a2c8195260eca3cdc07210acdfa379bdb3e54e86c867230cc244a0b9835"
+    },
+    {
+      "path": "src/azhub/research/scripts/audit-link-status-privacy.py",
+      "sha256": "503cee8bb74ce1ca0b360f823e249391639894edf792519ea7976c83b84afd8c"
+    },
+    {
+      "path": "src/azhub/research/GHIDRA-FINDINGS.md",
+      "sha256": "14e949246562da0a9ff4f1884682db7f0569b37478c8b06e6def330553ec6907"
+    }
+  ]
+}

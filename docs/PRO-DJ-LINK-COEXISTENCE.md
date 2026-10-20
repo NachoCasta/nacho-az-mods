@@ -193,3 +193,33 @@ playing source to accommodate an external player.
 
 No runtime code, hooks, package, version, catalog, release or hardware state was
 changed by this investigation.
+
+## Deferred mode completion and internal-cache conflict (emulator research)
+
+The native completion task at `0x0140a088` clears owner +0x4a1 and either
+notifies listeners or starts a pending request (+0x4a3, requested +0x4a2).
+Returning from `0x01408ef0` alone does not establish completion. The experiment
+observes completion only after forwarding the task and finding both busy and
+pending clear; owner +0x4a4 provides the native effective mode.
+
+Runtime tracing exposed a conflict with the existing internal library override:
+`0x013fa7a8` returns early when cache `0x03f86a08` equals its requested mode and
+owner +0x3b8 is initialized. On an Off-start session, the override has already
+set that cache to 1. An On request then skips native network transition work;
+the coordinating task remains busy and queues the subsequent Off request.
+The trace candidate recorded request=0 with busy=1/effective=1. The completion
+hook alone therefore cannot repair this failure.
+
+The research-only `--mode-recovery-probe` keeps a shadow from native network
+requests, restores that value before the native setter, and suspends internal
+cache maintenance until native deferred completion. It then schedules source
+announcements on the injector thread, deferring while eject work is reserved.
+This is an emulator experiment, not a production integration: cache check/write
+serialization, startup interception order, owner lifetime, source generations,
+loaded/eject interactions and additional slots require further validation.
+
+An initial replay of every source restored missing USB1 rows but duplicated
+member7/slot7, whose native row survives the transition. The next experiment
+replays only slot3. USB3 and five/eight-source behavior must not be inferred from
+these three-fixture observations. All firmware decompilation and screenshots
+remain ignored local evidence; the published mod and physical AZ are unchanged.

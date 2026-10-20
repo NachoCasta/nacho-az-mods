@@ -1,0 +1,246 @@
+{
+  "timestamp_utc": "2026-10-19T02:53:44.655252+00:00",
+  "scope": "Isolated emulator native mode completion and selective source republication",
+  "binary_sha256": "8661e1bb3061358bdae0addb8d5d35eff519932f15c22a20fe570a8038babdbf",
+  "pid": 202006,
+  "real_az_access": false,
+  "changes": [
+    "Shadow the mode supplied to the native network setter to preserve its change detection despite the internal library-cache override",
+    "Suspend internal-cache maintenance during coordinated transition; observe native deferred completion",
+    "Republish only withdrawn slot3 sources; tested slot7 row survives and must not be replayed"
+  ],
+  "observations": {
+    "unloaded_cycle": "Off -> On -> Off completed; screenshots show exactly three hub rows in both modes",
+    "post_cycle_load": "Browsed member8 slot3, loaded content495 into deck1, started playback",
+    "loaded_cycle": "Off -> On -> Off completed; screenshots show exactly three hub rows in both modes",
+    "playback_samples": [
+      {
+        "pid": 202006,
+        "clock_ms": 9970451,
+        "view": 4,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdd",
+            "port": 2,
+            "state": 0,
+            "generation": 26827,
+            "devnum": 17
+          },
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 0,
+            "generation": 26481,
+            "devnum": 15
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 0,
+            "generation": 26654,
+            "devnum": 16
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 2.946,
+            "content_id": 495,
+            "title": "Algo más"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      {
+        "pid": 202006,
+        "clock_ms": 10020985,
+        "view": 1,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdd",
+            "port": 2,
+            "state": 0,
+            "generation": 26827,
+            "devnum": 17
+          },
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 0,
+            "generation": 26481,
+            "devnum": 15
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 0,
+            "generation": 26654,
+            "devnum": 16
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 47.496,
+            "content_id": 495,
+            "title": "Algo más"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      },
+      {
+        "pid": 202006,
+        "clock_ms": 10060304,
+        "view": 1,
+        "devices": [
+          {
+            "label": "HUB_LIB",
+            "disk": "sdd",
+            "port": 2,
+            "state": 0,
+            "generation": 26827,
+            "devnum": 17
+          },
+          {
+            "label": "HUB_LIB",
+            "disk": "sdb",
+            "port": 2,
+            "state": 0,
+            "generation": 26481,
+            "devnum": 15
+          },
+          {
+            "label": "HUB_LIB2",
+            "disk": "sdc",
+            "port": 2,
+            "state": 0,
+            "generation": 26654,
+            "devnum": 16
+          }
+        ],
+        "decks": [
+          {
+            "loaded": 1,
+            "playing": 1,
+            "pos_s": 82.194,
+            "content_id": 495,
+            "title": "Algo más"
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          },
+          {
+            "loaded": 0,
+            "playing": 0,
+            "pos_s": -1.0,
+            "content_id": 0,
+            "title": ""
+          }
+        ]
+      }
+    ]
+  },
+  "rejected_experiments": [
+    {
+      "sha256": "119f7b11c70716e2b428b12e14f8e9a0a707cc29bc0d620e92afe16636379f65",
+      "finding": "Completion-only recovery did not resolve the skipped network transition"
+    },
+    {
+      "sha256": "e5a06560db37e9ab1446bd0a5c38f4caa4dfd2dcb63e6d03bf0a9a01ae869d89",
+      "finding": "Trace showed request0 queued while busy1/effective1 after an On request skipped network work"
+    },
+    {
+      "sha256": "841f22df276db33903cd83e3e033efeb74469e2f9489d863becc99511c7988c4",
+      "finding": "Native transitions completed but replaying slot7 duplicated its SOURCE row"
+    }
+  ],
+  "limits": [
+    "Single loaded track on deck1; no audio capture or physical hardware acceptance",
+    "No external peer active during accepted selective-candidate cycles",
+    "No mode change with decks3/4 loaded or with eject in progress",
+    "Cache check/write serialization, native callback/owner lifetime and source-generation concurrency remain unresolved",
+    "Rapid pending changes, slots beyond this three-source fixture and five-source regression remain open",
+    "Experimental emulator-only overlay; production integration and hardware recovery gate remain open",
+    "Loaded-deck UI shows a warning triangle after source withdrawal/republication; its meaning and downstream cache/source behavior remain to be investigated"
+  ],
+  "local_evidence_sha256": {
+    "mode-recovery-final.log": "5006778e518490cd8731e35077bd43ddda819823c0079600df2180444eea2855",
+    "mode-trace-final.log": "5893a941f4a4b27b18ee1aa3e607c0e7832935a0eafeca37a5748a92b17496bc",
+    "mode-shadow-final.log": "97975694b0c0151969e6bbe3d180ba20461fe70f5342671735ee56a7b485fefe",
+    "mode-shadow-on.png": "80d538c1e23344ce714dc81871ffa7d63ecbeb835cf1afcaedf2d4798b7fdeb4",
+    "mode-shadow-off.png": "483c4bb08b459182d5a8fddf2244ab1e2fee96e1604f88d06160e0c31bbbe680",
+    "mode-selective-on.json": "172fddc8037436fac62038015905943e6998053f2833c53c25991819b2a5d2a3",
+    "mode-selective-off.json": "8682ae79881f69e18af967a8a4b9f6ec888f9ead75ca71ce1f5c495a4b084c25",
+    "mode-selective-loaded.json": "2a92308a896231e9d9b797a38be7e829f93274fd5d19ff8028b8606fade33dbe",
+    "mode-loaded-on.json": "acc60972e776a738a554c07185690ae392ed1c0b54c739f285254854db60e81b",
+    "mode-loaded-off.json": "59312492d7aed41ebfef41dcf4e653acb68222457214dc62dcfd6cb899b72d3e",
+    "mode-loaded-off.log": "d491d506d61d3216bdb28f66c5a23a2419f4549d4dad228bc1c4ff8ed8c19857",
+    "mode-selective-setting-on.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "mode-selective-setting-off.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "mode-selective-sources-on.png": "b7d46ec2979971b4912bc59a4275a4933df002fa4c157dbd07a15502bfc86174",
+    "mode-selective-sources-off.png": "64730cfaa6efcc7c4a60a48e7e897aa140718a981323f5e36bd76e956db9c8e9",
+    "mode-loaded-setting-on.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "mode-loaded-setting-off.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "mode-loaded-sources-on.png": "a0d3646c425487be43439c4ada29bab967c277c162845d09e78502cf1661b397",
+    "mode-loaded-sources-off.png": "0f7217af1812cda0422e4d44336417960529c0565237e306175d199cc69119df"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "scope": "Controlled pending common-stage source replacement on v5-derived diagnostic; not direct supported-binary runtime acceptance",
+  "supported_ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "diagnostic_ELF_sha256": "11ad791a3ddcc8d631bbf7fe52a299c2db809d900c81f371afc0f0ba59915c64",
+  "diagnostic_package_sha256": "fd8169ffe7617ee9dd355c8ba3837a7d7c337e79b100164a9edcce5b85c453de",
+  "PID": 45786,
+  "build": "docs/acceptance/usb-hub-support-link-request-delay-v5-build.json",
+  "activation": "Copied seven files to actual mods USBsdb1; supported framework apply, native Community Mods Allow and Reload. Intermediate40702 unapproved; final45786 loaded54 hooks. No manual internal staging/approval/settings edits.",
+  "normal": {
+    "captured": "type1 content1944, controller0xfffebdc48e00, generation23907/devnum8, media0x1010200000602",
+    "interruption": "Source removed during8s pause before original common stale check; immediate device_add failed QEMU backend permission conflict, so reconnection did not complete during this first pause. Existing old deck1 retained, targetdeck2 Not Loaded; native UI exits to source selection.",
+    "retry": "Later same-port/backend attach succeeds asdevnum9; fresh normal source0 load completes0 onto deck2 in same45786.",
+    "record_limit": "Normal injection helper stopped on QMP exception before saving its JSON; frozen trace, native kernel/device records, screenshots and helper source preserve this partial execution. No remove/add duration claim."
+  },
+  "instant_doubles": {
+    "captured": "Documented heldSYNC1, type5 content1944, controller0xfffebdc48000, generation24331/devnum9, media0x1020200000602",
+    "interruption": "Same-port/backing remove/add completed in0.118107 wallseconds during8s pause, after one transient backend permission conflict. Newdevnum10. Old pending ID does not admit new track or copy position; old pauseddeck1 remains04:25.514, deck2 cached advances03:44.550. No NOW LOADING hang.",
+    "retry": "Fresh source0 normal load todeck2 completes0; heldSYNC1 then admits source0 todeck1/result0, positions04:15.629/04:15.628. Warning triangles clear on fresh loads.",
+    "health": "Two direct native plus five nested partitions mounted, controllers healthy; replacementA now sdh1, demonstrating sdletter is not identity."
+  },
+  "non_acceptance_controls": [
+    "Initial LOAD2 attempts were sent outside BROWSE and did not enter common processing or consume marker. No USB removal occurred in those attempts; they are not cancellation acceptance.",
+    "This pauses execution at the common stage; it does not force native async task allocation/post failure/destructor-only/superseded cleanup branches. Prior diagnostic/native and current host models remain separate supporting evidence."
+  ],
+  "limits": [
+    "Emulator6.6 only; no hardware/audio claim",
+    "Diagnostic changes only timing/logging in one source file; exact supported package remains separately frozen",
+    "Allowance/final-stage faults and every async interleaving are not established by this record"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/id-common-replug.json",
+      "sha256": "6bf4bd42046cbe5154cde087fe22e81c3119f8645861d17d96b1c0579496bbe6",
+      "bytes": 1517
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/test-normal-common-replug.py",
+      "sha256": "73f6d0deb13ff2ba9feb8906a03a15b8c735233ef26bc12fc72e0d2457d170a6",
+      "bytes": 2646
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/test-id-common-replug.py",
+      "sha256": "33c48bdd20c0fd26b175c2d53587c2e6e7b4791532ee2beb9f0b352bfb85a861",
+      "bytes": 3432
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-request-delay-active-state.txt",
+      "sha256": "a13d56e93560f324add92a9ba888865fff89eacbcea7cf1c78bac8648651df99",
+      "bytes": 278656
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-request-delay-community-allow.png",
+      "sha256": "c5fbe9ba930bdfae3800505b16c963a0cc566520f90a05470d2f5e47b3a3d9e7",
+      "bytes": 35896
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-request-delay-details.png",
+      "sha256": "d47f32c72dd1d261d1e597a86fdf39ce0b4d81f614597682d8d85f0ada4f7391",
+      "bytes": 41724
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-request-delay-allowed.png",
+      "sha256": "f6130f7058c3c2ac5fd35dff9f934775346c93be3657d7dfb7613682538392fe",
+      "bytes": 45118
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-private-selected.png",
+      "sha256": "cc56585e7e403b6d70a7b5dd31937cf7b4d3137a39bfe0d60d348c6707aa0e55",
+      "bytes": 108036
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-private-baseline-state.txt",
+      "sha256": "9b306ab88f8c1d11f28e912def62fac977da395339651ff7de95d026d85b8182",
+      "bytes": 302413
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-before-controlled-load2.png",
+      "sha256": "d8d7070bd165fc093cf4242dc1e164e0ccf14b71c4d8a0d236d133c0737bdca2",
+      "bytes": 107239
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-normal-executed-state.txt",
+      "sha256": "2c30b30c33e43c694bfbfcddf13c89e94b27576281e91907c7e191ff03e616e4",
+      "bytes": 311102
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-normal-after-pause-state.txt",
+      "sha256": "481de39ba94b7795b0371b6f386271f6f01a21c0222e293ce234611b8fb18b0c",
+      "bytes": 313661
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-normal-after-pause-ui.png",
+      "sha256": "e2655ba4df8f48f34716b1f7e883ee504c4d89e86f35dfe8d4efb97d3f562e61",
+      "bytes": 56787
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-normal-fresh-retry-state.txt",
+      "sha256": "68c661105c415af081f16d2fba6096bf245f9b35d46f8bebaadd54757206dccc",
+      "bytes": 321035
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-normal-fresh-retry-playing.png",
+      "sha256": "991c2142f706f526f071fd3f962796308fefca6dcc2d5a4fa3e8eedbbbb77a17",
+      "bytes": 156650
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-executed-state.txt",
+      "sha256": "bb29dcaf9173055e5fa53848b634e4871fd4f00df99936632f3d34b48d27b8f7",
+      "bytes": 327371
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-settled-state.txt",
+      "sha256": "776dd89141ef4a10063926774d01b371fe3656cf847f51aa2004f999248f12e6",
+      "bytes": 330049
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-settled-ui.png",
+      "sha256": "7ef847b46fd59f9647c8b804eab12d049caa31368dfc6d75663ab7e276bb2a8c",
+      "bytes": 135543
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-fresh-normal-state.txt",
+      "sha256": "f7331b9a1f96a7d22d7c3cf60ac6ec6f67aa04a296e32f2bbdcf9e029f20c203",
+      "bytes": 336229
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-fresh-id-state.txt",
+      "sha256": "d67440c3c53392ba3587279fb4f3e441332f32f4833a81191393fe6d03c369cc",
+      "bytes": 340516
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-delay-id-fresh-id-ui.png",
+      "sha256": "3185ac4509e04cb464baaab6bb5097ab1c7be3c0606b2b65ee9f53fffeed3dbc",
+      "bytes": 129441
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-delay-id-replug.json",
+      "sha256": "24174a8a9ab4429f91505638aaf2dd02c113a304c1c5e2cc17e80e2f00e19a7b",
+      "bytes": 306
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-delay-id-fresh-retry.json",
+      "sha256": "efe773a42ea100fa382ca8f37d30e8953517133374e6537d7f207e1657023e48",
+      "bytes": 306
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-delay-after-replug-seven.json",
+      "sha256": "bd3ab1e165c416c362b32b81b2dfa1da33d9bcbd7f902eecc33ca09996cfb027",
+      "bytes": 115927
+    }
+  ]
+}

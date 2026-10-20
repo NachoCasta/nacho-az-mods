@@ -1,0 +1,45 @@
+{
+  "scope": "Final local preparation audit; not physical acceptance",
+  "result": "Local preparation complete; physical validation pending through normal AZ-MODS workflow",
+  "package": {
+    "path": "local/integration/link-coexistence-v5/dist-candidate/usb-hub-support-0.3.0.azmod",
+    "sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+    "bytes": 385375
+  },
+  "ELF": {
+    "path": "local/integration/link-coexistence-v5/package-export/src/azhub/linkfake/out/usb-hub-support.so",
+    "sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+    "bytes": 143592
+  },
+  "production_files_verified_in_working_tree_and_export": 65,
+  "v5_records_reviewed": [
+    "docs/acceptance/usb-hub-support-link-adversarial-native-v5.json",
+    "docs/acceptance/usb-hub-support-link-cold-off-v5.json",
+    "docs/acceptance/usb-hub-support-link-cold-on-v5.json",
+    "docs/acceptance/usb-hub-support-link-final-cold-restoration-v5.json",
+    "docs/acceptance/usb-hub-support-link-id-peer-native-v5.json",
+    "docs/acceptance/usb-hub-support-link-loaded-eject-peer-v5.json",
+    "docs/acceptance/usb-hub-support-link-loaded-modes-v5.json",
+    "docs/acceptance/usb-hub-support-link-native-usb-modes-v5.json",
+    "docs/acceptance/usb-hub-support-link-native-visibility-baseline-v5.json",
+    "docs/acceptance/usb-hub-support-link-normal-activation-v5.json",
+    "docs/acceptance/usb-hub-support-link-normal-recovery-v5.json",
+    "docs/acceptance/usb-hub-support-link-partial-eject-modes-v5.json",
+    "docs/acceptance/usb-hub-support-link-primary-tcp-transport-v5.json",
+    "docs/acceptance/usb-hub-support-link-replug-retry-v5.json",
+    "docs/acceptance/usb-hub-support-link-request-delay-v5-build.json",
+    "docs/acceptance/usb-hub-support-link-request-delay-v5-runtime.json",
+    "docs/acceptance/usb-hub-support-link-restored-after-delay-v5.json"
+  ],
+  "local_raw_receipts_verified": 324,
+  "unique_local_raw_paths_verified": 323,
+  "ledger_record_paths": "All matrix record-list paths exist",
+  "isolation": "Source implementation retains eight independent music/info servers, SQL factory caches and preallocated tag caches. Runtime verifies five distinct server pairs; divergent-content identical-ID cache collision remains unforced.",
+  "remaining": [
+    "Physical USB/UI/audio trial and reviewed isolated peer network setup.",
+    "Actual-CDJ interoperability, audible phase sync, long sessions, all formats, eight-source hardware and cache capacity are unvalidated.",
+    "Known private warning triangles and blank slot8 caption remain. Unknown protocol-tail semantics and exhaustive async/fault schedules are not claimed."
+  ],
+  "publication": "None; published0.2.1, catalog, release assets and tags unchanged.",
+  "authorization_update": "Subsequent user clarification removes recovery verification as an activation gate. Audit observations and frozen raw receipts remain unchanged; physical recovery is not claimed."
+}

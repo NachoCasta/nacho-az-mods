@@ -1,0 +1,50 @@
+{
+  "scope": "Real AZ same-player software-peer reconnect and128BPM tempo following, Wi-Fi; audio/new load pending",
+  "version": "0.3.0",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "native_PID": 1356103,
+  "sequence": "Prior player3 exits normally after126BPM trial; later fresh player3 process discovers native1 master, negotiates ownership and announces128BPM for60seconds.",
+  "result": {
+    "previous_master": 1,
+    "peer_master": true,
+    "handoff_confirmation_ms": 51.565,
+    "status_callbacks": 603,
+    "native1_synced128_packets": 299,
+    "beat_callbacks": 0,
+    "stopped": {
+      "event": "stopped",
+      "monotonic_ns": 468554340019600,
+      "statuses": 603,
+      "beats": 0
+    }
+  },
+  "retention": "SSH retains same nativePID, CAMI discovered and LLEE. Native1 had resumed master before peer reconnect, based on observed handoff predecessor.",
+  "limits": [
+    "No physical removal of another CDJ; bounded software-peer process stop/restart only.",
+    "Zero beat callbacks in this reconnect window; loaded/SYNC/tempo status does not prove active audio playback.",
+    "New deck2 load and uninterrupted user-heard audio await user confirmation; not established by retained LLEE.",
+    "Shutdown lost callbacks are local finder teardown, not a native loss signal."
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/az-link-wifi-reconnect-128.jsonl",
+      "sha256": "bae1914162a79ab0b1b5685fa4291e56905cbd04f2e65bb6fb410c972bd1567d",
+      "bytes": 107045
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-reconnect-128.stderr.txt",
+      "sha256": "6bed72fcb1575d546dd4e8117aa2faba8a488f784260b2ef49938c2b878752e6",
+      "bytes": 1119
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-reconnect-before-ssh.txt",
+      "sha256": "e05968ade5f9c0e65bbb446a90d875f5a98399d1b016feb16b6394d3f54bd481",
+      "bytes": 497
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-reconnect-current-runtime.txt",
+      "sha256": "8e241c8f2e7759f62d3e45b07b99d9c7f95c23d11c26d5e6420c61a391151422",
+      "bytes": 16264
+    }
+  ]
+}

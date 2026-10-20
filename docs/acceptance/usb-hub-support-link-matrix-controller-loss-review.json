@@ -1,0 +1,32 @@
+{
+  "scope": "Independent review of frozen emulator controller-loss evidence; not real-AZ acceptance",
+  "candidate_elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "native_pid": 703,
+  "raw_record": {
+    "path": "local/diagnostics/link-normal-loader/matrix-controller-loss.json",
+    "sha256": "c665ce8b5a409cb28c4e3b352629aa6ae080f10fa8f13a40b2b6a84effc0ceac"
+  },
+  "guest_uptime_seconds": {
+    "ohci_unrecoverable_error": 726.752925,
+    "host_controller_died": 726.753008,
+    "irq23_disabled": 727.279648,
+    "hub_disconnect": 727.283820,
+    "first_child_disconnect": 727.287929,
+    "last_child_disconnect": 727.708291,
+    "off_capture_before": 922.81,
+    "off_capture_after": 953.11,
+    "frozen_controller_state": 1524.58
+  },
+  "observations": [
+    "Guest partitions and mounts retain only native sda/sda1 among USB storage devices.",
+    "QMP still reports a running emulator and attached virtual USB devices; that does not prove guest controller or storage health.",
+    "The settled source log records all five private sources absent and releases their aliases before mode 1/epoch 2 completion.",
+    "The Off capture occurs after controller loss and therefore supports cached-source privacy, not fresh attached-source privacy."
+  ],
+  "conclusion": "The zero-source On state cannot establish a mode-recovery defect because its backing devices had already disconnected. No mod recovery change is justified by this evidence.",
+  "remaining": [
+    "Repeat the mode/source matrix with healthy guest storage and record guest partitions, topology, mounts and controller errors around each functional block.",
+    "Investigate the separate missing player7/slot7 and player8/slot7 startup rows, which precede controller loss.",
+    "A host-only alternative USB controller fixture requires actual kernel-driver support and preserved native/hub topology checks."
+  ]
+}

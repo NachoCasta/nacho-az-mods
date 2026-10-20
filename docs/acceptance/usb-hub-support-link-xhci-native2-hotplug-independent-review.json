@@ -1,0 +1,25 @@
+{
+  "scope": "Independent read-only frozen hotplug-control audit; no runtime operations",
+  "status": "Native USB2 registration not achieved; no suppression conclusion",
+  "owner_record": "docs/acceptance/usb-hub-support-link-xhci-native2-hotplug-control.json",
+  "all10raw_hashes_and_lengths_verified": true,
+  "same_PID": 797,
+  "before_after_health": "All six original native/private filesystems remain mounted with no observed controller-failure strings in the raw dmesg snapshots; the additional sdg1 device remains unmounted. Five private rows including both slot7 rows stay visible.",
+  "native2_negative": "Raw topology shows direct2-1/sdg1. Unmodified stock rule accepts sd[a-f] only; native sdg1 mount unit shows pid0 and no start timestamp. No native USB2 source was registered.",
+  "visual_control": "Before/after screenshot hashes are identical; independently viewed source screen shows nativeUSB1 Nacho Chips plus five LINK rows and no nativeUSB2.",
+  "claim_boundary": "The hotplug did not supply the required nativeUSB2 registration stimulus, so it neither proves nor disproves the suspected private-slot7 suppression. It does corroborate stable six-mount xHCI baseline.",
+  "shutdown": "Owner record and frozen serial end in standard poweroff321.267826s with EEEE.",
+  "raw_evidence_hashes": {
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-usb2-off/launch.json": "5ad44bbcbce94c55e7a98401276a9276dbce53fd6f790fba2939a299b8f70115",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-usb2-off/serial.log": "6d935692dc338e2eb3e7a236e5b9f0411f6f82a92acf1e320b7d8f9810965335",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-source-menu-reset.png": "f1116a286d7d0d11c0dcd75891fb5fbabf7f599edc2ce4945fda150ecf45319a",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-baseline-settled-state.txt": "efdb52c9e197ffc5ce94ec22630d3036dacbb8516ca017aa47c683e2af6f8e02",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-before-usb2-health.json": "0b45264e32a13766c6cdcf08f5cd577faf127f7f00ed572a638bbc3e93f49092",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-attach.json": "a478861f620fc5046bc91c603974e98da614b4c7837119fb5da8690d958c6b69",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-source-20s.png": "f1116a286d7d0d11c0dcd75891fb5fbabf7f599edc2ce4945fda150ecf45319a",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-after-hotplug-health.json": "5d11341b36ab24b7eb9673f4244bf1ce8ea0d0dcf4518c93838b663d9be53bcb",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-stock-rule-negative.txt": "82d9191e36d8cf8db03a015bf5df94ef51475ee6b619b9cc16fcf26265f03cf4",
+    "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-pre-shutdown-health.json": "d1b1e530114f5571cb9b42d2c1a660582840dd224cca1b7829748bf8573de1c4"
+  },
+  "next_control": "Await frozen both-native coldboot with actual1-1/2-1 registration, five nested devices and seven healthy mounts. No diagnostic activation before a stable uninstrumented reproduction."
+}

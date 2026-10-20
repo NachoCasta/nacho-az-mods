@@ -1,0 +1,776 @@
+{
+  "elf_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+  "imports": {
+    "setsockopt": "0x4258a0",
+    "read": "0x426170",
+    "recvfrom": "0x426840",
+    "recv": "0x427430",
+    "getsockopt": "0x4277a0",
+    "syscall": "0x428dd0"
+  },
+  "calls": [
+    {
+      "address": "0xed2ab4",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": 1,
+      "flags": 0
+    },
+    {
+      "address": "0xed3468",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 20,
+      "length": 16
+    },
+    {
+      "address": "0xed3520",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": 1,
+      "flags": 0
+    },
+    {
+      "address": "0x138ed40",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x138ed60",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x138ee00",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x138ee20",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x138eec0",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x138eee0",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x138f030",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": 1,
+      "flags": 96
+    },
+    {
+      "address": "0x138f0a0",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": null
+    },
+    {
+      "address": "0x138f0b4",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": 4,
+      "flags": 98
+    },
+    {
+      "address": "0x138f228",
+      "function": "recvfrom",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": 0
+    },
+    {
+      "address": "0x138f480",
+      "function": "recvfrom",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": 0
+    },
+    {
+      "address": "0x1395548",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x1395560",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x1395578",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 7,
+      "length": 4
+    },
+    {
+      "address": "0x1395628",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x1395640",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x1395658",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 7,
+      "length": 4
+    },
+    {
+      "address": "0x1395708",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x1395720",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x1395738",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 7,
+      "length": 4
+    },
+    {
+      "address": "0x1395b48",
+      "function": "recvfrom",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": 0
+    },
+    {
+      "address": "0x1396d3c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 2048
+    },
+    {
+      "address": "0x13ecc3c",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 6,
+      "length": 4
+    },
+    {
+      "address": "0x13fbed8",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x13fbfd8",
+      "function": "recvfrom",
+      "transfer": "bl",
+      "buffer_size": 4096,
+      "flags": 0
+    },
+    {
+      "address": "0x13fe140",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 16
+    },
+    {
+      "address": "0x13fe1b4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 16
+    },
+    {
+      "address": "0x15d5d34",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x15d5fc4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d5ff8",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d602c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d6060",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d60b4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d60e8",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x15d6140",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x15d6208",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 1420
+    },
+    {
+      "address": "0x15d6260",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x15d62bc",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x15d6304",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x2299974",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x229b10c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x22d889c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 8192
+    },
+    {
+      "address": "0x23237b4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x2324db4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 255
+    },
+    {
+      "address": "0x2325534",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 255
+    },
+    {
+      "address": "0x232572c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4095
+    },
+    {
+      "address": "0x23262ac",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4095
+    },
+    {
+      "address": "0x2326ea8",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4095
+    },
+    {
+      "address": "0x2330d98",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x2363cb4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x2364d48",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 4
+    },
+    {
+      "address": "0x238be30",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x238c76c",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x24693ac",
+      "function": "getsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 4
+    },
+    {
+      "address": "0x2469640",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 8,
+      "length": 4
+    },
+    {
+      "address": "0x2469668",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 7,
+      "length": 4
+    },
+    {
+      "address": "0x246969c",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 6,
+      "option": 1,
+      "length": 4
+    },
+    {
+      "address": "0x2479a3c",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 0,
+      "option": 35,
+      "length": 8
+    },
+    {
+      "address": "0x2479abc",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 0,
+      "option": 36,
+      "length": 8
+    },
+    {
+      "address": "0x2479b1c",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 0,
+      "option": 34,
+      "length": 1
+    },
+    {
+      "address": "0x2479b64",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x247c4e0",
+      "function": "recv",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": 0
+    },
+    {
+      "address": "0x247c54c",
+      "function": "recvfrom",
+      "transfer": "bl",
+      "buffer_size": null,
+      "flags": 0
+    },
+    {
+      "address": "0x2499338",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x24a35c4",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x24a400c",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x24a4dac",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x24bbdb0",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x2508dfc",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 1
+    },
+    {
+      "address": "0x25092dc",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 1
+    },
+    {
+      "address": "0x2509f14",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 1
+    },
+    {
+      "address": "0x250b958",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 1
+    },
+    {
+      "address": "0x26ab8dc",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x26ad5e0",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x26ae5b4",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": 1,
+      "option": 20,
+      "length": 16
+    },
+    {
+      "address": "0x26ae634",
+      "function": "setsockopt",
+      "transfer": "bl",
+      "level": null,
+      "option": 2,
+      "length": 4
+    },
+    {
+      "address": "0x26ae7f0",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x26ae898",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    },
+    {
+      "address": "0x26afe20",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": 2048
+    },
+    {
+      "address": "0x26c0e24",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26c6744",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26df8a0",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26dffd8",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26e0540",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26e72d0",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26e7924",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26e7e80",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x26fbbc0",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27017c8",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27017e8",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x2701a0c",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27025f8",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x2702b60",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27030dc",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x270674c",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x270f030",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x2718f2c",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271dba4",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271eb24",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271ee18",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271f568",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271f850",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271fb38",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x271fe20",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x2720108",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27203e8",
+      "function": "syscall",
+      "transfer": "bl",
+      "number": 178
+    },
+    {
+      "address": "0x27c12cc",
+      "function": "read",
+      "transfer": "bl",
+      "buffer_size": null
+    }
+  ],
+  "limits": [
+    "Direct BL/B-to-PLT transfers only; indirect calls, inline syscalls, libc and other modules are not covered",
+    "Argument values are conservative local MOV-chain findings, not whole-program control-flow proof",
+    "Unknown level/option/flags must not be treated as absence of an operation"
+  ],
+  "scope": "Expanded exact-firmware direct receive/read/socket-call static inventory",
+  "reviewed_helpers": [
+    {
+      "function": "0x138f068",
+      "peek_call": "0x138f0b4",
+      "flags": "0x62 (MSG_PEEK|MSG_TRUNC|MSG_DONTWAIT)",
+      "behavior": "Peeks four bytes, compares the value with a buffered value, and consumes mismatched datagrams using flags0x60 before retrying; socket port/type ownership not established by this function alone"
+    },
+    {
+      "function": "0x247c420",
+      "recv_call": "0x247c4e0",
+      "recvfrom_call": "0x247c54c",
+      "behavior": "Generic locked receiver chooses recv when source-address outputs are absent, recvfrom otherwise; both pass flags0"
+    }
+  ],
+  "conclusions": [
+    "No direct B-to-PLT tail transfers found among the targeted symbols; inventory also includes BL calls",
+    "Six direct recv calls include real MSG_PEEK usage; earlier recvfrom-only inventory is not sufficient to establish no-peek native behavior",
+    "The 29 direct syscall calls resolve to AArch64 gettid178, not socket receive syscalls",
+    "The 39 read sites and generic recv helper require socket-ownership/runtime correlation before claiming UDP policy coverage"
+  ],
+  "script_sha256": "614e48279d46bb1c11a3eb9c539e2238db97b705a3994f7b69650f2f4de6c149",
+  "local_capture_sha256": {
+    "recv-path.txt": "39a0543df28df9d7137c3c105d892d43057ee486de5ccbee096ebed5b7697648",
+    "recv-callers.txt": "8984480a5aa4b22f1f6714bcb884a0aee714c8fb70963c8b6f8d2da8ae0cb564"
+  }
+}

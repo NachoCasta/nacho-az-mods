@@ -1,0 +1,199 @@
+{
+  "timestamp_utc": "2026-10-19T03:03:22.475688+00:00",
+  "scope": "Replay epoch deferral, emulator mode sequence and post-transition external-master following",
+  "binary_sha256": "650fccab50d69645fd1f277d00587ba6c25fa3f11176ee09eb7e87f72a967a35",
+  "pid": 215251,
+  "real_az_access": false,
+  "adapter_tests": {
+    "source_sha256": "f102685f56d696022270478a0d28f4bf7460d6901401202ca0d2494fae426687",
+    "adapter_sha256": "8c2b16f74fca444c9fc54b69a155be4e2b44d8becf59b20e994b29ce340f0585",
+    "asan_ubsan": "PASS",
+    "tsan": "PASS",
+    "previous_header": "New stale-epoch assertion fails against the previous serialized header; expected negative control",
+    "concurrent_cycles_per_run": 20000
+  },
+  "mode_sequence": {
+    "ui": "Off-start -> On -> Off -> On",
+    "completed_epochs": [
+      2,
+      3,
+      4
+    ],
+    "pending_native_request_observed": false,
+    "final_source_rows": 3,
+    "duplicates_observed": false
+  },
+  "post_transition_peer": {
+    "implementation": "Beat Link 8.0.0 isolated namespace",
+    "role": "master",
+    "player": 3,
+    "tempo": 126,
+    "synced_nonmaster_deck1_status_count": 308,
+    "first_follow": {
+      "event": "status",
+      "monotonic_ns": 8524275921242,
+      "player": 1,
+      "bpm100": 12021,
+      "master": false,
+      "synced": true,
+      "effective_bpm": 125.99995327949524,
+      "pitch": 1099081,
+      "packet_bytes": 512
+    },
+    "last_follow": {
+      "event": "status",
+      "monotonic_ns": 8565853765666,
+      "player": 1,
+      "bpm100": 12021,
+      "master": false,
+      "synced": true,
+      "effective_bpm": 125.99995327949524,
+      "pitch": 1099081,
+      "packet_bytes": 512
+    },
+    "playing": {
+      "pid": 215251,
+      "clock_ms": 10581777,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.61,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "advanced": {
+      "pid": 215251,
+      "clock_ms": 10590842,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 12.054,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  },
+  "limits": [
+    "UI sequence completed each native transition before the next; native pending-request overlap remains unvalidated",
+    "No audio-phase, physical AZ or real-CDJ acceptance",
+    "One track on one deck, three hub fixtures only",
+    "Beat Link status buffer truncates native 1152-byte messages to 512; no full status privacy audit here",
+    "Unknown BPM65535 on empty deck2 excluded from tempo conclusions",
+    "Loaded-mode warning, eject overlap, native task/owner concurrency, broader protocol and production integration gates remain open"
+  ],
+  "local_evidence_sha256": {
+    "mode-epoch.json": "a9925e910b86924401295c75464be76175876a988b82552e7390e25ff880bfb8",
+    "mode-epoch.log": "abd3f3c802c4c48b192baa12e6051357e877c7be78533db5a4a79f26f7c9bed4",
+    "mode-epoch-setting.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "mode-epoch-sources.png": "b7d46ec2979971b4912bc59a4275a4933df002fa4c157dbd07a15502bfc86174",
+    "mode-epoch-track.png": "797206b41816c203fa5a5122071161e7a110b7b2300910f74fad19fdbaea9cfd",
+    "mode-epoch-loaded.json": "6527dca765cab1b093a67976f081b283b384831a38ee8c4793d918717b754ca3",
+    "mode-epoch-playing.json": "70796957ea170c246320e2dc48fe8b6ec2658d583e9cf7ed568d368777488497",
+    "mode-epoch-advanced.json": "9126537df6fea0ae15648cba848ffad42f98b5723ee565bdac3430c8c0a4670a",
+    "mode-epoch-sync.png": "f9b30028158604543e2d4547ec4e2334746271b97af64b13bfbb0ab01d467c09",
+    "mode-epoch-peer.jsonl": "5def914dc47bf57beb081a1efcfc9601fd7608e6ae2bbc80629ca5fbe7cf0428",
+    "mode-epoch-peer.stderr": "ce904424945dc093f0878273fe432be598d653329ca20e85217f0e7231bc73b8",
+    "mode-epoch-peer-final.log": "78f74ea16c772d586bf7615d487e93545f12fa1a79fc74386766370bd225280d"
+  }
+}

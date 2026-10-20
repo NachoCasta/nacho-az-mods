@@ -1,0 +1,147 @@
+{
+  "scope": "Exact supported v5 loaded partial eject, settled Off/On replay and physical virtual-USB replug; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "boot_id": "72bfbc5b-0447-45a6-958d-08e6d408fef5",
+  "native_PID": 860,
+  "result": "Bounded pass",
+  "sequence": [
+    "Native On epoch1: private7/3 source0 and private8/7 source3 load content1944 on decks1/2.",
+    "Short USB STOP2 selector ejects source3 only: success targets=1 sources=0x8, backing sdf1 and player08/usb2 absent; other four hub and both native sources remain.",
+    "Native Off epoch2 and On epoch3 complete in the same process. Settled source screens each show four private rows; ejected8/7 stays absent. Loaded UI clocks continue; yellow source-unavailable warnings persist.",
+    "First On confirmation was cancelled to inspect settled Off; only the later confirmed On changes epoch. Early Off screenshot precedes completed row replay.",
+    "Native supported unload settles EEEE. QMP removes/readds physical virtual USB functionalstickD at port2.4 using the same backing content.",
+    "Settled source screen restores all five private rows without duplicates; seven-partition xHCI health passes, both native mounts retained. EEEE remains."
+  ],
+  "limits": [
+    "Eject completed before mode changes; not a simultaneous in-flight eject/mode race or forced partial-failure test.",
+    "UI clocks are not audio evidence. No physical AZ access, real-CDJ or eight-source acceptance."
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-A-loaded.txt",
+      "sha256": "fd01f4d5414a064c7c1d06b244711ebaf79f9feee3023f447276e1a5faf41b4a",
+      "bytes": 66886
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-after-eject.png",
+      "sha256": "625349f57b541cfbdde1007ff45d6d16005063797a70ecfd6f83de64621e1651",
+      "bytes": 88138
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-C-loaded.txt",
+      "sha256": "a541193b18b004eec2957db5c89579b5001cccc407df78d0e5759a7b33ed258c",
+      "bytes": 73585
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-cleanup-state.txt",
+      "sha256": "f018282b678f6b64533f9f78f27d5cab4e21ac6651b9748c694663139d466300",
+      "bytes": 118865
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-eject-first.txt",
+      "sha256": "e9207765184711e4c620d2359c7bd8b94aec9d4f6ae999b9101c24191d6c1126",
+      "bytes": 76652
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-playing.png",
+      "sha256": "0ab1bc0576b968737f1ba69767ee9b947923823069a163b2c05f5e034c59a778",
+      "bytes": 134322
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-settled-state.txt",
+      "sha256": "a1e891802333d5738aa0d2f23b0ccc11d98a85d7ea2564ff2daee542362b8198",
+      "bytes": 99201
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-source-settled.png",
+      "sha256": "7b43c136a962c0010ac3c14b0f2eaac2d44f9001fbe98c31003cbaf555d6d5f1",
+      "bytes": 86206
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-source.png",
+      "sha256": "30adffbe6d69bf69ab6fce5c473b090539ad41feeed13bb977a0b0e40a24ddf2",
+      "bytes": 99652
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-off-state.txt",
+      "sha256": "c81fe0f2da0624093a97ec96c3c5f2891301159a7c46612c868178554a95877c",
+      "bytes": 83903
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-playing.png",
+      "sha256": "5024b9fe2d96e8c40a1a6ac7901b54b0fb58d3b783d03cda0683cfb716d033aa",
+      "bytes": 57487
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-settled-state.txt",
+      "sha256": "66b2d5270d30bcd66243cd7ae9635e27d5f872e77924396c62abf2b2e85dedfb",
+      "bytes": 112530
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-source-first.png",
+      "sha256": "13b86c5ba3282f52a842044eec04293609620a649b9e766c198aadfbefbe0ccf",
+      "bytes": 84054
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-source-settled.png",
+      "sha256": "45eae6f18e89bfc6b79efcfb5cd3ee92f175253eb8dfbbf8d118a401062e7829",
+      "bytes": 84006
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-state.txt",
+      "sha256": "d1a67c628916f2054e5235d1ecade9abe763849af61fcb2fcf3acd31de8eebd8",
+      "bytes": 108456
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-on-waveform-settled.png",
+      "sha256": "60107c69259a4369900b631a64dccd198768d50424f94bfa7a1ae2b6a9744ec2",
+      "bytes": 109137
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-replug-first-source.png",
+      "sha256": "6fc2b888d000a048efaae4aa97def87a7ae4e1df389915a14912c097b3a9147b",
+      "bytes": 48430
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-replug-first-state.txt",
+      "sha256": "f6adba995b2f7745ee8ae56291be2911a25d7608eac4afe7f0c1d6746d94904f",
+      "bytes": 120447
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-replug-settled-source.png",
+      "sha256": "6fc2b888d000a048efaae4aa97def87a7ae4e1df389915a14912c097b3a9147b",
+      "bytes": 48430
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-replug-settled-state.txt",
+      "sha256": "6b0977c82e216b2b8b094f370e984de67286e1d18912f0330a5e2fce70fad1a9",
+      "bytes": 129372
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-partial-mode-selector.png",
+      "sha256": "337d443e97abd67af352f8ffbf1c9879e3dae4e5606973bcc5a00aa51e257b13",
+      "bytes": 135880
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/partial-mode-replug-D.json",
+      "sha256": "5b03ba63468db4a46496b45325df2f0d0bf73de82fedeed67754cb9f6df2d3ba",
+      "bytes": 1822
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-partial-replug-final.json",
+      "sha256": "f50a94dc53a6080ee37e01a8b82ae3eb848a98e48a3a1ee72b8652fbfad8b1ea",
+      "bytes": 125385
+    }
+  ]
+}

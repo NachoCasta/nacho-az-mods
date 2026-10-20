@@ -1,0 +1,288 @@
+{
+  "timestamp_utc": "2026-10-19T03:08:59.126546+00:00",
+  "scope": "Partial eject remains withdrawn without blocking mode recovery of other sources",
+  "binary_sha256": "a97099970ad44c34f39fa81cfe5f3d998e139974ff6dffad10a485a89f3bb36d",
+  "pid": 223649,
+  "real_az_access": false,
+  "observations": [
+    "HUB_LIB2 ejected individually while its physical USB device remained connected",
+    "Off -> On -> Off completed with exactly the other two sources visible",
+    "HUB_LIB2 retained state2 and absent backing/alias mounts",
+    "Other two backing/alias mounts remained present"
+  ],
+  "on": {
+    "pid": 223649,
+    "clock_ms": 10926362,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 28099,
+        "devnum": 20
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 27753,
+        "devnum": 18
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 27926,
+        "devnum": 19
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "off": {
+    "pid": 223649,
+    "clock_ms": 10966775,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 28099,
+        "devnum": 20
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 27753,
+        "devnum": 18
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 27926,
+        "devnum": 19
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "adapter_tests": {
+    "asan_ubsan": "PASS",
+    "tsan": "PASS",
+    "negative_control": "Previous epoch header fails finalized-eject/live-source recovery assertion",
+    "source_sha256": "4a2b83cdfe98f85cb61f202c0b7a6c6728e8df930a7cfac9b39cb6c7bab3ff5b",
+    "adapter_sha256": "d36cad585a5104b9224f558a9ed46d982f2c401909762ac7187a124445786101"
+  },
+  "limits": [
+    "Earlier loaded whole-hub overlap was tested with candidate650fccab, not this binary",
+    "Native pending-request overlap, loaded warning, protocol coverage and production/hardware recovery gates remain open",
+    "Partial-eject/mode sequence ran unloaded; one member8 track was loaded and advanced afterward. No external-peer or audio acceptance for this exact binary."
+  ],
+  "local_evidence_sha256": {
+    "mode-partial-before.json": "8e0179a02fbeb6386f103c746d73e11ed64ffb187a81cd1e000bc06c10000af8",
+    "mode-partial-ejected.json": "b00665f8a8fcc848e6161c3957aa2080e4aed6c081ee0fec1ae1496d0d891563",
+    "mode-partial-on.json": "fcc6791bd7613fe168d17d2bf1334009d88ef7ffacca04dac798ba7412b6f7ae",
+    "mode-partial-off.json": "ef30e28fcc50703699c022fd1e5e4c04ccba4ea72769279e09d828446b0268a7",
+    "mode-partial.log": "8ff8b10fbeb6785643b57e18407636bdad8b20d22614b048a3240a72013207b0",
+    "mode-partial-mounts.txt": "4e4fe8bb9a6e27026b24fe97588139e75556eb14e98c85fcbacf5ceb246748bb",
+    "mode-partial-setting-on.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "mode-partial-setting-off.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "mode-partial-sources-on.png": "e166a326162399d655c5b85ad0c764a379220375a953d8a24aa5a90add4b9e4e",
+    "mode-partial-sources-off.png": "c434089ae03c619169a30a109539bb54477b4b79985c125a4935ac6b245ad7fe",
+    "mode-partial-loaded.json": "4712853d5e55b8fb9dbca515fee57ec8fa18777df54669e09acbeaf918a2f808",
+    "mode-partial-advanced.json": "6355eb6e2981d86eac4511e6b64e3702acb1a6120e24b8cd8587b50c63831141",
+    "mode-partial-load.log": "cf6ebf454585c9c7717d4a4be85176b4887a7e30c5570466ffe540bcd6b064ae",
+    "mode-partial-track.png": "797206b41816c203fa5a5122071161e7a110b7b2300910f74fad19fdbaea9cfd"
+  },
+  "post_cycle_load": {
+    "source": "member8 slot3",
+    "playing": {
+      "pid": 223649,
+      "clock_ms": 11024268,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.88,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "advanced": {
+      "pid": 223649,
+      "clock_ms": 11038140,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 15.046,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  }
+}

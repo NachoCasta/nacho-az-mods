@@ -6,10 +6,21 @@
 - Read docs/RELEASING.md before preparing or publishing a version. CLAUDE.md links to the same rules.
 
 - Read docs/CURRENT-STATE.md and docs/RESEARCH-INDEX.md first. Historical notes contain superseded experiments.
-- The user's real AZ must not be tested, reloaded, restarted, patched or changed without asking first.
-  Existing authorization is action-specific; permission to copy a package does not authorize a hardware test.
+- Follow docs/AZ-TESTING-POLICY.md. The user authorizes emulator-first USB candidate
+  installation, normal mods-framework activation/testing and standard restarts for
+  USB Hub Support / PRO DJ LINK work through the normal AZ-MODS workflow.
+  The user removed the separate remove-USB/full-restart recovery prerequisite.
+  Do not repeatedly ask within this authorized scope or claim unperformed recovery tests.
+- Do not manually edit internal AZ firmware, OS, services, core, settings/approval
+  files or process memory. Device file writes are limited to the mods USB; use the
+  framework's supported UI/API/IPC for managed activation and settings. Its persistent
+  staging is not RAM and must not be represented as USB-only persistence.
+- Explicit testing exception: the user permits SSH pre-approval of the exact USB
+  Hub Support candidate by updating only its entry in the framework approval list.
+  Follow the hash, USB-backup, locking and atomic-update requirements in CLAUDE.md.
+  All other manual internal controller edits remain forbidden.
 - Local code/build/emulator work may proceed. Never deploy implicitly from a build or release script.
-- Latest user-confirmed hardware candidate is 0.2.1: individual loaded-source eject and full-track playback for one track, with SSH mount/cache-proof checks. Earlier 0.2.0 covered two hub sticks plus native USB1 after unloading. Distinguish user-reported audio from instrumented acceptance; no eight-source or long-session acceptance is claimed.
+- Latest candidate0.3.0 passed user-reported local hub operation in both Link modes and software-peer Wi-Fi master/SYNC/reconnect/fresh-load controls. Actual-CDJ and phase-sync acceptance remain open. Loaded mode changes briefly disconnect hub sources and leave warning triangles. Earlier0.2.1 acceptance covered individual loaded-source eject and full-track playback for one track, with SSH mount/cache-proof checks. Earlier 0.2.0 covered two hub sticks plus native USB1 after unloading. Distinguish user-reported audio from instrumented acceptance; no eight-source or long-session acceptance is claimed.
 - Keep per-source servers, SQL caches and tagged caches independent. Never borrow a local USB library slot.
 - The user authorized renaming the mod to USB Hub Support, ID usb-hub-support, in 0.1.6.
   Keep that ID stable. Uninstall legacy hub-libraries before enabling the new ID; both claim the same hooks.

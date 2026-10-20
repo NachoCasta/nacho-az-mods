@@ -1,0 +1,21 @@
+{
+  "scope": "Emulator-only cancellation primitive experiment, not a reconnect fix",
+  "candidate_sha256": "471be662954ee5e07e65f097929de116fadf90092315fdb003e8f126ca049032",
+  "kernel": "6.6.138-dirty",
+  "pid": 324233,
+  "injection": "One-shot /run/azhub-queue-reject-common invokes native allowance reply0xa7de38 with result1 before allowance processing",
+  "observations": [
+    "Deck2 request at guest clock15608449 reached the injected rejection; no final load admission occurred for this request.",
+    "UI returned to the track browser with both decks unloaded and displayed: Streaming tracks can't be loaded while recording.",
+    "A subsequent unmodified request at clock15624408 passed common and allowance closures, reached final admission and completed with result0.",
+    "Telemetry at clock15629506 showed deck2 loaded with content495 at0.047 seconds, stopped; all five hub sources remained present."
+  ],
+  "conclusion": "The native allowance-denial reply releases the pre-load UI state and permits retry, but its recording-specific message is inappropriate for source replacement.",
+  "remaining": [
+    "Identify an appropriate native source-unavailable notification and cleanup path.",
+    "Capture and correlate request origin across asynchronous stages.",
+    "Repeat delayed disconnect/reconnect using the actual origin rejection implementation.",
+    "No hardware or production acceptance."
+  ],
+  "local_evidence": "local/diagnostics/link-coexistence/queue-reject.log, queue-reject-retry.json and queue-reject-*.png"
+}

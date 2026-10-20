@@ -1,0 +1,34 @@
+{
+  "scope": "Independent bounded slot7 source/UI predicate investigation plus local-only diagnostic reconstruction; no production edits, build or activation",
+  "status": "Startup missing private7/7 and8/7 confirmed; exact suppression cause unresolved",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "frozen_inputs_sha256": {
+    "local/diagnostics/link-normal-loader/matrix-missing-slot7-state.txt": "6a23e5a941d0fe7537cdeaba7900e5b341c1bcf91ada73741f8ff4cc5a67a58e",
+    "local/diagnostics/link-normal-loader/matrix-source-map-current.png": "4541d8083ca6f7bd224e15c06d5fea1ca66859f171248746fc6864971a818eb7",
+    "local/diagnostics/link-normal-loader/boot-matrix-off/launch.json": "7850dccd36fcaeb0afe17171866b8dc0114c3c894dbff8ccbb3165dd6f81fa72"
+  },
+  "observed_before_controller_loss": "Native music+mods appears as native USB2; A7/3, E7/8 and D8/3 are visible, private7/7 and8/7 absent despite their media-query replies/announcement acknowledgments, independent servers and aliases. Runtime bind assignments take precedence over later discovery-file order.",
+  "native_static_review": [
+    "Existing hub_available0x1869b48/0x1869e98 overrides exact configured private LinkMemberIDs only; forced path returns1 without calling native, fallback preserves native result.",
+    "Actual SourceTableModel add0x1c373f0 and controller0x1c338d0 have no nativeUSB2-presence predicate in the reviewed bodies; the core v130 symbolic names require its v200 address translation.",
+    "RootSourceDataSet mount callback0x1c1fa08 calls its root mapper0x1c1aec8; the USB/SD branch returns the original MediaID unchanged. This does not establish that mount completion occurred for the two missing slots.",
+    "Transport/media-query acknowledgment is not proof of native MediaInfoMan mount completion or Source UI admission.",
+    "Synthetic status construction is unchanged from the last diagnostic baseline and inherits unmodified native template fields. No specific inherited byte has yet been shown to suppress slot7, so no speculative clearing is proposed."
+  ],
+  "separate_later_failure": "The later On-transition missing-all-rows observation occurred after OHCI controller/child-device loss. It is not used as evidence for this startup slot7 cause or a mode-replay defect.",
+  "next_discriminating_observation": "On a clean stable-hub startup that still reproduces missing slot7, log existing capability argument/member/caller/forced-vs-native result and native mount-enter MediaID for visible and missing slots; preserve both native ports and all five private sources.",
+  "diagnostic": {
+    "local_reconstruction_helper": "local/diagnostics/link-normal-loader/slot7-trace/prepare.py",
+    "local_source": "local/diagnostics/link-normal-loader/slot7-trace/source",
+    "manifest_sha256": "5c5d593772e41d3ffac90a3cc9b480db7716abec64e7a1e3fb1d0f9283e66012",
+    "header_sha256": "3439c2c904bbca884528e5cc009d0980a312538f612be0319e883dd032a9dcd9",
+    "trace_bound": "Counters saturate: at most160 capability and160 mount-enter records per process; monotonic timestamps and complete raw member/MediaID values are recorded.",
+    "return_and_arguments": "Forced private path still does not call native. Fallback calls native once, forwards all eight arguments and returns unchanged result. New native mount observer forwards exact this/MediaID once.",
+    "new_hook_ABI": "Exact EP1476577f425 function0x1c1fa08 is void(this in x0,64-bit MediaID by value in x1); native body saves scalar x1 then passes its address to the root mapper.",
+    "trampoline_proof": "First16bytes are stack-pair store with SP predecrement, two immediate moves and SP-relative add; no PC-relative operand or branch. The unchanged16byte relocation scheme resumes at native+16 with the same SP.",
+    "claim_failure": "Install follows ownership installer and is covered by existing make_hook failure counter and community_abort(-37) before readiness publication. On rejected claim no diagnostic hook is installed or invoked.",
+    "host_validation": "Actual reconstructed helper body/native-forwarding/budget harness passed GCC-Wall-Wextra-Werror. ARM-specific pointer-range guard is replaced only in the host fixture; actual diagnostic source retains the original guard. Staged community.c passes pinned-SDK syntax check under production3flags.",
+    "runtime_condition": "Diagnostic use only if stable uninstrumented startup still misses slot7. It is not an acceptance artifact; final acceptance must rerun the uninstrumented exact candidate."
+  },
+  "limits": "No exact causal predicate or product fix established. NativeUSB suppression, local-slot borrowing and fixture-only dismissal are not proposed. Raw firmware decompilation remains local/ignored."
+}

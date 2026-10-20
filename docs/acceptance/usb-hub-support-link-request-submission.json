@@ -1,0 +1,21 @@
+{
+  "scope": "Emulator-only request-entry origin capture, direct execution baseline",
+  "candidate_sha256": "e8314181cce93d219181a2cf92a84c63e58d2c794d6fc943e0fa6290e3d683c5",
+  "pid": 339441,
+  "kernel": "6.6.138-dirty",
+  "request": {"deck": 1, "content": 495, "media": "0x1010200000602", "clock_ms": 16341635},
+  "captured_origin": {"valid": true, "generation": 36888, "devnum": 39},
+  "observations": [
+    "Request entry captured origin before calling native loadCommonProcessing.",
+    "The common closure matched the same controller and full media in the thread-local submission scope.",
+    "Allowance and final admission followed; native completion result0 was logged.",
+    "The additional shared-task submission hook installed successfully; this direct load did not exercise an asynchronous common task."
+  ],
+  "limitations": [
+    "Diagnostic capture does not yet enforce source identity.",
+    "Asynchronous task registration, destruction, cancellation and bounded ownership remain unimplemented.",
+    "Later allowance and download stages still require propagation and correlation.",
+    "No production or hardware acceptance."
+  ],
+  "local_evidence": "local/diagnostics/link-coexistence/queue-submission-baseline.json and queue-submission-baseline.log"
+}

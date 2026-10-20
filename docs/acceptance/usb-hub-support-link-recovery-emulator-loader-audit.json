@@ -1,0 +1,101 @@
+{
+  "scope": "Read-only audit of loader files copied by the emulator owner from the existing QEMU fixture",
+  "result": "Effective cached and USB loader branches confirm no automatic retry for an unchanged populated mod cache; cold-boot candidate recovery remains untested",
+  "emulator_only": true,
+  "real_az_deployed_loader_verified": false,
+  "physical_remove_usb_full_restart_recovery_passed": false,
+  "candidate_cold_boot_executed_by_this_audit": false,
+  "device_or_emulator_mutations_by_this_audit": false,
+  "observed_fixture": {
+    "loader_marker": "stick",
+    "embedded_opt_usb_image_present": false,
+    "loader_service_order": "After EP147.service",
+    "normal_ep147_service_kernel_masked": true,
+    "current_application_unit": "EP147-link-probe",
+    "current_running_session_proves_normal_cold_boot": false
+  },
+  "copied_files": [
+    {
+      "guest_path": "/usr/sbin/az-usbload",
+      "sha256": "51e0cdcd7379cefd39423e3d3067ede0d10f490c0619f3bb338327e0c5ae0498",
+      "bytes": 18149,
+      "role": "Firmware entry loader; can chain to a USB or cached deck loader"
+    },
+    {
+      "guest_path": "/etc/systemd/system/EP147.service.d/10-azmod.conf",
+      "sha256": "b242f202a0908c7f031619d8e8dde1f42c37e30f9ef478367636782beb8d2e3a",
+      "bytes": 163,
+      "role": "EP147 reads the persistent preload environment before the loader reviews current USB selection"
+    },
+    {
+      "guest_path": "/home/root/settings/az-usbload/deck/az-usbload",
+      "sha256": "089b1f521367c6beeb5c984482ce598497fab39bdc42e8a7f50e050f48cc243a",
+      "bytes": 45004,
+      "role": "Cached effective loader available even when the mods USB is absent"
+    },
+    {
+      "guest_path": "Selected mods USB MODS/deck/az-usbload",
+      "sha256": "089b1f521367c6beeb5c984482ce598497fab39bdc42e8a7f50e050f48cc243a",
+      "bytes": 45004,
+      "role": "USB effective loader; byte-identical to the cached copy and workstation published 1.2.3 loader"
+    }
+  ],
+  "control_flow_facts": [
+    {
+      "file": "Firmware entry loader",
+      "line": 234,
+      "fact": "With no selected USB, stage_deck can copy the persistent cached deck scripts into the temporary execution directory"
+    },
+    {
+      "file": "Firmware entry loader",
+      "line": 239,
+      "fact": "chain hands execution to the available deck loader after syntax and switch checks; a successful chained execution terminates the firmware path"
+    },
+    {
+      "file": "Cached and USB effective loader",
+      "line": 353,
+      "fact": "No selected mods USB produces an empty desired preload"
+    },
+    {
+      "file": "Cached and USB effective loader",
+      "line": 729,
+      "fact": "An unchanged desired preload and cached bytes return without writing or restarting; community initializer refusal does not itself trigger retry"
+    },
+    {
+      "file": "Cached and USB effective loader",
+      "line": 737,
+      "fact": "Changed desired state is written to the persistent preload environment for a later application start"
+    },
+    {
+      "file": "Cached and USB effective loader",
+      "line": 827,
+      "fact": "A nonempty cached HAVE suppresses automatic restart unless a supported forced apply, uninstall or mods.off request exists; missing USB alone is not such a request"
+    },
+    {
+      "file": "Cached and USB effective loader",
+      "line": 120,
+      "fact": "The post-start path manages pending metadata and media reannouncement; it does not retry a refused community mod initializer"
+    }
+  ],
+  "source_comparison": {
+    "initial_audit_reference": "docs/acceptance/usb-hub-support-link-recovery-source-audit.json",
+    "difference": "The actual firmware entry and drop-in differ from the inspected koi checkout even after line-ending normalization. Following the chain identifies byte-identical cached and USB 1.2.3 effective loaders with the same relevant no-retry branches.",
+    "execution_caveat": "A future cold-boot trace must show the actual selected chain. If chaining fails, the older firmware fallback has different restart handling and must be assessed separately."
+  },
+  "candidate_implications": {
+    "negative_boot": "Cached executable mapping can occur before missing-USB selection is processed. The candidate must refuse initialization before hooks, workers and other effects through the supported actual-USB assets service.",
+    "positive_mount_timing": "The same early guard can refuse when a valid USB is not mounted yet. These effective loaders provide no automatic same-set initializer retry, so positive normal startup is a required measured case.",
+    "positive_acceptance": "Supported automatic convergence may pass if evidenced, with the first initializer outcome and all restart causes recorded. Manual Reload, an agent restart, crash recovery or another reboot cannot rescue the positive boot.",
+    "library_mapping": "Core may retain a refused library mapped. Mapping alone neither proves active candidate hooks nor constitutes a recovery failure."
+  },
+  "next_bounded_checks": [
+    "Create enabled approved populated cache through supported USB package and Community Mods controls, then fork independent protected settings fixtures from the same clean shutdown",
+    "Cold boot the normal unmasked EP147 service with the package USB present and capture first application invocation plus settled state",
+    "Cold boot the independently populated fixture without the package USB or embedded package and capture first application invocation plus settled state",
+    "Verify candidate refusal before hooks and workers, absence of synthetic sources and native operation without manual internal edits or rescue restart",
+    "After successful emulator checks, verify physically witnessed removal and full restart on the real setup with its applicable loader"
+  ],
+  "local_execution_plan": "local/integration/link-coexistence/RECOVERY-TEST-PLAN.md",
+  "local_launcher_status": "Prepared and syntax-checked only; no QEMU launch performed by this audit",
+  "publication_or_hardware_acceptance_claimed": false
+}

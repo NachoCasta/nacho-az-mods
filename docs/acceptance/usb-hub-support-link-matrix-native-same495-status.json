@@ -1,0 +1,187 @@
+{
+  "result": "failed",
+  "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+  "complete_outgoing_statuses": 326,
+  "failures": [
+    "Deck 1 differs from its expected visible media tuple"
+  ],
+  "missing_evidence": [],
+  "observations": [
+    {
+      "deck": 1,
+      "packets": 201,
+      "first_ns": 908805189171,
+      "last_ns": 933572455680,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 50
+        },
+        {
+          "player": 1,
+          "slot": 2,
+          "track_type": 1,
+          "content_id": 495,
+          "packets": 151
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {
+          "0x2c": 151,
+          "0x194": 201
+        },
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {
+        "0x18c": [
+          {
+            "kind": 2,
+            "member_index": 0,
+            "media_kind": 2,
+            "media_subkind": 1,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 201
+          }
+        ]
+      },
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0101010101000001"
+        ],
+        "0xf9": [
+          "0103010202000201"
+        ],
+        "0x3fd": [
+          "0101010101000001"
+        ],
+        "0x41d": [
+          "0101010101000000"
+        ],
+        "0x468": [
+          "0103010202000201"
+        ],
+        "0x474": [
+          "0101010101000001"
+        ]
+      }
+    },
+    {
+      "deck": 2,
+      "packets": 125,
+      "first_ns": 908871201425,
+      "last_ns": 933671132230,
+      "media_tuples": [
+        {
+          "player": 0,
+          "slot": 0,
+          "track_type": 0,
+          "content_id": 0,
+          "packets": 125
+        }
+      ],
+      "unclassified_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_content_marker_matches": {
+        "private_ip_7": {},
+        "private_ip_8": {},
+        "content_495_be32": {},
+        "content_495_le32": {},
+        "content_1944_be32": {},
+        "content_1944_le32": {}
+      },
+      "known_auxiliary_locations": {},
+      "content_marker_offset_classification": {
+        "0x2c": "Current source content ID",
+        "0x194": "Auxiliary TrackLocation content ID",
+        "0x1d4": "Auxiliary TrackLocation content ID",
+        "0x214": "Auxiliary TrackLocation content ID",
+        "0x254": "Auxiliary TrackLocation content ID",
+        "0x294": "Auxiliary TrackLocation content ID",
+        "0x2d4": "Auxiliary TrackLocation content ID",
+        "0x314": "Auxiliary TrackLocation content ID",
+        "0x354": "Auxiliary TrackLocation content ID",
+        "0x394": "Auxiliary TrackLocation content ID",
+        "0x3d4": "Auxiliary TrackLocation content ID",
+        "0x430": "Auxiliary TrackLocation content ID"
+      },
+      "preference_rows": {
+        "0xd9": [
+          "0000000000000000"
+        ],
+        "0xf9": [
+          "0000000000000000"
+        ],
+        "0x3fd": [
+          "0000000000000000"
+        ],
+        "0x41d": [
+          "0000000000000000"
+        ],
+        "0x468": [
+          "0000000000000000"
+        ],
+        "0x474": [
+          "0000000000000000"
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Marker matches outside known media fields require semantic review.",
+    "Absence of selected markers does not identify every extended field.",
+    "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+  ],
+  "capture_path": "local/diagnostics/link-normal-loader/matrix-native-same495-full-status.jsonl",
+  "capture_sha256": "89626854f6b016feb297fa04d0c0233f8759ec89673556632cbe7d5d4c8bb177",
+  "state_path": "local/diagnostics/link-normal-loader/matrix-native-same495-capture-state.json",
+  "state_sha256": "15a1020080a3f65dac6be3937f9415641e1c84febbe886ff68b8a8e47046af7f",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "native_PID": 703,
+  "declared_state": "Successful native USB2 Algo m\u00e1s/content495 replacement of private A495 on deck1; deck2 remains private cached E1944; native Link On",
+  "bounded_interpretation": {
+    "native_content_preservation": "Deck1 has 201 packets; native auxiliary location0x18c is valid1/kind2/member0/media-kind2/subkind1/type1/content495 in all201. Native standard tuple1/2/type1/495 is visible in the final151.",
+    "initial_standard_tuple": "First50 contiguous deck1 standard tuples are zero; last masked timestamp914511742623ns, first visible914693782880ns, relative+5.706553452s/+5.888593709s from first deck1 packet.",
+    "timing_limit": "This capture does not distinguish a temporarily empty native standard tuple from mod masking. No timer/50-packet threshold exists in the reviewed retirement path. No causal attribution or speculative classifier change is made.",
+    "numbering_limit": "Observed native standard wire slot2 is preserved as observed; library/internal slot7 is not proof that the native standard packet must use7. Native auxiliary media-kind2/subkind1 establishes USB instance1 in this window.",
+    "private_deck2": "All125 packets have zero standard tuple and no private auxiliary location; private E1944 markers absent.",
+    "markers": "No private IP7/8 or unclassified495/1944 LE/BE marker hit. Allowed495 occurrences are native standard content0x2c and native auxiliary content0x194.",
+    "verdict": "Native content visibility and private deck2 known-field privacy are corroborated in their stated bounds; continuous native standard visibility is not passed across the whole capture because of the initial50 zero tuples."
+  },
+  "source_retirement_review": "docs/acceptance/usb-hub-support-link-native-replacement-source-review.json"
+}

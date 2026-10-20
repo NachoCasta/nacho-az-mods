@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-19T03:45:12.838875+00:00",
+  "scope": "Core-assisted emulator baseline without USB Hub Support; not a stock-firmware baseline",
+  "pid": 266441,
+  "real_az_access": false,
+  "setup": {
+    "community_mods_disabled": true,
+    "core_loaded": true,
+    "reason": "Unprovisioned emulator cannot decrypt OneLibrary without the core key provider; native-only PID262334 fell back to folder browsing",
+    "media": "Former hub fixture C temporarily attached directly to the virtual xHCI root and announced through the emulator USB2 mailbox",
+    "track": "Algo más, content495, same fixture as preceding mod tests",
+    "mode": "PRO DJ LINK on"
+  },
+  "handoff_request_reply_observed": true,
+  "synced_129_bpm_samples": 9,
+  "after_peer_loss": {
+    "native_status_samples": 69,
+    "last_status_seconds": 9.330598542,
+    "master_status_samples": 0,
+    "capture_seconds_after_last_peer": 49.870622663,
+    "later_ui_master_label_observed": true,
+    "exact_ui_reclamation_time_measured": false
+  },
+  "interpretation": "The no-mod comparison also stops emitting deck statuses shortly after peer loss. Missing wire master assertions alone do not prove a failure to reclaim master. A later screenshot explicitly shows MASTER while playback continues. Destination expiry is a possible explanation, not yet established control flow.",
+  "limits": [
+    "Core remains loaded to supply the emulator library key; cannot claim completely stock firmware",
+    "Sync was enabled near the end of the peer session; only nine synced samples observed",
+    "No audio phase or real-device acceptance",
+    "Exact master fallback timing still requires timed UI observation",
+    "Hub topology is temporarily removed for this baseline and must be restored before hub regression tests"
+  ],
+  "local_evidence_sha256": {
+    "core-fallback-wire.jsonl": "023a9b82a131d6e0eb3903b3251208f01f0e6a9f6143cd779470262930ef26bd",
+    "core-fallback-peer.jsonl": "8e1e0bc79e42cddf3f43385b3bf17c487a155b4751c68ef821f6a14febbc8d28",
+    "core-fallback-peer.stderr": "c1e2f23dc5953fa96ec5b72fd349b18c1528d088bd2be28f8e0fd25c1c119a85",
+    "core-baseline-maps.txt": "9ba0daaa1970cfddb1cb8c1ed25a63cd98149b02ce06c9f6c17c9cad87bc2d5f",
+    "core-track-ready.png": "b3e78581694073bf4074af30815061decc8fa2391e59ffa74323c9d434dc99f0",
+    "core-playing.png": "f64c6a8b7a69471ec884b8d432a3017af181468a4d69982e0dd7a40c53bca4ab",
+    "core-after-peer.png": "a4946bf9dec669ea355a733cce442eba37ad2d5f52590a218d74b8f369ec406d"
+  }
+}

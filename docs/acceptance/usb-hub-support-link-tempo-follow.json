@@ -1,0 +1,50 @@
+{
+  "recorded_utc": "2026-10-19T01:40:48.397415+00:00",
+  "scope": "Emulator protocol tempo-following evidence; no audio phase claim",
+  "binary_sha256": "68813580cf6405fd52a7a01056a3ba48d22b8ad4d436a4f223cc1619e8b7fa18",
+  "pid": 109605,
+  "source": "Member 8 USB1, content 495, hub fixture sdd1",
+  "procedure": [
+    "Load hub track while paused",
+    "Start isolated peer 3 as master at 123 BPM",
+    "Enable AZ deck 2 sync before starting playback",
+    "Observe native status and UI while the peer remains active"
+  ],
+  "deck2_states": [
+    {
+      "master": false,
+      "synced": false,
+      "count": 117
+    },
+    {
+      "master": false,
+      "synced": true,
+      "count": 122
+    }
+  ],
+  "peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 3566565085199,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "peer_summary": {
+    "event": "stopped",
+    "monotonic_ns": 3566571738892,
+    "statuses": 439,
+    "beats": 25
+  },
+  "ui_bpm": 123.0,
+  "ui_evidence_local": "idle-role-sync-active.png",
+  "evidence_sha256": {
+    "idle-role-sync-peer.jsonl": "6a636ec04fa5d03e9665d3a4722fcb43257a592d89f1e9917392ed97d7275fc9",
+    "idle-role-sync-active.png": "b0b2d9dcf32848140c50237a91fe9e6ab385f8fede645c6d4db67ed7d430e761",
+    "idle-role-sync.log": "8077d0aac760df4c7dcf81bec017bbde5e850d8b64df11336b16483d74bb4703"
+  },
+  "limitations": [
+    "Sequence changed as well as private status flags; not an isolated causal comparison",
+    "Effective BPM was seen in UI; this session predates effective_bpm harness telemetry",
+    "No loaded native baseline, master handoff while already playing, or audio-phase acceptance",
+    "Private source identity leakage and ingress/connection isolation remain unresolved"
+  ]
+}

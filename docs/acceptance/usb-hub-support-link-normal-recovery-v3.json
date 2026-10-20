@@ -1,0 +1,104 @@
+{
+  "scope": "Exact supported v3 package normal-loader emulator first-start and settled recovery",
+  "candidate_version": "0.3.0",
+  "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+  "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "6.6.138-dirty",
+  "initrd_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+  "cache_preparation": {
+    "record": "docs/acceptance/usb-hub-support-link-normal-activation-v3.json",
+    "same_parent": "local/diagnostics/link-normal-loader/functional-settings.qcow2",
+    "method": "Independent positive/negative settings COWs forked from the same cleanly shut down enabled/approved v3 cache after native unload and EEEE",
+    "internal_agent_file_or_memory_edits": false,
+    "framework_persistent_staging_and_approval": true,
+    "boot_images": "Normal unmasked EP147/loader, no embedded USB image/package, no direct-preload fallback or conflicting emulator renotify poller"
+  },
+  "positive": {
+    "boot_id": "0fc77841-70a8-4cad-9da7-fc225f99d140",
+    "earliest_SSH_uptime_seconds": 7.21,
+    "earliest_SSH_interpretation": "Cache and native-unit preflight before native initialization; not an initialization result",
+    "first_native_PID": 729,
+    "wrapper_MainPID": 427,
+    "first_init": "loaded 0.3.0 on ep147-9e9454e357389ece (54 hooks)",
+    "parser": "claim_hook 0xef05c8 ok",
+    "settled_collection_began_uptime_seconds": 73.91,
+    "same_native_PID": true,
+    "NRestarts": 0,
+    "workers": [
+      "HubMount",
+      "HubTransport"
+    ],
+    "no_rescue_reload_or_second_start": true,
+    "mods_USB": "Actual separate populated USB COW present from power-on",
+    "hub": "All five protected library COWs and hub/controller present from power-on",
+    "source_UI": "Native AZ_USB plus five LINK rows; no native USB2 duplicate",
+    "base_images": "QMP raw/file base nodes all explicitly read-only",
+    "loader": "Same selected bytes as loaded, no write/no restart",
+    "environment": "AZHUB_* variables absent",
+    "decks": "EEEE through standard clean shutdown at92.216642s",
+    "result": "pass"
+  },
+  "negative": {
+    "boot_id": "b5a5e4b0-1215-4031-9bd3-ad7e84560537",
+    "earliest_SSH_uptime_seconds": 6.08,
+    "initialization_snapshot_uptime_seconds": 17.73,
+    "first_native_PID": 465,
+    "wrapper_MainPID": 369,
+    "first_init": "Its init() returned -40",
+    "guard_log": "matching USB package assets unavailable; initialization refused",
+    "first_and_settled_effects": "No claimed candidate hooks, no after-patching refusal suffix, no HubMount/HubTransport workers, no azhub module or private aliases/synthetic source rows",
+    "mods_USB": "No USB storage device attached from power-on through settled observation; no embedded package",
+    "cache": "Exact123703 ELF initially retained enabled in the independent populated settings cache; its refused mapping is allowed by the core contract",
+    "settled_collection_began_uptime_seconds": 58.59,
+    "same_native_PID": true,
+    "NRestarts": 0,
+    "no_reload_cache_purge_or_second_boot": true,
+    "loader": "Stages stock for a future startup and explicitly does not restart running application",
+    "decks": "EEEE before later separate native hotplug control",
+    "result": "pass"
+  },
+  "later_native_control": {
+    "separate_from_initial_no_USB_boot": true,
+    "fixture": "Protected COW of usblib.img directly on native EHCI USB; offline FAT root and guest filesystem confirm no MODS directory",
+    "same_native_PID": 465,
+    "native_UI": "USB1 Nacho Chips > Local Library > ARTIST Aaliyah > Are You That Somebody > LOAD1",
+    "loaded": "LEEE; real title/waveform visible",
+    "UI_playback_remaining_time": [
+      "04:22.268",
+      "04:07.946"
+    ],
+    "candidate": "Remained init-40 refused with no active hooks/workers",
+    "ending": "Paused with native PLAY before standard clean shutdown at191.599509s",
+    "human_audio_or_audio_phase_claim": false
+  },
+  "independent_review": "docs/acceptance/usb-hub-support-link-normal-recovery-v3-independent-review.json",
+  "local_evidence_hashes": {
+    "local/diagnostics/link-normal-loader/v3-positive-first.txt": "b414c263efa6ce8015e771a99db24aa5bb7d80eea02fc48026125665af52bbb9",
+    "local/diagnostics/link-normal-loader/v3-positive-init.txt": "0baac848526f876aa8e5d85464ae260c8a31d67667ad79323a47cdabea16e002",
+    "local/diagnostics/link-normal-loader/v3-positive-settled.txt": "44282d3a68affd4ddfcc620b8424c734f37a968178cf1412d03ebcc7e0f6e52f",
+    "local/diagnostics/link-normal-loader/v3-positive-block-nodes.json": "f98b8a0db6f9c3c55c16676ed3e0e36d513bf8683fc53631dbc39ac1866ecb5c",
+    "local/diagnostics/link-normal-loader/v3-negative-first.txt": "fdd8a9eb455cfc990c43d4deb24021510637adc91dd4d71bb9685373febc6b66",
+    "local/diagnostics/link-normal-loader/v3-negative-init.txt": "ff535e253054149d0b98c09c96f06094b58cdc6722d60c1658811693cc46c250",
+    "local/diagnostics/link-normal-loader/v3-negative-settled.txt": "ed7e8258483d801f84bdb8703339137892c9c820bdb8514e01fe1090c511c4cd",
+    "local/diagnostics/link-normal-loader/v3-negative-native-control.txt": "0eac33afc6d0f41a552dfccc0cfd4eba9697d6c7efedfe4af21c6fa52e6987fd",
+    "local/diagnostics/link-normal-loader/v3-native-control-inventory.json": "570973f2ac46068018faaae52cbe91cc0491a04cbf887f80e9db175b302cfa1d",
+    "local/diagnostics/link-normal-loader/boot-v3-positive/launch.json": "021301ea43a40526dc2f946a7aa3983206d31af75c82b5f7fefadd8297d6a5a6",
+    "local/diagnostics/link-normal-loader/boot-v3-positive/serial.log": "51c8673abf6d7328d617cd2f87f76001f414a68aa604989aa2f8694b85af63af",
+    "local/diagnostics/link-normal-loader/boot-v3-negative/launch.json": "02690bb907d3138b84651c2adc97289b03fe5237b68d582e434be67a1be1a285",
+    "local/diagnostics/link-normal-loader/boot-v3-negative/serial.log": "5505b4878c2ecbfd6ae4d94eff89381c3f547faeebca53dd6cb291bc4ad91f5b"
+  },
+  "local_screenshots": [
+    "v3-positive-source.png",
+    "v3-negative-no-usb-source.png",
+    "v3-negative-native-artist-open.png",
+    "v3-negative-native-playing-1.png",
+    "v3-negative-native-playing-2.png"
+  ],
+  "limits": [
+    "This establishes only the exact6.6 emulator image, loader chain and package",
+    "The6.6 path skips the physical4.4 azhub module, so hardware kernel rollback remains unverified",
+    "Applicable real-device loader and witnessed mods-USB removal/full restart remain necessary before unattended physical activation",
+    "No complete functional mode/eject/peer/privacy matrix is inferred from recovery results"
+  ]
+}

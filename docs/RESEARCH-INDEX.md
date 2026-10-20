@@ -4,6 +4,45 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.3.0-wifi-fresh-load-hardware.json | User-confirmed fresh hub load with external Wi-Fi peer master and both native decks following128BPM |
+| acceptance/usb-hub-support-0.3.0-wifi-reconnect-hardware.json | Real-AZ same-player software-peer reconnect and128BPM following; new load/audio confirmation pending |
+| acceptance/usb-hub-support-0.3.0-wifi-master-sync-hardware.json | Real-AZ negotiated external software-peer master and126BPM SYNC with user-reported hub playback; no phase/actual-CDJ acceptance |
+| acceptance/usb-hub-support-0.3.0-wifi-peer-status-hardware.json | Bounded real-AZ Wi-Fi discovery and software-peer status exchange; master/sync/audio still pending |
+| acceptance/usb-hub-support-0.3.0-link-modes-hardware.json | User-reported local hub operation with native Link Off and On on the real AZ; no external player acceptance |
+| acceptance/usb-hub-support-link-final-preparation-audit-v5.json | Historical final local artifact/source/raw-receipt audit; subsequent physical results are listed above |
+| acceptance/usb-hub-support-link-partial-eject-modes-v5.json | Exact supported loaded partial eject, settled Off/On exclusion and physical virtual-USB replug restoring five rows |
+| AZ-TESTING-POLICY.md | Current emulator-first AZ-MODS authorization, narrow exact-candidate approval exception and persistence boundaries |
+| PRO-DJ-LINK-IMPLEMENTATION-PLAN.md | Active coexistence goal, evidence gates and current native member feasibility findings |
+| PRO-DJ-LINK-CANDIDATE-TRIAL.md | Draft final user trial; exact candidate hashes, pending emulator/recovery gates and bounded checks |
+| acceptance/usb-hub-support-link-goal-evidence.json | Requirement-by-requirement final review map separating current-artifact results, historical support and remaining checks |
+| acceptance/usb-hub-support-0.3.0-all-slot-replay-candidate-build.json | Latest supported candidate: all implemented slots replay after native mode completion; build checks pass, runtime matrix pending |
+| acceptance/usb-hub-support-link-native-visibility-baseline-v5.json | Core-active/candidate-refused baseline reproduces native50-packet metadata prefix; steady native identities preserved, cadence not equal |
+| acceptance/usb-hub-support-link-final-cold-restoration-v5.json | Exact supported v5 restored after baseline through fresh positive first-start860,54 hooks, seven healthy mounts |
+| acceptance/usb-hub-support-link-native-usb-modes-v5.json | Exact supported v5 native USB1/2 load/play, loaded Off-to-On and explicit unload in both modes |
+| acceptance/usb-hub-support-link-primary-tcp-transport-v5.json | Native SYN-ACK/slirp reset diagnosis and tracked primary TAP transport with bounded NAT cleanup/SSH checks |
+| acceptance/usb-hub-support-link-adversarial-native-v5.json | Exact supported v5 selected UDP/private-requester collision controls and post-attack private loads; explicit native visibility timing limit |
+| acceptance/usb-hub-support-link-restored-after-delay-v5.json | Exact supported candidate restored through normal Allow/Reload after diagnostic; five private/two native rows and seven healthy mounts |
+| acceptance/usb-hub-support-link-request-delay-v5-runtime.json | Derived v5 controlled pending normal/Instant Doubles source replacement, native cleanup and fresh retry; exact timing and limitations |
+| acceptance/usb-hub-support-link-request-delay-v5-build.json | Derived one-shot common-stage delay build for deterministic pending-source testing; runtime separately recorded |
+| acceptance/usb-hub-support-link-id-peer-native-v5.json | Exact v5 native-input Instant Doubles, attached-hub peer loss/reconnect/tempo and same-content native replacement |
+| acceptance/usb-hub-support-link-replug-retry-v5.json | Exact v5 physical virtual-USB reconnect/fresh retry and349 full-status privacy checks; manual timing does not prove queued cancellation |
+| acceptance/usb-hub-support-link-loaded-modes-v5.json | Exact v5 all-five-source loading, four Off decks and loaded On/Off/On recovery; native warning triangles remain |
+| acceptance/usb-hub-support-link-cold-off-v5.json | Exact v5 first cold Off startup, five private rows/two native mounts, stable native process |
+| acceptance/usb-hub-support-link-normal-recovery-v5.json | Exact v5 cached USB-absent first/settled init refusal and native USB playback control; emulator6.6 only |
+| acceptance/usb-hub-support-link-cold-on-v5.json | Exact v5 first native cold On startup with five hub sources and two native controls |
+| acceptance/usb-hub-support-link-emulator-eject-root-image.json | Offline one-entry service override maps virtual USB STOP2 to the emulator hub; package unchanged |
+| acceptance/usb-hub-support-link-loaded-eject-peer-v5.json | Individual/whole loaded eject, retained cached UI playback, isolated peer handoff/sync and570 full-status known-field privacy controls |
+| acceptance/usb-hub-support-link-normal-activation-v5.json | Exact v5 normal activation and empty On/Off/On five-source recovery without duplicate rows; loaded/peer/eject gates remain open |
+| acceptance/usb-hub-support-link-functional-matrix-v4-partial.json | Supported v4 five-source Off/four-deck and bounded On peer results; explicit failed source-recovery gate |
+| acceptance/usb-hub-support-0.3.0-media-state-candidate-build.json | Preserved v4 media-state candidate; hashes and build/sanitizer/package checks |
+| acceptance/usb-hub-support-link-slot7-owned-media-experiment-runtime.json | Controlled five-row visibility and two formerly missing browse/load/UI-playback controls; instrumented experiment only |
+| acceptance/usb-hub-support-link-slot7-removal-diagnostic-runtime.json | Exact-key native removal negative with healthy backings; status ownership investigation |
+| acceptance/usb-hub-support-0.3.0-parser-candidate-build.json | Preserved parser-corrected predecessor: parser-registration build check, hashes and exact test scope |
+| acceptance/usb-hub-support-0.3.0-coexistence-candidate-build.json | Local supported candidate build/package provenance and sanitizer results; runtime acceptance is separate |
+| acceptance/usb-hub-support-link-final-source-privacy-review.json | Independent supported-source privacy integration review and remaining runtime controls |
+| acceptance/usb-hub-support-link-known-status-privacy-v4.json | Diagnostic fresh/cached playback packet checks; not final candidate acceptance |
+| acceptance/usb-hub-support-link-normal-recovery.json | Exact-package emulator cold boots with/without mods USB and separate native-media control; physical recovery remains separate |
+| acceptance/usb-hub-support-link-normal-recovery-independent-review.json | Independent frozen recovery evidence and screenshot audit |
 | LOADED-TRACK-EJECT.md | 0.2.1 native cache detach, exact-candidate QEMU evidence, fault receipts and remaining hardware/memory gates |
 | SAFE-EJECT-AZ-TRIAL.md | Initial one-source trial accepted; expanded hardware trials need separate authorization |
 | SAFE-EJECT-PUBLICATION-AUDIT.md | Active guideline checklist, sanitizer scope and remaining stability gates |
@@ -22,6 +61,9 @@ Read CURRENT-STATE.md first. Then:
 | ../src/azhub/research/community-014-acceptance.json | Final emulator binary/hash and acceptance |
 | ../src/azhub/research/az-014-usb-install.json | SSH installation evidence for hardware USB |
 | ../src/azhub/research/waveform-014-*-settings.log | Per-source native color/position samples |
+| ../src/azhub/research/scripts/link-primary-tap-transport.py | Bounded normal-loader TAP bridge separating peer TCP from NAT management; fixed localhost QMP and explicit pre-created namespace |
+| ../src/azhub/research/scripts/prepare-link-request-delay.py | Offline source-frozen emulator request-delay reconstruction; no deployment, supported candidate unchanged |
+| ../src/azhub/research/scripts/inventory-link-socket-calls.py | Reconstruct direct socket PLT-call facts from a local exact-firmware ELF without exporting raw disassembly; conservative argument and coverage limits apply |
 | ../src/azhub/research/ghscripts/Probe.java | Headless decompile/xref/string/vtable research helper |
 | ../src/azhub/research/scripts/vmem.py | Read the local firmware ELF by virtual address (not a live hardware writer) |
 | ../src/azhub/research/scripts/device-settings-sample.c | Read-only native settings diagnostic |

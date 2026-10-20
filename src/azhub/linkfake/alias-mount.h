@@ -8,7 +8,7 @@
 #include <errno.h>
 #include <string.h>
 static int hub_alias_valid(const char *path) {
-    if (!path || (strncmp(path,"/media/player03/",16) && strncmp(path,"/media/player04/",16))) return 0;
+    if (!path || (strncmp(path,"/media/player07/",16) && strncmp(path,"/media/player08/",16))) return 0;
     const char *leaf=path+16;
     return !strcmp(leaf,"sd") || !strcmp(leaf,"usb") || !strcmp(leaf,"usb2") || !strcmp(leaf,"usb3");
 }

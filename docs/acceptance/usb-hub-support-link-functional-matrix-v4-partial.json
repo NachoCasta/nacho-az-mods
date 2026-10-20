@@ -1,0 +1,224 @@
+{
+  "scope": "Supported v4 bounded five-source Off/four-deck pass and live mode/peer investigation; full coexistence fails source recovery",
+  "candidate": {
+    "package_sha256": "2edbd629de26a76521391b3c9a3f807c29491e393673099e803f407018f6d780",
+    "ELF_sha256": "efff2ac033d7362846b11a9384ac75700a2a01591861585b0fc26e48a81a4547",
+    "PID": 820744,
+    "hook_claims": 54,
+    "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3"
+  },
+  "activation": "Supported mods USB copy/apply/native Allow/Reload; exact staged ELF hash and54hooks. Prior58hook diagnostic history in cumulative logs excluded from current activation claims.",
+  "Off_result": {
+    "sources": "NativeUSB1/USB2 plus all five private sources, all healthy; five private sources each browse/load in bounded UI tests",
+    "loads": [
+      "Deck1 private7/3 Algo m\u00e1s",
+      "Deck2 private7/7 Are You That Somebody",
+      "Deck3 private7/8 Are You That Somebody",
+      "Deck4 private8/3 Are You That Somebody",
+      "Deck2 paused/replaced from private8/7 Are You That Somebody"
+    ],
+    "four_decks": "Core LLLL; paired four-deck screenshots show all four remaining clocks and waveforms advance. No audio capture.",
+    "known_status_privacy": "415 complete1152 outgoing statuses, all four native deck identities; standard private source fields and11 known private locations clean; selected private IP/content markers absent",
+    "peer_number_limit": "Off status peer3 triggers native local-player3 defense; this capture proves privacy only, not external Off-mode coexistence"
+  },
+  "loaded_On_transition": {
+    "action": "Native Utility confirmation;3/4 cued,1/2 restarted playing; no app restart",
+    "core_state": "LLLL -> LLEE",
+    "native_UI": "Decks3/4 become LINK PLAYER;1/2 retain titles and advancing cached playback",
+    "failed_gate": "Only private7/3 and8/3 return;7/7,8/7,7/8 missing while seven physical backings remain mounted",
+    "cause_in_source": "link-mode-recovery.h explicitly skips source->slot!=3 based on historical three-source experiment; current five-source replay logs announce only those two USB1 slots"
+  },
+  "On_peer": {
+    "handoff": "Peer3 requested native master1 and became master; successful bounded handshake",
+    "tempo": "60 deck2 samples synced to125.999993 BPM after native short SYNC gesture",
+    "statuses": "370 complete1152 statuses from native1/2; known private fields clean",
+    "limit": "Physical hub backings are live, but missing source rows mean full live-source coexistence is not accepted. Deck2 cached private playback; no audio-phase or real-CDJ acceptance."
+  },
+  "next": "Repair mode recovery for all implemented slots, validate both directions without duplicate rows, then repeat exact final candidate matrix/eject/recovery.",
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-accepted-state.txt",
+      "sha256": "7db0de6a03c27afe62bcbd5902199a16ba9f59fac5c9b3b6e531054c7a4a1c5a",
+      "bytes": 319796
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-settled-state.txt",
+      "sha256": "51fd7f3ec59990e5241c13c9f24524e1add15158325d35c3c04682438a531a75",
+      "bytes": 327738
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-five-source.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v4-supported-settled-health.json",
+      "sha256": "ee8af186c73d2c8b2c736054668d942fdc2d7ff309513455b81e14864d8cf8e5",
+      "bytes": 105324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-A495-loaded.png",
+      "sha256": "1793977460ac7f8627e84804edb5a4c5baef6360016509ccc8af097fe2488b46",
+      "bytes": 89990
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-B1944-selected.png",
+      "sha256": "ba97a615510257ced3195b72ca4fc26478c04a99815294a54f9aa8e814463102",
+      "bytes": 63595
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-E1944-ready.png",
+      "sha256": "58e016f987b2b0b72d5d494c2d93a611b392bbaf15e9221abeec16926277f388",
+      "bytes": 124218
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-D1944-selected.png",
+      "sha256": "a8dc8014aa46ad4ec4d545fbbc2510b5bf120a7da8f3c603f06a9975919e80d3",
+      "bytes": 124977
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-four-playing-first.png",
+      "sha256": "11e058e45207b4b4c247ba91bce646b340cb5f45045a70fe907c5ee0409e9fa7",
+      "bytes": 149552
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-four-playing-second.png",
+      "sha256": "e2cad404db1372e5d676a699cb7541ec2f7be9fe11e2842c27aefe53a3d8d6f0",
+      "bytes": 154584
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-four-playing-state.txt",
+      "sha256": "ac92e977d71feb8800e1f050790e64c2420582cef4a0b62651ab9142ccc29c15",
+      "bytes": 405901
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v4-four-playing-health.json",
+      "sha256": "5501f82b6f2d89c05e62d421b2e1d29d6adfcdba86b352c4c02aace5758e37bc",
+      "bytes": 105324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-all-five-loaded.png",
+      "sha256": "24b03ad1998f88999823317aee36143a88645c21f7d27b2f1f426f655e7883b5",
+      "bytes": 154763
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-all-five-state.txt",
+      "sha256": "a4bd2b732a46a5a600c348006e1f49effda49e125c2f5d00e822c9e40263a551",
+      "bytes": 431157
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v4-all-five-health.json",
+      "sha256": "1016b0d486eb55859c1ec07ea6e197213caa62da113640c4d6e58e94bf4ab523",
+      "bytes": 105324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-link-off-setting.png",
+      "sha256": "c36f86b3e81b4e3f2502d679ea8b90ce97a513f49713079d4750abcb5dfd5239",
+      "bytes": 69728
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-link-on-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-before-on-state.txt",
+      "sha256": "311e806997b479936e2e6f140a190b96b09b1d50e24e785fd5e1e21a68db3e1d",
+      "bytes": 483588
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-after-on-waveform.png",
+      "sha256": "765dda0bd2006488448322ad5afd80be365fd0fa7c2266199e1bbf5a1048843a",
+      "bytes": 109837
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-on-source-settled.png",
+      "sha256": "a8bc46da1f2903fb5c2550551b7faa4dc8ab2a7da243cb37464e2c42ec4e38a8",
+      "bytes": 67153
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-on-final-state.txt",
+      "sha256": "7e16ae9bc4b40c6d700c67980bf4e1b795b93a5edd2aa1c7c10d626ba7be106c",
+      "bytes": 506222
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v4-after-on-health.json",
+      "sha256": "479da08fe903eab9eeb1a15ffff80beb933a1edd9e7f6fd008463b5a78e5296a",
+      "bytes": 105324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v4-on-peer-health.json",
+      "sha256": "26bb1d1509935b54df2ccd3558cf432ceb2d5e52fb19fa4fc6c55ffb37e4bb2b",
+      "bytes": 105324
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/network-start.json",
+      "sha256": "37ca4fa13891bc16e467fcf6dfcb40dbb5a04f523b0de8f58cfb3285d07838cf",
+      "bytes": 426
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/isolated-interfaces.json",
+      "sha256": "4884d2ca4b30982145fb92be49a97388f724b729e7b5d8e7c417492dc55015b8",
+      "bytes": 979
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/off-live-private-wire.jsonl",
+      "sha256": "6208c0c584539d8472f54bfc610a96f2f5c6b688c965e97545fd1568e98c2fe0",
+      "bytes": 2012561
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/off-live-private-peer.jsonl",
+      "sha256": "db97701faa2aeb58855c25f7cca4925bab0b5ecc4a726263e8b7c8edf20a1cae",
+      "bytes": 74360
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/off-live-private-peer.stderr",
+      "sha256": "88a75ac3036795c821b6cbc3a9b892b91959f39681969741ae590864877957d4",
+      "bytes": 2825
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/off-live-private-run.json",
+      "sha256": "35fcda7a5ddbec40d4114c2366ac5238bdd74db10841989827b83762b74e185d",
+      "bytes": 1298
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/off-live-private-audit.json",
+      "sha256": "19f8e3df4383189ab359f9138ea064ed4e20b6a6c263640931ca8b325e043438",
+      "bytes": 475
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/on-live-handoff-wire.jsonl",
+      "sha256": "64a6ca8a45d8556b1e8aa1950ea5fb711f1e41ba618d705954a2932c89d47c1c",
+      "bytes": 1685756
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/on-live-handoff-peer.jsonl",
+      "sha256": "66a7f4b7074e1a4e26e0156a049697eb7ce2d01e32ed88adc3e24f4606956c5f",
+      "bytes": 67924
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/on-live-handoff-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/on-live-handoff-run.json",
+      "sha256": "376715c8f69a104e8924b82f67f050d9dfb641be6b8178f0089ef2bd1e9c3436",
+      "bytes": 1303
+    },
+    {
+      "path": "local/integration/link-coexistence-v4/on-live-handoff-audit.json",
+      "sha256": "c767ff0d28baf32b37427606e403c1cec7e1f7a2c7e40a0c6b575bad72d825ea",
+      "bytes": 753
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v4-supported-final-empty-settled-state.txt",
+      "sha256": "48a091caead74c5b9c3fa553b88086a249cb3a10b80dee47a816abe4ea65f4f3",
+      "bytes": 522877
+    }
+  ],
+  "cleanup": {
+    "result": "Native UI unload leaves EEEE in samePID820744 before next candidate copy",
+    "transient_limit": "Earlier v4-supported-final-empty-state.txt shows EUEE while final unload still pending; settled record, not filename, proves completion."
+  }
+}

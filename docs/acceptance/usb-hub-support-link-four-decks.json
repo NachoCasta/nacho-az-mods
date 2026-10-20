@@ -1,0 +1,223 @@
+{
+  "timestamp_utc": "2026-10-19T02:35:33.725157+00:00",
+  "scope": "Native Link-off four-deck emulator behavior and failed live transition",
+  "binary_sha256": "d60ac8be48d1070a5018d5b3ba0e2fc8db461a07c7c8b4f97f540f6bba76a0b5",
+  "transition": {
+    "pid": 171279,
+    "action": "Native Utility PRO DJ LINK Mode On -> Off, confirmed through native modal",
+    "result": "FAIL: only member7 slot7 source remained visible; member7 slot3 and member8 slot3 disappeared while discovery still reported three present fixtures",
+    "recovery": "Restarted emulator application with the same binary and persisted Link Off; all three sources reappeared",
+    "automatic_recovery_implemented": false
+  },
+  "link_off_startup": {
+    "pid": 179820,
+    "announcement_counts": {
+      "1": 12,
+      "2": 12,
+      "3": 12,
+      "4": 12,
+      "33": 12
+    },
+    "loaded": {
+      "pid": 179820,
+      "clock_ms": 8907926,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        }
+      ]
+    },
+    "playing": {
+      "pid": 179820,
+      "clock_ms": 8926098,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 5.87,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.941,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.875,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.852,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        }
+      ]
+    },
+    "advanced": {
+      "pid": 179820,
+      "clock_ms": 8936820,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 15.462,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 14.617,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 13.344,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 12.32,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Mode transition remains a functional blocker; restarting is diagnostic recovery, not accepted final behavior",
+    "Tracks are the same content495 fixture across two source identities, not different-content isolation",
+    "Four loaded/advancing decks are emulator telemetry, not captured audio or hardware acceptance",
+    "No loaded Off-to-On transition test yet",
+    "Existing protocol, concurrency and recovery gates remain open"
+  ],
+  "local_evidence_sha256": {
+    "link-off-transition.json": "f3b5a1e04ee0319b498e8d29e4bea7ce6888a70552bc80859c9e68dbf80e9995",
+    "link-off-transition.log": "65061cc44ddb5a6e41e0d328566f97a4183b5dee8059d101f7520bad99ee2c02",
+    "four-deck-loaded.json": "5403e29d9492b4419e6cf537008c9fec3d62b31c87f3c6405ec30baa32d06a63",
+    "four-deck-playing.json": "ea571a0316d4223b20d2cf35dd82f6efa5301e0b48df1e63ac70b07b3211f7fc",
+    "four-deck-advanced.json": "827a1caacb967b32cf97ac88e5a48735e6a27f5a88b2cb20dcb3ddb4aeb44ebe",
+    "four-deck-final.log": "81645c0280e55a7a94d8ce313e0278a989d75c9eac59691d3a51d693371a1e1f",
+    "link-off-wire.jsonl": "842a8f5f812e1bf3c15e17db346a39cf2179d16cc2b244aee08d238f99a6a375",
+    "four-deck-sources.png": "40c4a9f43eefb29a99fb67cc15b6ee00a0d0ff51d05d6992f6548b74f3479315",
+    "link-off-cold-sources.png": "ea8ed82ebad972ffcf9caace8699c36cebd279d1eeea6a4d9d5c41d71f91639d"
+  }
+}

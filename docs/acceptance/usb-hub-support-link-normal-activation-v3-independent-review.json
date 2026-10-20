@@ -1,0 +1,63 @@
+{
+  "scope": "Independent local-only frozen evidence audit; no guest access or code changes",
+  "status": "Bounded v3 normal activation, private A browse/load/playback UI, native unload, five-source startup list and network framing evidence corroborated",
+  "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+  "initrd_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+  "owner_record": "docs/acceptance/usb-hub-support-link-normal-activation-v3.json",
+  "all_10_raw_evidence_hashes_match": true,
+  "raw_evidence_hashes": {
+    "local/diagnostics/link-normal-loader/v3-activated-private-load-state.txt": "27c43f387383f87eb20b779829bd19689278932ef93c9f1c0d9e503b8fc0548a",
+    "local/diagnostics/link-normal-loader/v3-empty-snapshot-state.txt": "00567b64827d3129d04976f2f45aaf2cc0fd8ac9579fd3e5276afac7cf9f0867",
+    "local/diagnostics/link-normal-loader/v3-primary-network-smoke-confirmed.json": "b3a783902be5ecd4f92c77d24db82a739b0f7eaf6269ef52596b6f0e0776da89",
+    "local/diagnostics/link-normal-loader/v3-network-transport.stderr": "98b07fc0517d52d7965d95ff8a2f2668f9228c3b00398dd58e3da0e22b9402ab",
+    "local/diagnostics/link-normal-loader/boot-v3-setup/launch.json": "e14414e80c1a1d51cbf543856929d433472dfb0838de1c3110ba9db225a0d160",
+    "local/diagnostics/link-normal-loader/boot-v3-setup/serial.log": "c1b8c316b6db15b73fcae1892c2b142590f2ad2697e040a280431c54323e1309",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/output-inventory.json": "59d0107f56f69d12609d008160bacdb0026d5a99c5f470c2b708280fe9b96240",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/source-inputs.json": "d6a4defede78d2ebfc404df51504379a891644cf1bb8457bd1803b1531fee298",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/normal-build.log": "1023a7090a5f8032ddee4681e77e12dbe56a5e3583aa4f7a2a6d3354a5494206",
+    "local/diagnostics/link-normal-loader/five-fixtures.json": "738acb9ff9ac0761a1404a02995ffea4ec1013559603ebb9bc76d7537a8a3644"
+  },
+  "independent_archive_comparison": {
+    "baseline_sha256": "39b9119c3e62ed072e8eb5bb832b470521820cb1f374dad1fd5f98cfbed3875f",
+    "corrected_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+    "entries_before": 9486,
+    "entries_after": 9485,
+    "changed_content_or_mode_paths": [
+      "etc/az-emu-build",
+      "etc/systemd/system/EP147.service.d/20-usb-renotify.conf",
+      "home/root/scripts/usb-renotify.sh"
+    ],
+    "all_other_entry_content_mode_and_size_identical": true,
+    "original_firmware_renotifier_restored": true,
+    "emulator_added_polling_dropin_absent": true,
+    "boot_time_hub_control": "Launch arguments include all five protected COW images and OHCI hub before power-on; no late-attachment workaround"
+  },
+  "runtime_corroboration": {
+    "PID": 10961,
+    "timeline": "Aggregate evidence retains prior activation attempts. The final Allow/Reload section claims parser 0xef05c8 and reports 54 hooks; later process controls and telemetry explicitly identify PID10961.",
+    "parser": "Actual dbmsg activity after the final supported hook registration",
+    "private_load": "Source0/deck1 load-admitted followed by result0; LEEE at455.10s",
+    "UI_playback": "Are You That Somebody on private member7/USB1; remaining04:22.762 then03:51.789 and changed waveform position",
+    "native_unload": "Native UNLOAD TRACK confirmation, state0/mode1/epoch1 callback and EEEE at506.60s before standard poweroff511.414938s",
+    "environment": "Final PID10961 environment-control section contains no AZHUB_* result; HubMount, HubTransport and HubEjectUI worker names present",
+    "source_list": "Screenshot shows native USB1 AZ_USB, five LINK rows and MOD MENU; no native USB2 row. Source E repeats the HUB_LIB volume label but is a separate private slot, consistent with the five independent backings.",
+    "content_id_limit": "Content1944 is the owner's prior fixture mapping, not a new independent protocol observation in this audit",
+    "network_limit": "ARP and three ICMP request/reply pairs plus SSH before/after corroborate isolated primary-NIC framing. This occurred earlier in the same boot with PID5743, so it is not a post-activation PID10961 or PRO DJ LINK protocol acceptance.",
+    "network_shutdown": "Relay2994/33 frames, explicit Windows10054 socket close at standard QEMU shutdown, TAP process result0; not described as an error-free relay log"
+  },
+  "visually_reviewed_screenshot_hashes": {
+    "v3-all-five-startup-source.png": "3262eab6d64e3edcf0f588ee5e1bd7ba1b01a09d16587fe64c033c79b63a87e2",
+    "v3-A-track-selection.png": "72c78bb36d7659b42d931fae1b654ac16f9421cbbd6fdbe7caef6f668fbb32be",
+    "v3-first-private-loaded.png": "bf6b7d79c9d929aaf02be9c92ac64299f761cdaebcd3a8a7bc30df9fd6eae378",
+    "v3-first-private-playing-1.png": "bb64529f4cf06d92c9f5f374d6e71f074d39a50452dbf0c0578743573bc38667",
+    "v3-first-private-playing-2.png": "6d0d417af0e124c6ae6264cd4b4e85060f424f5345c5d1b00ce91604b4c3afdc",
+    "v3-native-unload-confirm.png": "7a6ab5b9f6b8b0b2a79d7f005d3aa722971287792c2e1bc19201e76233f9a308"
+  },
+  "limits": [
+    "No full five-source load/eject/mode matrix or sustained-playback/audio claim",
+    "No final-artifact packet privacy, native same-ID replacement or external peer acceptance",
+    "Exact-artifact present/absent recovery is a separate owner run and is not passed by this record",
+    "No physical AZ, stock4.4 kernel recovery or real CDJ testing"
+  ]
+}

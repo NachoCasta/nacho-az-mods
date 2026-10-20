@@ -6,6 +6,7 @@
 #include <sys/sysmacros.h>
 #include "eject-source.h"
 #include "eject-detach.h"
+#include "link-load-origin.h"
 
 #define SAFE_RECORDS 16
 #define SAFE_MOUNTS 128
@@ -25,16 +26,28 @@ struct safe_load {
     int source,loading,deck,failed;
     uint32_t content_id;
     uint64_t epoch,media;
+    struct eject_item origin;
+    int origin_valid;
+    int committed_valid,committed_source;
+    uint32_t committed_content_id;
+    uint64_t committed_media,committed_epoch;
+    struct eject_item committed_origin;
 };
 static struct safe_load safe_loads[16];
+#define PROBE_COMMITTED_STATUS_ORIGIN 1
+static int safe_usb_identity(const char *,struct eject_item *);
+static int safe_same(const struct eject_item *,const struct eject_item *);
+static int probe_request_admission_origin(uintptr_t,uintptr_t,struct eject_item *);
 static struct hub_detach_pool safe_detach_pool;
-static struct { uintptr_t controller; uint64_t epoch; int valid,ticket; } safe_cached_decks[4];
+static struct { uintptr_t controller; uint64_t epoch; uint32_t content_id; int valid,ticket; } safe_cached_decks[4];
 static void safe_cached_forget_locked(int deck);
 static int safe_cached_known(int deck);
 static fn8 safe_original_detach_complete;
 static void (*safe_original_load)(uintptr_t);
 static fn8 safe_original_load_complete,safe_original_unload_complete;
 static void (*safe_original_load_common)(uintptr_t,uintptr_t,uintptr_t);
+static void probe_request_begin(uintptr_t,uintptr_t,uintptr_t);
+static void probe_request_end(void);
 static fn8 safe_original_track_execute,safe_original_track_execute_range;
 static int safe_source_identity(uint64_t identity);
 static int safe_track_request_denied(uintptr_t track) {
@@ -76,7 +89,9 @@ static void safe_load_common_hook(uintptr_t controller,uintptr_t track,uintptr_t
     if (getenv("AZHUB_EJECT_TRACE_LOAD")) lf_core->log(EJECT_ID,"safe-eject load-request deck=%d location=%#lx:%#lx time=%llu",
                  *(int *)(controller+0x1e8)+1,*(uint64_t *)track,*(uint64_t *)(track+8),
                  (unsigned long long)eject_clock_ms());
+    probe_request_begin(controller,track,options);
     safe_original_load_common(controller,track,options);
+    probe_request_end();
 }
 
 /* Serialize request admission with reservation, without holding a lock across
@@ -117,6 +132,9 @@ static void safe_load_hook(uintptr_t controller) {
     if (!*(uintptr_t *)pending || !**(char **)(controller+0x208)) { safe_original_load(controller); return; }
     uintptr_t record=((uintptr_t (*)(uintptr_t,uintptr_t))0xa5d968)(controller+0x298,pending);
     int source=safe_source_identity(*(uint64_t *)(record+0x38)),denied=0;
+    struct eject_item origin={0};
+    int origin_valid=source<0 || probe_request_admission_origin(controller,record,&origin);
+
     pthread_mutex_lock(&safe_lock);
     struct safe_load *load=safe_load_slot(controller);
     /* Exact-firmware constructor stores its zero-based deck argument at +0x1e8.
@@ -128,9 +146,10 @@ static void safe_load_hook(uintptr_t controller) {
         load->failed=0; load->content_id=*(uint32_t *)(record+0x40);
         load->request=record;
         load->source=source; load->loading=1;
+        load->origin=origin;load->origin_valid=origin_valid;
     }
     if (source>=0) {
-        denied=!load || fakes[source].eject_reserved;
+        denied=!load || fakes[source].eject_reserved || !origin_valid;
     }
     if (load && !denied) {
         load->media=hub_detach_media(*(uint64_t *)(record+0x38));
@@ -143,7 +162,8 @@ static void safe_load_hook(uintptr_t controller) {
         safe_original_load(controller); return;
     }
     lf_core->log(EJECT_ID,"safe-eject load-denied source=%d",source);
-    safe_message("Cannot load from a USB that is being ejected.");
+    safe_message(origin_valid ? "Cannot load from a USB that is being ejected.":
+        "USB changed while loading. Select the track again.");
     /* Native DownloadResult default: empty strings/vector, invalid optional IDs. */
     unsigned char result[0x40]={0}; uint16_t invalid=0xffff; int32_t missing=-1;
     memcpy(result+0x10,&invalid,sizeof invalid); memcpy(result+0x30,&missing,sizeof missing);
@@ -172,7 +192,17 @@ static uint64_t safe_load_complete_hook(uint64_t a,uint64_t b,uint64_t c,uint64_
     if (matched) {
         load->loading=0;load->failed=result!=0 && result!=4;
         if (load->failed) load->source=-1;
-        else safe_cached_forget_locked(load->deck);
+        else {
+            safe_cached_forget_locked(load->deck);
+            /* Only matched successful completion commits the playing identity.
+             * Pending or failed replacements preserve the prior loaded proof. */
+            load->committed_valid=load->source>=0 && load->origin_valid;
+            load->committed_source=load->source;
+            load->committed_content_id=load->content_id;
+            load->committed_media=load->media;
+            load->committed_epoch=load->epoch;
+            load->committed_origin=load->origin;
+        }
     }
     pthread_mutex_unlock(&safe_lock);
     if (!matched) lf_core->log(EJECT_ID,"safe-eject completion-unmatched controller=%#lx",root);
@@ -195,7 +225,11 @@ static uint64_t safe_unload_complete_hook(uint64_t a,uint64_t b,uint64_t c,uint6
     /* State-zero notification and exact media must match; queued/new loads
      * retain their guard even if the old unload finishes afterward. */
     if (load && load->epoch==epoch) {
-        if (hub_detach_unload_matches(native_state,load->loading,load->media,media)) load->source=-1;
+        if (hub_detach_unload_matches(native_state,load->loading,load->media,media) &&
+            !(native_mode==2 && load->origin_valid)) load->source=-1;
+        if (native_state==0 && !load->loading && native_mode!=2 &&
+            load->committed_valid && load->committed_media==hub_detach_media(media))
+            load->committed_valid=0;
         int deck=load->deck;
         if (native_state==0 && !load->loading && native_mode!=2 && deck>=0 && deck<4 && safe_cached_decks[deck].valid) {
             const struct hub_detach_ticket *ticket=&safe_detach_pool.slots[safe_cached_decks[deck].ticket];
@@ -203,7 +237,7 @@ static uint64_t safe_unload_complete_hook(uint64_t a,uint64_t b,uint64_t c,uint6
         }
     }
     pthread_mutex_unlock(&safe_lock);
-    lf_core->log(EJECT_ID,"safe-eject unload-completed controller=%#lx",root);
+    lf_core->log(EJECT_ID,"safe-eject unload-completed controller=%#lx state=%d mode=%u media=%#lx epoch=%llu",root,native_state,native_mode,media,(unsigned long long)epoch);
     return returned;
 }
 

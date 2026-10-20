@@ -1,0 +1,163 @@
+{
+  "timestamp_utc": "2026-10-19T02:29:00.542569+00:00",
+  "scope": "Partial UDP ingress policy integrated in emulator recvfrom/recvmsg hooks",
+  "binary_sha256": "d60ac8be48d1070a5018d5b3ba0e2fc8db461a07c7c8b4f97f540f6bba76a0b5",
+  "pid": 171279,
+  "rejected_external_private_markers": [
+    "UDP ingress rejected port=50002 interface=3 trusted=0 bytes=1152",
+    "UDP ingress rejected port=50000 interface=3 trusted=0 bytes=54",
+    "UDP ingress rejected port=50000 interface=3 trusted=0 bytes=54",
+    "UDP ingress rejected port=50002 interface=3 trusted=0 bytes=192",
+    "UDP ingress rejected port=50002 interface=3 trusted=0 bytes=1152",
+    "UDP ingress rejected port=50002 interface=3 trusted=0 bytes=192"
+  ],
+  "loaded": {
+    "pid": 171279,
+    "clock_ms": 8516959,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 26827,
+        "devnum": 17
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 26481,
+        "devnum": 15
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 26654,
+        "devnum": 16
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 0,
+        "pos_s": 0.047,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "playing": {
+    "pid": 171279,
+    "clock_ms": 8544446,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 26827,
+        "devnum": 17
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 26481,
+        "devnum": 15
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 26654,
+        "devnum": 16
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 3.234,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "synced_effective_bpm": {
+    "125.99995": 142
+  },
+  "peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 6510274700544,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "limits": [
+    "Only keepalive, status and media-response formats guarded; assignment/control variants still need audit",
+    "Rejected MSG_PEEK leaves queue-head behavior unresolved; do not claim production receive semantics",
+    "Original IP_PKTINFO captured on first receive; later application option changes are not intercepted",
+    "UDP registry and per-call pins require native lifecycle/leak/stress validation",
+    "No raw status capture, native Link-off/four-deck or mode-transition acceptance on this binary",
+    "No audio phase or hardware acceptance; physical recovery gate unchanged"
+  ],
+  "local_evidence_sha256": {
+    "udp-before.log": "126036393dfc1e260a448f7574b7480d282c25c4fbf616d00b8aad6e518261ee",
+    "udp-after.log": "15cdf18b4390bd44f7d3b63b0efe3819f123f06cfdd397b188d2dac371877eeb",
+    "udp-spoofs.jsonl": "e562abf96a7d1a87272fc6a99c36aaccf5b0906f7bceb9bf08db6852923a25e0",
+    "udp-loaded.json": "59e2a487d3025d4ea6f88f4e2beffd0edfd3f618f5f53d65d487f47e451980d3",
+    "udp-playing.json": "c10b62cf5a8a5682f738099bab8226c52a79890531adb0b5545e75ed1273c9be",
+    "udp-final.log": "b70e1e854d1fac4ce436ad63da1c58caccc890af924c0b471f5eb8b28a59a606",
+    "udp-peer.jsonl": "df8378f6672a2c815bdaad8ed79c5165491367bdc614dd82f0f330c6b36a8cca",
+    "udp-loaded-peer.jsonl": "40307f698db6a978eb4f273aeca7e6bb82899768e1a43bd1f2548fd353e55485"
+  }
+}

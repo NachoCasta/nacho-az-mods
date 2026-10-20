@@ -1,0 +1,61 @@
+{
+  "scope": "Independent read-only input/helper and official-manual review; no runtime operations or native disassembly",
+  "status": "Prior long-LOAD attempts did not exercise the documented Instant Doubles gesture; documented UI flow remains untested",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "prior_runtime_record": "docs/acceptance/usb-hub-support-link-functional-matrix-v3-partial.json",
+  "official_sources": [
+    {
+      "url": "https://downloads.support.alphatheta.com/manuals/all-in-one-dj-systems/XDJ-AZ/html/en/000COV_en/Beat_Sync/Beat_Sync.htm",
+      "section": "Using Instant Doubles",
+      "fact": "Double-press LOAD on the destination deck, or hold its BEAT SYNC(INST.DOUBLES) button. It copies the active opposite-side local deck, or a connected PRO DJ LINK sync master, at the same playback position. A held LOAD is not the documented gesture."
+    },
+    {
+      "url": "https://downloads.support.alphatheta.com/manuals/all-in-one-dj-systems/XDJ-AZ/html/en/000COV_en/Settings/Settings.htm",
+      "section": "Utility settings / Deck",
+      "fact": "Load Lock can prevent loading another track onto a playing destination. No separate Instant Doubles enable/disable item is listed here; that does not establish every exact-firmware eligibility predicate."
+    }
+  ],
+  "local_helper_findings": [
+    {
+      "path": "local/diagnostics/link-normal-loader/hold-native-load.py",
+      "fact": "The corrected attempt holds destination LOAD for1.5 host seconds using az-drive._hold. It generates sustained press/release, not two distinct LOAD presses."
+    },
+    {
+      "path": "C:/Users/icast/xdj-az-emu/tools/az-drive.py",
+      "fact": "LOAD uses mixer bus2, byte33: deck1 mask0x08, deck2 mask0x04. _mixer preserves mixer state and browse knob counter. _hold repeats pressed frames then releases; load() sends one pressed frame then sleeps and releases. Separate host SSH sends can distort timing. SYNC2 uses ERP bus0 byte0x10 mask0x02."
+    },
+    {
+      "path": "src/azhub/research/scripts/eject-ui-emu.py",
+      "fact": "Existing hold_erp schedules repeated pressed/released phases in a single guest command using guest uptime, avoiding per-frame SSH timing. Its supported load action currently accepts only a short press. This review does not modify or execute the helper."
+    }
+  ],
+  "smallest_next_owner_UI_control": [
+    "Use a healthy-controller fixture with one verified native USB track playing on active deck1; no simulated external peer. Pause/unload target deck2 through native UI so target playback/Load Lock cannot obscure the result.",
+    "Verify ordinary single LOAD2 from a populated, focused native track list issues a successful normal load, then unload target2 again. This controls mixer input delivery and track eligibility without invoking the diagnostic API.",
+    "Send two destination LOAD2 down/up edges with repeated native frames and a final release, timed in one guest connection. An initial100ms down/100ms up/100ms down/release sequence is an exploratory timing choice, not a proven firmware threshold. Preserve existing mixer levels and knob counter.",
+    "Require destination title/content to match the source, position close to the source and native successful completion; a no-op requires checking actual delivered edges/timing before declaring the feature unavailable.",
+    "If double-LOAD remains inconclusive, independently try the documented hold-SYNC2 alternative using repeated ERP frames for an exploratory1.5s and a final release. Record any normal sync toggle separately from a successful duplicate.",
+    "After a native-source user-flow control succeeds, repeat the same verified gesture on a healthy mounted private source. Only then use it for stale-request/reconnect acceptance."
+  ],
+  "unproven": [
+    "Exact firmware double-click window and hold threshold",
+    "Exact native source/target eligibility predicates and any additional feature configuration",
+    "Successful user-flow Instant Doubles on the supported artifact; diagnostic native-API results remain separate",
+    "Gesture delivery and expected outcomes proposed here have not been executed by this reviewer"
+  ],
+  "conclusion": "Do not describe Instant Doubles as broken from the long-LOAD no-op. The documented gesture has not yet been exercised in the frozen supported-artifact evidence.",
+  "local_helper_provenance": [
+    {
+      "path": "local/diagnostics/link-normal-loader/hold-native-load.py",
+      "sha256": "54b6ebd1d5fa26906f54d2aad906fe997495ade43954e1a3c8070ba54b6c0dbb"
+    },
+    {
+      "path": "C:/Users/icast/xdj-az-emu/tools/az-drive.py",
+      "sha256": "6f88798ec54785dc2ce9180e5c2839a1a8e8ec370c997bc7f48e8d1cc06e640f"
+    },
+    {
+      "path": "src/azhub/research/scripts/eject-ui-emu.py",
+      "sha256": "618ef4abb517b0c6fd33ccb11f260a676f3304e3deab9713d8a3ef4881568ab2"
+    }
+  ]
+}

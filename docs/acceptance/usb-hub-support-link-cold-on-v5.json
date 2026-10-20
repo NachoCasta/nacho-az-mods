@@ -1,0 +1,64 @@
+{
+  "scope": "Supported v5 cold On startup with offline virtual USB STOP root mapping; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "initrd_sha256": "c4dbce86323416e5015489e2bf0840b544339d22b57becaff77c3716e3681243",
+  "image_review": "docs/acceptance/usb-hub-support-link-emulator-eject-root-image.json",
+  "native_PID": 997,
+  "service_wrapper_MainPID": 514,
+  "NRestarts": 0,
+  "first_start_evidence": "Serial firmware application startup997; cached first-start loader trace; same loaded set causes no write/restart; same997 at settled collection. Service MainPID514 is the wrapper, not the native executable.",
+  "hooks": 54,
+  "mode": "Persisted native On, completion epoch1",
+  "sources": "Both nativeUSB rows and five private source rows; all five acknowledgments; seven actual physical partitions mounted",
+  "environment": "Exactly one intentional AZHUB fixture override: AZHUB_EJECT_PORT2_ROOT=/sys/bus/usb/devices/3-2. Actual resolved hub path endsusb3/3-2 and bDeviceClass09. No timing/fault/telemetry control injected.",
+  "USB_owner": "New cold enumeration selects mods USBsda1 at actual2-1; native control issdb1 at1-1. Content/hash checks identify the mods USB; previous boot mount letters are not reused as identity.",
+  "selector_control": "Native short USB STOP2 captures DOWN/UP, opens selector port2 count5, native BACK cancels. No eject requested by this control.",
+  "limits": [
+    "Cold On only; cold Off and remove-mods-USB recovery still pending",
+    "Kernel6.6 skips the physical compatibility module; no4.4 hardware recovery claim",
+    "Mapped root is virtual wiring only; exact real-AZ physical default roots unchanged in module bytes"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/boot-eject-on/launch.json",
+      "sha256": "9be39e0bd57592a73490a75c642b87200babd54e150a7a9072a8b11be14bb591",
+      "bytes": 21081
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-eject-on/first-state.txt",
+      "sha256": "67aadf535cc0f8fb0000c52c26e027597cfe32b1b303618fd4d2ff3545487282",
+      "bytes": 52033
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-eject-on/first-state.txt.ssh-ready.txt",
+      "sha256": "5efc88cba6e388df53edd8de6f2e3214812eb65de838ed7e0537b9267f4113fe",
+      "bytes": 52
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-eject-on/settled-state.txt",
+      "sha256": "4393788a7157397bd3def8230b627a4656c330bd6f68c97011556c0d6a9911d3",
+      "bytes": 56248
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-eject-on/serial-startup-snapshot.txt",
+      "sha256": "97a94709e4bccfecdd14e900438c89584dd750cd1591e69366eea8ef52386849",
+      "bytes": 113573
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-eject-root-cold-on-health.json",
+      "sha256": "4ed51391fc53d36a397c89201678a089a10a66720fed7c287e92cc28f2d84427",
+      "bytes": 110273
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-root-cold-on-source.png",
+      "sha256": "6fc2b888d000a048efaae4aa97def87a7ae4e1df389915a14912c097b3a9147b",
+      "bytes": 48430
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-eject-root-selector.png",
+      "sha256": "f30eedc1a2e4de8120744e2c9a5d01f782b6b7d262374e6c91db6bb7232ce115",
+      "bytes": 64586
+    }
+  ]
+}

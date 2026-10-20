@@ -1,0 +1,15 @@
+{
+  "scope": "Read-back verification of offline emulator fixture image; no running-guest or physical AZ edit",
+  "input_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+  "output_sha256": "c4dbce86323416e5015489e2bf0840b544339d22b57becaff77c3716e3681243",
+  "verified_entries": 9489,
+  "changed_entries": [
+    "etc/systemd/system/EP147.service.d/25-emulator-xhci.conf"
+  ],
+  "changed_fields": "Only the existing EP147 xHCI drop-in payload and newc filesize field; all other contents and metadata identical",
+  "fixture_override": "AZHUB_EJECT_PORT2_ROOT=/sys/bus/usb/devices/3-2; maps the emulated third-controller hub to USB STOP2, not a hardware default or a behavior/fault override",
+  "source_unchanged": "Supported v5 package/ELF remain38d705/5e8ecd; no mod, firmware, core/loader, renotifier, module or preload change",
+  "runtime_limit": "Not booted yet; actual root mapping, seven mounts, normal loader, ejection and cold recovery remain pending",
+  "reconstruction": "local/diagnostics/link-normal-loader/emu-xhci-eject-root-reconstruction/prepare.py",
+  "reconstruction_sha256": "4d134801010470e18f67dfceab151d5e0d59c0f46724f4da1e4fa067a4e14d93"
+}

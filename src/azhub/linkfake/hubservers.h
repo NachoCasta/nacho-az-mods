@@ -21,7 +21,7 @@ static __thread uint64_t hub_matching_message, hub_matching_server;
 static uint64_t hub_matches(uint64_t server, uint64_t message) {
     uint32_t dmst=((uint32_t (*)(uint64_t,int))0xf05680)(message,0);
     for (int i=0; i<nfakes; i++)
-        if (fakes[i].present
+        if (fakes[i].present && probe_message_allowed(message,fakes[i].player)
 #ifdef LF_SAFE_EJECT
             && !fakes[i].eject_reserved
 #endif
@@ -292,6 +292,7 @@ static void hub_mount_poll(void) {
     static int waiting=-1;
     time_t now=time(NULL);
     if (!started) started=now;
+    probe_mode_reset_sources(&ready_at,&waiting);
     if (waiting>=0 && !fakes[waiting].present) {
         waiting=-1; ready_at=now+3;
     }

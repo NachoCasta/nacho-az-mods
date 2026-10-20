@@ -1,0 +1,34 @@
+{
+  "scope": "Emulator-only fault injection; failed queued-load reconnect trial",
+  "candidate_sha256": "60b0b84847f50bf3c92cfa0555650c9ad82614f084a8af9f998c7f97b093fc66",
+  "kernel": "6.6.138-dirty",
+  "pid": 315246,
+  "probe": "--load-queue-probe with --mode-load-retention-probe",
+  "baseline": "Deck1 loaded content495 through both traced closures without delay; native completion result0",
+  "fault": {
+    "stage": "common processing closure at 0xa77390",
+    "delay_seconds": 8,
+    "request_deck": 2,
+    "media": "0x1010200000602",
+    "request_clock_ms": 15277450,
+    "fixture": "linkmemberstickA, ejectxhci.0 port1.1",
+    "qmp_remove_add_elapsed_seconds": 0.4768803999759257,
+    "physical_identity_before": {"disk": "sdb", "generation": 34343, "devnum": 33},
+    "physical_identity_after": {"disk": "sdb", "generation": 36464, "devnum": 38}
+  },
+  "observations": [
+    "Source removal, alias release, return and mount acknowledgment occurred before the delayed closure resumed.",
+    "The old request then entered allowance closure 0xa69db0 with unchanged media.",
+    "No deck2 final load admission or successful completion was recorded in the captured log.",
+    "At guest clock15333683, deck2 remained unloaded; the accompanying screenshot still displayed NOW LOADING... approximately56 seconds after request submission.",
+    "Five devices remained present; deck1 retained its previously loaded track, stopped."
+  ],
+  "result": "Failure: reconnect during a pending request leaves loading UI unresolved in the observed interval.",
+  "limits": [
+    "A bounded observation does not establish a permanent hang.",
+    "No successful stale-origin reassignment was observed; this is not proof that all other queue paths reject it.",
+    "Allowance-stage fault injection and native cancellation research remain pending.",
+    "No physical AZ testing or supported production integration."
+  ],
+  "local_evidence": "local/diagnostics/link-coexistence/queue-common*; test-queue-replug.py"
+}

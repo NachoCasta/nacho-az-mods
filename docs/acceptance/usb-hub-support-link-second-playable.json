@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-19T05:45:06.710258+00:00",
+  "environment": "Local QEMU only",
+  "binary_sha256": "0a0f041d768f8840e7b276384ac0af22280ccaaab5a2512a2a2750cee1adc3fc",
+  "pid": 418678,
+  "result": "A distinct existing playable library track is available through native browsing",
+  "native_navigation": "BROWSE > ARTIST > Aaliyah > Are You That Somebody album > Are You That Somebody track > LOAD2",
+  "request": {
+    "deck": 2,
+    "full_native_media": "0x1020200000602",
+    "content_id": 1944,
+    "physical_generation": 39008,
+    "devnum": 44,
+    "final_provenance": 1,
+    "native_result": 0
+  },
+  "playback_samples": [
+    {
+      "deck1_content": 495,
+      "deck1_seconds": 106.312,
+      "deck2_content": 1944,
+      "deck2_seconds": 0.233,
+      "deck2_playing": false
+    },
+    {
+      "deck1_content": 495,
+      "deck1_seconds": 110.1,
+      "deck2_content": 1944,
+      "deck2_seconds": 3.384,
+      "deck2_playing": true
+    }
+  ],
+  "limits": [
+    "Both tracks used the same private USB source; this is not different-source cache isolation acceptance.",
+    "Emulator playback telemetry, not captured audio or hardware acceptance.",
+    "This establishes a reusable fixture/navigation for the subsequent supported-candidate tests."
+  ],
+  "local_evidence_sha256": {
+    "second-track-album.png": "43333955b3c6ff170c2ca28af54512d5b4966422971bb1a4bd48ebdc69ef7273",
+    "second-track-artists.png": "cbce4157b5331b7bc6c1d0d200088db474f4a564c2f047cdae384389d03963ad",
+    "second-track-status.json": "344d7120ab096a24bf2e8089ac1fdd85d5283b2b5db4d4e2095743ee051b8967",
+    "second-track.log": "509b020be8c16b0a60403c465eb555d07c9fe048aa751e9dfbeef1e5ed210844"
+  }
+}

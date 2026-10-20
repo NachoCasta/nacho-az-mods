@@ -9,6 +9,7 @@ sdk_include=${AZ_SDK_INCLUDE:-../../azmod}
 test -f "$sdk_include/azmod-mod.h" || { echo 'Set AZ_SDK_INCLUDE to the pinned SDK include directory.' >&2; exit 2; }
 output=$(mktemp -d /tmp/azhub-host-tests.XXXXXX)
 trap 'rm -rf "$output"' EXIT HUP INT TERM
+TEST_CC="$compiler" AZ_SDK_INCLUDE="$sdk_include" python3 ./test-hook-registration.py
 for pass in $passes; do
     case "$pass" in
         plain) flags='-O2'; symbol='' ;;
@@ -16,7 +17,7 @@ for pass in $passes; do
         tsan) flags='-g -O1 -fsanitize=thread'; symbol='__tsan_init' ;;
         *) echo "Unknown sanitizer pass: $pass" >&2; exit 2 ;;
     esac
-    for name in source-name browser-guard network-identity eject-gesture eject-source eject-input-health eject-listener eject-detach alias-mount discovery kernel-asset mount-worker source-settings; do
+    for name in source-name browser-guard network-identity link-status usb-presence link-socket-registry link-mode-recovery link-load-origin link-udp-policy link-udp-receive link-request-tasks link-cached-status eject-gesture eject-source eject-input-health eject-listener eject-detach alias-mount discovery kernel-asset mount-worker source-settings; do
         echo "TEST $pass $name"
         # flags is an intentional list of compiler options, not shell code.
         # shellcheck disable=SC2086

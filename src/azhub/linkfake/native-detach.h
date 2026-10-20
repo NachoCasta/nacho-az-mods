@@ -94,6 +94,11 @@ static int safe_native_detach(unsigned sources,int *started,char *reason,size_t 
         struct safe_load *load=NULL;
         for (int i=0;i<16;i++) if (safe_loads[i].controller && safe_loads[i].deck==deck &&
             safe_loads[i].source==source && !safe_loads[i].loading && !safe_loads[i].failed) load=&safe_loads[i];
+        int origin_matches=0;
+        if(load) for(int i=0;i<SAFE_RECORDS;i++)
+            if(probe_load_origin_matches(load->origin_valid,&load->origin,
+                &safe_records[i].item,safe_records[i].sources,source)) origin_matches=1;
+        if(!origin_matches) load=NULL;
         uint64_t connection=safe_native_connection_locked(source);
         uint64_t fence=__atomic_load_n((uint64_t *)(owner+0x20),__ATOMIC_ACQUIRE);
         int index=(load && load->epoch) ? hub_detach_acquire(&safe_detach_pool,owner,id[0],connection,fence):-1;
@@ -109,6 +114,7 @@ static int safe_native_detach(unsigned sources,int *started,char *reason,size_t 
         }
         safe_cached_decks[deck].controller=load->controller;
         safe_cached_decks[deck].epoch=load->epoch;
+            safe_cached_decks[deck].content_id=load->content_id;
         safe_cached_decks[deck].ticket=index;
         safe_cached_decks[deck].valid=1;new_proofs|=1<<deck;
         pthread_mutex_unlock(&safe_lock);

@@ -1,0 +1,39 @@
+{
+  "scope": "Negative supported-package private browsing test; no passing functional claim",
+  "candidate_version": "0.3.0",
+  "package_sha256": "f6c43ca830bfb2a7935b08720bb211d9955aa95729c3519199f792df615433a7",
+  "elf_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+  "native_PID": 676,
+  "framework": "Normal EP147.service, enabled/approved persistent cache, no diagnostic service or process edits",
+  "kernel": "6.6.138-dirty",
+  "topology": "Native mods USB on EHCI; boot-time pci-ohci and full-speed eight-port QEMU USB hub with five protected library COW fixtures",
+  "initialized": "Exact ELF loaded normally with 53 hooks and HubMount/HubTransport",
+  "discovery": "All five backing filesystems mounted; five private sources and ten independent server objects registered",
+  "failure": "Selecting private Link member7/USB1 HUB_LIB and Local Library remained Waiting/empty. No load succeeded; decks stayed EEEE.",
+  "static_cause": "The only o_dbparse=make_hook(0xef05c8,probe_parse) statement is inside probe_install's non-LF_COMMUNITY branch. Supported community builds therefore install no parser hook after removal of the duplicate ownership-install claim.",
+  "runtime_corroboration": "Complete forced 53-hook claim list lacks 0xef05c8. No dbmsg parser activity appears despite native loopback connections and private library requests. The ownership ticket path cannot run.",
+  "separate_unresolved_observation": "Native USB2 Nacho Chips row appeared beside private hub rows; copied normal emulator renotify/device-mount scripts and topology retained for independent review. No no-duplicate acceptance claimed.",
+  "local_evidence": [
+    "local/diagnostics/link-normal-loader/functional-v2-five-state.txt",
+    "local/diagnostics/link-normal-loader/functional-v2-no-parser-state.txt",
+    "local/diagnostics/link-normal-loader/functional-v2-open-media.txt",
+    "local/diagnostics/link-normal-loader/five-fixtures.json",
+    "local/diagnostics/link-normal-loader/boot-functional-v2/launch.json",
+    "local/diagnostics/link-normal-loader/boot-functional-v2/serial.log"
+  ],
+  "local_screenshots": [
+    "functional-five-source.png",
+    "functional-A-source-selected.png",
+    "functional-A-library-retry.png",
+    "functional-private-browser-after-wait.png"
+  ],
+  "interpretation": "Earlier exact-hash normal recovery results remain valid for b646 only. Private-load, privacy, mode-transition and eject acceptance do not transfer to a corrected artifact. No physical AZ operation occurred.",
+  "local_evidence_sha256": {
+    "local/diagnostics/link-normal-loader/functional-v2-five-state.txt": "e01a50afaa0c96a6dad859b506c6e5cacb8cb83868a55d969a4a29fc32f7782f",
+    "local/diagnostics/link-normal-loader/functional-v2-no-parser-state.txt": "5e57acc18be62a8d40601285ae69fd3cb12cff698291a7b3f692b402124ea19d",
+    "local/diagnostics/link-normal-loader/functional-v2-open-media.txt": "f8c81f7272bc019bb140e958f345414c8dd246520319466ac8e258b351ec5c52",
+    "local/diagnostics/link-normal-loader/five-fixtures.json": "738acb9ff9ac0761a1404a02995ffea4ec1013559603ebb9bc76d7537a8a3644",
+    "local/diagnostics/link-normal-loader/boot-functional-v2/launch.json": "4777fae9d2663fec71b7729578feda8b7071ef0c4445dae5f17cc9ae3a1833d7",
+    "local/diagnostics/link-normal-loader/boot-functional-v2/serial.log": "a41bfcb8dacfe72fdcdc50eec0454742b3cf61d5ecc30a416459cde1a9629927"
+  }
+}

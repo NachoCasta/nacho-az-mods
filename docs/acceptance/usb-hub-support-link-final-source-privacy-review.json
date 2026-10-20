@@ -1,0 +1,54 @@
+{
+  "recorded_at_utc": "2026-10-19T05:51:00.7485053Z",
+  "scope": "Independent review of frozen supported-source privacy integration; no runtime operations or test reruns",
+  "export_path": "local/integration/link-coexistence-v2/package-export/src/azhub/linkfake",
+  "chosen_elf_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+  "chosen_package_sha256": "f6c43ca830bfb2a7935b08720bb211d9955aa95729c3519199f792df615433a7",
+  "findings": [
+    "The exported cached-status classifier implementation is exactly equal to the owner-zero-tested research helper after header name/comment differences.",
+    "The exported link-status.h is byte-identical to the tested helper containing the eleven independent TrackLocation row masks.",
+    "The active sendto path copies only external IPv4, non-127/8, destination-port 50002, 1152-byte status candidates before applying auxiliary, committed/ticket and configured-source masks. Loopback clients retain complete local identity.",
+    "Auxiliary row masking runs before either current-source early return; an auxiliary-only change is also transmitted from the modified copy, preserving a native current-source tuple.",
+    "PROBE_COMMITTED_STATUS_ORIGIN is enabled. Committed physical load-origin classification does not require the native safe-eject owner; detach-ticket fallback still does.",
+    "Matched successful load completion retires the detach proof and sets committed_valid from source>=0 and origin_valid. Native/external replacement source<0 clears that classification even when content ID is unchanged.",
+    "The completion hook correlates native record pointer and admission epoch before and after native publication. Pending or failed replacements retain the committed origin; mode2 unload preserves it; exact real unload retires it.",
+    "New queue marker delays, forced asynchronous execution and injected Instant Doubles API test callers are absent from exported runtime C/header code."
+  ],
+  "pre_existing_control": {
+    "file": "safe-eject.h",
+    "line": 768,
+    "environment_variable": "AZHUB_EJECT_TEST_PAUSE_MS",
+    "behavior": "Opt-in pause after native detach and before withdrawal; only nonzero values up to 10000 milliseconds take effect.",
+    "scope": "Predates coexistence and remains unchanged; ordinary operation does not set it.",
+    "final_runtime_environment_confirmation": "Independently reviewed frozen owner-collected /proc environment output: no AZHUB_ variables, including AZHUB_EJECT_TEST_PAUSE_MS, in native PID 22891 or inherited child PID 23293."
+  },
+  "limits": [
+    "This is source integration and activation-environment assurance; chosen final-binary packet privacy and native same-content replacement reporting remain pending.",
+    "The transmit selection conclusion applies to the installed exact-firmware sendto route; it is not a claim about arbitrary socket APIs or raw syscalls.",
+    "No claim that every historical debug control has been removed.",
+    "Known-field privacy evidence does not establish the semantics of every extended status byte."
+  ],
+  "source_sha256": {
+    "link-status.h": "04ca9f2bb475d265ae23a340ed4054848ec540881b8a978994f7792fbc641f9b",
+    "link-cached-status.h": "58b4091c41eabdc1d006ffb455cbcf5bf5534d8d8d3def5f8b5f9bdbbf917ec8",
+    "linkfake.c": "64738a71e7aa4e53f3cd5f623cd58ce2cda0437e83d25bf04b1a7b2ccdb540b3",
+    "safe-eject.h": "cb5addf6dd944165d8bfdb5d6353eacec2f82303d51238871bda2be621ced359",
+    "native-detach.h": "621e317f7c7d6f8ca0b3962256c24f34ead3408b58d2638b70cb56a5f92705ce",
+    "link-request-origin.h": "8f7b1e6f147292a7f5134ebc713d29b69e7e95bc96c9dcd167a146aae92efc65",
+    "community.c": "784e0cf93f1af5fc65e5c232efff26268f0cd00cb328e6ce0fe282d4b7f0c497"
+  },
+  "activation_environment_review": {
+    "independently_reviewed_at_utc": "2026-10-19T05:59:39.2557796Z",
+    "evidence_path": "local/diagnostics/link-normal-loader/setup-activated-state.txt",
+    "evidence_sha256": "db0fe9f09b5a30486a618c56505c8abe5c42632a72573acd42f5417b02bcd467",
+    "activation_record": "usb-hub-support-link-normal-activation.json",
+    "elf_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+    "native_pid": 22891,
+    "inherited_child_pid": 23293,
+    "systemd_service_main_pid": 22765,
+    "observed_framework_result": "loaded 0.3.0 on ep147-9e9454e357389ece (53 hooks)",
+    "observed_environment": "No AZHUB_ variables in either process",
+    "observed_decks": "EEEE",
+    "scope": "Local review of frozen runtime-owner evidence only; no emulator access, cold-boot recovery, hub playback, packet privacy or native replacement acceptance by this reviewer."
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-10-19T03:24:37.784874+00:00",
+  "scope": "Bounded metadata-only runtime correlation of native Link UDP read APIs",
+  "binary_sha256": "3e4f4095dac5b67691680ea7466c104c998ba8045dd8a556b6041e2f1b7f32df",
+  "pid": 240378,
+  "real_az_access": false,
+  "observed_patterns": [
+    {
+      "operation": "recvfrom",
+      "port": 50000,
+      "flags": "0",
+      "buffer_capacity": 4096,
+      "return_address": "0x13fbfdc"
+    },
+    {
+      "operation": "recvfrom",
+      "port": 50002,
+      "flags": "0",
+      "buffer_capacity": 4096,
+      "return_address": "0x13fbfdc"
+    },
+    {
+      "operation": "recvfrom",
+      "port": 50001,
+      "flags": "0",
+      "buffer_capacity": 4096,
+      "return_address": "0x13fbfdc"
+    }
+  ],
+  "capacity_exhausted": false,
+  "scenarios": [
+    "Off startup, On/Off/On UI sequence",
+    "External master peer while selecting track; this session ended before load completed",
+    "Second external status peer3 for25 seconds with hub content495 loaded and playing"
+  ],
+  "loaded_peer_deck1_status_count": 165,
+  "playing": {
+    "pid": 240378,
+    "clock_ms": 11876614,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 28099,
+        "devnum": 20
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 27753,
+        "devnum": 18
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 27926,
+        "devnum": 19
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 41.915,
+        "content_id": 495,
+        "title": "Algo más"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "conclusions": [
+    "In these scenarios, all observed native IPv4 datagram reads on Link ports50000..50002 used recvfrom flags0 capacity4096 from0x13fbfdc",
+    "No read/recv calls observed on those ports during these runs; helper MSG_PEEK usage cannot yet be assigned to Link sockets",
+    "The observed native receive paths pass through the existing UDP ingress wrapper"
+  ],
+  "limits": [
+    "Observation of exercised scenarios, not proof about all indirect/library/raw-syscall paths",
+    "Read/recv audit adds getsockname/getsockopt overhead; diagnostic option remains opt-in",
+    "No audio-sync, physical AZ or real-CDJ acceptance",
+    "No generic rejected-MSG_PEEK or dynamic IP_PKTINFO option virtualization implemented",
+    "Two active sources remained after earlier partial eject; the active source formerly member8 was reassigned member7 slot7 after application restart",
+    "No full outgoing status privacy audit on this binary"
+  ],
+  "local_evidence_sha256": {
+    "udp-read-audit.json": "34f9cba722c95694ab5d9e72359ece48175519bf764cad5e7f905cd8917a5835",
+    "udp-read-audit.log": "ef6365e8dda30fbb20dd04a1132515912233994cd232fda9593cdc907cc909fe",
+    "udp-read-audit-setting.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "udp-read-audit-sources.png": "5c8c9f5aeaf682c4923dc05e71055d67ae88a0d8517b7a39939018e01020cbdd",
+    "udp-read-audit-track-ready.png": "b5fc76ba92689524ff726338b6af5d5e45b4046485ed85f2488ec093c61246a2",
+    "udp-read-audit-loaded.json": "a737495e5f5090a754f3b6889db3ff05670f80aeecf7f37fe12d6b851e1cb398",
+    "udp-read-audit-peer-playing.json": "a9eccea2e74cbdccafaa536bc53982dc9fb0526ae87ec50cf35c2fd9effff257",
+    "udp-read-audit-final.log": "19bdfa36b40132140ae8ee4ba6cfa25479b3909e4a2a076327dfcd4c29d1d0fa",
+    "udp-read-audit-peer.jsonl": "7c582d227884ee505de4b1b23978483b7eea183d48843c5633e0f9703d6f49ff",
+    "udp-read-audit-loaded-peer.jsonl": "210bbd99eee912fbf5dab60b108c5a6cbefc270e0cff14731dc53ef796cf07b6",
+    "udp-read-audit-loaded-peer.stderr": "ce904424945dc093f0878273fe432be598d653329ca20e85217f0e7231bc73b8"
+  }
+}

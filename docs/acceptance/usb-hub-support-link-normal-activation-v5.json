@@ -1,0 +1,146 @@
+{
+  "scope": "Exact supported v5 normal-framework activation and empty-deck On/Off/On source recovery; not full final acceptance",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 859956,
+  "intermediate_unapproved_PID": 856087,
+  "hooks": 54,
+  "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3",
+  "activation": "Hash-verified actual mods USB only copy, supported apply IPC, native UI Allow/Reload; framework-managed persistent internal staging/approval, no manual internal edits. Emulator only.",
+  "mode_epochs": [
+    {
+      "mode": "On",
+      "epoch": 1,
+      "result": "Normal application start under persisted On; five private source acknowledgments and rows plus nativeUSB1/2"
+    },
+    {
+      "mode": "Off",
+      "epoch": 2,
+      "result": "Native confirmed mode change, no application restart; five private sources recovered"
+    },
+    {
+      "mode": "On",
+      "epoch": 3,
+      "result": "Native confirmed return, no application restart; five private sources recovered; first native row plus7 encoder steps reaches finalMODMENU; bottom screenshot shows five private rows without duplicates"
+    }
+  ],
+  "health": "Seven actual mounted partitions at native1-1/2-1 and nested3-2.1..5 remain healthy; no controller faults; EEEE throughout",
+  "test_control_correction": "First attempted return-to-On reopened Utility on default Eject/Load Lock row and changed Unlock to Lock. Misnamed on-return-confirm.png captures that mistake, not a Link modal. Native UI restored Unlock and explicit Link row/native confirmation completed actual epoch3. No second transition claimed before epoch3.",
+  "limitations": [
+    "No full controller cold boot in this record; application restart only",
+    "Empty-deck transitions only; loaded transition, exact v5 peer/tempo/privacy/eject/final recovery still pending",
+    "Five emulator sources, not eight-source or real hardware acceptance"
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/package-38d70598ba81/usb-copy.json",
+      "sha256": "0deb4351973f6d5f8909b7a83fc4f1fb0deefee4104469964399bfa3011a103d",
+      "bytes": 1151
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-before-v5-supported-health.json",
+      "sha256": "1cf52dc90904b6e29048bb8d181f614878cd3100e1b620d61e50fb0300ccd8e0",
+      "bytes": 105324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-allow-page.png",
+      "sha256": "d47f32c72dd1d261d1e597a86fdf39ce0b4d81f614597682d8d85f0ada4f7391",
+      "bytes": 41724
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-allowed.png",
+      "sha256": "74f701a5041d73695d16d6f78815404a289b0717a1f2dedafefa78369f58c8f8",
+      "bytes": 45171
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-accepted-state.txt",
+      "sha256": "2352afed0098685936ed929a296a9ba36732233a0b162ef4a963fe4c29cc3ec6",
+      "bytes": 417454
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-supported-startup-health.json",
+      "sha256": "1ce2e456fd229aaae17d29f2bfcaca6e0bf086d5b4dc2f45805ae951719673e7",
+      "bytes": 106945
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-startup-settled.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-startup-settled-state.txt",
+      "sha256": "cde8a3c885b32afa98025cfad14229c2857edd4fdb5ba203328e13898a8a31a7",
+      "bytes": 424587
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-setting.png",
+      "sha256": "a5bc0f32315be4c0f92d8d2c2d2bcf35b0e0113d4ac6c4103f315813bfdb9775",
+      "bytes": 69673
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-off-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-off-transition-state.txt",
+      "sha256": "6e1fdfa5b942d9b65772744b62e98c40b7810d598edc9e1a8da91ddd81bc1393",
+      "bytes": 427931
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-off-recovered-source.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-off-recovered-state.txt",
+      "sha256": "470ddc75a1bad47b303bcff9074fc5f2acc443cfa57e52cea6fbd873e48255a4",
+      "bytes": 436324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-confirm.png",
+      "sha256": "87371f14a3a42acde6a94ac1f133bfe4a33d3d1a58388bc5be110db4dd0edabb",
+      "bytes": 69674
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-load-lock-restored.png",
+      "sha256": "8ff0c78a0606bf6397a0468e00f3b6fc7f5f5e4707d9cf4f37c81e6e6815c293",
+      "bytes": 70073
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-off-before-return.png",
+      "sha256": "c36f86b3e81b4e3f2502d679ea8b90ce97a513f49713079d4750abcb5dfd5239",
+      "bytes": 69728
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-confirm-actual.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-transition-state.txt",
+      "sha256": "4e527a2562c2dc9e9af153e78ff3ee9cc5630118d95e0567d4e66bfa359a84f1",
+      "bytes": 442357
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-recovered-source.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-recovered-state.txt",
+      "sha256": "24d47ce63f6ef702f5f6c714c780f50be3c7087dcf62864cc6473cc830f49219",
+      "bytes": 448049
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-supported-on-return-list-end.png",
+      "sha256": "373589dbee99100849e7cfefb8744b54bdeb4f48a4ecd61b0f3476de998225d0",
+      "bytes": 70149
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-roundtrip-settled-health.json",
+      "sha256": "6b0bd35bd3b517dcab683ab33b27fb4d5e1f6856e92c31c0ef8df37210ba221a",
+      "bytes": 106945
+    }
+  ]
+}

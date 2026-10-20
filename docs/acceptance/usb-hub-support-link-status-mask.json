@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-10-19T01:46:24.570920+00:00",
+  "scope": "Partial outgoing-status identity mask, isolated emulator only",
+  "binary_sha256": "fc990347774f5f4de1724d6fef50bbd8913bb9e3f68bd342fde729da52483576",
+  "pid": 117102,
+  "wire_references": [
+    {
+      "player": 0,
+      "slot": 0,
+      "track_type": 0,
+      "content_id": 0,
+      "packets": 546
+    },
+    {
+      "player": 1,
+      "slot": 3,
+      "track_type": 1,
+      "content_id": 495,
+      "packets": 137
+    }
+  ],
+  "synced_effective_bpm": {
+    "125.99995": 198
+  },
+  "peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 3890487575663,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "eject_completion": {
+    "pid": 117102,
+    "clock_ms": 5970206,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 2,
+        "generation": 23011,
+        "devnum": 8
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 22665,
+        "devnum": 6
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 22838,
+        "devnum": 7
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 52.809,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "limits": [
+    "Private 7/8 reference suppressed while mounted, but cached detach became native player1/USB/content495 and was not masked",
+    "Full privacy acceptance FAILED; exact cached-load provenance must also drive status filtering",
+    "Ejection initiated with peer active; final successful state captured after peer ended, not proof of overlap at completion",
+    "No full extended-status audit, native baseline or audio phase acceptance"
+  ],
+  "local_evidence_sha256": {
+    "status-mask-peer.jsonl": "9f9f840e2366924bf4d207177d9e4732312eefdda5926e50bed9bf7038c744b6",
+    "status-mask-wire.jsonl": "549eb1dfe9eec465272fd9a20fa15fa834b46f71db6f0d59deb08fb97d3c77bf",
+    "status-mask-final.log": "481b8ddf65ad96c3eccce4bbee4d5a8328b3426ccf9bc19c62234df9d055b29e",
+    "status-mask-ejected-final.json": "3d22b5fd46143daa2608c10d53826aef7f611259c21061605dbc84570ad4c830"
+  }
+}

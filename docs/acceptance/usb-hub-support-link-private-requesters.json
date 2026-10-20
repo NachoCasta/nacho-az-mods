@@ -1,0 +1,239 @@
+{
+  "timestamp_utc": "2026-10-19T02:14:45.355204+00:00",
+  "scope": "Separate private requesters, two loaded decks and external master, isolated emulator only",
+  "binary_sha256": "27f65dc5a216cc8c19a3c527c3d58427bae138536eba097b95f06e858eb57dbf",
+  "pid": 153417,
+  "member_to_requester": {
+    "7": 5,
+    "8": 6
+  },
+  "preserved_socket_endpoints_and_inodes": [
+    [
+      "0100007F:831F",
+      "0100007F:94D8",
+      "01",
+      "692429"
+    ],
+    [
+      "0100007F:831F",
+      "0100007F:D558",
+      "01",
+      "691499"
+    ],
+    [
+      "0100007F:94D8",
+      "0100007F:831F",
+      "01",
+      "692421"
+    ],
+    [
+      "0100007F:D558",
+      "0100007F:831F",
+      "01",
+      "692268"
+    ]
+  ],
+  "loaded_sources": {
+    "deck1": {
+      "source": 0,
+      "location": "0x1010200000602:0x1ef"
+    },
+    "deck2": {
+      "source": 2,
+      "location": "0x1010200000702:0x1ef"
+    }
+  },
+  "collision_rejections": [
+    {
+      "target": "isolated-emulator",
+      "port": 33567,
+      "requester": 5,
+      "private_slot": 224,
+      "greeting": 1,
+      "setup": {
+        "transaction": 4294967294,
+        "type": 0,
+        "arguments": [
+          1,
+          20
+        ]
+      },
+      "closed_after_setup": true,
+      "media_reply": null
+    },
+    {
+      "target": "isolated-emulator",
+      "port": 33567,
+      "requester": 6,
+      "private_slot": 224,
+      "greeting": 1,
+      "setup": {
+        "transaction": 4294967294,
+        "type": 0,
+        "arguments": [
+          1,
+          20
+        ]
+      },
+      "closed_after_setup": true,
+      "media_reply": null
+    }
+  ],
+  "native_response": {
+    "target": "isolated-emulator",
+    "port": 33567,
+    "requester": 3,
+    "private_slot": 3,
+    "greeting": 1,
+    "setup": {
+      "transaction": 4294967294,
+      "type": 0,
+      "arguments": [
+        1,
+        20
+      ]
+    },
+    "closed_after_setup": false,
+    "media_reply": {
+      "transaction": 2,
+      "type": 16384,
+      "arguments": [
+        12295,
+        0
+      ]
+    }
+  },
+  "private_denial": {
+    "target": "isolated-emulator",
+    "port": 33567,
+    "requester": 3,
+    "private_slot": 224,
+    "greeting": 1,
+    "setup": {
+      "transaction": 4294967294,
+      "type": 0,
+      "arguments": [
+        1,
+        20
+      ]
+    },
+    "closed_after_setup": false,
+    "media_reply": {
+      "transaction": 2,
+      "type": 16387,
+      "arguments": [
+        12295
+      ]
+    }
+  },
+  "synced_effective_bpm": {
+    "1": {
+      "125.99995": 322
+    },
+    "2": {
+      "125.99995": 331
+    }
+  },
+  "ejected_while_peer_active": {
+    "state": {
+      "pid": 153417,
+      "clock_ms": 7690559,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 2,
+          "generation": 25806,
+          "devnum": 14
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 2,
+          "generation": 25209,
+          "devnum": 12
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 25382,
+          "devnum": 13
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 30.074,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 28.621,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "peer_stopped_at_observation": false,
+    "last_peer_event_at_observation": {
+      "event": "status",
+      "monotonic_ns": 5641258514198,
+      "player": 1,
+      "bpm100": 12021,
+      "master": false,
+      "synced": true,
+      "effective_bpm": 125.99995327949524,
+      "pitch": 1099081,
+      "packet_bytes": 512
+    }
+  },
+  "peer_end": {
+    "event": "stopping",
+    "monotonic_ns": 5654017128765,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "limits": [
+    "Fixture databases/audio identical for the two loaded sources; distinct native media IDs and source ledger observed, not different-content isolation",
+    "No audio capture/phase, loaded master handoff or physical CDJ acceptance",
+    "This binary has no full raw status audit; cached privacy acceptance belongs to its separately recorded earlier binary",
+    "No five-source, four-local-deck Link-off or mode-transition regression on this binary",
+    "UDP provenance, diagnostic array races, source-generation and cancellation gates remain"
+  ],
+  "local_evidence_sha256": {
+    "requesters-before.tcp": "56b50d0b455060fc75728ee8d70a349de602161733759d81583f3409f5f4f175",
+    "requesters-after.tcp": "b118a5a4d0011a5b0106a87abcd8e3401b512cfcd24e2e0f2237c2e8f285ec7c",
+    "requesters-loaded.tcp": "5a800652363ce472b668e41abb1c11f83915b9ad96dfada69369019c34bd486e",
+    "requesters-5.json": "10f9e12a830991e249cb7ad8af924b0111211a97850310057f105bb306eb4e43",
+    "requesters-6.json": "5262040dadb75b52df1859e05144a251305372ce32c4c00e5091c70a5d233614",
+    "requesters-native.json": "4739813ee0c2c634160dfce4373b27730ee9a448a35d660017ec5c2dbd7b76f8",
+    "requesters-private.json": "d283b110c9045cd6a949b321d982b2fb4bfe4353a4d5e144af41bd6a031aec1d",
+    "requesters-two-loaded.json": "1463d1c7350a0979b5af11b71ddea39a1b4b44a7a8a587a17b8cf1fa0c387dbd",
+    "requesters-playing.json": "ce9d0f3c42b0f8dec582a18b9063e6a285091e3c2bf3bbfd1827e38635de358d",
+    "requesters-ejected.json": "fd2c8aacddf6dcee811a618f64581fe1b3c2b3d87c6fdfa14dae4104991b0d8a",
+    "requesters-ejected.log": "38d0a6027532856755bb40b15c6fe324d000987e66eb50d85096f4e45d228cf4",
+    "requesters-peer.jsonl": "1c17540ae5be5bacac05255c2b0608c46584d59ba6653a800be485f1a43bb440"
+  }
+}

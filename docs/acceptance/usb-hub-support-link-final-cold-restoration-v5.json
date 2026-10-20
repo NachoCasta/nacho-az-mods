@@ -1,0 +1,58 @@
+{
+  "scope": "Exact supported v5 positive cold restoration after native metadata baseline; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "native_PID": 860,
+  "hooks": 54,
+  "NRestarts": 0,
+  "mode": "Native persistedOn, completionepoch1; EEEE",
+  "startup": "First native860 initializes54hooks and remains settled860; normal loader sees same loaded set and does not restart. No manual internal file/settings/approval edits.",
+  "fixture": "Fresh children of preserved supported positive lifecycleCOWs, after clean positive shutdown3426.821414s. Same c4dbce image/kernel and virtualSTOP2root override; modsUSBpresent.",
+  "sources": "Both native and five private rows, all seven physical partitions mounted, controller errors absent. No research delay variant active.",
+  "limits": [
+    "Restoration/startup result only; earlier functional acceptance retains its own exact process/boot scope",
+    "Final requirement review and physical4.4 recovery remain separate; no actual AZ/CDJ/audio or release claim"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/boot-final-ready/launch.json",
+      "sha256": "2a28daea4a0fedce076c3f3d98205c5075230f8b29da2f35b13368e239e49c9a",
+      "bytes": 24010
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-final-ready/first-state.txt",
+      "sha256": "c7ef149699093a86a0fd6579cc9f3f604053474d4f932e6e87977c863fc507f5",
+      "bytes": 5500
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-final-ready/first-state.txt.ssh-ready.txt",
+      "sha256": "8ce50afc93030e122c04426d5c6f3d68f9d588106a699a42d280824b946e9d6a",
+      "bytes": 50
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-final-ready/settled-state.txt",
+      "sha256": "762e9aaf2e0e7b0cef91dda051a61f736be075832a1be9c661ed89e585039ff0",
+      "bytes": 51470
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-final-ready/serial-startup-snapshot.txt",
+      "sha256": "6a22b9925214ab433166422e4a6b6f0a5d56fc88e09f62a566adc70cd223aaa1",
+      "bytes": 102388
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/final-ready-fixtures/fixture.json",
+      "sha256": "ca2cf2d46173679d2f08e390195082648820308b836f187a698b02e11ad198f5",
+      "bytes": 2656
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-final-ready-source.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-final-ready-seven.json",
+      "sha256": "691b3afcc470d5e7244f64d3c02bcd80f98ba334d1044b1ea0176dac55832a1b",
+      "bytes": 124077
+    }
+  ]
+}

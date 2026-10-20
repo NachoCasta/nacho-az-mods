@@ -1,0 +1,40 @@
+{
+  "status": "Preliminary source/build review; not integrated runtime acceptance",
+  "date": "2026-10-18",
+  "scope": "Ignored isolated integration at local/integration/link-coexistence",
+  "artifact": {
+    "sha256": "661a9af8e66668789d1c0d478749e65211be7fbc5bd522837a6b782888192cf4",
+    "bytes": 133416,
+    "changed_source_count": 26,
+    "source_hashes_match_snapshot": true,
+    "patch_applies_to_current_worktree": true
+  },
+  "reviewed_source_properties": [
+    "Stable usb-hub-support ID and exact ep147-9e9454e357389ece descriptor retained",
+    "Supported kernel initialization retains 4.4.194 check and emulator bypass",
+    "Matching-USB-assets gate precedes mount recovery, safe-eject preparation, kernel loading, hook claims and workers",
+    "LF_COMMUNITY suppresses the standalone linkfake constructor",
+    "Parser ownership wrapper composes with h_dbparse and its native trampoline through one 0xef05c8 claim",
+    "Cached-source content ID snapshot is included"
+  ],
+  "reviewed_test_logs": {
+    "host-test.log": "Portable production component suite passed with plain GCC",
+    "integration-test.log": "Six focused components passed plain GCC and ASan/UBSan; includes 20000 modeled mode races and 1032 UDP receive comparisons per pass"
+  },
+  "build_report": {
+    "builder": "candidate_audit agent",
+    "sdk_image_id": "0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "sdk_docker_directory_hash": "c55d0db83deffc271b515ab31f98ec32811ab2586f4b66f24a817c28402623b4",
+    "required_glibc_versions": ["2.17"],
+    "network": "Disabled; existing image used without pulling"
+  },
+  "limitations": [
+    "Queue cancellation is excluded from this snapshot",
+    "Manifest is an unchanged copy of stable 0.2.1 and is not candidate metadata",
+    "No native emulator run of this integrated ELF",
+    "No normal-loader cold-boot recovery result",
+    "No complete external status-payload privacy acceptance",
+    "No physical AZ activation or hardware acceptance",
+    "Earlier host-GCC diagnostic ELF is ABI-incompatible and must not be deployed"
+  ]
+}

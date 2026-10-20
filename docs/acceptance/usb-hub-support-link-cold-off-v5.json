@@ -1,0 +1,68 @@
+{
+  "scope": "Exact supported v5 cold Off startup; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "boot_id": "392e15bd-5885-4886-962b-b72fbb77acc0",
+  "native_PID": 851,
+  "service_wrapper_MainPID": 507,
+  "NRestarts": 0,
+  "hooks": 54,
+  "native_mode": 0,
+  "epoch": 1,
+  "startup": "First serial native851 remains settled851; cached first-start loaded set unchanged, no write/restart. Actual native mode completionOff, not inferred from internal Link cache.",
+  "fixture": "Children of cleanly powered-off prior eject fixture after native UI changed On-to-Off and unloaded both cached tracks; no internal settings writes. All parents hashed before/after branch creation.",
+  "sources": "Seven actual partitions mounted, two direct native/five nested; five private aliases and five visible private rows plus two native rows. Logical eject reservations reset across complete poweroff as expected.",
+  "controls": "First health helper called without expected7 argument used historical6 default and correctly failed count-only: all7 mounted/controllers healthy. Preserved negative record; explicit7 rerun passes. Early source screenshots were transient navigator screens, not missing-source evidence.",
+  "limits": [
+    "Cold Off startup only; four-deck loaded playback established separately in loaded-modes-v5",
+    "Kernel6.6 and offline virtual STOP2 root override; not physical4.4 recovery",
+    "USB-absent negative on this candidate still pending"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/boot-cold-off/launch.json",
+      "sha256": "b01a8c7172121a6f56b4ae8ba70cffac6a168e389d3f56b4d7a7d2453c2f3086",
+      "bytes": 23915
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-cold-off/first-state.txt",
+      "sha256": "3897738552526d0924db607ecf82f2fd387978ee3f959608b60797cfdd3a2dea",
+      "bytes": 6155
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-cold-off/first-state.txt.ssh-ready.txt",
+      "sha256": "6a0d6220bb4eef9c467a6bfb59927fbfc5ffa60e689601dd758d1865cbf0ae90",
+      "bytes": 50
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-cold-off/settled-state.txt",
+      "sha256": "89b054bface181a7d2d3863edc9c26a596fce3918c3edc956c2777d622fff20b",
+      "bytes": 46972
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-cold-off/serial-startup-snapshot.txt",
+      "sha256": "e6794d98cf68c2cd4c97b8c264bac59f3ef80915d3f96c919cdf0b10d390501d",
+      "bytes": 106743
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/cold-off-fixtures/fixture.json",
+      "sha256": "a80270b0e13e6ae4c026164d2987c3aab39ec578635e21a6ae55c10e6b9b421e",
+      "bytes": 2316
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-cold-off-seven-health.json",
+      "sha256": "ff163baf143ec9c74cc7300b270f291285874fc5006d56344ed272ade23dc40d",
+      "bytes": 123896
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-cold-off-source-ready.png",
+      "sha256": "6fc2b888d000a048efaae4aa97def87a7ae4e1df389915a14912c097b3a9147b",
+      "bytes": 48430
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-cold-off-health.json",
+      "sha256": "93a5b17300ff2c08034854a79b0d0352c9be9a1636fbddb255e5c8b37d14cd87",
+      "bytes": 123897
+    }
+  ]
+}

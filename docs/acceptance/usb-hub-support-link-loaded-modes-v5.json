@@ -1,0 +1,224 @@
+{
+  "scope": "Supported v5 five-source loading, four/two local decks and loaded On/Off/On recovery; emulator UI/protocol only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 859956,
+  "hooks": 54,
+  "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3",
+  "initrd_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+  "source_admissions": [
+    {
+      "source": 0,
+      "controller": "0xfffeb1248000",
+      "deck": 1
+    },
+    {
+      "source": 3,
+      "controller": "0xfffeb1248e00",
+      "deck": 2
+    },
+    {
+      "source": 4,
+      "controller": "0xfffeb1249c00",
+      "deck": 3
+    },
+    {
+      "source": 2,
+      "controller": "0xfffeb124aa00",
+      "deck": 4
+    },
+    {
+      "source": 1,
+      "controller": "0xfffeb1248e00",
+      "deck": 2
+    }
+  ],
+  "source_servers": [
+    {
+      "player": 7,
+      "music": "0xffff6c43b400",
+      "info": "0xffff6c4fa000"
+    },
+    {
+      "player": 7,
+      "music": "0xffff6c43b600",
+      "info": "0xffff6c4fa280"
+    },
+    {
+      "player": 8,
+      "music": "0xffff6c43b800",
+      "info": "0xffff6c4fa500"
+    },
+    {
+      "player": 8,
+      "music": "0xffff6c43ba00",
+      "info": "0xffff6c4fa780"
+    },
+    {
+      "player": 7,
+      "music": "0xffff6c43bc00",
+      "info": "0xffff6c4faa00"
+    }
+  ],
+  "five_source_result": "All five native private-source admissions succeed and complete result0; no borrowed native library server is used. Five unique music and info object addresses corroborate owned source construction. SQL/tag cache separation is also covered by source/host checks, not a complete runtime cache-content audit.",
+  "loaded_modes": [
+    {
+      "epoch": 3,
+      "mode": "On",
+      "decks": "LLEE",
+      "observation": "Private7/3 Algo m\u00e1s on1 and private8/7 Are You That Somebody on2 show advancing UI before transition"
+    },
+    {
+      "epoch": 4,
+      "mode": "Off",
+      "decks": "LLEE thenLLLL",
+      "observation": "Same1/2 titles/clocks survive; all five rows return. Additional7/8->3,8/3->4,7/7->2 load successfully. All four clocks/waveforms advance in paired four-deck screenshots."
+    },
+    {
+      "epoch": 5,
+      "mode": "On",
+      "decks": "LLEE",
+      "observation": "Native confirmation disables3/4 after cueing;1/2 retain titles/advancing playback; all five private rows and both native USB rows restored."
+    }
+  ],
+  "four_deck_remaining_pairs": {
+    "first": [
+      "02:48",
+      "03:53",
+      "03:57",
+      "04:00"
+    ],
+    "second": [
+      "02:16",
+      "03:21",
+      "03:26",
+      "03:28"
+    ]
+  },
+  "UI_rough_edge": "Native yellow source-warning triangles appear on tracks carried through a mode reset, even after their source rows return. Clock/waveform advancement continues. This record does not claim warning-free transitions or compare this indicator with a native external-player baseline.",
+  "health": "Seven physical backings/mounts healthy through both directions; no controller faults, same PID and boot.",
+  "log_limit": "Native cumulative mod log rotated before final capture; earlier frozen admission/server record preserves initialization and all five loads. Final capture is not treated as a complete process log.",
+  "remaining": [
+    "Exact v5 peer/privacy/eject/Instant-Doubles/stale-replug controls",
+    "Cold On/Off and remove-mods-USB recovery on final fixture",
+    "Loaded ejection requires mapping the emulated xHCI hub to existing USB STOP fixture override; default physical roots point to native EHCI storage in this topology",
+    "No captured audio, phase synchronization or real-CDJ/hardware acceptance"
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-on-A495-selected.png",
+      "sha256": "95c9dde75c8fa8822a9af8e662dbcb71583f13723043eb56f02da0db4e058cb9",
+      "bytes": 294389
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-on-A495-loaded.png",
+      "sha256": "6db6aa751641605d764b252693f60d1c2c8aace0ceafa51c039c0f8807f71bc9",
+      "bytes": 49136
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-on-C1944-selected.png",
+      "sha256": "d702b12f720c8e092a6c729cb362129a9f59ce1017ae57109f3575249790dcd0",
+      "bytes": 92519
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-on-two-loaded-playing.png",
+      "sha256": "13efe69d5982474ad94a3408b8438f75c5297da679ed0c0d6c159d8f9f483e50",
+      "bytes": 158816
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-on-two-loaded-state.txt",
+      "sha256": "f4c3456148786f633a3e2b557e281082ae87b21490e8ab10858df077664fa3f2",
+      "bytes": 488011
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-off-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-off-waveform-initial.png",
+      "sha256": "311f8731bdcb453f4d82d12ad329703e5a04b8c4cb3d969b67f6d5312041d674",
+      "bytes": 158439
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-off-waveform-settled.png",
+      "sha256": "8ef06ffa7dc681e97a0435bad766c43e2f3de13b0ab5584d985df594a4154d1f",
+      "bytes": 161011
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-off-source-settled.png",
+      "sha256": "9a5a41da6c6001f6574ff74197312ffa5ff5c87d568ef376ca9a3cfa4b4521cf",
+      "bytes": 100776
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-off-settled-state.txt",
+      "sha256": "3c8f5eecebc8c45e5fb03e21a2047edb5bb55e809494c86ed4fa3e765862a560",
+      "bytes": 505278
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-E1944-selected.png",
+      "sha256": "4790c7768e9716ebbff4b7f0e196082dd3afabcdb59d3f8c8d0672f3090da0e6",
+      "bytes": 122722
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-D1944-selected.png",
+      "sha256": "648d6c2e28e787994e9c61d1ca1dbb6eee76f90e088bba1d6ec451bed76085ad",
+      "bytes": 121888
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-B1944-selected.png",
+      "sha256": "05adae3aac2afd32edde6186ce4854d05050d8be7f45cd344c8a512b5f4da8bf",
+      "bytes": 124324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-four-playing-settled-first.png",
+      "sha256": "b653577940d8a682749d9b05786156d00fab4cd34902176263437c2492ef9565",
+      "bytes": 156850
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-four-playing-settled-second.png",
+      "sha256": "9fbd9318775d9184c07941afb6db5bbd0effeba0c707cf93bc7324a4a12a610a",
+      "bytes": 154992
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-off-five-source-four-loaded-state.txt",
+      "sha256": "21c4b06ae93150e6301d8913a80658eaa4c61ff2423fe04a4e50eeff5106cb8b",
+      "bytes": 531493
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-off-four-loaded-health.json",
+      "sha256": "02c608aadd6467e59ea6882158c14ea89a75e312ac4c296e28836e51d58da6c1",
+      "bytes": 106945
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-on-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-on-waveform-initial.png",
+      "sha256": "9574d347ee1f15750a3706c31d464f2de9e057769b3dfc0d60efec51a762fffa",
+      "bytes": 109631
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-on-waveform-settled.png",
+      "sha256": "c28edec0a3e40d494a4fdd4c65f242379268ccccef675cbcbfd2314c14ec4921",
+      "bytes": 107249
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-on-source-settled.png",
+      "sha256": "15ca40c4dba5fa0e17fcb12a872f75f0be8c59d42b4c841f9d41e0da9acfca0e",
+      "bytes": 70162
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-loaded-on-settled-state.txt",
+      "sha256": "da880fd9ad74c9c496b9f28ac8e39a9dbcdca558b889a7defa766aec31d7fe68",
+      "bytes": 131574
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-loaded-roundtrip-health.json",
+      "sha256": "883f0b097af130eabcd8273891fd47d94e6e7be0eecd465b2fadf3200cc5be12",
+      "bytes": 106945
+    }
+  ]
+}

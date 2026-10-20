@@ -1,0 +1,73 @@
+{
+  "scope": "Primary-interface isolated TCP transport correction; host QEMU filters only, no guest/core/mod changes",
+  "cause": "Full queue-all PCAP captures nativeSYN-ACK toTAPpeer192.0.2.2 followed by RST sourced frompeerIP but slirpMAC52:55:c0:00:02:fe. The mirror copied native output toTAP while original output also reachedslirp, which had no matching TCP state.",
+  "correction": "Temporary ingress redirect forwards NATmanagement through existing injection and suppresses NAT IPv4/ARP claiming peer192.0.2.2. Actual TAPframes remain untouched. Ordinary NATincludingSSH survives.",
+  "tool": "src/azhub/research/scripts/link-primary-tap-transport.py",
+  "tool_sha256": "1a10087dd9d988c74a69bc344d83369f0b19fbbc345b1a838b9382a4c526dfe7",
+  "unit_tests": "Six pass: framed streams all split positions/coalescing, lengths/truncation, peer TCP vsmanagement, malformed IP, ARP ownership, namespace refusal. No live networking in these tests.",
+  "canonical_run": "PID57520,60-second bounded run, NATcapture15104:3426guest-to-TAP/454TAP-to-guest/585NATmanagement/99NATpeer suppressed, errors empty. Native query and reserved-requester controls pass; SSH verified during and after normal exit.",
+  "cleanup": "Guard/channel absent in QMP after normal completion; nativeprocess unchanged.",
+  "negative_setup": "First canonical run refused captureport15103 after earlier prototype cleanup; QEMU still held that port. It did not install its redirect. Preserved stderr; explicit unused15104 succeeded.",
+  "limits": [
+    "Earlier UDPdiscovery/master/tempo captures remain UDP-only; failed TCPquery is infrastructure negative, not mod admission acceptance",
+    "Abrupt helper termination requires QMPguard removal before killing it; normal completion cleans up",
+    "PCAP and raw status payloads remain ignored/local; portable records contain metadata/hashes only"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/tcp-query-diagnostic.pcap",
+      "sha256": "be6105c40664fd458f6119e5bb0c6a63ba167e5ee2bd0df49bc1f9220deb4c4b",
+      "bytes": 593
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/tcp-query-diagnostic.metadata.json",
+      "sha256": "8e40e5cde857999794aacc44e2ec799f5eaeee7bf5a910e9c8a3e622af6a2536",
+      "bytes": 1749
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/native-query-diagnostic.json",
+      "sha256": "816f107ae94d2d59b892312ff8ef237d26211c58a4ccc4ca144be09ace4bef56",
+      "bytes": 1088
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-transport.stdout",
+      "sha256": "229c2717ba9368f8fb1644a8d728d327d38b4ee28452ee4d7293670d8f7840c7",
+      "bytes": 111
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-transport.stderr",
+      "sha256": "0e1dfafbc83c8179c9dc0bb5c93afc9dffa4bf1e4676c4da4db0ef361fd0da46",
+      "bytes": 1128
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-transport-2.stdout",
+      "sha256": "a36a2a05b2a483731a7592e826ea6b760648c77a4229c65ef06fda1816024c12",
+      "bytes": 174
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-transport-2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-transport-2-start.json",
+      "sha256": "f9e5d30dff85bde0b7012e406a0ee2868cf29596b7e3ea925c59350a97186139",
+      "bytes": 135
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/transport-cleanup.json",
+      "sha256": "3900de032af5142299dadace38ee3b5bb5749a4f794e5939b0170c4bcb9ebcd1",
+      "bytes": 2180
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/transport-unit-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/transport-unit-tests.stderr",
+      "sha256": "b952dcfedeb098924df82657c0a7eaafc54599572fb5786304cccc5bc23a2a67",
+      "bytes": 109
+    }
+  ]
+}

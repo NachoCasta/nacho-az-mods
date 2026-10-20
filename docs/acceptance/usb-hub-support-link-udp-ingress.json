@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-19T02:19:10.327513+00:00",
+  "scope": "Standalone kernel ingress metadata and bounded private UDP policy feasibility; not native receive integration",
+  "emulator_kernel": "6.6.138-dirty",
+  "port": 50009,
+  "helper_sha256": "60381fdef50016b1c304d1cd57ace531e99f6c25a67c06f2bd061b9ea65a5162",
+  "events": [
+    {
+      "event": "ready",
+      "port": 50009,
+      "loopback_ifindex": 1
+    },
+    {
+      "event": "received",
+      "source": "127.0.0.1",
+      "ingress_ifindex": 1,
+      "trusted_member": 7,
+      "private_claim_rejected": false
+    },
+    {
+      "event": "received",
+      "source": "192.0.2.2",
+      "ingress_ifindex": 3,
+      "trusted_member": 0,
+      "private_claim_rejected": true
+    }
+  ],
+  "validation": [
+    "Pinned Linaro compile completed without warnings",
+    "ASan/UBSan policy tests passed known private discovery/status/media identities, normal external counterparts and truncated extents",
+    "Vendor GPL kernel headers and IPv4 socket implementation contain IP_PKTINFO support; not a runtime hardware check"
+  ],
+  "excluded_attempt": "Initial receiver timed out after its local marker before the external sender ran; a new confirmed terminal attempt ran receiver/sender concurrently and exited zero.",
+  "limits": [
+    "Policy not installed in the mod receive path; current candidate still lacks UDP provenance enforcement",
+    "Only three synthetic formats covered; discovery assignment, controls and extended variants require audit",
+    "Native recvfrom/recvmsg ancillary-data preservation and MSG_TRUNC/MSG_PEEK semantics remain to implement/test",
+    "Live sender tuple ownership and actual loopback interface must be combined; embedded IP/source IP alone is insufficient",
+    "No physical AZ operations or interoperability acceptance"
+  ],
+  "local_evidence_sha256": {
+    "udp-ingress-result.jsonl": "ba50d78baaf86fd28ba23c324ae93344ecfb9c9c6ac4f5cbbcd4c17228b368db"
+  }
+}

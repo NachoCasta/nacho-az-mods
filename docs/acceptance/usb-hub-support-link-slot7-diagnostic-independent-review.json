@@ -1,0 +1,45 @@
+{
+  "scope": "Independent local-only review of the frozen slot7 diagnostic. This is a negative source-visibility observation, not supported-artifact acceptance or a proven cause.",
+  "primary_record": "docs/acceptance/usb-hub-support-link-slot7-diagnostic-runtime.json",
+  "supported_baseline": "docs/acceptance/usb-hub-support-link-stable-native2-slot7-negative.json",
+  "diagnostic_ELF_sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+  "diagnostic_PID": 20983,
+  "diagnostic_hooks": 55,
+  "verification": {
+    "primary_raw_hashes_and_lengths": "All ten entries independently match their frozen SHA256 and byte length.",
+    "process_partition": "Only the final PID20983 segment with the accepted 0x1c1fa08 observer and 55-hook initialization is used. Earlier 54-hook PID762 and unapproved PID16069 remain historical content of the aggregate evidence.",
+    "health": "Independently parsed seven /media/usb/sd[a-g]1 mounts, five private read-only aliases, both direct1-1 and2-1 and nested3-2.1..5 topologies, live xhci_pci, and no HC died/unrecoverable/not responding/controller-dead matches in the frozen kernel log.",
+    "screenshot": "Both native USB1 and USB2 plus private7/3,7/8,8/3 are visible. Private7/7 and8/7 remain absent.",
+    "trace": "32 trace records: eight mount-entry observations and 24 capability observations. All five private media reach mount callback entry. No callback-return, queued-body execution or model-insertion observation is present."
+  },
+  "decisive_frozen_inputs": [
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace-settled-state.txt",
+      "sha256": "8e71551f542f252ed3a05636a7ac96620176a80e3080f076abf87ae3b92f7939"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-slot7-trace-settled-health.json",
+      "sha256": "6ae1141613e58e86e463de86bb56baf43dd562e9b4d44fef8bd8a866ff25261a"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace-source-settled.png",
+      "sha256": "747e62937bd8f776cccc1b779b00c076d23d35f134e4ed3ba8744d6ff6b55bde"
+    }
+  ],
+  "native_callback_entries": [
+    {"at_monotonic": "645.395600208", "MediaID": "0x12200000602", "private_player": 7, "internal_slot": 7},
+    {"at_monotonic": "653.407442000", "MediaID": "0x12200000702", "private_player": 8, "internal_slot": 7}
+  ],
+  "exact_firmware_static_review": {
+    "ELF_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+    "capability_observation_limit": "Observed caller0x1c0d68c is inside LinkMemberID debug formatter0x1c0d108. Its true result establishes that the existing hook recognizes the private member; it does not by itself establish a native admission decision.",
+    "root_mapping": "Original mapper0x1c1aec8 returns USB/SD MediaID unchanged. RootSourceID constructor0x1c11490 wraps it as category1 without replacing its member or sdid. Comparator0x1c10908 compares category, complete member32 and sdid8, so the reviewed comparator does not merge local USB2 with either private USB2 key.",
+    "queued_mount_body": "Original closure0x1c1f340 receives a payload pointer: rootset at+0, RootSourceID at+8, original MediaID at+0x14. Its USB/SD branch invokes full-key lookup/create0x1c1ed70, updates mount data and iterates registered root listeners. The frozen diagnostic observes the enclosing callback entry, not execution of this body.",
+    "list_model": "Original listener wrapper0x1c33a60 calls controller0x1c338d0. Original model add0x1c373f0 appends valid member-kind2 private roots. Its special member-only replacement branch applies to member-kind7, not private members0x602/0x702. Original getNumRows0x1c33a70 reads model+0x18.",
+    "core_interposition_limit": "The actual framework also intercepts controller0x1c338d0 and model add0x1c373f0 using source_list_entry.c ctrladd_hook/addrow_hook, and swaps model vtable methods. Absence of a predicate in the original firmware bodies does not clear those wrappers. A separate pinned-core review is required before attributing the missing rows to native firmware.",
+    "raw_material": "Read-only Ghidra outputs and limited objdump evidence remain ignored under local/diagnostics/link-normal-loader/slot7-final-*. No firmware or raw decompilation is included in this portable record."
+  },
+  "conclusion": "Both missing sources pass announcement delivery and reach the observed native mount entry with correct full MediaID. The failure remains downstream of that entry, with queued execution, model insertion/removal and core wrappers not yet distinguished. No production predicate, packet-field change or source-ID remapping is justified by this evidence.",
+  "next_step": "Complete the independent pinned-core source-list wrapper review first. If that does not identify a concrete cause, a separate diagnostic observation of queued mount-body execution and resulting root/list identities can distinguish the remaining stages without overlapping core-owned hooks.",
+  "boundaries": "No emulator operation, guest change, production edit or diagnostic activation was performed for this independent review. Final functional acceptance must rerun an uninstrumented supported artifact."
+}

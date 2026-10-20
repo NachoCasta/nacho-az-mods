@@ -1,0 +1,65 @@
+{
+  "scope": "Discriminating normal xHCI/native USB1 startup and native USB2 hardware hotplug control; USB2 native registration was not achieved",
+  "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "initrd_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+  "PID": 797,
+  "boot_id": "c43dc348-a55a-4a68-bd8e-ffccbd13a867",
+  "startup": "Exact normal-loader54hooks; music+mods enumerated actual1-1/nativeUSB1; allfive private rows visible including7/7and8/7; six physical disks/mounts healthy",
+  "native2_hotplug": "Protected music-only disk attached to empty EHCI rootport1, actual2-1/sdg1. It did not mount or appear as nativeUSB2",
+  "cause": "Unmodified stock98-local.rules only starts native device-mount for sd[a-f]. Hotplug became sdg and had no native mount-unit execution. This does not reproduce nativeUSB2 coexistence suppression",
+  "modification_boundary": "No guest rule edit, manual native mount, service start or diagnostic mod installed",
+  "health_and_cleanup": "Six original mounted disks remained healthy; added sdg existed but unmounted. EEEE before standard poweroff321.267826",
+  "next_fixture": "Both native sticks attached from power-on, before module xHCI, so native disks can occupy sda/sdb and private sdg can use existing generic hub fallback",
+  "raw": [
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-usb2-off/launch.json",
+      "sha256": "5ad44bbcbce94c55e7a98401276a9276dbce53fd6f790fba2939a299b8f70115",
+      "bytes": 15118
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-usb2-off/serial.log",
+      "sha256": "6d935692dc338e2eb3e7a236e5b9f0411f6f82a92acf1e320b7d8f9810965335",
+      "bytes": 140429
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-source-menu-reset.png",
+      "sha256": "f1116a286d7d0d11c0dcd75891fb5fbabf7f599edc2ce4945fda150ecf45319a",
+      "bytes": 48395
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-baseline-settled-state.txt",
+      "sha256": "efdb52c9e197ffc5ce94ec22630d3036dacbb8516ca017aa47c683e2af6f8e02",
+      "bytes": 49500
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native1-before-usb2-health.json",
+      "sha256": "0b45264e32a13766c6cdcf08f5cd577faf127f7f00ed572a638bbc3e93f49092",
+      "bytes": 78792
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-attach.json",
+      "sha256": "a478861f620fc5046bc91c603974e98da614b4c7837119fb5da8690d958c6b69",
+      "bytes": 779
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-source-20s.png",
+      "sha256": "f1116a286d7d0d11c0dcd75891fb5fbabf7f599edc2ce4945fda150ecf45319a",
+      "bytes": 48395
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-after-hotplug-health.json",
+      "sha256": "5d11341b36ab24b7eb9673f4244bf1ce8ea0d0dcf4518c93838b663d9be53bcb",
+      "bytes": 83412
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-stock-rule-negative.txt",
+      "sha256": "82d9191e36d8cf8db03a015bf5df94ef51475ee6b619b9cc16fcf26265f03cf4",
+      "bytes": 7464
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-native2-pre-shutdown-health.json",
+      "sha256": "d1b1e530114f5571cb9b42d2c1a660582840dd224cca1b7829748bf8573de1c4",
+      "bytes": 83413
+    }
+  ]
+}

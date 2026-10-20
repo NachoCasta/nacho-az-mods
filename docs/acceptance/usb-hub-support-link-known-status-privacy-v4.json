@@ -1,0 +1,671 @@
+{
+  "recorded_at_utc": "2026-10-19T05:40:00.365248+00:00",
+  "scope": "Known outgoing source privacy in two frozen full-payload emulator windows; no complete semantic privacy claim",
+  "binary_sha256": "0a0f041d768f8840e7b276384ac0af22280ccaaab5a2512a2a2750cee1adc3fc",
+  "native_pid": 418678,
+  "result": "Known fields passed in fresh and physically reconnected cached playback windows",
+  "complete_outgoing_statuses": 839,
+  "runtime_owner_context": [
+    "Fresh window follows a normal private load and a native Instant Doubles copy of member 7 / slot 3 / content 495 onto both playing decks.",
+    "Before the cached window, a queued Instant Doubles common-stage request was delayed across physical source replacement and cancelled through its tagged native cleanup.",
+    "The old source was generation 38584 / devnum 43; the reconnected source reused member 7 / slot 3 at generation 39008 / devnum 44.",
+    "Both old private tracks remained loaded and playing throughout the cached window.",
+    "No USB STOP or safe-eject interaction occurred in this process, exercising committed-origin classification without a captured native detach owner."
+  ],
+  "assertions": [
+    "Every captured complete AZ status for the two proven-private decks has zero standard media source tuple and content ID.",
+    "No private MediaID survives in any of the eleven classified auxiliary TrackLocation rows.",
+    "The exact private IP byte sequences, content 495 in big/little-endian uint32 form, and selected UTF-8 HUB_LIB/Algo markers are absent across all 1152 payload bytes.",
+    "Playback telemetry advances on both decks with the same process across each state window."
+  ],
+  "windows": [
+    {
+      "name": "fresh",
+      "capture_path": "local/diagnostics/link-coexistence/shared-v4-fresh-full-status.jsonl",
+      "capture_sha256": "d51324444a22235eff94f3d78d6881db3bd682cd617262be597fee5ffafaa0e8",
+      "state_path": "local/diagnostics/link-coexistence/shared-v4-fresh-state.json",
+      "state_sha256": "6919f214c741d2d95da5762bc99ab5084b27e362ac58ccbe3a1288c591d9452d",
+      "state": {
+        "state": "Fresh private member7/slot3 content495 on both playing decks after native API Instant Doubles; no USB STOP interaction",
+        "binary_sha256": "0a0f041d768f8840e7b276384ac0af22280ccaaab5a2512a2a2750cee1adc3fc",
+        "before": {
+          "pid": 418678,
+          "clock_ms": 19839970,
+          "view": 4,
+          "devices": [
+            {
+              "label": "HUB_LIB",
+              "disk": "sdf",
+              "port": 2,
+              "state": 0,
+              "generation": 35789,
+              "devnum": 37
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdd",
+              "port": 2,
+              "state": 0,
+              "generation": 34689,
+              "devnum": 35
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdg",
+              "port": 2,
+              "state": 0,
+              "generation": 38584,
+              "devnum": 43
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sde",
+              "port": 2,
+              "state": 0,
+              "generation": 35616,
+              "devnum": 36
+            },
+            {
+              "label": "HUB_LIB2",
+              "disk": "sdc",
+              "port": 2,
+              "state": 0,
+              "generation": 34516,
+              "devnum": 34
+            }
+          ],
+          "decks": [
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 5.153,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 5.153,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            }
+          ]
+        },
+        "started_utc": "2026-10-19T05:36:23.325411+00:00",
+        "peer_rc": 0,
+        "after": {
+          "pid": 418678,
+          "clock_ms": 19875651,
+          "view": 4,
+          "devices": [
+            {
+              "label": "HUB_LIB",
+              "disk": "sdf",
+              "port": 2,
+              "state": 0,
+              "generation": 35789,
+              "devnum": 37
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdd",
+              "port": 2,
+              "state": 0,
+              "generation": 34689,
+              "devnum": 35
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdg",
+              "port": 2,
+              "state": 0,
+              "generation": 38584,
+              "devnum": 43
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sde",
+              "port": 2,
+              "state": 0,
+              "generation": 35616,
+              "devnum": 36
+            },
+            {
+              "label": "HUB_LIB2",
+              "disk": "sdc",
+              "port": 2,
+              "state": 0,
+              "generation": 34516,
+              "devnum": 34
+            }
+          ],
+          "decks": [
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 37.258,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 37.258,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            }
+          ]
+        },
+        "finished_utc": "2026-10-19T05:36:58.928266+00:00"
+      },
+      "known_field_analysis": {
+        "result": "passed",
+        "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+        "complete_outgoing_statuses": 418,
+        "failures": [],
+        "missing_evidence": [],
+        "observations": [
+          {
+            "deck": 1,
+            "packets": 209,
+            "first_ns": 17788352681143,
+            "last_ns": 17817913963185,
+            "media_tuples": [
+              {
+                "player": 0,
+                "slot": 0,
+                "track_type": 0,
+                "content_id": 0,
+                "packets": 209
+              }
+            ],
+            "unclassified_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_content_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_auxiliary_locations": {},
+            "content_marker_offset_classification": {
+              "0x2c": "Current source content ID",
+              "0x194": "Auxiliary TrackLocation content ID",
+              "0x1d4": "Auxiliary TrackLocation content ID",
+              "0x214": "Auxiliary TrackLocation content ID",
+              "0x254": "Auxiliary TrackLocation content ID",
+              "0x294": "Auxiliary TrackLocation content ID",
+              "0x2d4": "Auxiliary TrackLocation content ID",
+              "0x314": "Auxiliary TrackLocation content ID",
+              "0x354": "Auxiliary TrackLocation content ID",
+              "0x394": "Auxiliary TrackLocation content ID",
+              "0x3d4": "Auxiliary TrackLocation content ID",
+              "0x430": "Auxiliary TrackLocation content ID"
+            },
+            "preference_rows": {
+              "0xd9": [
+                "0101010101000001"
+              ],
+              "0xf9": [
+                "0101010101000001"
+              ],
+              "0x3fd": [
+                "0101010101000001"
+              ],
+              "0x41d": [
+                "0101010101000000"
+              ],
+              "0x468": [
+                "0101010101000001"
+              ],
+              "0x474": [
+                "0101010101000001"
+              ]
+            }
+          },
+          {
+            "deck": 2,
+            "packets": 209,
+            "first_ns": 17788353622931,
+            "last_ns": 17817913195084,
+            "media_tuples": [
+              {
+                "player": 0,
+                "slot": 0,
+                "track_type": 0,
+                "content_id": 0,
+                "packets": 209
+              }
+            ],
+            "unclassified_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_content_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_auxiliary_locations": {},
+            "content_marker_offset_classification": {
+              "0x2c": "Current source content ID",
+              "0x194": "Auxiliary TrackLocation content ID",
+              "0x1d4": "Auxiliary TrackLocation content ID",
+              "0x214": "Auxiliary TrackLocation content ID",
+              "0x254": "Auxiliary TrackLocation content ID",
+              "0x294": "Auxiliary TrackLocation content ID",
+              "0x2d4": "Auxiliary TrackLocation content ID",
+              "0x314": "Auxiliary TrackLocation content ID",
+              "0x354": "Auxiliary TrackLocation content ID",
+              "0x394": "Auxiliary TrackLocation content ID",
+              "0x3d4": "Auxiliary TrackLocation content ID",
+              "0x430": "Auxiliary TrackLocation content ID"
+            },
+            "preference_rows": {
+              "0xd9": [
+                "0000000000000000"
+              ],
+              "0xf9": [
+                "0000000000000000"
+              ],
+              "0x3fd": [
+                "0000000000000000"
+              ],
+              "0x41d": [
+                "0000000000000000"
+              ],
+              "0x468": [
+                "0000000000000000"
+              ],
+              "0x474": [
+                "0000000000000000"
+              ]
+            }
+          }
+        ],
+        "limits": [
+          "Marker matches outside known media fields require semantic review.",
+          "Absence of selected markers does not identify every extended field.",
+          "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+        ]
+      }
+    },
+    {
+      "name": "cached",
+      "capture_path": "local/diagnostics/link-coexistence/shared-v4-cached-full-status.jsonl",
+      "capture_sha256": "4e0bb650ba140fc1d051851cf0271692220413c4b3577f7658412eea9f9ce2e0",
+      "state_path": "local/diagnostics/link-coexistence/shared-v4-cached-state.json",
+      "state_sha256": "3f495379192f569a8e6e5817832d53684cffa645ea398f1bfd73a5e43c874538",
+      "state": {
+        "state": "Both private495 decks cached and playing after queued type5 reconnect cancellation; no USB STOP or safe eject interaction",
+        "binary_sha256": "0a0f041d768f8840e7b276384ac0af22280ccaaab5a2512a2a2750cee1adc3fc",
+        "before": {
+          "pid": 418678,
+          "clock_ms": 19940924,
+          "view": 4,
+          "devices": [
+            {
+              "label": "HUB_LIB",
+              "disk": "sdf",
+              "port": 2,
+              "state": 0,
+              "generation": 35789,
+              "devnum": 37
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdd",
+              "port": 2,
+              "state": 0,
+              "generation": 34689,
+              "devnum": 35
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sde",
+              "port": 2,
+              "state": 0,
+              "generation": 35616,
+              "devnum": 36
+            },
+            {
+              "label": "HUB_LIB2",
+              "disk": "sdc",
+              "port": 2,
+              "state": 0,
+              "generation": 34516,
+              "devnum": 34
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdh",
+              "port": 2,
+              "state": 0,
+              "generation": 39008,
+              "devnum": 44
+            }
+          ],
+          "decks": [
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 95.298,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 95.298,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            }
+          ]
+        },
+        "started_utc": "2026-10-19T05:38:04.299186+00:00",
+        "peer_rc": 0,
+        "after": {
+          "pid": 418678,
+          "clock_ms": 19976492,
+          "view": 4,
+          "devices": [
+            {
+              "label": "HUB_LIB",
+              "disk": "sdf",
+              "port": 2,
+              "state": 0,
+              "generation": 35789,
+              "devnum": 37
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdd",
+              "port": 2,
+              "state": 0,
+              "generation": 34689,
+              "devnum": 35
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sde",
+              "port": 2,
+              "state": 0,
+              "generation": 35616,
+              "devnum": 36
+            },
+            {
+              "label": "HUB_LIB2",
+              "disk": "sdc",
+              "port": 2,
+              "state": 0,
+              "generation": 34516,
+              "devnum": 34
+            },
+            {
+              "label": "HUB_LIB",
+              "disk": "sdh",
+              "port": 2,
+              "state": 0,
+              "generation": 39008,
+              "devnum": 44
+            }
+          ],
+          "decks": [
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 127.411,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 1,
+              "playing": 1,
+              "pos_s": 127.411,
+              "content_id": 495,
+              "title": "Algo m\u00e1s"
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            },
+            {
+              "loaded": 0,
+              "playing": 0,
+              "pos_s": -1.0,
+              "content_id": 0,
+              "title": ""
+            }
+          ]
+        },
+        "finished_utc": "2026-10-19T05:38:39.905239+00:00"
+      },
+      "known_field_analysis": {
+        "result": "passed",
+        "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+        "complete_outgoing_statuses": 421,
+        "failures": [],
+        "missing_evidence": [],
+        "observations": [
+          {
+            "deck": 1,
+            "packets": 212,
+            "first_ns": 17888978980816,
+            "last_ns": 17918368647709,
+            "media_tuples": [
+              {
+                "player": 0,
+                "slot": 0,
+                "track_type": 0,
+                "content_id": 0,
+                "packets": 212
+              }
+            ],
+            "unclassified_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_content_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_auxiliary_locations": {},
+            "content_marker_offset_classification": {
+              "0x2c": "Current source content ID",
+              "0x194": "Auxiliary TrackLocation content ID",
+              "0x1d4": "Auxiliary TrackLocation content ID",
+              "0x214": "Auxiliary TrackLocation content ID",
+              "0x254": "Auxiliary TrackLocation content ID",
+              "0x294": "Auxiliary TrackLocation content ID",
+              "0x2d4": "Auxiliary TrackLocation content ID",
+              "0x314": "Auxiliary TrackLocation content ID",
+              "0x354": "Auxiliary TrackLocation content ID",
+              "0x394": "Auxiliary TrackLocation content ID",
+              "0x3d4": "Auxiliary TrackLocation content ID",
+              "0x430": "Auxiliary TrackLocation content ID"
+            },
+            "preference_rows": {
+              "0xd9": [
+                "0101010101000001"
+              ],
+              "0xf9": [
+                "0101010101000001"
+              ],
+              "0x3fd": [
+                "0101010101000001"
+              ],
+              "0x41d": [
+                "0101010101000000"
+              ],
+              "0x468": [
+                "0101010101000001"
+              ],
+              "0x474": [
+                "0101010101000001"
+              ]
+            }
+          },
+          {
+            "deck": 2,
+            "packets": 209,
+            "first_ns": 17888979465837,
+            "last_ns": 17918367718705,
+            "media_tuples": [
+              {
+                "player": 0,
+                "slot": 0,
+                "track_type": 0,
+                "content_id": 0,
+                "packets": 209
+              }
+            ],
+            "unclassified_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_content_marker_matches": {
+              "private_ip_7": {},
+              "private_ip_8": {},
+              "content_495_be32": {},
+              "content_495_le32": {},
+              "text:HUB_LIB": {},
+              "text:Algo": {}
+            },
+            "known_auxiliary_locations": {},
+            "content_marker_offset_classification": {
+              "0x2c": "Current source content ID",
+              "0x194": "Auxiliary TrackLocation content ID",
+              "0x1d4": "Auxiliary TrackLocation content ID",
+              "0x214": "Auxiliary TrackLocation content ID",
+              "0x254": "Auxiliary TrackLocation content ID",
+              "0x294": "Auxiliary TrackLocation content ID",
+              "0x2d4": "Auxiliary TrackLocation content ID",
+              "0x314": "Auxiliary TrackLocation content ID",
+              "0x354": "Auxiliary TrackLocation content ID",
+              "0x394": "Auxiliary TrackLocation content ID",
+              "0x3d4": "Auxiliary TrackLocation content ID",
+              "0x430": "Auxiliary TrackLocation content ID"
+            },
+            "preference_rows": {
+              "0xd9": [
+                "0000000000000000"
+              ],
+              "0xf9": [
+                "0000000000000000"
+              ],
+              "0x3fd": [
+                "0000000000000000"
+              ],
+              "0x41d": [
+                "0000000000000000"
+              ],
+              "0x468": [
+                "0000000000000000"
+              ],
+              "0x474": [
+                "0000000000000000"
+              ]
+            }
+          }
+        ],
+        "limits": [
+          "Marker matches outside known media fields require semantic review.",
+          "Absence of selected markers does not identify every extended field.",
+          "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+        ]
+      }
+    }
+  ],
+  "host_validation_references": [
+    "usb-hub-support-link-status-location-schema.json",
+    "usb-hub-support-link-committed-status-owner-zero.json"
+  ],
+  "limits": [
+    "Known-field and exact-marker checks do not establish the semantic meaning or privacy of every extended byte.",
+    "A successful native same-content replacement must still explicitly demonstrate restored native source reporting.",
+    "The capture windows exclude the queued cancellation interval itself; its lifecycle evidence is separate.",
+    "No safe-eject window is included for this exact binary.",
+    "Both tracks use content 495; this does not establish different-track or different-source isolation.",
+    "No physical controller, audio synchronization, or real CDJ acceptance."
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/link-status.h": "04ca9f2bb475d265ae23a340ed4054848ec540881b8a978994f7792fbc641f9b",
+    "src/azhub/linkfake/test-link-status.c": "00e28d918dafeced48978f565fec7340c5961fc673fca0a353b16edbbd2e7254",
+    "src/azhub/research/scripts/link-cached-status-probe.h": "3df5ee26c0806aae4bc7bfcff043bcf93647d85d0908894967de03127ed3b839",
+    "src/azhub/research/scripts/test-link-cached-status.c": "01b768b83890752a556905f6342180b6d13d493d260867f883b676f7d8a4f237",
+    "src/azhub/research/scripts/audit-link-status-privacy.py": "503cee8bb74ce1ca0b360f823e249391639894edf792519ea7976c83b84afd8c",
+    "src/azhub/research/scripts/test-audit-link-status-privacy.py": "1453068c82dcb7cce576764dc44f9892ad1c72436dac3bb49e42ad3f6e61a84a"
+  }
+}

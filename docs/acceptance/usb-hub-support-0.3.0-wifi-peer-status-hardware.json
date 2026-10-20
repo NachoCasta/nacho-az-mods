@@ -1,0 +1,100 @@
+{
+  "scope": "Real AZ Wi-Fi discovery and bounded external software-peer status exchange; no master/sync/audio acceptance",
+  "mod_id": "usb-hub-support",
+  "version": "0.3.0",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "native_PID": 1356103,
+  "network": "AZ Wi-Fi, PC Ethernet on same home subnet; no wired AZ carrier. User explicitly authorized this exploratory topology. No firewall/interface changes.",
+  "passive": "20seconds receive-only:30 discovery-port packets and67 beat-port packets; packet types retained locally, not all packets are musical beats.",
+  "peer": "Beat Link8.0.0, explicit physicalLAN opt-in, selected local/target addresses, free player3; status role20seconds. IPv4 Java stack required in this trial.",
+  "result": {
+    "exit_code": 0,
+    "status_packets": 200,
+    "players": [
+      1,
+      2
+    ],
+    "reported_master": [
+      1
+    ],
+    "beat_callbacks": 0,
+    "cleanup": "stopped logged; own finder shutdown caused lost callbacks and asynchronous-close warning, not evidence of spontaneous peer loss."
+  },
+  "source_retention": "Read-only SSH after peer: same nativePID, CAMI source present, decksLLEE.",
+  "negative_controls": [
+    "rekordbox initially owned all three ports; no forced socket sharing or application termination.",
+    "Initial Java default stack did not discover target; no peer announcement.",
+    "First IPv4 discovery succeeded but harness called getMatchingInterfaces before VirtualCdj start; refused before announcing. Host guard corrected; supported mod unchanged."
+  ],
+  "limitations": [
+    "No playing-track or audible beat/phase confirmation in this peer window.",
+    "No master handoff, sync, live disconnect/reconnect or full1152-byte physical privacy acceptance.",
+    "Beat Link status receive buffer512bytes; known full-packet emulator checks remain separate.",
+    "Peer announces on the shared subnet, not isolated emulator Ethernet; no claim of wired/actual-CDJ equivalence."
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/az-link-wifi-passive-retry.jsonl",
+      "sha256": "a0771f373dbdca6062609ea421471e6aa6ba844fa5b97dc972a92b3c23aee0f7",
+      "bytes": 25575
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-status-final.jsonl",
+      "sha256": "81aac71dd76c69500dd08d7a2f6918b77aa444bb6c2ebf92d63202e9be5eb809",
+      "bytes": 36364
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-status-final.stderr.txt",
+      "sha256": "8a5faf1297e66ee7668c72a1560570ffdfe71e1252085c5c575f969ab017c162",
+      "bytes": 1605
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-status.jsonl",
+      "sha256": "9a1ab4e661f4cef04beb474bdd9e4534d573926cd96c86d0f310d5b2c422d3e0",
+      "bytes": 275
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-status.stderr.txt",
+      "sha256": "3853761eb5ada18baf5f51f9edd872e5ce2a9d25b77898ea0830023b650e4b28",
+      "bytes": 133
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-ipv4-retry.jsonl",
+      "sha256": "0858a18da82babf564add8f06a2cb18504bb225ca4e12d82c7d52479cd4ffbda",
+      "bytes": 892
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-peer-ipv4-retry.stderr.txt",
+      "sha256": "3d3bed0da329303e1564e9b2539b0b7f0d80c26ba47bbc7a99d21ea3de59e5fb",
+      "bytes": 333
+    }
+  ],
+  "playing_followup": {
+    "user_context": "User reports CAMI currently playing with Link On after clarifying transient hub source loss and warning triangle on mode changes.",
+    "role": "External player3 status,20seconds, no master/SYNC request",
+    "exit_code": 0,
+    "status_callbacks": 233,
+    "status_by_player": {
+      "1": 133,
+      "2": 100
+    },
+    "beat_callbacks": 44,
+    "beat_player": 1,
+    "native_player1_master": true,
+    "limits": "Beat protocol reception only; not audible phase sync, master handoff or full-packet privacy acceptance.",
+    "raw": [
+      {
+        "path": "local/diagnostics/az-link-wifi-cami-playing-status.jsonl",
+        "sha256": "a755c58c0b0eec0ba31fd40dc4defdedaa041ea8df1dc0b1ebf828fcabdf7315",
+        "bytes": 46153
+      },
+      {
+        "path": "local/diagnostics/az-link-wifi-cami-playing-status.stderr.txt",
+        "sha256": "db5f85ec9b05eced57e42f42d685ce768aa364e1730afc0a8d5fc237946e7d35",
+        "bytes": 956
+      }
+    ]
+  }
+}

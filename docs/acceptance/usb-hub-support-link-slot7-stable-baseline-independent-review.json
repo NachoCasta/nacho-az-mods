@@ -1,0 +1,25 @@
+{
+  "scope": "Independent local-only frozen stable both-native cold-boot baseline review; no emulator operations or diagnostic activation",
+  "status": "Missing private7/7 and8/7 reproduced while both native sources and all seven backing filesystems are healthy",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "PID": 762,
+  "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3",
+  "baseline": {
+    "normal_initialization": "Exact selected-cache ELF, parser0xef05c8 and54hooks in supported initialization log; EEEE at the frozen health snapshot",
+    "native_registration": "Independently viewed source screenshot shows distinct nativeUSB1 and nativeUSB2 Nacho Chips rows",
+    "private_rows": "Only A member7/slot3, E member7/slot8 and C member8/slot3 visible. Both private slot7 rows absent.",
+    "transport": "Both missing slot7 sources received media queries, returned answers and logged announcement acknowledgments; five independent backing/server registrations and aliases present",
+    "mount_health": "Raw mount table contains sda1 through sdg1 at their /media/usb paths; seven unique mounted filesystems",
+    "topology": "Raw sysfs maps native sda1 to direct2-1, native sdb1 to direct1-1, and five private partitions sdc1..sdg1 to nested3-2.1..3-2.5",
+    "controller": "xhci_pci live and unit successful; no HC died, unrecoverable error or host-controller-not-responding strings in the frozen dmesg",
+    "health_collection": "91.77s, same nativePID762, EEEE telemetry89.79s"
+  },
+  "frozen_evidence_sha256": {
+    "local/diagnostics/link-normal-loader/both-native-init-state.txt": "f83ff090dfdc65cbcb01477a4b267b6384ae9ddf908843bc7d1834d18a1d50e4",
+    "local/diagnostics/link-normal-loader/xhci-both-native-source-health.json": "3b83bf8713efadb93475b0ebca7a40f05fc4a1b210474874dc0e60338eab071e",
+    "local/diagnostics/link-normal-loader/both-native-source-startup.png": "8de66ea3fdaa16a74c3fa49a384c81f244e06f0114c0f1a3d091b3bc83880454"
+  },
+  "interpretation": "This stable baseline rules out the earlier OHCI controller loss and unregistered-native2 hotplug as explanations for this reproduction. It establishes the conditional diagnostic trigger, not the exact native suppression predicate or a product fix.",
+  "next": "Owner may activate the reviewed bounded diagnostic through the normal framework; independent trace interpretation follows frozen evidence. Final acceptance must return to the uninstrumented exact candidate and preserve both native ports plus all private sources.",
+  "limits": "No physical AZ, privacy, load/eject/mode, stable long-session or complete five-source acceptance follows from this negative startup observation."
+}

@@ -1,0 +1,95 @@
+{
+  "recorded_at": "2026-10-19T03:56:31.211004+00:00",
+  "result": "FAIL: loaded whole-hub eject refused after On/Off/On",
+  "binary_sha256": "3e4f4095dac5b67691680ea7466c104c998ba8045dd8a556b6041e2f1b7f32df",
+  "pid": 272304,
+  "real_az_access": false,
+  "trigger": "Long USB2 STOP with five hub fixtures, deck1 member8/slot3 and deck2 member7/slot8 loaded after live mode changes",
+  "message": "Cannot identify the loaded track on deck 1. Leave USB connected.",
+  "all_five_backing_mounts_retained": true,
+  "state_after_refusal": {
+    "pid": 272304,
+    "clock_ms": 13816862,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdf",
+        "port": 2,
+        "state": 0,
+        "generation": 30025,
+        "devnum": 24
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 31124,
+        "devnum": 26
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 30951,
+        "devnum": 25
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sde",
+        "port": 2,
+        "state": 0,
+        "generation": 29852,
+        "devnum": 23
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 29679,
+        "devnum": 22
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 116.883,
+        "content_id": 495,
+        "title": "Algo más"
+      },
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 111.592,
+        "content_id": 495,
+        "title": "Algo más"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": 23.693,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": 19.215,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "interpretation": "The detach preparation cannot obtain its required load proof. Mode-induced unload completion clearing the load ledger is a hypothesis, not yet established. Do not bypass this check.",
+  "next_step": "Use opt-in mode-load-audit to log native unload state/mode/media/epoch, then reproduce loaded mode transition. New diagnostic binary60379491 is built and installed only in QEMU; no functional fix is claimed.",
+  "local_evidence_sha256": {
+    "five-eject-before.json": "565d1b6e533d68c4ae662b6cac0fcd31557975852d17776168180b3473b3812e",
+    "five-eject-refused.json": "548f3c4acd7a4d531792e8bb59d874fc017f1163da056ab048c58f59e64d667a",
+    "five-eject-refused.log": "52d25d7383277051d377839e63e5b7b5d4aed95bc0157cad701e6bb303b6196f",
+    "five-eject-refused-mounts.txt": "f5333e2a2c6ac74a242c3a04e4fdff817e48808d90df868c0c2c31f9d8c0956d"
+  }
+}

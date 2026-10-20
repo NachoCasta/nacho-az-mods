@@ -1,0 +1,61 @@
+{
+  "scope": "Bounded independent read-only module/kernel provenance and exported-symbol audit; no build, guest operation or image change",
+  "status": "Static prerequisites corroborated; normal-image module initialization and controller stability require owner runtime validation",
+  "module": {
+    "preserved_filename": "xhci-pci-emulator.ko",
+    "bytes": 82272,
+    "sha256": "87f16c9a2fef62a3f04790de3c577466b7f641d8e63d3a3f049b0363557756ba",
+    "name": "xhci_pci",
+    "license": "GPL",
+    "vermagic": "6.6.138-dirty SMP preempt mod_unload aarch64",
+    "depends": "",
+    "compiler_comment": "GCC: (Alpine 13.2.1_git20231014) 13.2.1 20231014"
+  },
+  "kernel_and_builder": {
+    "actual_Image_sha256": "c66e4beaaae7b918d0706be41b27e6aa9e526d9d6f19657a4dbcf97683af3798",
+    "independently_hashed_equal_images": [
+      "Owner-extracted builder /out/Image in local provenance/builder-Image",
+      "Emulator build/Image",
+      "Emulator build/docker-out/Image"
+    ],
+    "local_builder_image": "azemu-builder",
+    "independently_inspected_builder_image_id": "sha256:035cf10f7a9d8170bd7ec39cd1972175e390fdfecc7a6921cba884fd20242a7b",
+    "owner_extraction": "Owner copied /out/Image, /kernel/.config, /kernel/vmlinux.symvers and generated utsrelease.h from a created container without running its ARM binaries; this independent audit reads the frozen local files",
+    "UTS_RELEASE": "6.6.138-dirty",
+    "compiler": "gcc (Alpine 13.2.1_git20231014) 13.2.1 20231014",
+    "relevant_config": {
+      "CONFIG_USB_XHCI_HCD": "y",
+      "CONFIG_USB_XHCI_PCI": "m",
+      "CONFIG_USB_XHCI_PCI_RENESAS": "m",
+      "CONFIG_MODULES": "y",
+      "CONFIG_MODULE_UNLOAD": "y",
+      "CONFIG_MODVERSIONS": "not set",
+      "CONFIG_SMP": "y",
+      "CONFIG_PREEMPT": "y",
+      "CONFIG_LTO_NONE": "y"
+    }
+  },
+  "reconstruction_source": {
+    "repository_script": "src/azhub/research/scripts/build-emulator-xhci.py",
+    "reviewed_method": "Copy xhci host source/header inputs from the local builder's /kernel, replace the Renesas IS_ENABLED expression with0 in xhci-pci.c/h, set obj-m xhci-pci.o, copy vmlinux.symvers to Module.symvers, and run the kernel module build against that same /kernel",
+    "interpretation": "The disabled Renesas path explains absence of its module dependency. The preserved module's exact historical build output was not reproduced during this audit."
+  },
+  "independent_symbol_audit": {
+    "method": "Read actual module ELF symbol table with aarch64-linux-gnu-readelf -Ws; compare every GLOBAL UND symbol name with the symbol column of the extracted builder vmlinux.symvers",
+    "undefined_global_symbols": 54,
+    "missing_kernel_exports": [],
+    "all_export_providers": ["vmlinux"],
+    "renesas_imports": [],
+    "implication": "All observed module global imports are exported by the matching builder kernel, with xHCI core built in. This supports bounded normal-image module-init validation; it is not a complete ABI or runtime stability proof."
+  },
+  "historical_search_limit": "Research notes around GHIDRA-FINDINGS.md1033 record rebuilding this emulator-only controller module and subsequent successful hub discovery, and earlier QEMU arguments use qemu-xhci. The bounded audit did not locate a historical successful-load log pinned to both exact module87f16 and Imagec66e4 hashes. No exact historical runtime pass is claimed.",
+  "local_provenance_sha256": {
+    "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder-Image": "c66e4beaaae7b918d0706be41b27e6aa9e526d9d6f19657a4dbcf97683af3798",
+    "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder-utsrelease.h": "e4c50ddb4c469a45b1a2b2ea69f2cda3d8066c21fc6e37bc77422b48af3405f1",
+    "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder.config": "93b0bcf3419d18cd5fbc86eed505252ee6c7207cf58241fa0d0a79d02d5d1dac",
+    "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder.symvers": "dd157a5cd924cba495402cccb326d169e5c63f9252c13b5ca6d9535e0c08c329",
+    "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/module-symbols.txt": "5f9639bca8c42e59d03e8e925c7aaa6dd4fd47c6676e31c57be8f969190fd998"
+  },
+  "next_bounded_validation": "Owner builds the normal offline emulator image and verifies module initialization, xHCI controller/hub enumeration and absence of unknown-symbol/vermagic errors before functional tests. This audit does not operate that image or change the supported mod candidate.",
+  "limits": "Emulator6.6 controller fixture only; no physical AZ/kernel4.4 compatibility, new-image recovery, stable hub runtime, five-source visibility or candidate acceptance is inferred."
+}

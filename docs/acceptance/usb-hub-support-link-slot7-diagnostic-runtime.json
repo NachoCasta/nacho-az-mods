@@ -1,0 +1,85 @@
+{
+  "scope": "Bounded diagnostic trace after a stable uninstrumented nativeUSB2 coexistence failure; not final supported-artifact acceptance",
+  "baseline": "docs/acceptance/usb-hub-support-link-stable-native2-slot7-negative.json",
+  "diagnostic_build": "docs/acceptance/usb-hub-support-link-slot7-diagnostic-build.json",
+  "diagnostic_package_sha256": "409a3f7557095eb83d34b5640e25b47609c78225bd987782d53db1c21c9e0613",
+  "diagnostic_ELF_sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+  "supported_ELF_kept_separate": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "activation": {
+    "USB_copy": "Exactly seven hash-checked members copied only to actual mods USB /media/usb/sdb1/MODS/community-mods/usb-hub-support",
+    "framework": "Supported apply IPC staged the package and performed its normal application restart. Native UI showed the diagnostic description and New mod found: allow?; native Allow then Reload now activated it",
+    "persistence": "Framework-managed executable staging and approval writes are persistent internal storage. They were performed by the supported framework, not manual internal-file edits, and are not USB-only or RAM persistence",
+    "intermediate_PID": 16069,
+    "intermediate_result": "New mod found: allow?; no diagnostic initialization acceptance inferred",
+    "final_PID": 20983,
+    "final_result": "loaded0.3.0 with55hooks; added native observer claim0x1c1fa08 accepted; exact bfe4a141 mapped",
+    "safety_state": "All decks EEEE throughout activation; no real AZ, manual guest services/settings/approval/preload edits or process memory writes"
+  },
+  "fixture": {
+    "boot_id": "cdad9e13-a7fa-45e4-9c95-d1f893138ca3",
+    "kernel": "6.6.138-dirty",
+    "initrd_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+    "health": "All seven actual USB partitions mounted: direct1-1 and2-1 plus nested3-2.1..5; no controller-fault strings. New hook did not require a kernel or firmware change"
+  },
+  "observed_UI": "Both native USB1/USB2 rows and only private7/3,7/8,8/3 rows remain. Private7/7 and8/7 rows are absent, matching the uninstrumented baseline",
+  "trace_facts": [
+    "645.395600208: observer reached native mount callback entry with media0x12200000602 (private player7, internal slot7)",
+    "653.407442000: observer reached native mount callback entry with media0x12200000702 (private player8, internal slot7)",
+    "Exact private slot7 availability calls returned forced1, including caller0x1c0d68c for both private member IDs0x602 and0x702",
+    "All five source announcements were acknowledged; physical backings and private aliases remain mounted"
+  ],
+  "interpretation": "The missing rows persist although both missing sources reach mount callback entry and the private availability branch returns true. This justifies investigating the downstream root/list logic. The observer logs entry before the original native call; it does not prove successful native mount completion, list insertion or return semantics. No root cause or production fix is claimed yet.",
+  "boundaries": "Diagnostic logging and one verified additional native hook only; normal request/load/privacy implementation retained. Final functional acceptance must use an uninstrumented supported artifact.",
+  "raw": [
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/package-409a3f755709/usb-copy.json",
+      "sha256": "2390e8b5704718a1f91d89e125649fc3455c7e2e286c42e05167e26a96783147",
+      "bytes": 1164
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-allow-page.png",
+      "sha256": "bd3123ef2189d9178490d5cf3048fad3fa4a14aa2972daa4151c187609444f2d",
+      "bytes": 40191
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-allowed.png",
+      "sha256": "0e149a98fabf206e4ce626ba251c850a29f4f6ccd64298d3ca6b0d08b1b0df91",
+      "bytes": 43734
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-native-reload-dialog.png",
+      "sha256": "c1527479e89df6b7f93e969682a566f162bb128aa8fe0e3dc78a9b665604962d",
+      "bytes": 38954
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-staged-unapproved-state.txt",
+      "sha256": "1d4b3827a2b4ffa9058093ce9de7d5223cc90b69a75ee4adc7c677a097aca87e",
+      "bytes": 87777
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-trace-initial-state.txt",
+      "sha256": "1170cd67688d03d11de8af89a7abb0800d43ef18b963e03b9f6c64aca4db959e",
+      "bytes": 105604
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-slot7-trace-initial-health.json",
+      "sha256": "8af04939dbe2e8c93d864838dbcebf9563181d07a87dba6cd7b3a1b5495edc86",
+      "bytes": 98886
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-trace-settled-state.txt",
+      "sha256": "8e71551f542f252ed3a05636a7ac96620176a80e3080f076abf87ae3b92f7939",
+      "bytes": 126952
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-slot7-trace-settled-health.json",
+      "sha256": "6ae1141613e58e86e463de86bb56baf43dd562e9b4d44fef8bd8a866ff25261a",
+      "bytes": 98886
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/slot7-trace-source-settled.png",
+      "sha256": "747e62937bd8f776cccc1b779b00c076d23d35f134e4ed3ba8744d6ff6b55bde",
+      "bytes": 46483
+    }
+  ]
+}

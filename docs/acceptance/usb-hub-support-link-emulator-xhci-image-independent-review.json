@@ -1,0 +1,138 @@
+{
+  "scope": "Independent offline streaming newc-cpio content/mode/ownership and normal-service dependency review; no build, guest operation or module execution",
+  "status": "Frozen image delta and intended service ordering corroborated; actual module initialization and healthy controller workload pending",
+  "old_image_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+  "new_image_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+  "old_cpio_entries": 9485,
+  "new_cpio_entries": 9489,
+  "comparison": "Every entry compared by content SHA256, mode, size, uid and gid; exactly four additions and no changes/removals",
+  "added_entries": [
+    {
+      "path": "etc/systemd/system/EP147.service.d/25-emulator-xhci.conf",
+      "before": null,
+      "after": {
+        "sha256": "7c788532983926c53cb9092c2c13b493269d10658b5bb6ba059903480beecead",
+        "mode": "0o100644",
+        "bytes": 80,
+        "uid": 0,
+        "gid": 0
+      }
+    },
+    {
+      "path": "etc/systemd/system/insmod-emulator-xhci.service",
+      "before": null,
+      "after": {
+        "sha256": "719aaa35364e79d4e844128605c94ff9ef3d059b1a133f00a4f87968e85e264c",
+        "mode": "0o100644",
+        "bytes": 330,
+        "uid": 0,
+        "gid": 0
+      }
+    },
+    {
+      "path": "etc/systemd/system/sysinit.target.wants/insmod-emulator-xhci.service",
+      "before": null,
+      "after": {
+        "sha256": "9c13354590eee806d0befb9cf9f2671602feabe6e4ab2acbf3904fac08b6ccc1",
+        "mode": "0o120777",
+        "bytes": 48,
+        "uid": 0,
+        "gid": 0
+      }
+    },
+    {
+      "path": "usr/lib/modules/xhci-pci.ko",
+      "before": null,
+      "after": {
+        "sha256": "87f16c9a2fef62a3f04790de3c577466b7f641d8e63d3a3f049b0363557756ba",
+        "mode": "0o100755",
+        "bytes": 82272,
+        "uid": 0,
+        "gid": 0
+      }
+    }
+  ],
+  "normal_activation": {
+    "unchanged_selected": {
+      "home/root/pdj/EP147": {
+        "sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+        "mode": "0o100755"
+      },
+      "etc/systemd/system/EP147.service": {
+        "sha256": "962975ba35f814bf1bb18ff4658f03e9e236c781875520af504b3688dd534a04",
+        "mode": "0o100644"
+      },
+      "etc/systemd/system/az-usbload.service": {
+        "sha256": "08e4ea7dcba307c57dd926d16e604386d5d815b5973d25523ba3c33dc1695626",
+        "mode": "0o100644"
+      },
+      "etc/systemd/system/EP147.service.d/10-azmod.conf": {
+        "sha256": "b242f202a0908c7f031619d8e8dde1f42c37e30f9ef478367636782beb8d2e3a",
+        "mode": "0o100644"
+      },
+      "usr/sbin/az-usbload": {
+        "sha256": "51e0cdcd7379cefd39423e3d3067ede0d10f490c0619f3bb338327e0c5ae0498",
+        "mode": "0o100755"
+      },
+      "etc/az-emu-mods.loader": {
+        "sha256": "70d89caa09af6ee9e3858029d529d774cabc54c5d0208312298415c6e6cabbc3",
+        "mode": "0o100644"
+      },
+      "home/root/scripts/usb-renotify.sh": {
+        "sha256": "a7b0e0ae6bf180a67cc11b3692228c9e6e991d5dfa87beb2db75988c81f152bb",
+        "mode": "0o100755"
+      }
+    },
+    "all_other_entries_unchanged": true,
+    "module_path_resolution": "Image lib symlink points to usr/lib; /lib/modules/xhci-pci.ko resolves to the added usr/lib/modules entry",
+    "dependency": "sysinit.target wants the module oneshot. The unit has no default dependencies and orders before udev-trigger, loader, EP147 and sysinit. EP147 explicitly Requires and orders After it; failed/timed-out insertion prevents normal EP147 activation.",
+    "limitations": "Requires/After is the intended normal service dependency, not a preload bypass or claim that USB devices have already settled. Runtime boot must confirm successful insertion, healthy enumeration and normal loader behavior."
+  },
+  "module_provenance": {
+    "kernel_sha256": "c66e4beaaae7b918d0706be41b27e6aa9e526d9d6f19657a4dbcf97683af3798",
+    "module_sha256": "87f16c9a2fef62a3f04790de3c577466b7f641d8e63d3a3f049b0363557756ba",
+    "actual_builder_config": "CONFIG_USB_XHCI_HCD=y; CONFIG_USB_XHCI_PCI=m",
+    "module_vermagic": "6.6.138-dirty SMP preempt mod_unload aarch64",
+    "module_dependency_string": "empty",
+    "source_note": "Preserved reconstruction disables optional Renesas firmware dependency and uses the matching builder kernel sources/symbols; this audit does not execute the module or establish runtime compatibility."
+  },
+  "bypass_checks": {
+    "embedded_opt_usb_img_absent": true,
+    "embedded_candidate_ELF_absent": true,
+    "direct_preload_10qemu_dropin_absent": true,
+    "emulator_20renotify_poller_absent": true,
+    "firmware_loader_marker": "unchanged stick marker",
+    "core_loader_EP147_and_original_renotifier": "unchanged from corrected b3c0 image"
+  },
+  "frozen_inputs": [
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/output-inventory.json",
+      "sha256": "e9c11815937cca3b90fb4e1e8dbd397e039aeae4b443964377da3daced7076d8"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/input-provenance.json",
+      "sha256": "dea7fedf2b5f2a084cf38f9c145c36d24beae76ce864effd715d3727561f96b9"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/normal-build.log",
+      "sha256": "aafffb2fa8b5f4f34511a218ea507cb40629a5ec6a8a0042647e78a96837ce9c"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/source/initramfs-patch/patch-rootfs.d/22-vanilla-kernel-fixups.sh",
+      "sha256": "c56b8c661ec1bf87e8261963ad53afd050fa067c7ea5cf7f35f431e6988472c7"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder.config",
+      "sha256": "93b0bcf3419d18cd5fbc86eed505252ee6c7207cf58241fa0d0a79d02d5d1dac"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/emu-xhci-reconstruction/provenance/builder.symvers",
+      "sha256": "dd157a5cd924cba495402cccb326d169e5c63f9252c13b5ca6d9535e0c08c329"
+    }
+  ],
+  "limits": [
+    "No new boot or healthy xHCI workload result is established by image inspection.",
+    "Existing exact-artifact normal-loader recovery belongs to the previous corrected6.6 image; applicable new fixture behavior requires its own evidence.",
+    "No physical4.4, audio or real-CDJ result is established; supported mod ELF/package bytes are not changed by this emulator image reconstruction."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "scope": "Exact supported v5 native USB browsing/loading/playback/unload with both native Link modes; emulator UI/callbacks only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 69363,
+  "boot_id": "bbd73fbd-c90b-46ff-8ace-4b2d28313642",
+  "native_mode_completions_seen": [
+    [
+      "1",
+      "1"
+    ],
+    [
+      "0",
+      "2"
+    ],
+    [
+      "1",
+      "3"
+    ],
+    [
+      "0",
+      "4"
+    ],
+    [
+      "1",
+      "5"
+    ]
+  ],
+  "Off": "USB1 and USB2 each browse/select Aaliyah1944 and load onto deck1/2; UI shows both native USB headers. Playing remaining03:36.100/04:19.679. Later separate nativeUSB1 load/play then explicit native UNLOAD1 settlesEEEE.",
+  "Off_to_On": "Native confirmation disables internal3/4. Both loaded native tracks continue, remaining03:10.265/03:53.614. No source warning triangles in these native screenshots; this differs from the private-source transition warning observation.",
+  "On": "Fresh USB2 browse/load into deck2 and advancing waveform pass. Later separate nativeUSB2 load/play then explicit native UNLOAD2 settlesEEEE. No application restart between mode controls.",
+  "hub": "Two direct native and five nested hub backings remain mounted/healthy after all controls. No native slot borrowed; per-source implementation and private-loading records remain separate evidence.",
+  "limits": [
+    "UI clocks/waveforms and native completions, no recorded audio",
+    "Does not prove continuous external metadata visibility; early zero standard-tuples in peer window are tracked separately",
+    "Kernel6.6/mapped virtual STOP2 fixture; no real-AZ recovery or eight-source hardware acceptance"
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-control-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-usb1-selected.png",
+      "sha256": "635de9bf7a3a1074bd7e40c911efa8af843732e883c98f22e6c35d7191177812",
+      "bytes": 70924
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-usb1-loaded-state.txt",
+      "sha256": "fbb76c109eaae5f7108f8eaba06f058b7b0c53466ae089c669078d90c4696e48",
+      "bytes": 420395
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-usb2-selected.png",
+      "sha256": "e58852431182113b53a8f129ce9b0dbe0e54e3d3edb7ee1a5a7895620ec844b5",
+      "bytes": 107725
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-both-loaded-state.txt",
+      "sha256": "05f07277f6c59758c28a3e54587f0380aea436dc3a213fa5c53f16cd8d63dd9b",
+      "bytes": 427708
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-both-playing.png",
+      "sha256": "b8cb8bec5a32109a09e1822e7be860c2ddce87a3e49c90207ebcbabbefb74770",
+      "bytes": 139875
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-control-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-carried-waveform.png",
+      "sha256": "eb1565d41f13c87d909df2953cd3ab21e16afbb7a41797809088be66d2082b32",
+      "bytes": 139029
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-carried-state.txt",
+      "sha256": "f3a444eb9005e33f754f9cab46f4141e4f72153b8cb298a9bfca99b4aa51b954",
+      "bytes": 442054
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-usb2-fresh-state.txt",
+      "sha256": "c0d0de78cc6e9b76c022030c106727e6eb9975ed9715d7265e097ab8985bff02",
+      "bytes": 449454
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-usb2-fresh-playing.png",
+      "sha256": "e58e08ad875d75c9f07e5bfaf6d6c05f050f52fe452aa78b4894dac99a37b787",
+      "bytes": 155443
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-unload-control-confirm.png",
+      "sha256": "95e5b78f025be20fe9da4aee5031b7fa697f60b68cabeb64664bbb02add5a53b",
+      "bytes": 73967
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-unload-control-loaded-state.txt",
+      "sha256": "1f8ebce31e5f8c3db8b25c195e344ec9ddb0b414e05f55f6637773dc0e625960",
+      "bytes": 278117
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-unload-control-playing.png",
+      "sha256": "af1f3602afc3e358b9345a84c6ec1a67725cf85b9d418e17833f4d169b5c5e72",
+      "bytes": 118784
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-unload-confirm.png",
+      "sha256": "f3ef07a15b983383a38f189331c7c5c286407edee2164bfbf7173dab6571fbdc",
+      "bytes": 124129
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-off-unloaded-state.txt",
+      "sha256": "f4f77a55ce33cfe3e4845294209544c19f7fd59e40b3ce47b97e9a9776f61f22",
+      "bytes": 286063
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-unload-control-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-unload-control-loaded-state.txt",
+      "sha256": "6502faa31b23e9ce4595d1f96a6378cae557236e09bf552992ee14429b496ca8",
+      "bytes": 298885
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-unload-control-playing.png",
+      "sha256": "4fa804d8dd74852aa497149737ddb938d2e2277e85a01e4571e52b7cb9fc1e34",
+      "bytes": 117723
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-unload-confirm.png",
+      "sha256": "ae4ef8bb2965e62627a4ae5944c14012dc6a5450aabc30d10d50e27c6e8cd500",
+      "bytes": 119684
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-on-unloaded-state.txt",
+      "sha256": "f91f3f9ea2f8fa2d9653bbf08d86291459bf221e4acb033f31b769239147124b",
+      "bytes": 304393
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-native-controls-final-seven.json",
+      "sha256": "5e059fcac8acd6faa55d72e4dd07fc511a9beff64e9bbb317cb3da4bcf023817",
+      "bytes": 117536
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-controls-final-sources.png",
+      "sha256": "5aba4aec8aad364b75f6711e08b1af0f8d6629c16dea631ea713cf3c39d181f9",
+      "bytes": 48460
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-controls-final-state.txt",
+      "sha256": "8a295cb14355d0559509b4feb1fcb2df3129f3a897e2d0a9f5330c7d193a0913",
+      "bytes": 311394
+    }
+  ]
+}

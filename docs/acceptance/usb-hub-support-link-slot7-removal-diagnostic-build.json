@@ -1,0 +1,77 @@
+{
+  "scope": "Bounded removal/status diagnostic preparation; runtime pending",
+  "status": "Built and packaged locally; not activated or functionally accepted",
+  "package": {
+    "sha256": "27b2903f2b2129b54b4d273ae2a738015a912a1a906b3b7014c59154039305d5",
+    "bytes": 394065
+  },
+  "ELF": {
+    "sha256": "b01d62a6638645c9dcf5553c0f52724572ec264e005f6d0967ed559c3fbbf378",
+    "bytes": 152600
+  },
+  "baseline_preserved": true,
+  "expected_runtime_hooks": 58,
+  "source_manifest_sha256": "98b77c4c2289991387b6f9551559af9f22b1429c1d5c2e8a834a792217d5bd51",
+  "source_count": 73,
+  "build": {
+    "image": "az-mods-sdk:1",
+    "image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "network": "none",
+    "platform": "linux/arm64",
+    "GLIBC": "2.17"
+  },
+  "checks": [
+    "ASan/UBSan actual observer bodies: consumed key freed by original, payload overwritten by original, exact forwarding/result, bounded logging and readiness",
+    "Packet bytes unchanged; short packet and invalid player paths do not access indexed fields",
+    "Supported preprocessor adds exactly four diagnostic claims over production54; parser remains once; failure check before readiness",
+    "Seven package members match staged source and built ELF; all65 production/frozen exported source hashes and original artifacts unchanged"
+  ],
+  "native_facts": {
+    "erase": "0x1c26aa0 erases matching tree nodes and returns count; tree object survives; capture key before native because key can alias freed node",
+    "removal": "0x1c1dbd0 reads event byte payload+0x18 low5 bits; events2,3,9 call exact-key erase and then remove listeners",
+    "prologues": "Offline objdump: erase first16 stp x29,x30;mov x29,sp;stp x21,x22;mov x21,x0. Removal first16 stp x29,x30;mov x29,sp;stp x19,x20;mov x19,x0. No PC-relative relocation.",
+    "status": "Record actual outgoing packet offsets0x6f/0x73/0x45e/0x45f with monotonic time and player. A status-field difference alone is not causal proof."
+  },
+  "limitations": [
+    "Coordinator-owned preparation after Sol workers stopped at service usage limit; no independent review claimed",
+    "Native loopback consumer event and actual missing-key removal not yet correlated at runtime",
+    "No production fix, physical AZ operation, release or publication"
+  ],
+  "package_members": [
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "assets/azhub-LICENSE.txt",
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "bytes": 18693
+    },
+    {
+      "path": "assets/azhub.ko",
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "bytes": 183848
+    },
+    {
+      "path": "assets/mount-hub.sh",
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "bytes": 1416
+    },
+    {
+      "path": "azmod.json",
+      "sha256": "c4b41be12b5afd911a4eb8af9a13eca09e72c2e94113fd37b0902286d5061c3f",
+      "bytes": 658
+    },
+    {
+      "path": "icon.png",
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "bytes": 945
+    },
+    {
+      "path": "usb-hub-support.so",
+      "sha256": "b01d62a6638645c9dcf5553c0f52724572ec264e005f6d0967ed559c3fbbf378",
+      "bytes": 152600
+    }
+  ]
+}

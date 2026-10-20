@@ -1,0 +1,78 @@
+{
+  "scope": "Experimental private media-state ownership with58hook diagnostic observers; runtime pending",
+  "status": "Built and packaged locally; not activated or functionally accepted",
+  "package": {
+    "sha256": "34bc7776ec5331ef2b56ab26aaead104c2d616e63b072c2d4b483d94f519be3c",
+    "bytes": 398247
+  },
+  "ELF": {
+    "sha256": "e0a51d92d412f95833b63d7dc5b3d7ba91e8aa2be2ae0b2ed25762654d890fd7",
+    "bytes": 156792
+  },
+  "baseline_preserved": true,
+  "expected_runtime_hooks": 58,
+  "source_manifest_sha256": "66986c9091725119254b5449ef094b67b4c17b1787391aee5f110abe642bb4ab",
+  "source_count": 74,
+  "build": {
+    "image": "az-mods-sdk:1",
+    "image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "network": "none",
+    "platform": "linux/arm64",
+    "GLIBC": "2.17"
+  },
+  "checks": [
+    "ASan/UBSan actual observer bodies: consumed key freed by original, payload overwritten by original, exact forwarding/result, bounded logging and readiness",
+    "All16 slot-state combinations pass ASan/UBSan; only USB/SD32-bit states and USB2/USB3 bytes change; all other1152-byte fields preserved; invalid packets unchanged",
+    "Supported preprocessor adds exactly four diagnostic claims over production54; parser remains once; failure check before readiness",
+    "Seven package members match staged source and built ELF; all65 production/frozen exported source hashes and original artifacts unchanged"
+  ],
+  "native_facts": {
+    "erase": "0x1c26aa0 erases matching tree nodes and returns count; tree object survives; capture key before native because key can alias freed node",
+    "removal": "0x1c1dbd0 reads event byte payload+0x18 low5 bits; events2,3,9 call exact-key erase and then remove listeners",
+    "prologues": "Offline objdump: erase first16 stp x29,x30;mov x29,sp;stp x21,x22;mov x21,x0. Removal first16 stp x29,x30;mov x29,sp;stp x19,x20;mov x19,x0. No PC-relative relocation.",
+    "status": "Record actual outgoing packet offsets0x6f/0x73/0x45e/0x45f with monotonic time and player. A status-field difference alone is not causal proof."
+  },
+  "experiment": "Own present-source mask per player replaces physical template media states; helper not promoted to production. Test against frozen actual-removal negative.",
+  "limitations": [
+    "Coordinator-owned preparation after Sol workers stopped at service usage limit; no independent review claimed",
+    "Native loopback consumer event and actual missing-key removal not yet correlated at runtime",
+    "No production fix, physical AZ operation, release or publication"
+  ],
+  "package_members": [
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "assets/azhub-LICENSE.txt",
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "bytes": 18693
+    },
+    {
+      "path": "assets/azhub.ko",
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "bytes": 183848
+    },
+    {
+      "path": "assets/mount-hub.sh",
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "bytes": 1416
+    },
+    {
+      "path": "azmod.json",
+      "sha256": "77e2c569cb9278eb275d122f830e26ee232df9ab0827a1c9e719dde877ea31c1",
+      "bytes": 648
+    },
+    {
+      "path": "icon.png",
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "bytes": 945
+    },
+    {
+      "path": "usb-hub-support.so",
+      "sha256": "e0a51d92d412f95833b63d7dc5b3d7ba91e8aa2be2ae0b2ed25762654d890fd7",
+      "bytes": 156792
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "Emulator-only controlled common-stage delay, derived from exact supported v5; build/package checks only, not installed or runtime accepted",
+  "supported_package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "diagnostic_package_sha256": "fd8169ffe7617ee9dd355c8ba3837a7d7c337e79b100164a9edcce5b85c453de",
+  "diagnostic_ELF_sha256": "11ad791a3ddcc8d631bbf7fe52a299c2db809d900c81f371afc0f0ba59915c64",
+  "source_provenance": {
+    "scope": "Offline emulator-only diagnostic variant; not built or installed",
+    "supported_source_freeze": "C:\\Users\\icast\\orca\\workspaces\\nacho-az-mods\\ribbonworm\\local\\integration\\link-coexistence-v5\\source-freeze.json",
+    "source_freeze_sha256": "b6829ad5395097a6a5ffdf36364da1665392fa89c9ca0ad9ea8a5504eb141e26",
+    "verified_production_files": 65,
+    "changed_file": "link-request-origin.h",
+    "original_sha256": "8f7b1e6f147292a7f5134ebc713d29b69e7e95bc96c9dcd167a146aae92efc65",
+    "diagnostic_sha256": "aabd65b8709d3b96bb3f1a779c48bb685b21f23318e282e0f4ccbd86fde26922",
+    "marker": "/media/usb/sdb1/MODS/v5-request-delay-common",
+    "delay_seconds": 8,
+    "kernel_guard": "6.6.* only",
+    "effects": "Consumes USB marker; pauses captured private request before existing stale check; no new hook or cancellation path",
+    "supported_candidate_modified": false
+  },
+  "supported_hook_claims_unchanged": true,
+  "parser_registration_count": 1,
+  "changed_package_members": [
+    "usb-hub-support.so"
+  ],
+  "SDK_image": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+  "compiler": "GCC7.5.0, AArch64, GLIBC2.17",
+  "SDK_header_sha256": "b94e2ba6656c2b852f18691d32225486f29265953c8bf09dcac9a18ce561a630",
+  "reconstruction": "src/azhub/research/scripts/prepare-link-request-delay.py",
+  "control": "One USB-resident marker, kernel6.6 guard,8s pause with provenance logged before original common-stage stale check. No new hook or replacement cancellation implementation.",
+  "limits": [
+    "Research artifact only; supported runtime results remain attached to5e8ecd candidate",
+    "No new sanitizer claim for inserted fault helper; production adapters already tested separately",
+    "SDK warning about settings-path strings remains same as supported artifact; no new internal settings writes",
+    "Package/catalog metadata uses example.invalid and remains ignored/local; no publication"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/source/request-delay-provenance.json",
+      "sha256": "1a596e9e1469efefb6974a430e972904396c23f165c3b25d6d2f2ddd91dc5467",
+      "bytes": 889
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/source/out/supported-preprocessed.i",
+      "sha256": "1bad79ebe5a3ecaf07b605d29a6c62ac89e4f85daf06941dd21dc42937024e1d",
+      "bytes": 507276
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/source/out/elf-versions.log",
+      "sha256": "116db585fc04a8b428d7db042c1dab3761274c900b7a2b021a6df8b748c75f50",
+      "bytes": 2841
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-request-delay/source/out/compiler.log",
+      "sha256": "839d24fe4997381909209a1cbf9a3d59e68a6637f6e7c02ebf39b4fcacf612c2",
+      "bytes": 249
+    }
+  ]
+}

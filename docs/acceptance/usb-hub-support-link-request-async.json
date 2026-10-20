@@ -1,0 +1,22 @@
+{
+  "scope": "Emulator-only native asynchronous common-load origin propagation",
+  "candidate_sha256": "452f2f4507997246f70de3c6e57b692207a1139f9ffe11eb60dd98caf58f32db",
+  "pid": 347650,
+  "kernel": "6.6.138-dirty",
+  "injection": "One-shot /run/azhub-queue-force-async causes the scoped controller's native needsToExecuteAsync query to return true once",
+  "request": {"deck": 1, "content": 495, "clock_ms": 16643724, "media": "0x1010200000602"},
+  "task": {"address": "0xffff8d647000", "serial": 7},
+  "origin": {"generation": 36888, "devnum": 39},
+  "observations": [
+    "Native common task submission was observed and registry binding succeeded.",
+    "Execution consumed the saved provenance and restored matching controller/media/origin scope.",
+    "Allowance, final admission and native completion result0 followed."
+  ],
+  "limitations": [
+    "This test exercises the native queue using an explicit diagnostic scheduling override, not naturally occurring asynchronous scheduling.",
+    "Cancellation before execution, destruction retirement and failed submission still need runtime coverage.",
+    "Origin is not yet enforced at later stages; stale-request rejection remains incomplete.",
+    "No hardware or supported release candidate acceptance."
+  ],
+  "local_evidence": "local/diagnostics/link-coexistence/queue-async-baseline.json and queue-async-baseline.log"
+}

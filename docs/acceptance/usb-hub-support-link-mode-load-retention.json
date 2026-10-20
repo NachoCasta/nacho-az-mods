@@ -1,0 +1,266 @@
+{
+  "recorded_at": "2026-10-19T04:05:32.956786+00:00",
+  "scope": "Experimental load-origin retention: one loaded hub track and five-source whole-hub eject across Off/On/Off",
+  "result": "PASS for this bounded emulator scenario",
+  "real_az_access": false,
+  "binary_sha256": "168a5cc3a9df4156b466a1b3e9149eb94aae0b8c905794b6b8ced96193aacef4",
+  "pid": 293978,
+  "change": "Capture physical USB identity at final load admission; retain the exact-media ledger entry for mode2 cached unload; require original sysfs generation/devnum/USB path to match the reserved source before new native detach preparation",
+  "observations": {
+    "mode2_exact_media_unload": true,
+    "native_detach_completion": true,
+    "five_sources_safe": true,
+    "five_backing_and_all_private_alias_mounts_absent": true,
+    "loaded_playback_position_advances": true
+  },
+  "samples": [
+    {
+      "pid": 293978,
+      "clock_ms": 14331960,
+      "view": 2,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 29.195,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 293978,
+      "clock_ms": 14351998,
+      "view": 2,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 2,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 2,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 2,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 2,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 46.851,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 293978,
+      "clock_ms": 14357363,
+      "view": 2,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdf",
+          "port": 2,
+          "state": 2,
+          "generation": 30025,
+          "devnum": 24
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 2,
+          "generation": 31124,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 2,
+          "generation": 30951,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sde",
+          "port": 2,
+          "state": 2,
+          "generation": 29852,
+          "devnum": 23
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 29679,
+          "devnum": 22
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 51.476,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "One loaded track rather than the earlier two-deck scenario",
+    "The final Off transition completed alongside the eject sequence; not a settled-mode-only test",
+    "Disconnect/replug stale-origin rejection remains to be tested",
+    "Origin capture at final load admission does not yet audit a source replacement racing an earlier queued load",
+    "No audio, hardware, generic cache-isolation or release-candidate acceptance",
+    "The change remains opt-in research overlay; existing production safe-eject code is unchanged"
+  ],
+  "local_evidence_sha256": {
+    "retention-eject-before.json": "2b5883e169d37a056db858879dbdc926876499dbb2dbf9f529791122bdc64cca",
+    "retention-eject-complete.json": "c5d13c8ea74c988ffcf865b421285cdb3a9895ea84a85d8bbd98828bf7388f28",
+    "retention-eject-later.json": "d50c32be260394dd7918f2fb73003b7718e5501dabd6bfad1e7e00adb5b68522",
+    "retention-eject-mounts.txt": "01126efa640167c69faa352a12967fff8b3c826b5e4b7f6bb3499fc5a963c3ba",
+    "retention-eject.log": "8b8e6c33398c075d97aa20cf71a611ae866b13a4edef586033dc7778f44a2ee8",
+    "retention-track-final.png": "797206b41816c203fa5a5122071161e7a110b7b2300910f74fad19fdbaea9cfd",
+    "retention-on.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352"
+  }
+}

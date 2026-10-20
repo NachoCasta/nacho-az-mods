@@ -1,0 +1,158 @@
+{
+  "recorded_at_utc": "2026-10-19T05:01:04.215988+00:00",
+  "scope": "Negative emulator full-status privacy observation after physical source reconnect; no physical controller access",
+  "binary_sha256": "d68b25186b05a4328f9e58f1950cdfb5828f6fc3b9821b8c8b322c500473f9c9",
+  "native_pid": 361197,
+  "capture": {
+    "path": "local/diagnostics/link-coexistence/queue-private-full-status.jsonl",
+    "sha256": "24e4f83b768c6c98a0da8a33aea10b5a8dea342ab8251c1bd786c353a399cf9a",
+    "rows": 2706
+  },
+  "timeline_reported_by_runtime_owner": [
+    "Deck 1 loaded private member 7 / USB slot 3 / content 495 from fixture A generation 36888, devnum 39.",
+    "Deck 2 subsequently loaded content 495 from fixture A generation 37312, devnum 40.",
+    "Fixture A was physically disconnected/reconnected twice before capture; current generation 37736, devnum 41.",
+    "Both decks remained paused with their old loaded tracks. No load or safe-eject request occurred during capture.",
+    "An isolated LinkPeer player 3 status session ran for 20 seconds at requested 126 BPM to provoke native status exchange."
+  ],
+  "conclusions": [
+    "Known source tuple masking fails for old private tracks cached after abrupt physical source replacement.",
+    "Deck 1 sent 50 masked and 97 player 1 / USB 3 / track type 1 / content 495 statuses; deck 2 sent 50 masked and 98 such exposed statuses.",
+    "The retained safe-eject ticket classifier does not establish private origin for abrupt physical disconnection.",
+    "An exact big-endian uint32 value 495 appears at packet offset 0x194 in all 295 complete statuses, including prefix-masked packets. Its semantic classification remains under investigation.",
+    "No exact private loopback IP or UTF-8 HUB_LIB/Algo marker was found anywhere in the complete captured statuses."
+  ],
+  "analysis": {
+    "result": "failed",
+    "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+    "complete_outgoing_statuses": 295,
+    "failures": [
+      "Deck 1 exposes a nonzero known media tuple",
+      "Deck 2 exposes a nonzero known media tuple"
+    ],
+    "missing_evidence": [],
+    "observations": [
+      {
+        "deck": 1,
+        "packets": 147,
+        "first_ns": 15513905267407,
+        "last_ns": 15543092106128,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 50
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 97
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 97,
+            "0x194": 147
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0101010101000001"
+          ],
+          "0xf9": [
+            "0101010101000001"
+          ],
+          "0x3fd": [
+            "0101010101000001"
+          ],
+          "0x41d": [
+            "0101010101000000"
+          ],
+          "0x468": [
+            "0101010101000001"
+          ],
+          "0x474": [
+            "0101010101000001"
+          ]
+        }
+      },
+      {
+        "deck": 2,
+        "packets": 148,
+        "first_ns": 15513714143233,
+        "last_ns": 15543099272985,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 50
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 98
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 98,
+            "0x194": 148
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0000000000000000"
+          ],
+          "0xf9": [
+            "0000000000000000"
+          ],
+          "0x3fd": [
+            "0000000000000000"
+          ],
+          "0x41d": [
+            "0000000000000000"
+          ],
+          "0x468": [
+            "0000000000000000"
+          ],
+          "0x474": [
+            "0000000000000000"
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "Marker matches outside known media fields require semantic review.",
+      "Absence of selected markers does not identify every extended field.",
+      "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+    ]
+  },
+  "validation": [
+    "Seven synthetic analyzer fixture tests passed, including missing payload, visible native same-content tuple, unrelated preference bytes 7/8, and extension marker reporting."
+  ],
+  "limits": [
+    "This is a negative result, not complete packet privacy acceptance.",
+    "Offset 0x194 is an unclassified marker match until native serializer or independent track-content correlation establishes its meaning.",
+    "Known preference rows are distinct from source identity fields and have not been cleared.",
+    "No safe-eject, successful native replacement, failed replacement, audio, or real CDJ acceptance is established by this capture.",
+    "Prior safe-eject ticket-based masking evidence does not cover abrupt physical disconnection."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "Host regression of cached-status privacy helper; no runtime acceptance",
+  "timestamp_utc": "2026-10-19T04:49:40.9297714Z",
+  "changed_behavior": [
+    "Cached-track content ID is captured with the retained detach proof instead of read from the mutable load ledger.",
+    "Pending and failed replacement attempts retain private classification for the cached track.",
+    "Simulated proof retirement permits native and external replacement reporting even with the same content ID."
+  ],
+  "checks": [
+    {
+      "test": "test-link-cached-status.c",
+      "result": "passed",
+      "instrumentation": "GCC AddressSanitizer and UndefinedBehaviorSanitizer",
+      "coverage": [
+        "Submitted pending and completed exact detach proof",
+        "Pending and failed same-content native replacement",
+        "Failed different-content replacement",
+        "Simulated proof retirement and native/external same-content status",
+        "Wrong controller/deck/owner, zero connection/reference/epoch, invalid ticket/phase/submission, truncated packet"
+      ]
+    },
+    {
+      "test": "test-link-status.c",
+      "result": "passed",
+      "instrumentation": "GCC AddressSanitizer and UndefinedBehaviorSanitizer"
+    },
+    {
+      "test": "test-link-udp-policy.c",
+      "result": "passed",
+      "instrumentation": "GCC AddressSanitizer and UndefinedBehaviorSanitizer"
+    },
+    {
+      "test": "test-link-udp-receive.c",
+      "result": "passed",
+      "instrumentation": "GCC AddressSanitizer and UndefinedBehaviorSanitizer",
+      "native_adapter_comparisons": 1032
+    },
+    {
+      "test": "link-packet-observer.py",
+      "result": "passed",
+      "instrumentation": "python3 -m py_compile"
+    }
+  ],
+  "limits": [
+    "The cached-status test simulates native success/unload by clearing proof validity; it does not execute the native callbacks.",
+    "Generated overlay must populate the new cached-proof content_id field before this adapter can be used.",
+    "No new emulator, physical controller, audio, or real CDJ acceptance.",
+    "No complete 1152-byte payload audit yet; observer --status-payloads enables a subsequent local audit.",
+    "A cached-origin packet serialized before proof retirement but sent afterward remains an unobserved ordering risk; content ID alone cannot distinguish native same-content replacement.",
+    "Explicit private member source tuples remain covered by the separate configured-source mask."
+  ],
+  "source_sha256": {
+    "src/azhub/research/scripts/link-cached-status-probe.h": "e4e69d778f615c569df407b3d375a41c80f4f963602d5737ed7ca650cc19f84d",
+    "src/azhub/research/scripts/test-link-cached-status.c": "a1087832dc0268c107a8ab91a1d31e84a3f95553c308338d8b408d4f4505bbb5",
+    "src/azhub/research/scripts/link-packet-observer.py": "36a25c06c7a6773a64baa0f856623546128f358fe4dcd1829c8520d3692b8d1d"
+  }
+}

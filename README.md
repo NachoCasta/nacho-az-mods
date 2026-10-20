@@ -22,10 +22,17 @@ in English. Preserve identifiers and observed test data, including track titles,
 
 ## USB Hub Support
 
-**PRO DJ LINK:** While this mod is enabled, communication with external players is blocked.
-Disable the mod and restart the AZ before using external PRO DJ LINK. Turning Link on
-does not disable the mod. Hub USB sources are not shared with external CDJs.
-For standalone hub use, leave the PRO DJ LINK setting off.
+**0.3.0 adds PRO DJ LINK coexistence:** four local decks with Link Off, or the
+native two-local-deck mode with Link On and external players. Hub libraries remain
+local and are not shared with external CDJs. Real-AZ tests covered a software peer
+over Wi-Fi, master/tempo/SYNC, reconnect and a fresh hub-track load. Actual CDJ
+interoperability and audible phase alignment remain unvalidated.
+
+**Known issue:** changing Link On/Off briefly disconnects and reannounces hub
+sources; previously loaded hub tracks can retain the source-unavailable triangle
+and rely on finite native caches. Select the intended Link mode before loading hub
+tracks. This remains unresolved. See [0.3.0 release notes](docs/releases/usb-hub-support-0.3.0.md).
+The external-player blocking warning in older release notes applies to0.2.1 and earlier.
 
 Connect multiple USB sticks to your XDJ-AZ through a USB hub. Browse playlists and tracks
 from each stick directly on the controller, just as you would with a normally connected

@@ -1,0 +1,378 @@
+{
+  "scope": "Supported all-slot replay correction after exact v4 mode-recovery negative; final runtime gates pending",
+  "status": "Build, portable plain/ASan+UBSan, SDK UI plain/ASan and strict seven-member checks pass; not activated",
+  "version": "0.3.0",
+  "stable_id": "usb-hub-support",
+  "firmware": [
+    "ep147-9e9454e357389ece"
+  ],
+  "min_core": "1.2.3",
+  "package": {
+    "sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+    "bytes": 385375
+  },
+  "ELF": {
+    "sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+    "bytes": 143592
+  },
+  "change": "Retain v4 own-media synthesis; replay every present unreserved owned source after native mode completion, rather than excluding all non-USB1 slots. Existing transition/epoch/eject serialization retained.",
+  "changed_from_v4": [
+    "link-mode-recovery.h",
+    "test-link-mode-recovery.c"
+  ],
+  "production_and_exported_source_count": 65,
+  "package_input_count": 71,
+  "sources": [
+    {
+      "path": "alias-mount.h",
+      "sha256": "413ae5b39d23b46a172fa88da1b57d5fe0d8d959d2cb9c9824e58354cd5c9d4a"
+    },
+    {
+      "path": "browser-guard.h",
+      "sha256": "24770e40075dbc96a28dfac8db6d400b34299ec4c22afd94b8e044420ddb6f0a"
+    },
+    {
+      "path": "community.c",
+      "sha256": "784e0cf93f1af5fc65e5c232efff26268f0cd00cb328e6ce0fe282d4b7f0c497"
+    },
+    {
+      "path": "db-cache-probe.h",
+      "sha256": "aa22680c95f23921b6655573a738d88de881d0e9070b978c0e3e9e7b815f22bf"
+    },
+    {
+      "path": "discovery.h",
+      "sha256": "29b73c8d52eb78136fc009553ef06f56204cea310593f62fcb5e22a9b15b19bd"
+    },
+    {
+      "path": "eject-detach.h",
+      "sha256": "e5bc2a8697277ec1561bf40d007e54c4368f7c9f3b39262f5087b70801126172"
+    },
+    {
+      "path": "eject-gesture.h",
+      "sha256": "bfa82e0b833854f02e526d2347825c3ab906e8668b482ba1b335b645eff80f95"
+    },
+    {
+      "path": "eject-input-health.h",
+      "sha256": "84b4abdb4c92d740a3039b5efe3cbbb8af5a1c7123cafd4398b4a4f013851b68"
+    },
+    {
+      "path": "eject-listener.h",
+      "sha256": "e4cc491c5895f3ac6191a0faf3364c9b63491565bd84fa4d28fa16842bdcf7c4"
+    },
+    {
+      "path": "eject-source.h",
+      "sha256": "8cb8603b7fb4071d52f0acf104dcb44ee85be835cfcb016cc75e477e13ab4e65"
+    },
+    {
+      "path": "eject-ui-model.h",
+      "sha256": "c22c4bc1eb16415e26abb0be638ddf521fa6f0a4fa70a4e6a11252e3def98058"
+    },
+    {
+      "path": "eject-ui.h",
+      "sha256": "8a6191b1e8981ad44a6282efddf65ed8fe11cb2060f527bc0146e39000b2310a"
+    },
+    {
+      "path": "eject-view.h",
+      "sha256": "848924bbf694c87def51e5a05984b6e616c6a45fb73818fb380effedf575c1cc"
+    },
+    {
+      "path": "hubservers.h",
+      "sha256": "2373891613576298e26f6b1ae768dd2f7dfa0ea7f75abbf7e3c02a4c5d57847e"
+    },
+    {
+      "path": "kernel-asset.h",
+      "sha256": "aa333d97b766954a0ac867687bf5a3537c2ba626d1ece9b3e98441453b82b01b"
+    },
+    {
+      "path": "link-cached-status.h",
+      "sha256": "58b4091c41eabdc1d006ffb455cbcf5bf5534d8d8d3def5f8b5f9bdbbf917ec8"
+    },
+    {
+      "path": "link-library-ownership.h",
+      "sha256": "57811f71f52e94a2079b6b9179cf6e78857148f3dd0b81ea08ceb356448942d6"
+    },
+    {
+      "path": "link-load-origin.h",
+      "sha256": "8cc6008d5f73334adf150625a4eb13197e688e72cba351afdb7fed9957947cbc"
+    },
+    {
+      "path": "link-mode-recovery.h",
+      "sha256": "2fb77ab81f746781d26e0b07c7cc4cbeac301b97c3be18464f7d8806ed8b405f"
+    },
+    {
+      "path": "link-private-admission.h",
+      "sha256": "c8d6e461d0dea155d2e21484c1ff091fa124d2a09377c26ee519519bb8b26eb7"
+    },
+    {
+      "path": "link-private-requester.h",
+      "sha256": "d30bc57e12135e149af12a4aebe8c13a9f5a3d73b4214977bd34e519ef0c3288"
+    },
+    {
+      "path": "link-request-origin.h",
+      "sha256": "8f7b1e6f147292a7f5134ebc713d29b69e7e95bc96c9dcd167a146aae92efc65"
+    },
+    {
+      "path": "link-request-tasks.h",
+      "sha256": "7cb996630e516c08590721e64b4e2b9712223c7807ad926c8025344109687dbb"
+    },
+    {
+      "path": "link-socket-registry.h",
+      "sha256": "321de96562405c8c639a399e6f9e06ba23f0fe256b800d879dade003db1893c5"
+    },
+    {
+      "path": "link-status.h",
+      "sha256": "fb1b435f2a902b33ee328d01c4278da54eddcdb24287c0943e9b149947eb6dae"
+    },
+    {
+      "path": "link-udp-ingress.h",
+      "sha256": "2b22bdfd597ac03246c856973ea2d651ff396b6f7f38cb1376e91b9ae9f387cc"
+    },
+    {
+      "path": "link-udp-policy.h",
+      "sha256": "5004827f6d023eb45fd13741f271a5d4873ff0fcd6b36bf0350e5e1ec34d9e5b"
+    },
+    {
+      "path": "link-udp-receive.h",
+      "sha256": "1826a758e75c2a14ec1506bd425920cfd02755ce15c2d1034ac777b54f70b360"
+    },
+    {
+      "path": "linkfake.c",
+      "sha256": "9c3306e48ca54286c16b4a54dfc13aa3daf610d321486b96ffac0c59265358bc"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "7bc112835aca3de02506794e99c060ef8222c850a5056ee95867df89973d7f8a"
+    },
+    {
+      "path": "mount-worker.h",
+      "sha256": "4f32de404628bbb812d33cc87fa9441630eb6649691cfc938543417dec6ccae5"
+    },
+    {
+      "path": "native-detach.h",
+      "sha256": "621e317f7c7d6f8ca0b3962256c24f34ead3408b58d2638b70cb56a5f92705ce"
+    },
+    {
+      "path": "network-identity.h",
+      "sha256": "27c195295262d1b1e9ea4ce5c02aa3931c0a85430f21f037fc84c1282724af91"
+    },
+    {
+      "path": "safe-eject.h",
+      "sha256": "cb5addf6dd944165d8bfdb5d6353eacec2f82303d51238871bda2be621ced359"
+    },
+    {
+      "path": "source-name.h",
+      "sha256": "b9088f1a5657ec32d2c1de3f64a174045e7af8ad11d5634f8b552ff1879388d9"
+    },
+    {
+      "path": "source-settings.h",
+      "sha256": "cc01ea9dd5b205ef25c9dcc574ef5a0d6489cc358b687c1e75ad6a98684a289d"
+    },
+    {
+      "path": "tag-cache-abi.h",
+      "sha256": "4df6bb96acc9d74d8bf7390c45301dd72fb716ada52985422b5f90374680ffad"
+    },
+    {
+      "path": "tag-cache.h",
+      "sha256": "85069c435deed5b81f228650c7c1e3421b44e3fb282247f3b74bc1ea05f75b0b"
+    },
+    {
+      "path": "test-alias-mount.c",
+      "sha256": "8397ac288f856442e1034832ddccdedf1510b9e75dbd6513e3a660c54ac9e3a3"
+    },
+    {
+      "path": "test-browser-guard.c",
+      "sha256": "44a54f09b5adada14fed0dc2add41861a77d0e909f257d7675aa9b54a7df9ecf"
+    },
+    {
+      "path": "test-discovery.c",
+      "sha256": "b600cc01f2853e6fe60cc5eab52a90a229b7a0618aa1d9f8ee4ff9aa312f0981"
+    },
+    {
+      "path": "test-eject-detach.c",
+      "sha256": "d4fc086e4d0c39d9f006f964ab75a68c400a3735f838d8f8c23058f12a4a61b8"
+    },
+    {
+      "path": "test-eject-gesture.c",
+      "sha256": "3a5915c517cab0227e29ca7371dd883aa2d893638c1f1ca10d12bb161786c651"
+    },
+    {
+      "path": "test-eject-input-health.c",
+      "sha256": "d42313510c154a8164b017ed2aa27a5cead72b77debd962218aa82870cf66ed5"
+    },
+    {
+      "path": "test-eject-listener.c",
+      "sha256": "d13097bffc23440a829e35c8e75f5cfce95aa23d26080ab837799f31e231aa3c"
+    },
+    {
+      "path": "test-eject-source.c",
+      "sha256": "666f0486e11ecd45ac30a2d201756a9bfa479c755d02235aa4c8d5bcff065006"
+    },
+    {
+      "path": "test-host.sh",
+      "sha256": "4db1d02f345cc98049e1b628976ae1fe11e08520ca1f142ad218596b2d335e0c"
+    },
+    {
+      "path": "test-kernel-asset.c",
+      "sha256": "f321d69d216b3e767c6b5f12dfe481652e72658f0c53f3808ad80c9b1b766d45"
+    },
+    {
+      "path": "test-link-cached-status.c",
+      "sha256": "6bee389a94cb319c03cda74dde6708502201a5f70ee3478ac7878e55b4de9cfa"
+    },
+    {
+      "path": "test-link-load-origin.c",
+      "sha256": "bba54eb780e29e262bb32b2fba1dfe3accc7cf4d57b02261389aa3f0eef7208a"
+    },
+    {
+      "path": "test-link-mode-recovery.c",
+      "sha256": "503dcff7e324568f5db31fb8fd66dff910d16f6ae6f35619d5a829f9cf171edd"
+    },
+    {
+      "path": "test-link-request-tasks.c",
+      "sha256": "b86ca233701cf4249980514fefcbb58a19b67d08eea3c27186ba804abfba7673"
+    },
+    {
+      "path": "test-link-socket-registry.c",
+      "sha256": "07be1949d2d94f894066b77cd216aaa92fdd4878d2a2ec92e67d3dfc58589cb9"
+    },
+    {
+      "path": "test-link-status.c",
+      "sha256": "eeb22ebc1daaeaf3531a19dfba2e6e71db655c0a2b3249b1c33b58f4abf4af50"
+    },
+    {
+      "path": "test-link-udp-policy.c",
+      "sha256": "a83c4d82218e20a9b759552ef41437801000295df52eb091db52dcdf5115cf53"
+    },
+    {
+      "path": "test-link-udp-receive.c",
+      "sha256": "ff924258fda4cabf21c4b180792da7208043a03ac4a8b6b80fb9571d1dce149d"
+    },
+    {
+      "path": "test-mount-worker.c",
+      "sha256": "83e8cf8ac8c1e9e8aada186c480be65464bef7adc1cc7ca31290b0a242db6716"
+    },
+    {
+      "path": "test-network-identity.c",
+      "sha256": "169655ef8673ce5ee8e72e3aac5b6cf742ba1a152e60b64c160df1c04260cc9c"
+    },
+    {
+      "path": "test-sdk-ui.c",
+      "sha256": "02fc0f1ccb6fba49c19acd43442353c167256768b746f8d7548a57149e545cbe"
+    },
+    {
+      "path": "test-source-name.c",
+      "sha256": "6f313d8d3483df353cfd99046c623fcd05d2c52e0f24e45ff21e452d3ca84c79"
+    },
+    {
+      "path": "test-source-settings.c",
+      "sha256": "a49009dbc0db9d3255e2d883fc4204951702519c7f6ab31a7a1c55aa8213f7d7"
+    },
+    {
+      "path": "test-tag-cache-abi.c",
+      "sha256": "0fa4ebd04efc4b8260a1b63d6ca124e609d3e3e7a4bc49e76fe11aa2a82308bf"
+    },
+    {
+      "path": "test-usb-presence.c",
+      "sha256": "c0d66603a2f4f3377a0c88e7a083184598e6122281e9967752a3ff7451c545fc"
+    },
+    {
+      "path": "usb-presence.h",
+      "sha256": "3a28b19c345b17f0d97f1b8c7d3792b721044ed116eb100d5e4e019a94918f96"
+    },
+    {
+      "path": "test-hook-registration.py",
+      "sha256": "bcf83588b5426b8b615c5f7d6f214bd86987a3443acf028a5164a89e81e0f20f"
+    }
+  ],
+  "build": {
+    "image": "az-mods-sdk:1",
+    "image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "platform": "linux/arm64",
+    "network": "none",
+    "GLIBC_versions": [
+      "2.17"
+    ],
+    "SDK_version": "1.2.3",
+    "SDK_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+    "headers": "Preserved pinned SDK reference include, mounted read-only"
+  },
+  "checks": [
+    "22 plain and22 ASan/UBSan portable components; all16 own-slot combinations plus invalid packets and full unrelated-byte preservation in production test-link-status.c",
+    "Supported preprocessor registrations exactly equal preserved v4 54hook candidate; parser0xef05c8 once; no diagnostic observer registrations",
+    "SDK UI10 plain and8 ASan checks pass; limitations in harness output preserved",
+    "Seven package members match source/ELF; exact manifest and kernel/support assets unchanged from v3"
+  ],
+  "environment_note": "Pinned ARM SDK compilation and subsequent preprocessing/ABI commands completed without environment repair in this v5 run; no image/compiler/header upgrade or network download.",
+  "prior_supported_negative": "docs/acceptance/usb-hub-support-link-functional-matrix-v4-partial.json",
+  "experimental_support": "docs/acceptance/usb-hub-support-link-slot7-owned-media-experiment-runtime.json",
+  "acceptance_boundary": "Exact v4 proves five-source Off loading/four-deck playback and bounded126BPM peer handoff, but fails On source recovery. V5 normal activation, both-direction duplicate-free replay, final matrix/eject/privacy and recovery remain pending.",
+  "TSan": "Not rerun for this correction",
+  "package_members": [
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "assets/azhub-LICENSE.txt",
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "bytes": 18693
+    },
+    {
+      "path": "assets/azhub.ko",
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "bytes": 183848
+    },
+    {
+      "path": "assets/mount-hub.sh",
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "bytes": 1416
+    },
+    {
+      "path": "azmod.json",
+      "sha256": "1e6b50379af39a9c03336019c2897848e125dab4fa100bd853eb4e652736c235",
+      "bytes": 976
+    },
+    {
+      "path": "icon.png",
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "bytes": 945
+    },
+    {
+      "path": "usb-hub-support.so",
+      "sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+      "bytes": 143592
+    }
+  ],
+  "local_records": [
+    {
+      "path": "local/integration/link-coexistence-v5/source-freeze.json",
+      "sha256": "b6829ad5395097a6a5ffdf36364da1665392fa89c9ca0ad9ea8a5504eb141e26"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/host-tests.stdout.log",
+      "sha256": "bf8edea0665a4c4bdcf5f8fac2f86f319372c0dac51f50d08105f4d5edda384a"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/host-tests.stderr.log",
+      "sha256": "a63775bee46a8f0260753aa2de257854acc3ba3d8daa1a2122ba68cde9721b6a"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/sdk-ui-tests.stdout.log",
+      "sha256": "d16edea9b42019ff4bb7611c20afca76eacaea480a3b5696f246d80e865711b5"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/sdk-ui-tests.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/package-export/src/azhub/linkfake/out/supported-preprocessed.i",
+      "sha256": "028a62834e4e64d1de967cd70e953d24c09152f066a117ebcafb4cded1338393"
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/package-export/src/azhub/linkfake/out/elf-versions.log",
+      "sha256": "daf5225cdd392b1e506ff71a3fce4d45eb7d634eeefd81ce07a83f040d83ae04"
+    }
+  ],
+  "publication": "Unpublished local candidate; no catalog/release/tag update or physical AZ operation"
+}

@@ -85,7 +85,7 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
     if (snprintf(temporary,sizeof temporary,"%s.%ld.tmp",output,(long)getpid())>=(int)sizeof temporary) return -1;
     FILE *config=fopen(temporary,"we");
     if (!config) return -1;
-    static const unsigned players[]={3,3,4,4,3,4,3,4};
+    static const unsigned players[]={7,7,8,8,7,8,7,8};
     static const unsigned slots[]={3,7,3,7,8,8,2,2};
     int failed=0;
     for (unsigned i=0;i<count;i++)

@@ -1,0 +1,34 @@
+{
+  "scope": "Emulator-only queue origin and listener audit; no automatic rejection",
+  "candidate_sha256": "1718255a483040b946613d0ba4544519ff63d6f2bd0a398a4f2604d9f90d8b4d",
+  "pid": 333514,
+  "kernel": "6.6.138-dirty",
+  "request": {"deck": 2, "content": 495, "media": "0x1010200000602", "clock_ms": 16128394},
+  "physical_origin": {
+    "before": {"valid": true, "generation": 36464, "devnum": 38, "disk": "sdb"},
+    "after": {"valid": true, "generation": 36888, "devnum": 39, "disk": "sdg"},
+    "same": false,
+    "source_slot": "member7/slot3",
+    "delay_seconds": 8,
+    "qmp_remove_add_seconds": 0.11467689997516572
+  },
+  "observations": [
+    "The same source slot was reused for a different block name and physical connection during the common closure delay.",
+    "The diagnostic captured the physical identity change before allowing the original closure to resume.",
+    "The old media request still reached allowance; no later final admission was present in this capture.",
+    "Deck2 retained its earlier loaded content495. Loaded telemetry alone therefore cannot establish completion of the delayed replacement request."
+  ],
+  "preload_listener_audit": {
+    "count": 19,
+    "noop_callback": "0x9da950",
+    "active_callbacks": ["0xaad328", "0xa96b40", "0x1a8d940"],
+    "meaning": ["InstantDoublesLoader", "DragAndDropTrackLoader", "GUI LoadLockHandler"]
+  },
+  "limits": [
+    "Identity capture occurs at closure entry, not initial request submission; the earlier queue interval remains uncovered.",
+    "Delay and rejection are explicit diagnostic markers, not automatic source-change handling.",
+    "The listener set is observed for this process/deck/mode only.",
+    "Instant Doubles rejection clears its state without comparing location; stale notifications require additional correlation before dispatch."
+  ],
+  "local_evidence": "local/diagnostics/link-coexistence/queue-origin-common-before.json, queue-origin-common-after.json, queue-origin-common.log"
+}

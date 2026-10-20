@@ -1,0 +1,61 @@
+{
+  "scope": "Healthy emulator xHCI startup control; five private rows but native music not registered, so not nativeUSB2 coexistence acceptance",
+  "candidate_elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "initrd_sha256": "6bf35ea5db8fca4b9ec8d95342d253a33e7fdbc230e2582f3f37a7fab7c725b8",
+  "PID": 974,
+  "boot_id": "5acd568d-c0e0-413b-ba9c-59be7afea3be",
+  "native_mode": "Off photographed",
+  "initialization": "Normal loader initialized54hooks; matching xhci_pci normal boot unit success; EEEE",
+  "health": "All six guest partitions and physical mounts present, no controller error, through guest303seconds",
+  "private_sources": "All five native source rows visible with final individual labels, including member7/USB2 and member8/USB2",
+  "native_absence_cause": "Direct xHCI mass storage negotiated5000Mb/s; sysfs sda1 was usb3/3-1. Native stock exactport mapping recognizes only1-1/2-1, so mounted music/mods had no native source row",
+  "limits": "No music load or write workload acceptance; all-five visibility without a native row does not resolve prior slot7/nativeUSB2 regression",
+  "cleanup": "All decks EEEE before standard poweroff; frozen serial captures shutdown",
+  "raw": [
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-first-state.txt",
+      "sha256": "856265a2d56b3c996a9b812500e6a37f4663e03dfb4e5d3e66b4fae84a20137e",
+      "bytes": 4978
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-init-state.txt",
+      "sha256": "cc03c0460ea2e870be5d552c77b7594623f82cf4386455f63ad3ac394a7f9024",
+      "bytes": 47887
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-startup-health.json",
+      "sha256": "92a65f9d61b1253055b37c28c6d635430d551aece4ea8b07a73b3735068986cf",
+      "bytes": 66942
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-source-health.json",
+      "sha256": "9d6112dccf2ca3eb0272cf1610b838f8c4834ed4de7713e8bb64eb201804dc5a",
+      "bytes": 66944
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-no-native-final-health.json",
+      "sha256": "d553ca0ea20a080dd335db4709bb0fb82b5c890bb85aaff713bcdfb4b0d33c2f",
+      "bytes": 66945
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-source-after-utility.png",
+      "sha256": "d9b1fd4ed586f04ffb6204f0a132bdaaf28dd91ffde6dbd8db5627d67fcbc8ac",
+      "bytes": 41106
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/xhci-utility-check.png",
+      "sha256": "b40804044868218ae4b8157b7b8d04dc31024c17f2674b0fbf5d7c3345ebf1f8",
+      "bytes": 69702
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-matrix-off/launch.json",
+      "sha256": "81a004acdabfa129a7eae0d2f42afdb8b753a0ff7b152ab089b41bbf5c6cd7e2",
+      "bytes": 12210
+    },
+    {
+      "path": "C:/Users/icast/orca/workspaces/nacho-az-mods/ribbonworm/local/diagnostics/link-normal-loader/boot-xhci-matrix-off/serial.log",
+      "sha256": "ac9c7cbd32c96b6c2dcb4098cdd72c92db7934960ae679e50dc333deee2f94a7",
+      "bytes": 137114
+    }
+  ]
+}

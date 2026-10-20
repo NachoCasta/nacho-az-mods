@@ -1,0 +1,178 @@
+{
+  "scope": "Exact supported v5 physical virtual-USB unplug/replug, fresh native UI load/Instant Doubles retry and known full-status private identity checks; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 848,
+  "boot_id": "bbd73fbd-c90b-46ff-8ace-4b2d28313642",
+  "physical_identity": "A at xHCI port2.1/source0/member7 slot3 unplugged via native QMP device_del atguest531.41; devnum3. Same child image reattached on same port, newdevnum8, sysfs inode23907. sdletter and private key reused. Old inode was not sampled in this bounded trial.",
+  "old_track": "Deck2 old Algo495 remains loaded after disappearance, source warning shown. It had already reached track end before removal; later CUE/PLAY advances cached playback while absent. This is not an uninterrupted-playing-across-removal control.",
+  "fresh_retry": "Reconnected member7/3 browses1944 and normal LOAD1 admits source0/result0. HeldSYNC2 then admits source0/result0 onto deck2 and both show03:46.452. No restart or mod rebuild. Seven mounted partitions remain healthy.",
+  "privacy": {
+    "full_statuses": 349,
+    "native_players": {
+      "1": 177,
+      "2": 172
+    },
+    "violations": [],
+    "scope": "All standard source/content fields zero; all eleven auxiliary private MediaIDs removed; selected private IPv4 and uint32BE/LE495/1944 markers absent across full1152 payloads. No complete semantic tail guarantee."
+  },
+  "insufficient_controls": [
+    "LOAD1 after unplug was attempted after native UI had reset the selected browser. No stale request admission was demonstrated; do not count it as queued normal cancellation.",
+    "HeldSYNC1 attempts while source absent left native deck1 unchanged, but screenshot navigation and lack of tagged request trace do not establish the queued cancellation path. Deterministic stale common/allowance/final stage controls still require appropriate fault testing.",
+    "Initial device_add referenced legacy functionaldriveA; QEMU had removed its backend on detach and returned missing-drive. Explicit blockdev-add then attached same child successfully; failure is preserved in replug action record.",
+    "Initial replug identity command produced devnum but no stat inode; confirmed later with ls-id in separate frozen record."
+  ],
+  "limits": [
+    "No hardware/audio/phase or full-track cached acceptance",
+    "No superseded queued-task cleanup/destructor-only race acceptance from these manual timing trials",
+    "Kernel6.6 and mapped virtual STOP2 fixture only"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/physical-unplug-A.json",
+      "sha256": "65a3c04b0cc0f2fcd486dd67654ee65943af1689b2580133490fb456a950cfaa",
+      "bytes": 140
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/physical-replug-A.json",
+      "sha256": "50ea31457e57d7fa4d3acee7bc252250c1e8e973ad2fb969c09e2995227efe67",
+      "bytes": 517
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/lifecycle-before-replug-usb.json",
+      "sha256": "78eea58d5066b2a95d249312e35bcffe1e995b13c08c966bf7fe62d65cd5261d",
+      "bytes": 684
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/replug-identity.txt",
+      "sha256": "ebf006bfb9328b2b9d5dcde952d13c866662c2483a3129659f42dc122458986d",
+      "bytes": 178
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/replug-identity-confirmed.txt",
+      "sha256": "3319ccf554f4c0cca2f3b922dda89c4d36e7d6731423c9ec107da287d52eccc2",
+      "bytes": 132
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-stale-normal-state.txt",
+      "sha256": "be4152a1cc5402555bb99633afcb5d91c208da58328bfc343ddf398a51ad9cac",
+      "bytes": 181872
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-stale-normal-ui.png",
+      "sha256": "ee87b79e3413d6e9f207c94414422c4937c5c986d958d24cc191b1ad8af55dea",
+      "bytes": 74205
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-id-state.txt",
+      "sha256": "9ab95e805aba75eb45637f817a11b746e587c0e92334a1c14f27abf4bfbf5775",
+      "bytes": 184498
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-id-ui.png",
+      "sha256": "ee87b79e3413d6e9f207c94414422c4937c5c986d958d24cc191b1ad8af55dea",
+      "bytes": 74205
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-playing-id-state.txt",
+      "sha256": "11648e08e7ba1eb1c894ce3af89b97a572e953f5330f6b34d4dec688a57cea26",
+      "bytes": 186294
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-unplug-playing-id-ui.png",
+      "sha256": "d54d7241a2dfa7723004605c5b13dfdb8fb05b0b5ba79ad8fc98c67e72e99bd0",
+      "bytes": 75649
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-unplugged-id-held-sync.json",
+      "sha256": "1e9e724c2e6dc4cb687e433e28da94be176262428c04e85de4eace93711382ef",
+      "bytes": 304
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-unplugged-playing-id-held-sync.json",
+      "sha256": "2eb931ea24aae76e207e8d9537b32d9ce4b4c5854dc43ab2899d1a6b49a61758",
+      "bytes": 304
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-first-state.txt",
+      "sha256": "4d5ac67ad14f760c741eaa0990916f01a114a9a1a1eae5fa493981a822639a4e",
+      "bytes": 187575
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-second-state.txt",
+      "sha256": "ac7eaacf4169afdd1475a0d48c9278c50754d5496666b92b66cc1c1bfdd2219d",
+      "bytes": 188406
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-source-explicit.png",
+      "sha256": "64a5ef9f2d7e4e48725f0bda546678e996b3278790b39d58c33d4c9663e3c17d",
+      "bytes": 101804
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-fresh-loaded-state.txt",
+      "sha256": "35cee09ceb1b3c62293a7e0fc7175d126e78314a91310a9f656c91615fb8fb48",
+      "bytes": 200643
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-fresh-playing.png",
+      "sha256": "2235bcbecb19f0359b4334755e163f7da8dff98ab1590d5cbfe87241f17268e9",
+      "bytes": 160529
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-fresh-id-state.txt",
+      "sha256": "a20dbc28562a476edc67f2c264636877316c7ff4b715a82a08793f15d1f97e31",
+      "bytes": 204265
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-fresh-id-ui.png",
+      "sha256": "b5331eeb4bf91868f78466843656482b5794d5bb2144403b9525a8c6f79a24ad",
+      "bytes": 130737
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-v5-replug-fresh-id-held-sync.json",
+      "sha256": "d275c2d7e10bd2b8fd056261aebc368a2d1b79fb5d170be10e4b5640f6b5a718",
+      "bytes": 304
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-physical-replug-final-state.txt",
+      "sha256": "d3224bd34078d6db43465e0d34c22707aa665fb00d2a8668737f2ca29a66b6c2",
+      "bytes": 211178
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-replug-seven-health.json",
+      "sha256": "6fcf19118b64ab91a4ee55b86e6b5236e10318e2fbe105d839214b49ab1929f0",
+      "bytes": 111595
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/replug-private-full-status-run.json",
+      "sha256": "54955e9429bf28dce5e4fa3449df2cec1242882371029ebe87be3ce9c56298d3",
+      "bytes": 1294
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/replug-private-full-status-peer.jsonl",
+      "sha256": "a63c3d64091cc27649011e5e8f48cfaf1def6ecbd71953005e4af1d5204ec833",
+      "bytes": 60713
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/replug-private-full-status-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/replug-private-full-status-wire.jsonl",
+      "sha256": "51a44e45b5aed102e477f26c0ea9389ca8a99ef2a6a3795913675e625ba10b16",
+      "bytes": 1503599
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-lifecycle-network/replug-private-full-status-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-lifecycle-cleanup-state.txt",
+      "sha256": "58effc547a9f0ef6fbe503457a083221090c5748ec0a68f4ac4f17b7b229937f",
+      "bytes": 231196
+    }
+  ],
+  "cleanup": "Native UI unload after controls settles EEEE in unchanged native848; diagnostic delay variant not installed."
+}

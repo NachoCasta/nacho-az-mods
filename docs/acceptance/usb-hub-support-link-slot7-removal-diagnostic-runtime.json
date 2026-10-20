@@ -1,0 +1,70 @@
+{
+  "scope": "Third logging diagnostic: actual exact-key removal with synthetic status observations; not supported candidate acceptance",
+  "package_sha256": "27b2903f2b2129b54b4d273ae2a738015a912a1a906b3b7014c59154039305d5",
+  "ELF_sha256": "b01d62a6638645c9dcf5553c0f52724572ec264e005f6d0967ed559c3fbbf378",
+  "final_PID": 776827,
+  "intermediate_unapproved_PID": 771972,
+  "expected_and_observed_hooks": 58,
+  "activation": "Hash-verified actual mods USB copy; supported apply IPC, native Allow and Reload now. Framework-managed persistent staging/approval, no manual internal settings, firmware, service or memory edits. Emulator only.",
+  "health": "Seven actual mounts at native1-1/2-1 and nested3-2.1..5; no controller faults; EEEE before activation and during observations.",
+  "removal_lines": [
+    "slot7-remove at=32801.467739808 owner=0xfffedbcce610 category=1 member=0x602 sdid=0x22 subkind=0x1 event=2 caller=0x237d800",
+    "slot7-erase at=32801.468414896 tree=0xfffedbcce6f0 category=1 member=0x602 sdid=0x22 subkind=0x1 before=5 after_valid=1 after=4 removed=1 caller=0x1c1dd90",
+    "slot7-remove at=32810.431479296 owner=0xfffedbcce610 category=1 member=0x702 sdid=0x22 subkind=0x1 event=2 caller=0x237d800",
+    "slot7-erase at=32810.431650800 tree=0xfffedbcce6f0 category=1 member=0x702 sdid=0x22 subkind=0x1 before=6 after_valid=1 after=5 removed=1 caller=0x1c1dd90"
+  ],
+  "status_offset_0x45e_values": [
+    0,
+    4
+  ],
+  "status_observation_limit": "32 packets per private player cover startup only, ending before the first private mount. Alternating0/4 is observed but is not contemporaneous causal proof for the later removals.",
+  "interpretation": "Both missing full keys are actually removed by native event2; erase caller0x1c1dd90 removes exactly one node. Removal-body caller0x237d800 is queued dispatch, not proof of the original status consumer. Investigate exact native state semantics before changing status synthesis.",
+  "production_fix": false,
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/package-27b2903f2b21/usb-copy.json",
+      "sha256": "3a49a5fff667c0edaab371a0dfce99c21db6304f062c3100d7b2f783ae1a2f3d",
+      "bytes": 1172
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-before-removal-trace-health.json",
+      "sha256": "b8159e57a7edd2a0e5903861b09a2e908ae6cd1c8825d366767c765bf214a03f",
+      "bytes": 100499
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-unapproved-state.txt",
+      "sha256": "acb3d93464d6e0c750d679e353a9a8661db18cd6e29fe90ef1c36134a0d6e1ef",
+      "bytes": 65719
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-accepted-state.txt",
+      "sha256": "f2ec2c90e7bb0ccc75c555b1e495d277fb86641d9cf903889849e2f3025c8fa4",
+      "bytes": 87676
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-settled-state.txt",
+      "sha256": "a74c97766382bf9476ece2484b977ec8839326ca1eabf9497139e67168d0b045",
+      "bytes": 120467
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-slot7-removal-settled-health.json",
+      "sha256": "372840e279621236e927c3f62cc4526600430f124bf6921094e9af9d79cf5fd0",
+      "bytes": 102108
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-allow-page.png",
+      "sha256": "616c89d4d079ffff709189ee15a61e5830553ff7bc181829e7fe8537f4eba190",
+      "bytes": 40188
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-allowed.png",
+      "sha256": "1e01236e60d9d9bd932a4925a54a898bc83de9ca75b5f43f7bb9972847fe42a7",
+      "bytes": 43736
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-removal-reload-dialog.png",
+      "sha256": "1e01236e60d9d9bd932a4925a54a898bc83de9ca75b5f43f7bb9972847fe42a7",
+      "bytes": 43736
+    }
+  ]
+}

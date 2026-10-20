@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-19T04:11:37.935629+00:00",
+  "scope": "Stale physical origin rejection and fresh reload recovery in isolated emulator",
+  "real_az_access": false,
+  "pid": 293978,
+  "runtime_binary_sha256": "168a5cc3a9df4156b466a1b3e9149eb94aae0b8c905794b6b8ced96193aacef4",
+  "sequence": [
+    "Replug five previously ejected fixtures",
+    "Load deck2 from member7/USB1 (fixture A), turn Link On to reach native cached mode2",
+    "Disconnect and reconnect A through QMP without reloading the cached track",
+    "Long STOP refuses deck2 identity and retains all five mounts",
+    "Reload deck2 from the current A library, then long STOP successfully ejects all five; cached playback advances"
+  ],
+  "old_connection": {
+    "label": "HUB_LIB",
+    "disk": "sdc",
+    "port": 2,
+    "state": 0,
+    "generation": 31799,
+    "devnum": 27
+  },
+  "new_connection": {
+    "label": "USB on hub port 1",
+    "disk": "sdc",
+    "port": 2,
+    "state": 0,
+    "generation": 33919,
+    "devnum": 32
+  },
+  "negative_result": "Expected refusal; no backing mount removed",
+  "positive_result": "Five safe states, absent mounts, advancing deck2 playback",
+  "host_test": {
+    "source": "src/azhub/research/scripts/test-link-load-origin.c",
+    "result": "Passed -Wall -Wextra -Werror with ASan/UBSan",
+    "coverage": "Reservation state and source mask; invalid identity; USB path/devnum/generation mismatches; 999 changed generations including repeated devnum",
+    "integration": "The generator now uses the tested helper; rebuilt851e6ff8 is not installed, so runtime evidence remains assigned to168a5cc3"
+  },
+  "limits": [
+    "Queued source replacement before final load admission remains unaudited",
+    "After stale-origin refusal, a fresh load was required; seamless eject of a new connection while an old unproven cached track remains is not implemented",
+    "Deck1 retained a previously proven cached track but was stopped at end-of-track; only deck2 playback advances in this trial",
+    "No hardware/audio acceptance"
+  ],
+  "local_evidence_sha256": {
+    "origin-before-unplug.json": "ece01139d0e53ca8b611cea933dc097ad5cb891c02e92faaca834ffa0bfa78a0",
+    "origin-after-replug.json": "df6c38f3973bb684614b39d711ebfbc77aa9c96fb90870bbdcfe28b3cab8f9de",
+    "origin-refused.json": "ca61cdad12eaa8387d477fa16be2576b30e495a816ea68351d71ce0ff58d35f1",
+    "origin-refused.log": "58b4b20969faf6b58ececcc47e202414bbaa3299203ccb9f9376c34929402ab8",
+    "origin-refused-mounts.txt": "b2aae9a36ceecf5c88b06318b6a07be8e0a2a9a95ed153742533e6023930f4b9",
+    "origin-fresh-eject-before.json": "2276634ed52828c872f3df4ce76f1aa202aae8aba35bd6301179a704ea33ef89",
+    "origin-fresh-eject-complete.json": "6b68cf9bf38df197bf5fb10e00b8338187f7cccee37f0ad64696d7e234bc5ce2",
+    "origin-fresh-eject-later.json": "c9715cba5aedfc222f96866bea648bdfa296ea3f9a77ea39c605856d747a0e11",
+    "origin-fresh-eject-mounts.txt": "01126efa640167c69faa352a12967fff8b3c826b5e4b7f6bb3499fc5a963c3ba",
+    "origin-fresh-eject.log": "6533eb77b22f96674b24ba98ab17b5c4b94a6dc804567d309db69bbb9d8f9d50",
+    "origin-track.png": "11a3bc2146343761ae5fbc2dbb9e90ec251f042ff82c00110369fe5c7141f500",
+    "origin-reload-track.png": "67ade64708e955b53ca28b91fc4bf3260e0d1fdb71a4a320d94413a64d1e50fd"
+  }
+}

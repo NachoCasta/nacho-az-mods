@@ -24,22 +24,26 @@ static void community_discovery_poll(void);
 #include "linkfake.c"
 #include "discovery.h"
 #include "kernel-asset.h"
+#include "usb-presence.h"
 #include "mount-worker.h"
 #ifdef LF_EJECT_UI
 #include "eject-ui.h"
 #endif
 #ifdef LF_SAFE_EJECT
 #include "safe-eject.h"
+#include "link-cached-status.h"
 #endif
 
 static const char *community_mount_table(void) {
     const char *fixture=getenv("AZHUB_DISCOVERY_MOUNTS");
     return fixture ? fixture : "/proc/mounts";
 }
-static void community_enable_internal_link(void) {
+static void probe_mode_maintain_cache(void);
+static void community_enable_internal_link(void) { probe_mode_maintain_cache(); }
+static void community_enable_internal_link_unlocked(void) {
     /* Exact-firmware writable cache, distinct from the persisted user setting.
      * Keep local library/member machinery active without selecting Link mode
-     * (which disables local decks 3/4). Physical Link packets stay filtered. */
+     * (which disables local decks 3/4). Private hub transport is admitted separately from physical Link. */
     volatile unsigned char *enabled=(volatile unsigned char *)0x3f86a08;
     if (!*enabled) {
         *enabled=1;
@@ -102,9 +106,21 @@ static int community_abort(int result) {
     }
     return result;
 }
+#include "link-private-admission.h"
+
+#include "link-library-ownership.h"
+
+#include "link-mode-recovery.h"
+
+#include "link-request-origin.h"
+
 static int community_init(const az_core_v1 *core) {
     if (!core || core->abi!=AZ_MOD_ABI || !AZ_HAS(core,claim_hook)) return -1;
     lf_core=core;
+    if (community_require_usb(core)) {
+        core->log("usb-hub-support","matching USB package assets unavailable; initialization refused");
+        return -40;
+    }
     hub_mount_restore_fault();
 #ifdef LF_SAFE_EJECT
     int safe_prepare_result=safe_eject_prepare();
@@ -126,7 +142,7 @@ static int community_init(const az_core_v1 *core) {
     setenv("LINKFAKE_HUBSRV","1",1);
     setenv("LINKFAKE_SLOT_CAPS","1",1);
     setenv("LINKFAKE_LATE_SERVERS","1",1);
-    setenv("LINKFAKE_LOCAL_ONLY","1",1);
+    unsetenv("LINKFAKE_LOCAL_ONLY");
     setenv("LINKFAKE_BROWSER_GUARD","1",1);
     setenv("LINKFAKE_PRIVATE_TAG_CACHE","1",1);
     unsetenv("LINKFAKE_SLOT");
@@ -159,6 +175,14 @@ static int community_init(const az_core_v1 *core) {
     eject_result=eject_install_hooks();
     if (eject_result) return community_abort(eject_result);
 #endif
+    probe_private_admission_install();
+    if (lf_hook_failures) return community_abort(-36);
+    probe_library_ownership_install();
+    if (lf_hook_failures) return community_abort(-37);
+    probe_mode_recovery_install();
+    if (lf_hook_failures) return community_abort(-38);
+    probe_queue_install();
+    if (lf_hook_failures) return community_abort(-39);
     __atomic_store_n(&community_ready,1,__ATOMIC_RELEASE);
 #ifdef LF_SAFE_EJECT
     /* Keep the selector/coordinator available with no active libraries, including
@@ -173,7 +197,7 @@ static const az_mod_v1 hub_mod={
     .abi=AZ_MOD_ABI,.size=sizeof(az_mod_v1),.id="usb-hub-support",
     .fw_tags=hub_firmware,.init=community_init
 #ifdef LF_EJECT_UI
-    ,.tick=eject_tick
+    ,.tick=probe_queue_tick
 #endif
 };
 AZ_MOD_EXPORT const az_mod_v1 *az_mod_v1_entry(void) { return &hub_mod; }

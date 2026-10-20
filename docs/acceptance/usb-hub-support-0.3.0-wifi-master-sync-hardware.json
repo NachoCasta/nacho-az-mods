@@ -1,0 +1,60 @@
+{
+  "scope": "Real AZ Wi-Fi negotiated software-peer master transfer and hub-track tempo following",
+  "mod_id": "usb-hub-support",
+  "version": "0.3.0",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "native_PID": 1356103,
+  "network": "User-authorized Wi-Fi AZ to Ethernet PC on existing LAN; no interface/firewall changes",
+  "peer": {
+    "library": "Beat Link8.0.0",
+    "player": 3,
+    "role": "handoff",
+    "tempo": 126,
+    "observation_seconds": 60,
+    "exit_code": 0
+  },
+  "result": {
+    "previous_master": 1,
+    "negotiated_peer_master": true,
+    "confirmation_ms": 52.952,
+    "status_packets": 714,
+    "beats": 128,
+    "synced_native1_packets": 297,
+    "synced_native1_effective_bpm_range": [
+      126.00005340576172,
+      126.00005340576172
+    ],
+    "cleanup": "Normal stopped event. Shutdown lost callbacks are not proof of native peer-loss handling."
+  },
+  "manual_audio": "User said funciona after being asked to enable SYNC on CAMI deck and confirm126BPM/continued playback. User-reported, no audio capture.",
+  "source_retention": "During/after read-only SSH: same nativePID1356103, CAMI remains discovered, decksLLEE.",
+  "limitations": [
+    "No audio-phase or latency measurement, actual-CDJ compatibility or full1152-byte physical status privacy claim.",
+    "Native mode-change transient source disconnection/warning triangle remains unresolved.",
+    "External peer disappearance/reconnect recovery and fresh load while following remain separate checks."
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/az-link-wifi-handoff-126.jsonl",
+      "sha256": "843beb68de00d144b2c51cec44dc9362fd120d7b281b493409409f7603148a9c",
+      "bytes": 138859
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-handoff-126.stderr.txt",
+      "sha256": "b0d5bc87774725b8f216fe16923049cadc3d49dce38a1fef0d7a312030704fa8",
+      "bytes": 1768
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-handoff-during-ssh.txt",
+      "sha256": "7f2b3c6bbb9289dc1683a9513b62ac2781a757c32a8116cc76b2f0dcec18f3ba",
+      "bytes": 497
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-handoff-after-ssh.txt",
+      "sha256": "3957727e3d6f3797233703ba30ebfb33d54d7640c0c1de87404c3198810ec609",
+      "bytes": 497
+    }
+  ]
+}

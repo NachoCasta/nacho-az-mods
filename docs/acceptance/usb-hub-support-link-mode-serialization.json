@@ -1,0 +1,168 @@
+{
+  "timestamp_utc": "2026-10-19T02:57:53.447152+00:00",
+  "scope": "Mode adapter cache/source synchronization and unloaded emulator mode cycle",
+  "binary_sha256": "94c87351207f083b2f7b385f2de9663841a682ee82c727282eccd8b6b1879308",
+  "pid": 210526,
+  "real_az_access": false,
+  "adapter_tests": {
+    "source": "src/azhub/research/scripts/test-link-mode-recovery.c",
+    "source_sha256": "2c06f8e53045532da2af564eaa248b5f0b66902d377980b4fe2aa386d04a0a01",
+    "adapter_sha256": "88a98d53dedce75b9e9f5d88d90c96a54070dc96f8f320523141175e387a7ea1",
+    "asan_ubsan": "PASS",
+    "tsan": "PASS",
+    "transition_cycles_per_run": 20000,
+    "checks": [
+      "Concurrent cache writer does not overlap mocked native transition",
+      "Reserved or pending eject defers replay",
+      "Slot3 replay leaves slot7 untouched",
+      "Handled epoch does not replay again"
+    ]
+  },
+  "emulator": {
+    "cycle": "Off -> On -> Off",
+    "native_completion_epochs": [
+      2,
+      3
+    ],
+    "visible_source_rows_each_mode": 3,
+    "duplicate_rows_observed": false,
+    "on": {
+      "pid": 210526,
+      "clock_ms": 10262224,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "off": {
+      "pid": 210526,
+      "clock_ms": 10301292,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 26827,
+          "devnum": 17
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 26481,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 26654,
+          "devnum": 16
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Native task concurrency and owner lifetime are not proven by mocked callbacks",
+    "Loaded transition and external peer tests have not been repeated on this exact binary",
+    "A completed epoch can still need deferral if a newer transition starts before source replay; rapid-change handling remains open",
+    "Source warning icon, eject overlap, other slots, production integration and physical recovery remain open"
+  ],
+  "local_evidence_sha256": {
+    "mode-serialized-on.json": "de7b95466379e5063f7fbb71acf2b607700c2686c98b55ccf07b71a6487205e6",
+    "mode-serialized-on.log": "66268bdcfc43763c3aa30c16199d2fa8ef06a0bfb364a666a3af0d398e34cc4e",
+    "mode-serialized-off.json": "ee2060373ed49e8d3bbd698d9ddeccab2413437431c2d832293fa057a1084280",
+    "mode-serialized-off.log": "30dd918bf87e9117bae049dfd4775bd0b5e448dac3a5478d92b58a2a66b6a7a9",
+    "mode-serialized-setting-on.png": "ca1bfa4528cb989afa8eec09c0e9e050b6d4c63883758ea7eee3bc284cde1352",
+    "mode-serialized-sources-on.png": "b7d46ec2979971b4912bc59a4275a4933df002fa4c157dbd07a15502bfc86174",
+    "mode-serialized-setting-off.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "mode-serialized-sources-off.png": "64730cfaa6efcc7c4a60a48e7e897aa140718a981323f5e36bd76e956db9c8e9"
+  }
+}

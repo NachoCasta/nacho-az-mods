@@ -1,0 +1,74 @@
+{
+  "scope": "Independent local-only review of frozen exact-v3 normal cold-boot evidence; no emulator operations",
+  "status": "Exact v3 present/absent mods-USB normal cold-boot emulator recovery and separate native-media playback control corroborated",
+  "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+  "initrd_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+  "kernel": "6.6.138-dirty emulator; no physical or stock4.4 recovery claim",
+  "positive_boot": {
+    "boot_id": "0fc77841-70a8-4cad-9da7-fc225f99d140",
+    "first_SSH_uptime_seconds": 7.21,
+    "first_snapshot_limit": "The earliest SSH snapshot precedes native EP147 and contains no native PID; it is not evidence that initialization had already finished at7.21s.",
+    "normal_framework": "Native EP147.service starts at6.54s with wrapper MainPID427. First observed native PID729 appears by10.73s. No diagnostic service or rescue launch is shown.",
+    "initialization": "Exact selected-cache ELF hash123703; sole parser0xef05c8 claim present and supported0.3.0 reports54hooks; HubMount and HubTransport present",
+    "stable_process": "Normal wrapper NRestarts0, native PID729 in init and settled snapshots; settled collection begins73.91s and later telemetry still PID729/EEEE at76.06s",
+    "loader_policy": "Same as loaded -> no write, no restart",
+    "environment": "PID729 process environment-control output contains no AZHUB_* entries",
+    "power_on_topology": "Launch arguments contain native mods USB, OHCI hub and all five protected COW library images from power-on",
+    "source_UI": "Visually reviewed v3-positive-source.png: native USB1 AZ_USB and five LINK rows, no native USB2 Nacho Chips row; both local decks empty",
+    "backing_protection": "QMP block-node evidence explicitly marks raw and file nodes read-only for each of the five raw library bases, as well as USB/settings bases; writable COW layers are separate",
+    "shutdown": "Standard systemd poweroff, final serial Power down at92.216642s, with no rescue command required"
+  },
+  "negative_boot": {
+    "status": "Pass within exact emulator/image/loader scope",
+    "boot_id": "b5a5e4b0-1215-4031-9bd3-ad7e84560537",
+    "first_SSH_uptime_seconds": 6.08,
+    "first_snapshot_limit": "Earliest SSH precedes native EP147 and shows the exact enabled selected cache; it does not claim initialization at that time",
+    "initialization_collection_uptime_seconds": 17.73,
+    "native_PID": 465,
+    "normal_wrapper_MainPID": 369,
+    "refusal": "Matching USB package assets unavailable; initialization refused, init -40 without after-patching suffix",
+    "side_effects": "No claim_hook entries, HubMount/HubTransport workers, azhub module, private mount aliases or synthetic source rows in first/settled evidence",
+    "USB_absent_control": "Power-on launch has no USB storage device; init/settled snapshots have no /dev/sd mounts; source screenshot contains only MOD MENU",
+    "stable_runtime": "Same native PID 465, normal wrapper NRestarts 0 through settled collection beginning at 58.59s; no rescue reload, cache purge or second boot",
+    "loader": "Stages stock for a future start; does not restart the running application",
+    "refused_mapping_limit": "The refused exact ELF remains mapped under the normal core contract; this is not interpreted as active initialization"
+  },
+  "verified_frozen_hashes": {
+    "local/diagnostics/link-normal-loader/v3-positive-first.txt": "b414c263efa6ce8015e771a99db24aa5bb7d80eea02fc48026125665af52bbb9",
+    "local/diagnostics/link-normal-loader/v3-positive-init.txt": "0baac848526f876aa8e5d85464ae260c8a31d67667ad79323a47cdabea16e002",
+    "local/diagnostics/link-normal-loader/v3-positive-settled.txt": "44282d3a68affd4ddfcc620b8424c734f37a968178cf1412d03ebcc7e0f6e52f",
+    "local/diagnostics/link-normal-loader/v3-positive-block-nodes.json": "f98b8a0db6f9c3c55c16676ed3e0e36d513bf8683fc53631dbc39ac1866ecb5c",
+    "local/diagnostics/link-normal-loader/v3-negative-first.txt": "fdd8a9eb455cfc990c43d4deb24021510637adc91dd4d71bb9685373febc6b66",
+    "local/diagnostics/link-normal-loader/v3-negative-init.txt": "ff535e253054149d0b98c09c96f06094b58cdc6722d60c1658811693cc46c250",
+    "local/diagnostics/link-normal-loader/v3-negative-settled.txt": "ed7e8258483d801f84bdb8703339137892c9c820bdb8514e01fe1090c511c4cd",
+    "local/diagnostics/link-normal-loader/v3-negative-native-control.txt": "0eac33afc6d0f41a552dfccc0cfd4eba9697d6c7efedfe4af21c6fa52e6987fd",
+    "local/diagnostics/link-normal-loader/v3-native-control-inventory.json": "570973f2ac46068018faaae52cbe91cc0491a04cbf887f80e9db175b302cfa1d",
+    "local/diagnostics/link-normal-loader/boot-v3-positive/launch.json": "021301ea43a40526dc2f946a7aa3983206d31af75c82b5f7fefadd8297d6a5a6",
+    "local/diagnostics/link-normal-loader/boot-v3-positive/serial.log": "51c8673abf6d7328d617cd2f87f76001f414a68aa604989aa2f8694b85af63af",
+    "local/diagnostics/link-normal-loader/boot-v3-negative/launch.json": "02690bb907d3138b84651c2adc97289b03fe5237b68d582e434be67a1be1a285",
+    "local/diagnostics/link-normal-loader/boot-v3-negative/serial.log": "5505b4878c2ecbfd6ae4d94eff89381c3f547faeebca53dd6cb291bc4ad91f5b"
+  },
+  "limits": "This corroborates only exact ELF 123703/package aeb199 on the corrected 6.6 emulator image and normal loader. It does not establish physical 4.4 USB-removal/full-restart rollback, full hub load/eject/mode behavior, packet privacy, native same-ID replacement, external peer compatibility, sustained playback or audio acceptance. Earlier b646 results remain separate.",
+  "owner_record": "docs/acceptance/usb-hub-support-link-normal-recovery-v3.json",
+  "all_13_owner_raw_evidence_hashes_match": true,
+  "separate_later_native_media_control": {
+    "same_native_PID": 465,
+    "fixture": "Later direct native USB COW; offline FAT-root inventory reports no MODS directory and guest evidence shows the native /dev/sda1 mount",
+    "visual_source": "Screenshots show native USB1 icon with no private member number and Are You That Somebody",
+    "load": "LEEE at 173.38s; candidate remains init -40 refused with no claimed candidate hooks/workers",
+    "visual_playback_remaining_time": [
+      "04:22.268",
+      "04:07.946"
+    ],
+    "waveform_position_changes": true,
+    "shutdown": "Owner reports paused with native PLAY; frozen serial shows standard poweroff ending at 191.599509s",
+    "limits": "A later native load in the negative-recovery process is not the still-required successful same-content native replacement of a previously private loaded track in the same live deck/controller"
+  },
+  "visually_reviewed_screenshot_hashes": {
+    "v3-positive-source.png": "d44e08b9a8e1f660b648c7f3084791c9090690d1b4fdb4e959ca3863d0e7e38b",
+    "v3-negative-no-usb-source.png": "aeeb9ba20d111134cf7faea2e146b56b6468bee8c7780cc26bc411ed987c1542",
+    "v3-negative-native-playing-1.png": "b4e87e7df90e5a33d3b015b3a693f4025b103dfef6478bef8186a6cbe14d6072",
+    "v3-negative-native-playing-2.png": "471e40bbd4d533c29a380c731fc2695723bacd5d123262d2ee3e4c411278cbb6"
+  }
+}

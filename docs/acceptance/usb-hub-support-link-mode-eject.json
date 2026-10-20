@@ -1,0 +1,153 @@
+{
+  "timestamp_utc": "2026-10-19T03:05:46.020249+00:00",
+  "scope": "Whole-hub loaded eject overlapping native Link-off request in isolated emulator",
+  "binary_sha256": "650fccab50d69645fd1f277d00587ba6c25fa3f11176ee09eb7e87f72a967a35",
+  "pid": 215251,
+  "real_az_access": false,
+  "observations": [
+    "Native Off request logged after source0 closed but before source1/source2 closed",
+    "All three sources state2; backing and alias mounts absent",
+    "No hub rows in SOURCE after settling",
+    "Deck1 remained loaded and playing with advancing position from 114.328 to 144.900 seconds"
+  ],
+  "before": {
+    "pid": 215251,
+    "clock_ms": 10701767,
+    "view": 4,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 0,
+        "generation": 26827,
+        "devnum": 17
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 0,
+        "generation": 26481,
+        "devnum": 15
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 0,
+        "generation": 26654,
+        "devnum": 16
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 114.328,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "settled": {
+    "pid": 215251,
+    "clock_ms": 10735492,
+    "view": 1,
+    "devices": [
+      {
+        "label": "HUB_LIB",
+        "disk": "sdd",
+        "port": 2,
+        "state": 2,
+        "generation": 26827,
+        "devnum": 17
+      },
+      {
+        "label": "HUB_LIB",
+        "disk": "sdb",
+        "port": 2,
+        "state": 2,
+        "generation": 26481,
+        "devnum": 15
+      },
+      {
+        "label": "HUB_LIB2",
+        "disk": "sdc",
+        "port": 2,
+        "state": 2,
+        "generation": 26654,
+        "devnum": 16
+      }
+    ],
+    "decks": [
+      {
+        "loaded": 1,
+        "playing": 1,
+        "pos_s": 144.9,
+        "content_id": 495,
+        "title": "Algo mÃ¡s"
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      },
+      {
+        "loaded": 0,
+        "playing": 0,
+        "pos_s": -1.0,
+        "content_id": 0,
+        "title": ""
+      }
+    ]
+  },
+  "limits": [
+    "One loaded track; no audio capture or hardware acceptance",
+    "Intermediate telemetry files repeated the same clock value; log ordering establishes the overlap, not those stale samples",
+    "All hub sources were ejected; this does not prove recovery of other sources after partial eject",
+    "Completed eject reservations prevented pending replay from being consumed; a separate adapter correction and partial-eject runtime test are required",
+    "No external peer active during this eject/mode sequence"
+  ],
+  "local_evidence_sha256": {
+    "mode-eject-before.json": "838097ca27b51c2fe75509ce49822ca0a97c71a61a8eb29a2336d1f12fff0a41",
+    "mode-eject-requested.json": "578542b63f2f80a13397409ffd39d04e868f51e66110c8d2160902a977057167",
+    "mode-eject-pre-mode-confirm.json": "578542b63f2f80a13397409ffd39d04e868f51e66110c8d2160902a977057167",
+    "mode-eject-completed.json": "4d183ca0d697fff923aed51bf19d3bd06fc9ab0157b78b7e313084d026cdcb3c",
+    "mode-eject-settled.json": "ebc247b42e3bf8b186b821baef9d75dc180ba0a3f8ffd9541fc083816ebfd6d1",
+    "mode-eject.log": "ddfa62464b8b0dafed5fe5746ca6da03f2770b3fd711872302bb11cb332b0234",
+    "mode-eject-mounts.txt": "01126efa640167c69faa352a12967fff8b3c826b5e4b7f6bb3499fc5a963c3ba",
+    "mode-eject-setting-off.png": "bafcff3e1eff2db9db73a654baa7f8d3a0c78bdb619482f218061691ab185e7b",
+    "mode-eject-sources.png": "ff355aa76a1d76cdb4a32930e1570a1939afa918e54c968719e1a1cd28f3f5d9"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "Real AZ user-confirmed fresh hub track load with external Wi-Fi software peer master, and protocol tempo following",
+  "version": "0.3.0",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "native_PID": 1356103,
+  "peer": {
+    "player": 3,
+    "role": "negotiated handoff",
+    "tempo": 128,
+    "seconds": 60,
+    "exit_code": 0
+  },
+  "manual_report": {
+    "requested": "Load a different CAMI track into deck2 and PLAY while peer master; optionally enable deck2 SYNC to check128BPM.",
+    "user_response": "funciono",
+    "scope": "User confirms requested fresh hub-load/playback test; audible output not instrumented."
+  },
+  "protocol": {
+    "status_packets": 799,
+    "beat_callbacks": 133,
+    "synced128_by_player": {
+      "1": 421,
+      "2": 196
+    },
+    "deck2_reported_base_bpm100": [
+      11500,
+      11900,
+      65535
+    ],
+    "stopped": {
+      "event": "stopped",
+      "monotonic_ns": 468835441639900,
+      "statuses": 799,
+      "beats": 133
+    }
+  },
+  "runtime_retention": "During/after read-only SSH retains nativePID1356103, CAMI discovered and LLEE.",
+  "preserved_negative": "First attempt had no observed native master and refused handoff; after user explicitly selected native1 MASTER, retry negotiated master successfully. This is a setup refusal, not a successful reconnect trial.",
+  "limits": [
+    "Fresh source selection and audible playback are user-reported. Protocol corroborates tempo/status change but does not prove track content identity.",
+    "Beat callbacks are not proof of captured audio or phase alignment. Actual CDJ and full1152-byte physical privacy acceptance remain untested.",
+    "Link On/Off transient hub source disconnect and warning remain unresolved."
+  ],
+  "raw": [
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-128-retry.jsonl",
+      "sha256": "9b26b938f42b35442771f6318f337c7ee7256e46eb0864c6f426901c3a9c5137",
+      "bytes": 154452
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-128-retry.stderr.txt",
+      "sha256": "db5f85ec9b05eced57e42f42d685ce768aa364e1730afc0a8d5fc237946e7d35",
+      "bytes": 956
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-during-runtime.txt",
+      "sha256": "a0544fab88e139b92662901bb2e0a065d4bb2e28504c92535a0ad0d72286aec7",
+      "bytes": 16558
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-after-runtime.txt",
+      "sha256": "9f29997f8123be8903111d50cbf7c633280a91f64e0ace76ee52f87ab00dd4c3",
+      "bytes": 16558
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-128.jsonl",
+      "sha256": "c7356cc86bca19da297a2af4f37a5c00c2051dd11ce5ddfdacf00824780b98c8",
+      "bytes": 18360
+    },
+    {
+      "path": "local/diagnostics/az-link-wifi-freshload-128.stderr.txt",
+      "sha256": "08298826c0300187156aa32ebd35600c466787a36d21fba07528512b04ceffc7",
+      "bytes": 1104
+    }
+  ]
+}

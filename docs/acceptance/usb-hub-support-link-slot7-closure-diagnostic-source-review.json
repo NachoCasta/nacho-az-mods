@@ -1,0 +1,41 @@
+{
+  "scope": "Local diagnostic extension only. Source reconstruction and host verification; no runtime result, supported-candidate change or final acceptance.",
+  "motivation": "The first diagnostic reaches mount callback entry for both absent private slot7 sources, but does not observe the queued native mount body or source-list publication.",
+  "prior_frozen_trace": "docs/acceptance/usb-hub-support-link-slot7-diagnostic-independent-review.json",
+  "prior_ELF_preserved": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+  "supported_base_ELF_unchanged": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "local_reconstruction": {
+    "directory": "local/diagnostics/link-normal-loader/slot7-closure-trace",
+    "source": "local/diagnostics/link-normal-loader/slot7-closure-trace/source",
+    "manifest_sha256": "3e14a33e9cbf858fa1b07b876cbad11d4e4f2ec796995160d3035fcd2dbe65d5",
+    "header_sha256": "fa8a48857481f53428bb76afc293bb1a2991d683715ba27d3ff1f100e0f94846",
+    "prepare_sha256": "6fd5e86c9265572f5f85d1da19b395260302e5b0ee3fb46f21b99c17a4e39277",
+    "test_sha256": "c667973fbfb0838c88d7bbb6806632a22ef573ed8206b54af982bbbfac2c77ec",
+    "base_guard": "Reconstructs from frozen v3 linkfake.c SHA5ee62a2c8195260eca3cdc07210acdfa379bdb3e54e86c867230cc244a0b9835 and the exact three required package-asset hashes before creating output.",
+    "expected_claims": 56
+  },
+  "logging_contract": {
+    "new_hook": "0x1c1f340: void(native_closure_payload*=x0). Native original is called exactly once with the identical pointer.",
+    "capture": "Before forwarding, memcpy captures owner at+0, RootSourceID category/member/sdid/subkind at+8/+0xc/+0x10/+0x11, and unaligned original MediaID64 at+0x14. Payload is never reread after native execution.",
+    "stages": "Entry and return timestamps plus full captured identities; exact-key root presence and mounted flag; bounded membership/count in currently registered source-list models. Listener/model pointers are reacquired independently for each stage.",
+    "limits": "At most32 closure transactions per process; at most64 tree steps,8 root listeners and64 model rows per snapshot. Count/capacity, address-range, alignment and checked span guards reject inconsistent layouts. Used/scanned/source_models fields explicitly report the partial listener scan; source_models0 does not establish that no model exists beyond the first8 listeners.",
+    "effects": "No native accessor calls, pointer publication, key mutation, return changes or extra execution of the original. Only existing logging and monotonic-clock calls are added. No claims overlap core-owned0x1c338d0 or0x1c373f0."
+  },
+  "exact_firmware_layout_proof": {
+    "ELF_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+    "trampoline": "First16 bytes at0x1c1f340 are stp x29,x30,[sp,#-128]!; mov x29,sp; stp x19,x20,[sp,#16]; add x20,x0,#0x14. No branch or PC-relative operand is relocated. Native resumes at+16 with unchanged stack effects.",
+    "tree": "Native lookup0x1c1ed70 uses treebase=owner+0xe0 and calls insert0x1c26e28. That insert and0x1c26748 explicitly increment *(treebase+0x28), proving count at owner+0x108. Constructor0x1c211b8 independently zeroes param_1[0x21]. Root pointer is owner+0xf0; node left/right+0x10/+0x18; key+0x20; object+0x30; mount flag object+0x14=node+0x44. Equality follows native comparator0x1c10908: category, complete member32, sdid8.",
+    "list": "Native constructor0x1c313c8 places root-change listener at controller+0x18 with vtable0x2e0b4c0, and model at controller+0x80. Therefore only an exact matching listener vtable permits model=listener+0x68. Native model uses rows+8, capacity+0x10, used+0x18, row stride0x28 and RootSourceID at row+4.",
+    "lifetime": "The hook executes at the native body that mutates the root tree and synchronously calls its registered listeners on the native serialized root-set execution thread. The return snapshot relies on that existing root/model lifetime contract. It neither retains the native closure payload nor retains listener/model pointers across original execution; pointer/count guards are not represented as a general memory-safety proof for arbitrary addresses.",
+    "readiness_failure": "Existing make_hook rejection increments lf_hook_failures; the containing installer checks that counter before community_ready. If not ready, the closure forwards without observational reads. Existing hook-failure behavior is retained.",
+    "local_raw_proof": "slot7-final-list/root/listener/dataset-probe.out and slot7-closure-layout-probe.out under ignored local/diagnostics/link-normal-loader. Portable facts only are recorded here; raw firmware material remains ignored."
+  },
+  "host_verification": [
+    "Existing capability/mount fixture: private forced decisions, native result and all eight arguments unchanged, original exactly once, saturated budgets.",
+    "New closure fixture compiled with GCC -Wall -Wextra -Werror and ASan/UBSan: native overwrites payload, return log still uses captured full identities; root absent before and present/mounted after; exact source-list key membership before/after.",
+    "Distinct native USB2/player7/player8 identities with the same sdid do not compare equal; different sdid does not match. Cyclic tree stops after the bounded scan; invalid tree/vector/model counts and overflow addresses are rejected.",
+    "Saturated32-transaction and not-ready paths still forward original exactly once. Actual reconstructed community.c passes GCC SDK syntax with LF_EJECT_UI, LF_SAFE_EJECT and LF_EJECT_AZ.",
+    "Host fixtures replace only ARM high-address guards with fixture-allocation guards. The staged diagnostic retains original ARM address checks and actual layout/scan/forwarding bodies."
+  ],
+  "remaining": "Independent package/build review, diagnostic runtime observation and causal interpretation remain separate. Any final functional acceptance must use an uninstrumented supported artifact; no production fix is inferred from this source record."
+}

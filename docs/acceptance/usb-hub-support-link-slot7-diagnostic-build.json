@@ -1,0 +1,233 @@
+{
+  "scope": "Isolated logging-only slot7 diagnostic build/package; not supported candidate acceptance",
+  "status": "Pinned SDK build, registration/ABI and seven-member package checks passed; runtime diagnostic pending",
+  "version": "0.3.0",
+  "stable_id": "usb-hub-support",
+  "diagnostic_identity": "Diagnostic manifest; additional native mount observer is expected to produce55 runtime hook claims versus supported54. Runtime owner must confirm actual claims.",
+  "supported_baseline_ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "production_and_v3_sources_ELF_package_unchanged": true,
+  "source_review": "docs/acceptance/usb-hub-support-link-slot7-static-review.json",
+  "runtime_precondition": "docs/acceptance/usb-hub-support-link-stable-native2-slot7-negative.json",
+  "source_manifest": {
+    "path": "local/diagnostics/link-normal-loader/slot7-trace/source-manifest.json",
+    "sha256": "4347fe55e0201e30edbc49d92b887f4606db1ec03e329104c654840064ff3e35",
+    "frozen_files": {
+      "alias-mount.h": "413ae5b39d23b46a172fa88da1b57d5fe0d8d959d2cb9c9824e58354cd5c9d4a",
+      "azmod.json": "ef5e4dd5e261441f8d4889940e83abc5b0b6e66a949650c805fc1a0c4d68c121",
+      "browser-guard.h": "24770e40075dbc96a28dfac8db6d400b34299ec4c22afd94b8e044420ddb6f0a",
+      "community.c": "941b135844219046408a9cb806ad6764ee476239855db208a80a932718845e27",
+      "db-cache-probe.h": "aa22680c95f23921b6655573a738d88de881d0e9070b978c0e3e9e7b815f22bf",
+      "discovery.h": "29b73c8d52eb78136fc009553ef06f56204cea310593f62fcb5e22a9b15b19bd",
+      "eject-detach.h": "e5bc2a8697277ec1561bf40d007e54c4368f7c9f3b39262f5087b70801126172",
+      "eject-gesture.h": "bfa82e0b833854f02e526d2347825c3ab906e8668b482ba1b335b645eff80f95",
+      "eject-input-health.h": "84b4abdb4c92d740a3039b5efe3cbbb8af5a1c7123cafd4398b4a4f013851b68",
+      "eject-listener.h": "e4cc491c5895f3ac6191a0faf3364c9b63491565bd84fa4d28fa16842bdcf7c4",
+      "eject-source.h": "8cb8603b7fb4071d52f0acf104dcb44ee85be835cfcb016cc75e477e13ab4e65",
+      "eject-ui-model.h": "c22c4bc1eb16415e26abb0be638ddf521fa6f0a4fa70a4e6a11252e3def98058",
+      "eject-ui.h": "8a6191b1e8981ad44a6282efddf65ed8fe11cb2060f527bc0146e39000b2310a",
+      "eject-view.h": "848924bbf694c87def51e5a05984b6e616c6a45fb73818fb380effedf575c1cc",
+      "hubservers.h": "eb472072b562039fe4ec03b9cc86fb39bb6df853148b2ec335fd5376285dbeca",
+      "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "kernel-asset.h": "aa333d97b766954a0ac867687bf5a3537c2ba626d1ece9b3e98441453b82b01b",
+      "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "link-cached-status.h": "58b4091c41eabdc1d006ffb455cbcf5bf5534d8d8d3def5f8b5f9bdbbf917ec8",
+      "link-library-ownership.h": "57811f71f52e94a2079b6b9179cf6e78857148f3dd0b81ea08ceb356448942d6",
+      "link-load-origin.h": "8cc6008d5f73334adf150625a4eb13197e688e72cba351afdb7fed9957947cbc",
+      "link-mode-recovery.h": "6ecf603494985c1b1d80e4ad4fa0ed96e706ca9f20e7ff1687844b6f7f3dd108",
+      "link-private-admission.h": "c8d6e461d0dea155d2e21484c1ff091fa124d2a09377c26ee519519bb8b26eb7",
+      "link-private-requester.h": "d30bc57e12135e149af12a4aebe8c13a9f5a3d73b4214977bd34e519ef0c3288",
+      "link-request-origin.h": "8f7b1e6f147292a7f5134ebc713d29b69e7e95bc96c9dcd167a146aae92efc65",
+      "link-request-tasks.h": "7cb996630e516c08590721e64b4e2b9712223c7807ad926c8025344109687dbb",
+      "link-socket-registry.h": "321de96562405c8c639a399e6f9e06ba23f0fe256b800d879dade003db1893c5",
+      "link-status.h": "04ca9f2bb475d265ae23a340ed4054848ec540881b8a978994f7792fbc641f9b",
+      "link-udp-ingress.h": "2b22bdfd597ac03246c856973ea2d651ff396b6f7f38cb1376e91b9ae9f387cc",
+      "link-udp-policy.h": "5004827f6d023eb45fd13741f271a5d4873ff0fcd6b36bf0350e5e1ec34d9e5b",
+      "link-udp-receive.h": "1826a758e75c2a14ec1506bd425920cfd02755ce15c2d1034ac777b54f70b360",
+      "linkfake.c": "fa759db8cd61d777a0f7d459b972bb8c69a3bd91cbd19da132efb9c0d34fad9e",
+      "Makefile": "7bc112835aca3de02506794e99c060ef8222c850a5056ee95867df89973d7f8a",
+      "mount-worker.h": "4f32de404628bbb812d33cc87fa9441630eb6649691cfc938543417dec6ccae5",
+      "native-detach.h": "621e317f7c7d6f8ca0b3962256c24f34ead3408b58d2638b70cb56a5f92705ce",
+      "network-identity.h": "27c195295262d1b1e9ea4ce5c02aa3931c0a85430f21f037fc84c1282724af91",
+      "safe-eject.h": "cb5addf6dd944165d8bfdb5d6353eacec2f82303d51238871bda2be621ced359",
+      "slot7-trace.h": "3439c2c904bbca884528e5cc009d0980a312538f612be0319e883dd032a9dcd9",
+      "source-name.h": "b9088f1a5657ec32d2c1de3f64a174045e7af8ad11d5634f8b552ff1879388d9",
+      "source-settings.h": "cc01ea9dd5b205ef25c9dcc574ef5a0d6489cc358b687c1e75ad6a98684a289d",
+      "tag-cache-abi.h": "4df6bb96acc9d74d8bf7390c45301dd72fb716ada52985422b5f90374680ffad",
+      "tag-cache.h": "85069c435deed5b81f228650c7c1e3421b44e3fb282247f3b74bc1ea05f75b0b",
+      "test-alias-mount.c": "8397ac288f856442e1034832ddccdedf1510b9e75dbd6513e3a660c54ac9e3a3",
+      "test-browser-guard.c": "44a54f09b5adada14fed0dc2add41861a77d0e909f257d7675aa9b54a7df9ecf",
+      "test-discovery.c": "b600cc01f2853e6fe60cc5eab52a90a229b7a0618aa1d9f8ee4ff9aa312f0981",
+      "test-eject-detach.c": "d4fc086e4d0c39d9f006f964ab75a68c400a3735f838d8f8c23058f12a4a61b8",
+      "test-eject-gesture.c": "3a5915c517cab0227e29ca7371dd883aa2d893638c1f1ca10d12bb161786c651",
+      "test-eject-input-health.c": "d42313510c154a8164b017ed2aa27a5cead72b77debd962218aa82870cf66ed5",
+      "test-eject-listener.c": "d13097bffc23440a829e35c8e75f5cfce95aa23d26080ab837799f31e231aa3c",
+      "test-eject-source.c": "666f0486e11ecd45ac30a2d201756a9bfa479c755d02235aa4c8d5bcff065006",
+      "test-hook-registration.py": "bcf83588b5426b8b615c5f7d6f214bd86987a3443acf028a5164a89e81e0f20f",
+      "test-host.sh": "4db1d02f345cc98049e1b628976ae1fe11e08520ca1f142ad218596b2d335e0c",
+      "test-kernel-asset.c": "f321d69d216b3e767c6b5f12dfe481652e72658f0c53f3808ad80c9b1b766d45",
+      "test-link-cached-status.c": "6bee389a94cb319c03cda74dde6708502201a5f70ee3478ac7878e55b4de9cfa",
+      "test-link-load-origin.c": "bba54eb780e29e262bb32b2fba1dfe3accc7cf4d57b02261389aa3f0eef7208a",
+      "test-link-mode-recovery.c": "6be5488063b2c20cceb5b6111c1752ed096e6ab17106459e0cc6f957be4e5faa",
+      "test-link-request-tasks.c": "b86ca233701cf4249980514fefcbb58a19b67d08eea3c27186ba804abfba7673",
+      "test-link-socket-registry.c": "07be1949d2d94f894066b77cd216aaa92fdd4878d2a2ec92e67d3dfc58589cb9",
+      "test-link-status.c": "00e28d918dafeced48978f565fec7340c5961fc673fca0a353b16edbbd2e7254",
+      "test-link-udp-policy.c": "a83c4d82218e20a9b759552ef41437801000295df52eb091db52dcdf5115cf53",
+      "test-link-udp-receive.c": "ff924258fda4cabf21c4b180792da7208043a03ac4a8b6b80fb9571d1dce149d",
+      "test-mount-worker.c": "83e8cf8ac8c1e9e8aada186c480be65464bef7adc1cc7ca31290b0a242db6716",
+      "test-network-identity.c": "169655ef8673ce5ee8e72e3aac5b6cf742ba1a152e60b64c160df1c04260cc9c",
+      "test-sdk-ui.c": "02fc0f1ccb6fba49c19acd43442353c167256768b746f8d7548a57149e545cbe",
+      "test-source-name.c": "6f313d8d3483df353cfd99046c623fcd05d2c52e0f24e45ff21e452d3ca84c79",
+      "test-source-settings.c": "a49009dbc0db9d3255e2d883fc4204951702519c7f6ab31a7a1c55aa8213f7d7",
+      "test-tag-cache-abi.c": "0fa4ebd04efc4b8260a1b63d6ca124e609d3e3e7a4bc49e76fe11aa2a82308bf",
+      "test-usb-presence.c": "c0d66603a2f4f3377a0c88e7a083184598e6122281e9967752a3ff7451c545fc",
+      "usb-presence.h": "3a28b19c345b17f0d97f1b8c7d3792b721044ed116eb100d5e4e019a94918f96",
+      "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43"
+    }
+  },
+  "ELF": {
+    "path": "local/diagnostics/link-normal-loader/slot7-trace/source/out/usb-hub-support.so",
+    "sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+    "bytes": 147896,
+    "GLIBC_versions": [
+      "2.17"
+    ]
+  },
+  "package": {
+    "path": "local/diagnostics/link-normal-loader/slot7-trace/dist-diagnostic/usb-hub-support-0.3.0.azmod",
+    "sha256": "409a3f7557095eb83d34b5640e25b47609c78225bd987782d53db1c21c9e0613",
+    "bytes": 389342
+  },
+  "package_member_count": 7,
+  "package_members": [
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "assets/azhub-LICENSE.txt",
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "bytes": 18693
+    },
+    {
+      "path": "assets/azhub.ko",
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "bytes": 183848
+    },
+    {
+      "path": "assets/mount-hub.sh",
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "bytes": 1416
+    },
+    {
+      "path": "azmod.json",
+      "sha256": "ef5e4dd5e261441f8d4889940e83abc5b0b6e66a949650c805fc1a0c4d68c121",
+      "bytes": 639
+    },
+    {
+      "path": "icon.png",
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "bytes": 945
+    },
+    {
+      "path": "usb-hub-support.so",
+      "sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+      "bytes": 147896
+    }
+  ],
+  "manifest": {
+    "azmod": 1,
+    "id": "usb-hub-support",
+    "name": "USB Hub Support",
+    "version": "0.3.0",
+    "author": "NachoCasta",
+    "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
+    "api": 1,
+    "firmware": [
+      "ep147-9e9454e357389ece"
+    ],
+    "hooks": true,
+    "min_core": "1.2.3",
+    "summary": "Diagnostic slot-7 availability and mount-event tracing.",
+    "description": "Local diagnostic only. Preserves candidate behavior while recording bounded availability and native mount-completion events. Not a supported candidate or acceptance artifact.",
+    "license": "GPL-3.0-only",
+    "category": "tools"
+  },
+  "build": {
+    "SDK_version": "1.2.3",
+    "SDK_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+    "SDK_image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "compiler": "gcc (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 7.5.0",
+    "command": "docker run --rm --pull never --network none --platform linux/arm64 [isolated source /mod and pinned include /sdk mounts] -w /mod az-mods-sdk:1 make -B all CC=gcc AZ_SDK_INCLUDE=/sdk",
+    "packer": "Pinned SDK tools/azmod-pack validate source; package source --out dist-diagnostic; validate package",
+    "publication_or_activation": false
+  },
+  "compiled_checks": {
+    "supported_flags": [
+      "LF_EJECT_UI",
+      "LF_SAFE_EJECT",
+      "LF_EJECT_AZ"
+    ],
+    "registration_difference_from_v3": "Exactly one added literal registration:0x1c1fa08->slot7_trace_mount; no baseline claims removed",
+    "parser": "0xef05c8->probe_parse survives exactly once",
+    "ordering": "Diagnostic install follows ownership installer, failure returns community_abort(-37), all before readiness publication",
+    "host_registration": "Standard test-hook-registration.py passed under WSL GCC, including executable baseline installer harness and zero/double parser controls",
+    "prior_diagnostic_harness": "Protocol review already passed exact forwarding/budget test; not redundantly rerun here"
+  },
+  "logs": [
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/sdk-build.log",
+      "sha256": "9c2ce337f6bbafb274c3268dc04bd279e4c6a2cc5147689675e071a9fd9c1a31"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/sdk-image-id.log",
+      "sha256": "0e44978e12f53f8d964071573a0c3b6150418be73309de872f4a1f57e59da76d"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/sdk-compiler.log",
+      "sha256": "839d24fe4997381909209a1cbf9a3d59e68a6637f6e7c02ebf39b4fcacf612c2"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/supported-preprocessed.i",
+      "sha256": "c13aa0913c2f080742010ca1bbd2fb57072380015f05a2a8830035d8ae0099d3"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/elf-versions.log",
+      "sha256": "daf5225cdd392b1e506ff71a3fce4d45eb7d634eeefd81ce07a83f040d83ae04"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/registration-check.log",
+      "sha256": "d12620f690e7149fcf3a97f2f28579959f648b69a537a71478226d04fd1249bc"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/source-validate.log",
+      "sha256": "3bae0015845f176260e0a10fe033cb422eb0c19422017267917fd0ae7faed241"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/package.log",
+      "sha256": "9adde7751a3a65e5650c6d2c5482be9af8d1fd81d244335f33438a16e81bb9b2"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-trace/package-validate.log",
+      "sha256": "7122e897204524b14fceeb781363f198d09a4ec2de7fb766a2f9c95450faf894"
+    }
+  ],
+  "warning": "Existing optional/home/root/settings read warning retained; no new warning",
+  "limits": [
+    "No emulator, device, Ghidra, activation or publication operations by this builder.",
+    "Logging observer changes runtime hooks and identity; it cannot replace final uninstrumented candidate acceptance.",
+    "The unchanged exact supported firmware/core/kernel-asset guards remain in the diagnostic source.",
+    "Final supported candidate bytes123703/aeb199 remain preserved and distinct."
+  ],
+  "packaging_reconstruction": {
+    "initial_incomplete_package": "dist-incomplete-first-package/usb-hub-support-0.3.0.azmod",
+    "initial_incomplete_package_sha256": "6f8559eb7e653797b865a873d826f2edf0177a58e4d19f857c8d58a0bc0ce159",
+    "correction": "Added exact unchanged v3 assets and amended local prepare.py to validate/copy their allowlist before output creation and record recursive asset hashes; no rebuild or ELF change",
+    "prepare_helper_sha256": "8a59f531e2ff89612a4cbfc32b2758710523ee03f25ce3e182a0049b5c9d58a3",
+    "original_pre_asset_manifest_sha256": "5c5d593772e41d3ffac90a3cc9b480db7716abec64e7a1e3fb1d0f9283e66012",
+    "positive_reconstruction_check": "Fresh reconstruction from frozen v3 export reproduces all72 diagnostic input hashes exactly; packaged ELF was not rebuilt",
+    "reconstruction_manifest_sha256": "524c1957d6fae29e359d194d576c626661550a8a653e29f2d53e96ced4c59aac"
+  }
+}

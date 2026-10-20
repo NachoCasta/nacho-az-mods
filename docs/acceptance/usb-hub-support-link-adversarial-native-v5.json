@@ -1,0 +1,166 @@
+{
+  "scope": "Exact supported v5 bounded external UDP/private-requester collision controls, native response control and post-attack private loads; emulator only",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "PID": 69363,
+  "boot_id": "bbd73fbd-c90b-46ff-8ace-4b2d28313642",
+  "transport_record": "docs/acceptance/usb-hub-support-link-primary-tcp-transport-v5.json",
+  "UDP": "Six claims per batch spoofmember7/8 through discovery/status/link packets fromphysicalpeer. Native logs reject50000/50002 interface2,trusted0, sizes54/1152/192. Private loopback endpoints remain separate.",
+  "TCP": "Two consecutive5/6 reserved-requester pairs complete native setup reply then close with no media reply. Ordinary requester3 receives native0x4000 response forslot3; former private test-code endpoints0xe0/e7 return native0x4003 error, not hub data. This fetches media info only, not track content.",
+  "post_attack": "Fresh private7/3 and8/7 content1944 loads complete0 after corrected transport collision batch; both advance in UI. All seven partitions healthy. Canonical repeat then retains265 full private statuses with zero standard/source content and no private auxiliary rows.",
+  "windows": [
+    {
+      "name": "adversarial-native-tcp-guard",
+      "full_statuses": 320,
+      "standard_tuples": {
+        "2": {
+          "(0, 0, 0, 0)": 50,
+          "(1, 2, 1, 1944)": 110
+        },
+        "1": {
+          "(0, 0, 0, 0)": 50,
+          "(1, 3, 1, 1944)": 110
+        }
+      },
+      "private_auxiliary_rows": 0
+    },
+    {
+      "name": "canonical-private-post-adversarial",
+      "full_statuses": 265,
+      "standard_tuples": {
+        "2": {
+          "(0, 0, 0, 0)": 134
+        },
+        "1": {
+          "(0, 0, 0, 0)": 131
+        }
+      },
+      "private_auxiliary_rows": 0
+    }
+  ],
+  "native_visibility_limit": "During native control window, each deck initially has50 zero standard tuples, then110 native tuples: deck1(1,3,1,1944),deck2(1,2,1,1944). This is NOT continuous native visibility acceptance. First private load in currentprocess occurs only after that window. Exact-fixture native/refused-candidate baseline and peer-startup timing comparison remain needed before assigning cause.",
+  "fd_scope": "Repeated TCP open/reject/native-response and private-server reuse pass. Exact fd-number reuse and stale-ticket races are covered by frozen current-source host registry tests; no claim that these short TCP trials forced a particular reused fd.",
+  "limits": [
+    "Initial TCPmirror query reset precedes admission and is retained as infrastructure negative",
+    "Only selected malicious packets/private-code endpoints tested; no exhaustive protocol security or all-eight-source hardware claim",
+    "No audio, physical4.4 recovery or real-CDJ interoperability claim"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-requests.json",
+      "sha256": "1752340d02ecdd52271290b0e8050ad8207f8fd4d307abcd36adcb2361576472",
+      "bytes": 1661
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-requests-tcp-guard.json",
+      "sha256": "d4fc75e8f750f1819bd6dffaf8554716fbb2f3ff4e9b6eb70a0010e31c846b28",
+      "bytes": 4544
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-requests-canonical.json",
+      "sha256": "d4fc75e8f750f1819bd6dffaf8554716fbb2f3ff4e9b6eb70a0010e31c846b28",
+      "bytes": 4544
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/isolated-interfaces.json",
+      "sha256": "4884d2ca4b30982145fb92be49a97388f724b729e7b5d8e7c417492dc55015b8",
+      "bytes": 979
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/run-requests-canonical.py",
+      "sha256": "aef34466165dba1acf3af2c13ec38975687ac6f6ceb7bc230045dfc6c06af06d",
+      "bytes": 1180
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-run.json",
+      "sha256": "7f536a654008fde04af44a69275ad751e5b41eb970d7d6cd727c46177b10d2c2",
+      "bytes": 1305
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-wire.jsonl",
+      "sha256": "2fea8188a829b0e00ac19ac77a48c0a4e182b6173adde892fb40be24e951b413",
+      "bytes": 1639070
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-peer.jsonl",
+      "sha256": "2a0289b9c4ca628f2bc5b4aaf5f5ae4a49d589f37982f4165113432b110d687c",
+      "bytes": 52049
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-private-post-adversarial-run.json",
+      "sha256": "3cfbc05dddd2a5b5d20bc2d6a1ec183bba50a88245861823b3302061b4e82bbb",
+      "bytes": 1312
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-private-post-adversarial-wire.jsonl",
+      "sha256": "1121698ddb77ad6b6bc28f3274ce27708d9a3b05fc72bec9d437af2e997967d7",
+      "bytes": 1243037
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-private-post-adversarial-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-private-post-adversarial-peer.jsonl",
+      "sha256": "554b23ad09e5b6aefeac666efc77eb329c9487a3af7d824f3fe33604922b9cb0",
+      "bytes": 48447
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/canonical-private-post-adversarial-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-after-state.txt",
+      "sha256": "57faa9f840b88a34e35d2f8cf083baf970d8803d98b73546cb2d1bd99d2b4514",
+      "bytes": 170329
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-tcp-guard-after-state.txt",
+      "sha256": "9af33e3d67efa62f7b63a7e06be713c4a4c01af9ed0c47d6b87ca2d6c9d0ce96",
+      "bytes": 201118
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-canonical-after-state.txt",
+      "sha256": "20fabf1be660c911ec092629c0df76fbe3af71d6fe807f1180fd4ae43b7e8a51",
+      "bytes": 243528
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-private7-fresh-state.txt",
+      "sha256": "99dfb16e0925c737ad01088fd6c86394c37fe9a2df597e34e3e8a94a12f2d71f",
+      "bytes": 208463
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-private8-fresh-state.txt",
+      "sha256": "9846b2b47c41759506b429a13e6598390f5bafd4989bedd7b10b31cf4b7e8700",
+      "bytes": 214412
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-private7-8-playing.png",
+      "sha256": "d75532f612ecc2c503bfc16d2eb2569db82b6d388675a4a92f97a7fca34193d9",
+      "bytes": 135310
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-adversarial-final-state.txt",
+      "sha256": "b0a0e98f1903e0bedc335f2f24137c40668954d49acd27c80dc8ae284ec5e155",
+      "bytes": 251722
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-adversarial-tcp-guard-seven.json",
+      "sha256": "7cbb409d451d4c77edddaea300a51624c2ffc0157339c10bdd2e451931b956c9",
+      "bytes": 117535
+    }
+  ],
+  "visibility_followup": "docs/acceptance/usb-hub-support-link-native-visibility-baseline-v5.json reproduces initial50 zero tuples with native auxiliary data in candidate-refused baseline; retain original observation, avoid assigning cause from it alone."
+}

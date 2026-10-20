@@ -1,0 +1,165 @@
+{
+  "scope": "Controlled own-media-status experiment compared with frozen exact-key removal negative; emulator only, not supported candidate acceptance",
+  "build_record": "docs/acceptance/usb-hub-support-link-slot7-owned-media-experiment-build.json",
+  "negative_record": "docs/acceptance/usb-hub-support-link-slot7-removal-diagnostic-runtime.json",
+  "package_sha256": "34bc7776ec5331ef2b56ab26aaead104c2d616e63b072c2d4b483d94f519be3c",
+  "ELF_sha256": "e0a51d92d412f95833b63d7dc5b3d7ba91e8aa2be2ae0b2ed25762654d890fd7",
+  "final_PID": 792310,
+  "intermediate_unapproved_PID": 788464,
+  "observed_hooks": 58,
+  "activation": "Actual mods USB only copy followed by supported apply IPC, native UI Allow/Reload. Framework-managed persistent staging/approval; no manual internal edits.",
+  "change": "Generate USB/SD/USB2/USB3 status from this private member present-source mask instead of physical native-deck template; same58 observer claims retained.",
+  "observed_status_tuples_6f_73_45e_45f": {
+    "7": [
+      [
+        "0",
+        "4",
+        "0",
+        "0"
+      ]
+    ],
+    "8": [
+      [
+        "0",
+        "4",
+        "0",
+        "4"
+      ]
+    ]
+  },
+  "source_result": "Both nativeUSB1/USB2 plus all five private rows visible. Five acknowledged announcements; final root count8 including three native roots. No removal/erase log in the current activation segment; budgets remain unused. Prior negative logs are present historically and explicitly excluded.",
+  "browse_load_playback": [
+    {
+      "source": "player7/slot7",
+      "deck": 1,
+      "library_tracks": 2547,
+      "track": "Algo m\u00e1s",
+      "UI_remaining_first": "03:22.115",
+      "UI_remaining_second": "03:15.652"
+    },
+    {
+      "source": "player8/slot7",
+      "deck": 2,
+      "library_tracks": 2547,
+      "track": "Algo m\u00e1s",
+      "UI_remaining_first": "03:22.116",
+      "UI_remaining_second": "02:57.544"
+    }
+  ],
+  "health": "Seven actual mounts remain healthy at1-1/2-1 and3-2.1..5; no controller faults; final native unload leaves EEEE.",
+  "interpretation": "Own media-state synthesis resolves the reproduced missing-row behavior in this bounded experiment and allows both formerly missing sources to browse/load/advance UI playback. This supports integration of the fix; it does not prove which single changed byte is sufficient or final-mode/eject/peer behavior.",
+  "limits": [
+    "Instrumented experimental bytes only; production supported candidate unchanged",
+    "UI playback evidence, no audio capture or real CDJ test",
+    "Only two formerly missing sources loaded here; remaining five-source and mode/peer/eject matrix pending",
+    "Native USB/SD state0/4 meanings supported by Deep Symmetry primary protocol analysis; extension semantics inferred from exact-firmware analogous predicates and experimental result"
+  ],
+  "protocol_reference": "https://djl-analysis.deepsymmetry.org/djl-analysis/vcdj.html",
+  "raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/package-34bc7776ec53/usb-copy.json",
+      "sha256": "8740ab3b292919c13376bbb04ecca58309e579560af8bd20b6903a3c0970ddc1",
+      "bytes": 1170
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-before-owned-media-health.json",
+      "sha256": "5980bbb290cbad7440390a832d958670df57c75ce7f19fd4e0684df082ebb977",
+      "bytes": 102108
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-allow-page.png",
+      "sha256": "cec1eddd2a4c09462407b39283c29492347bee8a6860d226e4b65551f2458332",
+      "bytes": 40441
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-allowed.png",
+      "sha256": "c1d5bb26ebe92cfb70cf4306d5c90760d798cc5950318d0e750cd96ed83a4e07",
+      "bytes": 43997
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-accepted-state.txt",
+      "sha256": "dd69ccfa6d95b7b655eda5c7b6fb7b3212674e4855aab0bbe4c457141fac261f",
+      "bytes": 171212
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-settled-state.txt",
+      "sha256": "bb31055db48fe28478ea6f9facdeec2eee1978a4dec2e61b82ccbb7d78ad3b5a",
+      "bytes": 198105
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-slot7-owned-settled-health.json",
+      "sha256": "e449a109879ae7b464b8ab9c26b6a857558e3a60f0d32eead19f23b8ed6b0ac6",
+      "bytes": 103716
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-source-settled.png",
+      "sha256": "bc72c31b8673de4c842ea92b1b4728688783f6d853d705b2018f2db8fe5c60f7",
+      "bytes": 48433
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-7usb2-browser-ready.png",
+      "sha256": "37b1fd2164a90f882afe8557bfd60bc59576086eca852006f0251d5cce39d23f",
+      "bytes": 71997
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-7usb2-loaded.png",
+      "sha256": "6167c33ffec4b401f93db8d1a009fbd72bd2b9184770e2b013d8c0a72d4ef2a0",
+      "bytes": 90104
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-7usb2-load-state.txt",
+      "sha256": "6c9d35a25d3df19a3b03fa13dcc30c0b8d09ecdaebe1d6a8cd44fcfc97d9fd02",
+      "bytes": 231565
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-7usb2-playing-first.png",
+      "sha256": "4bf98e9763bc0dac538b655e8315936e31598b955696e777eaa8a524f5fd60fa",
+      "bytes": 90994
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-7usb2-playing-second.png",
+      "sha256": "628ca641b03b9ed284a5bfb1ec117e653581e5a882087fabaca3f2c9f49d9cbb",
+      "bytes": 93293
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-8usb2-algo-selected.png",
+      "sha256": "b73606b40d431d4e306e530582a9dc476a7ded54bdca4b37bd6cfdad9dbe6925",
+      "bytes": 294516
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-8usb2-loaded.png",
+      "sha256": "270ee832adb94d3c8837155052f23ff38f59609abc26a5227a64759057e28c7d",
+      "bytes": 90629
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-8usb2-load-state.txt",
+      "sha256": "73adb4c7aa5e1bced07e5414c77c64c4445c2f6c7f744873729984cdb668efc7",
+      "bytes": 255161
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-8usb2-playing-first.png",
+      "sha256": "7f93ad8b73bc4f782661a607454b898bdffb25e245d4e3a5806f09855435a1db",
+      "bytes": 91478
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-8usb2-playing-second.png",
+      "sha256": "936d98d3a41a143fb8f181c65bb8e7a21fd113b8f96aeaddd99fa80612ecce44",
+      "bytes": 95651
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-final-empty-state.txt",
+      "sha256": "25c39d5de0c7cb70dade0ed37f68b35aef936413567381d75fc2359d6bcc8e34",
+      "bytes": 259230
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-slot7-owned-final-health.json",
+      "sha256": "de4509a2bccc7b7c13d125d190585a993488a33b821f23fed8ffd1ded5d0a376",
+      "bytes": 103716
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-owned-final-source.png",
+      "sha256": "196aad14b544d9b7f46637602a5cbe31ba727f9382fe5ef93ab953b977897e03",
+      "bytes": 44508
+    }
+  ]
+}

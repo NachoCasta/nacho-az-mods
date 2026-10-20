@@ -1,0 +1,26 @@
+{
+  "scope": "Independent actual-preprocessor review of the supported parser integration correction",
+  "old_negative_ELF_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+  "new_linkfake_c_sha256": "5ee62a2c8195260eca3cdc07210acdfa379bdb3e54e86c867230cc244a0b9835",
+  "source_matches_frozen_v3_export": true,
+  "source_review_timing": "Initial independent host preprocessing reviewed this source before its new ELF existed. The later pinned ARM preprocessor artifact was independently checked again after the owner froze the build; source and runtime evidence remain separate.",
+  "new_built_ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "preprocessor_flags": [
+    "-DLF_EJECT_UI",
+    "-DLF_SAFE_EJECT",
+    "-DLF_EJECT_AZ"
+  ],
+  "LF_COMMUNITY_definition": "Defined by actual community.c before including linkfake.c",
+  "pinned_ARM_preprocessed_path": "local/integration/link-coexistence-v3/supported-preprocessed.i",
+  "pinned_ARM_preprocessed_sha256": "17b54ae0f43f794487278c9628f4e00131b57760b6b8dec5d83fad2d4e30ce58",
+  "findings": [
+    "Exactly one surviving0xef05c8 hook registers probe_parse and assigns o_dbparse in supported probe_install",
+    "probe_parse calls h_dbparse, which calls the native o_dbparse trampoline once",
+    "probe_library_ownership_install has no duplicate parser claim",
+    "community_init enables the probe installer and checks hook failure before release-publishing worker readiness; failure aborts initialization",
+    "Reviewed regression preprocesses actual community.c, executes five extracted installer bodies and checks19required callback/address pairs plus zero/double parser negative controls"
+  ],
+  "conclusion": "No issue found in the scoped parser integration correction; source assurance does not transfer old-ELF recovery/functional acceptance to the new ELF",
+  "runtime_evidence": "docs/acceptance/usb-hub-support-link-normal-activation-v3-independent-review.json",
+  "remaining": "Final packet privacy, native same-ID replacement, exact new-artifact recovery and full functional matrix remain separate"
+}

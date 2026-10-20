@@ -1,0 +1,327 @@
+{
+  "timestamp_utc": "2026-10-19T03:33:13.595688+00:00",
+  "scope": "Corrected simulated master handoff and same-player reconnect during hub playback",
+  "binary_sha256": "3e4f4095dac5b67691680ea7466c104c998ba8045dd8a556b6041e2f1b7f32df",
+  "pid": 240378,
+  "real_az_access": false,
+  "peer_source_sha256": "320691aeddfd03a79d1c8a4822b0bf54f401a0b37673884bd09d23f42ba799a0",
+  "initial_attempt": {
+    "result": "Not accepted as negotiated handoff",
+    "reason": "Old master role attempted ownership before a master status was known; no0x26/0x27 handoff exchange appeared; Beat Link later logged another master and ceded ownership",
+    "sync_input_note": "Sync was toggled during first setup; that sequence is not an unattended-reconnect acceptance"
+  },
+  "corrected_harness": "handoff role waits for an observed existing master, requests transfer, and requires confirmation before applying tempo; unknown BPM emits null effective tempo",
+  "accepted_cycles": [
+    {
+      "tempo": 129,
+      "master_request": {
+        "event": "master_request",
+        "monotonic_ns": 10176919024085,
+        "previous_player": 1
+      },
+      "master_result": {
+        "event": "master_result",
+        "monotonic_ns": 10176961572974,
+        "peer_master": true
+      },
+      "synced_nonmaster_deck1_states": 138,
+      "handoff_request_reply_observed": true,
+      "late_native_samples": 22,
+      "late_native_master_samples": 0,
+      "late_last_packet_seconds_after_peer": 9.285578309
+    },
+    {
+      "tempo": 127,
+      "master_request": {
+        "event": "master_request",
+        "monotonic_ns": 10252085526478,
+        "previous_player": 1
+      },
+      "master_result": {
+        "event": "master_result",
+        "monotonic_ns": 10252127964158,
+        "peer_master": true
+      },
+      "synced_nonmaster_deck1_states": 129,
+      "handoff_request_reply_observed": true,
+      "late_native_samples": 26,
+      "late_native_master_samples": 0,
+      "late_last_packet_seconds_after_peer": 9.485423279
+    }
+  ],
+  "playback_samples": [
+    {
+      "pid": 240378,
+      "clock_ms": 12245555,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 22.143,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 240378,
+      "clock_ms": 12271686,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 46.574,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 240378,
+      "clock_ms": 12336996,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 107.348,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    {
+      "pid": 240378,
+      "clock_ms": 12379854,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 28099,
+          "devnum": 20
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 27753,
+          "devnum": 18
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 27926,
+          "devnum": 19
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 146.728,
+          "content_id": 495,
+          "title": "Algo más"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Two active hub sources and one loaded track in emulator; no audio phase or hardware/CDJ acceptance",
+    "Automatic native master reclamation after peer loss was not observed in the bounded late packet samples; baseline comparison remains required",
+    "Same-player reconnect and explicit negotiated handoff were exercised, not arbitrary external device churn",
+    "Beat Link still truncates1152-byte statuses to512; no full packet privacy claim",
+    "Mod binary was unchanged; this turn corrected the test harness and added evidence"
+  ],
+  "local_evidence_sha256": {
+    "reconnect-wire.jsonl": "f64b7e150d67d35bfc90632a45dc9ade15abbee79008975823487174ab1dc6bc",
+    "reconnect-first-peer.jsonl": "6404dabd304d6a04ae038f72df79550fed4143fed16f93077124a1e2c40a6d11",
+    "reconnect-second-peer.jsonl": "8f21f2aaa37b47303d16ed18dda4ccf71f3b8458c6c5a39ef8acdc5e54b2d400",
+    "reconnect-second-peer.stderr": "8e15ecfaba615447a09ac72b17ccc035b8b999a48d35bfa4052efe353f164766",
+    "reconnect-gap.png": "006d1ef07601ea6efc34418c7dd648db72fed38182716768d1be41babee3898d",
+    "handoff-before.json": "a13b9596bf50c2ab7e060439f903435144021270e17f69e5bb382f2b9fb96eaa",
+    "handoff-playing.json": "9fed1746dd210e6c76f760414c3327cd91ec02d73b0cf0394da1dc820e3b4c24",
+    "handoff-after-disconnect.json": "98b91318c4b9efe0baf1556b04b41c68603dc09bcff812751f088b590ec08277",
+    "handoff-playing.png": "1ec8ecd6ffff21f54910f6a06eea9caa0c1b3da0e9444afd1524cf3fa8a5b56f",
+    "handoff-after-disconnect.png": "0e0bb2667e973f110bff7bf2cf1cf27d3b28f5da4c380860b7484ba791f2148e",
+    "handoff-reconnect-playing.json": "61285bbbe410444f81fd327a9ce33283addc0a1613ea2784d149068e2fa9b35b",
+    "handoff-reconnect-after.json": "23e5f301311856b9990d9f1fce82a4fa1923df302e0d9e8836ce9bdbbf2de55e",
+    "handoff-reconnect-playing.png": "0ab540660c506942222edca7da835d3224822571a5566366dd5666dedf89fe93",
+    "handoff-reconnect-after.png": "7f655508db49e7ef100c33df8ec7a774429c9bca0ef214973c1186a33e433e58",
+    "handoff-wire.jsonl": "89a42a7f9254174017315fa29a8c0afb07cfef01302a38604b9b73f4124cad1b",
+    "handoff-peer.jsonl": "bc1a637d783adc8b725df9dd90e6cc89be46b30e79b8659e111a02593ebf8995",
+    "handoff-peer.stderr": "ce904424945dc093f0878273fe432be598d653329ca20e85217f0e7231bc73b8",
+    "handoff-reconnect-wire.jsonl": "6dc7e0d8e7a17de96ee5eb8d2101df6bcecde385c147a81e31206532aec38254",
+    "handoff-reconnect-peer.jsonl": "64014c2c698c7dfe2ab05d2e68098db91d90d477dee8343c666cd42b18622751",
+    "handoff-reconnect-peer.stderr": "c1e2f23dc5953fa96ec5b72fd349b18c1528d088bd2be28f8e0fd25c1c119a85"
+  }
+}

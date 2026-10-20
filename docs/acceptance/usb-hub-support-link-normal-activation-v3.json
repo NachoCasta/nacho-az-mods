@@ -1,0 +1,86 @@
+{
+  "scope": "Bounded supported-package integration pass; full functional matrix and new-hash recovery remain separate",
+  "candidate_version": "0.3.0",
+  "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+  "elf_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "6.6.138-dirty",
+  "initrd_sha256": "b3c0b20a7a502615d0f45ca7e961099662451812770d0da63c928820e21f7c09",
+  "normal_native_PID": 10961,
+  "activation": "Exact seven package members copied to actual mods USB only, staged through supported apply IPC, approved with normal UI Allow and activated with UI Reload now",
+  "forced_core_result": "loaded 0.3.0 on ep147-9e9454e357389ece (54 hooks)",
+  "parser_hook": "claim_hook 0xef05c8 ok; actual dbmsg activity follows",
+  "environment": "No AZHUB_* environment variables in the exact supported process",
+  "private_browse_and_load": {
+    "native_UI_source": "LINK 7 / USB1 HUB_LIB; private source index0, backing sdb1",
+    "browse": "TRACK count2547, titles/metadata/waveform previews visible",
+    "selected_real_track": "Are You That Somebody",
+    "content_id": "1944 from the previously verified fixture database mapping; no new direct memory inspection",
+    "native_load": "load-admitted source=0 deck=1; load-completed result=0; core LEEE",
+    "playback_UI_remaining_time": [
+      "04:22.762",
+      "03:51.789"
+    ],
+    "waveform_motion": true,
+    "audio_phase_or_human_audio_claim": false,
+    "cleanup": "Paused, then native deck-header chevron UNLOAD TRACK confirmation; state0/mode1/epoch1 callback and EEEE verified before shutdown"
+  },
+  "five_sources_at_power_on": {
+    "topology": "Native mods USB on EHCI; pci-ohci/full-speed eight-port hub with all five protected COW library images in the QEMU launch arguments",
+    "discovery": [
+      "A member7/slot3 sdb1 HUB_LIB",
+      "B member7/slot7 sdc1 HUB_LIB2",
+      "C member8/slot3 sdd1 HUB_LIB3",
+      "D member8/slot7 sde1 HUB_LIB4",
+      "E member7/slot8 sdf1 HUB_LIB"
+    ],
+    "native_SOURCE_UI": "Native USB1 AZ_USB, five distinct LINK source rows, MOD MENU; no extra native USB2 Nacho Chips row",
+    "interpretation": "All five source rows and independent backings observed; only A was loaded in this bounded step"
+  },
+  "emulator_correction": {
+    "workflow": "Normal offline build-image.sh from original pulled firmware using reviewed workspace patch37 source; original checkout and prior initrd preserved",
+    "content_delta_from_prior_image": [
+      "build stamp",
+      "restore exact original firmware usb-renotify.sh",
+      "omit emulator-added20-usb-renotify poller drop-in"
+    ],
+    "firmware_program_native_unit_loader_dropin_unchanged": true,
+    "embedded_USB_and_direct_preload_fallback": "absent"
+  },
+  "isolated_primary_network": {
+    "guest_eth0": "192.0.2.15 via existing DHCP; one NIC, no guest renames/address/configuration edits",
+    "host_peer": "192.0.2.2 in isolated azhub-link namespace containing only lo/azlink0",
+    "QEMU": "Restrictive Slirp management NAT plus loopback-only rx mirror and tx injection filters",
+    "framing_smoke": "Guest ARP reply and three ICMP replies captured; SSH available before and after",
+    "relay_final_counts": {"guest_to_tap": 2994, "tap_to_guest": 33},
+    "relay_shutdown": "QEMU standard poweroff closed the socket with Windows10054; no framing error recorded, TAP helper exited0",
+    "capture": "ARP/ICMP metadata only; no management or audio payloads retained",
+    "Link_peer_acceptance": "not yet tested"
+  },
+  "local_evidence_hashes": {
+    "local/diagnostics/link-normal-loader/v3-activated-private-load-state.txt": "27c43f387383f87eb20b779829bd19689278932ef93c9f1c0d9e503b8fc0548a",
+    "local/diagnostics/link-normal-loader/v3-empty-snapshot-state.txt": "00567b64827d3129d04976f2f45aaf2cc0fd8ac9579fd3e5276afac7cf9f0867",
+    "local/diagnostics/link-normal-loader/v3-primary-network-smoke-confirmed.json": "b3a783902be5ecd4f92c77d24db82a739b0f7eaf6269ef52596b6f0e0776da89",
+    "local/diagnostics/link-normal-loader/v3-network-transport.stderr": "98b07fc0517d52d7965d95ff8a2f2668f9228c3b00398dd58e3da0e22b9402ab",
+    "local/diagnostics/link-normal-loader/boot-v3-setup/launch.json": "e14414e80c1a1d51cbf543856929d433472dfb0838de1c3110ba9db225a0d160",
+    "local/diagnostics/link-normal-loader/boot-v3-setup/serial.log": "c1b8c316b6db15b73fcae1892c2b142590f2ad2697e040a280431c54323e1309",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/output-inventory.json": "59d0107f56f69d12609d008160bacdb0026d5a99c5f470c2b708280fe9b96240",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/source-inputs.json": "d6a4defede78d2ebfc404df51504379a891644cf1bb8457bd1803b1531fee298",
+    "local/diagnostics/link-normal-loader/emu-renotify-reconstruction/normal-build.log": "1023a7090a5f8032ddee4681e77e12dbe56a5e3583aa4f7a2a6d3354a5494206",
+    "local/diagnostics/link-normal-loader/five-fixtures.json": "738acb9ff9ac0761a1404a02995ffea4ec1013559603ebb9bc76d7537a8a3644"
+  },
+  "local_screenshots": [
+    "v3-allowed.png",
+    "v3-A-track-selection.png",
+    "v3-first-private-loaded.png",
+    "v3-first-private-playing-1.png",
+    "v3-first-private-playing-2.png",
+    "v3-native-unload-confirm.png",
+    "v3-all-five-startup-source.png"
+  ],
+  "limits": [
+    "Earlier b646 recovery evidence does not transfer to this ELF",
+    "No complete five-source load/eject/mode or external-peer matrix claimed",
+    "No physical AZ, 4.4 kernel rollback or real CDJ test performed"
+  ]
+}

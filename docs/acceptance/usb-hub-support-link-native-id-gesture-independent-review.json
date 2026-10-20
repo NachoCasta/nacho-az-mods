@@ -1,0 +1,141 @@
+{
+  "scope": "Independent frozen local evidence/hash/helper/screenshot review; no emulator operations, Ghidra or new tests",
+  "status": "Bounded held-SYNC Instant Doubles native/private UI behavior corroborated on55-hook diagnostic only",
+  "owner_record": "docs/acceptance/usb-hub-support-link-native-id-gesture-diagnostic.json",
+  "owner_record_sha256": "3a7335ca8e93e045c58515e012e7c10381ba8cddc1d23967ed6d0350e8a323a6",
+  "diagnostic_ELF_sha256": "bfe4a141a60bfe60cfdcecf517fdab83d14ca2913ead413e8675e50ad7c9b69a",
+  "diagnostic_package_sha256": "409a3f7557095eb83d34b5640e25b47609c78225bd987782d53db1c21c9e0613",
+  "PID": 20983,
+  "hook_claims": 55,
+  "all_21_raw_hashes_and_sizes_match": true,
+  "reviewed_input_contract": {
+    "gesture": "Target2 held BEAT SYNC using repeated ERP frames, timed by guest uptime in one connection, then active ERP release",
+    "native_repeat": "Input return0/no stderr, guest1250.94..1252.46",
+    "private_repeat": "Input return0/no stderr, guest1390.78..1392.29",
+    "helper": "Current helper uses normal virtual input device only, no direct Instant Doubles API caller, native code/process-memory write or forced-async marker; mixer state remains untouched during held-SYNC"
+  },
+  "visually_corroborated": [
+    {
+      "file": "slot7-native-held-sync2-repeat-result.png",
+      "observation": "Both decks show native USB1, Algo m\u00e1s, identical nonzero remaining02:34.136 and matching waveform position"
+    },
+    {
+      "file": "slot7-private-held-sync2-result.png",
+      "observation": "Both decks show private LINK7/USB1, Algo m\u00e1s, identical nonzero remaining02:58.596 and matching waveform position"
+    },
+    {
+      "file": "slot7-id-final-empty.png",
+      "observation": "Both visible decks show Not Loaded, zero time and empty waveform"
+    }
+  ],
+  "native_log_corroboration": {
+    "native_repeat": "Frozen native repeat state shows target controller0xfffee164ae00 new load-completed result0, PID20983 and LLEE after earlier native target unload",
+    "private_repeat": "Frozen private state shows source0 admitted/result0 on deck1 controller0xfffee164a000, then source0 admitted/result0 on deck2 controller0xfffee164ae00 after target unload; PID20983 remains LLEE",
+    "cleanup": "Frozen final empty state shows both controllers state0/mode1 unload callbacks and core EEEE samples at1452.92 and1455.96",
+    "timestamp_qualification": "Primary record says finalEEEE at1471.10; the linked final-empty raw file contains1452.92/1455.96. Empty-state outcome is corroborated, but1471.10 is not used as independent evidence."
+  },
+  "health": {
+    "native_and_private_health_files": "Both report and contain seven direct/nested /media/usb mounts, two direct physical ports1-1/2-1 plus five3-2.1..5 backings",
+    "controller": "No OHCI Unrecoverable Error/HC died/nobody cared/Disabling IRQ signature appears in either frozen dmesg",
+    "final_state": "Seven direct /media/usb partition mounts remain in final-empty raw state",
+    "legacy_field_name": "The health helper field healthy_six_disks is superseded by explicit expected_usb_partition_count7 and physical_partition_map; no six-device conclusion is drawn"
+  },
+  "preserved_negative_attempt": {
+    "first_input_returncode": 1,
+    "error": "Unnecessary mixer-release write in EXIT trap returned Invalid argument after the held-SYNC sequence",
+    "treatment": "Observed copied track/position is preserved, but this attempt is not counted as clean helper success",
+    "original_helper_provenance": "Original helper was reconstructed after correction from its original tool patch; it is explicitly not a contemporaneous preserved source snapshot. Frozen preservation note and reconstructed/current hashes agree."
+  },
+  "limits": [
+    "Numeric request option/type and accepted-operation epoch are not logged; none is inferred from gesture or unload callback epochs.",
+    "This establishes the documented held-SYNC user path on diagnosticbfe4, not final uninstrumented123703 acceptance.",
+    "No double-LOAD gesture, reconnect/stale cancellation, newer-operation race, audio phase or physical hardware result is established.",
+    "Selective private slot7 source-row failure remains a separate unresolved issue."
+  ],
+  "verified_raw": [
+    {
+      "path": "local/diagnostics/link-normal-loader/native-id-gesture.py",
+      "sha256": "215140b891658264df7e11c749a93511b956a2c81d56d8c8854876cf3da22ecd"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/native-id-gesture-first-attempt-reconstructed.py",
+      "sha256": "2bb141091c8d09bed33ee829981fd2e9ddd656a753fe20e5f147b2619de5b465"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/native-id-helper-preservation.json",
+      "sha256": "e3b24b02af6b437c905725b5b678c11f27d2d444301ca4e3d7abc2d6b2478953"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-algo-for-id.png",
+      "sha256": "5f04c00cbcedb495edfff200f430d54780acd9415cbcef83498bddda7c9cc093"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-id-source-playing.png",
+      "sha256": "3d519c811251bce987fe815a6e041cc1acf2f65acd2ee8cae8355270fb24da08"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-input.json",
+      "sha256": "d75aab8d224199da2c3b17f49d9345bb37a00924d70c2b16fc956cc72a906097"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-result.png",
+      "sha256": "089990a439cf5aa9ffe163aaa050952b0b69ad598753fbc6d4ae0c35f52bcc29"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-state.txt",
+      "sha256": "89e3bfb9aa5b3a2a3b4919aff981e89fa32b369331e9380dbf9ab120be8b43ca"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-id-repeat-before.png",
+      "sha256": "9eef4accc68753b83057217ebb022b2a88faa1bab48643fad7c9a50a4fa757f4"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-input.json",
+      "sha256": "3baa620a58d6e15c341332dd8b53d6da893a0e902c54ad1e8ae36efc5b4cffb5"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-result.png",
+      "sha256": "45818ffebef4c187a9f6f52f04f1b1aa6975d413dee410a3a737cb4caa5d460c"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-native-held-sync2-repeat-state.txt",
+      "sha256": "f82a94d1cfc58820bd88d7ba455b760a4a8aa2de5aa1fcd4a944b686a0e82347"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-native-id-gesture-health.json",
+      "sha256": "4d3210441fafe4a6f3dda7acab716a27d55645b75e8b6976af306373241374f9"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-private-algo-for-id.png",
+      "sha256": "33bc5b0aa9278e8e6eba84646401a1eb077ec838cae0af71f410cf341b9af86d"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-private-id-before.png",
+      "sha256": "146485aab9db8fba99d7c36c11600fdc3aa61aa3914b7ef4f954a05ce3f3730f"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-private-held-sync2-input.json",
+      "sha256": "494c79889797cbf2eceaba24696bbf8243c4c1bd7632d25f548a2400badf810b"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-private-held-sync2-result.png",
+      "sha256": "4376ac628fbb8f00c7ce861b2f652de6b90079d9b2624a9ef8f706f3569fdb9e"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-private-held-sync2-state.txt",
+      "sha256": "e561e7e7391feab6237db404cd3f1dc785d85d5a1e91241fe88db4761a5ecfd3"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-private-id-gesture-health.json",
+      "sha256": "aa829d39a7be2cec7f7c8df3fbe594514aa7e7244aacae45bad9793f38fbf580"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-id-final-empty.png",
+      "sha256": "961593742921f50fd24db0e642640da918293a6301619f6208010e3e2ff5e2f6"
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/slot7-id-final-empty-state.txt",
+      "sha256": "8a149cebcfabafb376aa206a35b9164faa2a63100762b397c026be0d659fcb4e"
+    }
+  ]
+}

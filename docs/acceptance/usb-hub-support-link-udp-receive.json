@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-10-19T02:22:32.163832+00:00",
+  "scope": "Receive adapter component; not yet installed in native mod hooks",
+  "arm64_test_sha256": "00699046117d50c681124c62882580769d1946497f19534bcbebd949c5987d17",
+  "validation": {
+    "host": "GCC ASan/UBSan passed",
+    "emulator": "Pinned Linaro ARM64 build without warnings, emulator kernel 6.6.138-dirty, exit zero",
+    "comparison_cases": 1032,
+    "compared": [
+      "return length",
+      "message flags",
+      "source address length",
+      "ancillary count, types and lengths",
+      "payload bytes"
+    ],
+    "additional_cases": [
+      "full payload buffer",
+      "zero-size payload with MSG_TRUNC",
+      "short recvfrom source buffer",
+      "null source with untouched length",
+      "invalid source/null length",
+      "empty nonblocking receive"
+    ],
+    "options": [
+      "SO_TIMESTAMP",
+      "IP_RECVTTL",
+      "IP_PKTINFO originally requested or injected and hidden"
+    ],
+    "flags": [
+      "MSG_PEEK",
+      "MSG_TRUNC",
+      "MSG_DONTWAIT"
+    ]
+  },
+  "limits": [
+    "Actual mod hooks still use their previous receive functions; no new UDP provenance enforcement is claimed",
+    "Socket-option ownership/lifetime, interface matching and trusted sender registry remain to integrate",
+    "Fixed extra ancillary capacity is bounded; incomplete metadata must never grant private trust",
+    "Filtered MSG_PEEK behavior and remaining discovery/control formats need separate integration decisions",
+    "No physical AZ test or audio evidence"
+  ],
+  "source_sha256": {
+    "link-udp-receive.h": "1f55e3975bde7fde3b36bf272eefdfd6c5fdff3b18ad3f6100118d8bd930cfab",
+    "test-link-udp-receive.c": "ff924258fda4cabf21c4b180792da7208043a03ac4a8b6b80fb9571d1dce149d"
+  },
+  "host_output": "PASS: 1032 native/adapter comparisons, scatter buffers, control truncation, timestamp/TTL, peek, MSG_TRUNC and recvfrom names"
+}

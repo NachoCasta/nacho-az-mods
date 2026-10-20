@@ -1,0 +1,25 @@
+{
+  "scope": "Read-only local core-source audit; not emulator or hardware recovery acceptance",
+  "core_checkout_commit": "970fa9ca6214b15082ec4f06e7e44bbfda38db0d",
+  "files": {
+    "deck/payload/usr/sbin/az-usbload": "7ed42c5993e86ef9fbc52c50da1a6ea114008247de25b0badbd3288384ea8f96",
+    "deck/payload/etc/systemd/system/EP147.service.d/10-azmod.conf": "78f989328c9b5e235f43559ee47984c38e98ba59d43adcdcd23c3c4344a0f6b6",
+    "deck/payload/etc/systemd/system/az-usbload.service": "ffa67a2d73cf14c8158a639536f6317237c0ec02ec3953e014030cf20265223c"
+  },
+  "findings": [
+    "EP147 reads persistent az-preload.env at first start, before the USB loader service runs.",
+    "az-usbload lines1203-1216 preserve a cached running mod set when the USB is absent; the stock environment is staged for Reload or a later boot.",
+    "The source therefore does not guarantee absence of cached candidate activation on the first USB-less boot.",
+    "A mod-level fail-closed initialization using supported USB asset availability is under review; it has not been implemented or accepted by this audit."
+  ],
+  "required_follow_up": [
+    "Verify the supported asset API reports actual USB availability rather than internal staged executable presence.",
+    "Test normal-loader populated-cache first boot with the USB removed, including first application start and settled state.",
+    "Verify the applicable real loader and physical removal/full-restart behavior before real candidate activation."
+  ],
+  "limits": [
+    "The deployed real-AZ loader version has not been matched to this local checkout.",
+    "Current emulator transient-service launch does not reproduce normal boot ordering.",
+    "No real device operations or internal system changes were performed."
+  ]
+}

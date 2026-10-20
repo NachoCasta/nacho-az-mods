@@ -1,0 +1,91 @@
+{
+  "scope": "Exact v5 cached normal-loader USB-absent cold recovery on emulator6.6; not physical recovery",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "native_PID": 759,
+  "service_wrapper_MainPID": 426,
+  "NRestarts": 0,
+  "boot_id": "65885466-e89e-4beb-b08a-e1ec29e3322a",
+  "initialization": "Exact cached candidate is mapped and enabled, but init returns-40 because matching USB package assets are absent. Guard precedes safe-eject prepare, kernel prepare, discovery, worker starts and hook phase in frozen source. No candidate loaded message, private aliases or HubMount/HubTransport workers.",
+  "loader": "Cached core preloads remain at first start. Firmware and chained loaders both wait for absent mods USB; desired stock environment is written normally for next boot. No automatic application restart or manual rescue. Native759 remains first and final.",
+  "fixture": "Fresh settings COW branches same frozen pre-positive parent as cold On. ModsUSB omitted; native music-only and five nested hub disks retained, six physical partitions healthy. No manual running-guest internal file changes.",
+  "native_control": "Native USB1 browses and loads Aaliyah content1944; deck1 UI waveform and clock advance04:19.578 to04:08.593, telemetryLEEE; candidate remains refused in same PID. No audio capture.",
+  "limits": [
+    "Kernel6.6 skips physical compatibility module. Exact real-AZ kernel4.4.194 loader/recovery remains unverified; no physical activation authorized by this result alone.",
+    "Core remains mapped on first recovery boot; this result establishes no active candidate effects, not absence of every framework binary.",
+    "All five non-mods hub devices remain physically attached; they are not candidate sources while init refused."
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/launch.json",
+      "sha256": "ddccf23c974bf6fc03a58c157e3a9bbfc445087eeefb7c64c8f934bffade3181",
+      "bytes": 14400
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/first-state.txt",
+      "sha256": "ee340600f655bbe2069bd7e38a97bd36a842b5256015bc05e2ce9472805830d6",
+      "bytes": 6480
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/first-state.txt.ssh-ready.txt",
+      "sha256": "fc85a5fa221b780e0ab6a4a47120ddc476d234c9512732c33dfc4488c92144e9",
+      "bytes": 50
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/settled-state.txt",
+      "sha256": "17197fbc7443fca8460bcb7c576113f9b19ba72a5a41df5878e6b2d1f1792f23",
+      "bytes": 30416
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/native-playing-state.txt",
+      "sha256": "e80982549bd7b6af5c8baa91a8fc677d6103782dfee1997bb20d0e07602c1dae",
+      "bytes": 33006
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/final-state.txt",
+      "sha256": "0c9f59f4995a035ee9dd3ae8db2f6d57f432be0ff06a83650857c9d455a0fd46",
+      "bytes": 37940
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/serial-startup-snapshot.txt",
+      "sha256": "22ae02d081772990d47f1b4618cc17bcfc92ce8c1521a9d3cf9be133d6f3c77b",
+      "bytes": 95435
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/recovery-fixtures/fixture.json",
+      "sha256": "fe4f76ac8dbbb7a7a13bb66910e59fecc359fb0fc9c2f6296f4714296ba0efeb",
+      "bytes": 2331
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/xhci-v5-recovery-six-health.json",
+      "sha256": "736f9a4fc067e89bba4a01955e4669640b63ea32385619b8bf71405ac8dc9281",
+      "bytes": 99657
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-recovery-source-before.png",
+      "sha256": "be77662cc5b87507c451ff8a0c33596ea158fb7919a8744c719a106d50aeb046",
+      "bytes": 36371
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-recovery-native-selected.png",
+      "sha256": "635de9bf7a3a1074bd7e40c911efa8af843732e883c98f22e6c35d7191177812",
+      "bytes": 70924
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-recovery-native-playing-first.png",
+      "sha256": "5a0c258338ec0fb96e8a4dbf037fedd29f17994c15b6a295adf51bcabbb4a494",
+      "bytes": 118798
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-recovery-native-playing-later.png",
+      "sha256": "d95890988064c27699c6f89297ce4675ec6299e377d440968846dd92009916a6",
+      "bytes": 118510
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-recovery/cleanup-state.txt",
+      "sha256": "4523a6dcfa7634bfd69d929a5d6792aceadf3b32241872d19520028346f967c5",
+      "bytes": 39994
+    }
+  ],
+  "cleanup": "Native UI unload settles EEEE in same native759 before standard emulator poweroff."
+}

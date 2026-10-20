@@ -1,0 +1,71 @@
+{
+  "reviewed_at_utc": "2026-10-19T06:09:14.1673665Z",
+  "scope": "Independent local-only review of frozen normal-loader emulator positive/negative boots and later native control",
+  "acceptance_record": "docs/acceptance/usb-hub-support-link-normal-recovery.json",
+  "acceptance_record_sha256": "0bef0710eb479f507e86ea608431266292486a3a2783f0efe5b360677e46fac0",
+  "frozen_raw_hashes_verified": 12,
+  "chosen_elf_sha256": "b6462687443b8ae55f9306a3b65988e4d5989bfffad1f2b144bce46571fdf03b",
+  "chosen_package_sha256": "f6c43ca830bfb2a7935b08720bb211d9955aa95729c3519199f792df615433a7",
+  "positive": {
+    "result": "Bounded first-start initialization passed",
+    "first_snapshot_uptime_seconds": 6.13,
+    "first_native_pid": 659,
+    "native_start_seconds": 9.778,
+    "hook_count": 53,
+    "workers": [
+      "HubMount",
+      "HubTransport"
+    ],
+    "restarts": 0,
+    "loader_trace": "Same preload as loaded; no write, no restart",
+    "caveat": "No hub devices attached and compatibility kernel module was already absent"
+  },
+  "negative": {
+    "result": "Candidate effects absent from first start through settled state on this emulator fixture",
+    "boot_id": "9fa552b6-81a2-4f54-9ffc-7aa1a2e7ff33",
+    "first_snapshot_uptime_seconds": 8.01,
+    "first_native_pid": 458,
+    "settled_uptime_seconds": 89.73,
+    "restarts": 0,
+    "candidate": "Exact b646 cache retained; initialization returned -40 before hook claims, without the after-patching refusal suffix",
+    "workers_and_module": "No HubMount/HubTransport workers or azhub module",
+    "initial_usb": "No external USB storage in launch arguments or initial guest mounts",
+    "mapping": "Cached candidate mapping remains after refusal; this does not imply active hooks",
+    "loader_trace": "Stock selection written for a future start; running application explicitly not restarted"
+  },
+  "later_native_control": {
+    "timing": "Separate ordinary native USB hotplug after the settled no-USB observation",
+    "inventory": "Offline FAT inventory contains no MODS directory; candidate remains refused after native mount",
+    "native_pid": 458,
+    "loaded_state": "LEEE",
+    "screenshot_title": "Algo más",
+    "remaining_time_first": "03:20.418",
+    "remaining_time_second": "03:11.970",
+    "visual_motion": "Waveform and overview playhead change between the two local screenshots",
+    "no_audio_claim": true
+  },
+  "screenshot_review": [
+    "local/diagnostics/link-normal-loader/negative-native-playing-1.png",
+    "local/diagnostics/link-normal-loader/negative-native-playing-2.png"
+  ],
+  "corrections": "Corrected the interpreted portable UI title from double-encoded mojibake to Algo más, as visible in both playback screenshots. Raw evidence was not altered.",
+  "limits": [
+    "Emulator kernel 6.6 and exact loader/package only; physical 4.4 loader and USB-removal/full-restart recovery remain unverified.",
+    "Native USB visual playback is a separate later control, not proof of an attached USB during the initial negative boot.",
+    "No final candidate hub-source, packet privacy, native same-content replacement or audio-phase acceptance follows from this recovery audit."
+  ],
+  "raw_evidence_hashes": {
+    "local/diagnostics/link-normal-loader/positive-first.txt": "a8c90ca0a8cdcef890c70e7bdfeae84b521efb646a534552d5f8925a1d4e223d",
+    "local/diagnostics/link-normal-loader/positive-init.txt": "f2ecb8ad9f8e3c54b56b3ea90244f3be16b6da015618492ce57d004cab169d8b",
+    "local/diagnostics/link-normal-loader/positive-settled.txt": "acdbf9bc6a2ad3774fe8c4e413baf7e7c8e4c5f0f6437eb9224456d8e126630f",
+    "local/diagnostics/link-normal-loader/negative-first.txt": "bc7e6f3fc76c2a3c83e39f675d173977f24fccb10324f3a2f794c3813bec63e9",
+    "local/diagnostics/link-normal-loader/negative-init.txt": "ec087485c42bdffb2d74defc1b484a9a957034f4432fc1293a6dabcf9f40e0d3",
+    "local/diagnostics/link-normal-loader/negative-settled.txt": "6cc2c33784c0f9553a3774109de17419d562acf4f331de0416b0d2a2cd75935a",
+    "local/diagnostics/link-normal-loader/negative-native-control.txt": "fc99099fd370442707745713476ea7ae9308fac49f87ae286cfe0fb5be4034c2",
+    "local/diagnostics/link-normal-loader/native-control-inventory.json": "570973f2ac46068018faaae52cbe91cc0491a04cbf887f80e9db175b302cfa1d",
+    "local/diagnostics/link-normal-loader/boot-positive-v1/launch.json": "137d31ed850a10d9625671a4b02eec5d7c57ccf83d361fbfebe86b5e5fe42a88",
+    "local/diagnostics/link-normal-loader/boot-positive-v1/serial.log": "7e362ba3fbdb8bed0e0a90ad13a463b8587f94eb6f20fcfbbf0cb8c73f2c7286",
+    "local/diagnostics/link-normal-loader/boot-negative-v1/launch.json": "69a674cf4d34179e4da8d9a68cc50ddc19072e5831ce83afdda45fa5f42fb37e",
+    "local/diagnostics/link-normal-loader/boot-negative-v1/serial.log": "77e0ba28b0c09eb4dea811b3345193d106089d7ab022efcfc0674e2899d16bf7"
+  }
+}

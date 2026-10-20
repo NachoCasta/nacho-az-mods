@@ -1,0 +1,243 @@
+{
+  "scope": "Native core-active/candidate-refused timing baseline against exact supported v5; bounded emulator comparison",
+  "candidate_ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "candidate_comparison_PID": 69363,
+  "baseline_PID": 831,
+  "baseline_boot_id": "7b2f6b0a-52b2-449b-b09d-3b3667549484",
+  "baseline_effects": "Core remains active, cached approved candidate init returns-40 before native hooks/workers/kernel preparation because no mods USB assets exist. No HubMount/HubTransport workers. Candidate mapping alone does not imply active effects.",
+  "fixture": "Same c4dbce image, primary192.0.2.15, native ports1-1/2-1 and five hub backings. Both native sticks are separate children of same music-only parent; no MODS package. Fresh settings child from original pre-positive parent retains normal core preload. No manual internal edits.",
+  "loaded_control": "Native USB1/USB2 both browse/load Aaliyah1944, show advancing waveform/clocks; same native831 remains LLEE across peer window. Native UI unload later settlesEEEE.",
+  "comparison": {
+    "candidate": [
+      {
+        "deck": 2,
+        "zero_prefix_packets": 50,
+        "later_native_packets": 110,
+        "native_tuple": [
+          1,
+          2,
+          1,
+          1944
+        ],
+        "delay_from_first_status_ms": 9998.369802,
+        "native_auxiliary_in_zero_prefix": 50,
+        "first_visible_monotonic_ns": 348361155892
+      },
+      {
+        "deck": 1,
+        "zero_prefix_packets": 50,
+        "later_native_packets": 110,
+        "native_tuple": [
+          1,
+          3,
+          1,
+          1944
+        ],
+        "delay_from_first_status_ms": 9998.142612,
+        "native_auxiliary_in_zero_prefix": 50,
+        "first_visible_monotonic_ns": 348361511652
+      }
+    ],
+    "baseline": [
+      {
+        "deck": 2,
+        "zero_prefix_packets": 50,
+        "later_native_packets": 243,
+        "native_tuple": [
+          1,
+          2,
+          1,
+          1944
+        ],
+        "delay_from_first_status_ms": 6780.364042,
+        "native_auxiliary_in_zero_prefix": 50,
+        "first_visible_monotonic_ns": 1672033423698
+      },
+      {
+        "deck": 1,
+        "zero_prefix_packets": 50,
+        "later_native_packets": 256,
+        "native_tuple": [
+          1,
+          3,
+          1,
+          1944
+        ],
+        "delay_from_first_status_ms": 6653.274001,
+        "native_auxiliary_in_zero_prefix": 50,
+        "first_visible_monotonic_ns": 1671968103659
+      }
+    ]
+  },
+  "finding": "Both baseline and candidate start with50 zero standard-source packets per deck while all50 auxiliary locations already show native1944. Thereafter both expose nativeUSB1 tuple(1,3,1,1944) andUSB2(1,2,1,1944) continuously in their captured windows. The zero-prefix/auxiliary-native pattern therefore occurs without candidate effects; it is not sufficient evidence of mod-induced suppression.",
+  "timing_limits": "Candidate observed prefix spans~10s, baseline~6.65/6.78s. Cadence differs; no equal-latency or exact native mechanism claim. Baseline first native source precedes explicit requester3 TCPmedia query by~18.7s, so that query did not trigger first visibility. Initial native metadata availability is not promised before peer startup settles.",
+  "baseline_transport": "Tracked primaryTAP bridge completes120s with5287guest-to-TAP/666TAP-to-guest/503NATmanagement/12NATpeer suppressed, errors empty.",
+  "negative_preparation": "Earlier no-core PID709 changed more than the mod. Scripted selection landed in native folder view with both decks Not Loaded; its peer window is NOT accepted as loaded-track baseline. Normal poweroff, then fresh core-active/initializer-refused fixture831 supplies the actual comparison.",
+  "limits": [
+    "No factory-only no-core library equivalence, audio/phase, real-CDJ or physical4.4 recovery claim",
+    "Observational native startup pattern comparison, not proof of its internal cause or all packet timings",
+    "Earlier strict continuous native visibility expectation was stronger than the observed baseline; retain predecessor negatives as historical observations, not ongoing proof of a mod defect"
+  ],
+  "raw": [
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/launch.json",
+      "sha256": "3db22b723dac62e2c7c733fb717092edf4424f8317b987db211c662893ffa617",
+      "bytes": 14931
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/first-state.txt",
+      "sha256": "2b6d1137295e5f4a833a35eca47c4653f9e373836a7e7e227710d2baa5bb370d",
+      "bytes": 6652
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/first-state.txt.ssh-ready.txt",
+      "sha256": "a962fc5918234fb9e146f82f012d74a33aaa71d918387e118bcf35ccfa91f8ae",
+      "bytes": 50
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/settled-state.txt",
+      "sha256": "58afdefe7c3425a88b051a675759f80a1f65462d937d332ae21166aeb46129b2",
+      "bytes": 29763
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/native1-loaded-state.txt",
+      "sha256": "c1fa4b07dac5e3721cf31b41cc6130ae052576e9fe0380095f373e5281ddb8d3",
+      "bytes": 33484
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/native2-loaded-state.txt",
+      "sha256": "7d067eb2822f22c613338e8fbba59869307c66127b96f706ab676ca95d19b0eb",
+      "bytes": 35555
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/during-peer-state.txt",
+      "sha256": "ad4d24af7097b5268d8db28d17c99c0303b7243220af66758a6c4e25dd02d25e",
+      "bytes": 47748
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/after-peer-state.txt",
+      "sha256": "9d6ee1930675363a15766a1ddbc84ba066b757375b34715fd0c723654be49881",
+      "bytes": 56053
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/cleanup-state.txt",
+      "sha256": "8690b88a0301201aec388fc0324e457b7a982ccc9efbcf2ef23ef5640f67065c",
+      "bytes": 57460
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-core-baseline/serial-startup-snapshot.txt",
+      "sha256": "25fc85819d18b21bebd64518320e79df0dbc14772debfcc0f507174d382f079c",
+      "bytes": 125871
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/query-timing.py",
+      "sha256": "27bb5503b9edfed4bf54f72936c722ce60de7ddebec2526dd4f6a805f02eb835",
+      "bytes": 561
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/query-timing-result.json",
+      "sha256": "98f4a2ecb5ad54514d7ed532f527dc0c180f825571eed1f9c6b0a6adbda56b38",
+      "bytes": 529
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/visibility-summary.json",
+      "sha256": "46f998fe3f1b1d3576b9da8f9b52290c6b7c790ab8099b093e380089c6536644",
+      "bytes": 637
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/visibility-comparison.json",
+      "sha256": "301315f389da1820493da15d9fbe7fd8d1282863934d79b8e1a941dd66b24fc9",
+      "bytes": 1388
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/refused-candidate-control.txt",
+      "sha256": "8200419d82f723702cfbb59486e53d1d4cbd0f35795687aec1a6ea7f49fe08fb",
+      "bytes": 88918
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/transport.stdout",
+      "sha256": "421380c27316d28e9505f25f2115b530edfcb8de96bbefe49e83bb0f5d2a9fb6",
+      "bytes": 175
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/transport.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/transport-start.json",
+      "sha256": "185922cc002b9b44f7224a2ecf93b46dcab28734747d6070f39b2a9c000917d2",
+      "bytes": 140
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/native-two-usb-query-timing-wire.jsonl",
+      "sha256": "d433f7ee43a205a1b7131497cf311845350f83b36adca8911aa19a7c7c776959",
+      "bytes": 2651876
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/native-two-usb-query-timing-wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/native-two-usb-query-timing-peer.jsonl",
+      "sha256": "1aab503c36113768019f63e36fa86eb8019aba695f820dd703af294e00a92d42",
+      "bytes": 107010
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/native-two-usb-query-timing-peer.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca",
+      "bytes": 905
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-core-baseline/native-two-usb-query-timing-run.json",
+      "sha256": "0de85b4f4e7dbbaee6283e9693ec2a5a4d9addc316cc43c23282c0c3df782824",
+      "bytes": 1293
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/native-core-baseline-fixtures/fixture.json",
+      "sha256": "40e3948843cc0be02708406ddaf319c7eba2521c3a829c34eedcba2fce603bbb",
+      "bytes": 2947
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-core-baseline-source.png",
+      "sha256": "8599ba4cce783f8b1d59eea6ee85ccc7fb328badf5b7f0151bbb81f46f1f5485",
+      "bytes": 39818
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-core-baseline-two-playing.png",
+      "sha256": "3e168198946596e02eef47d0d40224c534c1a6aadc5353a9da387766bc8467d1",
+      "bytes": 135419
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-core-baseline-after-peer-playing.png",
+      "sha256": "ebca92a433e73309a9499434ed8998be985d9f6b9c44563fa694409731b7fdd4",
+      "bytes": 122974
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-adversarial/adversarial-native-tcp-guard-wire.jsonl",
+      "sha256": "2fea8188a829b0e00ac19ac77a48c0a4e182b6173adde892fb40be24e951b413",
+      "bytes": 1639070
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/native-baseline-fixtures/fixture.json",
+      "sha256": "d265b366355ab1c54ab8f74b5466d5c15a96d37a738a93a46d39fe01387b243c",
+      "bytes": 2936
+    },
+    {
+      "path": "local/integration/link-coexistence-v5/boot-native-baseline/settled-state.txt",
+      "sha256": "daabeb6e840c67f4b4a369fcb35267256fb16eac7596291439858f949103745e",
+      "bytes": 28349
+    },
+    {
+      "path": "local/diagnostics/link-normal-loader/v5-native-baseline-two-playing.png",
+      "sha256": "3fffacc1db698155ba073d5b9bebd9d995aa991c50ae7b8b04f8d3d65cc8dcf6",
+      "bytes": 26173
+    },
+    {
+      "path": "local/integration/link-coexistence-v5-native-baseline/native-mapping-control.txt",
+      "sha256": "6298ab35061c1ccde4725b9cac0bd2dd492eae74fcadfd3d065239a900448097",
+      "bytes": 57744
+    }
+  ]
+}

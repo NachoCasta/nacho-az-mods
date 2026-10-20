@@ -1,0 +1,290 @@
+{
+  "recorded_at_utc": "2026-10-19T05:34:45.119942+00:00",
+  "scope": "Negative exact-binary packet audit plus owner-zero host correction; corrected runtime is pending",
+  "binary_sha256_prefix": "f2ba2da5",
+  "native_pid": 405556,
+  "capture": {
+    "path": "local/diagnostics/link-coexistence/shared-private-full-status.jsonl",
+    "sha256": "9e348c68bc9babba1341db50b467ef2654d557a161ecafc71c9e40cbbf97c735",
+    "rows": 2926
+  },
+  "runtime_owner_timeline": [
+    "Both decks contained private content 495 throughout the capture.",
+    "The window began with old cached tracks after physical source reconnect during an Instant Doubles cancellation trial.",
+    "A fresh normal private deck 2 reload and a fresh private deck 1 Instant Doubles copy then succeeded within the same window.",
+    "No USB STOP interaction had initialized the safe-eject native controller before this observation."
+  ],
+  "independent_packet_findings": [
+    "399 complete outgoing AZ statuses: 176 deck 1 and 223 deck 2.",
+    "Deck 1 exposes player 1 / USB 3 / track type 1 / content 495 in 41 packets; deck 2 does so in 6 packets.",
+    "All known auxiliary TrackLocation rows are free of private MediaIDs; the former 0x194 content marker is absent.",
+    "No exact private loopback IP or selected HUB_LIB/Algo UTF-8 marker is present.",
+    "This remains a failed standard-source privacy result, not acceptance."
+  ],
+  "packet_sequence_runs": {
+    "1": [
+      {
+        "tuple": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "packets": 50,
+        "first_ns": 17437322888280,
+        "last_ns": 17447115490995
+      },
+      {
+        "tuple": [
+          1,
+          3,
+          1,
+          495
+        ],
+        "packets": 41,
+        "first_ns": 17447314651403,
+        "last_ns": 17455013399594
+      },
+      {
+        "tuple": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "packets": 85,
+        "first_ns": 17455172527966,
+        "last_ns": 17466632963800
+      }
+    ],
+    "2": [
+      {
+        "tuple": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "packets": 50,
+        "first_ns": 17437320262953,
+        "last_ns": 17447115060985
+      },
+      {
+        "tuple": [
+          1,
+          3,
+          1,
+          495
+        ],
+        "packets": 6,
+        "first_ns": 17447313735407,
+        "last_ns": 17448315013110
+      },
+      {
+        "tuple": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "packets": 167,
+        "first_ns": 17448330704066,
+        "last_ns": 17466632491769
+      }
+    ]
+  },
+  "analysis": {
+    "result": "failed",
+    "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+    "complete_outgoing_statuses": 399,
+    "failures": [
+      "Deck 1 exposes a nonzero known media tuple",
+      "Deck 2 exposes a nonzero known media tuple"
+    ],
+    "missing_evidence": [],
+    "observations": [
+      {
+        "deck": 1,
+        "packets": 176,
+        "first_ns": 17437322888280,
+        "last_ns": 17466632963800,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 135
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 41
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {},
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_content_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 41
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_auxiliary_locations": {},
+        "content_marker_offset_classification": {
+          "0x2c": "Current source content ID",
+          "0x194": "Auxiliary TrackLocation content ID",
+          "0x1d4": "Auxiliary TrackLocation content ID",
+          "0x214": "Auxiliary TrackLocation content ID",
+          "0x254": "Auxiliary TrackLocation content ID",
+          "0x294": "Auxiliary TrackLocation content ID",
+          "0x2d4": "Auxiliary TrackLocation content ID",
+          "0x314": "Auxiliary TrackLocation content ID",
+          "0x354": "Auxiliary TrackLocation content ID",
+          "0x394": "Auxiliary TrackLocation content ID",
+          "0x3d4": "Auxiliary TrackLocation content ID",
+          "0x430": "Auxiliary TrackLocation content ID"
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0101010101000001"
+          ],
+          "0xf9": [
+            "0101010101000001"
+          ],
+          "0x3fd": [
+            "0101010101000001"
+          ],
+          "0x41d": [
+            "0101010101000000"
+          ],
+          "0x468": [
+            "0101010101000001"
+          ],
+          "0x474": [
+            "0101010101000001"
+          ]
+        }
+      },
+      {
+        "deck": 2,
+        "packets": 223,
+        "first_ns": 17437320262953,
+        "last_ns": 17466632491769,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 217
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 6
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {},
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_content_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 6
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_auxiliary_locations": {},
+        "content_marker_offset_classification": {
+          "0x2c": "Current source content ID",
+          "0x194": "Auxiliary TrackLocation content ID",
+          "0x1d4": "Auxiliary TrackLocation content ID",
+          "0x214": "Auxiliary TrackLocation content ID",
+          "0x254": "Auxiliary TrackLocation content ID",
+          "0x294": "Auxiliary TrackLocation content ID",
+          "0x2d4": "Auxiliary TrackLocation content ID",
+          "0x314": "Auxiliary TrackLocation content ID",
+          "0x354": "Auxiliary TrackLocation content ID",
+          "0x394": "Auxiliary TrackLocation content ID",
+          "0x3d4": "Auxiliary TrackLocation content ID",
+          "0x430": "Auxiliary TrackLocation content ID"
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0000000000000000"
+          ],
+          "0xf9": [
+            "0000000000000000"
+          ],
+          "0x3fd": [
+            "0000000000000000"
+          ],
+          "0x41d": [
+            "0000000000000000"
+          ],
+          "0x468": [
+            "0000000000000000"
+          ],
+          "0x474": [
+            "0000000000000000"
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "Marker matches outside known media fields require semantic review.",
+      "Absence of selected markers does not identify every extended field.",
+      "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+    ]
+  },
+  "confirmed_code_cause": [
+    "The classifier returned early when safe_native_interface could not resolve its owner, before inspecting committed load-origin proof.",
+    "That native owner depends on safe_controller captured by safe-eject preparation, although committed load origin does not depend on a detach ticket.",
+    "The correction requires native owner only for detach-ticket fallback. Complete committed physical-origin proof remains independently usable."
+  ],
+  "host_validation": [
+    {
+      "adapter": "corrected owner gate on detach fallback only",
+      "expected": "all helper assertions pass",
+      "observed_exit_code": 0
+    },
+    {
+      "adapter": "previous global owner gate",
+      "expected": "owner-zero committed-origin regression fails",
+      "observed_exit_code": -6
+    }
+  ],
+  "limits": [
+    "No corrected binary runtime acceptance in this record.",
+    "Portable tests exercise the actual helper with a modeled ledger and owner-zero interface; they do not execute native load callbacks.",
+    "Known-field cleanup does not establish complete semantic privacy for every extended field.",
+    "No physical controller, audio, or real CDJ acceptance."
+  ],
+  "source_sha256": {
+    "link-cached-status-probe.h": "3df5ee26c0806aae4bc7bfcff043bcf93647d85d0908894967de03127ed3b839",
+    "test-link-cached-status.c": "01b768b83890752a556905f6342180b6d13d493d260867f883b676f7d8a4f237"
+  }
+}

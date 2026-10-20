@@ -1,0 +1,131 @@
+{
+  "timestamp_utc": "2026-10-19T02:09:12.703397+00:00",
+  "scope": "Pinned socket registry and dispatch proof revalidation, isolated emulator only",
+  "binary_sha256": "2c166c3631fbdb3ae80ac8a2035a207fb780a5ac03429a88fc4c99ba68071574",
+  "pid": 148521,
+  "registry_capacity": 64,
+  "pending_message_capacity": 256,
+  "portable_tests": [
+    "ASan/UBSan passed actual loopback sockets, stale completion, same-FD client/server dup2 overwrite, concurrent lookup/invalidation, bounded capacity, epoch exhaustion and final FD count",
+    "ThreadSanitizer passed the same test with 1000 concurrent lookup and invalidation iterations"
+  ],
+  "emulator_checks": {
+    "stable_collision_preserved_sockets": [
+      [
+        "0100007F:982B",
+        "0100007F:DEBC",
+        "01",
+        "667454"
+      ],
+      [
+        "0100007F:DEBC",
+        "0100007F:982B",
+        "01",
+        "667448"
+      ]
+    ],
+    "native_response": {
+      "target": "isolated-emulator",
+      "port": 38955,
+      "requester": 3,
+      "private_slot": 3,
+      "greeting": 1,
+      "setup": {
+        "transaction": 4294967294,
+        "type": 0,
+        "arguments": [
+          1,
+          20
+        ]
+      },
+      "media_reply": {
+        "transaction": 2,
+        "type": 16384,
+        "arguments": [
+          12295,
+          0
+        ]
+      }
+    },
+    "loaded_after_collision": {
+      "pid": 148521,
+      "clock_ms": 7373544,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 25806,
+          "devnum": 14
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 25209,
+          "devnum": 12
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 25382,
+          "devnum": 13
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  },
+  "excluded_trial": "First socket comparison changed during overlapping native member8 startup; logs show owned member8 replacing owned member7, both requester5. Not collision-preservation acceptance.",
+  "limits": [
+    "Private members still share requester5; separate namespace and multi-member regression remain required",
+    "Diagnostic traced/target arrays remain outside the new registry and need their own concurrency audit",
+    "Source-generation and proprietary task cancellation ordering remain unvalidated",
+    "Pin lifecycle leak check is portable only; no long native lifecycle acceptance",
+    "No physical AZ tests, release or audio acceptance"
+  ],
+  "local_evidence_sha256": {
+    "socket-pins-stable-before.tcp": "b4d41ebfc8c9e9d49c34f010f0db4eb516534280ea914c2ae0dd5280b5f46832",
+    "socket-pins-stable-after.tcp": "34012db82847722fd7633c7fa6a6e8d6659ac02e172b55d69df5afb73fab7f20",
+    "socket-pins-native.json": "436c7b3a6f628a2c37a2e59c808bca10ebf30b801fe59bf2ee6f345550db30c3",
+    "socket-pins-stable-spoof.stderr": "e8f9537a4499941a881924a3d91549850e10bd4fe33b538d2ccacbd66bbaddd6",
+    "socket-pins-loaded.json": "2a4249b52bd4c1fba533fb389a221e667dc668e2972b449e446628a7dea0ec35",
+    "socket-pins-final.log": "0af07626679d1ce83d3ec8901ad66d529be3897673666e6cc20eb38f1c2f9c18",
+    "socket-pins-before.tcp": "ad91aac19b984eee5c9ec1d51fc58d119bdbfaadbdb0740987488fdf1a2d9f74",
+    "socket-pins-after.tcp": "35ede75bf2f35f3e618d217865fa941e1cd0bf0f6a9533e768da811c8ea710e1",
+    "socket-pins-first.log": "b13e8576c5e8e2bf8b02465d2baba192ab1f1998b35e007f97187e28ee9c8a31"
+  }
+}

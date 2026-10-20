@@ -1,0 +1,316 @@
+{
+  "purpose": "Compact final-review map; linked records define the actual scope and limitations",
+  "overall_status": "Local candidate and bounded emulator preparation complete. Physical validation pending under normal AZ-MODS workflow; separate recovery test no longer required. No physical candidate/audio-phase/real-CDJ acceptance or release claim.",
+  "requirements": [
+    "docs/PRO-DJ-LINK-IMPLEMENTATION-PLAN.md",
+    "docs/AZ-TESTING-POLICY.md"
+  ],
+  "current_artifact": {
+    "version": "0.3.0",
+    "id": "usb-hub-support",
+    "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+    "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+    "firmware": "ep147-9e9454e357389ece",
+    "core_minimum": "1.2.3",
+    "evidence_rule": "Only a record identifying this ELF can establish its runtime result. Host, diagnostic and predecessor results support design or test readiness; they do not transfer acceptance.",
+    "stage": "local/integration/link-coexistence-v5",
+    "build_record": "docs/acceptance/usb-hub-support-0.3.0-all-slot-replay-candidate-build.json"
+  },
+  "matrix": [
+    {
+      "requirement": "Supported candidate, exact source/build/package identity and single parser registration",
+      "plan_gates": [
+        1,
+        7
+      ],
+      "records": [
+        "docs/acceptance/usb-hub-support-0.3.0-parser-candidate-build.json"
+      ],
+      "remaining": "Runtime coverage is tracked separately below; new v3 TSan was not run",
+      "prior_artifact_observation": "Build/package passed: 65 production/export source hashes match, pinned SDK/compiler, GLIBC2.17 only, exactly seven package members; supported preprocessing exercises 19 required hook pairs and zero/double parser controls",
+      "current": "Build/package passed:65 production/export source hashes,71 package inputs,44 portable controls across plain/ASan+UBSan, SDK UI10plain/8ASan; supported hook set unchanged, parser once, seven members and GLIBC2.17. Expanded actual mode adapter test covers all8 slot assignments and20000 transition/write races.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-0.3.0-all-slot-replay-candidate-build.json"
+      ]
+    },
+    {
+      "requirement": "Native Link Off four decks / On two decks; cold Off and cold On; loaded transitions preserve surviving local decks and source rows",
+      "plan_gates": [
+        5
+      ],
+      "support_scope": "Diagnostic mode evidence only; individual historical records include failed/superseded transitions",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-four-decks.json",
+        "docs/acceptance/usb-hub-support-link-five-source-modes.json",
+        "docs/acceptance/usb-hub-support-link-mode-recovery.json",
+        "docs/acceptance/usb-hub-support-link-mode-serialization.json"
+      ],
+      "prior_artifact_observation": "Exact-artifact PID703 shows four loaded local decks in Off and two in On, but its source-transition result is inconclusive: OHCI controller failure disconnected all hub backings before the transition. Repeat with stable devices; cold-mode and full loaded-transition acceptance remain pending",
+      "prior_artifact_records": [
+        "docs/acceptance/usb-hub-support-link-functional-matrix-v3-partial.json",
+        "docs/acceptance/usb-hub-support-link-matrix-controller-loss-review.json"
+      ],
+      "current": "Loaded On/Off/On passes all-five-row recovery and four/two advancing decks. Cold On first native PID997 loads54 hooks without restart. Native yellow warnings persist; cold Off also passes first native851,54 hooks,NRestarts0, five private/two native sources.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-normal-activation-v5.json",
+        "docs/acceptance/usb-hub-support-link-loaded-modes-v5.json",
+        "docs/acceptance/usb-hub-support-link-cold-on-v5.json",
+        "docs/acceptance/usb-hub-support-link-cold-off-v5.json"
+      ]
+    },
+    {
+      "requirement": "Independent per-source servers/SQL/tag caches, no borrowed native USB slot, five hub sources plus native control; distinct playable 495 and 1944 across sources",
+      "plan_gates": [
+        1,
+        5
+      ],
+      "records": [
+        "docs/acceptance/usb-hub-support-link-normal-activation-v3.json"
+      ],
+      "support_scope": "Eight independent source implementations are retained; diagnostic five-source mode run did not load every source. Diagnostic distinct495/1944 trial used the same source",
+      "support_records": [
+        "docs/acceptance/usb-hub-support-link-five-source-modes.json",
+        "docs/acceptance/usb-hub-support-link-second-playable.json",
+        "docs/acceptance/usb-hub-support-link-integration-review.json"
+      ],
+      "prior_artifact_observation": "Earlier bounded startup/sourceA pass is retained. Stable xHCI PID762 now independently reproduces missing player7/slot7 and player8/slot7 with both native ports visible, seven mounted filesystems and all five private acknowledgments. The source-visibility defect remains unresolved; full five-source load acceptance is pending",
+      "prior_artifact_records": [
+        "docs/acceptance/usb-hub-support-link-functional-matrix-v3-partial.json",
+        "docs/acceptance/usb-hub-support-link-slot7-stable-baseline-independent-review.json"
+      ],
+      "current": "All five sources admit playable loads; five distinct private music/info server pairs observed. Both native USB mounts remain. Full SQL/tag collision content audit is separate.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-normal-activation-v5.json",
+        "docs/acceptance/usb-hub-support-link-loaded-modes-v5.json"
+      ]
+    },
+    {
+      "requirement": "Native browse/load/unload remains usable in both modes",
+      "plan_gates": [
+        5
+      ],
+      "records": [
+        "docs/acceptance/usb-hub-support-link-normal-activation-v3.json"
+      ],
+      "negative_predecessor": "docs/acceptance/usb-hub-support-link-supported-parser-negative.json",
+      "prior_artifact_observation": "Bounded exact-artifact source A pass: populated2547-track browser, real title/metadata/waveforms, successful1944 load, UI playback advances, then native confirmed unload to EEEE. Both-mode and remaining-source checks pending",
+      "current": "Exact v5 nativeUSB1/2 browse/load/play with Off; both survive loaded On, fresh USB2 load in On succeeds. Separate explicit native UNLOAD1 in Off and UNLOAD2 in On settleEEEE. All seven backings stay healthy; no native source warning triangles in these screenshots.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-native-usb-modes-v5.json"
+      ]
+    },
+    {
+      "requirement": "Individual loaded-source eject, whole-hub loaded eject, cached playback and partial-eject mode changes preserve unrelated/native sources",
+      "plan_gates": [
+        5
+      ],
+      "support_scope": "Diagnostic lifecycle/eject evidence only; source/interface lifetimes and origin retention also have host coverage",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-mode-eject.json",
+        "docs/acceptance/usb-hub-support-link-mode-partial-eject.json",
+        "docs/acceptance/usb-hub-support-link-mode-load-retention.json",
+        "docs/acceptance/usb-hub-support-link-cached-status.json"
+      ],
+      "prior_artifact_observation": "Pending exact-artifact individual/whole eject and partial-mode matrix",
+      "current": "Individual and whole-hub loaded eject pass during bounded peer operation. Separate exact-v5 loaded partial eject followed by settled Off/On preserves four remaining sources, keeps the ejected source absent and retains advancing cached clocks. Physical virtual-USB replug restores five rows and seven healthy partitions. Forced partial-failure and simultaneous mode/eject runtime scheduling remain unforced.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-loaded-eject-peer-v5.json",
+        "docs/acceptance/usb-hub-support-link-partial-eject-modes-v5.json"
+      ]
+    },
+    {
+      "requirement": "Source loss/reconnect rejects stale queued normal and Instant Doubles requests without breaking fresh replacement/retry",
+      "plan_gates": [
+        4,
+        5
+      ],
+      "diagnostic_user_flow_record": "docs/acceptance/usb-hub-support-link-native-id-gesture-diagnostic.json",
+      "support_scope": "Diagnostic final-origin normal/reconnect/retry and later native-API ID cancellation/retry passed; host task/origin lifecycle tests passed. Native API ID evidence does not establish long-LOAD/double-click UI behavior",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-queue-final-origin.json",
+        "docs/acceptance/usb-hub-support-link-id-queue-cancel.json",
+        "docs/acceptance/usb-hub-support-link-known-status-privacy-v4.json"
+      ],
+      "prior_artifact_observation": "Pending exact-artifact normal/ID reconnect and fresh retry controls. PID703 held-LOAD attempts used the wrong gesture. Separate diagnostic bfe4a now passes documented held-SYNC native and private source0 duplication with matching nonzero UI positions; repeat on the final uninstrumented artifact and complete stale/reconnect controls",
+      "prior_artifact_records": [
+        "docs/acceptance/usb-hub-support-link-instant-doubles-gesture-review.json"
+      ],
+      "current": "Exact v5 native/private documented heldSYNC, physical virtual-USB replug and fresh normal/ID retries pass. Manual timing does not prove pending requests across replacement; separately identified derived common-stage diagnostic establishes that bounded boundary, as recorded below.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-id-peer-native-v5.json",
+        "docs/acceptance/usb-hub-support-link-replug-retry-v5.json"
+      ],
+      "diagnostic_current_support": "V5-derived11ad791 passes controlled common-stage type1 source removal and type5 same-port replacement with original captured provenance. Targets avoid stale admission; fresh normal/ID retry passes. This pauses execution, not forced async task allocation/destructor-only/final-stage races. Supported ELF remains separately frozen.",
+      "diagnostic_current_record": "docs/acceptance/usb-hub-support-link-request-delay-v5-runtime.json"
+    },
+    {
+      "requirement": "Hub libraries stay local; external full1152-byte status hides known private identities during fresh/cached/replug states while native same-content-ID replacement stays visible",
+      "plan_gates": [
+        4,
+        5
+      ],
+      "support_scope": "Corrected diagnostic0a0f: 839 complete packets passed known-field checks in fresh/replug-cached windows without USB STOP. Host/source review covers committed identity and eleven auxiliary locations. No complete semantic-tail privacy claim",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-known-status-privacy-v4.json",
+        "docs/acceptance/usb-hub-support-link-cached-status-replacement-host.json",
+        "docs/acceptance/usb-hub-support-link-final-source-privacy-review.json",
+        "docs/acceptance/usb-hub-support-link-status-location-schema.json"
+      ],
+      "prior_artifact_observation": "Exact-artifact Off capture passes408 complete statuses after OHCI loss. Native same495 replacement has native auxiliary identity in all201 deck1 packets and native standard identity in final151; initial50 zero tuples fail continuous standard-visibility expectation with cause unresolved. All125 deck2 private1944 packets remain masked. Fresh attached-source and intentional eject/replug controls remain pending",
+      "prior_artifact_records": [
+        "docs/acceptance/usb-hub-support-link-matrix-off-known-status-privacy.json",
+        "docs/acceptance/usb-hub-support-link-matrix-native-same495-status.json",
+        "docs/acceptance/usb-hub-support-link-native-replacement-source-review.json"
+      ],
+      "current": "Known private standard/location fields pass366 fresh,654 peer reconnect and349 USB-replug full1152 statuses; prior570 loaded-eject window retained. Native same1944 replacement:130 pre-input/loading zero packets, then189 native tuples; first native standard and auxiliary identity in same captured packet. Other private deck266 masked. No complete semantic-tail privacy guarantee.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-loaded-eject-peer-v5.json",
+        "docs/acceptance/usb-hub-support-link-id-peer-native-v5.json",
+        "docs/acceptance/usb-hub-support-link-replug-retry-v5.json",
+        "docs/acceptance/usb-hub-support-link-native-visibility-baseline-v5.json"
+      ],
+      "remaining": "Native50-packet startup prefix is reproduced with core active/candidate refused; steady native identity retained. Cadence differs and exact native cause/latency equivalence are not established. No immediate metadata availability claim."
+    },
+    {
+      "requirement": "Isolated primary Ethernet peer transport plus reproducible timestamped harness; stock baseline before mod conclusions",
+      "plan_gates": [
+        2,
+        3
+      ],
+      "records": [
+        "docs/acceptance/usb-hub-support-link-normal-activation-v3.json"
+      ],
+      "support_scope": "Earlier isolated native/Beat Link baseline exists on a different emulator fixture",
+      "support_records": [
+        "docs/acceptance/usb-hub-support-link-native-baseline.json"
+      ],
+      "prior_artifact_observation": "Bounded exact-artifact fixture pass: primary eth0 isolated192.0.2.15, peer.2, single NIC, loopback mirror/injection, ARP/three ICMP replies and management SSH retained. Link peer behavior not yet tested in this fixture",
+      "current": "Tracked primary TAP/NAT transport supports peerTCP while preserving SSH. Six host tests and bounded cleanup pass. Earlier mirror-only TCP reset is traced to slirp MAC. Same-image core-active/candidate-refused baseline reproduces native50-packet source prefix and later native tuples; latency equivalence is unproven. Earlier native discovery/master baseline retains its fixture-specific scope.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-id-peer-native-v5.json",
+        "docs/acceptance/usb-hub-support-link-primary-tcp-transport-v5.json",
+        "docs/acceptance/usb-hub-support-link-native-visibility-baseline-v5.json"
+      ]
+    },
+    {
+      "requirement": "External peer discovery, negotiated master handoff, tempo following, loss and same-player reconnect while hub playback remains usable",
+      "plan_gates": [
+        3,
+        5
+      ],
+      "support_scope": "Diagnostic private-requester/master/reconnect and protocol tempo evidence only; protocol/advancing UI observations do not prove audio phase",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-private-requesters.json",
+        "docs/acceptance/usb-hub-support-link-master-reconnect.json",
+        "docs/acceptance/usb-hub-support-link-tempo-follow.json",
+        "docs/acceptance/usb-hub-support-link-ui-fallback.json"
+      ],
+      "prior_artifact_observation": "Exact-artifact bounded On protocol result: peer3 receives master from player2 and synced native deck1 reports126 BPM in208 statuses. Hub media is cached after OHCI loss; repeat with attached sources and complete loss/reconnect controls",
+      "prior_artifact_records": [
+        "docs/acceptance/usb-hub-support-link-matrix-peer-handoff-review.json"
+      ],
+      "current": "Exact v5: attached-hub peer3 master from native1 at126 BPM, native removal observed; same-player reconnect master from native2 at128 BPM. Fresh private8/7 load during reconnect succeeds; all seven partitions healthy. Protocol/UI only, no audio/real-CDJ claim.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-loaded-eject-peer-v5.json",
+        "docs/acceptance/usb-hub-support-link-id-peer-native-v5.json"
+      ]
+    },
+    {
+      "requirement": "Private transport ownership/admission handles IP/player collision, fd reuse and external private-media requests; native traffic retains native routing",
+      "plan_gates": [
+        1,
+        4
+      ],
+      "support_scope": "Do not generalize bounded adversarial/registry checks into every native member consumer or traffic combination",
+      "records": [
+        "docs/acceptance/usb-hub-support-link-handshake-guard.json",
+        "docs/acceptance/usb-hub-support-link-socket-registry.json",
+        "docs/acceptance/usb-hub-support-link-socket-static.json",
+        "docs/acceptance/usb-hub-support-link-udp-integrated.json",
+        "docs/acceptance/usb-hub-support-link-udp-receive.json",
+        "docs/acceptance/usb-hub-support-link-integration-review.json"
+      ],
+      "prior_artifact_observation": "Host/static/diagnostic coverage exists; exact-artifact collision/admission runtime coverage remains pending",
+      "current": "Exact v5 rejects six external UDPmember7/8 claims and two consecutive reserved5/6 TCPpairs; ordinary3 receives native media-info response, e0/e7 private-code probes return native errors. Fresh private7/3 and8/7 load after probes. Current-source host registry tests exercise fd reuse; no forced firmwarefd-number reuse claim.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-adversarial-native-v5.json"
+      ]
+    },
+    {
+      "requirement": "Normal-loader populated-cache USB-present boot and USB-absent FIRST startup plus settled state, with native operation and no manual rescue/internal edits",
+      "plan_gates": [
+        6
+      ],
+      "records": [
+        "docs/acceptance/usb-hub-support-link-normal-recovery-v3.json",
+        "docs/acceptance/usb-hub-support-link-normal-recovery-v3-independent-review.json"
+      ],
+      "support_scope": "Current acceptance uses its own exact-artifact positive/negative cold boots, not transferred predecessor results. Earlier b646 recovery and loader source audit remain historical context only",
+      "support_records": [
+        "docs/acceptance/usb-hub-support-link-normal-recovery.json",
+        "docs/acceptance/usb-hub-support-link-normal-recovery-independent-review.json",
+        "docs/acceptance/usb-hub-support-link-recovery-emulator-loader-audit.json"
+      ],
+      "prior_artifact_observation": "Passed within exact123703/corrected6.6 image and normal-loader scope, independently corroborated: USB-present first/settled PID729 loaded54hooks; USB-absent first/settled PID465 refused-40 before claims/workers, NRestarts0, no rescue. Separate later native USB content1944 playback advanced while the candidate stayed refused. This does not establish the live private-to-native same-ID replacement control",
+      "current": "Exact v5 emulator6.6 cold On997 and cold Off851 initialize54 hooks in first stable native processes. USB-absent first/settled759 refuses cached init-40 before candidate effects; native USB1 browses/loads1944 with advancing UI. No manual rescue/restart; loader writes next-boot stock env normally. Physical4.4 remains separate.",
+      "current_records": [
+        "docs/acceptance/usb-hub-support-link-cold-on-v5.json",
+        "docs/acceptance/usb-hub-support-link-cold-off-v5.json",
+        "docs/acceptance/usb-hub-support-link-normal-recovery-v5.json"
+      ]
+    },
+    {
+      "requirement": "Physical exact-firmware/kernel4.4.194 recovery and bounded final user validation",
+      "plan_gates": [
+        6,
+        7
+      ],
+      "records": [
+        "docs/PRO-DJ-LINK-CANDIDATE-TRIAL.md",
+        "docs/AZ-TESTING-POLICY.md"
+      ],
+      "limits": "No real-CDJ, human audio/audio-phase, eight-source hardware or long-session acceptance. Published0.2.1 remains unchanged; no publication authorized. Simulated peers and five-source regression are the bounded emulator goal, not an eight-device hardware prerequisite",
+      "prior_artifact_observation": "Deferred physical recovery; draft trial prepared, not activation permission. Current emulator6.6 skips hardware module activation and cannot establish4.4 rollback",
+      "current": "Physical recovery remains unverified. User removed the separate recovery verification gate; normal AZ-MODS activation may proceed. Read-only physical preflight identified running0.2.1 on exact firmware/kernel4.4.194. No candidate activation or recovery test performed."
+    }
+  ],
+  "review_rule": "Current runtime acceptance requires the ELF identified in current_artifact (5e8ecd). Derived diagnostics prove only their recorded instrumentation scope; unchanged-source host/static evidence supports invariants without transferring runtime acceptance.",
+  "worktree_followup": {
+    "status": "Supported v5 restored after native baseline: first/settled native860,54 hooks,NRestarts0,Link On,EEEE; five private/two native rows and seven healthy mounts. Final review next.",
+    "changed_sources": [
+      "src/azhub/linkfake/link-status.h",
+      "src/azhub/linkfake/linkfake.c",
+      "src/azhub/linkfake/test-link-status.c",
+      "src/azhub/linkfake/link-mode-recovery.h",
+      "src/azhub/linkfake/test-link-mode-recovery.c"
+    ],
+    "diagnostic_record": "docs/acceptance/usb-hub-support-link-slot7-owned-media-experiment-runtime.json",
+    "acceptance_boundary": "Supported v5 package38d705/ELF5e8ecd owns current runtime records. Derived11ad791 timing experiment supports common-stage pending cancellation and fresh retry only; not all async/final-stage races."
+  },
+  "previous_artifact": {
+    "version": "0.3.0",
+    "id": "usb-hub-support",
+    "package_sha256": "2edbd629de26a76521391b3c9a3f807c29491e393673099e803f407018f6d780",
+    "ELF_sha256": "efff2ac033d7362846b11a9384ac75700a2a01591861585b0fc26e48a81a4547",
+    "firmware": "ep147-9e9454e357389ece",
+    "core_minimum": "1.2.3",
+    "evidence_rule": "Only a record identifying this ELF can establish its runtime result. Host, diagnostic and predecessor results support design or test readiness; they do not transfer acceptance.",
+    "stage": "local/integration/link-coexistence-v4",
+    "build_record": "docs/acceptance/usb-hub-support-0.3.0-media-state-candidate-build.json"
+  },
+  "artifact_history": {
+    "parser_v3": {
+      "version": "0.3.0",
+      "id": "usb-hub-support",
+      "package_sha256": "aeb199c064c5ad043e4b8933b7e631119ab5f187e58921b5fcdb3b46c6471031",
+      "ELF_sha256": "123703cd5028a3840ef61d13eb640ef7d1ab7c05a2e4741daac622e2a10ae19e",
+      "firmware": "ep147-9e9454e357389ece",
+      "core_minimum": "1.2.3",
+      "evidence_rule": "Only a record identifying this ELF can establish its runtime result. Host, diagnostic and predecessor results support design or test readiness; they do not transfer acceptance."
+    }
+  },
+  "v4_partial_record": "docs/acceptance/usb-hub-support-link-functional-matrix-v4-partial.json",
+  "restoration_record": "docs/acceptance/usb-hub-support-link-restored-after-delay-v5.json",
+  "final_restoration_record": "docs/acceptance/usb-hub-support-link-final-cold-restoration-v5.json",
+  "authorization_update": "User explicitly removed separate remove-USB/full-restart recovery verification. Normal emulator-first USB/AZ-MODS framework installation, activation, bounded testing and standard restarts remain authorized. No manual internal editing. Historical physical deferral language is superseded; unperformed recovery is not a pass."
+}

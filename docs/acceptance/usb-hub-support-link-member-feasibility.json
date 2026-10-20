@@ -1,0 +1,229 @@
+{
+  "timestamp_utc": "2026-10-19T01:13:22.144470+00:00",
+  "environment": "Local QEMU only, kernel 6.6.138-dirty, protected COW USB fixtures",
+  "binary_sha256": "ad82054a5b9baa57f717dfe35c1c6d14bf25315318d82c74944f44ac6d65d4e1",
+  "physical_link_filter_retained": true,
+  "production_source_changed": false,
+  "pid": 71208,
+  "sources": [
+    {
+      "member": 7,
+      "slot": 3,
+      "disk": "sdb"
+    },
+    {
+      "member": 7,
+      "slot": 7,
+      "disk": "sdc"
+    },
+    {
+      "member": 8,
+      "slot": 3,
+      "disk": "sdd"
+    }
+  ],
+  "observations": [
+    "Three source rows visible simultaneously, with member 7 USB1/USB2 and member 8 USB1",
+    "Member 7 and member 8 track views populated; selected track content ID 495 loaded on decks 1 and 2",
+    "Long USB2 STOP unmounted all three backing volumes and player aliases; native USB1 sda1 remained mounted",
+    "Both loaded decks retained content and advanced their playback positions after eject in the same EP147 process"
+  ],
+  "limitations": [
+    "No captured audio or real-CDJ compatibility claim",
+    "Identical A/C fixture databases: source screenshots and alias mounts identify the intended source, but no retained native load-request identity trace proves each load routing",
+    "Source 7 USB2 was enumerated and ejected, not browsed or loaded in this trial",
+    "Core TCP trace log reached its cap; no complete lifecycle transcript",
+    "Post-eject native CMD_GET_WAVEDATA unsupported warnings observed; no crash, but investigate and compare baseline",
+    "No external-player coexistence or eight-source acceptance"
+  ],
+  "samples": {
+    "member78-loaded-status.json": {
+      "pid": 71208,
+      "clock_ms": 3948816,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21990,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 0,
+          "generation": 21393,
+          "devnum": 3
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 21817,
+          "devnum": 4
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 0,
+          "pos_s": 0.047,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "member78-ejected-playing.json": {
+      "pid": 71208,
+      "clock_ms": 3992292,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 2,
+          "generation": 21990,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 2,
+          "generation": 21393,
+          "devnum": 3
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 21817,
+          "devnum": 4
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.513,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.052,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "member78-ejected-playing-later.json": {
+      "pid": 71208,
+      "clock_ms": 4034421,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdd",
+          "port": 2,
+          "state": 2,
+          "generation": 21990,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdb",
+          "port": 2,
+          "state": 2,
+          "generation": 21393,
+          "devnum": 3
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 21817,
+          "devnum": 4
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 40.701,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 40.568,
+          "content_id": 495,
+          "title": "Algo mÃ¡s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    }
+  },
+  "local_evidence_sha256": {
+    "member78-loaded-status.json": "49e3fd7600301f3b9103f025d52bc3ab4e952cdbc9060c96fd4278c5ddaed56f",
+    "member78-ejected-playing.json": "a5daf77395f17a9db8634ffcd11c3d89d9a828a3e6f39fddd78b3722c2c126de",
+    "member78-ejected-playing-later.json": "fc3e2a7f65b6514a59d0aa85a000d8fa84f1c42d2980ee8f7290a02eaf3f44f7"
+  }
+}

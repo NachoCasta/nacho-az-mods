@@ -1,0 +1,272 @@
+{
+  "recorded_at_utc": "2026-10-19T05:13:50.806214+00:00",
+  "scope": "Exact-firmware auxiliary track-location classification and host fixes; corrected runtime remains untested",
+  "firmware_elf_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+  "source_facts": [
+    {
+      "address": "0x1041330",
+      "fact": "Packs a 36-byte TrackLocation from native MediaID and content ID. Validity is byte 0; MediaID kind byte 1, zero-based member byte 2, media kind/subkind bytes 3/4, track type byte 5; content ID occupies bytes 8..11."
+    },
+    {
+      "address": "src/azhub/linkfake/safe-eject.h:safe_source_identity",
+      "fact": "Existing exact-media construction uses low 16 bits 2 | ((player - 1) << 8). Together with the captured little-endian MediaID component bytes, row kind 2/member index 6 or 7 identifies private players 7 or 8."
+    },
+    {
+      "address": "0x1041408",
+      "fact": "Native empty TrackLocation constructor clears all 36 bytes, including validity."
+    },
+    {
+      "address": "0x10d8180",
+      "fact": "Serializes TrackLocation through 0x1041330, resolving local-member identity when necessary."
+    },
+    {
+      "address": "0x10d8840",
+      "fact": "Writes ten auxiliary TrackLocation records at payload offset 0x168 + 0x40*i, i=0..9. Status wire payload begins at 0x24, giving wire rows 0x18c + 0x40*i."
+    },
+    {
+      "address": "0x10d5ea8",
+      "fact": "Writes another TrackLocation at payload offset 0x404, giving wire row 0x428."
+    }
+  ],
+  "classification_of_previous_marker": {
+    "offset": "0x194",
+    "classification": "Content ID of the first auxiliary TrackLocation, independent of the current standard source tuple.",
+    "capture_sha256": "24e4f83b768c6c98a0da8a33aea10b5a8dea342ab8251c1bd786c353a399cf9a",
+    "observed_packets": 295,
+    "observed_location": {
+      "valid": 1,
+      "kind": 2,
+      "member_index": 6,
+      "media_kind": 2,
+      "media_subkind": 0,
+      "track_type": 1,
+      "content_id": 495
+    },
+    "conclusion": "The first auxiliary row explicitly exposes private member 7 and content 495 in every observed packet, including packets whose standard source tuple was already masked.",
+    "supersedes": "The unclassified 0x194 marker interpretation in usb-hub-support-link-physical-cache-status-negative.json; its frozen capture and negative standard-tuple result remain valid."
+  },
+  "implementation": [
+    "hub_status_hide_private_locations checks exact 1152-byte status framing and examines all eleven known location rows independently of packet sender/current source.",
+    "Only valid rows with MediaID kind 2 and member index 6/7 are replaced by the native 36-zero-byte empty location.",
+    "All other bytes, surrounding cue/transport data, preference rows and native/external locations with identical content IDs are preserved.",
+    "The cached-status classifier optionally uses committed successful-load origin independently of mutable pending load data or physical source presence.",
+    "Committed private origin requires nonzero controller/media/epoch, matching deck/content, private source index and a complete saved physical connection identity. Pending/failure keeps it; native/external success or real unload retires it through generator callback integration."
+  ],
+  "host_validation": [
+    "test-link-status.c passed GCC ASan/UBSan: all eleven rows, private 7/8, native/external equal-content preservation, alternate content, exact byte preservation, idempotence and invalid framing/length/null input.",
+    "test-link-cached-status.c passed GCC ASan/UBSan: retained detach proof and committed origin through pending/failure, invalid provenance rejection, simulated retirement.",
+    "test-audit-link-status-privacy.py passed eight synthetic tests: known tuples, auxiliary rows independent of current sender, alternate content, native preservation, unrelated preferences, raw markers, filtering and missing/truncated payload evidence."
+  ],
+  "capture_analysis_with_classified_locations": {
+    "result": "failed",
+    "scope": "Known media fields and exact marker search across complete 1152-byte statuses",
+    "complete_outgoing_statuses": 295,
+    "failures": [
+      "Deck 1 exposes a nonzero known media tuple",
+      "Deck 1 exposes a private auxiliary location at 0x18c",
+      "Deck 2 exposes a nonzero known media tuple",
+      "Deck 2 exposes a private auxiliary location at 0x18c"
+    ],
+    "missing_evidence": [],
+    "observations": [
+      {
+        "deck": 1,
+        "packets": 147,
+        "first_ns": 15513905267407,
+        "last_ns": 15543092106128,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 50
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 97
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {},
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_content_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 97,
+            "0x194": 147
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_auxiliary_locations": {
+          "0x18c": [
+            {
+              "kind": 2,
+              "member_index": 6,
+              "media_kind": 2,
+              "media_subkind": 0,
+              "track_type": 1,
+              "content_id": 495,
+              "packets": 147
+            }
+          ]
+        },
+        "content_marker_offset_classification": {
+          "0x2c": "Current source content ID",
+          "0x194": "Auxiliary TrackLocation content ID",
+          "0x1d4": "Auxiliary TrackLocation content ID",
+          "0x214": "Auxiliary TrackLocation content ID",
+          "0x254": "Auxiliary TrackLocation content ID",
+          "0x294": "Auxiliary TrackLocation content ID",
+          "0x2d4": "Auxiliary TrackLocation content ID",
+          "0x314": "Auxiliary TrackLocation content ID",
+          "0x354": "Auxiliary TrackLocation content ID",
+          "0x394": "Auxiliary TrackLocation content ID",
+          "0x3d4": "Auxiliary TrackLocation content ID",
+          "0x430": "Auxiliary TrackLocation content ID"
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0101010101000001"
+          ],
+          "0xf9": [
+            "0101010101000001"
+          ],
+          "0x3fd": [
+            "0101010101000001"
+          ],
+          "0x41d": [
+            "0101010101000000"
+          ],
+          "0x468": [
+            "0101010101000001"
+          ],
+          "0x474": [
+            "0101010101000001"
+          ]
+        }
+      },
+      {
+        "deck": 2,
+        "packets": 148,
+        "first_ns": 15513714143233,
+        "last_ns": 15543099272985,
+        "media_tuples": [
+          {
+            "player": 0,
+            "slot": 0,
+            "track_type": 0,
+            "content_id": 0,
+            "packets": 50
+          },
+          {
+            "player": 1,
+            "slot": 3,
+            "track_type": 1,
+            "content_id": 495,
+            "packets": 98
+          }
+        ],
+        "unclassified_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {},
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_content_marker_matches": {
+          "private_ip_7": {},
+          "private_ip_8": {},
+          "content_495_be32": {
+            "0x2c": 98,
+            "0x194": 148
+          },
+          "content_495_le32": {},
+          "text:HUB_LIB": {},
+          "text:Algo": {}
+        },
+        "known_auxiliary_locations": {
+          "0x18c": [
+            {
+              "kind": 2,
+              "member_index": 6,
+              "media_kind": 2,
+              "media_subkind": 0,
+              "track_type": 1,
+              "content_id": 495,
+              "packets": 148
+            }
+          ]
+        },
+        "content_marker_offset_classification": {
+          "0x2c": "Current source content ID",
+          "0x194": "Auxiliary TrackLocation content ID",
+          "0x1d4": "Auxiliary TrackLocation content ID",
+          "0x214": "Auxiliary TrackLocation content ID",
+          "0x254": "Auxiliary TrackLocation content ID",
+          "0x294": "Auxiliary TrackLocation content ID",
+          "0x2d4": "Auxiliary TrackLocation content ID",
+          "0x314": "Auxiliary TrackLocation content ID",
+          "0x354": "Auxiliary TrackLocation content ID",
+          "0x394": "Auxiliary TrackLocation content ID",
+          "0x3d4": "Auxiliary TrackLocation content ID",
+          "0x430": "Auxiliary TrackLocation content ID"
+        },
+        "preference_rows": {
+          "0xd9": [
+            "0000000000000000"
+          ],
+          "0xf9": [
+            "0000000000000000"
+          ],
+          "0x3fd": [
+            "0000000000000000"
+          ],
+          "0x41d": [
+            "0000000000000000"
+          ],
+          "0x468": [
+            "0000000000000000"
+          ],
+          "0x474": [
+            "0000000000000000"
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "Marker matches outside known media fields require semantic review.",
+      "Absence of selected markers does not identify every extended field.",
+      "Only supplied state windows are covered; this does not infer cached-eject or replacement acceptance."
+    ]
+  },
+  "limits": [
+    "The corrected mask and committed-origin classifier have no runtime acceptance in this record.",
+    "No secondary-content runtime correlation was performed; the semantic classification follows the exact serializer and observed explicit MediaID.",
+    "Only the first auxiliary row was populated in the frozen capture; other rows and 0x428 are covered by static layout plus host tests.",
+    "Other extended fields remain outside a complete semantic privacy proof. Exact marker absence alone is not complete privacy acceptance.",
+    "Serializer/send ordering across successful replacement remains unmeasured.",
+    "Native callback retirement is simulated in the portable classifier test; native/external same-content and failed replacement require exact-binary emulator validation.",
+    "No hardware, audio or real CDJ acceptance."
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/link-status.h": "04ca9f2bb475d265ae23a340ed4054848ec540881b8a978994f7792fbc641f9b",
+    "src/azhub/linkfake/test-link-status.c": "00e28d918dafeced48978f565fec7340c5961fc673fca0a353b16edbbd2e7254",
+    "src/azhub/research/scripts/link-cached-status-probe.h": "340ad4e089f391080d18f12c597531bbc39de6ba3762becc8210b9d38c609119",
+    "src/azhub/research/scripts/test-link-cached-status.c": "b21e12156066d617023a1b1ca98b06a9e0169b192afe6f80730398501800af6f",
+    "src/azhub/research/scripts/audit-link-status-privacy.py": "503cee8bb74ce1ca0b360f823e249391639894edf792519ea7976c83b84afd8c",
+    "src/azhub/research/scripts/test-audit-link-status-privacy.py": "1453068c82dcb7cce576764dc44f9892ad1c72436dac3bb49e42ad3f6e61a84a"
+  }
+}

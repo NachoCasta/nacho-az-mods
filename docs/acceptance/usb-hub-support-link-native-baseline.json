@@ -1,0 +1,188 @@
+{
+  "scope": "Native emulator protocol baseline; no USB Hub Support loaded",
+  "recorded_at": "2026-10-19T00:54:52.984826+00:00",
+  "firmware_elf_sha256": "6577f42532375936c7e3fa830efa35b7daa9cde8e0a265c1fc7143f824321925",
+  "firmware_hash_matches_local_research_elf": true,
+  "guest_kernel": "6.6.138-dirty",
+  "native_pid": 40852,
+  "azmod_or_hub_mappings_observed": false,
+  "real_az_access": false,
+  "network": {
+    "native": "192.0.2.1/24",
+    "peer": "192.0.2.2/24",
+    "broadcast": "192.0.2.255",
+    "transport": "QEMU loopback TCP socket to isolated WSL TAP namespace",
+    "management": "separate NAT interface mgmt0"
+  },
+  "beat_link_version": "8.0.0",
+  "link_off_announced_players": [
+    1,
+    2,
+    3,
+    4,
+    33
+  ],
+  "link_on_announced_players": [
+    1,
+    2,
+    33
+  ],
+  "link_on_status_run_summary": {
+    "event": "stopped",
+    "monotonic_ns": 645469160180,
+    "statuses": 300,
+    "beats": 0
+  },
+  "master_run_summary": {
+    "event": "stopped",
+    "monotonic_ns": 827766341078,
+    "statuses": 150,
+    "beats": 0
+  },
+  "master_run_peer_state": {
+    "event": "stopping",
+    "monotonic_ns": 827762765289,
+    "peer_master": true,
+    "peer_synced": false
+  },
+  "wire_counts": [
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50000,
+      "type": 1,
+      "payload_bytes": 47,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50000,
+      "type": 3,
+      "payload_bytes": 46,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50000,
+      "type": 5,
+      "payload_bytes": 38,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50000,
+      "type": 6,
+      "payload_bytes": 54,
+      "count": 48
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50001,
+      "type": 3,
+      "payload_bytes": 53,
+      "count": 117
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50002,
+      "type": 10,
+      "payload_bytes": 1152,
+      "count": 167
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50002,
+      "type": 128,
+      "payload_bytes": 44,
+      "count": 14
+    },
+    {
+      "source": "192.0.2.1",
+      "destination_port": 50004,
+      "type": 32,
+      "payload_bytes": 44,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50000,
+      "type": 0,
+      "payload_bytes": 44,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50000,
+      "type": 2,
+      "payload_bytes": 50,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50000,
+      "type": 4,
+      "payload_bytes": 38,
+      "count": 1
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50000,
+      "type": 6,
+      "payload_bytes": 54,
+      "count": 11
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50000,
+      "type": 10,
+      "payload_bytes": 38,
+      "count": 3
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50001,
+      "type": 40,
+      "payload_bytes": 96,
+      "count": 31
+    },
+    {
+      "source": "192.0.2.2",
+      "destination_port": 50002,
+      "type": 10,
+      "payload_bytes": 284,
+      "count": 225
+    }
+  ],
+  "peer_beat_intervals_ms": {
+    "count": 30,
+    "minimum": 497.382995,
+    "maximum": 500.468957,
+    "mean": 499.9098775
+  },
+  "limits": [
+    "No audio or loaded-deck synchronization acceptance",
+    "No mod coexistence acceptance",
+    "Beat Link truncates 1152-byte native statuses to its 512-byte receive buffer",
+    "AZ packet type 0x80 is unrecognized by Beat Link",
+    "Finder lost callbacks during shutdown are not a disconnect test",
+    "Early attempts before UI confirmation or with zero broadcast address are not accepted mode-on baselines",
+    "Native startup used an emulator-only transient unit; this does not test cached-loader cold boot recovery"
+  ],
+  "local_evidence": [
+    {
+      "file": "native-running-observe.jsonl",
+      "sha256": "b4da7a6bfbab127143a99fa003789604c7191fb45ee02852eb654d9e4f5f0004"
+    },
+    {
+      "file": "native-link-on-broadcast.jsonl",
+      "sha256": "5de675764f5c25633f46f916e8be453acff6e580269aca3692a83f023dd39227"
+    },
+    {
+      "file": "native-master-bidirectional.jsonl",
+      "sha256": "eaac4290ba8b75df24d5ee874f1e1f323e88446a99a611fa33331052a22d3ea2"
+    },
+    {
+      "file": "native-master-bidirectional-packets.jsonl",
+      "sha256": "d7444a6bc1bf6ad2bf52f1a58ba71afd5ea3fffb860628b8835e9795fa0cf767"
+    }
+  ]
+}
