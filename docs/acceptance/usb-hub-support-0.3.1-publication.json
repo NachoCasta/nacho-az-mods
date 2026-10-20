@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "release": "USB Hub Support0.3.1",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.1",
+  "source_commit": "8cbfa66af51c12e7baddc24cdce8630c0987d571",
+  "catalog_commit": "0407a940ef4e0f94f58a49779feb284b747eb94f",
+  "tag": "usb-hub-support-0.3.1",
+  "package_sha256": "a449ef3122c4da039c5bd0d3342b3a686e1bdb7862cf71831e2dd6f9db684dc8",
+  "elf_sha256": "60be7a089fe6cc71dcb404cfd80b96e2218da5f7a2ec63d36b8b70741a8bf462",
+  "package_size": 395479,
+  "package_members": 7,
+  "package_unchanged_after_physical_acceptance": true,
+  "source_reproduction": "The committed Git archive reproduces the exact installed executable using pinned SDK GCC7.5 via userspace QEMU.",
+  "source_ci": {
+    "run_id": 39384989832,
+    "url": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39384989832",
+    "conclusion": "success",
+    "behavior_tests": "success",
+    "sdk_build": "success"
+  },
+  "anonymous_verification": {
+    "authorization_header": false,
+    "catalog": "pass",
+    "package_size_and_sha256": "pass",
+    "package_elf_sha256": "pass",
+    "icon_sha256": "pass",
+    "source_at_release_commit": "pass",
+    "official_sdk_repo_download_check": "pass"
+  },
+  "hardware_acceptance": "User approved physical UI appearance after exact-candidate activation with57 hooks. No new playback/eject/network or eight-device hardware acceptance claimed.",
+  "known_limits": [
+    "Link mode changes still briefly disconnect/reannounce hub sources and can leave loaded-source warnings",
+    "Actual-CDJ interoperability, phase sync, eight-source hardware, long-session use and cache capacity remain unvalidated",
+    "Package manifest keeps exact tested candidate wording; catalog and notes describe subsequent acceptance"
+  ],
+  "published_assets_replaced": false
+}

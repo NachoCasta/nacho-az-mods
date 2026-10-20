@@ -18,7 +18,11 @@ review the guide and validate the resulting binary again.
 ## 1. Establish the release target
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.
-USB Hub Support lives in `src/azhub/linkfake/`. Release0.3.0 adds bounded PRO DJ
+USB Hub Support lives in `src/azhub/linkfake/`. Release0.3.1 adds native-body hub
+source labels and the revised eject selector, with user-reported physical UI
+appearance approval. See [0.3.1 notes](releases/usb-hub-support-0.3.1.md) and its
+[publication record](acceptance/usb-hub-support-0.3.1-publication.json).
+Earlier release0.3.0 adds bounded PRO DJ
 LINK coexistence validation on the real AZ using a software peer over Wi-Fi.
 Changing Link On/Off still briefly disconnects hub sources and can leave loaded
 track warning triangles; describe this known issue prominently. Preserve the exact

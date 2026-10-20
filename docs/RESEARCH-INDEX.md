@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.3.1-publication.json | Published native-body UI release, exact accepted bytes, source CI and anonymous catalog/package/icon/source verification |
 | acceptance/hub-source-ui-native-az-delivery.json | User-approved native-body v14 installed/pre-approved and activated on the AZ through one framework apply; exact hashes and57 hooks, physical functional acceptance pending |
 | acceptance/hub-source-ui-native-candidate.json | Current native-body0.3.1 candidate: exact hashes,29/29/29 tests,24 native composites, representative USB3/8 screenshots and pending user visual review |
 | HUB-SOURCE-UI-PLAN.md | Active goal: HUB badges in Source/Browse/Waveform and matching mod-owned eject selector; emulator-first evidence gates |

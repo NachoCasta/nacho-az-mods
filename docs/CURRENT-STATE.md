@@ -1,5 +1,21 @@
 # Current state
 
+## Latest publication: USB Hub Support0.3.1
+
+[USB Hub Support0.3.1](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.1)
+is published and selected by the root catalog. Source/tag commit:
+`8cbfa66af51c12e7baddc24cdce8630c0987d571`; catalog commit:
+`0407a940ef4e0f94f58a49779feb284b747eb94f`. Both source CI jobs passed.
+Anonymous catalog, package/ELF, icon and source retrieval checks passed, including
+the official SDK repository download check. Published package and executable
+are unchanged from the candidate installed and visually accepted on the AZ.
+See the [publication record](acceptance/usb-hub-support-0.3.1-publication.json).
+
+The user confirmed the physical UI looks good. This is appearance acceptance;
+no new audio/eject/network or eight-device hardware coverage is inferred.
+The known Link-mode interruption and other documented limits remain unchanged.
+Earlier preparation and pending-review statements below are chronological history.
+
 ## USB Hub Support0.3.1 publication authorized
 
 The user approved the native-body UI on the physical AZ and requested publication.
