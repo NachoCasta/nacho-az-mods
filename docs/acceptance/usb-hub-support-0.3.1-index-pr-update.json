@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-20T07:23:27.379651+00:00",
+  "pr": "https://github.com/Kyle-Hosman/az-mods-index/pull/4",
+  "title": "Add Nacho AZ Mods (USB Hub Support)",
+  "state": "OPEN",
+  "is_draft": true,
+  "index_head_commit": "7985a4e873edda72e4d0ae68de6a217d9530e2ba",
+  "branch_unchanged": true,
+  "scope": "Description updated for0.3.1; index diff still only adds this repository URL. No comment, review or ready-for-review transition.",
+  "release_version": "0.3.1",
+  "release_source_commit": "8cbfa66af51c12e7baddc24cdce8630c0987d571",
+  "package_sha256": "a449ef3122c4da039c5bd0d3342b3a686e1bdb7862cf71831e2dd6f9db684dc8",
+  "elf_sha256": "60be7a089fe6cc71dcb404cfd80b96e2218da5f7a2ec63d36b8b70741a8bf462",
+  "body_utf8_lf_sha256": "19cce9cb01431f7790fcb50b1db19d1542d6e3e43957301cd1f30c3282ed17ee",
+  "body_read_back_matches_prepared_text": true,
+  "feedback_at_inspection": {
+    "comments": 0,
+    "reviews": 0,
+    "inline_review_comments": 0
+  },
+  "attached_GitHub_checks": 0,
+  "validation": {
+    "fixture_source": "Exact index-head versions of azmods-repos.json,tools/check.py,tests/test_check.py",
+    "unit_tests_passed": 12,
+    "fetch_check": "2 repositories,0 problems",
+    "source_ci": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39384989832",
+    "source_ci_result": "both jobs passed",
+    "anonymous_download": "passed in0.3.1 publication record",
+    "warning_review": "Existing upstream unclosed-file ResourceWarnings; no test failures"
+  },
+  "disclosures": [
+    "57hooks with three scoped native UI hooks",
+    "Runtime native artwork/fonts, not redistributed",
+    "Physical UI approval0.3.1 separate from historical playback/network acceptance",
+    "Representative3/8 rendering not eight-device topology",
+    "Known mode-change interruption, remaining cache and input-budget investigations",
+    "GPL kernel patch, independent libraries, networking, mounts/writes and managed persistent staging"
+  ],
+  "release_assets_or_tags_modified": false,
+  "real_AZ_access": false
+}

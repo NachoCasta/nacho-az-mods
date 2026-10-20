@@ -1,5 +1,17 @@
 # Current state
 
+## Official index PR updated for0.3.1
+
+[Index PR4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) remains open and
+draft with unchanged head7985a4e and a diff adding only this repository URL.
+Its description now covers0.3.1 native-body badges, the eject selector,57 hooks,
+exact release hashes and physical UI approval, while keeping earlier network
+and playback evidence version-specific. Known Link-mode interruption and remaining
+validation limits are explicit. Read-back matches the prepared text. No comments,
+reviews, inline feedback or attached checks were present at inspection. Fresh12
+index tests and the two-repository fetch check pass. See the
+[update record](acceptance/usb-hub-support-0.3.1-index-pr-update.json).
+
 ## Latest publication: USB Hub Support0.3.1
 
 [USB Hub Support0.3.1](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.1)
