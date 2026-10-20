@@ -7,13 +7,13 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "author": "NachoCasta",
-      "summary": "Native-style HUB source labels and a clearer USB eject selector.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.1/usb-hub-support-0.3.1-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.1/usb-hub-support-0.3.1.azmod",
-      "sha256": "a449ef3122c4da039c5bd0d3342b3a686e1bdb7862cf71831e2dd6f9db684dc8",
-      "size": 395479,
+      "summary": "Hub sources stay available when switching PRO DJ LINK on or off.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.2/usb-hub-support-0.3.2-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.2/usb-hub-support-0.3.2.azmod",
+      "sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
+      "size": 416803,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
@@ -23,7 +23,7 @@
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "LINK MODE CHANGE: Select PRO DJ LINK mode before loading hub tracks. Switching On/Off briefly disconnects hub sources and can leave source-unavailable warnings and finite cached playback. This issue remains unresolved.\n\nBrowse and load USB sticks connected through a hub. Hub sources now show HUB / USB1–8 in Source and Browse, and H / USB1–8 in Waveform. Native USB icons and lettering are reused on the AZ; only additional numerals3–8 use the closest native font. The eject selector has a matching dark design and stable source numbers. Short-press USB STOP to select one stick; hold to eject the hub. Wait for safe-to-remove confirmation. Four local decks with Link off, or two with external Link on. Hub libraries remain local and are not shared with external CDJs. Source/Browse/Waveform appearance was approved on the real AZ; prior network validation used a software peer over Wi-Fi. Actual-CDJ, phase-sync, eight-source hardware and long-session use remain unvalidated. Exact firmware2.00, kernel4.4.194 and core>=1.2.3. AZ-MODS stages files internally. The immutable package retains its tested candidate description.",
+      "description": "Browse playlists/tracks and load USB sticks connected through a hub. Version0.3.2 preserves hub sources across PRO DJ LINK On/Off, with owner-reported loaded-track continuity on the physical AZ. Four local decks Off; two local decks On. Hub libraries stay local and are not shared with external CDJs. Native-style HUB labels and individual/whole-hub safe eject are retained; wait for safe-to-remove confirmation. Exact firmware2.00 (ep147-9e9454e357389ece), kernel4.4.194 and core>=1.2.3. Actual-CDJ, phase-sync, eight-source hardware, long-session timing and cache capacity remain unvalidated. A same-process post-eject/replug source-list anomaly recovered after normal reload in the emulator. AZ-MODS stages files internally. The immutable package retains its tested candidate wording.",
       "assets_kb": 200
     }
   ]
