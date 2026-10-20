@@ -7,23 +7,23 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "author": "NachoCasta",
-      "summary": "Connect multiple USB sticks to your XDJ-AZ through a USB hub.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.2.1/usb-hub-support-0.2.1-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.2.1/usb-hub-support-0.2.1.azmod",
-      "sha256": "6a33b8dd496bb2130289cf7e49299b3cf24a29e4895afcf4c460184d37bd265f",
-      "size": 355839,
+      "summary": "Browse USB hub sticks locally alongside PRO DJ LINK.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.0/usb-hub-support-0.3.0-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.0/usb-hub-support-0.3.0.azmod",
+      "sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+      "size": 385375,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
       "hooks": true,
       "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
-      "updated": "2026-10-18",
+      "updated": "2026-10-19",
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "PRO DJ LINK: Disable this mod and restart the AZ before using external players. Their communication is blocked while enabled; switching Link on does not disable it.\n\nBrowse and load music from USB sticks through a hub. Short-press USB STOP to select one stick; hold to eject the hub. Loaded tracks use native cached playback, which can limit player functions. Wait for 'safe to remove' before unplugging. Supports eight hub sources; firmware 2.00 only. Uses independent loopback servers/caches, changes USB STOP, writes temporary state, and loads a checked GPL kernel module.",
+      "description": "LINK MODE CHANGE: Select the intended PRO DJ LINK mode before loading hub tracks. Switching On/Off briefly disconnects hub sources and can leave loaded tracks with the source-unavailable triangle and finite cached playback. This issue remains unresolved.\n\nBrowse and load hub USB libraries with four local decks when Link is off, or two local decks with external-player communication when on. Hub libraries stay local and are not shared with external CDJs. Real-AZ tests used a software peer over Wi-Fi for master/SYNC, reconnect and a fresh hub-track load; actual-CDJ interoperability and audible phase sync remain unvalidated. Short-press USB STOP to select one stick; hold to eject the hub. Wait for safe-to-remove confirmation. Eight sources implemented, five tested together in the emulator; no eight-source hardware claim. Exact firmware2.00, kernel4.4.194 and core>=1.2.3. AZ-MODS stages files internally. The immutable package retains its original experimental candidate description.",
       "assets_kb": 200
     }
   ]
