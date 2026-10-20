@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.3.0-index-pr-update.json | Official index PR4 description updated for0.3.0; draft/head unchanged, fresh local checks and body read-back pass |
 | acceptance/usb-hub-support-0.3.0-publication.json | Published exact candidate, release source CI, catalog and anonymous download verification |
 | acceptance/usb-hub-support-0.3.0-wifi-fresh-load-hardware.json | User-confirmed fresh hub load with external Wi-Fi peer master and both native decks following128BPM |
 | acceptance/usb-hub-support-0.3.0-wifi-reconnect-hardware.json | Real-AZ same-player software-peer reconnect and128BPM following; new load/audio confirmation pending |

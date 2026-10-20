@@ -1,5 +1,10 @@
 # PRO DJ LINK handling research
 
+The official index PR description now reflects0.3.0, its bounded Wi-Fi software-peer
+hardware results and the unresolved mode-change source interruption. It remains
+draft with no feedback or attached checks at inspection. See the
+[PR update record](acceptance/usb-hub-support-0.3.0-index-pr-update.json).
+
 Current0.3.0 coexistence and known loaded-mode warning are documented in the
 [0.3.0 release notes](releases/usb-hub-support-0.3.0.md). The0.2.1 blocking behavior
 and PR inspections below are historical; they do not describe the new candidate.

@@ -1,0 +1,50 @@
+{
+  "recorded_at_utc": "2026-10-20T01:01:58.928204+00:00",
+  "pr": "https://github.com/Kyle-Hosman/az-mods-index/pull/4",
+  "title": "Add Nacho AZ Mods (USB Hub Support)",
+  "state": "OPEN",
+  "is_draft": true,
+  "index_head_commit": "7985a4e873edda72e4d0ae68de6a217d9530e2ba",
+  "branch_unchanged": true,
+  "scope": "Description updated for0.3.0. Index diff only adds the repository URL. No comment, review or ready-for-review transition.",
+  "release_version": "0.3.0",
+  "release_source_commit": "f6e69c2fefabf6ddbfbf1ac081591af7c5ef25b1",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "body_utf8_lf_sha256": "63d7e701106f3bc874314cadb0086b2597d26f3941ab0ec3768773229dcd9a69",
+  "body_read_back_matches_prepared_text": true,
+  "feedback_at_inspection": {
+    "comments": 0,
+    "reviews": 0,
+    "inline_review_comments": 0
+  },
+  "github_index_ci": {
+    "reported_checks": 0,
+    "interpretation": "No attached checks; local tests and release-source CI are separate."
+  },
+  "validation": {
+    "fixture_files_match_GitHub_head_after_LF_normalization": [
+      "azmods-repos.json",
+      "tests/test_check.py",
+      "tools/check.py"
+    ],
+    "unit_tests_passed": 12,
+    "fetch_check": "2repositories,0problems",
+    "other_listed_repo_anonymous_package_check": "passed",
+    "current_mod_anonymous_download": "passed in publication record",
+    "source_CI": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39350450087",
+    "source_CI_result": "both jobs passed",
+    "warning_review": "Existing upstream unit fixtures emit unclosed-file ResourceWarnings; no test failures."
+  },
+  "disclosures": [
+    "54hooks, private7/8 loopback identities and independent per-source caches",
+    "Real-AZ user reports separate from Wi-Fi software-peer protocol evidence",
+    "Master/SYNC/reconnect and fresh hub load with external software peer",
+    "Unresolved mode-change source interruption and warning triangle",
+    "No actual-CDJ, phase-sync, eight-source hardware or long-session acceptance",
+    "Earlier native RSS/input-budget investigations remain open",
+    "GPL kernel patch, mounts/writes and framework persistent staging"
+  ],
+  "release_assets_or_tags_modified": false,
+  "real_AZ_access": false
+}

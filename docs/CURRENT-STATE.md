@@ -1,5 +1,17 @@
 # Current state
 
+## Official index PR updated for0.3.0
+
+[Index PR4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) remains open and
+draft, with unchanged head7985a4e and a diff adding only this repository URL.
+Its description now covers0.3.0 hashes/source,54 hooks, independent private7/8
+libraries, bounded physical Wi-Fi software-peer validation and the unresolved
+loaded-mode interruption/warning. Read-back matches the prepared body. No comments,
+reviews, inline feedback or attached GitHub checks were present at inspection.
+Fresh12 local index tests and the two-repository fetch check pass; the fixture
+matches the exact PR head after line-ending normalization. See
+[update record](acceptance/usb-hub-support-0.3.0-index-pr-update.json).
+
 ## Latest publication: USB Hub Support 0.3.0
 
 [USB Hub Support 0.3.0](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.0)
