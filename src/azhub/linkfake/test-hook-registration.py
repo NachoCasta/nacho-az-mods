@@ -10,6 +10,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parent
 CC = shlex.split(os.environ.get('TEST_CC', 'cc'))
+HISTORICAL_CC = shlex.split(os.environ.get('TEST_HISTORICAL_CC', 'gcc'))
 SDK = os.environ.get('AZ_SDK_INCLUDE', '../../azmod')
 INSTALLERS = {
     'probe_install': {0xef05c8: 'probe_parse'},
@@ -105,7 +106,10 @@ def main():
             raise AssertionError('Regression checker accepted zero/double parser registration')
     historical = preprocess('linkfake.c')
     assert re.findall(r'make_hook\s*\(0xef05c8,\s*(\w+)\)', historical) == ['h_dbparse']
-    subprocess.run(CC + ['-fsyntax-only', '-I' + SDK, 'linkfake.c'], cwd=ROOT, check=True)
+    # The retained standalone research branch uses GCC atomic builtins on C11
+    # atomic objects. Compile it with the GCC family used by the ARM SDK;
+    # Clang still preprocesses and executes the supported registration controls.
+    subprocess.run(HISTORICAL_CC + ['-fsyntax-only', '-I' + SDK, 'linkfake.c'], cwd=ROOT, check=True)
     print('PASS: supported installers, parser trampoline/readiness, zero/double negative controls; historical branch compiles')
 
 
