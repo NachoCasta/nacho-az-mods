@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "status": "Implementation and local/emulator validation complete; user approved screenshot appearance and authorized physical installation, approval and reload",
+  "version": "0.3.1",
+  "published": false,
+  "package_sha256": "a449ef3122c4da039c5bd0d3342b3a686e1bdb7862cf71831e2dd6f9db684dc8",
+  "elf_sha256": "60be7a089fe6cc71dcb404cfd80b96e2218da5f7a2ec63d36b8b70741a8bf462",
+  "firmware": "ep147-9e9454e357389ece",
+  "glibc": "2.17",
+  "native_emulator_pid": 733085,
+  "emulator_kernel": "6.6.138-dirty",
+  "final_decks": "EEEE",
+  "final_link_mode": "Off",
+  "diagnostic_display_override_removed": true,
+  "native_composites": {
+    "entries": 24,
+    "views": 3,
+    "numbers_per_view": 8,
+    "outside_edit_pixel_differences": 0,
+    "literal_usb1_usb2": true,
+    "additional_digits": "User-approved nearest native font only; original icon and USB word retained under native HUB/H overlays"
+  },
+  "portable_checks": {
+    "plain": 29,
+    "asan_ubsan": 29,
+    "tsan": 29
+  },
+  "sdk_ui_checks": {
+    "plain": 10,
+    "asan_ubsan": 8,
+    "tsan": 8
+  },
+  "test_environment": "Pinned SDK userspace-QEMU build; x86 Docker clang host checks; TSan personality syscall required container-only seccomp=unconfined. Source-settings uses repository fixture; registration controls run separately with WSL GCC. No host configuration mutation.",
+  "screenshots": [
+    {
+      "local_path": "local/diagnostics/hub-native-ui/source-native-usb3-usb8-v15.png",
+      "sha256": "440d0567fb3f5dbbd74911dde50e47f4310e594372888844dcfba21b0e52c1ba",
+      "bytes": 45751
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/browse-native-usb3-v15.png",
+      "sha256": "1b86d7760273649a516f5380798c263ccd518a481226ea54aca6bba5591556fe",
+      "bytes": 71500
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/browse-native-usb8-v15.png",
+      "sha256": "5316e4156b3c3ea098e4e0de0f471ee03cb3a2e7cb50b9564d2c383a92598019",
+      "bytes": 107036
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/waveform-native-usb3-native1-v15.png",
+      "sha256": "664d5a9a2b0903c26e25d2e802122dbabc1813df3c3ce3ed018bf2137deb4c08",
+      "bytes": 124256
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/waveform-native-usb3-usb8-v15.png",
+      "sha256": "d6d2096081ab158411f4c6cf27d7beeb01d7b3096d0b3386c2f5130e08415331",
+      "bytes": 124388
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/browse-native-usb1-v15-control.png",
+      "sha256": "9193d576cb576adfe99da051654ab8a6544818fd62755dde528c4c832ca895b5",
+      "bytes": 107155
+    },
+    {
+      "local_path": "local/diagnostics/hub-native-ui/source-native-v14-control.png",
+      "sha256": "366560f3927e2a399470f99c976b8711d66437ef281374978a98e7fd12827aa1",
+      "bytes": 45309
+    }
+  ],
+  "representative_screenshot_build": {
+    "elf_sha256": "afa4419fd5e23f8e45e7dfb41b0ce26e1e1b0ea40a43ddd0efc99815d6d08bc7",
+    "mapping": "Already-owned display1->3 and2->8 only",
+    "two_real_emulator_hub_libraries": true,
+    "eight_device_acceptance": false,
+    "native_control": "Source nativeUSB1/2; Browse nativeUSB1; Waveform nativeUSB1 beside hubUSB3; same fixture track"
+  },
+  "behavior_preservation": {
+    "source-display.h": "45e464f7d8aea03af9bf9c1a5bef9f287d5feaa7bab49767ae58692bc8146a3d",
+    "network-identity.h": "27c195295262d1b1e9ea4ce5c02aa3931c0a85430f21f037fc84c1282724af91",
+    "linkfake.c": "9c3306e48ca54286c16b4a54dfc13aa3daf610d321486b96ffac0c59265358bc",
+    "discovery.h": "29b73c8d52eb78136fc009553ef06f56204cea310593f62fcb5e22a9b15b19bd",
+    "link-cached-status.h": "58b4091c41eabdc1d006ffb455cbcf5bf5534d8d8d3def5f8b5f9bdbbf917ec8",
+    "community.c": "2243d19eae8d91b7b7bd5ee2fe5d94f7b61d9f9774d051932142bbf35ae19e78",
+    "azmod.json": "7fcdeddc6a58defd336a6a5ff704e9e13e051c109ffdb1b457364646700fb8cf"
+  },
+  "approved_eject_preservation": {
+    "eject-view.h": "a99de7ebfde123d76f9f26cadb90ca8ba9d87a35c5dfe7a6a16f4cce59e6016d",
+    "eject-ui.h": "9706068b87005d9662c3baf53a7afa002ac292e1ce223d433fd58323519e5dd3",
+    "safe-eject.h": "82657b46f1bc070e0629d0bd7d5a75b17afd31bc2e3a31ae9fa6c47f309e0414",
+    "eject-presentation.h": "c04808563bb3db624c6d45dd4c97e13757f3f63e637569644f9495481ad9766e",
+    "eject-ui-model.h": "cb4ddb6a2f807bf2cc585db2580bda5348d9842a8eae1789c42c2d363d950714"
+  },
+  "runtime_checks": [
+    "Normal framework activation and exact USB/staged hash, mapped ELF readback",
+    "All24 native composite preservation checks pass",
+    "Representative Source/Browse/Waveform additional digits3/8 render",
+    "Same-deck nativeUSB1 to hubUSB8 replacement updates badge",
+    "Empty LinkOn/Off source recovery with unchanged nativeUSB1/2 and hub1/2 rows after settling",
+    "Short STOP opens approved selector; cancellation returns to Source; no eject requested"
+  ],
+  "limitations": [
+    "Additional numeral font is an explicitly approved approximation; screenshot appearance approved by user on2026-10-20; physical functional acceptance remains separate",
+    "Representative3/8 screenshots use a presentation-only diagnostic mapping, not eight-device topology",
+    "Physical installation/approval/reload was subsequently authorized; see separate delivery record. No audio acceptance, external CDJ test, publication or replacement of published assets is established by the emulator record",
+    "Known Link-mode brief hub disconnect/reannounce remains unchanged"
+  ],
+  "local_receipts": [
+    "local/integration/hub-native-ui-v14/runtime.txt",
+    "local/integration/hub-native-ui-v14/runtime-restored.txt",
+    "local/integration/hub-native-ui-v14/source-freeze.json",
+    "local/integration/hub-native-ui-v14/host-tests.log",
+    "local/integration/hub-native-ui-v14/host-tsan.log",
+    "local/integration/hub-native-ui-v14/sdk-ui-tests.log",
+    "local/integration/hub-native-ui-v14/sdk-ui-tsan.log"
+  ],
+  "user_visual_review": {
+    "date": "2026-10-20",
+    "result": "Approved",
+    "basis": "User said the screenshots look good and requested installation, approval and reload on the AZ. This is visual approval, not physical functional acceptance."
+  }
+}

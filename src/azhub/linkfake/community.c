@@ -32,6 +32,9 @@ static void community_discovery_poll(void);
 #ifdef LF_SAFE_EJECT
 #include "safe-eject.h"
 #include "link-cached-status.h"
+#ifdef LF_EJECT_UI
+#include "source-badge-render.h"
+#endif
 #endif
 
 static const char *community_mount_table(void) {
@@ -150,6 +153,9 @@ static int community_init(const az_core_v1 *core) {
         !AZ_HAS(core,launch) || !AZ_HAS(core,launch_alive) || !AZ_HAS(core,launch_stop)) return -27;
     /* Prepare fallible resources before the irreversible hook phase. Workers
      * remain idle until every claim succeeds. */
+#if defined(LF_SAFE_EJECT) && defined(LF_EJECT_UI)
+    if (source_badge_prepare()) return community_abort(-90);
+#endif
     linkfake_init();
     if (lf_hook_failures) return community_abort(-4);
     if (hub_tag_cache_prepare()) return community_abort(-30);
@@ -183,6 +189,10 @@ static int community_init(const az_core_v1 *core) {
     if (lf_hook_failures) return community_abort(-38);
     probe_queue_install();
     if (lf_hook_failures) return community_abort(-39);
+#if defined(LF_SAFE_EJECT) && defined(LF_EJECT_UI)
+    int badge_result=source_badge_install();
+    if (badge_result || lf_hook_failures) return community_abort(-91);
+#endif
     __atomic_store_n(&community_ready,1,__ATOMIC_RELEASE);
 #ifdef LF_SAFE_EJECT
     /* Keep the selector/coordinator available with no active libraries, including

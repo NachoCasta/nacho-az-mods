@@ -1,0 +1,63 @@
+{
+  "status": "Exact candidate installed, approved and activated on the real AZ; native process and framework completion verified",
+  "candidate": "USB Hub Support 0.3.1, frozen UI v3",
+  "package_sha256": "183e2d8bdccd623ac757b2b298b195a499957d17672faf58f4237b8f1f059e7f",
+  "elf_sha256": "ba9a31ffcba3492229a641a1feab78157797dad465fcb40cae599e1f9c4d2e8b",
+  "device": {
+    "firmware_tag": "ep147-9e9454e357389ece",
+    "kernel": "4.4.194",
+    "core": "1.2.3",
+    "unchanged_native_pid": 1356103,
+    "running_mod_version": "0.3.0",
+    "deck_state": "LEEE",
+    "interpretation": "Deck1 remains loaded; no application reload, controller restart or playback test was requested by this delivery operation."
+  },
+  "delivery": {
+    "usb_target": "/media/usb/sda1/MODS/community-mods/usb-hub-support",
+    "rollback_directory": "/media/usb/sda1/MODS/backups/usb-hub-support-0.3.0-before-ui-v3",
+    "rollback_elf_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+    "members": 7,
+    "verification": "All seven extracted package members verified on USB before directory replacement; prior version retained on USB.",
+    "staging": "Normal az-usbload update mode (AZ_RERUN=1, AZ_NOWATCH=1) stages the candidate without requesting application reload. SSH disconnected during managed hooks; subsequent read-only reconnection confirmed the original native PID, loaded deck, and matching new USB/staged hashes. No second staging run was issued."
+  },
+  "approval": {
+    "authorization": "User explicitly requested installation and approval; the exact-candidate SSH approval exception applies.",
+    "path": "/home/root/settings/azmod-community/approved",
+    "backup_on_usb": "/media/usb/sda1/MODS/backups/usb-hub-support-0.3.0-before-ui-v3/approved-before-ui-v3",
+    "verification": "Reviewed ELF hash matched both USB and staged files; framework approval lock held; prior list backed up to USB; only this mod's entry replaced atomically; all unrelated entries preserved and verified.",
+    "activation_reload_requested": false
+  },
+  "local_receipts": [
+    "local/diagnostics/az-hub-ui-v3-usb-copy.json",
+    "local/diagnostics/install-hub-ui-v3-az-usb.py",
+    "local/diagnostics/az-ui-v3-managed-stage.sh",
+    "local/diagnostics/az-ui-v3-post-stage.sh",
+    "local/diagnostics/az-ui-v3-preapprove.sh"
+  ],
+  "limits": [
+    "Installation and approval are not physical UI or audio acceptance.",
+    "Delivery-time loaded-deck gate was resolved: fresh EEEE was verified before the user-requested activation reload.",
+    "No publication or catalog update is included."
+  ],
+  "activation": {
+    "authorization": "User explicitly requested reload after the earlier request to unload deck1.",
+    "preflight": "Fresh EEEE telemetry matched the current native PID; approved entry and both USB/staged ELF hashes verified before a single supported framework apply request.",
+    "prior_native_pid": 1356103,
+    "new_native_pid": 2099107,
+    "framework_status": "state=done; serial=8",
+    "loaded_mod": "usb-hub-support|1|0.3.1|",
+    "mapped_elf_sha256": "ba9a31ffcba3492229a641a1feab78157797dad465fcb40cae599e1f9c4d2e8b",
+    "deck_state": "EEEE",
+    "limits": "Activation verification only; no track load, playback, eject gesture or visual acceptance is claimed."
+  },
+  "activation_receipts": [
+    {
+      "path": "local/diagnostics/az-ui-v3-activation-readback.txt",
+      "sha256": "ed02a0bc44e10f2c3b21e5ca869cf42ea4a9cd3132fddfc8f5b9de8d0185148d"
+    },
+    {
+      "path": "local/diagnostics/az-ui-v3-settled-readback.txt",
+      "sha256": "5d3939f60883bc588c387e22f3c9ec54ecbad001920ee7fa7dbe83c187ec5d94"
+    }
+  ]
+}

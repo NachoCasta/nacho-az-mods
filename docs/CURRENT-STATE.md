@@ -1,5 +1,110 @@
 # Current state
 
+## USB Hub Support0.3.1 publication authorized
+
+The user approved the native-body UI on the physical AZ and requested publication.
+Publish the exact accepted v14 package, retaining its tested candidate wording:
+package SHA256 `a449ef3122c4da039c5bd0d3342b3a686e1bdb7862cf71831e2dd6f9db684dc8`,
+ELF SHA256 `60be7a089fe6cc71dcb404cfd80b96e2218da5f7a2ec63d36b8b70741a8bf462`.
+Physical approval covers appearance; no new audio/eject/network acceptance or
+eight-device hardware coverage is claimed. Release source CI and anonymous
+catalog/package retrieval remain publication gates. See the
+[0.3.1 release notes](releases/usb-hub-support-0.3.1.md).
+
+## Native UI candidate installed, approved and activated on the AZ
+
+The user approved the emulator screenshots and requested real-AZ installation,
+exact-candidate pre-approval and reload. Exact native-body v14 is verified on the
+mods USB and in framework-managed staging; the previous UIv3 package is retained
+on USB. Pre-approval updated only this candidate's entry under the framework lock,
+with the old approval list backed up on USB and unrelated entries preserved.
+Initial delivery left PID2099107 running with `LLEE`. After the user unloaded
+the tracks, fresh empty-deck telemetry and exact approval were verified before
+one framework apply. New PID2362076 loads0.3.1 with57 hooks; framework state is
+`done` (serial9), and the staged/mapped ELF matches the reviewed hash. The final
+activation readback is `EEEE`. This verifies activation, not physical appearance,
+playback or eject acceptance. See the
+[native AZ delivery record](acceptance/hub-source-ui-native-az-delivery.json).
+
+## Native badge revision: emulator screenshots ready for review
+
+The user approved the emulator Browse and Waveform appearance from the native
+reuse diagnostic. They authorized keeping the original USB1/2 bodies and using
+the closest native font only for numbers3..8, preserving the original USB icon,
+USB lettering and spacing. Implement this in private runtime composites; do not
+export native artwork. Representative USB3/8 Source/Browse/Waveform screenshots
+are saved locally and were approved by the user on2026-10-20. The approved eject
+selector stays unchanged. The later physical delivery is recorded above;
+publication remains outside the authorized scope.
+The Source HUB bar retains the native LINK bar's22px overlay, including its
+expected overlap with the icon. The user clarified that native overlay behavior
+is desired; do not shrink the bar to20px or move/redraw the original icon.
+
+Integrated native-body candidate0.3.1 v14 passes29 plain,29 ASan/UBSan and29
+TSan portable components plus SDK UI10/8/8 checks. Exact emulator activation
+prepares all24 native composites with zero outside-edit pixel differences.
+The screenshot-only v15 maps two already-owned display labels to3/8; this is
+not eight-device acceptance. Exact v14 is restored, diagnostic mapping removed,
+decks empty, and native/hub Source rows remain after empty Link-mode recovery.
+See the [native candidate record](acceptance/hub-source-ui-native-candidate.json)
+and [implementation/evidence notes](HUB-BADGE-NATIVE-REUSE.md). Earlier custom
+badge candidate statements below are historical and do not describe this build.
+
+## Physical UI feedback: eject selector approved; source badges need revision
+
+The user approved the appearance of the0.3.1 eject selector. Their Source and
+Waveform photos show the custom hub icon/lettering differs from native USB in
+font weight, size and spacing; the source badges are not visually accepted.
+Revise the badge adapter to reuse the native icon, typography and layout at
+runtime, changing only the hub identification and display number. Keep the
+approved eject selector unchanged. Iterate in the emulator and save screenshots
+for user review before another physical candidate delivery. No new real-AZ
+operation is implied by this feedback. Earlier candidate-readiness statements
+below describe the first iteration and do not override this visual rejection.
+
+## UI candidate installed, approved and activated on the real AZ
+
+The user requested installation and approval of exact UI candidate0.3.1.
+All seven package members are verified on the mods USB, with0.3.0 retained there
+for rollback. The normal loader staged the reviewed ELF and its hash was checked
+against USB before exact-candidate SSH pre-approval. The previous approval list
+is backed up on USB; unrelated entries were preserved under the framework lock.
+Delivery initially left PID1356103 running0.3.0 with deck1 loaded (`LEEE`).
+The user then requested reload; fresh empty-deck telemetry (`EEEE`) and approval
+were verified before the single normal framework apply. New PID2099107 loads
+0.3.1, its mapped ELF matches the reviewed hash, and framework status is `done`
+(serial8). This verifies activation, not physical UI, eject or audio acceptance.
+See the
+[delivery record](acceptance/hub-source-ui-az-delivery.json).
+
+## Hub source UI candidate: ready for physical UI validation
+
+An unpublished local 0.3.1 v3 candidate adds hub-only Source/Browse/Waveform
+badges, stable display numbers and the restyled mod-owned eject selector.
+Published 0.3.0 remains unchanged. Package SHA256:
+`183e2d8bdccd623ac757b2b298b195a499957d17672faf58f4237b8f1f059e7f`;
+ELF SHA256: `ba9a31ffcba3492229a641a1feab78157797dad465fcb40cae599e1f9c4d2e8b`.
+Frozen-v3 host checks pass 25 plain, 25 ASan/UBSan and 25 TSan components,
+plus SDK UI 10/8/8 checks and the separate registration/negative controls.
+The source-settings test uses the existing repository fixture because the build
+export omits that research data. See the [candidate ledger](acceptance/hub-source-ui-candidate.json)
+and [final AZ trial](HUB-SOURCE-UI-AZ-TRIAL.md).
+
+Exact-v3 emulator checks cover five hub libraries, native USB controls in all
+three views, Link Off/On, same-deck hub/native replacement, short STOP cancellation,
+individual loaded-source eject, stable remaining numbers, removal of the selected
+disk without retargeting, and whole-hub eject. Final mapped ELF matches the hash
+above. The native mode-change warning remains outside this UI goal.
+
+The initial v3 process hit the core's frame-filter time budget and the selector
+refused ownership. Normal framework reload restored operation on the same bytes;
+subsequent selector/eject checks passed. The same symptom exists in older evidence;
+its cause is not attributed to this change. External ownership controls pass in
+all three host-adapted widget families, but the synthetic media fixture did not
+produce an external Source row. Actual external-CDJ UI, physical AZ input/audio
+and long-session acceptance remain unvalidated. Earlier v2/Linaro observations
+remain predecessor evidence. No real AZ operation or publication is included.
+
 ## Official index PR updated for0.3.0
 
 [Index PR4](https://github.com/Kyle-Hosman/az-mods-index/pull/4) remains open and

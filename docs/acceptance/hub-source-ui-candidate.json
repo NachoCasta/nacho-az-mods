@@ -1,0 +1,395 @@
+{
+  "status": "Ready for physical UI validation; bounded exact-v3 emulator and host adapter checks recorded. Actual external-CDJ UI remains unvalidated.",
+  "scope": "Hub-only Source/Browse/Waveform badges, stable display numbering and the existing mod-owned eject selector. No publication or real-AZ acceptance.",
+  "artifact": {
+    "candidate": "Unpublished local USB Hub Support 0.3.1, frozen v3",
+    "package": {
+      "path": "local/integration/hub-source-ui-v3/dist/usb-hub-support-0.3.1.azmod",
+      "size": 407823,
+      "sha256": "183e2d8bdccd623ac757b2b298b195a499957d17672faf58f4237b8f1f059e7f"
+    },
+    "elf": {
+      "path": "local/integration/hub-source-ui-v3/package-export/src/azhub/linkfake/out/usb-hub-support.so",
+      "size": 165992,
+      "sha256": "ba9a31ffcba3492229a641a1feab78157797dad465fcb40cae599e1f9c4d2e8b"
+    },
+    "hash_verification": "Package and ELF bytes independently rehashed after final host tests; match the candidate identifiers supplied by the build coordinator.",
+    "source_freeze": {
+      "path": "local/integration/hub-source-ui-v3/source-freeze.json",
+      "sha256": "6cb5d2844e9bcf14e378ecd9d4456b89c589a0e7b5c6c1fdc6af6785ba9fbfef",
+      "working_source_entries": 85
+    },
+    "test_snapshot": "local/integration/hub-source-ui-v3/package-export/src/azhub/linkfake",
+    "build_receipts": {
+      "status": "pass",
+      "independent_review": "local/integration/hub-source-ui-v3/build-review.json",
+      "source_correspondence": "All 85 frozen entries match current source and v3 export byte-for-byte; packaged/current/export manifests match semantically.",
+      "pinned_sdk_reproduction": {
+        "receipt": "local/sdk-userspace-qemu/reproduction.json",
+        "reference_v1_elf_sha256": "5e4564f8db2804b9fcc34460e223210ced9d06a6277899f40060558a2efec279",
+        "rebuilt_v1_elf_sha256": "5e4564f8db2804b9fcc34460e223210ced9d06a6277899f40060558a2efec279",
+        "exact_match": true,
+        "compiler": "GCC 7.5.0 from pinned SDK image",
+        "host_binfmt_changes": false,
+        "privileged_actions": false
+      },
+      "v3_compile": "Same Makefile candidate flags, explicit pinned GCC 7.5 userspace QEMU invocation; distinct from earlier Linaro 6.3 diagnostic build.",
+      "elf_version_needs": [
+        "GLIBC_2.17"
+      ],
+      "package_validation": "SDK validate passes; only existing settings-path warning; seven file members verified.",
+      "package_validation_receipt": "local/integration/hub-source-ui-v3/package-validation-review.txt",
+      "elf_version_receipt": "local/integration/hub-source-ui-v3/elf-version-info-review.txt"
+    }
+  },
+  "host_checks": {
+    "created_utc": "2026-10-20T02:01:44.424725+00:00",
+    "source_snapshot": "local/integration/hub-source-ui-v3/package-export/src/azhub/linkfake",
+    "portable": {
+      "compiler": "clang in usb-hub-host-tests:local",
+      "passed_components": {
+        "plain": 25,
+        "asan": 25,
+        "tsan": 25
+      },
+      "log": "local/diagnostics/hub-source-ui/v3-portable-final.txt",
+      "runner": "Frozen test-host.sh suite loop executed without registration line in temporary container script; working-directory command removed because frozen snapshot selected by Docker -w. Production sources unchanged.",
+      "fixture_override": {
+        "path": "src/azhub/research/devsetting-fixture.dat",
+        "sha256": "b07247125d15975b87d0651c39b71f29be04648345f6e5cf1da4effcb630e268",
+        "reason": "package-export omits research/devsetting-fixture.dat; source-settings uses the existing repository fixture via explicit absolute path."
+      },
+      "instrumentation": "Original runner verifies __asan_init and __tsan_init using nm."
+    },
+    "registration": {
+      "status": "pass",
+      "compiler": "WSL gcc, Python3",
+      "log": "local/diagnostics/hub-source-ui/v3-hook-registration-final.txt",
+      "scope": "Supported installers/parser trampoline/readiness, zero/double negative controls, historical branch compile; historical unused static warnings retained."
+    },
+    "sdk_ui": {
+      "passed_checks": {
+        "plain": 10,
+        "asan_ubsan": 8,
+        "tsan": 8
+      },
+      "log": "local/diagnostics/hub-source-ui/v3-sdk-ui-final.txt",
+      "fixture": "Frozen v3 test-sdk-ui.c",
+      "compiler": "clang in usb-hub-host-tests:local",
+      "sdk": "preserved sdk-reference include and tools/harness/sanitize.sh",
+      "not_measured": {
+        "plain": [
+          "functional"
+        ],
+        "asan_ubsan": [
+          "no-io",
+          "no-alloc",
+          "functional"
+        ],
+        "tsan": [
+          "no-io",
+          "no-alloc",
+          "functional"
+        ]
+      }
+    },
+    "environment": "Docker host image, read-only repository/SDK mounts, scoped seccomp=unconfined for TSan personality syscall; no ARM/binfmt, privileged operation or host configuration change.",
+    "limitations": [
+      "Portable tests use host adapters, not native firmware execution.",
+      "SDK harness does not establish physical UI/audio acceptance."
+    ]
+  },
+  "artwork": {
+    "provenance": "Original project USB-stick geometry and monoline glyph paths; no native assets, screenshots, external fonts or AI-created images.",
+    "generator": "src/azhub/research/scripts/generate-source-badges.py",
+    "embedded_header": "src/azhub/linkfake/source-badge-assets.h",
+    "families": {
+      "Source": [
+        90,
+        90
+      ],
+      "Browse": [
+        95,
+        70
+      ],
+      "Waveform": [
+        170,
+        41
+      ]
+    },
+    "numbers_per_family": 8,
+    "compressed_png_bytes": 16527,
+    "validation": "All 24 RGBA8 PNGs decoded with expected dimensions and transparency; deterministic header regeneration verified. Waveform-only size adjustment left all 16 Source/Browse PNGs byte-identical."
+  },
+  "historical_diagnostics": {
+    "v2": "Earlier v2 runtime views and input/eject observations are diagnostic predecessor evidence, not acceptance of the exact v3 package. The local Linaro v2 diagnostic build is separate from the pinned-SDK v3 artifact.",
+    "existing_filter_budget_reproduction": "docs/acceptance/usb-hub-support-0.2.1-unload-first-control.json records the same core frame-filter budget disable followed by selector refusal on an earlier candidate."
+  },
+  "physical_trial": "../HUB-SOURCE-UI-AZ-TRIAL.md",
+  "boundaries": [
+    "No real AZ access or hardware acceptance is included.",
+    "No release, catalog update or publication is included.",
+    "Visual and protocol checks do not establish audio, eight-source, long-session or phase-sync acceptance.",
+    "The existing loaded Link mode-change interruption/warning issue is outside this UI change."
+  ],
+  "recorded_utc": "2026-10-20T04:58:08.215800+00:00",
+  "runtime": {
+    "scope": "Exact v3 package, emulator kernel6.6.138-dirty, firmware ep147-9e9454e357389ece, normal core1.2.3 USB workflow. No physical AZ operations.",
+    "boot_id": "72bfbc5b-0447-45a6-958d-08e6d408fef5",
+    "accepted_process": 573204,
+    "mapped_elf_sha256": "ba9a31ffcba3492229a641a1feab78157797dad465fcb40cae599e1f9c4d2e8b",
+    "identity_verification": "Final /proc/573204/map_files/ffffa4014000-ffffa4036000 hash matches the frozen ELF; framework loaded record identifies usb-hub-support0.3.1.",
+    "activation": "Copied seven reviewed package members only to emulator mods USB, selected Allow in normal framework UI, then supported apply IPC with empty decks. No manual internal approval edits.",
+    "views": {
+      "Source": "Five hub libraries show HUB and USB1..5 with original volume names; both native USB sources retain stock cyan USB badges. Native ordering remains player/slot order, so it need not be numerical.",
+      "Browse": "Hub USB1 and continuously connected USB2 headers observed; native USB1 Browse header restores the stock USB icon with no HUB header.",
+      "Waveform": "H USB1/USB2 observed with native USB1 on the other deck; both two- and four-deck layouts inspected. Same deck replacement with native USB1 removes H, and replacement back to hub restores H USB2.",
+      "Link": "Candidate started with Link Off; native UI changed to On. Hub and native labels remain scoped in both modes. Existing hub warning triangle after a loaded mode change remains; seamless mode switching is not claimed."
+    },
+    "selector": {
+      "presentation": "Dark Eject USB panel, neutral borders, subdued selection, matching numbered badges and volume names, Cancel / BACK and Eject; no physical hub-port labels.",
+      "input": "Short STOP opens selector; encoder moves selection; BACK and Cancel / BACK close it without ejecting.",
+      "individual": "Loaded HUB_LIB2 / USB1 ejected: backing sdd1 and its private alias removed, success targets=1 sources=0x1. Other USB2..5 retain their numbers. Cached loaded identity remains H USB1 with native warning.",
+      "selected_removal": "Selected HUB_LIB4 / USB3 physically disconnected via QMP while selector open. Selection was cleared; Eject reports USB changed. Open the selector again. No different disk was ejected; remaining native and hub mounts retained. Reattachment restored that library without renumbering continuously connected sources.",
+      "whole_hub": "Long STOP2 (1.7seconds) closes selector and performs background whole-hub eject: four remaining backings sde1/sdf1/sdg1/sdc1 removed, success targets=4 sources=0x1e. Final Source contains native USB1/2 and MOD MENU only; both native backings remain mounted. Cached hub deck still displays H USB2.",
+      "notice_scope": "Preparing notice observed; final completion established by success logs and absent mounts, not by dialog dismissal. No captured audio or full-track playback claim."
+    },
+    "input_fault_negative": {
+      "pid": 565092,
+      "observation": "Coordinator confirmed core log: frame filters disabled after exceeding 200 microseconds eight times; selector subsequently refused input ownership.",
+      "selector_counters": {
+        "raw": 1373,
+        "edited": 1243,
+        "reported_age_ms": 8280
+      },
+      "interpretation": "Input health conservatively latches a fault when a valid panel read does not advance either expected filter serial. Idle age alone does not cause refusal.",
+      "cause": "Unestablished. The budget fault does not by itself attribute the slowdown to the badge or selector changes.",
+      "followup": "Normal framework apply with empty decks started PID573204; selector input, cancellation, individual and whole-hub eject subsequently passed on the unchanged candidate."
+    },
+    "external_presentation": {
+      "adapter_negative_control": "All three production widget families:96 same-controller owned/unowned/owned cycles pass plain and ASan/UBSan, preserving original native description/image and clearing TLS ownership. This is host-adapter evidence.",
+      "adapter_receipt": "local/integration/hub-source-ui-v3/test-source-badge-render-external-negative.receipt.json",
+      "synthetic_runtime": "Bounded isolated peer received native framing and sent39 discovery,137 status and39 media messages, but no external Source row appeared and no native media query occurred. Fixture is incomplete; no external runtime presentation pass is claimed.",
+      "cleanup": "Temporary dedicated TAP namespace and owned QMP transport objects removed; original emulator networking retained.",
+      "remaining": "Actual external-CDJ Source/Browse/Waveform acceptance remains unvalidated. Native USB runtime controls and host ownership controls support the narrowly scoped UI candidate, not full external-device interoperability."
+    },
+    "limits": [
+      "Five simultaneous emulator libraries, not eight-source hardware acceptance.",
+      "Emulator STOP2 uses an existing virtual hub-root fixture; physical wiring remains a final AZ test.",
+      "No real AZ UI/input/audio, long-session, phase-sync or actual-CDJ acceptance.",
+      "One recorded frame-filter budget disable required normal framework restart; no cause attribution or core fix is claimed."
+    ]
+  },
+  "raw_local_receipts": [
+    {
+      "path": "local/diagnostics/hub-source-ui/approval-v3-detail.png",
+      "sha256": "8c4c598432b40625e05468bcfdc684042bfff3d3146bd7c125c18032cf758330",
+      "bytes": 40462
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/browse-v3-hub1.png",
+      "sha256": "5f2debf90e50f200a0487bb431e7dc533974d610b0590306ad82a6b5d3d792a4",
+      "bytes": 70780
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/browse-v3-native.png",
+      "sha256": "9193d576cb576adfe99da051654ab8a6544818fd62755dde528c4c832ca895b5",
+      "bytes": 107155
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/browse-v3-survivor2.png",
+      "sha256": "874f6e9b75462d1f94acaf82452df25963ad315b539a94e0c546d51bf3ebdcde",
+      "bytes": 106663
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-after-reload.png",
+      "sha256": "05713dbacb00cfa92e8cad1581147b0f1349f6ee14c97d122440aff36011bd53",
+      "bytes": 3057
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-five.png",
+      "sha256": "0bf4b7b355b2f4cfc6f3ec8970f80e05a910c62d1c3719d4887c1093a7f206e2",
+      "bytes": 50702
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-knob.png",
+      "sha256": "2950c45575cffdcd8642ba49d43520e588b36fd126be9908ab0b0ac2cfa2283f",
+      "bytes": 61131
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-no-retarget.png",
+      "sha256": "31af761ce75d332ab23e7a6afe2f419da2357cd2d595cd94d008f10b6bd6fa49",
+      "bytes": 81863
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-number-retention.png",
+      "sha256": "14952e82a2a808102abfa80045961ffaf69d5d8698c4860b3e2c156c48479303",
+      "bytes": 99947
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-one-preparing.png",
+      "sha256": "ea855b3e3f55e9d3b904913eb589a798f98286ba0cb82bbb3a643e6c1c017d1b",
+      "bytes": 123436
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-reloaded-settled.png",
+      "sha256": "fe22317bc82f293c042e057c38ee135db50d2dc0c7b86405fe189d800921b3eb",
+      "bytes": 58006
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-selected-removed.png",
+      "sha256": "b821ec2f4fed626452f36641581163ee102d84f6c6a57cb576d736413c36fa1a",
+      "bytes": 96200
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/eject-v3-whole-preparing.png",
+      "sha256": "5c217f1273263121cf0cfbd701d344a986c2659d4c8e0d9cad688fa5d648b7ef",
+      "bytes": 87338
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/link-on-v3-confirm.png",
+      "sha256": "ebaccccb622a100ab46130f0df5c0ed433c2650c559ab82a0f514c657039f3ea",
+      "bytes": 73324
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-five.png",
+      "sha256": "43cb66ef9db72a4e5418ef63fecc412b1a2163aed3fbb18d8570c529305929e0",
+      "bytes": 45940
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-initial.png",
+      "sha256": "9473647333b71f17edf5f92c9850d9ae451cb30496f90ebb15632987136eeffc",
+      "bytes": 47633
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-link-on.png",
+      "sha256": "cc6d6f32377fece3e2d2bab4ee9243849167fda0d95f3e15ad5fdf3aa1e176d8",
+      "bytes": 59597
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-one-ejected.png",
+      "sha256": "c9c36888e5751743f291dbd5a93a01fc973340996d2b352025ee58e844755b92",
+      "bytes": 83293
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-synthetic-external.png",
+      "sha256": "ac78de519be057041cf4b0ada440f9d8c941fa2f3b5502867a6dd81a90d69062",
+      "bytes": 62779
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/source-v3-whole-ejected.png",
+      "sha256": "f13599cbf8ef09a7c28c4a3aa7c5e03285a05263c3c78a8c02e1a77dda9d7324",
+      "bytes": 55796
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-final-eject-state.txt",
+      "sha256": "8e15249a80638e42c5cfac7c405464c219e933a042519ac4e0ba6df10493b215",
+      "bytes": 380531
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-final-mapped-receipt.txt",
+      "sha256": "be0f43de79101427ae8e39685810684c00297af12e108676fc73acffdfa02a4c",
+      "bytes": 732
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-hook-registration-final.txt",
+      "sha256": "0cd8308c2b252f3547ac357ecd477fbca40f791ed30e431853bb8d7d55f503e1",
+      "bytes": 936
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-host-tests-summary.json",
+      "sha256": "3bd07fbd5afd9975239ff8f1860d5b7cf9acdbea38fafad0e9106744b9930466",
+      "bytes": 2352
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-initial-state.txt",
+      "sha256": "e60256c43e2685ae05e931f1b819b01f592c67bcd85108ab57cac6eb6e5fb5d4",
+      "bytes": 336239
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-portable-final.txt",
+      "sha256": "b4c5fc4c6d6b5698ac718c99b9d9a12a11632781c481c20cdff0c57729a95f7b",
+      "bytes": 8955
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-reload-healthy-state.txt",
+      "sha256": "bfeebdf81134dd884690fc22ea091639561278cfc88b0fb05621bceb442b634a",
+      "bytes": 517956
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/v3-sdk-ui-final.txt",
+      "sha256": "563c68b3cc4cc4cdef7c9e0a581f3df83e907b520c55c029519e1340c37e4448",
+      "bytes": 287
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-after-whole-eject.png",
+      "sha256": "4e76ddeba0b158c52a35de9fd63e9716861d1c8c16e65775f36ffa67927a25b5",
+      "bytes": 89561
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-hub-native.png",
+      "sha256": "43c4185efac463887746c5cf89addaad2056afede15fc387b39f84b73bf971aa",
+      "bytes": 123800
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-hub1.png",
+      "sha256": "1c7c50e019f6c7f39bf21417c5267ab87e5c6feafe1a61824ecc858374cc6387",
+      "bytes": 115981
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-link-on.png",
+      "sha256": "4e76ddeba0b158c52a35de9fd63e9716861d1c8c16e65775f36ffa67927a25b5",
+      "bytes": 89561
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-off-four-survivor2.png",
+      "sha256": "cbc6bfc589c7571b2c4da1c9d8edea4927633277171bafe1ec573cb5bef64b7a",
+      "bytes": 89376
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-replaced-hub2.png",
+      "sha256": "58aa93baf6c25c3ec5fb30186a0853775c2781e24fa63cd60e662924f4116c6f",
+      "bytes": 87630
+    },
+    {
+      "path": "local/diagnostics/hub-source-ui/waveform-v3-replaced-native.png",
+      "sha256": "1a81eea1876c8cd8915bdce368f89e1975257a3e4a47e91d07c2593b9ae44780",
+      "bytes": 89587
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/build-review.json",
+      "sha256": "61a807847266a6cf037798a68e553fe1401d8bcef98e7a5e652be552c5be1600",
+      "bytes": 16237
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/elf-version-info-review.txt",
+      "sha256": "ec7ac90f992df662693053483d24e5d43595954a05849652366646316c24e8b6",
+      "bytes": 2871
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/package-validation-review.txt",
+      "sha256": "cfb7351b8ff926f6e54d13caaf30a2bddc510d70d6e27630e66a2359754f1119",
+      "bytes": 352
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/synthetic-external-source-restored.receipt.json",
+      "sha256": "b445c949a9f90d6b7c0295e29e2ab7faeb88a6e4b68974c67a10cdcfbd74eacd",
+      "bytes": 1275
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/synthetic-external-source.receipt.json",
+      "sha256": "e11b81bdd3b9be69afbbc11fcdf4d5a9e0ec5450d2332c669556d324510c968d",
+      "bytes": 510
+    },
+    {
+      "path": "local/integration/hub-source-ui-v3/test-source-badge-render-external-negative.receipt.json",
+      "sha256": "c68f983b2962491964348da1988e7669c93959a694b50d0a536077a8fd28a276",
+      "bytes": 3395
+    },
+    {
+      "path": "local/sdk-userspace-qemu/reproduction.json",
+      "sha256": "d2cc4e2d9815892cd2a5d211e980fdffedd6b5ba30baae77f3996ca7e237039d",
+      "bytes": 1452
+    }
+  ]
+}

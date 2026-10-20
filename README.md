@@ -22,6 +22,12 @@ in English. Preserve identifiers and observed test data, including track titles,
 
 ## USB Hub Support
 
+**0.3.1 adds native-style HUB source labels and a clearer eject selector.**
+Source/Browse/Waveform reuse the AZ's USB artwork and lettering; additional
+numerals3–8 use the closest native font. The user approved the appearance on
+the physical AZ. Native artwork remains on the controller and is not packaged.
+See [0.3.1 release notes](docs/releases/usb-hub-support-0.3.1.md).
+
 **0.3.0 adds PRO DJ LINK coexistence:** four local decks with Link Off, or the
 native two-local-deck mode with Link On and external players. Hub libraries remain
 local and are not shared with external CDJs. Real-AZ tests covered a software peer

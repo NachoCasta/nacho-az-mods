@@ -4,6 +4,13 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/hub-source-ui-native-az-delivery.json | User-approved native-body v14 installed/pre-approved and activated on the AZ through one framework apply; exact hashes and57 hooks, physical functional acceptance pending |
+| acceptance/hub-source-ui-native-candidate.json | Current native-body0.3.1 candidate: exact hashes,29/29/29 tests,24 native composites, representative USB3/8 screenshots and pending user visual review |
+| HUB-SOURCE-UI-PLAN.md | Active goal: HUB badges in Source/Browse/Waveform and matching mod-owned eject selector; emulator-first evidence gates |
+| acceptance/hub-source-ui-candidate.json | Unpublished0.3.1 exact candidate hashes, five-source emulator UI/eject checks, host ownership controls and remaining physical/external-CDJ limits |
+| HUB-SOURCE-UI-AZ-TRIAL.md | Final physical UI trial for the exact local candidate; no deployment or hardware acceptance implied |
+| HUB-BADGE-NATIVE-RESEARCH.md | Exact-firmware queued identity, widget layout and native Image ABI reconstruction |
+| HUB-BADGE-NATIVE-REUSE.md | Active visual revision: reuse runtime native USB bodies, verified Graphics/Font APIs and native numeral matching gates; eject selector stays approved |
 | acceptance/usb-hub-support-0.3.0-index-pr-update.json | Official index PR4 description updated for0.3.0; draft/head unchanged, fresh local checks and body read-back pass |
 | acceptance/usb-hub-support-0.3.0-publication.json | Published exact candidate, release source CI, catalog and anonymous download verification |
 | acceptance/usb-hub-support-0.3.0-wifi-fresh-load-hardware.json | User-confirmed fresh hub load with external Wi-Fi peer master and both native decks following128BPM |

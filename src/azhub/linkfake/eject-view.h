@@ -3,6 +3,7 @@
 #ifndef HUB_EJECT_VIEW_H
 #define HUB_EJECT_VIEW_H
 #include <stdatomic.h>
+#include "eject-presentation.h"
 /* Bound all text to the supplied surface, including unusually long UTF-8
  * labels and the small areas used by the SDK harness. No heap allocation. */
 static void eject_text_fit(az_draw *draw,az_rect area,int x,int y,const char *text,int size,uint32_t color) {
@@ -51,7 +52,7 @@ static void eject_request_one(void) {
     if (eject_selected>=0 && eject_selected<eject_shown.count) {
         item=eject_shown.items[eject_selected];
         for (int i=0;i<eject_live.count;i++)
-            if (eject_live.items[i].port==item.port && !strcmp(eject_live.items[i].topology,item.topology)) valid=1;
+            if (hub_eject_same_row(&eject_live.items[i],&item)) valid=1;
     }
     pthread_mutex_unlock(&eject_lock);
     eject_close();
@@ -63,45 +64,58 @@ static void eject_request_one(void) {
     lf_core->banner(EJECT_ID,"Eject request recorded. Prototype: USB remains mounted.",3000);
 #endif
 }
+/* Rectangles share the text helper's clipping contract for SDK-sized surfaces. */
+static void eject_box(az_draw *draw,az_rect area,int x,int y,int w,int h,uint32_t color,int border) {
+    int right=area.x+area.w,bottom=area.y+area.h;
+    if (x<area.x || y<area.y || x>=right || y>=bottom || w<=0 || h<=0) return;
+    if (w>right-x) w=right-x;
+    if (h>bottom-y) h=bottom-y;
+    if (border) lf_core->draw_rect(draw,x,y,w,h,1,color);
+    else lf_core->fill_rect(draw,x,y,w,h,color);
+}
 static void eject_paint(az_draw *draw,az_rect area,void *unused) {
     (void)unused;
-    struct eject_inventory shown; int selected,port;
-    pthread_mutex_lock(&eject_lock); shown=eject_shown; selected=eject_selected; port=eject_port; int active=eject_active; pthread_mutex_unlock(&eject_lock);
+    struct eject_inventory shown; int selected;
+    pthread_mutex_lock(&eject_lock); shown=eject_shown; selected=eject_selected; int active=eject_active; pthread_mutex_unlock(&eject_lock);
     if (!active) return;
     if (area.x<0 || area.y<0 || area.w<=0 || area.h<=0 || area.x>1280 || area.y>800 ||
         area.w>1280-area.x || area.h>800-area.y) return;
-    uint32_t bg=lf_core->color(AZ_COL_BG),text=lf_core->color(AZ_COL_TEXT);
-    lf_core->fill_rect(draw,area.x,area.y,area.w,area.h,bg);
-    lf_core->draw_rect(draw,area.x,area.y,area.w,area.h,2,lf_core->color(AZ_COL_HI));
-    char title[80]; snprintf(title,sizeof title,"USB %d hub - select a USB",port+1);
-    eject_text_fit(draw,area,area.x+24,area.y+12,title,24,text);
+    const uint32_t bg=0x151719,border=0x4b5055,text=0xf1f2f3,dim=0xa6acb1;
+    eject_box(draw,area,area.x,area.y,area.w,area.h,bg,0);
+    eject_box(draw,area,area.x,area.y,area.w,area.h,border,1);
+    eject_text_fit(draw,area,area.x+24,area.y+12,"Eject USB",24,text);
     eject_text_fit(draw,area,area.x+24,area.y+52,
 #ifdef LF_SAFE_EJECT
         "Select a USB to safely remove. Other USBs stay available.",
 #else
         "Interface preview - no devices will be unmounted",
 #endif
-        16,lf_core->color(AZ_COL_TEXT_DIM));
+        16,dim);
     for (int i=0;i<shown.count;i++) {
         int y=area.y+88+i*42;
-        if (i==selected && area.w>32 && y+40<=area.y+area.h)
-            lf_core->fill_rect(draw,area.x+16,y,area.w-32,40,lf_core->color(AZ_COL_HI));
-        char label[220]; snprintf(label,sizeof label,"%s - hub port %s",shown.items[i].label,shown.items[i].location);
+        if (i==selected) {
+            eject_box(draw,area,area.x+16,y,area.w-32,40,0x30363c,0);
+            eject_box(draw,area,area.x+16,y,area.w-32,40,0x68747e,1);
+        }
+        char badge[32],label[220];
+        if (shown.items[i].display_number>0)
+            snprintf(badge,sizeof badge,"HUB / USB %d",shown.items[i].display_number);
+        else snprintf(badge,sizeof badge,"HUB");
+        eject_box(draw,area,area.x+26,y+7,116,26,0x4b5055,1);
+        eject_text_fit(draw,(az_rect){area.x,area.y,area.w<144 ? area.w:144,area.h},area.x+32,y+9,badge,14,dim);
+        snprintf(label,sizeof label,"%s",shown.items[i].label);
 #ifdef LF_SAFE_EJECT
-        if (shown.items[i].state==2) snprintf(label,sizeof label,"%.120s - port %.24s - safe to remove",shown.items[i].label,shown.items[i].location);
-        if (shown.items[i].state==3) snprintf(label,sizeof label,"%.120s - port %.24s - eject failed; retry",shown.items[i].label,shown.items[i].location);
+        if (shown.items[i].state==2) snprintf(label,sizeof label,"%.120s - safe to remove",shown.items[i].label);
+        if (shown.items[i].state==3) snprintf(label,sizeof label,"%.120s - eject failed; retry",shown.items[i].label);
 #endif
-        eject_text_fit(draw,area,area.x+28,y+5,label,18,lf_core->color(i==selected ? AZ_COL_HI_TEXT:AZ_COL_TEXT));
+        eject_text_fit(draw,area,area.x+154,y+6,label,18,text);
     }
-    if (!shown.count) eject_text_fit(draw,area,area.x+24,area.y+94,"No USB sticks found on this hub",18,text);
-    eject_text_fit(draw,area,area.x+30,area.y+450,"Cancel / BACK",19,text);
-    eject_text_fit(draw,area,area.x+420,area.y+450,
-#ifdef LF_SAFE_EJECT
-        "Safely remove",
-#else
-        "Request eject",
-#endif
-        19,text);
+    if (!shown.count) eject_text_fit(draw,area,area.x+24,area.y+94,"No USB sticks found on this hub",18,dim);
+    eject_box(draw,area,area.x+16,area.y+438,area.w-32,1,border,0);
+    eject_text_fit(draw,area,area.x+30,area.y+450,"Cancel / BACK",19,dim);
+    eject_box(draw,area,area.x+400,area.y+446,area.w-424,36,0x30363c,0);
+    eject_box(draw,area,area.x+400,area.y+446,area.w-424,36,border,1);
+    eject_text_fit(draw,area,area.x+420,area.y+450,"Eject",19,text);
 }
 static int eject_input(const az_event *event,void *unused) {
     (void)unused;
@@ -112,7 +126,7 @@ static int eject_input(const az_event *event,void *unused) {
             lf_core->log(EJECT_ID,"eject-ui input-path turns=%u encoder-calls=%u view=%d",
                 eject_ui_turns,atomic_load_explicit(&eject_encoder_turn_calls,memory_order_relaxed),lf_core->view());
         pthread_mutex_lock(&eject_lock);
-        if (eject_shown.count) eject_selected=(eject_selected+(event->dir>0 ? 1:eject_shown.count-1))%eject_shown.count;
+        eject_selected=hub_eject_step(eject_selected,eject_shown.count,event->dir);
         pthread_mutex_unlock(&eject_lock); lf_core->surface_redraw(eject_surface); return 1;
     }
     if (event->kind==AZ_EV_CLICK) {

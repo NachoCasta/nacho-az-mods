@@ -53,6 +53,7 @@ def check(source, directory):
     ordered = ['setenv("LINKFAKE_PROBE","1",1)', 'probe_install()',
                'probe_private_admission_install()', 'probe_library_ownership_install()',
                'probe_mode_recovery_install()', 'probe_queue_install()',
+               'source_badge_install()',
                '__atomic_store_n(&community_ready,1,3)']
     compact = re.sub(r'\s+', '', init)
     positions = [compact.index(token) for token in ordered]

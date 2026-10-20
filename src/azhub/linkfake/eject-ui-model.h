@@ -4,6 +4,7 @@
 #include <limits.h>
 struct eject_item {
     char label[128],disk[64],location[64],topology[PATH_MAX]; int port;
+    int display_number; /* First library source on this disk; zero for no source. */
 #ifdef LF_SAFE_EJECT
     char usb[PATH_MAX]; unsigned long long generation; unsigned devnum;
     int state;

@@ -7,6 +7,7 @@
 #include "eject-source.h"
 #include "eject-detach.h"
 #include "link-load-origin.h"
+#include "source-display.h"
 
 #define SAFE_RECORDS 16
 #define SAFE_MOUNTS 128
@@ -365,6 +366,24 @@ static void safe_reconcile(void) {
     pthread_mutex_unlock(&safe_source_mutex);
     if (changed) safe_persist();
 }
+/* A STOP row represents a physical disk, including all its partitions. Use
+ * its lowest library source number; disks without a library stay unnumbered.
+ * Match the mounted filesystem's sysfs identity, never its scan position. */
+static int safe_eject_display_number(const struct eject_item *item) {
+    int number=0;
+    pthread_mutex_lock(&safe_source_mutex);
+    for (int s=0;s<nfakes;s++) {
+        struct stat st;
+        if (stat(fakes[s].dir,&st)) continue;
+        char node[64],resolved[PATH_MAX];
+        snprintf(node,sizeof node,"/sys/dev/block/%u:%u",major(st.st_dev),minor(st.st_dev));
+        if (!realpath(node,resolved) || !eject_under(resolved,item->usb)) continue;
+        int candidate=hub_source_display_number(fakes[s].player,fakes[s].slot);
+        if (candidate && (!number || candidate<number)) number=candidate;
+    }
+    pthread_mutex_unlock(&safe_source_mutex);
+    return number;
+}
 static void safe_eject_scan(struct eject_inventory *out) {
     memset(out,0,sizeof *out);
     for (int p=0;p<2;p++) {
@@ -391,7 +410,7 @@ static void safe_eject_scan(struct eject_inventory *out) {
         item.port=port; snprintf(item.disk,sizeof item.disk,"%.*s",(int)sizeof item.disk-1,entry->d_name);
         const char *child=item.usb+strlen(eject_roots[port])+1,*dot=strchr(child,'.');
         if (dot) snprintf(item.location,sizeof item.location,"%.*s",(int)strspn(dot+1,"0123456789."),dot+1);
-        snprintf(item.label,sizeof item.label,"USB on hub port %s",item.location);
+        snprintf(item.label,sizeof item.label,"Unnamed USB");
         FILE *table=setmntent("/proc/mounts","re"); struct mntent m,*mp; char buffer[8192];
         if (table) {
             while ((mp=getmntent_r(table,&m,buffer,sizeof buffer))) {
@@ -403,9 +422,11 @@ static void safe_eject_scan(struct eject_inventory *out) {
             }
             endmntent(table);
         }
+        item.display_number=safe_eject_display_number(&item);
         pthread_mutex_lock(&safe_lock);
         for (int i=0;i<SAFE_RECORDS;i++) if (safe_records[i].item.state && safe_same(&safe_records[i].item,&item)) {
             if (*safe_records[i].item.label) snprintf(item.label,sizeof item.label,"%s",safe_records[i].item.label);
+            if (safe_records[i].item.display_number) item.display_number=safe_records[i].item.display_number;
             item.state=safe_records[i].item.state;
         }
         pthread_mutex_unlock(&safe_lock);
@@ -808,10 +829,9 @@ static void safe_eject_worker_step(void) {
         for (int n=0;n<live.count;n++) if (live.items[n].port==request.all_port && live.items[n].state!=2) {
             snprintf(reason,sizeof reason,"Hub changed during eject. Leave it connected and retry."); goto failed;
         }
-        safe_message("Hub on USB %d is safe to remove.",request.all_port+1);
-    } else safe_message("%.48s (hub port %.24s) is safe to remove.",
-                        request.count ? request.items[0].label:"USB",
-                        request.count ? request.items[0].location:"?");
+        safe_message("Hub is safe to remove.");
+    } else safe_message("%.96s - safe to remove.",
+                        request.count ? request.items[0].label:"USB");
     lf_core->log(EJECT_ID,"safe-eject success targets=%d sources=%#x",reserved,sources);
     goto finished;
 failed:

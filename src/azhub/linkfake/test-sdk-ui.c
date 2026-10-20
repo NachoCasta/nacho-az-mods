@@ -37,7 +37,8 @@ static void *fixture_worker(void *unused) {
     (void)unused;
     for (unsigned n=0;;n++) {
         pthread_mutex_lock(&eject_lock);
-        eject_shown.items[n%8].state=n%4;
+        eject_live.items[n%8].state=n%4;
+        eject_selected=hub_eject_refresh(&eject_shown,&eject_live,eject_port,eject_selected);
         pthread_mutex_unlock(&eject_lock);
         usleep(1000);
     }
@@ -53,7 +54,9 @@ static int fixture_init(const az_core_v1 *core) {
         snprintf(item->label,sizeof item->label,"Storage %d - long label for clipping and Unicode: USB",n+1);
         snprintf(item->location,sizeof item->location,"%d",n+1);
         snprintf(item->topology,sizeof item->topology,"fixture-%d",n);
-        item->port=1;eject_live.items[n]=*item;
+        snprintf(item->usb,sizeof item->usb,"fixture-usb-%d",n);
+        item->generation=(unsigned long long)n+1;item->devnum=(unsigned)n+1;
+        item->port=1;item->display_number=n+1;eject_live.items[n]=*item;
     }
     pthread_mutex_unlock(&eject_lock);
     az_surface_v1 surface={.size=sizeof surface,.layer=AZ_LAYER_TOP,.views=0x7f,

@@ -10,11 +10,13 @@
 #define EJECT_ID "usb-hub-support"
 #define EJECT_MAX 8
 #include "eject-ui-model.h"
+#include "eject-presentation.h"
 static pthread_mutex_t eject_lock=PTHREAD_MUTEX_INITIALIZER;
 static struct eject_inventory eject_live, eject_shown;
 static struct hub_stop_gesture eject_gestures[2];
 static unsigned eject_pending_select, eject_pending_all;
 static int eject_active, eject_port, eject_selected, eject_enabled;
+static int eject_inventory_redraw;
 static int eject_closing;
 static uint64_t eject_close_deadline;
 static _Atomic unsigned eject_keys_down;
@@ -171,7 +173,14 @@ static void *eject_inventory_worker(void *unused) {
         safe_eject_worker_step();
 #endif
         struct eject_inventory next; eject_scan(&next);
-        pthread_mutex_lock(&eject_lock); eject_live=next; pthread_mutex_unlock(&eject_lock);
+        hub_eject_sort(&next);
+        pthread_mutex_lock(&eject_lock);
+        eject_live=next;
+        if (eject_active) {
+            eject_selected=hub_eject_refresh(&eject_shown,&eject_live,eject_port,eject_selected);
+            eject_inventory_redraw=1;
+        }
+        pthread_mutex_unlock(&eject_lock);
 #ifdef LF_SAFE_EJECT
         safe_eject_status(&next);
 #endif
@@ -285,9 +294,7 @@ static void eject_open(int port) {
             (unsigned long long)(now-eject_edit_seen_ms)); return;
     }
     pthread_mutex_lock(&eject_lock);
-    memset(&eject_shown,0,sizeof eject_shown);
-    for (int i=0;i<eject_live.count;i++) if (eject_live.items[i].port==port)
-        eject_shown.items[eject_shown.count++]=eject_live.items[i];
+    hub_eject_refresh(&eject_shown,&eject_live,port,-1);
     eject_port=port; eject_selected=0; eject_active=1;
     int count=eject_shown.count;
     pthread_mutex_unlock(&eject_lock);
@@ -329,10 +336,13 @@ static void eject_tick(void) {
     safe_eject_tick();
 #endif
     pthread_mutex_lock(&eject_lock);
+    int redraw=eject_inventory_redraw && eject_active;
+    eject_inventory_redraw=0;
     for (int p=0;p<2;p++) eject_queue(hub_stop_poll(&eject_gestures[p],eject_clock_ms()),p);
     unsigned select=eject_pending_select,all=eject_pending_all;
     eject_pending_select=eject_pending_all=0;
     pthread_mutex_unlock(&eject_lock);
+    if (redraw) lf_core->surface_redraw(eject_surface);
     for (int p=0;p<2;p++) {
         if (all&(1u<<p)) {
             eject_close();
