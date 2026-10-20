@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-0.3.0-publication.json | Published exact candidate, release source CI, catalog and anonymous download verification |
 | acceptance/usb-hub-support-0.3.0-wifi-fresh-load-hardware.json | User-confirmed fresh hub load with external Wi-Fi peer master and both native decks following128BPM |
 | acceptance/usb-hub-support-0.3.0-wifi-reconnect-hardware.json | Real-AZ same-player software-peer reconnect and128BPM following; new load/audio confirmation pending |
 | acceptance/usb-hub-support-0.3.0-wifi-master-sync-hardware.json | Real-AZ negotiated external software-peer master and126BPM SYNC with user-reported hub playback; no phase/actual-CDJ acceptance |

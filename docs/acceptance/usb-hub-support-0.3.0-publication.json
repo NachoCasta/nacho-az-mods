@@ -1,0 +1,109 @@
+{
+  "mod_id": "usb-hub-support",
+  "version": "0.3.0",
+  "publication": "Published with explicit user authorization; previous assets and tags unchanged",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.0",
+  "tag": "usb-hub-support-0.3.0",
+  "source_commit": "f6e69c2fefabf6ddbfbf1ac081591af7c5ef25b1",
+  "catalog_commit": "3bcbad0710e31c99a2ae6bba764477074cc9816d",
+  "package_sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee",
+  "package_bytes": 385375,
+  "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc",
+  "artifact_identity": "Pinned SDK packer reproduces the exact tested candidate archive; all seven members unchanged. Original experimental manifest wording is retained; catalog and release notes provide updated validation/known-issue copy.",
+  "source_identity": "All65 frozen files matched original source commit70f92f2. Release source differs only in test-hook-registration.py: historical standalone syntax compilation explicitly uses GCC; supported registration and behavior checks retain Clang. No compiled production implementation, manifest or asset changed.",
+  "SDK": {
+    "version": "1.2.3",
+    "commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+    "build_image": "az-mods-sdk:1",
+    "build_image_id": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+    "GLIBC": "2.17"
+  },
+  "source_CI": {
+    "url": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39350450087",
+    "result": "success",
+    "behavior_tests": "success",
+    "sdk_build": "success",
+    "portable_components": {
+      "plain": 22,
+      "asan": 22,
+      "tsan": 22
+    },
+    "SDK_UI": "10plain,8ASan/UBSan,8TSan checks; ALL SANITIZER GATES PASS",
+    "preserved_initial_failure": "Run39350259484 failed historical Clang syntax compilation; SDK build passed. Fixed by explicit GCC historical check, not a production or artifact change."
+  },
+  "local_checks": "Fresh22 plain and22ASan/UBSan host components passed with GCC; SDK package/catalog validation passed. An initial local Clang attempt could not start because Clang was absent in WSL; it is not a passing test.",
+  "public_downloads": {
+    "authentication": "No authorization header, cookies, GitHub CLI credentials or tokens used",
+    "result": "PASS",
+    "resources": {
+      "catalog": {
+        "url": "https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/main/azmods-repo.json",
+        "HTTP_status": 200,
+        "bytes": 2058,
+        "sha256": "e007317e74317db87844bba39f403704433d8c152b9e6abfb144c17536a92d92"
+      },
+      "package": {
+        "url": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.0/usb-hub-support-0.3.0.azmod",
+        "HTTP_status": 200,
+        "bytes": 385375,
+        "sha256": "38d70598ba8103d970f1b87a651c1e9268affbf4784e221bfb50ae87b0802eee"
+      },
+      "icon": {
+        "url": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.0/usb-hub-support-0.3.0-icon.png",
+        "HTTP_status": 200,
+        "bytes": 945,
+        "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+      },
+      "source": {
+        "url": "https://github.com/NachoCasta/nacho-az-mods/tree/f6e69c2fefabf6ddbfbf1ac081591af7c5ef25b1/src/azhub/linkfake",
+        "HTTP_status": 200,
+        "bytes": 427430,
+        "sha256": "05df8e1497b49fda8f4fe90a7f8fa6db2eeb3145b1cdee80b9908f375d334e48"
+      }
+    },
+    "catalog_version": "0.3.0",
+    "archive_members": 7,
+    "ELF_sha256": "5e8ecd3ee0426bec83d5fc0f73d7f7327aa982c89206a67c97d6fc5634be26bc"
+  },
+  "hardware_evidence": [
+    "docs/acceptance/usb-hub-support-0.3.0-link-modes-hardware.json",
+    "docs/acceptance/usb-hub-support-0.3.0-wifi-peer-status-hardware.json",
+    "docs/acceptance/usb-hub-support-0.3.0-wifi-master-sync-hardware.json",
+    "docs/acceptance/usb-hub-support-0.3.0-wifi-reconnect-hardware.json",
+    "docs/acceptance/usb-hub-support-0.3.0-wifi-fresh-load-hardware.json"
+  ],
+  "known_issue": "Link On/Off briefly disconnects/reannounces hub sources and can leave loaded-track source-unavailable triangles. Select intended mode before loading hub tracks. Unresolved.",
+  "limits": [
+    "Actual-CDJ interoperability, audible phase sync, eight-source hardware, all formats, prolonged sessions and cache capacity remain unvalidated.",
+    "Hardware audio and fresh source selection are user-reported, not agent audio capture.",
+    "Hub sources remain local and are not exported.",
+    "No physical AZ mutation performed as a side effect of publishing."
+  ],
+  "local_receipts": [
+    {
+      "path": "local/diagnostics/release-030-public-download-check.txt",
+      "sha256": "ff24ec083f24f5225a5809495dc36f5a7c1e955ef8c315f9a4f33015cfddc1c3",
+      "bytes": 328
+    },
+    {
+      "path": "local/diagnostics/release-030-anonymous-verification.json",
+      "sha256": "783669b55f90e7ea809685d2cf2e9e2e1859ceb8cd243d44a725450a430e0e38",
+      "bytes": 1406
+    },
+    {
+      "path": "local/diagnostics/release-030-behavior-ci-passed.log",
+      "sha256": "4c2f9385c5d7dc3c3df1f52a825cb4354d18463cb1cd25cc739efe79fdcb997e",
+      "bytes": 35580
+    },
+    {
+      "path": "local/diagnostics/release-030-host-plain.log",
+      "sha256": "16b68bdfbf228360ffbb35793fb8cb09fea463a279cd06fbb1b9876dced1b732",
+      "bytes": 2497
+    },
+    {
+      "path": "local/diagnostics/release-030-host-asan.log",
+      "sha256": "dc84d2ae3efb4e7c5efae9c38e04d9322e63ae6115eaea147dd99b4199b389ff",
+      "bytes": 2475
+    }
+  ]
+}

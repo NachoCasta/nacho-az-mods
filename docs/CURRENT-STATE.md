@@ -1,4 +1,20 @@
-# Current state â€” 2026-10-18
+# Current state
+
+## Latest publication: USB Hub Support 0.3.0
+
+[USB Hub Support 0.3.0](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.0)
+is published and the root catalog selects it. Source/tag commit:
+`f6e69c2fefabf6ddbfbf1ac081591af7c5ef25b1`; catalog commit:
+`3bcbad0710e31c99a2ae6bba764477074cc9816d`. Release-source CI passed both jobs,
+including 22 plain/22 ASan+UBSan/22 TSan portable components and SDK UI10/8/8 checks.
+Anonymous catalog/package/icon/source retrieval passed with accepted package and
+ELF hashes unchanged. See the [publication record](acceptance/usb-hub-support-0.3.0-publication.json)
+and [release notes](releases/usb-hub-support-0.3.0.md).
+
+Known issue: mode changes briefly disconnect/reannounce hub sources and can leave
+loaded-track warning triangles. Physical network tests used a software peer over
+Wi-Fi; actual-CDJ interoperability and audible phase alignment remain unproven.
+Earlier publication/preparation statements below are chronological history.
 
 ## Release preparation: USB Hub Support0.3.0
 
