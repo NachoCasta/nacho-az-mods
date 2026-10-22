@@ -1,0 +1,23 @@
+{
+  "scope": "Previously unused internal source admitted after runtime startup",
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "activation": "Supported mods USB copy, apply IPC, native UI Allow and Reload now",
+  "mapped_runtime_hash_verified": true,
+  "EP147_pid": 78634,
+  "initial_private_server_pairs": 8,
+  "procedure": "Detach valid stick E from physical USB5, attach nested hub at root port7 and stick E at its port2; inspect initial Source presentation, then restore original topology",
+  "nested_route": "3-2.7.2",
+  "new_internal_source": 5,
+  "displayed_number": 8,
+  "metadata_before_first_announcement": true,
+  "configured_name": "Nacho Chips",
+  "native_color": {"value": 6, "name": "Aqua"},
+  "source_view": "Native USB1/2 first, hub USB1/2/3/4/8 numeric; native artwork and HUB marker retained",
+  "screenshot": "local/diagnostics/source-order-ui-native-v1/capacity-v3-nested-late-usb8.png",
+  "log": "local/diagnostics/source-order-ui-native-v1/capacity-v3-nested-late.log",
+  "original_topology_restored": true,
+  "portable_checks": ["actual loader/presence bodies including dormant pointer preservation", "actual announcement preparation body", "hook registration"],
+  "limitations": ["Five simultaneous valid hub libraries, not eight", "No physical AZ or actual CDJ test", "Broader current-candidate playback/eject/network controls recorded separately"],
+  "physical_AZ_touched": false,
+  "publication": "None"
+}

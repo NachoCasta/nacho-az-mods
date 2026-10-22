@@ -1,0 +1,34 @@
+{
+  "scope": "Local emulator fixture recovery and network prerequisites, not network acceptance",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "cold_boot": {
+    "method": "Normal guest systemctl reboot after native UI unload",
+    "pid": 827,
+    "native_sources_recovered": [
+      1,
+      2
+    ],
+    "hub_sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "screenshot": "local/diagnostics/source-order-ui-native-v1/premount-cold-boot-settled.png",
+    "native_names_unchanged": "Nacho Chips",
+    "hub_colors": "Aqua except USB4 Default"
+  },
+  "network_assets": {
+    "helper_sha256": "1a8c4b1993d8babc5b2c70d005761557797f3e5c5690a5cb46c5f27c587ba617",
+    "dhcp_hook_sha256": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+    "emulator_only_macvlan_sha256": "d125c73ce850c91a8485f32a4ef52ea318f3fd5b1d7eb712f18c510654e268ad",
+    "writes": "Emulator mods USB only; normal framework-managed helper launch. Emulator kernel module explicitly loaded for test setup."
+  },
+  "failed_attempts": [
+    "First helper startup timeout: required DHCP event hook missing from historical UI fixture",
+    "Authenticated helper later retired five acquisitions with EOPNOTSUPP: emulator MACVLAN test module absent after guest reboot"
+  ],
+  "current_state": "Prerequisites restored; supported apply requested for a fresh managed session. No network regression pass claimed.",
+  "physical_AZ_touched": false
+}

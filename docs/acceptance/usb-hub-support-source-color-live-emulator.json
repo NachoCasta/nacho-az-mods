@@ -1,0 +1,48 @@
+{
+  "scope": "Native Source Background Color live UI update; not initial USB metadata acquisition",
+  "runtime_sha256": "f4ae81d71f338c092617d9322646d55daa48a3ca4b3661d1828f928b2397ab62",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "operations": "Native Source settings UI only; no manual internal settings or memory edits",
+  "observations": {
+    "native_usb2": "Aqua -> Yellow -> Aqua",
+    "hub_usb4": "Default -> Yellow -> Default",
+    "source_body_preserved": true,
+    "hub_marker_preserved": true,
+    "hub_number_preserved": 4,
+    "native_yellow_rgba": [
+      135,
+      120,
+      10,
+      255
+    ],
+    "hub_yellow_rgba": [
+      135,
+      120,
+      10,
+      255
+    ],
+    "neighbor_hub_usb3_rgba": [
+      15,
+      50,
+      95,
+      255
+    ],
+    "bounded_pioneer_file_hashes_unchanged": true,
+    "original_ui_colors_restored_and_visually_checked": true
+  },
+  "local_screenshots": [
+    "local/diagnostics/source-order-ui-native-v1/native-usb-settings.png",
+    "local/diagnostics/source-order-ui-native-v1/hub-color-options.png",
+    "local/diagnostics/source-order-ui-native-v1/hub-yellow-settled.png",
+    "local/diagnostics/source-order-ui-native-v1/colors-restored.png"
+  ],
+  "limitations": [
+    "One changed color and one hub source in Source view only.",
+    "Does not validate initial device-color metadata, Browse, Waveform or persistence.",
+    "Does not validate rekordbox device-name acquisition.",
+    "No physical AZ operations or acceptance.",
+    "Compared sdb1 PIONEER inventory was not instrumentally bound to displayed native USB2; unchanged hashes are not proof of no writes by that source."
+  ],
+  "physical_AZ_touched": false
+}

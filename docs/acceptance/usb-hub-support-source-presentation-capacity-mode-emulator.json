@@ -1,0 +1,25 @@
+{
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "pid": 102793,
+  "scope": "Native Utility PRO DJ LINK On to Off to On with retained cached deck1 track",
+  "native_confirmation_dialogs_verified": true,
+  "off_engine": "local/diagnostics/source-order-ui-native-v1/capacity-v3-link-off-core.json",
+  "returned_on_engine": "local/diagnostics/source-order-ui-native-v1/capacity-v3-link-on-core.json",
+  "engine_loaded_and_advancing_in_both_modes": true,
+  "own_mod_completed_media_cache_ticket_retained": true,
+  "source_view_after": "local/diagnostics/source-order-ui-native-v1/capacity-v3-after-link-cycle.png",
+  "source_view": "Native USB1/2 first, numeric HUB/USB1-5, configured Nacho Chips names, Aqua except Default USB4",
+  "managed_sharing": "Old helper retired; new helper PID113954; all five sources phase2 error0",
+  "post_cycle_clients": {
+    "result": "pass",
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-post-mode-network",
+    "complete_libraries": 2,
+    "per_library": {"tracks": 2546, "ordered_nodes": 185, "ordered_memberships": 8359},
+    "exact_PDB_MP3_reads_including_native_USB1": 6,
+    "same_EP147_pid": true,
+    "namespace_removed": true,
+    "transport_errors": []
+  },
+  "limitations": ["Loaded track came from the preceding successful eject and was already cache-backed", "No audio capture", "No physical AZ or actual CDJ acceptance"],
+  "physical_AZ_touched": false
+}

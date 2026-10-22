@@ -1,0 +1,50 @@
+{
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "EP147_pid": 78634,
+  "scope": "Attached software clients after preparing eight private server pairs",
+  "first_attempt": {
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-network",
+    "result": "fail",
+    "details": "Five-source menu client returned EOF; portable sanitizer suite was also running. Cause is not established. Teardown briefly observed one remaining namespace process; subsequent inspection found no namespace/process or owned QEMU filters."
+  },
+  "two_source_repeat": {
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-network-repeat",
+    "result": "pass",
+    "sources": [1, 5],
+    "per_library": {"tracks": 2546, "ordered_nodes": 185, "ordered_memberships": 8359},
+    "exact_PDB_MP3_fetches_including_native_USB1": 6,
+    "unchanged_EP147_pid": true,
+    "namespace_removed": true,
+    "transport_errors": []
+  },
+  "five_source_repeat": {
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-network-five-repeat",
+    "result": "fail",
+    "details": "EOF during initial Beat Link Client construction; owned namespace removed and transport reports no errors. No sanitizer suite ran concurrently."
+  },
+  "test_client_research": "DbLibraryControl opened its socket before indexing the independent PDB oracle. Five concurrent local decoders could consume the provider's unchanged 5000ms initial-handshake deadline before sending the handshake. Resource initialization now indexes before connecting; causal repeat remains pending.",
+  "five_menus_isolation": {
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-five-menus-isolation",
+    "result": "pass",
+    "sources": 5,
+    "per_library": {"tracks": 2546, "ordered_nodes": 185, "ordered_memberships": 8359},
+    "files_concurrent": false,
+    "unchanged_EP147_pid": true,
+    "namespace_removed": true
+  },
+  "preindexed_five_source_plus_files": {
+    "result": "pass",
+    "evidence": "local/diagnostics/source-order-ui-native-v1/capacity-v3-five-preindexed",
+    "sources": 5,
+    "per_library": {"tracks": 2546, "ordered_nodes": 185, "ordered_memberships": 8359},
+    "exact_PDB_MP3_fetches_including_native_USB1": 12,
+    "unchanged_EP147_pid": true,
+    "namespace_removed": true,
+    "transport_errors": [],
+    "engine_during": "local/diagnostics/source-order-ui-native-v1/capacity-v3-loaded-core.json",
+    "engine_after": "local/diagnostics/source-order-ui-native-v1/capacity-v3-loaded-after-network.json",
+    "engine_scope": "Native UI loaded Algo más from hub USB1 during this run; exact GPL core reports deck1 loaded and advancing during and after. Not loaded for the entire network run."
+  },
+  "limitations": ["No own-source loaded eject/cache control in these runs", "No physical AZ or actual CDJ validation", "No audio capture"],
+  "physical_AZ_touched": false
+}

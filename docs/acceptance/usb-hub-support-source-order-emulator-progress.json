@@ -1,0 +1,51 @@
+{
+  "scope": "Source ordering and selected-source UI continuity only",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "runtime_sha256": "f4ae81d71f338c092617d9322646d55daa48a3ca4b3661d1828f928b2397ab62",
+  "application_pid": 1351260,
+  "activation": "Candidate copied to mods USB; supported framework apply staged it; native Community Mods Allow and Reload activated it. No manual approval/staging edits in this successful trial.",
+  "results": {
+    "native_usb_rows_first": true,
+    "five_hub_rows_ascending": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_hub_usb": 4,
+    "after_earlier_usb_removed": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "after_same_physical_port_return": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selection_retained_after_removal_and_return": true,
+    "application_pid_unchanged_during_hotplug": true,
+    "original_qmp_port_restored": true,
+    "mapped_executable_hash_verified": true
+  },
+  "local_screenshots": [
+    "local/diagnostics/source-order-ui-native-v1/final-ordered.png",
+    "local/diagnostics/source-order-ui-native-v1/selected-usb4.png",
+    "local/diagnostics/source-order-ui-native-v1/usb1-removed-usb4-selected.png",
+    "local/diagnostics/source-order-ui-native-v1/usb1-returned-usb4-selected.png"
+  ],
+  "limitations": [
+    "No eight-source emulator UI acceptance in this trial.",
+    "No loaded-deck or shared-network regression acceptance for this runtime yet.",
+    "Device color and rekordbox-name implementations remain pending.",
+    "Visual user review and action-specific physical validation remain pending.",
+    "No release, catalog change or public push."
+  ],
+  "emulator_state": "Current ordering candidate remains active for further local research; original executable is retained on the emulator mods USB at source-order-ui-native-v1-original.so. All QMP USB ports are restored.",
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,43 @@
+{
+  "result": "pass for two-source independent menu/file regression and native USB1 reads",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "helper_sha256": "1a8c4b1993d8babc5b2c70d005761557797f3e5c5690a5cb46c5f27c587ba617",
+  "unchanged_pid": 9933,
+  "sources": [
+    1,
+    5
+  ],
+  "menus_per_source": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359
+  },
+  "file_fetches": {
+    "count": 6,
+    "scope": "Complete PDB and MP3 on hub USB1, hub USB5 and native USB1",
+    "pdb_bytes": 4419584,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "mp3_bytes": 10881597,
+    "mp3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+  },
+  "evidence_directory": "local/diagnostics/source-presentation-network-v4",
+  "cleanup": {
+    "transport_errors": [],
+    "qemu_temporary_filter_and_channel_absent": true,
+    "host_namespace_absent": true,
+    "SSH_working": true
+  },
+  "earlier_attempts": [
+    "v1 client refused dynamically assigned documentation-subnet addresses; explicit isolated-fixture opt-in added",
+    "v1 and v3 forced transport termination left owned QEMU NAT objects; explicitly removed with unchanged native PID and SSH restored",
+    "v2 transient SSH preflight failure; read-only retries added",
+    "v3 complete menus passed; v4 repeats with files and graceful clean transport shutdown"
+  ],
+  "scope_limits": [
+    "Software clients, not actual CDJs",
+    "No physical AZ operation",
+    "No audio-signal capture",
+    "Current combined loaded/network and native Link mode cycles remain pending"
+  ],
+  "physical_AZ_touched": false
+}

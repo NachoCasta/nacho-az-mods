@@ -1,0 +1,47 @@
+{
+  "scope": "Local portable source-presentation components; no emulator or physical acceptance",
+  "result": "pass",
+  "compiler": "Clang from existing usb-hub-host-tests:local image",
+  "network": "disabled",
+  "modes": {
+    "plain": 103,
+    "asan_ubsan": 103,
+    "tsan": 103
+  },
+  "log": "local/diagnostics/source-metadata-host-container.log",
+  "exclusions": [
+    "SDK whole-mod integration",
+    "Current exact-binary emulator activation and visuals",
+    "Loaded/network regression integration",
+    "Physical AZ validation"
+  ],
+  "earlier_attempt": "WSL plain component checks passed, but its C++ unwind check could not compile because g++ was unavailable. Container repeat includes that check in all modes.",
+  "eight_server_preparation_repeat": {
+    "result": "pass",
+    "modes": {"plain": 103, "asan_ubsan": 103, "tsan": 103},
+    "log": "local/diagnostics/source-order-ui-native-v1/capacity-v3-host.log",
+    "additional_checks": ["Actual loader preserves dormant native server pointers", "Actual announcement preparation", "Hook registration"],
+    "runtime_regression_acceptance": "Separate and incomplete; integrated network attempt failed"
+  },
+  "premount_repeat": {
+    "result": "pass",
+    "modes": {
+      "plain": 103,
+      "asan_ubsan": 103,
+      "tsan": 103
+    },
+    "log": "local/diagnostics/source-premount-host-container.log",
+    "additional_controls": [
+      "Actual announcement helper: private-worker preparation, bounded fallback, completed empty metadata, eject lease refusal",
+      "Actual media emitter: no unsolicited metadata before native announcement",
+      "Actual loader/presence reconciliation",
+      "Hook registration"
+    ],
+    "sdk_ui": {
+      "plain": 10,
+      "asan_ubsan": 8,
+      "tsan": 8,
+      "log": "local/diagnostics/source-metadata-sdk-ui.log"
+    }
+  }
+}

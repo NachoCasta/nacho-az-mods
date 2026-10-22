@@ -1,6 +1,59 @@
 # Current state
 
-## Active development: physical hub-port numbers
+## Active development: hub source presentation
+
+The current emulator candidate is
+`6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270`.
+It retains physical-port numbering and Source numeral alignment, orders hub rows
+numerically after native sources, and advertises each library's native configured
+name and device color. Names fall back to volume labels and then USB N. Native
+Waveform uses its existing neutral H/USB label; device color is distinct from the
+waveform setting. See [goal](HUB-SOURCE-PRESENTATION-GOAL.md),
+[ordering](HUB-SOURCE-ORDER-RESEARCH.md), [colors](HUB-SOURCE-COLOR-RESEARCH.md)
+and [metadata research](HUB-SOURCE-PROPERTIES-RESEARCH.md).
+
+Eight independent native server pairs are prepared during initialization; dormant
+slots open no database. Initial five-source names/colors and a valid USB arriving
+later into previously unused nested USB8 pass. Source settings live-color and
+Browse stripe controls pass on the preceding metadata candidate, which shares
+the presentation code. Portable configured-name case/accent/fallback checks pass;
+earlier emulator fixtures cover volume and unnamed fallbacks. All 103 portable
+components pass in plain, ASan/UBSan and TSan modes.
+
+The current candidate passes five independent complete libraries plus 12 exact
+native/hub file reads. Own-source loaded eject removes backing and alias mounts,
+retains four neighbors and the loaded cache ticket, and keeps the core engine
+advancing. Replug restores number/name/color. Native Link On/Off/On retains the
+cache-backed track and Source presentation; post-cycle complete menus and six
+exact files pass. A native USB safely removed and reinserted after all five hub
+libraries returns ahead of the hub group, with the same PID and advancing deck.
+These are emulator/software-client results, without audio capture or actual CDJs.
+See [late-slot](acceptance/usb-hub-support-source-presentation-late-slot-emulator.json),
+[network](acceptance/usb-hub-support-source-presentation-capacity-network-emulator.json),
+[eject](acceptance/usb-hub-support-source-presentation-capacity-eject-emulator.json)
+and [mode-cycle evidence](acceptance/usb-hub-support-source-presentation-capacity-mode-emulator.json).
+
+Failed attempts remain recorded. The independent network checker now indexes
+its local PDB oracle before opening a connection with a bounded handshake.
+An earlier emulator session disabled its frame filter after eight calls exceeded
+the core's 200 us limit. The selector refused unavailable input; a normal native
+reload restored it and the eject repeat passed. The two mixer filter callbacks
+perform bounded arithmetic/atomic edits without metadata, I/O, locks or allocation.
+The core measures elapsed counter time with cumulative strikes; host scheduling
+is a possible contributor, not a proven cause or a physical timing pass.
+
+The hardware-target local0.4.5 package validates, retaining exact ID, firmware,
+kernel and core requirements and unchanged kernel assets. Its ELF differs from
+the tested emulator build by explicit target flags; it is not physically accepted.
+See [package receipt](acceptance/usb-hub-support-source-presentation-capacity-package.json)
+and [remaining-work audit](acceptance/usb-hub-support-source-presentation-progress.json).
+User screenshot review, final source review/commits and approved public push are
+pending. The real AZ, published0.4.4, release tags/assets and catalog are unchanged.
+Physical operations require current action-specific authorization. No release
+publication decision covers this work.
+
+The earlier numbering-only candidate below is superseded by the combined source
+presentation candidate above; its evidence remains scoped to its recorded bytes.
 
 Unpublished changes assign USB 1-8 from hub-port topology and move Source-only
 numerals 3-8 down one pixel. Real emulator detach/move/return and fresh nested-hub

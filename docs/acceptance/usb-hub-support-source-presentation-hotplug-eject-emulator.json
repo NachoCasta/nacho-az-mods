@@ -1,0 +1,59 @@
+{
+  "result": "pass for scoped emulator hotplug/order and loaded-source safe-eject",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "unchanged_pid": 1597202,
+  "neighbor_hotplug": {
+    "removed": "functionalstickA, port 2.1, drive uibadgeA",
+    "remaining_order": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "retained_selection": 4,
+    "returned_order": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "linux_path_change": "USB1 /media/usb/sdd1 to /media/usb/sdb1",
+    "name_color_restored": "Nacho Chips / Aqua",
+    "loaded_neighbor": "USB4 Algo más retained in native UI"
+  },
+  "loaded_eject": {
+    "method": "Native STOP selector, verified HUB/USB4 selection, Eject",
+    "ordered_selector": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_result": "safe-eject success targets=1 sources=0x8",
+    "removed_mounts": [
+      "/media/usb/sdf1",
+      "/media/player08/usb2"
+    ],
+    "others_remained": true,
+    "playback_observation": "Waveform retains Algo más and four-beat loop; remaining-time positions vary in the loop. Native removed-source warning appears.",
+    "restoration": "functionalstickD re-added at original port 2.4 using drive v5restoreD; USB4 returns as /media/usb/sdd1 with configured name and Default color"
+  },
+  "raw_log": "local/diagnostics/source-order-ui-native-v1/premount-hotplug-eject-runtime.log",
+  "screenshots": [
+    "premount-usb1-removed-usb4-loaded.png",
+    "premount-usb1-returned-usb4-loaded.png",
+    "premount-eject-usb4-selected.png",
+    "premount-ejected-loaded-waveform.png",
+    "premount-after-loaded-eject-replug.png"
+  ],
+  "screenshot_directory": "local/diagnostics/source-order-ui-native-v1",
+  "limitations": [
+    "No audio-signal capture or full current engine/cache proof",
+    "Current helper/network regression still pending",
+    "Nested topology and naming fallback emulator controls still pending",
+    "Eject selector currently retains volume-label names; Source uses configured names"
+  ],
+  "physical_AZ_touched": false
+}

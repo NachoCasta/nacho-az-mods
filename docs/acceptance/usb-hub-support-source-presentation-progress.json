@@ -1,0 +1,52 @@
+{
+  "status": "in_progress",
+  "physical_AZ_touched": false,
+  "published_release": "0.4.4 unchanged",
+  "requirements": [
+    {
+      "requirement": "Physical-port numbering, holes, nested flattening and Source numeral alignment",
+      "evidence": "usb-hub-support-port-numbering-emulator-progress.json",
+      "status": "Physical-port numbering retained; current exact runtime passed nested USB8 admission, original-port restoration and Source numeral artwork. Earlier measured Source-only baseline correction is unchanged."
+    },
+    {
+      "requirement": "Native-first Source presentation and numeric hub/eject order",
+      "evidence": "usb-hub-support-source-order-emulator-progress.json",
+      "status": "Current exact runtime native USB1/2 first, hub USB1-5 numeric, including late native reconnect; ordered native eject selector and loaded-source eject pass."
+    },
+    {
+      "requirement": "Configured names, exact case/accents and fallbacks",
+      "evidence": "usb-hub-support-source-properties-acquisition-emulator.json",
+      "status": "Configured names and case pass across startup/reconnect. Latest exact candidate also passes previously unused nested USB8 initial name/color. Portable accents and fallbacks pass; emulator volume/unnamed fallbacks passed earlier runtime, accent fixture remains pending."
+    },
+    {
+      "requirement": "Native initial device colors and live Source/Browse/Waveform behavior",
+      "evidence": "usb-hub-support-source-color-live-emulator.json",
+      "status": "Exact-runtime initial Source colors, live Default/Yellow/Default and Browse stripe pass. Waveform retains researched native constant neutral H/USB label."
+    },
+    {
+      "requirement": "Independent servers/caches, loaded-track continuity, eject and PRO DJ LINK sharing",
+      "status": "Current candidate passes five complete independent menus/twelve exact files, own-source loaded eject with retained cache ticket and advancing engine, reconnect metadata and native Link On/Off/On with post-cycle complete menus/six exact files. Mode-cycle track was already cache-backed. Earlier frame-filter budget failure and unproven cause remain documented."
+    },
+    {
+      "requirement": "Ignored emulator screenshots and user review before physical tests",
+      "status": "Research screenshots saved locally; final successful presentation screenshots and user review pending"
+    },
+    {
+      "requirement": "Exact firmware/kernel/core compatibility and stable ID",
+      "status": "Local hardware-target0.4.5 package validates: exact stable ID, firmware tag, min core and kernel vermagic retained; kernel/assets unchanged. See capacity-package evidence. Hardware-target binary is not physically accepted."
+    },
+    {
+      "requirement": "Reviewed English documentation, commits and push",
+      "status": "Reviewed implementation ac6897d and emulator controls a50b6a6 committed locally; scoped English documentation/evidence prepared for the final local documentation commit. Explicit approval resolving the earlier rejected public push remains pending."
+    },
+    {
+      "requirement": "Release/catalog changes",
+      "status": "Excluded without separate publishing authorization"
+    }
+  ],
+  "current_candidate": {
+    "sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+    "activation": "Native UI Allow/Reload and mapped hash verified; current EP147 PID102793 after normal menu reload. Eight independent server pairs prepared. Previously unused nested USB8 initial metadata, five-menu/twelve-file clients, own-source loaded eject/cache/engine/reconnect and cache-backed Link mode cycle/post-cycle clients pass. Earlier frame-filter budget failure remains documented. Hardware-target local package validates; user screenshot review and approved public push remain pending."
+  },
+  "host_evidence": "usb-hub-support-source-presentation-host-checks.json"
+}

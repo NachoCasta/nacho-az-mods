@@ -1,0 +1,39 @@
+{
+  "scope": "Exact emulator runtime: five independent services with local loaded-loop engine observation",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "unchanged_pid": 9933,
+  "core_observer": {
+    "method": "Read-only bounded published GPL core state; no memory writes or injected calls",
+    "core_sha256": "3e0205320a0dda69a72e1de5070be82c89fb9e73ec21ce3f561c1dbb23d60ea6",
+    "baseline": "local/diagnostics/source-order-ui-native-v1/core-loaded-baseline.json",
+    "during": "local/diagnostics/source-order-ui-native-v1/core-loaded-with-network.json",
+    "late": "local/diagnostics/source-order-ui-native-v1/core-loaded-network-late.json",
+    "all_samples_loaded_and_advancing": true
+  },
+  "network": {
+    "sources": 5,
+    "menus_per_source": "2546 tracks, 185 ordered nodes, 8359 memberships",
+    "exact_complete_PDB_MP3_fetches": 12,
+    "includes_native_USB1": true,
+    "evidence_directory": "local/diagnostics/source-presentation-network-loaded-five",
+    "transport_errors": [],
+    "cleanup_verified": true
+  },
+  "mode_cycle": {
+    "native_UI": "On to Off to On",
+    "off_sample": "local/diagnostics/source-order-ui-native-v1/core-loaded-link-off.json",
+    "returned_on_sample": "local/diagnostics/source-order-ui-native-v1/core-loaded-link-on-return.json",
+    "native_process_retained": true,
+    "local_source_selection_names_colors_retained": true,
+    "managed_helper_retired_and_new_session_ready": true,
+    "post_recovery_clients": "PASS: complete two-source menus, six exact native/hub PDB/MP3 reads, clean transport restoration",
+    "post_recovery_evidence": "local/diagnostics/source-presentation-network-after-mode",
+    "post_recovery_engine": "local/diagnostics/source-order-ui-native-v1/core-loaded-mode-recovery-network.json"
+  },
+  "limitations": [
+    "No audio-signal capture",
+    "No actual CDJ or physical AZ acceptance",
+    "Own-source loaded-eject full engine/cache repeat still pending"
+  ],
+  "physical_AZ_touched": false
+}

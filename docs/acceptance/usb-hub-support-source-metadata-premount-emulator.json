@@ -1,0 +1,20 @@
+{
+  "result": "pass for initial Source presentation of five emulator hub sources",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "pid": 1597202,
+  "activation": "USB candidate copy, supported apply, native UI Allow, native UI Reload now; mapped module hash verified",
+  "screenshot": "local/diagnostics/source-order-ui-native-v1/premount-five-source.png",
+  "observations": [
+    "Native USB2 first, hub USB1-5 in numeric order",
+    "All five hub names show configured Nacho Chips with original case, replacing HUB_LIB volume labels",
+    "Hub USB1/2/3/5 show Aqua; hub USB4 retains its configured Default blue",
+    "Native USB artwork, HUB marker and physical-port numbers remain present",
+    "All five owned metadata snapshots precede the first hub announcement in the current startup log"
+  ],
+  "limitations": [
+    "No final loaded playback/eject or PRO DJ LINK regression yet",
+    "Browse/Waveform and live color updates on this exact runtime remain pending",
+    "No physical AZ operation",
+    "No user screenshot approval yet"
+  ]
+}

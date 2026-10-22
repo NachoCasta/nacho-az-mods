@@ -1,0 +1,10 @@
+{
+  "result": "incomplete: acquisition succeeds but native Source presentation remains unchanged",
+  "emulator_pid": 1511660,
+  "mapped_runtime_sha256": "d5202cef4ffd476d16e31b7977dd95e81c3950442a8f68e0e300b0913470c220",
+  "activation": "USB copy, framework apply, native UI Allow, native UI Reload now",
+  "screenshot": "local/diagnostics/source-order-ui-native-v1/metadata-settling-source.png",
+  "observation": "Five hub rows retain numeric order and volume-label names with default blue backgrounds despite native property acquisition. Unsolicited media refresh is not yet proven to update the native metadata provider.",
+  "physical_AZ_touched": false,
+  "next_step": "Trace native media-response acceptance/provider invalidation without withdrawing sources."
+}

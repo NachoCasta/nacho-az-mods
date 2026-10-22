@@ -1,0 +1,14 @@
+{
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "pid": 102793,
+  "result": "pass",
+  "procedure": "Normal native USB1 STOP1.7s, observe /media/usb/sda1 absent, detach nativecontrol2, reattach original sharing-native-music-v1 drive to ehci.0 port1 while five hub libraries remain present",
+  "source_order_after": "Native USB1, native USB2, HUB/USB1-5",
+  "hub_names_colors_retained": true,
+  "engine": "local/diagnostics/source-order-ui-native-v1/capacity-v3-native-reconnect-core.json",
+  "engine_result": "Deck1 retained cached Algo más; all three samples loaded and advancing; same PID",
+  "screenshot": "local/diagnostics/source-order-ui-native-v1/capacity-v3-native-late-reconnect.png",
+  "original_topology_restored": true,
+  "physical_AZ_touched": false,
+  "limitations": ["No audio capture", "Native USB naming and color behavior left unchanged"]
+}

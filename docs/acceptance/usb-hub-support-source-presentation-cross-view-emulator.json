@@ -1,0 +1,22 @@
+{
+  "result": "pass for scoped native UI color and loaded-label controls",
+  "runtime_sha256": "fc4eabba8d5593b9f97c652f953c24f37643b7cf02eaf3cd5fefb3584cb4a34f",
+  "source": 4,
+  "native_setting_changes": [
+    "Default to Yellow",
+    "Yellow to Default restored"
+  ],
+  "source_view": "USB4 icon follows settings; HUB/native artwork/number retained; neighbor Aqua rows unchanged",
+  "browse_view": "USB4 header retains HUB/native USB4 artwork with Yellow device-color stripe",
+  "waveform_view": "Loaded Algo más shows H/USB4 in native neutral color. Native constant color provider is preserved; no device-color tint invented.",
+  "playback_scope": "Native UI loaded track, advancing remaining time and four-beat loop indication observed. No rendered-audio capture or full engine/backing/cache continuity proof.",
+  "screenshots": [
+    "local/diagnostics/source-order-ui-native-v1/premount-usb4-yellow.png",
+    "local/diagnostics/source-order-ui-native-v1/premount-yellow-browse-library.png",
+    "local/diagnostics/source-order-ui-native-v1/premount-loaded-waveform.png",
+    "local/diagnostics/source-order-ui-native-v1/premount-playing-waveform.png",
+    "local/diagnostics/source-order-ui-native-v1/premount-usb4-restored.png"
+  ],
+  "status_file_warning": "/run/azhub-eject-status contains an older PID and was rejected as stale evidence; no current engine-status claim uses it.",
+  "physical_AZ_touched": false
+}

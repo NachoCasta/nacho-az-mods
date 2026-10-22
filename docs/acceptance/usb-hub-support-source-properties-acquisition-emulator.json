@@ -1,0 +1,66 @@
+{
+  "scope": "Native configured-name and background-color acquisition from five independent hub library mount points; observation only",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "runtime_sha256": "ddb8813e23cd3be50b4fbd1e392317fa209191e3bbeb8a6b35743110898c4ed8",
+  "application_pid": 1460199,
+  "activation": "Mods USB copy, supported apply/discovery, native Community Mods Allow and Reload; no manual approval/staging edits",
+  "source_properties": [
+    {
+      "source_index": 0,
+      "mount_root": "/media/usb/sdd1",
+      "name_valid": true,
+      "configured_name": "Nacho Chips",
+      "color_valid": true,
+      "background_color_id": 6
+    },
+    {
+      "source_index": 1,
+      "mount_root": "/media/usb/sdc1",
+      "name_valid": true,
+      "configured_name": "Nacho Chips",
+      "color_valid": true,
+      "background_color_id": 6
+    },
+    {
+      "source_index": 2,
+      "mount_root": "/media/usb/sde1",
+      "name_valid": true,
+      "configured_name": "Nacho Chips",
+      "color_valid": true,
+      "background_color_id": 6
+    },
+    {
+      "source_index": 3,
+      "mount_root": "/media/usb/sdf1",
+      "name_valid": true,
+      "configured_name": "Nacho Chips",
+      "color_valid": true,
+      "background_color_id": 0
+    },
+    {
+      "source_index": 4,
+      "mount_root": "/media/usb/sdg1",
+      "name_valid": true,
+      "configured_name": "Nacho Chips",
+      "color_valid": true,
+      "background_color_id": 6
+    }
+  ],
+  "results": {
+    "all_five_owned_roots_matched": true,
+    "all_names_valid": true,
+    "all_colors_valid": true,
+    "configured_name_preserves_case": true,
+    "usb4_retains_restored_default_color": true,
+    "other_four_have_aqua": true,
+    "mapped_executable_hash_verified": true
+  },
+  "limitations": [
+    "Explicit diagnostic observer; values are not yet used in media announcements or Source labels.",
+    "No Browse/Waveform, loaded-deck or network regression acceptance for this observer.",
+    "No physical AZ operations.",
+    "Native USB2 QMP port restored after diagnostic replug, but native UI currently shows only the mods USB; fixture startup recovery remains pending."
+  ],
+  "physical_AZ_touched": false
+}

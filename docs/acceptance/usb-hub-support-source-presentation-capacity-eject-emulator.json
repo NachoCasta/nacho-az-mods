@@ -1,0 +1,29 @@
+{
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "result": "pass for loaded-source eject, bounded engine/cache evidence and reconnect; earlier timing failure retained",
+  "first_attempt_pid": 78634,
+  "before_eject_engine": "local/diagnostics/source-order-ui-native-v1/capacity-v3-before-eject-core.json",
+  "before_eject_state": "Deck1 loaded and advancing, Algo más from hub USB1",
+  "selector_attempt": "Normal USB2 STOP input held 0.5 seconds",
+  "failure": "Core had disabled its frame filter for this session after exceeding its 200us budget eight times; selector logs input-unavailable with stale edited input. No eject was performed.",
+  "recovery_requested": "Native MOD MENU > Reload > Reload now; same approved candidate, no direct staging or approval edits",
+  "reloaded_pid": 102793,
+  "fresh_selector": "PASS: normal USB2 STOP opens selector with ordered HUB/USB1-5; screenshot capacity-v3-fresh-selector.png. No eject performed yet.",
+  "loaded_source_eject": {
+    "pid": 102793,
+    "mapped_runtime_hash_verified": true,
+    "source": "Hub USB1, Algo más, deck1 loop",
+    "method": "Normal STOP selector, HUB/USB1 selected, Eject button",
+    "result_log": "safe-eject success targets=1 sources=0x1",
+    "absent_mounts": ["/media/usb/sdc1", "/media/player07/usb"],
+    "four_neighbor_hub_and_two_native_mounts_retained": true,
+    "engine_baseline": "local/diagnostics/source-order-ui-native-v1/capacity-v3-eject-baseline.json",
+    "engine_after": "local/diagnostics/source-order-ui-native-v1/capacity-v3-post-eject-core.json",
+    "retained_cache_observation": "local/diagnostics/source-order-ui-native-v1/capacity-v3-post-eject-cache.json",
+    "cache_proof": {"deck": 1, "epoch": 1, "content_id": 495, "media": "0x10200000602", "references": 1, "phase": 2, "submitted": 1},
+    "log": "local/diagnostics/source-order-ui-native-v1/capacity-v3-eject-runtime.log",
+    "restored": "QMP functionalstickA detached and re-added using original uibadgeA drive at port2.1; configured Nacho Chips/Aqua metadata reacquired before announcement"
+  },
+  "limitations": ["No audio-signal capture or full-track playback claim", "Read-only cache metadata does not traverse proprietary cache contents", "Emulator frame-filter budget failure under prior workload remains documented", "No physical AZ or actual CDJ acceptance"],
+  "physical_AZ_touched": false
+}

@@ -4,6 +4,24 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-source-presentation-native-reconnect-emulator.json | Native USB reconnect after five hub libraries retains native-first order, hub metadata and advancing cached deck |
+| acceptance/usb-hub-support-source-presentation-capacity-package.json | Validated unpublished hardware-target0.4.5 package, member hashes and unchanged kernel/assets; physical acceptance pending |
+| acceptance/usb-hub-support-source-presentation-late-slot-emulator.json | Current capacity candidate: native startup prepares eight private server pairs; previously unused nested USB8 initially shows configured name/color |
+| acceptance/usb-hub-support-source-presentation-capacity-network-emulator.json | Current candidate five complete menus plus12 exact files, failed attempts and corrected client preparation order |
+| acceptance/usb-hub-support-source-presentation-capacity-eject-emulator.json | Current candidate own-source loaded eject, retained exact-media cache ticket/advancing engine, reconnect, and earlier input-budget failure |
+| acceptance/usb-hub-support-source-presentation-capacity-mode-emulator.json | Current candidate native Link On/Off/On with cache-backed track, restored services and post-cycle menus/files |
+| HUB-SOURCE-PRESENTATION-GOAL.md | Active expanded numbering, ordering, color and name scope with validation gates |
+| acceptance/usb-hub-support-source-presentation-progress.json | Requirement-by-requirement incomplete-work audit, evidence boundaries and current candidate activation |
+| acceptance/usb-hub-support-source-metadata-premount-emulator.json | Exact runtime shows configured names and independent initial colors on five ordered Source rows; remaining cross-view/integration gates explicit |
+| acceptance/usb-hub-support-source-presentation-cross-view-emulator.json | Exact runtime live Source color, Browse stripe, loaded Waveform H/USB4 and restored settings; UI playback observation is scoped separately from audio/engine evidence |
+| acceptance/usb-hub-support-source-presentation-network-emulator.json | Exact runtime two independent complete menu clients, six exact native/hub PDB/MP3 reads and verified clean attached-transport teardown; failed attempts preserved |
+| acceptance/usb-hub-support-source-presentation-host-checks.json |103 portable components per plain/ASan+UBSan/TSan mode; exact-runtime visual and integrated regressions remain separate |
+| acceptance/usb-hub-support-source-order-emulator-progress.json | Supported UI activation, five sorted hub rows, earlier-row hotplug and retained USB4 selection; remaining scope explicit |
+| HUB-SOURCE-ORDER-RESEARCH.md | Native Source model/refresh boundaries, core-hook conflicts and current presentation adapter |
+| HUB-SOURCE-COLOR-RESEARCH.md | Native color-provider/metadata path and missing media-response color field; implementation pending |
+| HUB-SOURCE-PROPERTIES-RESEARCH.md | Native SQLite deviceName/background-color getter, fixed PropertyTable value layout and explicit observer; acquisition integration pending |
+| acceptance/usb-hub-support-source-properties-acquisition-emulator.json | Five independent owned library roots return configured names and per-source colors; production announcement integration pending |
+| acceptance/usb-hub-support-source-color-live-emulator.json | Native/hub Yellow Source pixel match and restored UI settings; initial metadata and other views remain open |
 | acceptance/usb-hub-support-port-numbering-final-source-checks.json |98 components per mode, SDK UI, hook and actual loader/presence controls |
 | acceptance/usb-hub-support-port-numbering-045-package.json | Exact validated local0.4.5 candidate; physical installation/publication pending |
 | acceptance/usb-hub-support-port-numbering-own-loaded-final.json | Final exact runtime native own-source loaded loop, eject/reconnect and independent clients with restoration |
