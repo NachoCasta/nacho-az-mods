@@ -24,5 +24,25 @@
   "post_reload_decks": "EEEE",
   "network_observation": "One SSH observation timed out during framework reload; subsequent bounded observation succeeded",
   "local_receipts": "local/integration/source-presentation-capacity-v3/physical-*.json",
-  "limitations": ["No new physical browsing, loading, playback, color or eject acceptance claimed", "No actual-CDJ acceptance", "No public push, release or catalog change"]
+  "limitations": [
+    "No new physical browsing, loading, playback, color or eject acceptance claimed",
+    "No actual-CDJ acceptance",
+    "No public push, release or catalog change"
+  ],
+  "read_only_post_install": {
+    "same_EP147_pid": 3139484,
+    "hub_backing_and_alias_mounted": [
+      "/media/usb/sda1",
+      "/media/player07/usb"
+    ],
+    "sharing_helper": "Repeated startup exits: native IPv4 snapshot failed interface=eth0 errno=101",
+    "eth0_ipv4": false,
+    "eth0_operstate": "down",
+    "eth0_carrier": 0,
+    "management_transport": "Wi-Fi mlan0",
+    "decks": "EEEE",
+    "network_changed": false,
+    "additional_reload": false,
+    "scope": "Local hub presentation awaits user testing; Ethernet sharing cannot be accepted while physical Ethernet has no carrier/address"
+  }
 }
