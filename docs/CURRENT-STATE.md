@@ -49,7 +49,9 @@ See [package receipt](acceptance/usb-hub-support-source-presentation-capacity-pa
 and [remaining-work audit](acceptance/usb-hub-support-source-presentation-progress.json).
 User screenshot review, final source review/commits and approved public push are
 pending. The real AZ, published0.4.4, release tags/assets and catalog are unchanged.
-Physical operations require current action-specific authorization. No release
+The current user instructions authorize the bounded emulator-first USB/framework
+testing workflow in AZ-TESTING-POLICY.md without repeated per-action questions.
+Screenshot review still precedes physical validation for this goal. No release
 publication decision covers this work.
 
 The earlier numbering-only candidate below is superseded by the combined source
