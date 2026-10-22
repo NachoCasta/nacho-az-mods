@@ -1,0 +1,66 @@
+{
+  "scope": "Host C named-table reader and compact source-owned entity index; not mod runtime or physical-CDJ acceptance",
+  "fixture_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+  "oracle": {
+    "library": "Crate Digger0.2.1",
+    "adapter": "src/azhub/research/link-peer/src/main/java/NamedTableSnapshot.java",
+    "correction": "Override cached page numRows with low13 bits at byte24, per current upstream Kaitai schema. Row/string decoders and dependency jar unchanged.",
+    "reference": "https://github.com/Deep-Symmetry/crate-digger/blob/main/src/main/kaitai/rekordbox_pdb.ksy",
+    "qualification": "Independently implemented row decoders; corrected page count follows the same documented format interpretation as C."
+  },
+  "match": {
+    "rows": 16167,
+    "counts": {
+      "genres": 67,
+      "artists": 2937,
+      "albums": 1916,
+      "labels": 175,
+      "keys": 24,
+      "playlist_nodes": 185,
+      "memberships": 8359,
+      "artwork": 2504
+    },
+    "reader_bytes_equal": true,
+    "reader_oracle_sha256": "8ec179c3de934e602ee09b60bc7c647410e26849d497b0ad93abf9adfa91df51",
+    "index_records_equal_including_positions": true,
+    "index_sha256": "b2f633267d2e34f4479fd6e8d402f50903d0c98fc512b017f0bfd417c1b916fc"
+  },
+  "index_buffers": {
+    "row_size": 28,
+    "row_capacity": 16384,
+    "text_used": 215762,
+    "text_capacity": 262144,
+    "allocated_bytes": 720896,
+    "excludes": "allocator overhead, parser scratch, file catalog and track index"
+  },
+  "limits": {
+    "rows_per_source": 262144,
+    "text_bytes_per_source": 8388608,
+    "behavior": "Reject staging on overflow or duplicate named ID/playlist position; never truncate silently."
+  },
+  "evidence_directory": "local/diagnostics/sharing-pdb-tables-v1/",
+  "open": [
+    "Joint lifecycle integration and cross-table reference validation",
+    "Target AArch64 entity/index execution",
+    "Native metadata TCP integration and menus",
+    "Eight-source memory/latency budgets",
+    "Actual-CDJ acceptance"
+  ],
+  "historical_correction": "Prior Crate Digger snapshot contained5955 memberships; current corrected traversal finds8359, with151 playlist lengths changed. Earlier snapshot-backed browse evidence remains historical and does not prove complete playlist content.",
+  "source_sha256": {
+    "reader": "4327413cf8a0a6bed9f69c00c5bc7f092952f0d1a775f7b9c34770be0996b5b2",
+    "tables": "ccb74cd74dccf0e6f9e0abd39036c278b7aa38c1b2e24483044d4d6212484ffe",
+    "index": "157fa18096587477717ecfe016cc1fd973fff92ea1f5a6cbc48358fd1a01f6d9",
+    "oracle_adapter": "2ec9c297224f9ddc042df97b920f8db1154a2f1d89d902ef4be0c16d039a5656"
+  },
+  "host_validation": {
+    "full_matrix": {
+      "plain": 44,
+      "asan": 44,
+      "tsan": 44
+    },
+    "final_parser_index_controls": 9,
+    "hook_registration": "Passed separately on WSL; final additions do not alter hook registration",
+    "matrix_sha256": "91a43c2879085b56bbbe45ac3d4c6fd052a9dc5e073110769c2ae92bece9e2b9"
+  }
+}

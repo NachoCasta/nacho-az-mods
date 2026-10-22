@@ -1,0 +1,42 @@
+{
+  "scope": "Standalone loopback combined TCP metadata and UDP file catalog; no mod runtime integration",
+  "high_resolution": {
+    "request": "0x2003 with third numeric argument 1",
+    "path_rule": "Insert _m before final word-character extension, matching pinned Beat Link Util.highResolutionPath",
+    "image_synthetic": true,
+    "dimensions": [240, 240],
+    "bytes": 8521,
+    "sha256": "968762c6ba77a061881972d8a7e4aee686dea6866c0754278e5ab1c153f8fa93",
+    "exact_bytes_and_independent_decode": true,
+    "original_80x80_regression": true,
+    "absent_companion": "Empty response; no implicit original-image fallback"
+  },
+  "combined": {
+    "shared_library_and_generation": true,
+    "concurrent_udp_getattr_checks": 40,
+    "independent_tcp_client": "Beat Link 8.0.0 unchanged codec and AlbumArt decoder",
+    "udp_client": "Repository Python RPC control, not an independent implementation",
+    "withdrawal_old_handle_status": 70,
+    "withdrawal_export_list_empty": true,
+    "clean_server_exit": true
+  },
+  "targeted_sanitizers": {
+    "tests": ["public-library-files", "public-db-menus"],
+    "plain": "passed",
+    "asan_ubsan": "passed",
+    "tsan": "passed",
+    "combined_socket_harness_sanitized": false
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": ["high.stdout", "high.stderr", "high-sanitizers.stdout", "high-sanitizers.stderr", "combined.stdout", "combined.stderr"],
+  "limitations": [
+    "Synthetic images; no real source artwork in emulator fixture",
+    "Single source loopback harness, not public discovery or mod integration",
+    "Concurrent UDP attributes do not establish concurrent track streaming",
+    "Catalog withdrawal does not establish native eject order or unmount",
+    "No new full matrix or AArch64 run",
+    "No native renderer or actual-CDJ interoperability acceptance"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

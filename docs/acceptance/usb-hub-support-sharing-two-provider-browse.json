@@ -1,0 +1,256 @@
+{
+  "recorded_at_utc": "2026-10-20T19:04:24.182861+00:00",
+  "scope": "Two distinct public provider rows and independent native browsing after stable identities",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "network": "Owned one-TAP namespace,192.0.2.2 provider17 and192.0.2.3 provider18; no physical interface",
+  "observations": [
+    "v25 activation0x16/0x47 replies are exercised but still one public row appears with pre-activation identity cycling",
+    "v26 holds the periodic identity field fixed from startup; reviewed Source screenshot shows Hub USB1 Research/computer1 and Hub USB2 Research/computer2 simultaneously",
+    "v27 independently selects both Source rows: provider1 Browse shows1 real track, provider2 Browse shows2546 tracks",
+    "Both providers receive their own native setup/menu/render requests and maintain separate per-connection state",
+    "The two metadata inputs are differently filtered snapshots of the same hub0 PDB, not two independently mounted live sticks"
+  ],
+  "checks": {
+    "portable_suites": 6,
+    "test_groups": 20
+  },
+  "cleanup": {
+    "25": {
+      "transport": 0,
+      "peer": 0,
+      "peer2": 0,
+      "observer": 0
+    },
+    "26": {
+      "transport": 0,
+      "peer": 0,
+      "peer2": 0,
+      "observer": 0
+    },
+    "27": {
+      "transport": 0,
+      "peer": 0,
+      "peer2": 0,
+      "observer": 0
+    }
+  },
+  "namespace_removed_each_scope": true,
+  "limits": [
+    "Only two public sources; eight-source capacity and actual-CDJ compatibility remain unproven",
+    "Activation and stable identity corrections were combined across controls; individual causal contribution beyond the observed sequence is not isolated",
+    "Host-side snapshot metadata; second provider has empty file service, so concurrent two-source audio loading is not accepted",
+    "No live on-device mod integration, address collision allocation, source withdrawal/reconnect or remote-loaded eject acceptance",
+    "Actual waveform/cue/beatgrid service remains incomplete"
+  ],
+  "references": [
+    "https://github.com/vynulldev/vynull/blob/e414ffff6a00e68f8ffd9f6ab819d6bdaa404a6d/proto/status.go"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/peer.stdout",
+      "sha256": "47fcc1523482ccfcea61287069be2c312cc29e3b6974b80d28bd1f5596a054ea"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/peer2.stdout",
+      "sha256": "9adc3e3b79e6f130bd5bb4c4063a9d45762984969a7bfe931ea6f1cf5902f4a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/results.json",
+      "sha256": "2b79cfcc26012f98dcc4c361c367f0ed81aee556d655142f69e24a9b72b1e3dc"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/registered-provider17.png",
+      "sha256": "01cca71c1a8aee21248a286a077b55f575dfe9cbea420b50bc774ee85b999008"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link-primary-tap-transport.py",
+      "sha256": "41c8315f3dc1a93bc988fb6845df82da03d792f99f0e9436a9853ed0e53c306b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link-public-provider-probe.py",
+      "sha256": "3050e91342b6ad44e733ad5f56b401e64390e33a954795dee5aabacb9aa7bf7b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_fixture_network.py",
+      "sha256": "8e2c429e2f9468f8ac2708d8e3f4cadbb7283f30ad7d9bb7e80c5fa8ad96592e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v25/source-used/link_snapshot_backend.py",
+      "sha256": "56a923152bd80a4304aea198db1a55ed7e4d6c8cb2972a2a71af5c721b635534"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/peer.stdout",
+      "sha256": "7e554a67c97456c6fc15ae8954c10949e17b85ba00d12b27418b7c98b7bc6227"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/peer2.stdout",
+      "sha256": "b4fc70ac45327f492cc5126f85cf24579f73f54c114c338d05877a01a5717827"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/results.json",
+      "sha256": "1fdb1852fb2b893363eacce27957b49970a020722bf7393d1bbb3aea0090da78"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/registered-provider17.png",
+      "sha256": "3ede894e2ff307ee4cf0e7aac6157fa90091f3e9a643884332384018da1b72fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link-primary-tap-transport.py",
+      "sha256": "41c8315f3dc1a93bc988fb6845df82da03d792f99f0e9436a9853ed0e53c306b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link-public-provider-probe.py",
+      "sha256": "bf0ab9ca55bfc9b0f7a02f07947f383c77fd024caccbc3231dc6184fc0075b84"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_fixture_network.py",
+      "sha256": "8e2c429e2f9468f8ac2708d8e3f4cadbb7283f30ad7d9bb7e80c5fa8ad96592e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v26/source-used/link_snapshot_backend.py",
+      "sha256": "56a923152bd80a4304aea198db1a55ed7e4d6c8cb2972a2a71af5c721b635534"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/peer.stdout",
+      "sha256": "a8f7ded0562b742822cd748ce571223aecce48d43e06c3b45a0d4ca2b8317a80"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/peer2.stdout",
+      "sha256": "06502fb811f285356d86cb1113906bf32cf4998c2c627dea77b4c32b65cc1832"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/results.json",
+      "sha256": "95769c7d97b5c670b1740250fa7fd6277d3fdcc49230638a0578a63eca4f7c50"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/registered-provider17.png",
+      "sha256": "712bd5db768b3b932c625d1ebb694e38a75ab9ee8a75e5bc8431057ec4dd6dee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link-primary-tap-transport.py",
+      "sha256": "41c8315f3dc1a93bc988fb6845df82da03d792f99f0e9436a9853ed0e53c306b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link-public-provider-probe.py",
+      "sha256": "bf0ab9ca55bfc9b0f7a02f07947f383c77fd024caccbc3231dc6184fc0075b84"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_fixture_network.py",
+      "sha256": "8e2c429e2f9468f8ac2708d8e3f4cadbb7283f30ad7d9bb7e80c5fa8ad96592e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/source-used/link_snapshot_backend.py",
+      "sha256": "56a923152bd80a4304aea198db1a55ed7e4d6c8cb2972a2a71af5c721b635534"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/provider1-tracks.png",
+      "sha256": "dca8e4b94585c9f708f650b1c63754f268f4994a2110071da4ae6581931078c4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/provider2-tracks.png",
+      "sha256": "5827d66726b581c5734729796c4c8a91401dc3c806fac3a0abbc925e33b61ef5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/portable-checks.json",
+      "sha256": "1f27aa0e2120e60e37ceb4005afd1c36c46ff7cfedb24a0ab5891876c89d5309"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-activation.py.stderr",
+      "sha256": "4cd49ad0c73a8aa832fab522c6a78b7c7920d0020aa82b81b4234fa118a1a5f0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-db-wire.py.stderr",
+      "sha256": "f7dc1c65d9bf1c31f1cb9a0be1fc0c0840290cbe7f978a8864c6557dbd2fbb5e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-fixture-files.py.stderr",
+      "sha256": "bc02917d91a8d90c645c07979363570a8383fbbef5477cfe0b19a5f01926e8cd"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-fixture-network.py.stderr",
+      "sha256": "41303b4e6f8e453bec28da768393fcfe604adcd2555163220110b7e3c02a9df6"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-sessions.py.stderr",
+      "sha256": "9cb12bdd7918f7505a1a64a56d7645597ad9f248d7778318e3d088aaec541d9f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v27/test-link-snapshot-backend.py.stderr",
+      "sha256": "ea27b6d70a8c9558f0aac22313a5df2e4deea31e3188906d80bae6ced4ccbb6e"
+    }
+  ]
+}

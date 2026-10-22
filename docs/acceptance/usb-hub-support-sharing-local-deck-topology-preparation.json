@@ -1,0 +1,23 @@
+{
+  "scope": "Native local-deck topology control preparation; four-Off/two-On acceptance remains unproven for final integrated candidate",
+  "mod_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "new_control": "local-deck-topology-control.py through --local-deck-topology and --integrated-mode-cycle",
+  "intended_phases": [
+    "Two hub-loaded native decks advancing with Link On",
+    "Four hub-loaded native decks advancing with Link Off",
+    "Unload secondary decks through native UI, restore Link On, preserve primary deck content/positions and reject secondary loads",
+    "Unload test decks and let the managed runner restore the normal package/network"
+  ],
+  "source_proof": "Review saved source screenshot and record row; each successful native load must resolve its actual member/slot bind to sdc1 filesystem identity, not just a matching title",
+  "live_attempt": {
+    "evidence_directory": "local/diagnostics/sharing-integrated-local-deck-topology-v1",
+    "first_native_load": "Deck1 reaches content495 with verified sdc1 bind",
+    "failure": "Deck2 stays unloaded and no deck2 load-request is logged. Control stops before Link Off/four-deck phase.",
+    "original_package_bytes_restored": true,
+    "owned_scope_cleaned": true
+  },
+  "control_revision": "Re-enter native source/track selection between deck loads; capture per-deck success/failure state and screenshots. Python syntax passes; live repeat pending. No mod behavior changed.",
+  "physical_AZ_touched": false,
+  "audio_signal_captured": false,
+  "native_four_deck_acceptance": false
+}

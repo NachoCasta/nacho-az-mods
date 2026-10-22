@@ -1,0 +1,165 @@
+{
+  "scope": "Completed software candidate readiness audit; physical AZ/CDJ acceptance remains separate and unconfirmed",
+  "verified_integrated_controls": [
+    {
+      "record": "docs\\acceptance\\usb-hub-support-sharing-capacity-eight-final.json",
+      "record_sha256": "b940ca9840a27a04392414941ba139b2429b0ca089faba62328f3819e1db758d",
+      "runner_exit": 0,
+      "restoration_and_cleanup": true,
+      "evidence_directory_present": true
+    },
+    {
+      "record": "docs\\acceptance\\usb-hub-support-sharing-topology-final.json",
+      "record_sha256": "8406bb31cdc05269dd2ff06c7fcc9c80539b3c7780fb7636108b7877185e5c3c",
+      "runner_exit": 0,
+      "restoration_and_cleanup": true,
+      "evidence_directory_present": true
+    },
+    {
+      "record": "docs\\acceptance\\usb-hub-support-sharing-native-paired-reference.json",
+      "record_sha256": "616f01d86cb793c52c06e8b13ab484a345248773f1f77a36e94aeba3f8f5d6be",
+      "runner_exit": 0,
+      "restoration_and_cleanup": true,
+      "evidence_directory_present": true
+    },
+    {
+      "record": "docs\\acceptance\\usb-hub-support-sharing-individual-full-tuple.json",
+      "record_sha256": "32e45e93fef6bcd212e1328e6728f69f933c446942f39078f58620769a2e47d5",
+      "runner_exit": 0,
+      "restoration_and_cleanup": true,
+      "evidence_directory_present": true
+    },
+    {
+      "record": "docs\\acceptance\\usb-hub-support-sharing-whole-hub-full-tuple.json",
+      "record_sha256": "bc71f4676126956299fc04605ea524dbb8958178bb1824eacde19f4ed5f1d2e3",
+      "runner_exit": 0,
+      "restoration_and_cleanup": true,
+      "evidence_directory_present": true
+    }
+  ],
+  "current_production_files_identical_to_rebuilt_snapshot": 232,
+  "open_items": [],
+  "actual_CDJ_acceptance": false,
+  "target_4_4_module_runtime_acceptance": false,
+  "physical_AZ_touched": false,
+  "published": false,
+  "network_recovery_repeat": {
+    "state": "passed",
+    "evidence_directory": "local/diagnostics/sharing-final-network-recovery-v1",
+    "current_helper_sha256": "b5ff9ab717fc608e32cb86c076e2339414f5af9fb5805e063cfe54897185f9fb",
+    "current_probe_sha256": "c68ff065c8da7d5fa471aabac86a84b277e42208c346807f5ccbe9b55a2dc66c",
+    "scope": "Current managed helper/reusable inventory SDK probe; does not substitute for integrated runtime recovery acceptance",
+    "acceptance_record": "docs/acceptance/usb-hub-support-sharing-final-network-recovery.json"
+  },
+  "current_source_path_review": {
+    "runtime": "src/azhub/linkfake/public-sharing-runtime.h",
+    "runtime_graceful_restart": "Global completion -> EXIT; wait launch_alive=false; close IPC/inventory; IDLE with15-second backoff. Fault with outstanding generations remains latched.",
+    "portable_runtime_control": "src/azhub/linkfake/test-public-sharing-runtime.c",
+    "portable_collision_control": "src/azhub/linkfake/test-public-player-reconcile.c",
+    "collision_scope": "All eight slots: retire-before-reselect, duplicate idempotence, eject precedence, exhaustion isolation, reservation release; part of current96-test suite. Live historical collision records remain separately scoped."
+  },
+  "integrated_network_recovery_repeat": {
+    "state": "passed",
+    "evidence_directory": "local/diagnostics/sharing-final-integrated-network-recovery-v1",
+    "production_runtime_changed": false,
+    "production_helper_changed": false,
+    "control": "--integrated-runtime --integrated-network-recovery",
+    "scope": "Automatic production controller, fresh helper/session, unchanged EP147 PID and complete independent menus/exact files after graceful native-network retirement; second graceful retirement before cleanup.",
+    "acceptance_record": "docs/acceptance/usb-hub-support-sharing-final-integrated-network-recovery.json"
+  },
+  "requirements": [
+    {
+      "requirement": "Native advertisement, source representation, identities, routing and transport feasibility researched",
+      "evidence": [
+        "docs/HUB-LINK-SHARING-PLAN.md",
+        "docs/acceptance/usb-hub-support-sharing-capacity-eight-final.json"
+      ],
+      "status": "software_feasibility_proven_actual_CDJ_unconfirmed"
+    },
+    {
+      "requirement": "Independent source libraries/caches without native USB borrowing",
+      "evidence": [
+        "src/azhub/linkfake/linkfake.c",
+        "src/azhub/linkfake/public-source-service.h",
+        "src/azhub/linkfake/public-sharing-inventory.h",
+        "src/azhub/linkfake/test-public-source-manager.c",
+        "docs/acceptance/usb-hub-support-sharing-capacity-eight-final.json"
+      ],
+      "status": "source_and_integrated_evidence_reviewed"
+    },
+    {
+      "requirement": "Independent discovery, full menus, real track file access and concurrent local use",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-capacity-eight-final.json",
+        "docs/acceptance/usb-hub-support-sharing-topology-final.json",
+        "docs/acceptance/usb-hub-support-sharing-whole-hub-full-tuple.json"
+      ],
+      "status": "emulator_and_independent_software_clients_pass_no_external_audio_renderer"
+    },
+    {
+      "requirement": "Native-equivalent individual and whole loaded eject, neighbor preserved, reconnect",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-native-paired-reference.json",
+        "docs/acceptance/usb-hub-support-sharing-individual-full-tuple.json",
+        "docs/acceptance/usb-hub-support-sharing-whole-hub-full-tuple.json"
+      ],
+      "status": "correct_identity_tuple_controls_pass"
+    },
+    {
+      "requirement": "Stable local hub identity and Link mode/deck continuity",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-topology-final.json",
+        "src/azhub/linkfake/public-sharing-runtime.h"
+      ],
+      "status": "integrated_control_pass"
+    },
+    {
+      "requirement": "Network lifecycle and collision safety",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-final-network-recovery.json",
+        "src/azhub/linkfake/test-public-player-reconcile.c",
+        "src/azhub/linkfake/test-public-sharing-runtime.c"
+      ],
+      "status": "current_helper_and_integrated_recovery_pass_current_all_slot_collision_controls_pass"
+    },
+    {
+      "requirement": "Locally built tested documented reproducible candidate with exact hashes",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-package-draft.json",
+        "docs/acceptance/usb-hub-support-sharing-final-source-checks.json",
+        "docs/HUB-LINK-CANDIDATE-BUILD.md"
+      ],
+      "status": "final_package_validated_source_frozen_and_verified"
+    },
+    {
+      "requirement": "Supported limits and model-specific physical plan",
+      "evidence": [
+        "docs/HUB-LINK-CANDIDATE-READINESS.md",
+        "docs/HUB-LINK-PHYSICAL-TRIALS.md"
+      ],
+      "status": "documented_separate_physical_gates"
+    },
+    {
+      "requirement": "Exact firmware kernel and core boundary, no implicit hardware deployment/publication",
+      "evidence": [
+        "src/azhub/linkfake/azmod.json",
+        "src/azhub/linkfake/public-macvlan-asset.h",
+        "src/azhub/research/scripts/prepare-sharing-candidate.py"
+      ],
+      "status": "reviewed_no_scope_broadening_no_physical_AZ_touched_no_publication"
+    }
+  ],
+  "candidate_ready_for_separately_authorized_physical_trials": true,
+  "final_package": "local\\publishing\\usb-hub-support-sharing-candidate-final\\mod\\dist\\usb-hub-support-0.4.0.azmod",
+  "final_package_sha256": "8edd7f78c89ca2aa75a0127c496e63acbfaf418bce0115f463da18d4607bd4c0",
+  "final_source_snapshot_sha256": "0b1ca12be87cd31099cdbfd02aa880b6aa7990604ef0da94f0088a5660c0a035",
+  "final_current_source_members_verified": 428,
+  "final_production_inputs_identical_to_byte_identical_target_rebuild": 232,
+  "normal_emulator_framework_restored": {
+    "mod_version": "0.3.2",
+    "suspended": 0,
+    "owned_namespaces_present": false,
+    "emulator_test_module_present": false,
+    "temporary_telemetry_dropin_present": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scope": "Automatic anonymous namespace/MACVLAN/native DHCP to controller ARP, exclusive configuration, READY, UDP reachability and retirement",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-network-ready.h": "3c013514740413963fc4b0c69f62216fd36ff3413448e8c367551c1e6487ae60",
+    "src\\azhub\\linkfake\\test-public-network-ready.c": "7d8d4995fb9bf4e5b8471493c7fc29d94cab77a8763a56486ac80c575a045e57",
+    "src\\azhub\\linkfake\\test-public-network-acquire.c": "92417972e0482cbfd76d796d74598a2cb3e6ae84e8a3ab277f8832cee890cccc",
+    "src\\azhub\\research\\scripts\\test-live-dhcp-emulator.py": "41fe8199bd5941eb37678d4075cf2129d62a9022d4edfba93d9af56e3ea6dcc5"
+  },
+  "binary_sha256": "4a96c99debf3a5f49ba7578e33b990483e7214847fd3d59808b94eb60f692bda",
+  "tests": {
+    "live_automatic_ready_and_retirement": "passed",
+    "targeted_host_plain_asan_ubsan_tsan_negative_readiness": "passed"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-allocated-ready-v1/client-events.txt",
+    "local/diagnostics/sharing-allocated-ready-v1/server.stdout",
+    "local/diagnostics/sharing-allocated-ready-v1/result.json",
+    "local/diagnostics/sharing-allocated-ready-v1/guest-commands.json",
+    "local/diagnostics/sharing-allocated-ready-v1/transport.stdout",
+    "local/integration/sdk-broker-probe-v1/network-ready-targeted.log"
+  ],
+  "validated": [
+    "Controller owns namespace/interface allocation and supervised native grant",
+    "ARP polling and async configure run without moving controller namespace",
+    "Configure starts only after ACD CLAIM; lease configured acknowledgement follows kernel ACK",
+    "ARP ACTIVE and lease READY precede independent fixture UDP roundtrip",
+    "Quiesce joins factory/configure threads and closes ARP before exact address retirement",
+    "Native state unchanged and all owned module/TAP/temp resources cleaned",
+    "Wrong namespace/backward clock retire candidates without releasing caller namespace"
+  ],
+  "limitations": [
+    "No library services or SDK broker allocation integration in this trial",
+    "Fixed jitter used by fixture; production caller must supply independent random jitter and all local MAC inventory",
+    "No integrated conflict/DECLINE/retry or renewal trial through this controller yet",
+    "Live branch not sanitizer-instrumented; host negatives are",
+    "Full74/74/74 matrix predates readiness/factory additions",
+    "Target4.4 runtime and physical CDJ acceptance remain pending"
+  ],
+  "physical_AZ_touched": false
+}

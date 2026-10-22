@@ -1,0 +1,67 @@
+{
+  "scope": "Per-source namespace socket factory and source manager in standalone AArch64 live-source harness",
+  "server_sha256": "a13f99f85638c948356c4d81111829ab5204682b65aec4a4e6d652ba57a3de64",
+  "source_sha256": {
+    "src/azhub/linkfake/public-network-endpoint.h": "389e230a2c2f9a47dd26a654e949e4793618e5bf3505da91cd7538a91d3f1251",
+    "src/azhub/linkfake/public-source-manager.h": "7f435ad8fe64e3d350ffe9f55d1d57589feea3ceaa97d003f8d04543f15a40eb",
+    "src/azhub/linkfake/test-public-network-endpoint.c": "fe27db48601a8d63629de59c87b86acac702fd02f0d37620d813049299e45e4d",
+    "src/azhub/research/scripts/public-db-library-server.c": "790bd03b4d5a11a09e37b0a8f105b4e96ad6baf93fd7047ca0221ec3e6fd7cf2"
+  },
+  "endpoint_factory": {
+    "partial_failure_no_fd_leak": true,
+    "ipv4_mask_broadcast_mac_verified": true,
+    "controller_namespace_preserved": true,
+    "fresh_reopen_passed": true,
+    "fresh_sockets_per_open": 6,
+    "emulator_test": {
+      "kernel": "6.6.138-dirty",
+      "binary_sha256": "ec75744776da94f5a98bcf874d5f269d55df5529f34bfb79dd4f56157d3e3d2e",
+      "synthetic_pass": true,
+      "owned_executable_removed": true
+    },
+    "namespace_entry_on_short_helper_thread": true
+  },
+  "manager": {
+    "used_for_live_source": true,
+    "full_stop_joins_before_endpoint_release": true,
+    "withdrawal_retains_stale_rpc": true,
+    "fresh_random_nonce": true,
+    "focused_host_tests": [
+      "plain passed",
+      "ASan/UBSan passed",
+      "TSan passed"
+    ]
+  },
+  "regression": {
+    "exact_pdb_mp3_downloads": true,
+    "full_menus": true,
+    "independent_discovery": true,
+    "loopback_original_high_artwork": true,
+    "external_withdrawal_controls": true
+  },
+  "evidence_directory": "local/diagnostics/sharing-live-manager-v1",
+  "evidence_files": [
+    "result.json",
+    "lifecycle.stdout",
+    "discovery-and-menus.stdout",
+    "database.stdout",
+    "audio.stdout",
+    "guest-commands.json"
+  ],
+  "additional_evidence": [
+    "local/diagnostics/sharing-artwork-v1/manager-retire.stdout",
+    "local/diagnostics/sharing-artwork-v1/endpoint-emulator.json",
+    "local/diagnostics/sharing-artwork-v1/endpoint-artwork.stdout"
+  ],
+  "limitations": [
+    "No automatic interface/address allocation; factory consumes explicit owned namespace/interface specs",
+    "Not connected to native mod presence/eject callbacks yet",
+    "One live source; two-source manager tests use synthetic empty libraries",
+    "No native unmount or external loaded-deck acceptance",
+    "No full host matrix rerun or aggregate resource-budget acceptance"
+  ],
+  "physical_az_operations": false,
+  "publication": false,
+  "owned_scope_clean_exit": true,
+  "owned_namespaces_and_module_removed": true
+}

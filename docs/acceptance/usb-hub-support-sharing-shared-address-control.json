@@ -1,0 +1,57 @@
+{
+  "recorded_at_utc": "2026-10-20T17:42:42.157921+00:00",
+  "scope": "Public destination representation feasibility control using native shared-address identities",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "client": "Unmodified Beat Link8.0.0 MenuLoader/Client",
+  "observations": [
+    "Native player1 root7/playlist20/track2547 menus pass",
+    "Native player2 discovered at same192.0.2.15; port query returns46393",
+    "Player2 root request fails target validation: welcome identifies player1",
+    "Independent client source recognizes standard slots0..4 but not extended slots7/8; port-query payload contains service name only and port cache is keyed byIP"
+  ],
+  "interpretation": "Additional keepalive numbers over one unchanged native DB endpoint do not provide separate browsable providers for this client. Public destination routing and per-client/per-source session isolation require explicit design.",
+  "limits": [
+    "Not an actual-CDJ test or a universal protocol impossibility proof",
+    "Does not establish a defect in native AZ behavior; player2 may not own an independent native browsing endpoint",
+    "No eight-source public representation selected; no reduced-scope substitution authorized",
+    "Multiple computer providers and collision-safe address ownership remain research hypotheses"
+  ],
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "primary_references": [
+    "https://djl-analysis.deepsymmetry.org/djl-analysis/startup.html",
+    "https://github.com/Deep-Symmetry/beat-link/tree/v8.0.0",
+    "https://github.com/usr-ein/prolink/tree/ae895adc0a97fe2c791ed3bec0d5bcfd446b3fed",
+    "https://github.com/vynulldev/vynull/tree/e414ffff6a00e68f8ffd9f6ab819d6bdaa404a6d"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-shared-address-v1/peer.stdout",
+      "sha256": "9481950b9905f6ee549bde107225b1c91b4c6291189b6c57946c311023cb487a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-shared-address-v1/peer.stderr",
+      "sha256": "f3669a43c167474ff3e750356abdd383076e432a437bedb92ac8b082f9b64775"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-shared-address-v1/wire.stdout",
+      "sha256": "095dfd8812c16f9177cfefe1558155b4b639f94fb545cd0330bffecdfc87ed4b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-shared-address-v1/transport.stdout",
+      "sha256": "deacb896818b8329bd50f2d31fca678f5ef74ec35b286af017bcbb64eb36371c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-shared-address-v1/results.json",
+      "sha256": "d2aef57fda5d66d2a8b2f015a40efeea42d381000b1fc29b55de0d253f93010d"
+    }
+  ]
+}

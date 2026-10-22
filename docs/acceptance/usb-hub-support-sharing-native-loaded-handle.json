@@ -1,0 +1,48 @@
+{
+  "scope": "Joint synthetic externally loaded status accepted by native firmware and real held-handle NFS reads; no eject/audio/actual-CDJ acceptance",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "diagnostic_mod_sha256": "1f3321f7ac1509df0bd5124128c64ba2352fb6a652ba44cc12141493e5a380fc",
+  "evidence_directory": "local/diagnostics/sharing-native-loaded-handle-v4",
+  "framework_poststart_completed": true,
+  "native_root_registration": {
+    "pid": "1635269",
+    "lengths": [
+      15,
+      15,
+      0
+    ],
+    "roots": [
+      "/media/usb/sdb1",
+      "/media/usb/sda1",
+      ""
+    ]
+  },
+  "accepted_native_status_sample": "native-status-observer key=3:1:4:3 accepted=1 b0=3 b1=0 b4=1 b5=3 b6=1 word8_le=495 word8_be=4009820160",
+  "matching_wire_packets": 300,
+  "native_export": "/C/",
+  "reads_on_same_handle": 9,
+  "bytes_per_read": 1024,
+  "all_read_hashes_match_fixture": true,
+  "fixture_audio_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+  "native_snapshot_unchanged": true,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "eject_attempted": false,
+  "external_audio_renderer": false,
+  "actual_CDJ_acceptance": false,
+  "physical_AZ_touched": false,
+  "limits": [
+    "Only the first9216 bytes were checked; no complete external playback claim",
+    "The status fixture and NFS client are separate processes sharing the isolated peer address",
+    "Loaded-source native withdrawal and hub withdrawal remain untested together"
+  ],
+  "next": "Native STOP1 for verified fixture sdb1 at1-1 while accepted source1/slot3/track495 status continues and this handle is retained; preserve mods sda1 and all hub roots, verify STALE reads and restore only the owned virtual fixture.",
+  "track_file_binding_verified": false,
+  "track_file_binding_mismatch": {
+    "status_track_id": 495,
+    "retained_file_track_id": 1884
+  },
+  "superseded_for_same_track_loaded_file_acceptance": true,
+  "binding_audit": "usb-hub-support-sharing-loaded-file-binding.json"
+}

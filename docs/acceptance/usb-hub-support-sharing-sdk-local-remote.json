@@ -1,0 +1,235 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "069d6dee257aa76cbb2db05a542d01fc4643ad3b2a5d0244b78d73b90266d3ba",
+  "helper_sha256": "e0b9a2c077342c7145e3f687f02baad30cdb6880a92241c06bee76de1124029f",
+  "native_application_pid": "800358",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Two-source emulator protocol/file/lifecycle validation with simultaneous native deck four-beat loop. Native engine state/position evidence only; no audio signal capture, external loaded deck or physical CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-local-remote-v3",
+  "local_playback": {
+    "sample_count": 73,
+    "native_pid": 800358,
+    "content_id": 495,
+    "position_range_seconds": [
+      2.939,
+      4.932
+    ],
+    "cases": [
+      "before independent clients",
+      "external clients active",
+      "external clients completed",
+      "selected backing ejected",
+      "after eject/replug observers"
+    ],
+    "all_loaded_and_playing": true,
+    "physical_backing_verified": "sdc",
+    "verification": "Native load member/slot resolves to alias filesystem identity matching backing volume, not title/CID alone.",
+    "reviewed_source_row_offset": -1,
+    "audio_signal_captured": false
+  },
+  "source_slots": [
+    0,
+    4
+  ],
+  "complete_parallel_menus_both_sources": true,
+  "exact_database_audio_both_sources": true,
+  "native_loaded_source_ejected_and_replugged": true,
+  "original_neighbor_RPC_root_TCP_menu_session_survives": true,
+  "reconnected_old_handles_STALE": true,
+  "exact_fresh_database_after_replug": true,
+  "native_eject": {
+    "before": {
+      "pid": 800358,
+      "clock_ms": 24165943,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 73278,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.333,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "after": {
+      "pid": 800358,
+      "clock_ms": 24174501,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 73278,
+          "devnum": 15
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.989,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "source": 0,
+    "root": "/media/usb/sdc1",
+    "retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "neighbor_mounts_preserved": [
+      "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sde1 /media/usb/sde1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdd1 /media/usb/sdd1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdf1 /media/usb/sdf1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdg1 /media/usb/sdg1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+    ],
+    "remote_loaded_deck_tested": false
+  },
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "earlier_attempts": [
+    "v1: Native load backing check rejected duplicate USB5 instead of selected sdc; cleaned normally.",
+    "v2: First visible source required row offset-1, rejected by old runner bound; cleaned normally."
+  ],
+  "remaining": [
+    "Audio-signal validation",
+    "External loaded-deck behavior",
+    "Production inventory and identity/address policies",
+    "DHCP renewal/no-DHCP networks",
+    "Larger-source budgets",
+    "Target4.4 runtime and model-specific physical validation"
+  ]
+}

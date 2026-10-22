@@ -1,0 +1,20 @@
+{
+  "scope": "Combined native USB2 fresh playback/eight-source full clients pass, but late whole-hub input control fails before long STOP. Not whole-hub eject acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-whole-hub-native-usb2-v1",
+  "runner_exit": 1,
+  "native_usb2_backing": "sda1",
+  "phase_sample_counts": {
+    "load verified deck1": 1,
+    "native USB2 fresh local playback": 8,
+    "native and hub remote clients active": 126,
+    "native and hub clients completed": 8
+  },
+  "eight_complete_menu_clients_passed": true,
+  "whole_hub_eject_passed": false,
+  "failure": "SDK frame filter quarantine after eight over200us calls; selector ownership refused",
+  "real_MP3_and_corrected_loaded_status_ready": true,
+  "paired_status_track_id": 1884,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "Current-helper emulator mode-cycle partial failure; not accepted as a full regression pass",
+  "evidence_directory": "local\\diagnostics\\sharing-parent-rx-mode-cycle-v1",
+  "runner_exit": 1,
+  "initial_complete_clients_passed": true,
+  "native_Off_withdrawal_passed": true,
+  "new_helper_and_source_readiness_after_On_passed": true,
+  "seeded_log_retention_passed": true,
+  "recovered_clients_passed": false,
+  "recovered_failures": [
+    "Beat Link Client initialization EOF",
+    "source0 MP3 NFS READ STALE70"
+  ],
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "cause": "Unresolved; diagnostic repeat required. Do not weaken identity/validation guards or relabel this result as passing."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Real source manager endpoints and staging to lease retirement and exact asynchronous netlink removal in emulator",
+  "source_sha256": {
+    "public-broker-address-retirement.h": "235584a60a987faf80ee35832e8742b61786c7ce77fd38eefa220f3c4bb6fd62",
+    "test-public-broker-address-retirement.c": "cad3b9ac527e5216a4d6919817938b232c70c82dc2fcf4ec9734375258c90c8e",
+    "public-broker-lease.h": "94ce1272070ca5fca399584b3bac851b468c422c7ae0d71467aa02acb51e31de"
+  },
+  "binary_sha256": "f35d0fe151742566477502b6d83409c21954c2f9cac7b1e4d85ebc3e7a9e0b46",
+  "evidence": [
+    "local/diagnostics/sharing-live-broker-retirement-v1/result.json",
+    "local/diagnostics/sharing-live-broker-retirement-v1/commands.json",
+    "local/integration/sdk-broker-probe-v1/broker-address-retirement-targeted.log"
+  ],
+  "tests": {
+    "live_real_endpoints_and_netlink_removal": "passed",
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed"
+  },
+  "validated": [
+    "Terminal removal state prevents automatic repeat after failure",
+    "Spec substitution rejected and active operation cannot reset",
+    "Actual namespace socket factory opens source-owned service endpoints",
+    "Synthetic empty PDB stages to worker RUNNING through pinned directory",
+    "Withdrawal and wanted0 join worker and close endpoints before removal callback",
+    "Real netlink ACK precedes lease removed acknowledgement",
+    "Neighbor address and native state preserved; owned scope cleaned"
+  ],
+  "limitations": [
+    "Lease/ARP readiness proof and empty PDB are synthetic",
+    "No independent remote browsing/loading in this live retirement control",
+    "No native eject/unmount or remote loaded deck in this control",
+    "SDK command loop and real DHCP acquisition/refresh integration remain pending",
+    "Live branch not sanitizer-instrumented; portable negative branch is"
+  ],
+  "physical_AZ_touched": false
+}

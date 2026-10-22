@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "Standalone controller creates anonymous namespace/MACVLAN then supervises real native DHCP grant in localhost emulator",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-network-acquire.h": "0351cbc211ad343d6e7d09059e867c21db1de0504fb871201eb61a02c0259ab4",
+    "src\\azhub\\linkfake\\test-public-network-acquire.c": "8054713143827465757839e19a16cebc4c79898ae712bf0c0a263a7ec5665312",
+    "src\\azhub\\research\\scripts\\test-live-dhcp-emulator.py": "83684f12f505c3787ae666a8960305dcc67e5ceb5c1804c3c9db378d1a951ea9"
+  },
+  "binary_sha256": "bf0231ff3e1e218a2ef08e9a85ce504d867bdffd1d442d6e14571cbb72d6f229",
+  "tests": {
+    "live_allocated_native_DHCP": "passed",
+    "targeted_plain_asan_ubsan_tsan_cancellation": "passed"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-allocated-dhcp-v1/client-events.txt",
+    "local/diagnostics/sharing-allocated-dhcp-v1/server.stdout",
+    "local/diagnostics/sharing-allocated-dhcp-v1/result.json",
+    "local/diagnostics/sharing-allocated-dhcp-v1/guest-commands.json",
+    "local/diagnostics/sharing-allocated-dhcp-v1/transport.stdout",
+    "local/integration/sdk-broker-probe-v1/network-acquire-targeted.log"
+  ],
+  "validated": [
+    "Runner supplies no guest namespace/interface; controller creates both",
+    "Actual native udhcpc helper obtains fixture OFFER/ACK for declared MAC",
+    "Fresh child/event channel accepted only after EOF/exit/reap",
+    "Grant-time reference retained from supervised acquisition",
+    "Cancellation retains operation ownership until pending threads finish",
+    "No IPv4 application/public readiness claimed",
+    "Native PID/DNS/routes/DHCP processes unchanged",
+    "Owned anonymous namespace/interface retire; module/TAP/temp cleanup completes with no transport errors"
+  ],
+  "limitations": [
+    "Initial grant only, no refresh/expiry integration here",
+    "No ARP/configuration/library endpoints in this control",
+    "Standalone controller, not yet SDK broker runtime allocator",
+    "No target4.4 runtime or physical CDJ acceptance",
+    "Host sanitizer cancellation tests do not cover successful privileged allocation"
+  ],
+  "physical_AZ_touched": false
+}

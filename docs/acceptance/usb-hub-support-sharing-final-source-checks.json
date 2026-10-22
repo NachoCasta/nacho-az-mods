@@ -1,0 +1,23 @@
+{
+  "scope": "Final current-source portable components and SDK UI gates; separate from native runtime/physical acceptance",
+  "portable_tests_per_mode": {
+    "plain": 96,
+    "asan": 96,
+    "tsan": 96
+  },
+  "portable_exit": 0,
+  "sdk_ui_exit": 0,
+  "sdk_ui_checks": {
+    "plain": 10,
+    "asan": 8,
+    "tsan": 8
+  },
+  "sdk_ui_functional_scenarios_measured": false,
+  "hook_registration_passed": true,
+  "hook_registration_note": "Historical syntax branch reports unused undefined static declaration warnings; production candidate builds succeed",
+  "source_snapshot_target_rebuild_byte_identical": true,
+  "source_rebuild_receipt": "local/integration/sharing-source-rebuild-v1/result.json",
+  "portable_log": "local/integration/sdk-broker-probe-v2/final-host-suite.log",
+  "sdk_ui_log": "local/integration/sdk-broker-probe-v2/final-sdk-ui.log",
+  "physical_AZ_touched": false
+}

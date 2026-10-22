@@ -1,0 +1,233 @@
+{
+  "SDK_launch_and_IPC": true,
+  "integrated_runtime": true,
+  "integrated_native_eject": true,
+  "integrated_mode_cycle": false,
+  "probe_environment_used": false,
+  "mod_sha256": "513344f235a1af963ee8bf6fbba7c8550d879a3bf0db4bf17379eb1190817a38",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "native_application_pid": "1394357",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Isolated integrated controller with confirmed native Link On. Native request/member-slot alias backing is verified against /media/usb/sdc1; one deck loops content495 while two independent clients completely discover/browse and fetch exact PDB/audio.75 telemetry samples retain the same EP147/content ID with loaded=1/playing=1 and advancing loop positions, including selected backing eject and reconnect. Native selector retirement precedes source-close/backing unmount; original neighbor RPC/TCP sessions survive. Replug generation2 rediscovery/fresh root/old handles STALE on both aliases and exact fresh PDB pass. Final global retirement, namespace/process cleanup and normal package/network restoration pass. Native telemetry is not captured audio, full-track cache acceptance, remote loaded-deck proof, four/two-deck topology acceptance or physical CDJ interoperability.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-local-remote-v1",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "native_eject": {
+    "before": {
+      "pid": 1394357,
+      "clock_ms": 38797721,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 93837,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.29,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "after": {
+      "pid": 1394357,
+      "clock_ms": 38805084,
+      "view": 4,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 93837,
+          "devnum": 26
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.843,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "source": 0,
+    "root": "/media/usb/sdc1",
+    "retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "neighbor_mounts_preserved": [
+      "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sde1 /media/usb/sde1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdd1 /media/usb/sdd1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdf1 /media/usb/sdf1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdg1 /media/usb/sdg1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+    ],
+    "remote_loaded_deck_tested": false
+  },
+  "local_playback": {
+    "samples": 75,
+    "native_application_pids": [
+      1394357
+    ],
+    "content_ids": [
+      495
+    ],
+    "all_loaded_playing": true,
+    "position_min_seconds": 2.96,
+    "position_max_seconds": 4.934,
+    "backing_verified": "sdc",
+    "native_four_beat_loop": true,
+    "audio_signal_captured": false
+  },
+  "remote_loaded_deck_tested": false,
+  "fully_validated_client_slots": [
+    0,
+    4
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "scope": "Reporting-only native DHCP hook and bounded lease proposal parser",
+  "source_sha256": {
+    "src/azhub/linkfake/public-dhcp-event.h": "be9d963d19cd2f3a1cc88312139c66b48d61dff1c6a9150c82d766705b245c0d",
+    "src/azhub/linkfake/test-public-dhcp-event.c": "b95b8a0d32b2cf8612e03c9770aa9be9ae6d113792922d19f3f214b74e7020fb",
+    "src/azhub/research/scripts/public-dhcp-event-hook.sh": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+    "src/azhub/research/scripts/test-public-dhcp-event-hook.py": "bd486468bc1f05f35398d31304014fb464648e902e157034098bf2405570b0ff"
+  },
+  "tests": {
+    "native_udhcpc_isolated_failure_events": "passed",
+    "hook_host_shell_hostile_fields": "passed",
+    "parser_pinned_aarch64_emulator": "passed",
+    "hook_native_busybox_shell": "passed",
+    "parser_asan_ubsan": "passed",
+    "parser_plain": "passed",
+    "parser_tsan": "passed"
+  },
+  "aarch64_sha256": "a8227bc97b2cbd79b5dd23ec7a1e4d7c6219e0e4affbcaca63ac409422b4e1c5",
+  "native_client": "BusyBox1.27.2 udhcpc in localhost emulator",
+  "evidence": [
+    "local/integration/address-conflict-v1/dhcp-emulator-result.json",
+    "local/integration/address-conflict-v1/udhcpc-channel-result.json"
+  ],
+  "native_dns_routes_and_application_PID_preserved": true,
+  "owned_namespace_removed": true,
+  "limitations": [
+    "No DHCP offer/ACK or acquired lease",
+    "No renewal, expiration, DHCPDECLINE or live address application",
+    "Supervised nonblocking IPC and allocator integration pending",
+    "Not enabled in the mod or release assets",
+    "No physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

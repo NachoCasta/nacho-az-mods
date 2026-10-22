@@ -1,0 +1,50 @@
+{
+  "scope": "C nonblocking dbserver connection and greeting/setup lifecycle; no library menus or runtime provider integration",
+  "host_matrix": {
+    "plain": 47,
+    "asan": 47,
+    "tsan": 47
+  },
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "e4560aef4c51f29a926138a7ab279ba9678af747cc46f70ecfc5148fba8af585",
+    "socketpair_controls_pass": true
+  },
+  "independent_control": {
+    "client": "Unchanged Beat Link8.0.0 Client constructor/close, invoked by reflection",
+    "transport": "Local TCP127.0.0.1 ephemeral port",
+    "provider": 41,
+    "requester": 3,
+    "simultaneous_idle_peer": true,
+    "result": "Full client handshake succeeds while another peer has supplied only one greeting byte; both close and harness exits"
+  },
+  "limits": {
+    "receive_bytes_per_session": 131072,
+    "send_bytes_per_session": 131072,
+    "absolute_handshake_ms": 5000,
+    "partial_frame_ms": 5000,
+    "idle_ms": 30000,
+    "steps": "One receive, parse, response-producer call or send per step; owner schedules sessions fairly"
+  },
+  "ownership": [
+    "Accepted socket transfers to session including init failures",
+    "Request fields borrowed only during synchronous begin callback",
+    "Streamed response producer returns one message at a time",
+    "Atomic cancellation and source-alive guard close session; join worker before destroying buffers",
+    "Provider is responsible for peer admission, aggregate capacity and source/request authorization"
+  ],
+  "evidence_directory": "local/diagnostics/sharing-db-session-v1",
+  "source_sha256": {
+    "src/azhub/linkfake/public-db-session.h": "d39354f34c6dbcf25d473d8bbc83ce6e624b9e768a80f9370d4c2cb0be153bb3",
+    "src/azhub/linkfake/test-public-db-session.c": "38801547df4684b9c261751918357242947c98d1e55acddd990409871f3f25c0",
+    "src/azhub/research/scripts/public-db-session-server.c": "50b264e34e749dc960d67bffed2838caf2732d5aac18a9d4ac24d215a4ed63ae",
+    "src/azhub/research/scripts/test-public-db-session.py": "58657936ded85f89443c75a8e9e062d6302133958629a88a7d4aa1d8e3857909",
+    "src/azhub/research/link-peer/src/main/java/DbSessionControl.java": "38b39ba35cd1dc54dc743d2dd7c0ddae4178b10219e32fab2a179486e5a3b7ae"
+  },
+  "remaining": [
+    "Per-session menu state and live library query backend",
+    "DMST requester/source checks in backend",
+    "Public listener capacity and transport/runtime integration",
+    "Native browsing/loading/concurrent local use and hardware compatibility"
+  ]
+}

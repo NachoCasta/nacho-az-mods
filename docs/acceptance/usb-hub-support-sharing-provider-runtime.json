@@ -1,0 +1,36 @@
+{
+  "scope": "Discovery scheduler and UDP adapter; optional source-worker integration",
+  "per_source_peer_capacity": 8,
+  "peer_expiry_ms": 60000,
+  "activation_repeat_ms": 3000,
+  "tested": [
+    "Claim/identity schedule",
+    "Independent per-peer activation",
+    "Capacity and expiry",
+    "Backpressure and transport failure",
+    "Withdrawal suppresses pending sends",
+    "Loopback initial announcement and activation replies",
+    "Same-number different-MAC conflict suppresses announcements"
+  ],
+  "focused_sanitizers": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": [
+    "provider-state.stdout",
+    "provider-state.stderr",
+    "provider-udp.stdout",
+    "provider-udp.stderr"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-provider-state.h": "0858bfc423c75fb5dca99b40fef24729ba6a62584fc1219e99b061088c2e63fc",
+    "src/azhub/linkfake/public-provider-udp.h": "0eaebfa00942d0c98480fcda4450ea198af5dff3bf5a7bfd299e938dffd8d4a0",
+    "src/azhub/linkfake/public-source-worker.h": "cf7e475cd461229d7144f3150b94a6b64bc2823fc5df42eedaaed7759f27ac25"
+  },
+  "native_client_validation": false,
+  "full_advertised_worker_validation": false,
+  "physical_az_operations": false,
+  "publication": false
+}

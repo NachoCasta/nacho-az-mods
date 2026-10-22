@@ -1,0 +1,54 @@
+{
+  "scope": "C source-backed menu backend through nonblocking sessions in standalone loopback service; not mod runtime or physical-CDJ acceptance",
+  "host_matrix": {
+    "plain": 48,
+    "asan": 48,
+    "tsan": 48
+  },
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "c25246c949a274bef8003a1d577ee8d1a4863d7bba1075be7016afdf2f305d06",
+    "synthetic_menu_controls_pass": true
+  },
+  "independent_client": {
+    "library": "Unchanged Beat Link8.0.0 Client menuRequest/renderMenuItems",
+    "transport": "Local TCP, provider41/requester3, collection slot4/type1",
+    "input": "Private local PDB copied into an owned temporary read-only library fixture; audio absent",
+    "tracks": 2546,
+    "track_checks": "Every track ID unique, count and title equal Crate Digger Database",
+    "tree_nodes": 185,
+    "memberships": 8359,
+    "playlist_checks": "Every returned node and membership ID/order equals corrected-count independent Java oracle",
+    "root_entries": 2
+  },
+  "backend": [
+    "TRACK/PLAYLIST root, title-ordered tracks, sorted folder hierarchy, ordered playlist members",
+    "Eleven-row metadata menu tested synthetically, including Unicode artist and duration",
+    "Per-session16 menu descriptors; pagination1..64 results streamed individually",
+    "Reject another requester DMST, private/native source slots, unsupported queries/sorts and invalid bounds",
+    "Source readiness and fingerprint checked before requests; retirement stops response production"
+  ],
+  "ordering": "Track sort folds ASCII case and otherwise compares UTF8 bytes with track ID tie-break; not locale-aware Unicode collation. Folder order uses PDB parent/sort/id. Playlist order retains PDB position.",
+  "limits": {
+    "sessions_in_harness": 8,
+    "menu_contexts_per_session": 16,
+    "maximum_page_items": 64,
+    "track_order_storage": "One shared pointer pair per track per source",
+    "folder_order_storage": "One shared pointer per folder/playlist node per source"
+  },
+  "remaining": [
+    "Load info0x2102 and real analysis/cue/artwork responses",
+    "Native emulator browsing/load over integrated C public network service",
+    "Runtime source lifecycle/discovery/file transport integration",
+    "Concurrent local/remote and eight-source resource/identity acceptance",
+    "Model-specific physical CDJ trials"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-db-menus.h": "ea35c76addef901de7123178715869bed53ec16216ab70458e37d01c18751ad5",
+    "src/azhub/linkfake/test-public-db-menus.c": "1bfc66053b0cdda8b3a6e13b4c4b42f6c8578c5f82f23963a86518768ab2cb44",
+    "src/azhub/research/scripts/public-db-library-server.c": "c980d58e2b69d83b4b60db8908ff8e41172c4fb2f7771edbb3fc285f420b3095",
+    "src/azhub/research/scripts/test-public-db-library.py": "6ff5e329d1192879af3962113645f28864a28ab8f5fae10e5e41c3cba0c26afc",
+    "src/azhub/research/link-peer/src/main/java/DbLibraryControl.java": "9297740b220355e68203c84f538a93a9d0549127cb20968a3c66dd02a782296b"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-menus-v1"
+}

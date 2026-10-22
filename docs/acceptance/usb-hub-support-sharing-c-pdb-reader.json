@@ -1,0 +1,105 @@
+{
+  "recorded_at_utc": "2026-10-20T20:59:00.422326+00:00",
+  "scope": "Incremental bounded C classic PDB track reader over source-generation-owned short read leases",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Each step processes at most one active track page; fixed bounds256MiB input,512..65536 page bytes and100000 track IDs",
+    "Memory includes one page, visited-page bitmap and bounded ID hash set; no whole database buffer",
+    "Reader checks table/page/row/string bounds, deleted rows, cycles, duplicate IDs, ASCII/UTF16LE and terminal callback cancellation",
+    "Source adapter reopens source-owned path per at-most8192-byte chunk, validates device/inode/size/mtime/ctime before/after read and releases lease before continuing",
+    "Synthetic withdrawal/replacement between initialization and page step returns STALE with drained root and no persistent descriptor",
+    "All2546 IDs/titles/audio/analysis paths match Crate Digger snapshot for same PDB",
+    "Pinned AArch64 binary reads live emulator hub0 PDB and matches host C output/Java oracle exactly; no source/mount mutation or playback was tested"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 40,
+      "asan": 40,
+      "tsan": 40
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "oracle": {
+      "tracks": 2546,
+      "fields": [
+        "id",
+        "path",
+        "analysis_path",
+        "title"
+      ],
+      "all_match": true
+    },
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "synthetic_exit_code": 0,
+      "live_scan_exit_code": 0,
+      "live_rows": 2546,
+      "matches_host_and_java_oracle": true,
+      "live_pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "binary_sha256": "f93871f1b3b7e3c4a58160dbda7afc21167564f9afd4fcd3d582f52d38fb1d5b"
+    }
+  },
+  "source_sha256": {
+    "public-file-root.h": "d40b536a4bb83f22f4fba53cf29cedc35a7326a264a1c8af70221080686c8ffb",
+    "public-nfs-read.h": "c1eef155fb7b72d02c76926df56fffcb721ca9e7030428dc06b2bbcc0540555f",
+    "public-pdb-reader.h": "57a12296d7c369d53b29f4a54ee4e1ef01c85dd8fa90ca7350a0e8973c186857",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "test-host.sh": "bf60774740cf5cf493778971fc611164a1b7592d97a4aab30f23002104fdef65",
+    "test-public-pdb-reader.c": "547565f40f6e58c129621d89fd1c96b5c395ff86361698e95b4cb385f03b74fa"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "2a8918cab45e82a91b1eff9402f58b7c4cfe85bd61686bd57bb5817986f3cec1",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "portable-matrix.stdout": "98bbe8d517cdf1e960a4fa433de01b2312112fb7e92449d3ee835e6d06fa3f5e"
+  },
+  "remaining_gates": [
+    "Caller staging/atomic publication and final source-generation revalidation",
+    "Filesystem path normalization and trusted file-catalog population",
+    "Full artists/albums/playlists/analysis metadata rather than only four track fields",
+    "Live public provider addressing/lifecycle and concurrent local/remote/eject integration",
+    "Final candidate and separately authorized physical model tests"
+  ]
+}

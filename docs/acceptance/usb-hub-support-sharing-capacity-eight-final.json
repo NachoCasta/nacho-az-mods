@@ -1,0 +1,211 @@
+{
+  "SDK_launch_and_IPC": true,
+  "native_status_observer": false,
+  "integrated_runtime": true,
+  "integrated_native_eject": false,
+  "integrated_mode_cycle": false,
+  "probe_environment_used": false,
+  "mod_sha256": "a036b5aefecf8a597b4074390ea90a37a45a00898f6b7a5b73349d43610ec7de",
+  "native_complete_file_control": true,
+  "native_fresh_local_playback_control": true,
+  "helper_sha256": "b5ff9ab717fc608e32cb86c076e2339414f5af9fb5805e063cfe54897185f9fb",
+  "native_application_pid": "1941837",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "capacity_sources_tested": 8,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Latest executable-asset runtime/helper: complete eight-source independent software-client menus/files/renewals plus native USB1 fresh load/backing/advancing engine and native USB1/2 file access. No captured audio, target4.4 execution or actual-CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-capacity-eight-native-v3",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "phase_sample_counts": {
+    "load verified deck1": 1,
+    "native USB1 fresh local playback": 8,
+    "native and hub remote clients active": 117,
+    "native and hub clients completed": 8
+  },
+  "exact_file_results": [
+    {
+      "log": "audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.3",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-1-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.4",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-1-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.4",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-2-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.5",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-2-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.5",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-3-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.6",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-3-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.6",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-5-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.8",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-5-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.8",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-6-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.9",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-6-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.9",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-7-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.10",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-7-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.10",
+      "export": "/C/"
+    },
+    {
+      "log": "database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.3",
+      "export": "/C/"
+    },
+    {
+      "log": "native-usb1-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.15",
+      "export": "/C/"
+    },
+    {
+      "log": "native-usb1-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.15",
+      "export": "/C/"
+    },
+    {
+      "log": "native-usb2-mod-file.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 214264,
+      "sha256": "a036b5aefecf8a597b4074390ea90a37a45a00898f6b7a5b73349d43610ec7de",
+      "address": "192.0.2.15",
+      "export": "/B/"
+    },
+    {
+      "log": "neighbor-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.7",
+      "export": "/C/"
+    },
+    {
+      "log": "neighbor-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.7",
+      "export": "/C/"
+    }
+  ],
+  "actual_CDJ_acceptance": false,
+  "audio_signal_captured": false,
+  "latest_packaged_helper_tested": true
+}

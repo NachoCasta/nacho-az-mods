@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "scope": "Real exact asynchronous netlink address removal in isolated localhost emulator namespace",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-address-remove.h": "1a111f2cbd6731486d057c99829e698962ca40424e4682e2a63e7eed74fa80a6",
+    "src\\azhub\\linkfake\\test-public-address-remove.c": "fe0368404e2477af432f40fdffc1afc3fc2b43bfdfeef74cff620481d251bac0",
+    "src\\azhub\\research\\scripts\\test-live-address-remove.py": "c32c8957dd9bc2d5fb517bec631ae080477daf04efe9d761dd7e3a64894962f3"
+  },
+  "binary_sha256": "7001a5a559707b49053ff4533eb4466c794391168b6145b98ef2682797da287f",
+  "evidence": [
+    "local/diagnostics/sharing-live-address-remove-v2/result.json",
+    "local/diagnostics/sharing-live-address-remove-v2/commands.json",
+    "local/integration/sdk-broker-probe-v1/address-remove-live-regression.log"
+  ],
+  "tests": {
+    "live_kernel_ack_and_address_observation": "passed",
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed"
+  },
+  "validated": [
+    "Uploaded probe/module hashes verified in emulator before execution",
+    "Exact 192.0.2.3/24 removed with kernel ACK",
+    "192.0.2.4/24 remains on same owned interface",
+    "Native EP147 PID, eth0 address, routes, DNS and namespace unchanged",
+    "Owned namespace/interface/module and temporary files removed"
+  ],
+  "limitations": [
+    "No music library endpoints ran in this control",
+    "Not yet connected to broker lease release or actual eject",
+    "Emulator6.6 only; target4.4 runtime remains pending",
+    "Live branch is not sanitizer-instrumented; portable negative controls are"
+  ],
+  "physical_AZ_touched": false
+}

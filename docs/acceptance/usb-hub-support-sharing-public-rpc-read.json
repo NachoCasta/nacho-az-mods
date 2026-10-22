@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-10-20T20:30:05.471395+00:00",
+  "scope": "Bounded ONC RPCv2 decoder and NFSv2 READ dispatch over source-owned C file references",
+  "production_runtime_integration": false,
+  "network_service_implemented": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Malformed/truncated calls and unsupported write procedures are rejected before handle resolution or file access",
+    "AUTH_NONE and AUTH_SYS syntax is validated; client-supplied identity is not used as operating-system credentials",
+    "Valid READ replies include RPC envelope and bounded NFS attributes/data; unknown, foreign-source and withdrawn handles return STALE",
+    "Operation leases end before caller network transmission; this test does not establish socket transport or independent-client interoperability"
+  ],
+  "verification": {
+    "kernel": "6.6.138-dirty",
+    "exit_code": 0,
+    "stdout": "PASS: RPC READ integration, truncated/malformed rejection before lookup, AUTH_NONE/SYS policy, bounded reply and withdrawn/foreign handles\n",
+    "binary_sha256": "cc3c5cd042822fb9f53e37e1cc3af7fc0f274152d21eeefbb2f0a0d7ff19eb82",
+    "matrix_counts": {
+      "plain": 35,
+      "asan": 35,
+      "tsan": 35
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ]
+  },
+  "evidence_sha256": {
+    "aarch64.stdout": "9e163e4c6994653efe698d776a26ca46e6e4d53eefaa245a271c90940fa2f296",
+    "hook-registration.stderr": "bad2d855c95b8b5e5b9b78ef10d9c86e2328b6a72bf5710e7dbb95fd7b8ed038",
+    "hook-registration.stdout": "cec4e7328c6281c0e9e38d030d93d63da1ff78e7db7bccf50f62875c4e79b125",
+    "portable-matrix.stderr": "343dd91eecf759625cbff9c23bc087915b684695cc387b9125fb773235fcb739",
+    "portable-matrix.stdout": "39ad2f0cbe3b227c42bf564065f4b6984aa6e1c3878f6260929f206b2a197df4",
+    "test-image.txt": "3bf840f20d71c516455fc2c9652bc5b637252af1cddd1af9444895e25a1fa215"
+  },
+  "source_sha256": {
+    "public-file-root.h": "a5029192984ff70b4c6af3f49cb0bac4fad2e89c6658aee110e641db471d0c74",
+    "public-nfs-read.h": "2480943c0b39a3a1f059f4801c5b18e33506dcbf70907dc3a3a2a499149cf71a",
+    "public-rpc-read.h": "392969bd5271b7084fbbae4e98bad5d7dacd174216c6c5fa4283be6140ee453a",
+    "public-rpc.h": "26494b4b7c9ccb0d5dfc179244705fddf3cd6f11093fe2c061c13747eb605430",
+    "test-host.sh": "aa2c30fc52fa534bd49c020a0cae4c6a7c31d382e25f1c1f28337594c5366f9f",
+    "test-public-rpc-read.c": "9b05d1dab148c989d476ddbccc64cbd388f1f5d8d0f5e1aa41b68ecc4b13d4cc",
+    "test-public-rpc.c": "8040f932b700c9b94ccf07de6fffe981d4c1202b52679ce4f9930dc63e044457"
+  },
+  "remaining_gates": [
+    "Instance-scoped opaque handle catalog and authorized directory/lookup operations",
+    "Public RPC socket transport, mount/portmapper and remaining read-only NFS procedures",
+    "Live per-stick metadata backend and public address ownership",
+    "Mod lifecycle integration and independent-client concurrent load/eject regression",
+    "Separately authorized model-specific physical acceptance"
+  ]
+}

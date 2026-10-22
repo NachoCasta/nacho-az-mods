@@ -57,6 +57,9 @@ static uint64_t probe_mode_complete(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
         pthread_mutex_lock(&probe_mode_cache_mutex);
         probe_mode_transition_active=0;
         unsigned mode=*(unsigned char *)(owner+0x4a4);
+#ifdef LF_PUBLIC_SHARING_RUNTIME
+        public_runtime_set_mode(mode);
+#endif
         __atomic_store_n(&probe_mode_value,mode,__ATOMIC_RELAXED);
         uint64_t epoch=__atomic_add_fetch(&probe_mode_epoch,1,__ATOMIC_RELEASE);
         pthread_mutex_unlock(&probe_mode_cache_mutex);

@@ -1,0 +1,55 @@
+{
+  "scope": "Standalone original artwork network handler, no mod runtime integration",
+  "request": "0x2003, DMST and artwork ID",
+  "response": "0x4002",
+  "image": {
+    "bytes": 1246,
+    "height": 80,
+    "generator": "DbArtworkControl --generate",
+    "synthetic": true,
+    "sha256": "d4c1a827c1cf6fbc514a5ffe2667c14cf07dc8114171d0646e5ca3315077c2af",
+    "width": 80
+  },
+  "independent_client": "Unchanged Beat Link Client handshake/message codec and AlbumArt JPEG decoder",
+  "exact_bytes_match": true,
+  "missing_id_empty": true,
+  "reader": {
+    "catalog_identity_checked": true,
+    "leases_between_steps": false,
+    "maximum_bytes": 4194304,
+    "source_pdb_revalidated": true,
+    "fingerprint_checks": "Before/after every chunk",
+    "chunk_bytes": 8192
+  },
+  "targeted_tests": [
+    "Plain passed",
+    "ASan/UBSan passed",
+    "TSan passed",
+    "File mutation between chunks rejected",
+    "Partial allocation cleanup",
+    "Unsupported high-resolution request rejected"
+  ],
+  "limitations": [
+    "High-resolution companion path/response pending",
+    "No real artwork fixture present in emulator",
+    "No new full matrix or AArch64 execution",
+    "Native rendering/interoperability pending"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-library-artwork.h": "cc82ca2c65f6e50a2770dea785e5b15279f83f87e6b93f5a7c813319059dbcbd",
+    "src/azhub/linkfake/public-db-menus.h": "81e6de85855c832d3db5f1c110ff11924a328e75320d49ae7962235aa9f6c984",
+    "src/azhub/linkfake/test-public-db-menus.c": "4b1051e895abfdfc2a131611249389fec93c83111cc31fd2caef69faec5cd67a",
+    "src/azhub/research/link-peer/src/main/java/DbArtworkControl.java": "503472e52b06d750f6fa09b14620d13d43efca82b4b8c28f27f20fe6e0da8839",
+    "src/azhub/research/scripts/test-public-db-artwork.py": "5efc21dc33793756e34ee59190ceaa85630d0941be2db8a84f05b2a9402d2bf9"
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": [
+    "wire.stdout",
+    "wire.stderr",
+    "wire-sanitizers.stdout",
+    "wire-sanitizers.stderr"
+  ],
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false
+}

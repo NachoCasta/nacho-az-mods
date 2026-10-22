@@ -1,0 +1,38 @@
+{
+  "recorded_at_utc": "2026-10-20T20:54:40.133088+00:00",
+  "scope": "Bounded classic PDB track/path reader research; no production parser integration",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Existing per-source native library servers and private requester ownership remain untouched",
+    "Independent Python reader follows active track-table page chain and present-row flags with file/page/heap/string/cycle/duplicate bounds",
+    "All2546 IDs, titles, audio paths and analysis paths match prior unchanged Crate Digger snapshot of same source PDB",
+    "Four synthetic test groups cover valid/deleted rows, structural bounds, cycles/duplicates and invalid strings",
+    "Reader uses classic export.pdb only and does not authorize filesystem paths; importer must still confine and validate all path components",
+    "Python reader is a research oracle for a future bounded on-device implementation, not a deployable backend"
+  ],
+  "reference": {
+    "url": "https://github.com/Deep-Symmetry/crate-digger/blob/v0.2.1/src/main/kaitai/rekordbox_pdb.ksy",
+    "local_reference_sha256": "655a30081c0816dba2daab6d23ed276d8b4437c1d4ccecc49f49c84d6e75cde3"
+  },
+  "input_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+  "oracle_snapshot_sha256": "667e0a21690559ffd985734deabfefed8a77463918f22de8e611be639d582e93",
+  "verified_tracks": 2546,
+  "fields_per_track": [
+    "id",
+    "path",
+    "analysis_path",
+    "title"
+  ],
+  "source_sha256": {
+    "link_pdb_paths.py": "8ac04d3351568bcb0a71de6f2bc27d50fd9cd17531c277d92f2d4bba28f86625",
+    "test-link-pdb-paths.py": "f8ee838182ebc8b52b959f710e566f0c9560676970047e01ca1cca893bf127a8"
+  },
+  "remaining_gates": [
+    "Bounded C streaming reader with cancellation/source-generation validation",
+    "Native-independent full metadata/playlists/analysis backend",
+    "Trusted catalog population and live source lifecycle",
+    "Runtime public transport and final concurrency/eject/model-specific acceptance"
+  ]
+}

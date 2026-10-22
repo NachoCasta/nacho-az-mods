@@ -1,0 +1,52 @@
+{
+  "scope": "Standalone emulator computation using actual raw/edited callbacks and an empty control; no registered filters, mod initialization or SDK guard change",
+  "kernel": "6.6.138-dirty",
+  "callback_samples": [
+    {
+      "callback": "empty",
+      "samples": 500000,
+      "frequency": 62500000,
+      "SDK_budget_ticks": 12400,
+      "overruns": 7,
+      "median_ns": 96,
+      "p99_ns": 800,
+      "max_ns": 345104
+    },
+    {
+      "callback": "raw",
+      "samples": 500000,
+      "frequency": 62500000,
+      "SDK_budget_ticks": 12400,
+      "overruns": 7,
+      "median_ns": 96,
+      "p99_ns": 896,
+      "max_ns": 482000
+    },
+    {
+      "callback": "edited",
+      "samples": 500000,
+      "frequency": 62500000,
+      "SDK_budget_ticks": 12400,
+      "overruns": 6,
+      "median_ns": 96,
+      "p99_ns": 912,
+      "max_ns": 354208
+    },
+    {
+      "callback": "empty-after",
+      "samples": 500000,
+      "frequency": 62500000,
+      "SDK_budget_ticks": 12400,
+      "overruns": 4,
+      "median_ns": 96,
+      "p99_ns": 896,
+      "max_ns": 308704
+    }
+  ],
+  "empty_control_also_exceeds_budget": true,
+  "physical_timing_established": false,
+  "limits": "Supports an emulated timing/scheduling contribution; does not prove physical timing or validate the failed combined workload",
+  "binary_sha256": "a08e2df2014e008f412f8a9d5dbeb0f1b398687b56d546f739389cbbb75997ef",
+  "source": "src/azhub/research/scripts/input-filter-timing-control.c",
+  "physical_AZ_touched": false
+}

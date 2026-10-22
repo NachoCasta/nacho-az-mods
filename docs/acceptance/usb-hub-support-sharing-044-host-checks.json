@@ -1,0 +1,13 @@
+{
+  "scope": "Current portable components, including labelled IPv4 matching and temporary parent RX lifecycle; no physical/audio acceptance inferred",
+  "portable_tests_per_mode": {
+    "plain": 97,
+    "asan": 97,
+    "tsan": 97
+  },
+  "exit": 0,
+  "log": "local\\integration\\ethernet-parent-rx-session-v1\\host-suite.log",
+  "log_sha256": "a81bda1f52e30bafe4a8d6809c6e7b313df7d16dd8042fefdfff5af5491c336b",
+  "hook_registration": "Unchanged runtime/hook set; prior hook and SDK UI controls retain their exact artifact scope",
+  "physical_AZ_changed_by_checks": false
+}

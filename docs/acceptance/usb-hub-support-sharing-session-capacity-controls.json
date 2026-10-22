@@ -1,0 +1,223 @@
+{
+  "recorded_at_utc": "2026-10-20T18:09:11.375104+00:00",
+  "scope": "Native extra-requester session feasibility controls; incomplete rendering gate",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "v1/v2 use two-argument native peer setup and incorrectly expect a generic0x4000 reply; v2 records native type0 context response instead. These are harness-protocol failures, not capacity refusals",
+    "v3 switches to standard one-argument client setup with12-byte type array; requester3 and7..14 all receive0x4000 setup and initial menu offers",
+    "v4 corrects root-menu magic0xffffff and render total to actual offered count; nine open sessions accept menus. Requester3 root renders one item type129; requester7 track render times out",
+    "v5 reduces to requesters3 and7: requester3 root7/render129 succeeds, requester7 track2547 offer succeeds but render times out",
+    "The control does not replace local reserved requesters5/6 or serve hub libraries through native USB slots",
+    "Native process remains967182/EEEE with exact published0.3.2 ELF after controls",
+    "v6 matched0x1004 queries and64-row render pages with actual total2547: requester3 returns64 items, requester7 times out; source/current command/page-size differences are removed, membership/routing still unproven"
+  ],
+  "interpretation": "A successful setup/menu offer does not prove usable extra-requester sessions. Do not implement sharing by assuming seven-through-fourteen requester IDs can render or safely replace existing local/native communicators. Native session/export isolation remains a design gate.",
+  "limits": [
+    "Not a universal native capacity proof; requester7 overlaps a private member number and wire-state details may matter",
+    "No actual hub metadata backend connected to public provider yet",
+    "No eight-source representation, remote loaded-track eject or physical-CDJ acceptance"
+  ],
+  "scopes": [
+    {
+      "version": 1,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Probe incomplete/failed; not a passing session-capacity result"
+    },
+    {
+      "version": 2,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Probe incomplete/failed; not a passing session-capacity result"
+    },
+    {
+      "version": 3,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Probe incomplete/failed; not a passing session-capacity result"
+    },
+    {
+      "version": 4,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Probe incomplete/failed; not a passing session-capacity result"
+    },
+    {
+      "version": 5,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Probe incomplete/failed; not a passing session-capacity result"
+    },
+    {
+      "version": 6,
+      "exit_codes": {
+        "transport": 0,
+        "peer": 1,
+        "observer": 0
+      },
+      "namespace_removed": true,
+      "expected_conclusion": "Matched native3/7 track rendering differs; not universal numeric capacity proof"
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v1/peer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v1/peer.stderr",
+      "sha256": "6405722c6376061d251b395e324e7afb610d51d0f0176a3e1e6c2a81d66e81b6"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v1/results.json",
+      "sha256": "f59b380c3ad6113652bf593468b51086fbdb320ad5d1220e681cc979634c2ecb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v1/transport.stdout",
+      "sha256": "fb356a108c6e08b2e201c83ed267df311d5d8f00c49c7e385ea92553572d830d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/peer.stdout",
+      "sha256": "b9aac2df47841fbe57c620e821cb2b637446629cce363811ff1ce17ca4183d7e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/peer.stderr",
+      "sha256": "6af96897f8684400c8de7f964a7bfbf33457253d34e0dd3daf6d767957c10409"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/registrar.stdout",
+      "sha256": "2dc7fd2fc2ec336e32457335311b2f3b2d075e92a224f35c3bf3070039388d6c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/registrar.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/results.json",
+      "sha256": "f9b8daacedb87c3ac208baf5805d0dd9b97351adccf8f9e1a6fe2a1346113814"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v2/transport.stdout",
+      "sha256": "35cf22efffedc0029d55839b0646614a2c6c0bebcf9a56eb2f6c0e386bf91180"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/peer.stdout",
+      "sha256": "d79d3bb0932b015a2989f30a45eb8f4050f188a78a70a1b69a20fd2ce61e785b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/peer.stderr",
+      "sha256": "1233021b6cf225d67f7b273a2e1c387718f63759f1e45d8537d29edcf82b84cb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/registrar.stdout",
+      "sha256": "79c6f010903896777e9bab32a6509df6bd974d5d4f97304064356c56e8132795"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/registrar.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/results.json",
+      "sha256": "a560d72f315d305a6e8ffdb7cf7b1948f8f0be3d838b1299eb27b3968d2bef68"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v3/transport.stdout",
+      "sha256": "b5c279c14818125a5e8331656b222cb303fd0bfeb1867bffac24c7f8921f380c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/peer.stdout",
+      "sha256": "bea6039eaaabb63784d9e2284196dd5a3e3d837deb4be83842e75cced4615e4a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/peer.stderr",
+      "sha256": "41bdd779205db548e5f5e69bb062899f5289d7c0aede90771797b3500f98c1ab"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/registrar.stdout",
+      "sha256": "f496b0b15db756bd4f9cd46dd9041506481b428c70eb064715193468d1e6ab23"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/registrar.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/results.json",
+      "sha256": "236763ab912400a57d7ac7daf228a3e736e8a7da84fb794dd06f4be3355eff28"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v4/transport.stdout",
+      "sha256": "57b3a1655b6c22a46d7d2c014170c5a840375e187c2bdf8127de2c329ff00d27"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/peer.stdout",
+      "sha256": "d7fcde98aa5f3e5c937956dfab97336c0356b45b3927c24c589f4f97ee7c1fea"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/peer.stderr",
+      "sha256": "41bdd779205db548e5f5e69bb062899f5289d7c0aede90771797b3500f98c1ab"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/registrar.stdout",
+      "sha256": "3c4b7452bc948ad12f9515856fc52703d09aea7991718acf928297fe6a89652f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/registrar.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/results.json",
+      "sha256": "4eb455c3890e972b0eb19e1db34a089c7008db482e361d24d985b403d463380c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v5/transport.stdout",
+      "sha256": "6ceb4033087aec587899907fa280b5496c6e569b619b58a6d8fb74c07ccc575e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/peer.stdout",
+      "sha256": "45206fdfa60fd763d54556016b81191721597754f8784af82f23c3a6fd680918"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/peer.stderr",
+      "sha256": "41bdd779205db548e5f5e69bb062899f5289d7c0aede90771797b3500f98c1ab"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/registrar.stdout",
+      "sha256": "0a0e061e31be9ae547c390bf7a80303574ff72c02ea164df57c03b773e3bd7b8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/registrar.stderr",
+      "sha256": "6043fb773173304540063df3b792800a5056320de68b09ea115e4ca5d089daca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/transport.stdout",
+      "sha256": "99ea21df6b24ef585cb20b39bfa0ae11aa2fa685049f2d25834db0ca23ba08fe"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-session-capacity-v6/results.json",
+      "sha256": "163b9fc34f5a4b9a7d5843473fa629dd2ead26762de3a52090f081acf51e0943"
+    }
+  ]
+}

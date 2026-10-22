@@ -21,7 +21,35 @@ static int lf_hook_failures;
 #define LF_COMMUNITY 1
 #define LF_NEXT RTLD_DEFAULT
 static void community_discovery_poll(void);
+#ifdef LF_PUBLIC_SDK_PROBE
+static void public_sdk_probe_poll(void);
+static int public_sdk_inventory_drain(unsigned slot);
+#endif
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+static void public_mod_poll(void);
+static int public_mod_drain(unsigned slot);
+#endif
+#ifdef LF_PUBLIC_SHARING_RUNTIME
+static void public_runtime_poll(void);
+static int public_runtime_drain(unsigned slot);
+#endif
 #include "linkfake.c"
+#ifdef LF_PUBLIC_NATIVE_STATUS_OBSERVER
+#include "native-status-observer.h"
+#endif
+#ifdef LF_PUBLIC_SHARING_RUNTIME
+#include "public-sharing-runtime.h"
+#endif
+#ifdef LF_PUBLIC_SDK_PROBE
+#include "public-sdk-probe.h"
+#endif
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+#define HUB_PUBLIC_MOD_REPORT(slot,incarnation,state,error,bound,wanted) \
+    lf_log("public-sharing source=%u incarnation=%llu state=%d error=%d bound=%d wanted=%d", \
+        slot,(unsigned long long)(incarnation),state,error,bound,wanted)
+#include "public-mod-emulator.h"
+#undef HUB_PUBLIC_MOD_REPORT
+#endif
 #include "discovery.h"
 #include "kernel-asset.h"
 #include "usb-presence.h"
@@ -33,7 +61,9 @@ static void community_discovery_poll(void);
 #include "safe-eject.h"
 #include "link-cached-status.h"
 #ifdef LF_EJECT_UI
+#define HUB_BADGE_LOG(...) lf_log(__VA_ARGS__)
 #include "source-badge-render.h"
+#undef HUB_BADGE_LOG
 #endif
 #endif
 
@@ -104,6 +134,12 @@ static void community_discovery_poll(void) {
  * terminal state so they exit, and close the unpublished loopback sockets. */
 static int community_abort(int result) {
     __atomic_store_n(&community_ready,-1,__ATOMIC_RELEASE);
+#ifdef LF_PUBLIC_SDK_PROBE
+    public_sdk_probe_cleanup();
+#endif
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+    public_mod_abort();
+#endif
     for (int i=0;i<nfakes;i++) if (fakes[i].sock>=0) {
         close(fakes[i].sock);fakes[i].sock=-1;
     }
@@ -157,7 +193,16 @@ static int community_init(const az_core_v1 *core) {
     if (source_badge_prepare()) return community_abort(-90);
 #endif
     linkfake_init();
+#ifdef LF_PUBLIC_NATIVE_STATUS_OBSERVER
+    if (native_status_observer_install()) return community_abort(-94);
+#endif
     if (lf_hook_failures) return community_abort(-4);
+#ifdef LF_PUBLIC_SDK_PROBE
+    if (public_sdk_probe_prepare()) return community_abort(-93);
+#endif
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+    if (public_mod_prepare()) return community_abort(-92);
+#endif
     if (hub_tag_cache_prepare()) return community_abort(-30);
     if (core->thread_start("usb-hub-support","HubMount",community_mount_worker,NULL)) return community_abort(-28);
     if ((nfakes || getenv("LINKFAKE_AUTODISCOVER")) &&

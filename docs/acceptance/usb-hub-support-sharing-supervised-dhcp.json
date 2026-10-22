@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Supervised native one-shot acquisition with conservative pre-spawn grant reference and separate namespace helper",
+  "evidence_directory": "local/diagnostics/sharing-supervised-dhcp-v2",
+  "runner_exit": 0,
+  "source_sha256": {
+    "src/azhub/linkfake/public-dhcp-acquire.h": "e7cda6f8bf560ca48be118de697d293dc80b4564139b043a240a57405fdee417",
+    "src/azhub/linkfake/public-dhcp-child.h": "f27611f7a5b0e19b5f6ddff1a4940f86e6e2a44e5834cdd9e6660f563b164ba5",
+    "src/azhub/linkfake/public-network-helper.c": "cdeb9cf249c6071b050d370200cfc43efa695d2ccbb3fa71b9ce0e956b9ea442",
+    "src/azhub/linkfake/test-public-dhcp-acquire.c": "ca1dd6891a6d1264487c899935d6c50e6792ef545f910fcc7ae90ed9e47e1167",
+    "src/azhub/research/scripts/test-live-dhcp-emulator.py": "d6ba140bb0f38ff4b56930e78c4dead1a3bfe1d3df4ac5dbe9832e0541059bf4"
+  },
+  "binary_sha256": {
+    "acquisition_control": "afd1084003ec7644bff0f5895c8a8d52da76f95885863967afd5f09426f067ce",
+    "standalone_helper": "9a47b5eefec1b89d8ecbd1a00bce3a1045c08fc9c197e4926845274c03146750"
+  },
+  "tests": {
+    "targeted_tsan": "passed",
+    "full_tsan": 62,
+    "targeted_asan_ubsan": "passed",
+    "full_plain": 62,
+    "full_asan_ubsan": 62,
+    "full_log": "local/integration/dhcp-acquire-v1/host-suite.log",
+    "targeted_plain": "passed",
+    "hook_registration": "passed"
+  },
+  "validated": [
+    "Fresh nonblocking pipe per attempt; parser, exit0, EOF and reap required",
+    "Pre-spawn monotonic timestamp anchors C lease candidate deadline",
+    "Actual native udhcpc OFFER/ACK through separately execd namespace helper",
+    "Acquisition parent namespace unchanged",
+    "Clean environment, descriptor cleanup, cancellation/deadline and malformed-record controls",
+    "Current source lease candidate remains unready before ARP/configuration"
+  ],
+  "cleanup": {
+    "native_EP147_DHCP_PIDs_DNS_routes_preserved": true,
+    "transport_errors": [],
+    "test_module_removed": true,
+    "owned_guest_host_namespaces_removed": true,
+    "NAT_fixture_DHCP_replies_suppressed": 2
+  },
+  "limitations": [
+    "Initial acquisition only; fresh-acquisition refresh scheduling not integrated",
+    "Requires exclusive child reaping and default SIGCHLD; EP147/core broker integration pending",
+    "No IP application, full live ARP/source endpoint coupling or DHCPDECLINE",
+    "Not enabled in mod or included in published package",
+    "No target4.4 runtime, physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

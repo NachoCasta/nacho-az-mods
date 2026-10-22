@@ -13,6 +13,8 @@ def main():
     parser.add_argument('--seconds', type=float, default=30)
     parser.add_argument('--status-payloads', action='store_true',
                         help='Include exact 1152-byte AZ status payloads for local privacy audits')
+    parser.add_argument('--rpc-summary', action='store_true',
+                        help='Include bounded RPC headers on fixture file-service ports, without file payloads')
     args = parser.parse_args()
     if not 0 < args.seconds <= 3600:
         parser.error('Expected duration (0, 3600]')
@@ -42,8 +44,16 @@ def main():
                 continue
             data = ip[ihl + 8:ihl + length]
             if not data.startswith(b'Qspt1WmJOL'):
+                if args.rpc_summary and len(data) >= 24 and ({sport, dport} & {111, 50111, 40000, 2049}):
+                    words = struct.unpack_from('!6I', data)
+                    if words[1] in (0, 1):
+                        print(json.dumps(dict(event='rpc_header', monotonic_ns=time.monotonic_ns(),
+                            source=socket.inet_ntoa(ip[12:16]), destination=socket.inet_ntoa(ip[16:20]),
+                            source_port=sport, destination_port=dport, payload_bytes=len(data),
+                            header_words=words)), flush=True)
                 continue
             event = dict(monotonic_ns=time.monotonic_ns(), source=socket.inet_ntoa(ip[12:16]),
+                         source_mac=frame[6:12].hex(':'),destination_mac=frame[:6].hex(':'),
                          destination=socket.inet_ntoa(ip[16:20]), source_port=sport,
                          destination_port=dport, link_type=data[10], payload_bytes=len(data),
                          packet_direction=address[2])

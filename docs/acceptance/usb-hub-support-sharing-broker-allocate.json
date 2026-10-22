@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Distinct ALLOCATE root-capability wire operation and asynchronous publication gate; allocation readiness callbacks are fixtures",
+  "source_sha256": {
+    "public-broker-wire.h": "9cbeb04dfbaf90d4285585f892793b5aefa73c168b3356669eb277f8a0faea1a",
+    "public-broker-source.h": "c5544873d1570ad27771abc1719a3b229c5e259a31c4bcc4292ac39894b47208",
+    "public-broker-dispatch.h": "4fd4256b8793883f5b12b74b74239f862de1ff085883644e9b8683d9eda774f4",
+    "test-public-broker-wire.c": "a5df6c4bef145844dfdcccf397cf3fa96c6309df5f4fd98ded4f72dcf666b287",
+    "test-public-broker-dispatch.c": "eb0e94bef9a884c77148a88fe06836d6b9df10f16d785367b64452d140edb112"
+  },
+  "binary_sha256": "7ac056733b6cc05ca508954735b70fafacc7ca722128bee7191c6270bda81f87",
+  "tests": {
+    "targeted_wire_dispatch_plain_asan_ubsan_tsan": "passed",
+    "pinned_aarch64_dispatch": "passed",
+    "pinned_mod_helper_build": "passed"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/allocate-dispatch-targeted.log",
+    "local/integration/sdk-broker-probe-v1/allocate-dispatch-emulator.json",
+    "local/integration/sdk-broker-probe-v1/allocate-dispatch-build.log"
+  ],
+  "validated": [
+    "ALLOCATE wire frame carries one verified root FD, distinct from SOURCE namespace FD",
+    "Root identity/access validation and CLOEXEC duplicate",
+    "No worker publication until asynchronous ready callback",
+    "Cancellation before readiness closes retained root and waits for release",
+    "Root survives pathname replacement before staging",
+    "Readiness loss after ACTIVE retires worker/endpoints",
+    "Legacy SOURCE/session/token/backpressure/lease controls still pass targeted dispatch test"
+  ],
+  "limitations": [
+    "Allocation/release readiness callbacks remain fixtures in these tests",
+    "Real DHCP/ARP controller is not yet wired to ALLOCATE in helper executable",
+    "No SDK/runtime ALLOCATE trial or native eject acceptance yet",
+    "Full76/76/76 record predates ALLOCATE addition"
+  ],
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Host C advertised source worker consumed by native XDJ-AZ client in localhost emulator over isolated TAP",
+  "fixture": "Private copied real PDB with one MP3 and three analysis files, owned Linux temporary directory",
+  "server_sha256": "436276fc5fbe3280ac330a779f8194572a06e3a1bd48a37e14faee3f1a4ef36b",
+  "source_sha256": {
+    "src/azhub/linkfake/public-rpc-export.h": "bd56aa3ff9f845ba73dcbcc1147667190421e51966c1cb79e54cb5a6852f54df",
+    "src/azhub/linkfake/public-source-worker.h": "19d1e79b68faf5727fd44a48566a6be9210191ba583ad383566ba48afba97a1f",
+    "src/azhub/linkfake/public-provider-udp.h": "a12ccb58a88f2ef3d352f766dc1f4f4c2687cd337458d2431366a50c1ace7c9d",
+    "src/azhub/research/scripts/public-db-library-server.c": "c3b6ae939b0b32a952f82e37e9d90d8ac9b7ac2f12c7c8758f68c8e1308b40b5"
+  },
+  "source_menu": {
+    "songs": 2546,
+    "label": "Hub USB1 Research",
+    "reviewed_local_screenshot": "registered-provider17.png"
+  },
+  "track_browser": {
+    "reviewed_local_screenshot": "c-browse-open.png",
+    "displayed": true,
+    "title_bpm_key_visible": true,
+    "count": 2546
+  },
+  "rpc": {
+    "network_group": "192.0.2.2/255.255.0.0",
+    "native_mount_observed": true,
+    "export_reply_bytes": 76,
+    "native_readdir_lookup_observed": true,
+    "portmapper": 50111
+  },
+  "targeted_group_tests": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "limitations": [
+    "Playlist view blank; unresolved",
+    "Track loading/playback not tested",
+    "Host implementation with copied fixtures, no mod runtime integration",
+    "One advertised source only",
+    "No local/remote concurrency or native eject acceptance",
+    "TCP request-by-request tracing pending",
+    "No actual CDJ or physical AZ acceptance"
+  ],
+  "evidence_directory": "local/diagnostics/sharing-c-provider-v6",
+  "evidence_files": [
+    "wire.stdout",
+    "peer1.stdout",
+    "peer1.stderr",
+    "transport.stdout",
+    "transport.stderr"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Standalone C legacy cue response; mod runtime not integrated",
+  "request": "0x2104",
+  "response": "0x4702",
+  "real_fixture_reference": "usb-hub-support-sharing-cue-input.json",
+  "independent_client": "Unchanged Beat Link Client and CueList",
+  "matched_entries_per_fixture": [
+    2,
+    3,
+    3
+  ],
+  "oracle": "Direct Crate Digger DAT decoding through CueList",
+  "real_scope": "Hot cues only",
+  "synthetic_controls": [
+    "Combined memory/hot lists",
+    "Loop flags and half-frame positions",
+    "Duplicate list-kind rejection",
+    "Source mutation between sections rejected",
+    "Partial allocation cleanup"
+  ],
+  "host_matrix": {
+    "plain": 50,
+    "tsan": 50,
+    "asan_ubsan": 50
+  },
+  "hook_registration": "passed separately under WSL",
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "941d5d985ac1cc97750264f492b1105fb3222c8b694746de3c9aa563cfa955f0",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "regression": "Two concurrently launched Beat Link controls match six analysis sections,306 beats,39862 detail samples,400 preview columns and100 tiny samples while a third peer stalls greeting",
+  "limitations": [
+    "Unknown entry fields zero-filled and auxiliary blob empty",
+    "Deleted-entry status semantics unresolved",
+    "No real memory/loop network oracle acceptance",
+    "Extended cues/comments/colors pending",
+    "Native rendering/interoperability pending",
+    "Joint runtime integration pending"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-cues.h": "fd62a0362a3e48e44cdf5954719c4f9033dd86f3ecc878418ca1033054da03c0",
+    "src/azhub/linkfake/public-db-menus.h": "d44675c41acf1b675d73d445094c7154a5b8a138b41e8116b42fb79fc515855c",
+    "src/azhub/linkfake/test-public-cues.c": "fbe322c503eef0fcb41877d4fce9ec85ff4e6134f4a3fd9dfe0967fae4820e38",
+    "src/azhub/linkfake/test-public-db-menus.c": "b90dce71bc39de0e57e43aff9db0abb401835d61d00e818ce4956f799fe77401",
+    "src/azhub/research/link-peer/src/main/java/DbCueControl.java": "47414c04770159f808953b5d281621d12934f0961011e84f613f08cf855a335d",
+    "src/azhub/research/scripts/test-public-db-cues.py": "e480b3c4091da9ac6a10ac8798b8eae9da605449174f9a6d62c02170a5ba9c23"
+  },
+  "evidence_directory": "local/diagnostics/sharing-cues-v1",
+  "physical_az_operations": false,
+  "publication": false
+}

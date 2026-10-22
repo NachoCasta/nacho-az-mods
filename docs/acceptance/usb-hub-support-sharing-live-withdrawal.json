@@ -1,0 +1,59 @@
+{
+  "scope": "Standalone AArch64 live-source withdrawal observed from isolated external host",
+  "server_sha256": "d2fa66b9936871f570cefe977b37ae6df28ddafd6f47081985350a316cbed342",
+  "source_sha256": {
+    "src/azhub/linkfake/public-source-service.h": "0df2db085c1b23f9faeb69a3ea2be9f1c65f4dd7ca7e20768a66944f8f32a852",
+    "src/azhub/linkfake/public-source-worker.h": "4870dd63ff946dc43f3f4eb61a60762f115029333468d51a78899934b34fb4b0",
+    "src/azhub/linkfake/public-provider-udp.h": "e34d9d640d1e4b5c1a42dbc816b06b016ac34fcc181625143280e0de9a23ca29",
+    "src/azhub/research/scripts/public-db-library-server.c": "a1b06f04a1ead9d1d2ec4fa4c3e7392999fd18c084d963053a7daea2ef4ad36a",
+    "src/azhub/research/link-peer/src/main/java/ProviderLifecycleControl.java": "44496caf162c2fe05c4b284b0938035c5e559a9ff2e46ba947d642f00b4944fd"
+  },
+  "rpc_aliases": [
+    111,
+    50111
+  ],
+  "same_catalog_and_peer_policy": true,
+  "checks": {
+    "db_port_lookup_closed": true,
+    "exports_empty_on_both_ports": true,
+    "metadata_connection_closed": true,
+    "old_handle_stale_on_both_ports": true,
+    "metadata_handshake_completed": true,
+    "pre_withdraw_alias_portmapper_agrees": true,
+    "valid_root_handle_retained": true,
+    "devicefinder_source_expired": true
+  },
+  "independence": {
+    "rpc_probes": "Repository-authored explicit RPC control; not independent NFS implementation",
+    "metadata_handshake": "Unchanged Beat Link Client",
+    "discovery_expiry": "Unchanged Beat Link DeviceFinder"
+  },
+  "full_live_menu_and_exact_download_regression_passed": true,
+  "focused_alias_and_worker_tests": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "evidence_directory": "local/diagnostics/sharing-live-lifecycle-v1",
+  "evidence_files": [
+    "lifecycle.stdout",
+    "lifecycle.stderr",
+    "result.json",
+    "guest-commands.json",
+    "discovery-and-menus.stdout",
+    "database.stdout",
+    "audio.stdout"
+  ],
+  "limitations": [
+    "Source withdrawal only, no USB unmount/native eject integration",
+    "No external loaded-deck cache or playback acceptance",
+    "One live source, no neighbor/concurrent-deck acceptance",
+    "No reconnect-generation test",
+    "No physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false,
+  "owned_scope_clean_exit": true,
+  "owned_namespaces_and_module_removed": true
+}

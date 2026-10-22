@@ -1,0 +1,153 @@
+{
+  "recorded_at_utc": "2026-10-20T20:19:24.585011+00:00",
+  "scope": "C NFSv2 READ body over source-owned live file references",
+  "production_runtime_integration": false,
+  "published_release_changed": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "C file references capture source owner/generation and file device/inode; replacement inode is rejected rather than serving new content through an old reference",
+    "NFS READ serializes standard status/fattr/data, partial reads/EOF and zero XDR padding; requests above8192 are refused",
+    "Cross-source references and withdrawn roots return STALE70; operation lease is released before a caller can perform a network send",
+    "Pinned Linaro AArch64 test passes in localhost emulator and needs only GLIBC2.17",
+    "Host test decoder validates live emulator hub0 PDB/audio READ bodies and payload hashes against prior source fixtures; no raw payload is stored in tracked evidence"
+  ],
+  "live_file_control": {
+    "scope": "C NFS READ bodies from live emulator hub0, decoded independently on host; not a network RPC client",
+    "kernel": "6.6.138-dirty",
+    "synthetic_test_exit": 0,
+    "binary_sha256": "8e06d6534b3ce16e35afb5f90bb5fc19d47a3be036b6dae41f1639b37914590a",
+    "results": [
+      {
+        "fixture": "database",
+        "bytes": 4096,
+        "full_file_bytes": 4419584,
+        "payload_sha256": "ac6a00565a06e78fa42f577d8dbfd7faf2dea709049d088560b765b1e4ea30a5",
+        "wire_body_sha256": "27103dd225a6c9ecc49db980fb6231e37e89deedbef6f297d657f9d10e2edc0a",
+        "matches_prior_source_fixture": true
+      },
+      {
+        "fixture": "audio",
+        "bytes": 8192,
+        "full_file_bytes": 10881597,
+        "payload_sha256": "87bfed547db1403004f82b7870396c9144cda2355cf31b6646c08d0692a9fc51",
+        "wire_body_sha256": "b8299b3b0413931fe62d287c611684492b1e8b77f1259915a9cf397ffd21d781",
+        "matches_prior_source_fixture": true
+      }
+    ]
+  },
+  "verification": {
+    "passed_cases": {
+      "plain": 33,
+      "asan": 33,
+      "tsan": 33
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": "Separately passed official WSL check; container has no Python",
+    "container_network": "none",
+    "workspace_mount": "read-only",
+    "tsan_personality": "Allowed only inside ephemeral test container; no global sysctl change"
+  },
+  "limits": [
+    "READ body encoder only, not an RPC daemon or an opaque NFS handle implementation",
+    "No C network-client interoperability acceptance from the SSH emitter; earlier Crate Digger controls test the separate host prototype",
+    "Only4096 PDB bytes and8192 audio bytes sampled from live emulator files; not complete-file or playback proof for this C component",
+    "File authorization, generation-safe wire handles, mount/lookup/directory service and runtime source lifecycle still need integration",
+    "NFSv2 size field is32-bit; oversized source files are explicitly refused",
+    "No hardware4.4 runtime or actual-CDJ validation"
+  ],
+  "references": [
+    "https://www.rfc-editor.org/rfc/rfc1094"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/live-file-result.json",
+      "sha256": "f82833feffba86a610b20f8b006b541905d5c235734b74708748f4b52986384b"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/emulator-synthetic.stdout",
+      "sha256": "cc2987f097acb9d5f320f5690e8185b8d62ff4d0a5fd2a7a4e3893c0c17ffa1e"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/matrix-result.json",
+      "sha256": "7e305af9de3cc44022ad0af6b8129fad4c263b5e77041d701539422b3d0bed19"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/portable-matrix.stdout",
+      "sha256": "14b31b00bddcc8220f51cf5df5e781b2c5c5d46804a7484ad14c50386005e61b"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/portable-matrix.stderr",
+      "sha256": "343dd91eecf759625cbff9c23bc087915b684695cc387b9125fb773235fcb739"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/hook-registration.stdout",
+      "sha256": "cec4e7328c6281c0e9e38d030d93d63da1ff78e7db7bccf50f62875c4e79b125"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/hook-registration.stderr",
+      "sha256": "bad2d855c95b8b5e5b9b78ef10d9c86e2328b6a72bf5710e7dbb95fd7b8ed038"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/portable-container-script.sh",
+      "sha256": "852297ddc5f050b5bdb2c38437b19043f3586888d1ac71ec3dbf851e5de9e9b0"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/test-image.txt",
+      "sha256": "3bf840f20d71c516455fc2c9652bc5b637252af1cddd1af9444895e25a1fa215"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/test-aarch64",
+      "sha256": "8e06d6534b3ce16e35afb5f90bb5fc19d47a3be036b6dae41f1639b37914590a"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/source-used/public-file-root.h",
+      "sha256": "a5029192984ff70b4c6af3f49cb0bac4fad2e89c6658aee110e641db471d0c74"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/source-used/public-nfs-read.h",
+      "sha256": "2480943c0b39a3a1f059f4801c5b18e33506dcbf70907dc3a3a2a499149cf71a"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/source-used/test-host.sh",
+      "sha256": "dc6e189e734c54993e0378c135585c870bd3e0f7bbae91340a5d286ff9d3fb0c"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-nfs-read-v1/source-used/test-public-nfs-read.c",
+      "sha256": "c7b1f9dc5436de8ea0d8e533b349ca71ed607111ad3012f59c64b430031a292b"
+    }
+  ]
+}

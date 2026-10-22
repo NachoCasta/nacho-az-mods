@@ -1,0 +1,44 @@
+{
+  "scope": "Non-diagnostic integrated runtime Link On/Off/On with live old-log retention and independent full clients; emulator only",
+  "evidence_directory": "local/diagnostics/sharing-integrated-log-mode-cycle-v1",
+  "mod_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "mode_cycle": {
+    "native_application_pid": "1728485",
+    "old_helper_pid": 1728969,
+    "new_helper_pid": 1732321,
+    "fresh_IPC_session": true,
+    "old_endpoints_withdrawn": true,
+    "native_and_hub_backing_mounts_preserved": true,
+    "initial_and_final_user_mode": 1,
+    "local_loaded_decks_tested": false
+  },
+  "log_retention": {
+    "first_session_families": 1,
+    "seeded_old_families": 2,
+    "seeded_old_files": 4,
+    "seed_mtime": "2000-01-01T00:00",
+    "seeded_files_removed_on_next_launch": true,
+    "previous_and_current_family_count": 2,
+    "actual_remaining_files": [
+      {
+        "path": "/media/usb/sda1/MODS/community-mods/usb-hub-support/data/public-sharing-0eb74be4d54ac1d1b5558fe39af6c288.log",
+        "bytes": 540
+      },
+      {
+        "path": "/media/usb/sda1/MODS/community-mods/usb-hub-support/data/public-sharing-2abc9f1cf34f594148bad87e2f0e0450.log",
+        "bytes": 421
+      }
+    ],
+    "control_method": "Explicit emulator-only seed/observe operations during the managed run. Equivalent --verify-log-retention automation added and syntax-checked for future runs."
+  },
+  "independent_clients": "Complete two-source menus and exact PDB/audio before mode change and again after fresh helper/session",
+  "native_and_hub_mounts_preserved": true,
+  "native_fresh_file_access_tested": false,
+  "local_loaded_decks_tested": false,
+  "final_global_retirement_and_helper_exit": true,
+  "original_package_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "actual_CDJ_acceptance": false
+}

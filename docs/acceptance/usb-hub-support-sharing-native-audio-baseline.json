@@ -1,0 +1,124 @@
+{
+  "recorded_at_utc": "2026-10-20T17:33:42.199975+00:00",
+  "scope": "Independent native audio-file transfer and RPC endpoint control; not hub export or actual playback acceptance",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "client": "Unchanged Beat Link8.0.0 menus and Crate Digger0.2.1 FileFetcher",
+  "native_source": "player1 USB, mount/C/, selected sparse-fixture MP3",
+  "file_bytes": 10881597,
+  "file_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+  "native_USB_hash_matches": true,
+  "temporary_download_deleted": true,
+  "RPC_observations": [
+    {
+      "kind": "call",
+      "program": 100000,
+      "version": 2,
+      "procedure": 3,
+      "server_port": 111,
+      "count": 2
+    },
+    {
+      "kind": "reply",
+      "program": 100000,
+      "version": 2,
+      "procedure": 3,
+      "server_port": 111,
+      "count": 2
+    },
+    {
+      "kind": "call",
+      "program": 100005,
+      "version": 1,
+      "procedure": 1,
+      "server_port": 49834,
+      "count": 1
+    },
+    {
+      "kind": "reply",
+      "program": 100005,
+      "version": 1,
+      "procedure": 1,
+      "server_port": 49834,
+      "count": 1
+    },
+    {
+      "kind": "call",
+      "program": 100003,
+      "version": 2,
+      "procedure": 4,
+      "server_port": 2049,
+      "count": 4
+    },
+    {
+      "kind": "reply",
+      "program": 100003,
+      "version": 2,
+      "procedure": 4,
+      "server_port": 2049,
+      "count": 4
+    },
+    {
+      "kind": "call",
+      "program": 100003,
+      "version": 2,
+      "procedure": 6,
+      "server_port": 2049,
+      "count": 5314
+    },
+    {
+      "kind": "reply",
+      "program": 100003,
+      "version": 2,
+      "procedure": 6,
+      "server_port": 2049,
+      "count": 1
+    }
+  ],
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "limits": [
+    "Header observer skips fragmented IPv4 replies; unmatched READ counts do not imply failed delivery",
+    "File hash equality proves complete byte transfer, not decoding/playback, actual-CDJ interoperability or phase sync",
+    "No hub sharing design selected or implemented",
+    "Native remote-in-use eject, stale-handle behavior and representation limits remain pending",
+    "Existing Beat Link asynchronous shutdown listener warnings remain recorded"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/peer.stdout",
+      "sha256": "3eea7a1d4d770e1588d5dceec39390a426ce245fdff7dd075a723b0e0d3e146c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/peer.stderr",
+      "sha256": "d82b2cc1696cab761a33bf4d1838b0a9d3f59f1a42693bfcdb9bd050d309b6d8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/wire.stdout",
+      "sha256": "1b4088b34d6d53519077fcff3e7d61fc4675d9738a06718634d7bb6e6c2fed05"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/transport.stdout",
+      "sha256": "6a6ebdcc887465c40ff8701308c0e584828e8618f8e4c700eb744b8a9ed16171"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/results.json",
+      "sha256": "4c40c120660670845cec3d308fc7ba24a5345d2f2c1978f24f4f8a5738a93d4a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/guest-audio-hash.txt",
+      "sha256": "9dca7cb3e00a19dc0c899b2b6b357ad3436137e2a6889aae09e1e65464e232ca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-audio-v1/server-network-inventory.txt",
+      "sha256": "9a320327e967165cb93e47c3a4ddef04c1dcf595e10dc36f7c1d1af15357dd47"
+    }
+  ]
+}

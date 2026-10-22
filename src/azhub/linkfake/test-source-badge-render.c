@@ -8,6 +8,7 @@
 typedef uint64_t (*fn8)(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static struct { int player,slot; } fakes[8]={{7,3},{7,7},{8,3},{8,7},{7,8},{8,8},{7,2},{8,2}};
 static int nfakes=8,ready=1,decode_calls,fail_decode,hook_calls,assign_calls,live_handles;
+static int native_base_done,partial_failure,compose_successes;
 static unsigned refs[25];
 static int lf_runtime_ready(void) { return ready; }
 static int safe_source_identity(uint64_t identity) {
@@ -15,11 +16,12 @@ static int safe_source_identity(uint64_t identity) {
 }
 static int compose(int family,int number,uintptr_t *image) {
     assert(family>=0 && family<3 && number>=1 && number<=8);
-    int id=++decode_calls;
-    assert(id==family*8+number);
-    if (id==fail_decode) { *image=0; return 0; }
+    assert(native_base_done); /* Never read native resources from init(). */
+    ++decode_calls;int id=family*8+number;
+    if (id==fail_decode && !partial_failure) { *image=0; return 0; }
     assert(id<=24 && !refs[id]);*image=(uintptr_t)id;refs[id]=1;live_handles++;
-    return 1;
+    if (id==fail_decode) return 0;
+    ++compose_successes;return 1;
 }
 static void destroy(uintptr_t *image) {
     if (*image && *image<=24) {
@@ -27,7 +29,6 @@ static void destroy(uintptr_t *image) {
         if (!--refs[*image]) live_handles--;
     }
 }
-static int native_base_done;
 static void assign(uintptr_t *destination,const uintptr_t *source) {
     assert(native_base_done && *source && *source<=24 && refs[*source]);
     destroy(destination);*destination=*source;refs[*source]++;assign_calls++;
@@ -67,7 +68,7 @@ static void check_description(uint64_t controller,uint64_t description) {
     assert(controller==(uintptr_t)current->controller);
     assert(description);
     unsigned char expected[16];memcpy(expected,current->description,sizeof expected);
-    if (current->owned) {
+    if (current->owned && source_badge_images[current->family][current->number-1]) {
         expected[5]=0;memset(expected+8,0,8);
         assert(description!=(uintptr_t)current->description);
     } else assert(description==(uintptr_t)current->description);
@@ -87,8 +88,9 @@ static uint64_t native_root(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t
 static void render_current(void) {
     native_base_done=0;int before=assign_calls;
     assert(source_badge_base((uintptr_t)current->controller,(uintptr_t)current->description,3,4,5,6,7,8)==0xbace);
-    assert(assign_calls==before+current->owned);
-    uintptr_t expected=current->owned ? (uintptr_t)(current->family*8+current->number):1000;
+    int composed=current->owned && source_badge_images[current->family][current->number-1];
+    assert(assign_calls==before+!!composed);
+    uintptr_t expected=composed ? (uintptr_t)(current->family*8+current->number):1000;
     assert(current->widget[26]==expected);
     assert(source_badge_root((uintptr_t)current->controller,(uintptr_t)current->description,3,4,5,6,7,8)==0xf00d);
 }
@@ -109,24 +111,36 @@ static void run(struct fixture *fixture) {
 static void release_widget(struct fixture *fixture) { destroy(&fixture->widget[26]);fixture->widget[26]=0; }
 int main(void) {
     assert(source_badge_install()==-90 && !hook_calls);
-    /* Any failed image leaves no retained handles and installs no hooks. */
+    assert(!source_badge_prepare() && !decode_calls && !live_handles);
+    assert(!source_badge_prepare() && !decode_calls);
+    assert(!source_badge_install() && hook_calls==3);
+    struct fixture fixture;
+    /* A failed lazy image keeps native fields and never retires a neighbor.
+     * Partial decoder outputs are released, and failures are not retried per frame. */
     for (int failure=1;failure<=24;failure++) {
-        decode_calls=0;fail_decode=failure;
-        assert(source_badge_prepare()==-90);
-        assert(decode_calls==failure && !live_handles && !hook_calls);
+        decode_calls=0;fail_decode=failure;partial_failure=failure&1;
+        initialize(&fixture,(failure-1)/8,(failure-1)%8+1);run(&fixture);
+        assert(decode_calls==1 && !live_handles && fixture.widget[26]==1000);
+        run(&fixture);assert(decode_calls==1 && fixture.widget[26]==1000);
+        int neighbor=failure%24+1;
+        initialize(&fixture,(neighbor-1)/8,(neighbor-1)%8+1);run(&fixture);
+        assert(decode_calls==2 && live_handles==1 && fixture.widget[26]==(uintptr_t)neighbor);
+        release_widget(&fixture);source_badge_discard_images();assert(!live_handles);
         for (int i=1;i<=24;i++) assert(!refs[i]);
+        assert(!source_badge_prepare());
     }
     decode_calls=0;fail_decode=0;
-    assert(!source_badge_prepare() && decode_calls==24 && live_handles==24);
-    assert(!source_badge_prepare() && decode_calls==24);
-    assert(!source_badge_install() && hook_calls==3);
+    /* Another callback's in-flight slot falls back without waiting or composing. */
+    source_badge_attempted[0][0]=1;
+    initialize(&fixture,0,1);run(&fixture);assert(!decode_calls && fixture.widget[26]==1000);
+    source_badge_attempted[0][0]=0;
     /* Every family/number selects a distinct cached handle and owns a reference. */
-    struct fixture fixture;
     for (int family=0;family<3;family++) for (int number=1;number<=8;number++) {
         initialize(&fixture,family,number);run(&fixture);
         assert(refs[family*8+number]==2);release_widget(&fixture);
-        assert(live_handles==24);
+        assert(live_handles==family*8+number);
     }
+    assert(decode_calls==24);
     /* The incoming identity wins over stale controller state, including reuse. */
     initialize(&fixture,0,1);run(&fixture);
     fixture.number=8;fixture.closure[1]=107;run(&fixture);
@@ -150,9 +164,9 @@ int main(void) {
     /* No callback scope means no claim, even for a recognized widget. */
     initialize(&fixture,0,1);fixture.owned=0;current=&fixture;render_current();
     assert(fixture.widget[26]==1000);
-    assert(base_calls==root_calls && callback_calls>24 && live_handles==24);
+    assert(base_calls==root_calls+compose_successes && callback_calls>24 && live_handles==24);
     source_badge_discard_images();assert(!live_handles);
     for (int i=1;i<=24;i++) assert(!refs[i]);
-    puts("source badge rendering: ownership, nested callbacks, image lifetime and failure cleanup pass");
+    puts("source badge rendering: resource-free init, deferred composition, native failure fallback, ownership and image lifetime pass");
     return 0;
 }

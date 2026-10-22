@@ -1,0 +1,118 @@
+{
+  "recorded_at_utc": "2026-10-21T00:57:20.467137+00:00",
+  "scope": "C classic PDB track metadata scalar/reference extraction",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Reader emits ID/path/analysis/title/comment, file size, artwork/key/label/genre/album/artist IDs, bitrate/BPM/duration/rating",
+    "All16 fields across2546 records match Crate Digger v3 snapshot of same source PDB",
+    "Synthetic nonzero file size/BPM/duration/rating/comment assertions prevent zero-default false positives",
+    "Pinned AArch64 executable reads live hub0 PDB and full16-field output matches host C/Java oracle",
+    "Compatibility scan output remains four fields; scan-full is an explicitly separate research output",
+    "No public metadata response encoder/index or playlists are implied by extraction alone"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 41,
+      "asan": 41,
+      "tsan": 41
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "public-library-files",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "oracle": {
+      "tracks": 2546,
+      "fields": [
+        "id",
+        "path",
+        "analysis_path",
+        "title",
+        "comment",
+        "file_size",
+        "artwork_id",
+        "key_id",
+        "label_id",
+        "bitrate",
+        "bpm100",
+        "genre_id",
+        "album_id",
+        "artist_id",
+        "duration",
+        "rating"
+      ],
+      "all_match": true,
+      "oracle": "sharing-hub0-library-v3.json"
+    },
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "synthetic_exit_code": 0,
+      "live_scan_exit_code": 0,
+      "live_rows": 2546,
+      "fields_per_row": 16,
+      "matches_host_and_java_oracle": true,
+      "binary_sha256": "25002c6f6ffc07828482fb3d9df7035f7b4e8cf3efe82b8f01a90246a5024d40"
+    }
+  },
+  "oracle_snapshot_sha256": "35953f2ce9ff79401130c8483d5966c9bfcd7c2e168bb3fef787d6d98aa6ebb8",
+  "source_sha256": {
+    "public-pdb-reader.h": "850e45c26b4c8891e9add8ecb1013b1dc908762eeaae1ca73dce3fd05a3c3117",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "test-host.sh": "4f648cc097adabcec4eb06675ce03ebb0e4c2b24c9d4b9ce8ede56905287692c",
+    "test-public-library-files.c": "40d5b9b25fe543388f7fda06022b3ba98071474d7a04c1001de7294c0bda4622",
+    "test-public-pdb-reader.c": "38beae26f7aab2a779013b56436f7923fb374d319ccad4f1126de24370e5594d"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "2a8918cab45e82a91b1eff9402f58b7c4cfe85bd61686bd57bb5817986f3cec1",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "portable-matrix.stdout": "4fc234203c204f962f3ed5902bf55d625b84f693df3bc349209d446a3996915e"
+  },
+  "remaining_gates": [
+    "Compact source-owned metadata storage and table/name/playlist parsing",
+    "Compatible metadata TCP framing/menu responses and file-type/analysis coverage",
+    "Live public discovery/addressing/lifecycle integration",
+    "Concurrent native playback/remote loads/external-loaded eject",
+    "Final candidate and physical model acceptance"
+  ]
+}

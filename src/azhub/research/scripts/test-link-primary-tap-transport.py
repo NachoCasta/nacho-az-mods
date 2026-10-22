@@ -10,6 +10,29 @@ spec.loader.exec_module(transport)
 
 
 class TransportTests(unittest.TestCase):
+    def dhcp(self):
+        frame=bytearray(14+20+8+240)
+        frame[12:14]=b'\x08\x00';frame[14]=0x45
+        frame[16:18]=(len(frame)-14).to_bytes(2,'big');frame[23]=17
+        frame[34:38]=b'\x00\x43\x00\x44';frame[38:40]=(248).to_bytes(2,'big')
+        frame[42:45]=b'\x02\x01\x06'
+        frame[70:76]=bytes.fromhex('020000001203');frame[278:282]=b'\x63\x82\x53\x63'
+        return frame
+
+    def test_only_fixture_nat_dhcp_is_suppressed(self):
+        packet=self.dhcp();self.assertTrue(transport.fixture_dhcp_reply(packet))
+        packet[70:76]=bytes.fromhex('525400123456')
+        self.assertFalse(transport.fixture_dhcp_reply(packet))
+        self.assertFalse(transport.fixture_dhcp_reply(self.ipv4((10,0,2,2))))
+
+    def test_fixture_dhcp_bounds_and_protocol(self):
+        packet=self.dhcp()
+        for length in range(len(packet)):
+            self.assertFalse(transport.fixture_dhcp_reply(packet[:length]))
+        for offset in (12,14,16,21,23,34,36,38,42,43,44,70,278):
+            mutated=bytearray(packet);mutated[offset]^=0x40
+            self.assertFalse(transport.fixture_dhcp_reply(mutated),offset)
+
     def ipv4(self, source):
         frame = bytearray(54)
         frame[12:14] = b'\x08\x00'
@@ -65,6 +88,24 @@ class TransportTests(unittest.TestCase):
         self.assertFalse(transport.owned_peer(packet))
         packet[31], packet[18] = 2, 4
         self.assertFalse(transport.owned_peer(packet))
+
+    def test_selected_dhcp_clients_only(self):
+        packet=bytearray(282);packet[12:14]=b'\x08\x00';packet[14]=0x45
+        packet[16:18]=(268).to_bytes(2,'big');packet[23]=17
+        packet[34:38]=b'\x00\x43\x00\x44';packet[38:40]=(248).to_bytes(2,'big')
+        packet[42:45]=b'\x02\x01\x06';packet[278:282]=b'\x63\x82\x53\x63'
+        packet[70:76]=bytes.fromhex('020000001203')
+        self.assertTrue(transport.fixture_dhcp_reply(packet))
+        packet[75]=7
+        self.assertFalse(transport.fixture_dhcp_reply(packet))
+        clients=transport.fixture_dhcp_clients('0,4')
+        self.assertTrue(transport.fixture_dhcp_reply(packet,clients))
+        for length in range(len(packet)):
+            self.assertFalse(transport.fixture_dhcp_reply(packet[:length],clients))
+        packet[70:76]=bytes.fromhex('525400123456')
+        self.assertFalse(transport.fixture_dhcp_reply(packet,clients))
+        for invalid in ('0,0','8','-1','0,4,9',''):
+            with self.assertRaises(ValueError):transport.fixture_dhcp_clients(invalid)
 
     def test_only_prepared_isolated_namespace(self):
         transport.verify_namespace(self.namespace())

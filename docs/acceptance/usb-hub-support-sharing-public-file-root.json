@@ -1,0 +1,157 @@
+{
+  "recorded_at_utc": "2026-10-20T20:09:43.140648+00:00",
+  "scope": "C rooted read-only file operation/lifetime component for future public service",
+  "new_source_component": "src/azhub/linkfake/public-file-root.h",
+  "production_runtime_integration": false,
+  "published_release_changed": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "Caller-selected discovered USB root is pinned; relative path components reject traversal/absolute/ambiguous paths and every symlink",
+    "Final O_PATH inode is checked as regular before reopening its owned proc fd; FIFO/device/directory content is not opened for reads",
+    "Reads are limited to8192 bytes; at most16 in-flight operation leases exist per root",
+    "Withdrawal refuses new operations and drains already accepted reads without tracking or stopping a remote deck",
+    "A real thread holds an accepted operation across withdrawal, completes it, and releases the root; a neighboring source remains readable",
+    "Replacement requires increasing generation and rejects the former generation; capacity exhaustion refuses new leases",
+    "The same C test passes as AArch64 executable in localhost emulator using synthetic temporary files; executable is removed afterward"
+  ],
+  "verification": {
+    "completed_cases": {
+      "plain": 32,
+      "asan": 32,
+      "tsan": 32
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": "Separate WSL execution passed; container lacks Python",
+    "tsan_environment": "Ephemeral network-disabled container with seccomp=unconfined permits per-process ADDR_NO_RANDOMIZE; no global sysctl changed",
+    "source_membership_unchanged": true
+  },
+  "emulator": {
+    "emulator_only": true,
+    "kernel": "6.6.138-dirty",
+    "exit_code": 0,
+    "binary_sha256": "7858a6858ac724a8d119209c4c51eebcef2e82ca4d2518dbae282d631bd48cae",
+    "test_scope": "Synthetic temporary files only; no real USB roots or EP147 mutation"
+  },
+  "checks": {
+    "target_compiler": "Pinned Linaro6.3.1",
+    "target_binary_machine": "ELF64 AArch64",
+    "target_symbol_version_needs": [
+      "GLIBC_2.17"
+    ],
+    "portable_cases_per_matrix": 32,
+    "matrices": [
+      "plain",
+      "address+undefined",
+      "thread"
+    ],
+    "hook_registration": "Passed separately on WSL"
+  },
+  "tooling_notes": [
+    "Initial shell script CRLF introduced by edit is corrected to LF; preserved first failure is not a test pass",
+    "WSL lacks C++ and container lacks Python; official hook check and full C/C++ matrix run in their respective available environments",
+    "Initial Docker TSan startup is blocked by seccomp personality restriction; TSan-only retry in ephemeral network-disabled container permits the per-process operation and passes",
+    "No global Python, compiler installation or global ASLR/sysctl change"
+  ],
+  "limits": [
+    "Component is not yet called by the mod or public NFS service",
+    "Root confinement is not a library-file authorization policy; caller must authorize exported paths",
+    "Root generations do not mint NFS handles or provide reload-spanning instance nonces; the wire adapter must own those identities",
+    "A lease is one bounded operation, never a remote loaded-track lifetime",
+    "No real USB unmount, external loaded-track eject, complete file service or kernel4.4 runtime acceptance"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/emulator.stdout",
+      "sha256": "1c746b8797989a3b7dd5e5362b2a1bb0149fd1bbd7a8d4873f6f99e9c156340a"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/emulator-result.json",
+      "sha256": "c4579cd13431aaee499e3083bf72f582bb24d5ab1e61fecd7aac7023ca00545f"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/matrix-result.json",
+      "sha256": "934d0aaf6b903bad144f718cb6c49c6cd5ca418b819623800c57d862f02c7a39"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/hook-registration-absolute.stdout",
+      "sha256": "cec4e7328c6281c0e9e38d030d93d63da1ff78e7db7bccf50f62875c4e79b125"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/hook-registration-absolute.stderr",
+      "sha256": "bad2d855c95b8b5e5b9b78ef10d9c86e2328b6a72bf5710e7dbb95fd7b8ed038"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/portable-c-matrix.stdout",
+      "sha256": "3935a8b4067a639420a2b861916a18f7bcf23bde7685f0c7c3860917208136e7"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/portable-c-matrix.stderr",
+      "sha256": "00d1aa0d3c90b904b6f56ec3585473a89a275737a1793ddc96584fa2ff89ca3b"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/portable-tsan-unconfined.stdout",
+      "sha256": "e2442abcdc6e509371b9aaff7523ca198db2037c47b17f2ffae5b295e1e0c85a"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/portable-tsan-unconfined.stderr",
+      "sha256": "1f5e85800984883702df9d6609067c672f56e8b0ee39e30c3d620a7911f98be2"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/portable-container-script.sh",
+      "sha256": "47e306db0b6bc71316ee8ae074c393b8b0e1c0672bd6af2cdb13156763b9e43c"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/test-image.txt",
+      "sha256": "3bf840f20d71c516455fc2c9652bc5b637252af1cddd1af9444895e25a1fa215"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/test-aarch64",
+      "sha256": "7858a6858ac724a8d119209c4c51eebcef2e82ca4d2518dbae282d631bd48cae"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/source-used/public-file-root.h",
+      "sha256": "a5029192984ff70b4c6af3f49cb0bac4fad2e89c6658aee110e641db471d0c74"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/source-used/test-host.sh",
+      "sha256": "e35021c4d433840758f0f6b44f22cb94902ec48d7f2bcd8e869ed9f6c75bbfbb"
+    },
+    {
+      "path": "local/diagnostics/sharing-public-file-root-v1/source-used/test-public-file-root.c",
+      "sha256": "20f822aae1990983437b10fbb7a5129aec62aa0bdbcd22eddc767a820d526065"
+    }
+  ]
+}

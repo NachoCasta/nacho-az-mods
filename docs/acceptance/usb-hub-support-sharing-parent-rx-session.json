@@ -1,0 +1,35 @@
+{
+  "scope": "Session-owned receive-mode reference for tested AZ secondary-MAC delivery; physical candidate trial pending",
+  "emulator": {
+    "directory": "local\\diagnostics\\sharing-parent-rx-session-v1",
+    "exit": 0,
+    "independent_complete_menus_and_exact_files": true,
+    "acquired_and_released_logged": true,
+    "native_network_and_parent_flags_restored": true,
+    "owned_scope_cleaned": true
+  },
+  "physical_interoperability_accepted": false,
+  "published": false,
+  "physical_version": "0.4.4",
+  "physical_framework_loaded": true,
+  "physical_framework_suspended": false,
+  "physical_parent_flags": "0x1103",
+  "physical_source": "169.254.234.0",
+  "physical_metadata_port": 40076,
+  "physical_TCP_queries_passed": true,
+  "physical_browse_control": {
+    "state": "passed",
+    "directory": "local/diagnostics/physical-ethernet-library-v1",
+    "independent_client": "Unmodified Beat Link client/menu classes; explicit physical socket binding, Crate Digger PDB reference and corrected table oracle",
+    "tracks": 3172,
+    "ordered_nodes": 166,
+    "ordered_memberships": 11022,
+    "exit": 0
+  },
+  "physical_discovery": {
+    "state": "not_confirmed",
+    "note": "DeviceFinder passive20-second controls saw no devices with both Android JBR and existing firewall-allowed VSCode Java; no firewall edits",
+    "raw_UDP_Link_signature_from_hub_seen": true
+  },
+  "rollback": "/media/usb/sda1/MODS/backups/usb-hub-support-before-0.4.4-20261021-213546/original"
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "Partial native topology acceptance: initial two-On and four-Off pass; complete return-to-On control remains pending",
+  "mod_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "evidence_directory": "local/diagnostics/sharing-integrated-local-deck-topology-v2",
+  "native_phases": {
+    "initial Link On": {
+      "samples": 8,
+      "advancing_loaded_decks": [
+        1,
+        2
+      ],
+      "native_pid": 1766265
+    },
+    "Link Off four local decks": {
+      "samples": 8,
+      "advancing_loaded_decks": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "native_pid": 1766265
+    },
+    "Link Off secondary decks unloaded": {
+      "samples": 8,
+      "advancing_loaded_decks": [
+        1,
+        2
+      ],
+      "native_pid": 1766265
+    }
+  },
+  "all_four_native_load_bindings_verified_sdc1": true,
+  "initial_complete_external_two_source_clients": "pass while primary decks remain looping; no continuous per-second local sampling in this attempt",
+  "secondary_decks_native_unloaded_before_returning_On": true,
+  "failure": "After native return to On, recovered metadata clients time out as the original600-second TAP/DHCP fixture window ends. Transport reports its bounded window/no errors; DHCP reports deadline expiry. Final On rejection/unload phase not reached.",
+  "not_a_complete_control_pass": true,
+  "test_harness_revision": "Only this extended topology scenario gets1200-second TAP/DHCP fixture lifetime; individual client/operation timeouts and production behavior unchanged. Primary deck state observation added during both remote client phases. Syntax passes; live repeat pending.",
+  "original_package_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "audio_signal_captured": false,
+  "actual_CDJ_acceptance": false
+}

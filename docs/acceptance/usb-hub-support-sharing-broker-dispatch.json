@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "scope": "Post-authentication broker controller adapter; loopback network callbacks and actual source staging threads",
+  "source_sha256": {
+    "public-broker-dispatch.h": "121c47b4eb9e628cebd37d6df8b55298f7f745996afd6dbd3b68ff94b1f07862",
+    "test-public-broker-dispatch.c": "9467e55e067ff1d54921e108626a829f1aae3517d5f37f0ba17f3c6c7e7fe781",
+    "public-broker-generation.h": "447cd6264ff44472922cda116841ccdeb9497f1ac7ba20923c0456e3fc7c37ec"
+  },
+  "tests": {
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/dispatch-host.log",
+    "local/integration/sdk-broker-probe-v1/dispatch-tsan.log"
+  ],
+  "validated": [
+    "SOURCE decode through pinned root and manager to staging worker",
+    "Consumed generation rejects replay and old detach",
+    "Preparation denial does not permit same-generation retry",
+    "Worker join and endpoint close precede network release",
+    "Pending network retirement prevents drained acknowledgement",
+    "Neighbor remains active and STOP retires remaining sources"
+  ],
+  "limitations": [
+    "Caller must authenticate channel before invoking adapter",
+    "Namespace authorization and network callbacks are fixtures in this test",
+    "No SDK-managed live networking integration yet",
+    "Full portable suite at this boundary not run; previous full matrix was66/66/66"
+  ],
+  "physical_AZ_touched": false
+}

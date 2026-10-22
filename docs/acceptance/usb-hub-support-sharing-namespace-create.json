@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scope": "FD-owned anonymous network namespace creation, no interface or address allocation",
+  "source_sha256": {
+    "public-network-namespace.h": "3d3ce327126d7f8cb28328c0eb212000b2126f482fd0aa9ab5ac8d83a4867fb2",
+    "test-public-network-namespace.c": "840a4389296be1e6ed816b456b5c5b75266b65cfc593477f1e3a4e0d231fb192"
+  },
+  "tests": {
+    "targeted_host_plain_asan_ubsan_tsan": "passed; privilege-denial path in restricted host",
+    "pinned_aarch64_emulator": "passed; eight sequential successful creations"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/namespace-create-targeted.log",
+    "local/integration/sdk-broker-probe-v1/namespace-create-emulator.json"
+  ],
+  "validated": [
+    "Disposable creator thread unshares network namespace and opens thread-specific reference",
+    "Descriptor remains valid after creator joins and is CLOEXEC",
+    "Typed namespace validation succeeds on each emulator-created descriptor",
+    "Controller namespace unchanged and native EP147 PID preserved",
+    "Owned descriptors closed; no bind-mounted/named namespace created",
+    "Busy or still-owned operation cannot be restarted"
+  ],
+  "compatibility_research": [
+    "Vendor4.4 fs/proc/thread_self.c exists",
+    "Vendor4.4 rtnetlink supports IFLA_NET_NS_FD destination selection",
+    "Vendor4.4 macvlan_newlink receives source namespace and resolves parent IFLA_LINK there"
+  ],
+  "limitations": [
+    "No target4.4 runtime acceptance",
+    "Eight sequential creations, not eight simultaneous source services",
+    "MACVLAN creation/configuration, DHCP and broker runtime integration remain pending",
+    "Host sanitizer controls do not execute successful privileged creation"
+  ],
+  "physical_AZ_touched": false
+}

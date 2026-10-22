@@ -1,0 +1,94 @@
+{
+  "recorded_at_utc": "2026-10-20T17:47:51.716405+00:00",
+  "scope": "Sender-only computer-provider discovery controls; incomplete protocol, no feasibility conclusion",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "Probe1 sends40 number17 computer announcements under research label; no new provider row in two reviewed Source captures",
+    "Probe2 uses rekordbox name and startup/claim sequence before40 announcements; native sends three type05 replies",
+    "Probe2 reviewed Source capture still shows no new provider; no DB service is offered by either sender",
+    "Native type05 replies are not decoded sufficiently to claim number17 assignment"
+  ],
+  "next_gate": "Receive discovery feedback and offer port-query/metadata endpoint; trace native connection workflow before deciding representation viability",
+  "limits": [
+    "Incomplete sender-only controls do not disprove computer-provider exports",
+    "No library browsing/audio service in these probes",
+    "No hub sharing implementation or actual-CDJ acceptance"
+  ],
+  "scopes": [
+    {
+      "version": 1,
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    },
+    {
+      "version": 2,
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/peer.stdout",
+      "sha256": "36cd67742822204ec46fe3694b3164c11ce588ffffa3b60a329cddc1a36111a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/wire.stdout",
+      "sha256": "935bad33f81a9b55cb9097e6b7d80a2690514927d64450c6b18e88ae24fdbc14"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/transport.stdout",
+      "sha256": "6dc64d2e067678b05a4ce5f3a818dae848e1ba63fd056857b73ea690f448c3d8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/results.json",
+      "sha256": "ec773bad4dbab36b70bb34fed921c245ae96e476d10923c946b06b677aa84ca4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/source-provider17-refreshed.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v1/source-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/peer.stdout",
+      "sha256": "36cd67742822204ec46fe3694b3164c11ce588ffffa3b60a329cddc1a36111a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/wire.stdout",
+      "sha256": "bfdd59d850e784c71c50588def5ff5bad20f1388001065c47cb62f4bc11527a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/transport.stdout",
+      "sha256": "7c144fac565e02984059a376e1041d0fd1c4ceeeaaafbead94cb5b152ef640be"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/results.json",
+      "sha256": "0612eb01395f982173487a08bd7e50758166ae2eccf199e94313b9f282cffa05"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v2/registered-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    }
+  ]
+}

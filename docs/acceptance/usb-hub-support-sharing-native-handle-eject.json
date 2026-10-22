@@ -1,0 +1,66 @@
+{
+  "recorded_at_utc": "2026-10-20T17:37:15.605791+00:00",
+  "scope": "Native USB STOP with a held external NFSv2 file handle; not externally loaded-deck acceptance",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "operation": "Native USB1 STOP held1.7seconds after successful1024-byte remote NFS read",
+  "observations": [
+    "Remote file handle resolves and reads before STOP",
+    "Native sda1 fixture unmounts; mods sdb1 and all five hub roots remain mounted",
+    "Eight later reads at5-second intervals return NFS status70 (STALE), not data or timeout",
+    "No local busy descriptor artificially held; NFS client retains only protocol handle",
+    "After final client read the native fixture is replugged via protected child COW; seven mounts return and native export.pdb hash matches",
+    "Transport, client and observer exit0; namespace removed"
+  ],
+  "cleanup": {
+    "transport": 0,
+    "peer": 0,
+    "observer": 0
+  },
+  "limits": [
+    "No remote CDJ loaded-track status is simulated; this proves file-handle invalidation, not native externally-playing admission behavior",
+    "No remote audio output, actual CDJ or phase claim",
+    "No hub sharing implementation or public-identity feasibility conclusion",
+    "Native teardown control is observed externally; exact internal invalidation order still needs tracing"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/peer.stdout",
+      "sha256": "5aa701c2787de194450a3d4fc145a4fa2842a77878ea1d661b80253520a8d9b2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/wire.stdout",
+      "sha256": "6839c7c2260f145726dec679e8c9d89251c4ee199505c41a94ba4c1264351cf9"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/transport.stdout",
+      "sha256": "8bf46a9bbabeb9f7c8c0ea60597afb2a428d761455319970b7b0d22338c647c9"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/results.json",
+      "sha256": "e9ed4ec98bd980423b7d1f782402aeb7e36b7a6ea869f6b2c6b178f15842a349"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/before-stop.txt",
+      "sha256": "997cb2864e7a8f53eb6d846cab61d391ff76c231ae31cca293f8bdb2300c0713"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/after-stop.txt",
+      "sha256": "075029b3d5319304a3381429830f1148e988365f2ad81a5381afa13433282f12"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-handle-eject-v1/restored-state.txt",
+      "sha256": "c843cc42990e9f81cf5fdf898248953058fde13daabba262c501494426bc9090"
+    },
+    {
+      "path": "local/integration/sharing-native-restoration-v1/restoration.json",
+      "sha256": "4fc3affc1b0a29770ae6ca8e31e9e2f4c9dd1b96ed04c31a3d2affc4faca8626"
+    }
+  ]
+}

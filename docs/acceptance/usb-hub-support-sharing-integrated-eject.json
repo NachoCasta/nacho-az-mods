@@ -1,0 +1,221 @@
+{
+  "SDK_launch_and_IPC": true,
+  "integrated_runtime": true,
+  "integrated_native_eject": true,
+  "probe_environment_used": false,
+  "mod_sha256": "75ed527acf026ada520f64c84b9a391cf82a7fa837bb8a5edf18fce6c3ca1959",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "native_application_pid": "1344462",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "native_eject": {
+    "before": {
+      "pid": 1344462,
+      "clock_ms": 37452097,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 90907,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "after": {
+      "pid": 1344462,
+      "clock_ms": 37459876,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 90907,
+          "devnum": 25
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "source": 0,
+    "root": "/media/usb/sdc1",
+    "retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "neighbor_mounts_preserved": [
+      "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sde1 /media/usb/sde1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdd1 /media/usb/sdd1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdf1 /media/usb/sdf1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdg1 /media/usb/sdg1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+    ],
+    "remote_loaded_deck_tested": false
+  },
+  "scope": "Integrated native-inventory controller without SDK probe activation. Independent two-source discovery/full menus/exact PDB/audio and real refresh pass. Native selector eject withdraws source0, drains retained RPC/metadata/query endpoints and independent discovery, acknowledges retirement before native source close/backing unmount, while original source4 RPC/TCP sessions and neighbor mounts survive. Owned virtual unplug/replug republishes generation2, rediscovers source0, rejects old handles as STALE on both RPC aliases, supplies a different root handle and an exact fresh PDB. Complete menus/audio were validated before eject, not repeated after reconnect in this run. Global native-network-change retirement, helper exit, namespace cleanup and exact package/network restoration pass. This binary predates the new native Link-mode gate; no mode-policy, local playback, external loaded deck, target4.4 or physical CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-eject-controller-v2",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "startup_stability": {
+    "active_enter_monotonic": "ActiveEnterTimestampMonotonic=37190961832",
+    "minimum_service_age_seconds": 150,
+    "framework_suspended": false
+  },
+  "prior_attempt": {
+    "directory": "local/diagnostics/sharing-integrated-eject-controller-v1",
+    "result": "Stopped before clients/eject: framework suspension and stale launch-marker verifier bug. Exact rollback and cleanup passed. Framework Resume/Reload used; marker assignment now follows helper/parent verification and normal service must be150 seconds old."
+  }
+}

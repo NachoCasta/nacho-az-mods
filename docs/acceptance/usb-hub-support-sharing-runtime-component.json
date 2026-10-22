@@ -1,0 +1,31 @@
+{
+  "scope": "Portable integrated-controller controls and explicit local AArch64 builds only. No runtime emulator, physical AZ/CDJ, deployment or publication acceptance. Default release build does not enable this controller. Native Link policy and MACVLAN module packaging remain open.",
+  "host_suite": {
+    "plain": 94,
+    "asan": 94,
+    "tsan": 94
+  },
+  "host_suite_exit": 0,
+  "host_suite_log": "local/integration/sdk-broker-probe-v1/runtime-host-suite.log",
+  "hook_registration_included_in_this_suite": false,
+  "compiler": "gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu",
+  "build_targets": [
+    "sharing-runtime-emulator",
+    "sharing-runtime-candidate"
+  ],
+  "sha256": {
+    "src/azhub/linkfake/public-sharing-runtime.h": "9d2be343f73e47631198bd0ef117e9c3c53edc5d7cd43e2d439f66f0c07b27d9",
+    "src/azhub/linkfake/test-public-sharing-runtime.c": "d8bca7b742c686eb5c23a98d859f2144062d563e653a5ffcba8370eae9ebcde9",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-sharing-runtime-emulator.so": "a3966fad680e9d1a0ddc95bfd4a2eaaadb8fbcfbbe7414ea8a469d8adadbd337",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-sharing-runtime-candidate.so": "4fca9460311423af3bab5dc28d1f5136625c220e72f91de5ac62434db96524e2"
+  },
+  "controls": [
+    "Missing SDK resources defer startup without aborting local mod",
+    "Slot4 startup with source0 absent",
+    "Authenticated EMPTY required before native eject",
+    "Global retirement waits for SDK-confirmed child exit before cleanup/restart",
+    "Lost IPC with outstanding generation remains fail-closed"
+  ],
+  "live_runtime_tested": false,
+  "physical_AZ_touched": false
+}

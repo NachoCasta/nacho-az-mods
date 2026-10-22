@@ -1,0 +1,14 @@
+{
+  "kernel": "6.6.138-dirty",
+  "binary_sha256": "5b84417beb40041b08287b476a7a8d26dba12c01531af8f7f6d6e9716f175ca5",
+  "synthetic_pass": true,
+  "owned_executable_removed": true,
+  "scope": "Synthetic source-worker lifecycle test on localhost emulator; not native discovery or mod integration",
+  "physical_az_operations": false,
+  "firmware_compatibility_changed": false,
+  "host_sanitizers": [
+    "plain",
+    "ASan/UBSan",
+    "TSan"
+  ]
+}

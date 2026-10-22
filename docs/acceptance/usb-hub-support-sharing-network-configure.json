@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scope": "Exclusive async IPv4 configure/reconfigure refusal/remove after real anonymous namespace/MACVLAN allocation",
+  "source_sha256": {
+    "public-address-remove.h": "6596e1299312b48883d1443054edd4a044375f822196c744676c116c1bd28961",
+    "test-public-address-remove.c": "39180dd9e828bd8f0c1f13acf0d8ed133796729524db5d746af332fbfe398c40",
+    "test-public-network-link.c": "6f30655571eb06cf5ae68d85ba1e388ac1197a7abc9ad3e4d5b6403157b288f9"
+  },
+  "binary_sha256": "1a40d54ae2e4121394d4c8b231e67d9bcb548329ece01d8595e30ab2e0a183a7",
+  "tests": {
+    "plain": 74,
+    "asan": 74,
+    "tsan": 74
+  },
+  "evidence": [
+    "local/diagnostics/sharing-network-configure-v1/result.json",
+    "local/diagnostics/sharing-network-configure-v1/commands.json",
+    "local/integration/sdk-broker-probe-v1/address-configure-targeted.log",
+    "local/integration/sdk-broker-probe-v1/network-configure-suite.log"
+  ],
+  "validated": [
+    "Exclusive RTM_NEWADDR with actual interface identity/no-prior-IP checks",
+    "Kernel ACK followed by independent namespace-thread address observation",
+    "Second configure rejected with EADDRINUSE",
+    "Exact removal ACK followed by absent IPv4 observation",
+    "Native PID/address/routes/DNS and controller namespace unchanged",
+    "Owned namespace/interface/module and temporary files cleaned"
+  ],
+  "limitations": [
+    "No DHCP or ARP in this configure operation control",
+    "Caller must prove lease and ARP claim before use",
+    "No source service or SDK allocator integration here",
+    "Live branch not sanitizer-instrumented; host portable controls are",
+    "Target4.4 runtime remains pending"
+  ],
+  "physical_AZ_touched": false
+}

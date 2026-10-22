@@ -1,0 +1,154 @@
+{
+  "recorded_at_utc": "2026-10-20T17:59:30.822923+00:00",
+  "scope": "Public computer-provider17 appears in native AZ Source; empty-service feasibility control only",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "Probe6 explicit network group progresses from EXPORT to MNT, NFS READDIR/LOOKUP and media query",
+    "Probe7 adds valid empty READDIR/STATFS responses and responds to slot4 media queries with empty analyzed-media details",
+    "Reviewed probe7 Source capture shows new separate Hub USB1 Research row with native rekordbox icon, alongside native USBs and hub sources",
+    "Native opens TCP12523 then1051, sends setup0 and request0x3007; control acknowledges setup as provider17 but does not implement full library metadata",
+    "No real files, native slot borrowing or music is served by the control"
+  ],
+  "limits": [
+    "One public computer identity proven in emulator only; eight simultaneous sources/address ownership and real rekordbox coexistence remain open",
+    "Not a working hub export or successful library browsing/loading trial",
+    "Probe7 changes media response and empty directory behavior together; do not isolate causality beyond the measured full control",
+    "Stub rejects unsupported metadata requests and ends idle sessions after2seconds; unsuitable for production",
+    "Physical CDJ representation, audio/phase and remote-loaded-track eject remain pending"
+  ],
+  "scopes": [
+    {
+      "version": 6,
+      "events": {
+        "listener_ready": 6,
+        "discovery_reply": 12,
+        "status_query": 435,
+        "rpc_request": 37,
+        "provider_probe_finished": 1
+      },
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    },
+    {
+      "version": 7,
+      "events": {
+        "listener_ready": 6,
+        "discovery_reply": 12,
+        "status_query": 436,
+        "rpc_request": 41,
+        "media_reply": 1,
+        "connection": 2,
+        "db_request": 2,
+        "connection_end": 1,
+        "provider_probe_finished": 1
+      },
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/namespace.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/peer.stdout",
+      "sha256": "152c9eddb0cbed07ed732a91cb86862c0652283275c3b9b54d782f6334cda361"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/probe-source.py",
+      "sha256": "5bce8ba7976db645c362d3d2accd208a7b3a1bfa5d4798984ad5fed4d686a051"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/ready.json",
+      "sha256": "b5c004b1d68f0fdcaf640b99e4f697193083e233b7eb4f9db6f9e28e506260ee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/registered-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/results.json",
+      "sha256": "f73cdfa4d15c953eec4324bd1b55fd4d7ead7eec2ecb255f3313999962eb72c7"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/transport.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/transport.stdout",
+      "sha256": "ab3eaab2ba5a78fc8b626e34c20a4ad58e035ad494b67aa43e8f80df4cf71528"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v6/wire.stdout",
+      "sha256": "b850d8e39bda5d6ff46937f955a9740552e8c327c6e9e48b5b69548d64594393"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/empty-provider-browse.png",
+      "sha256": "6704e3301e9279317b490bb727dc6fbbc517e8bf8f0da971114d99b65e99bf89"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/final-state.txt",
+      "sha256": "3c1390bbd1183db73abe1a9465e1342e3bfe8989c53074e63354bb581f242240"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/namespace.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/peer.stdout",
+      "sha256": "e9e50edfaa54b3241da600df3e908ec49e0140cb769cf27ddd2a9addea59b0d7"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/ready.json",
+      "sha256": "ab3859f47215e14de4e7378193e4cb7e85a2dd1fe1a251ab0916a899fa5ba524"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/registered-provider17.png",
+      "sha256": "211c4954fd50232ca0d2e8098e5f915fad0bb0dc7e6a28f8a26067a806d926ef"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/results.json",
+      "sha256": "98322f4659177013aa04bdd68d0750b34f05626be691f8870078a6c9dd395bd3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/transport.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/transport.stdout",
+      "sha256": "02595dfd5a7f5dddcc0dcf7642b64ef050f94e8a174813424cc42aeac4874b68"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/wire.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v7/wire.stdout",
+      "sha256": "061ab51c9acf07187f917ac76195ed533252854f82e2d1049ab001487fa9f555"
+    }
+  ]
+}

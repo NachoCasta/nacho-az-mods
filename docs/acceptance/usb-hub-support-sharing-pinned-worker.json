@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "scope": "Descriptor-based public worker staging; portable components and pinned AArch64 build only",
+  "source_sha256": {
+    "public-file-root.h": "fbda5218dd3af90e72db8711f9930bb568c0c5fa676a4344e3b5a0808b620463",
+    "public-source-worker.h": "20625bff4486622ef90dd8ff3d3e3695295644f8ce7db8dae7efeb0a37f3d8b8",
+    "test-public-source-worker.c": "e9aa92beb381c19e376b271abf944cd666d22db20151417bab0fc65164dc69ec"
+  },
+  "tests": {
+    "plain": 66,
+    "asan": 66,
+    "tsan": 66
+  },
+  "binary_sha256": "d80293cd150f5d6eb354047bf5acfed82cf86f75745cf9934f9d5365f919aa8d",
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/pinned-worker-host-suite.log",
+    "local/integration/sdk-broker-probe-v1/pinned-worker-build.log"
+  ],
+  "validated": [
+    "Worker duplicates caller FD before thread creation",
+    "Root attachment duplicates the verified directory without reopening its pathname",
+    "Original library stages after rename and empty replacement at its former path",
+    "Caller closes its FD immediately after start; worker completes withdrawal and join",
+    "Existing pathname worker and independent source lifecycle regressions remain passing"
+  ],
+  "limitations": [
+    "Broker dispatch does not yet invoke verified-FD worker start",
+    "No live emulator runtime claim for the new descriptor path",
+    "Namespace/address ownership, source authorization, refresh and eject integration remain pending"
+  ],
+  "physical_AZ_touched": false
+}

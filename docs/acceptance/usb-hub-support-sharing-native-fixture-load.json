@@ -1,0 +1,117 @@
+{
+  "recorded_at_utc": "2026-10-20T18:47:13.060639+00:00",
+  "scope": "Native emulator deck loads selected MP3 from host-side public fixture provider and advances playback position",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "input": "One selected track from hub0 PDB, with explicit copied audio/PDB files; source hashes previously verified",
+  "observations": [
+    "Track-info0x2102 supplies MP3 decoder1, file path, size, duration, tempo and key",
+    "v18 receives audio READ requests but remains NOW LOADING with repeated unsupported cue queries",
+    "v19 uses typed empty cue/analysis responses; native deck exits NOW LOADING and shows track title, remaining04:25.514 and BPM69.9",
+    "After play input, reviewed snapshots show remaining04:25.148 then04:17.152",
+    "Playback was paused after the position samples; no audio recording/decoding comparison was performed"
+  ],
+  "db_request_counts": {
+    "0x0": 1,
+    "0x3007": 1,
+    "0x1000": 1,
+    "0x3000": 17,
+    "0x1400": 1,
+    "0x1004": 3,
+    "0x2002": 10,
+    "0x2c04": 10,
+    "0x2004": 1,
+    "0x2003": 1,
+    "0x2102": 4,
+    "0x2504": 2,
+    "0x2b04": 1,
+    "0x2204": 1,
+    "0x2d04": 2,
+    "0x2904": 1,
+    "0x3100": 1
+  },
+  "nfs_read_request_count": 1618,
+  "local_checks": {
+    "framing_groups": 5,
+    "metadata_backend_groups": 5,
+    "file_backend_groups": 3
+  },
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "limits": [
+    "Host-side copied-file provider to unchanged native AZ client; not live AZ hub export to an actual external CDJ",
+    "No audible/decoded/full-track playback acceptance; observed native deck position advance only",
+    "Waveform/beatgrid/cues/artwork are not served; waveform display remains empty",
+    "Only MP3 track-info decoder implemented for this prototype; no other-format compatibility claim",
+    "Multiple sources/clients, reconnect, native-source concurrency and remote-loaded eject remain pending"
+  ],
+  "references": [
+    "https://djl-analysis.deepsymmetry.org/djl-analysis/track_metadata.html",
+    "https://github.com/vynulldev/vynull/blob/e414ffff6a00e68f8ffd9f6ab819d6bdaa404a6d/dbserver/track.go"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/peer.stdout",
+      "sha256": "01effe86745bf0de7df1e7fd82446bc81450d12d309dc727e1807c758cc89408"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/results.json",
+      "sha256": "dbea8d534684a78e5eab8e9bd3b6cabac03a028d3e1ede180789c0b8ba09c55f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/load-waveform.png",
+      "sha256": "86eae3bef01d9e53346e163446948495c26dc8e6eb78a3ad23b3d5e5aebfe1e4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/playing-first.png",
+      "sha256": "9da828812d90a100e635722d5285398934b641a74288bd9c7ccc0d347d8010c3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/playing-second.png",
+      "sha256": "de13b1fd7b9d0664b83d0e7ca1b79b65cef1064894651d557809e2b7c2a7585e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/source-used/link-public-provider-probe.py",
+      "sha256": "7829db35e74380e163355e4170879bd7b7d45d32bc9cacbbe5489a6d70d31e12"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v19/source-used/link_snapshot_backend.py",
+      "sha256": "99f2bd0411cf61555a29925a91a316d8ca7431ab35872c461ed1ce4886d3e362"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v18/load-waveform.png",
+      "sha256": "acdabf0919697285bf525c3eb85c0a86725374fc14e44eab2aa43d45674cdd66"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v18/peer.stdout",
+      "sha256": "df080df69dd5d5e8023239e39e0e02e84e86fc5c07a97b7153cda706500661eb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v18/results.json",
+      "sha256": "4d390250e7bf084860dc9319e8ac06f707018421002682316680b1e41a851bf0"
+    },
+    {
+      "path": "local/diagnostics/sharing-hub0-selected-track.json",
+      "sha256": "bf9d368e376e00775496afa57c028e046d98634fc24ebdb76f5f4fc5d85cfb60"
+    }
+  ]
+}

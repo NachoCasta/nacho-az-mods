@@ -1,0 +1,129 @@
+{
+  "SDK_launch_and_IPC": true,
+  "native_status_observer": false,
+  "integrated_runtime": true,
+  "integrated_native_eject": false,
+  "integrated_mode_cycle": false,
+  "probe_environment_used": false,
+  "mod_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "native_application_pid": "1881927",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "capacity_sources_tested": 5,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Five integrated emulator sources with concurrent independently discovered complete menus, exact PDB/MP3 downloads and accepted same-generation refresh for every selected source. No eight-source, native fresh-load, external audio or actual-CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-capacity-five-v1",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "complete_file_results": [
+    {
+      "log": "audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.3",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-1-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.4",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-1-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.4",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-2-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.5",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-2-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.5",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-3-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.6",
+      "export": "/C/"
+    },
+    {
+      "log": "capacity-3-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.6",
+      "export": "/C/"
+    },
+    {
+      "log": "database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.3",
+      "export": "/C/"
+    },
+    {
+      "log": "neighbor-audio.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+      "address": "192.0.2.7",
+      "export": "/C/"
+    },
+    {
+      "log": "neighbor-database.stdout",
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+      "address": "192.0.2.7",
+      "export": "/C/"
+    }
+  ],
+  "actual_CDJ_acceptance": false
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Authenticated helper session adapter through actual SCM_RIGHTS commands to source staging; fixture networks",
+  "source_sha256": {
+    "public-broker-session.h": "364940e4e7fcf59deda2e36162c7fedcbefbbddd078a672ba81d086ac9ed871b",
+    "test-public-broker-dispatch.c": "2cf0f95ac8c82d7259e9eefcdecffecde13670d103a53eccfcec767bfacb242c"
+  },
+  "binary_sha256": "a9b09a7afbba52d427f061b113b4b0255292556e9ced2dda6297144f472d5c2f",
+  "tests": {
+    "plain": 71,
+    "asan": 71,
+    "tsan": 71
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/session-host-suite.log",
+    "local/integration/sdk-broker-probe-v1/session-emulator.json"
+  ],
+  "validated": [
+    "Parent PID/UID checked before session ownership",
+    "HELLO and token checked command channel",
+    "Actual FD-bearing SOURCE reaches manager and staging worker",
+    "STOP completion follows drained sources",
+    "Parent disconnect while active drains source and closes session",
+    "Wrong token retires session before publication",
+    "Hash-verified AArch64 control preserves EP147 PID and cleans temporary executable"
+  ],
+  "limitations": [
+    "Network prepare/release callbacks remain loopback fixtures",
+    "Backpressure behavior is implemented but not saturation-tested by this control",
+    "Not yet connected to SDK-launched helper executable mode or real allocator",
+    "No physical AZ/CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

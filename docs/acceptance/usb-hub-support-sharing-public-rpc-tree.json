@@ -1,0 +1,95 @@
+{
+  "recorded_at_utc": "2026-10-20T20:43:08.061304+00:00",
+  "scope": "C GETATTR/LOOKUP RPC dispatch and native-style UTF16LE names over localhost UDP",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Shared RPC envelope/auth/program validation is reused by READ and tree dispatch",
+    "Tree RPC validates procedure argument lengths and strict UTF16LE before catalog lookup; malformed surrogates, embedded NUL and oversized UTF8 components are refused",
+    "Independent Python wire client starts with root handle, traverses nested accented/emoji directories, GETATTRs the file and reconstructs30001 bytes through READ",
+    "UDP adapter accepts a synchronous datagram dispatcher while preserving mandatory peer policy, nonblocking send and release-before-send",
+    "Write procedures remain unavailable and withdrawal returns STALE"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 38,
+      "asan": 38,
+      "tsan": 38
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "exit_code": 0,
+      "binary_sha256": "b440fb0e171dd4f8f0433a1c60245f6d2bab372707ee73e9c6f02d8f389176ff"
+    },
+    "independent_python_client": true,
+    "payload_bytes": 30001,
+    "payload_sha256": "25e2bf3a883695f6370bec399b2a10008c849a425cb2d17ec6077b6c4d98ed16"
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "3e82458fa1d7fb462f968e734158c2130a82e22f47d6fc164f007241b394a89a",
+    "public-nfs-tree.h": "23cd333f3923d5ba05d2853d1afc50ac651e91a02fc1321305372ff4d5625c24",
+    "public-read-server.c": "6672b043d5f0b4139a90aba5f43cfa87223f734e72e320dca2826f5b0cc970e8",
+    "public-rpc-read.h": "90b8b57b917ab380bbb5e28d6a7a5725d3db10fec2a83673109d3f4636a4d764",
+    "public-rpc-tree.h": "0f987d0bd30299b9e778e2394cafb217847a5b26b83438c45c1b57ca2bdc3dc5",
+    "public-rpc-udp.h": "dc25c31b355c8d5d91e5f3af7c1098f43baa9177dbf485ddd0deb81a98a6d9a4",
+    "public-wire-name.h": "fb653351f9e11efe01cdcb82f0f224158d921251c7e3b14f5ba92a43b83022e4",
+    "test-host.sh": "bd5f9d6db515836f6f3410c0c68ee0f8aed0443dd720db3aac52fffa3fd48929",
+    "test-public-nfs-tree.c": "d231d1456c1518470a3168bf74bfb9f3702efa0bcddd15196eedd180f68fcdac",
+    "test-public-read-server.py": "61e434c46a17576924ee77652d9e186cde3fedbb2c536c0503248517bdc4d9b9"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "4212869225610c474882939aa820cd0b5d8f94593a533e671116cb222a215b4a",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "independent.stdout": "8533f6134086221bb9d8ba5ae76edc72c5f027194d55c3a1b61972ce06e4aa57",
+    "portable-matrix.stdout": "584ceb32d805af9bf77cec778e1cc20ced9486788e7edc13d36b9d733cf7cfde"
+  },
+  "remaining_gates": [
+    "READDIR pagination and UTF16LE serialization",
+    "Portmapper/mount/export procedures and unchanged Crate Digger controls",
+    "Trusted live source catalog and metadata population",
+    "Public address allocation, lifecycle and mod integration",
+    "Concurrent local/remote load/eject final candidate and separately authorized physical tests"
+  ]
+}

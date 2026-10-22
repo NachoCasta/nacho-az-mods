@@ -1,0 +1,53 @@
+{
+  "scope": "Native emulator browsing through isolated host C worker with numeric DB request tracing",
+  "source": "One copied private real library, no mod runtime integration",
+  "server_sha256": "1e9672f71e687daabc6ffa8fcea13c52702d72349b27ab0dbea6485a72297aa7",
+  "playlist_root_request": [
+    16843777,
+    0,
+    0,
+    1
+  ],
+  "playlist_root_render": [
+    16843777,
+    0,
+    20,
+    0,
+    20,
+    12,
+    1,
+    0
+  ],
+  "nested_folder_request": [
+    16909313,
+    0,
+    1,
+    1
+  ],
+  "nested_folder_render": [
+    16909313,
+    0,
+    21,
+    0,
+    21,
+    12,
+    1,
+    0
+  ],
+  "native_rendering_verified": true,
+  "reviewed_local_screenshot": "c-playlists-settled.png",
+  "earlier_blank_view": "Premature screenshot; no protocol fix required",
+  "audio_loading_verified": false,
+  "scope_exit": 1,
+  "scope_exit_reason": "Harness wait170 shorter than configured bridge220; owned cleanup executed",
+  "owned_namespace_removed": true,
+  "evidence_directory": "local/diagnostics/sharing-c-provider-v7",
+  "evidence_files": [
+    "peer1.stderr",
+    "transport.stdout",
+    "transport.stderr",
+    "wire.stdout"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

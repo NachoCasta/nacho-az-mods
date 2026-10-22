@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "scope": "Socket-free per-source lease/address lifecycle with ACD readiness and ordered retirement",
+  "tests": {
+    "pinned_aarch64_emulator": "passed",
+    "asan_ubsan": "passed",
+    "tsan": "passed",
+    "plain": "passed"
+  },
+  "source_sha256": "8044fe938e0898297ea1978c4d2771f26820be42598cc4bc254ff9379a24ce19",
+  "test_sha256": "16bbc3ac2e0d48dc1042a996ae861375a7c59a6daab37ddc6d07717f8d0032ba",
+  "aarch64_sha256": "b687a19c6f12d062eced9800e6140f34a0394ce5da112c316b44b42b5337fbee",
+  "runtime_log": "local/integration/address-conflict-v1/lease-runtime.txt",
+  "validated": [
+    "Same-address renewal preserves generation",
+    "Expiration removes readiness at deadline",
+    "No address removal before drain acknowledgement",
+    "No queued replacement before removal acknowledgement",
+    "Expired queued replacements discarded",
+    "Matching-address ACD/configuration readiness required",
+    "Actual ACD probe/quiet/announce sequence exercised",
+    "Stale generation and delayed/replayed grant controls",
+    "Neighbor isolation, monotonic-clock and generation exhaustion"
+  ],
+  "limitations": [
+    "Not wired into mod or live kernel networking",
+    "Requires trusted conservative monotonic grant time; v1 DHCP hook alone does not provide it",
+    "Renewal and expiration controls are simulated",
+    "No live DHCP renewal, target4.4 runtime or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

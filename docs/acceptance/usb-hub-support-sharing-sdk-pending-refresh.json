@@ -1,0 +1,53 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "171b088938ab8f4e02f60a8fb5781db2ee8af9d3d5c9b8d838dda0ced8fe63f9",
+  "helper_sha256": "41740475e575b4ea4d5d52677bed5ea6b18711ceb516cd24e2fe52dc6002428e",
+  "native_application_pid": "925180",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [
+    928473
+  ],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Two-source gated emulator: actual native DHCP refresh client observed alive with slot0 interface and owned hook before native selector eject; absent after unmount. Neighbor original RPC/TCP session survives; selected source rediscovered and exact PDB downloaded after virtual replug. Process disappearance does not independently establish terminating signal. No external loaded deck or actual CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-pending-refresh-v1",
+  "pending_refresh": {
+    "pid": 928473,
+    "discover": {
+      "refresh_DISCOVER_waiting": true,
+      "slot": 0,
+      "xid": "003c8358",
+      "client": "020000001203",
+      "grants": 4,
+      "monotonic": 774.198823623
+    },
+    "observed_before_eject": true
+  },
+  "native_network_unchanged": true,
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "evidence_sha256": {
+    "result.json": "ec4a3ad1299e49fede25149bd2b1a0c0e7731caf23966b99be0c218cdd40284e",
+    "pending-refresh-client.json": "01890467940b0d0fed600d474bac2aaeb7737ac59441755fd2f86fca8bdc0274",
+    "native-eject.json": "862b74d403b0649d70dca283b146cb280b82719b02e941dbd58ccd4bca9f0100",
+    "neighbor.stdout": "431ab91cca95be664041a383cac395facc381870fd6d31b0c414623c1b7e45d8",
+    "withdrawal.stdout": "87736b69be84ddce1f914d5c435d7c92ff6ae3478775ae1564b78dc88f4047fe",
+    "managed-helper.log": "93ba9810173f51480f195056ed2f17324a3309c2b7246a462278489e6133e6b2",
+    "scoped-mod.log": "d2f3c2cbd50f39055bc2624ff182882acd19ad629eb2f874230c384f5b63b8fe",
+    "native-before.json": "21677a0a2c75b0888dcea8181ada52093f9cc2ba859e08972659c0911fd4cf3d",
+    "native-after.json": "21677a0a2c75b0888dcea8181ada52093f9cc2ba859e08972659c0911fd4cf3d"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "recorded_at_utc": "2026-10-20T20:36:45.388889+00:00",
+  "scope": "Compact dynamic source-owned catalog replacing fixed256 full-path references",
+  "supersedes_component_layout": "usb-hub-support-sharing-public-file-catalog.json",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "implementation": [
+    "Compact dev/inode/path entries with separately allocated exact-length paths; vector grows geometrically from32 entries",
+    "Per-source limits65536 references and8MiB path storage; explicit ENOSPC without eviction",
+    "Hashed path deduplication and bounds-checked direct handle index; full nonce/generation/identity comparison precedes resolution",
+    "Stable handles survive vector relocation; no references hold file descriptors"
+  ],
+  "verification": {
+    "synthetic_registered_paths": 1025,
+    "synthetic_paths_are_hard_links_not_library": true,
+    "each_registered_path_read_verified": true,
+    "catalog_and_udp_plain_asan_ubsan_tsan": true,
+    "independent_python_udp_regression": true,
+    "independent_bytes": 30001,
+    "full37_case_matrix": false,
+    "aarch64_retest": false
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "d59153fc3daf4c968033f8fd9d1f3aff9352dcf0eba1c2cefcc4439f5a761f94",
+    "public-file-root.h": "a5029192984ff70b4c6af3f49cb0bac4fad2e89c6658aee110e641db471d0c74",
+    "public-nfs-read.h": "2480943c0b39a3a1f059f4801c5b18e33506dcbf70907dc3a3a2a499149cf71a",
+    "public-rpc-read.h": "392969bd5271b7084fbbae4e98bad5d7dacd174216c6c5fa4283be6140ee453a",
+    "public-rpc-udp.h": "cdfb57c7462ce3b41737067717050aca8f755b46765a392bbdc2a5a6d9602e73",
+    "test-public-file-catalog.c": "7786a727648c925efadcbe7c01108c90e52296f1a7db79cffc99b0f48ec1725e"
+  },
+  "log_sha256": {
+    "independent.stdout": "c5ea5608b1308fccca3900ab457b17a17ceb93f68a7e80edb8d38787f6525110",
+    "targeted.stdout": "4054e6baab42ca60535d3a46af3142ca9ca78f2499690fc841746988a81eb889"
+  },
+  "remaining_gates": [
+    "Actual full-library footprint/latency and global eight-source memory budget",
+    "Allocation failure and exact maximum capacity boundary controls",
+    "Directory handles/lookup/mount support and runtime integration",
+    "Final candidate full regression and separately authorized physical/model tests"
+  ]
+}

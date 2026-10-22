@@ -1,0 +1,66 @@
+{
+  "scope": "Live mounted emulator source exported by standalone AArch64 C worker to independent host clients over isolated TAP",
+  "live_source": "emulator hub0, /media/usb/sdc1",
+  "kernel": "6.6.138-dirty",
+  "server_sha256": "6cc3cb2f90777a5221d180b2d27e182b2a8dbaed2fffd7a7588d0c8fe191d037",
+  "source_sha256": {
+    "src/azhub/linkfake/public-source-worker.h": "19d1e79b68faf5727fd44a48566a6be9210191ba583ad383566ba48afba97a1f",
+    "src/azhub/research/scripts/public-db-library-server.c": "f70bc9e5e82b1191f6e24189703e889ea119e94f3b3455490e84fa6c25c0cfc0",
+    "src/azhub/research/link-peer/src/main/java/LiveProviderControl.java": "71a78a049a90e9b7ab6c9367bafcdd7422962b99ba5e64daa4581ad3a0e32e03",
+    "src/azhub/research/link-peer/src/main/java/DbLibraryControl.java": "547b6814f43a91ac27c3516b21e252fe2cb82ba2ccaac94a6fcca90e7501a90a"
+  },
+  "independent_discovery": {
+    "address": "192.0.2.3",
+    "db_port_query_passed": true,
+    "provider": 41,
+    "implementation": "Unchanged Beat Link 8.0.0 DeviceFinder"
+  },
+  "independent_browsing": {
+    "ordered_memberships": 8359,
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "oracle": "Private PDB and previously corrected independent entity TSV",
+    "implementation": "Unchanged Beat Link Client/menu codec"
+  },
+  "independent_downloads": [
+    {
+      "bytes": 4419584,
+      "kind": "database",
+      "implementation": "Unchanged Crate Digger FileFetcher",
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+    },
+    {
+      "bytes": 10881597,
+      "kind": "audio",
+      "implementation": "Unchanged Crate Digger FileFetcher",
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+    }
+  ],
+  "clients_launched_concurrently": true,
+  "packet_interleaving_measured": false,
+  "worker_withdrawal_acknowledged": true,
+  "worker_shutdown_exit": 0,
+  "source_usb_writes": false,
+  "limitations": [
+    "Standalone worker, not mod runtime integration",
+    "One live source only",
+    "Guest research endpoint serves FileFetcher port111; native50111 alias still needed before production",
+    "No local/remote deck concurrency, post-withdraw peer checks or native unmount acceptance",
+    "No playback test in this reverse-direction control",
+    "No physical AZ or actual-CDJ acceptance"
+  ],
+  "evidence_directory": "local/diagnostics/sharing-live-combined-v3",
+  "evidence_files": [
+    "discovery-and-menus.stdout",
+    "discovery-and-menus.stderr",
+    "database.stdout",
+    "audio.stdout",
+    "server.stderr",
+    "result.json",
+    "guest-commands.json"
+  ],
+  "physical_az_operations": false,
+  "publication": false,
+  "owned_scope_clean_exit": true,
+  "owned_namespaces_and_module_removed": true
+}

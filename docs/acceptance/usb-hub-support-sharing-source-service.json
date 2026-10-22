@@ -1,0 +1,32 @@
+{
+  "scope": "Reusable source-owned combined service, exercised by standalone harness; no mod integration",
+  "client_limit": 8,
+  "single_owner_worker": true,
+  "borrowed_listener_and_udp_sockets": true,
+  "accepted_tcp_connections_owned": true,
+  "validation": [
+    "Plain, ASan/UBSan and TSan focused lifecycle test passed",
+    "Client capacity, peer rejection and withdrawn-source rejection passed",
+    "Withdrawal closes owned clients without retiring neighboring source",
+    "Repeated destroy and borrowed listener lifetime passed",
+    "Independent combined Beat Link browsing and Crate Digger full PDB/MP3 downloads passed after extraction"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-source-service.h": "7074fffcc3e40552c4f2cdcd5cc53a4bf524eab9dbd5e143045527f32c72be54",
+    "src/azhub/linkfake/test-public-source-service.c": "07ab3c4a4f0815cc07e258c8f738266e6955adc25f89d02e4733c9f6ce1db663",
+    "src/azhub/research/scripts/public-db-library-server.c": "96c103c1a3c257b9a1ff4327b81ad9855b4d928a674b1852c48b66065f88dff9"
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": [
+    "service-library.stdout",
+    "service-library.stderr"
+  ],
+  "limitations": [
+    "No thread scheduler or mod lifecycle integration",
+    "Socket creation, advertisements and unmount remain caller responsibilities",
+    "Focused sanitizer test uses empty synthetic metadata and stalled TCP greetings",
+    "No new full matrix or target execution"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

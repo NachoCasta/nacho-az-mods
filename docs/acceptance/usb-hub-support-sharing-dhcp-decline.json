@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Initial ARP-conflict DHCPDECLINE delivery with pinned MAC client identity",
+  "negative_evidence_directory": "local/diagnostics/sharing-dhcp-decline-v2",
+  "positive_evidence_directory": "local/diagnostics/sharing-decline-positive-v1",
+  "negative_runner_exit": 0,
+  "positive_runner_exit": 0,
+  "probe_sha256": "c0a4f57eb4ba9ab5378687bb4945a01030d9b9b0608b044f17beaa427eefdce0",
+  "helper_sha256": "70338c237f8e83eff9624fe08695cdd18dc699a695c6995bfac098735efc8ade",
+  "source_sha256": {
+    "src/azhub/linkfake/public-dhcp-decline.h": "504b79ee18888e73c5516d76b5f5581bc22e3fe658002b31eff1786fae9bcd84",
+    "src/azhub/linkfake/test-public-dhcp-decline.c": "59702d8f4c64f168e99424742ef867a9e97be5658615b2577c15fe38f74f3eef",
+    "src/azhub/linkfake/public-dhcp-child.h": "a2c8da4a4913c8356af87dac952850ce81f39276c479885257987f7b1ba39bea",
+    "src/azhub/linkfake/public-address-conflict.h": "47994e2c5392595aa93e92638a76d285562128bdf57576942a0626de212debf6",
+    "src/azhub/linkfake/test-public-address-conflict.c": "4013a62973f53cf5a238d6f580d916e03a17976176722b258c7045ca7e39a26a",
+    "src/azhub/research/scripts/public-address-flow-probe.h": "b3f2242a74551d8e4337b7753d5e1e6d3adea8aa1014d729cb1919272ab9cef9",
+    "src/azhub/research/scripts/dhcp-fixture-server.py": "b4042944ec66bdf32fa0c1b53c3cf67f3bb2771e12193f34f4c08cd53c75a0a0"
+  },
+  "validated": [
+    "Native client explicitly uses MAC-based option61 identity",
+    "Foreign ARP ownership detected before IPv4 application",
+    "Server UDP socket receives DHCPDECLINE from0.0.0.0:68",
+    "Rejected IP, server identifier and option61 match the actual grant",
+    "IPv4 and nonzero UDP checksums pass unit verification and live UDP delivery",
+    "Conflicting IP stays absent; no announcement or IPv4 use observed in bounded window",
+    "Same binary repeats successful initial configure/announce/UDP/remove path",
+    "Native process IDs/DNS/routes and parent namespace preserved"
+  ],
+  "tests": {
+    "post_decline_ten_second_and_repeated_conflict_backoff": "targeted plain/ASan+UBSan/TSan passed",
+    "full_asan_ubsan": 63,
+    "host_log": "local/integration/dhcp-decline-v1/host-suite.log",
+    "full_tsan": 63,
+    "full_plain": 63
+  },
+  "cleanup": {
+    "owned_guest_host_namespaces_removed": true,
+    "temporary_guest_files_removed": true,
+    "transport_errors": [],
+    "test_module_removed": true
+  },
+  "limitations": [
+    "Initial conflict fixture only; no arbitrary DHCP-server pool behavior established",
+    "Retry cooldown tested as component; live reacquisition not implemented",
+    "No ongoing music-service conflict or endpoint coupling",
+    "Live branches not sanitizer-instrumented",
+    "No target4.4 runtime, physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

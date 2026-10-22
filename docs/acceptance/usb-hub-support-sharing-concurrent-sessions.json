@@ -1,0 +1,88 @@
+{
+  "recorded_at_utc": "2026-10-20T18:51:04.616597+00:00",
+  "scope": "Bounded concurrent host prototype metadata sessions and native MP3 load regression",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "TCP listeners now use a bounded eight-session pool rather than serially processing connections",
+    "Two real socket sessions complete setup and render distinct menus while the first remains open/idle; no shared menu replacement",
+    "Extra session is refused at capacity; shutdown closes pending greetings and idle sessions and joins workers",
+    "Session controls pass on Windows and Linux",
+    "Native emulator load regression finishes NOW LOADING and shows selected MP3 title, remaining04:25.514 and BPM69.9",
+    "Runtime peer stderr empty; no connection_end or capacity refusal recorded in native scope"
+  ],
+  "checks": {
+    "session_groups": 2,
+    "backend_groups": 5,
+    "framing_groups": 5,
+    "file_groups": 3
+  },
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "limits": [
+    "Concurrent protocol controls use synthetic socketpair clients; no simultaneous real CDJs or multiple independent library clients tested",
+    "Only one public provider and selected MP3 load regression",
+    "Host-side snapshot/copy service, not live mod implementation",
+    "No decoded/audible or full-track playback, loaded remote eject, multiple-source routing or final candidate acceptance"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/peer.stdout",
+      "sha256": "87bc64650cd5debda87f6952fcc6ce2e4df5dd413055a4f6800e311c794b21b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/results.json",
+      "sha256": "336198d616d0bb7f60a0f612a49a35ed298a724c18babcf895d0ffd25f3fd2b8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/load-waveform.png",
+      "sha256": "86eae3bef01d9e53346e163446948495c26dc8e6eb78a3ad23b3d5e5aebfe1e4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/sessions-windows.stdout",
+      "sha256": "6b7a1341d48e61087bfd62d62af16bcfad732d452d671d468d70611277c61204"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/sessions-windows.stderr",
+      "sha256": "f938c307af6c0575610ba0e70f01abd8a398a400c97ee1df2adf8b098d2ba5f8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/sessions-linux.stdout",
+      "sha256": "e6aab2da2a698d276837a63a0970353c0bbf5669502a4cfd508e9ef10f7bfd3c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/sessions-linux.stderr",
+      "sha256": "cbe4b84d897ac017db0552ccb3a31855ff0fb172bc344c967c4c4c92eb19e624"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/source-used/link-public-provider-probe.py",
+      "sha256": "2c4d2c46806c589a27f57ddbb85ccae698df8c18d2ea8d5a0d6f25c1b5f99c4d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v20/source-used/link_snapshot_backend.py",
+      "sha256": "99f2bd0411cf61555a29925a91a316d8ca7431ab35872c461ed1ce4886d3e362"
+    }
+  ]
+}

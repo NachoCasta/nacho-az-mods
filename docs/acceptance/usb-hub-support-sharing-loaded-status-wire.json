@@ -1,0 +1,67 @@
+{
+  "scope": "Synthetic loaded/playing status wire stimulus, not native admission/eject/audio or physical-CDJ acceptance",
+  "source_identity": 1,
+  "requester": 3,
+  "track_id": 495,
+  "matching_wire_packets": 300,
+  "peer_exit": 0,
+  "observer_exit": 0,
+  "native_snapshot_unchanged": true,
+  "native_admission_instrumented": false,
+  "eject_attempted": false,
+  "physical_AZ_touched": false,
+  "evidence_directory": "local/diagnostics/sharing-native-loaded-status-wire-v3",
+  "runner_exit": 0,
+  "owned_scope_cleaned": true,
+  "self_test_log": "local/integration/sdk-broker-probe-v1/loaded-deck-status-self-test.log",
+  "initial_namespace_refusal_log": "local/integration/sdk-broker-probe-v1/loaded-deck-status-host-refusal.log",
+  "sha256": {
+    "src/azhub/research/link-peer/src/main/java/LoadedDeckStatusControl.java": "bae2dda75cdbc483ad53f50802f5f21545bc3055eeea24cfb470e73c718bb177",
+    "src/azhub/research/scripts/test-loaded-status-emulator.py": "6eb7807e60e906cb49ae9ff07ff08de78612fc040f02c0102ab351bdacff4a4f",
+    "local/link-peer-build/dependencies/beat-link-8.0.0.jar": "b3c11c49429aa973fa6072689cd92f8396b0ebe3cb9a35d76a073d0cd97ed245",
+    "local/diagnostics/sharing-retry-clients-v1/classes/LoadedDeckStatusControl.class": "bd163d679d5bc8b8872fc6dfbc9191e89a94924265eb272dceef886ee3996851"
+  },
+  "parser_controls": {
+    "valid_source_identities": [
+      1,
+      2,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "packets_per_source": 2,
+    "invalid_sources_refused": [
+      0,
+      3,
+      4,
+      40,
+      49,
+      255
+    ],
+    "loaded_track_id": 495,
+    "player": 3,
+    "USB_slot": 3,
+    "playing": true,
+    "library_template_unchanged": true
+  },
+  "wire_stimulus": {
+    "model_string": "CDJ-2000nexus",
+    "model_is_synthetic": true,
+    "duration_seconds": 60,
+    "matching_header_packets": 300,
+    "audio_renderer": false
+  },
+  "native_UI_review": "Four-deck waveform screenshots still show LINK PLAYER placeholders. This does not demonstrate native loaded-track admission, nor establish packet rejection. A native internal admission/usage observer or another equivalent proof is required before stronger eject claims.",
+  "native_held_handle_eject_baseline": "usb-hub-support-sharing-native-handle-eject.json remains separate; it did not advertise a loaded external track.",
+  "limits": [
+    "No native eject/unmount or real NFS read in these wire controls",
+    "No claim that synthetic protocol fields cause native loaded-deck admission",
+    "No physical model cache, playback, audio, sync or interoperability acceptance",
+    "Native source identity/slot to physical USB mapping requires verification before any eject; preserve the mods USB"
+  ]
+}

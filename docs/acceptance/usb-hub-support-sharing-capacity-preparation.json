@@ -1,0 +1,25 @@
+{
+  "scope": "Prepared integrated five/eight-source controls, not completed live capacity acceptance",
+  "runner": "src/azhub/research/scripts/test-sdk-broker-probe.py",
+  "capacity_source_count_options": [5, 8],
+  "selected_source_readiness_required": true,
+  "independent_discovery_and_complete_menus_per_source_required": true,
+  "exact_reference_pdb_and_audio_per_source_required": true,
+  "short_grant_refresh_per_selected_source_required": true,
+  "python_syntax_check_passed": true,
+  "live_capacity_control_passed": false,
+  "emulator_runtime_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "target_runtime_sha256": "c1047d4e93e6affed965c307be16aa141607859b5891c758b6147fefd98aa80e",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "additional_local_overlays_prepared": 3,
+  "additional_overlays_attached": false,
+  "overlay_receipt": "local/integration/sharing-eight-source-overlays-v1/prepared.json",
+  "physical_AZ_touched": false,
+  "actual_CDJ_acceptance": false,
+  "next_steps": [
+    "Finish the running native topology control and verify owned cleanup before starting another managed test.",
+    "Run complete five-source discovery, menus and exact file clients on existing hub media.",
+    "Attach only the three owned overlays to unused virtual hub ports6..8 with verified device/backing ownership, then run the eight-source control.",
+    "Safely remove owned additions and verify original emulator configuration restoration."
+  ]
+}

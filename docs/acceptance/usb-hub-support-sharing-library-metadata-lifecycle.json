@@ -1,0 +1,106 @@
+{
+  "recorded_at_utc": "2026-10-21T01:03:45.083298+00:00",
+  "scope": "Joint staged lifecycle for per-source file catalog and compact track metadata index",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "One PDB traversal populates both file catalog and compact metadata; metadata is sealed before final source fingerprint validation/public readiness",
+    "Metadata accessor requires source READY and nonretired index; no partial index is exposed through the public accessor",
+    "Cancel/failure/PDB validation failure retire metadata alongside source file withdrawal; callers already holding immutable rows may finish before joined destruction",
+    "Missing audio retains its track metadata while exposing no nonexistent file",
+    "Synthetic checks cover staged invisibility, exact generation, neighbor isolation, concurrent cancel and post-ready PDB mutation retirement for both services",
+    "Pinned AArch64 synthetic controls and live emulator staging pass with2546 tracks/10329 file nodes",
+    "Two independent unchanged Crate Digger clients still retrieve full PDB/audio fixtures with exact hashes after metadata integration"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 42,
+      "asan": 42,
+      "tsan": 42
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "public-library-files",
+      "public-track-index",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "synthetic_exit_code": 0,
+      "live_scan_exit_code": 0,
+      "live": {
+        "tracks": 2546,
+        "missing_audio": 2529,
+        "missing_analysis": 0,
+        "entries": 10329,
+        "path_bytes": 408643,
+        "entry_capacity": 16384
+      },
+      "binary_sha256": "04db378a0f096c70edb6d690b59e7bc0413a017a4e161e942959c11261fc7b76"
+    },
+    "independent_file_transfer_regression": true
+  },
+  "source_sha256": {
+    "public-library-export.h": "fd9e638a77c561e2d82efd24ab4c8a11669d756e2f996889cdd7ff95d436977f",
+    "public-library-files.h": "dc2a9e185afa8ae52c83d651754da83b0c457f32e74c87306a83cbe2f62c5a4c",
+    "public-pdb-reader.h": "850e45c26b4c8891e9add8ecb1013b1dc908762eeaae1ca73dce3fd05a3c3117",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "public-track-index.h": "af651d579fd39b48a397e2f5813d1215c34f00f089fff9612ffdd9810b2229d8",
+    "test-host.sh": "941015f21a5ce7b18d387250a45f7550fff5199887ae89f31d24293b5910ea42",
+    "test-public-library-files.c": "c49813c5b525d8f6b8d3c47aad9c00b6e2ed9e3c3ed5d5a39253de85aed1d2c3"
+  },
+  "log_sha256": {
+    "aarch64-live.stdout": "fa298a34a2c1f36eb0952b1c30768b90ba0e6754e84bd70d9659017a3ab74c1d",
+    "aarch64.stdout": "b27d1e431a826b9f674e0a526a6b108fcc5d4a1f8e5e1674507e749905c671ef",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "independent.stdout": "758fcd46f255bb3a36e6037838cc993586e61d86ab666b56ea21b2593f2c19b0",
+    "portable-matrix.stdout": "39897b18a1f07a0a94f80612d7a7e808cfd0d0ef1d6f88f47f8b029430c54460"
+  },
+  "remaining_gates": [
+    "Referenced name/playlist table parsing and source-owned metadata indexes",
+    "Metadata TCP framing/menu responses using joint lifecycle and validation",
+    "Live public discovery/address ownership and mod runtime integration",
+    "Native local playback plus external loading/eject concurrency",
+    "Exact candidate audit and separately authorized physical model testing"
+  ]
+}

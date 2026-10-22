@@ -1,0 +1,39 @@
+{
+  "recorded_at_utc": "2026-10-20T20:31:55.318991+00:00",
+  "scope": "Source-owned bounded file handle catalog component",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Opaque32-byte handle contains caller-supplied128-bit instance nonce, source generation and catalog identity; caller must supply a fresh unpredictable nonce on reload",
+    "Per-source catalogs retain up to256 references without eviction; duplicate paths keep their original handle",
+    "References retain no descriptors or active root leases",
+    "Cross-catalog, altered and prior-generation handles are refused",
+    "Concurrent resolver/reader and withdrawal complete; neighbor source remains readable"
+  ],
+  "verification": {
+    "gcc_plain": true,
+    "clang_plain": true,
+    "clang_asan_ubsan": true,
+    "clang_tsan": true,
+    "scope": "Targeted catalog test only; prior35-case matrix predates catalog addition",
+    "aarch64_execution": false
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "210a5731cb7ec9fe141f738333b1190d5b5c62aa055f5c1a154b1d5b58fbc4d8",
+    "public-file-root.h": "a5029192984ff70b4c6af3f49cb0bac4fad2e89c6658aee110e641db471d0c74",
+    "public-nfs-read.h": "2480943c0b39a3a1f059f4801c5b18e33506dcbf70907dc3a3a2a499149cf71a",
+    "test-public-file-catalog.c": "c7e712745690e0585676cb790c2d29d1300495f850e5912a0e8359127a2908c2"
+  },
+  "log_sha256": {
+    "targeted.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targeted.stdout": "c7b7e9153fef054f0a21b9abc02460d91869f98afb54a7c143b44d804432c95c"
+  },
+  "remaining_gates": [
+    "Trusted path authorization from live library and directory catalog",
+    "Secure runtime nonce generation and source-specific ownership",
+    "Directory/mount service and actual RPC socket dispatch integration",
+    "Capacity policy for libraries above256 registered files; current explicit ENOSPC must not become silent eviction",
+    "Independent client and final complete candidate regression"
+  ]
+}

@@ -22,6 +22,13 @@ in English. Preserve identifiers and observed test data, including track titles,
 
 ## USB Hub Support
 
+**0.4.4 adds experimental Ethernet sharing of hub USB libraries over PRO DJ LINK.**
+One physical hub stick passed independent software-client discovery, full library
+browsing and exact complete database/track downloads, including after native Link
+Off/On. Native USB access remains available. Actual-CDJ interoperability and Wi-Fi
+sharing remain unvalidated. See [release notes](docs/releases/usb-hub-support-0.4.4.md).
+The local-only statements below describe earlier releases.
+
 **0.3.1 adds native-style HUB source labels and a clearer eject selector.**
 Source/Browse/Waveform reuse the AZ's USB artwork and lettering; additional
 numerals3–8 use the closest native font. The user approved the appearance on

@@ -1,0 +1,56 @@
+{
+  "scope": "Native emulator load and playback-position progression from isolated host C source worker",
+  "fixture": {
+    "source_is_copied_fixture": true,
+    "audio_bytes": 10881597,
+    "audio_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+    "track_id": 1884,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+  },
+  "server_sha256": "1e9672f71e687daabc6ffa8fcea13c52702d72349b27ab0dbea6485a72297aa7",
+  "load": {
+    "reviewed_local_screenshot": "c-after-load.png",
+    "native_load_info_0x2102_observed": true,
+    "duration_remaining_ms": 265514,
+    "native_title_visible": true,
+    "waveform_visible": true,
+    "deck": 1
+  },
+  "playback": {
+    "waveform_scrolled": true,
+    "full_track_playback_tested": false,
+    "initial_remaining_ms": 265324,
+    "play_button_sent": true,
+    "audio_captured": false,
+    "position_advanced_ms": 23955,
+    "later_remaining_ms": 241369,
+    "reviewed_local_screenshots": [
+      "c-play-start.png",
+      "c-play-progress.png"
+    ]
+  },
+  "file_transport": {
+    "rpc_read_procedure": 6,
+    "rpc_version": 2,
+    "rpc_program": 100003,
+    "nfs_read_requests_observed": true
+  },
+  "evidence_directory": "local/diagnostics/sharing-c-provider-v8",
+  "evidence_files": [
+    "peer1.stderr",
+    "wire.stdout",
+    "transport.stdout",
+    "transport.stderr"
+  ],
+  "limitations": [
+    "Host C worker and copied fixtures, no live on-device source export",
+    "Single MP3 only",
+    "No physical AZ/CDJ acceptance",
+    "No local/remote concurrent streaming or native safe eject test",
+    "Beatgrid/bar indicator and all analysis variants not accepted by these screenshots"
+  ],
+  "physical_az_operations": false,
+  "publication": false,
+  "owned_scope_clean_exit": true,
+  "owned_namespace_removed": true
+}

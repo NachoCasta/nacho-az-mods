@@ -1,0 +1,41 @@
+{
+  "scope": "Source-incarnation controller with real worker threads and synthetic empty libraries",
+  "checks": [
+    "Unchanged source observation preserves active worker",
+    "Changed mount identity joins old worker before endpoint close/reopen",
+    "Reconnect uses a fresh generation and random nonce",
+    "Retiring one source preserves the neighbor",
+    "Endpoint open failure does not spin or affect neighbor",
+    "New observed incarnation permits retry",
+    "Final drain releases endpoint sockets after join"
+  ],
+  "host_sanitizers": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "d1953be5eaf842e7f86e6801e15e2438343fca84994651cd6baaae25b20cdece",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "source_sha256": {
+    "src/azhub/linkfake/public-source-manager.h": "955abef2d4e880d3b1cd411583cd0f45c9df5504b62b0f8344933a07bdb596d6",
+    "src/azhub/linkfake/test-public-source-manager.c": "b292c77ee6c78204b9c1d1a742bc024b7f517e243262c62e1e7149e5fc0201e6"
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": [
+    "manager-sanitizers.stdout",
+    "manager-sanitizers.stderr",
+    "manager-emulator.json"
+  ],
+  "limitations": [
+    "Not yet connected to native discovery/eject or endpoint allocator",
+    "Two empty synthetic libraries; no multi-stick browse/playback acceptance",
+    "Controller drain is not native unmount or external cache acceptance",
+    "No full host matrix rerun"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

@@ -1,0 +1,368 @@
+{
+  "recorded_at_utc": "2026-10-20T19:41:42.885793+00:00",
+  "scope": "Native client completes real track browsing for public providers5..8 in eight-provider fixture",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "v41 reviewed Browse captures show505/606/707 tracks after selecting Source labels5/6/7",
+    "v41 eighth-source automation stays in Source and issues no track query; filenames alone are explicitly rejected as evidence",
+    "v42 selects row7, moves once to8, verifies Source label8/808 then uses actual native arrow; reviewed Browse shows808 tracks",
+    "Every accepted capture is corroborated by corresponding provider track/render requests",
+    "Combined with v39, all eight public identities have native browsing evidence; this is not a simultaneous eight-deck/audio test"
+  ],
+  "provider_request_counts": {
+    "5": {
+      "0x0": 1,
+      "0x3007": 1,
+      "0x1000": 1,
+      "0x3000": 28,
+      "0x1400": 1,
+      "0x1004": 1,
+      "0x2002": 26,
+      "0x2c04": 77,
+      "0x2003": 1,
+      "0x1": 1,
+      "0x2004": 25
+    },
+    "6": {
+      "0x0": 1,
+      "0x3007": 1,
+      "0x1000": 1,
+      "0x3000": 28,
+      "0x1400": 1,
+      "0x1004": 1,
+      "0x2002": 26,
+      "0x2c04": 50,
+      "0x2003": 1,
+      "0x2004": 30,
+      "0x1": 1
+    },
+    "7": {
+      "0x0": 1,
+      "0x3007": 1,
+      "0x1000": 1,
+      "0x3000": 28,
+      "0x1400": 1,
+      "0x1004": 1,
+      "0x2002": 26,
+      "0x2c04": 71,
+      "0x2003": 1,
+      "0x1": 1,
+      "0x2004": 25
+    },
+    "8": {
+      "0x0": 1,
+      "0x3007": 1,
+      "0x1000": 1,
+      "0x3000": 27,
+      "0x1400": 1,
+      "0x1004": 1,
+      "0x2002": 25,
+      "0x2c04": 100,
+      "0x2003": 1,
+      "0x2004": 50
+    }
+  },
+  "cleanup": {
+    "41": {
+      "transport": 0,
+      "peer": 0,
+      "providers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "observer": 0
+    },
+    "42": {
+      "transport": 0,
+      "peer": 0,
+      "providers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "observer": 0
+    }
+  },
+  "namespace_removed_each_scope": true,
+  "prepared_target_kernel": {
+    "config_sha256": "f7f4f8aafbc9cede5be22dc36dac06e934c442fc834d7c6e5e30b0578755b3f3",
+    "selected_flags": [
+      "CONFIG_MODULES=y",
+      "# CONFIG_MODVERSIONS is not set",
+      "CONFIG_PREEMPT=y",
+      "# CONFIG_MACVLAN is not set",
+      "# CONFIG_IPVLAN is not set"
+    ],
+    "utsrelease": "#define UTS_RELEASE \"4.4.194\""
+  },
+  "limits": [
+    "All libraries remain differently filtered copies of one PDB, not live on-device hub libraries",
+    "No eight-source audio/deck loads, actual-CDJ acceptance or native4.4 virtual-interface runtime acceptance",
+    "Prepared4.4.194 kernel config disables MACVLAN/IPVLAN; emulator6.6 support is not a physical capability claim",
+    "A compatible module or alternative transport needs local build/research before real-device testing",
+    "Public icons5..8 are blank on this native client; labels and menus work",
+    "Final live backend, address conflict management, concurrent local/remote use and remote-loaded eject remain open"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/results.json",
+      "sha256": "7b01612db613869cda3abce6e0125c0eefd02b1cdd0ed57d28c14e96dede31d5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/registered-provider17.png",
+      "sha256": "ccc18f9be898c63f305dcae26ee44d063ded8c32da4c1959f3e7e7c0d4ac19c4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/wire.stdout",
+      "sha256": "ec1360603b11c8524158c0e1f883cc356db79d81c3824a0dde31c41add9a562a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer1.stdout",
+      "sha256": "157aada04408add8438de1688864d390e45ca0457724766c4b862a041f3da1e5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer2.stdout",
+      "sha256": "00f9fac936d19c7159c7cb383a277a31a30b7a36307ce96ced4cec372b5ae627"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer3.stdout",
+      "sha256": "86ee1b8045be363ff846a9517e3a929ac327e489915e90cf690f63464427bca4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer4.stdout",
+      "sha256": "87ab3e3bde8c13b251c1383d4bdef80748fc57e1414e28169253400cb81657f2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer5.stdout",
+      "sha256": "0783fa79f94392892756563780b90dfe8b608662b55461e55cf32ff039682111"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer6.stdout",
+      "sha256": "80f5a9d9c3bd6ff78a98da81a24a874983750250fc3ba5872e334450cf1a4f18"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer7.stdout",
+      "sha256": "9628cfa29e226b825fd0564e3790c1f6439b94e0b4a736a0de606a344181949c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer8.stdout",
+      "sha256": "96e8671f50810b095be96718745a77cef4a1910d9642ff80b7f771137a631a89"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer5.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer6.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer7.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/peer8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link-public-provider-probe.py",
+      "sha256": "ce83700b132e829af015d0df53379c47f678545d2bd9b77ad7a26e1bec444eee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/results.json",
+      "sha256": "21a09e5e434d61fd77bd9e953893dfe7cad01064629edbe566affc03c6e3c1b2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/registered-provider17.png",
+      "sha256": "3c59e21e59ed9580114c5d9dac9d7857e933aa904c87c36ae642732c7c769947"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/wire.stdout",
+      "sha256": "4ba2f4f19cd4fb53ee3b5746228415240f651149d8329ef1b255b5ded213e76d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer1.stdout",
+      "sha256": "5c32e8bdbe0615d2b3553838559aacb76cd2a568a884330966aa8199ad7d70ea"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer2.stdout",
+      "sha256": "d51a9124d211f4c21ab9506c94a59451d857c3eda1810db86d31e1199e1dd2b8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer3.stdout",
+      "sha256": "eeff57006dd56dd9f3b335cee8c481b4fcaeb024b5479a81500ecaef42ec2314"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer4.stdout",
+      "sha256": "83afae06752534a2f6a5fe4f5e2d6c474ba598b6edea573dea8129b01f292c64"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer5.stdout",
+      "sha256": "4ac8c294579582d45c0151afdb4b3daa9ec27532375c842c156f15d7158a03a2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer6.stdout",
+      "sha256": "dc9881a05f621891fe93a713491709c07c026e6c4c703d57453a2f901c76dd07"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer7.stdout",
+      "sha256": "2b09dfe1094d4a911f9b60fec939bebecbea45b31bd8788e5d1e7218346c4e89"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer8.stdout",
+      "sha256": "2b80621b6f37c37188c86ee009c618e8bff98d2624e8f81ca55b451a9e2a879c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer5.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer6.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer7.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/peer8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link-public-provider-probe.py",
+      "sha256": "ce83700b132e829af015d0df53379c47f678545d2bd9b77ad7a26e1bec444eee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/provider5-tracks.png",
+      "sha256": "aaa62a98b68882b7a021ac4213359e959709f4f819c24c7c6649a08e5f4ae7de"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/provider6-tracks.png",
+      "sha256": "ea874cd39df2c11310b58183e91ed811360416d7f4735e3076601e1fa7c8eae2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v41/provider7-tracks.png",
+      "sha256": "783c8f863f22830bebd1ab2fbc958fe0f379ae5c96c8b05bdc7f6d36f3ef6cc8"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/source8-before-arrow.png",
+      "sha256": "3dd4adc8828c0ecff9f7be3c939413fc697693b09d201df896b0618e4bfbc8aa"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/provider8-tracks.png",
+      "sha256": "d74a4128dbd57d4a0fac825fa8c51b5ea9a91085d3fa3d9046a78c2c631caf28"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v42/prepared-kernel-capabilities.json",
+      "sha256": "e82e314b225bafc2e035f22b04b4c6281e8701688789285d4ffeb9a65e9c7d8d"
+    }
+  ]
+}

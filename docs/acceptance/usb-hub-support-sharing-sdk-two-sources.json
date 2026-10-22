@@ -1,0 +1,237 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "069d6dee257aa76cbb2db05a542d01fc4643ad3b2a5d0244b78d73b90266d3ba",
+  "helper_sha256": "e0b9a2c077342c7145e3f687f02baad30cdb6880a92241c06bee76de1124029f",
+  "native_application_pid": "764301",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Two gated emulator native inventories, helper-owned allocation and independent concurrent full menus/files; native selected eject/replug while original neighbor session/root survives, then complete managed STOP/rollback/cleanup. Not production activation, local/remote simultaneous playback, external loaded deck or physical CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-two-sources-v4",
+  "source_slots": [
+    0,
+    4
+  ],
+  "source_roots": [
+    "/media/usb/sdc1",
+    "/media/usb/sdg1"
+  ],
+  "public_players": [
+    41,
+    45
+  ],
+  "public_addresses": [
+    "192.0.2.3",
+    "192.0.2.7"
+  ],
+  "per_source_complete_menu": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359
+  },
+  "independent_exact_database_and_audio_both_sources": true,
+  "neighbor_original_RPC_handle_and_TCP_menu_session_preserved": true,
+  "cross_source_handles_rejected": true,
+  "selected_source_rediscovered_after_replug": true,
+  "selected_old_handles_STALE_both_aliases": true,
+  "fresh_exact_database_after_replug": true,
+  "native_eject": {
+    "before": {
+      "pid": 764301,
+      "clock_ms": 23185728,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 72312,
+          "devnum": 14
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "after": {
+      "pid": 764301,
+      "clock_ms": 23193417,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 72312,
+          "devnum": 14
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "source": 0,
+    "root": "/media/usb/sdc1",
+    "retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "neighbor_mounts_preserved": [
+      "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sde1 /media/usb/sde1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdd1 /media/usb/sdd1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdf1 /media/usb/sdf1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdg1 /media/usb/sdg1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+    ],
+    "remote_loaded_deck_tested": false
+  },
+  "current_run_scoped_readiness_and_ordering": true,
+  "all_client_slots_EMPTY_before_global_STOP_accepted": true,
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "RPC_controls": "Repository-authored; unchanged Beat Link/Crate Digger discovery, menus and file fetching are independent evidence.",
+  "remaining": [
+    "Production identity/address/activation policy",
+    "Renewal and no-DHCP networks",
+    "Simultaneous native/local and remote playback",
+    "External loaded-deck eject",
+    "More-source capacity validation",
+    "Target4.4 runtime and model-specific physical tests"
+  ],
+  "host_regression": {
+    "plain": 81,
+    "ASan_UBSan": 81,
+    "TSan": 81,
+    "exit_code": 0,
+    "log": "local/integration/sdk-broker-probe-v1/two-sources-host-suite.log"
+  }
+}

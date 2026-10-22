@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "Local broker packet/descriptor transport and independently execd IPC-only helper",
+  "source_sha256": {
+    "public-broker-wire.h": "fe65bd49e604c6c55c767095d7946efdebf3d7c88c1c52065ccce331fac24c90",
+    "public-broker-probe-child.h": "4bc50b873a6b8353f5f002338c3a53189e1161d8dde8610e41b97db2159dd511",
+    "test-public-broker-wire.c": "dedf67aab1e6019316d6c47dab10cbaea15512a7ced48356430ccedd2cdf420d",
+    "test-public-broker-probe.c": "1cb265df376f3d4e101e6fccaf0f4a2d2c9673460fa03d9d5645ef150c27aa31",
+    "public-network-helper.c": "c6fcd4af53915aafd0f77f3bf7c64933634443bcc07e81ed13a8fc06713ad7b4"
+  },
+  "binary_sha256": {
+    "wire_control": "16922d736778b3a99917acc10f83f7ad8cd594d6edfef244ba6ac290fa372942",
+    "named_probe_control": "ac9cc8dc6c9988a2a73c3b9e45e6f08a5650bbf21e65fe51cab8010196525341",
+    "standalone_helper": "1377e6d56e9dd5ff50814fb26f505d0eb3164beee6dfc63bd15b444cbd63cea7"
+  },
+  "evidence": [
+    "local/integration/broker-wire-v1/runtime.txt",
+    "local/integration/broker-wire-v1/probe-emulator-result.json",
+    "local/integration/broker-wire-v1/host-suite.log"
+  ],
+  "tests": {
+    "hook_registration": "passed",
+    "full_tsan": 65,
+    "named_probe_targeted_plain_asan_ubsan_tsan": "passed",
+    "wire_pinned_aarch64_emulator": "passed",
+    "full_asan_ubsan": 65,
+    "full_plain": 65,
+    "standalone_named_probe_pinned_aarch64_emulator": "passed",
+    "wire_targeted_plain_asan_ubsan_tsan": "passed"
+  },
+  "validated": [
+    "Bounded versioned seqpacket frames with explicit big-endian fields",
+    "Kernel PID/UID and optional reviewed executable identity checks",
+    "Per-launch token rejection closes received descriptors",
+    "Namespace FD identity/CLOEXEC and short/extra/truncated ancillary cleanup",
+    "Named private socket HELLO/namespace-inode acknowledgement/STOP with separately execd helper",
+    "No namespace entry/configuration; native PID/DNS/routes unchanged",
+    "Complete FD count/path and temporary guest file cleanup"
+  ],
+  "limitations": [
+    "Actual SDK-managed helper launch not tested",
+    "No production command schema, stale-generation or namespace authorization dispatch",
+    "No broker library/lease/network lifecycle implementation",
+    "No target4.4 runtime, physical AZ or actual-CDJ acceptance"
+  ],
+  "SDK_launch_used": false,
+  "physical_AZ_touched": false
+}

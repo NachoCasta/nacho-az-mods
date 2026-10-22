@@ -1,0 +1,104 @@
+{
+  "recorded_at_utc": "2026-10-20T21:03:05.506279+00:00",
+  "scope": "Staged source-owned file catalog populated from classic PDB audio/analysis paths",
+  "production_runtime_integration": false,
+  "network_export_of_builder_catalog_tested": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Dedicated public root and independent per-source catalog; no native USB library slots/private requesters used",
+    "No ready catalog is returned until complete PDB traversal and final fingerprint revalidation",
+    "Only PDB-listed audio/analysis paths, known DAT companion EXT/2EX paths, required parents and export.pdb are registered; unrelated existing secret remains hidden",
+    "Unsafe path components fail the staged build; missing/inaccessible optional media is counted without exposing filesystem contents",
+    "Cancellation may race worker steps; catalog withdrawal and root drain are source-local; neighbor staged library still becomes ready",
+    "Parser scratch memory is freed after successful staging; root descriptors are not retained by file references",
+    "Pinned AArch64 staging scans live emulator hub0:2546 tracks,10329 entries,408643 stored path bytes,16384 entry capacity",
+    "Emulator image has2529 missing audio paths (17 present); this is incomplete audio-fixture coverage, not all-track playback acceptance"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 41,
+      "asan": 41,
+      "tsan": 41
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "public-library-files",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "synthetic_exit_code": 0,
+      "live_scan_exit_code": 0,
+      "live": {
+        "tracks": 2546,
+        "missing_audio": 2529,
+        "missing_analysis": 0,
+        "entries": 10329,
+        "path_bytes": 408643,
+        "entry_capacity": 16384
+      },
+      "binary_sha256": "db58e90d4d14fb911c0a70e429ae14de8c7e265e544954b53a5df4e96928d974"
+    }
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "29b12f58500543e1711293b05f9aa673e24eb214ae469704d04d7485249492ed",
+    "public-library-files.h": "d619a7b8614fd2c8f4d54ec4043e6c5b07d59e8dae300ec45ad955f4c8996248",
+    "public-pdb-reader.h": "57a12296d7c369d53b29f4a54ee4e1ef01c85dd8fa90ca7350a0e8973c186857",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "test-host.sh": "4f648cc097adabcec4eb06675ce03ebb0e4c2b24c9d4b9ce8ede56905287692c",
+    "test-public-library-files.c": "d80a44acd28439d4594569c9948a6a62ff4998f2cb887b158f607ac976b316af"
+  },
+  "log_sha256": {
+    "aarch64-live.stdout": "fa298a34a2c1f36eb0952b1c30768b90ba0e6754e84bd70d9659017a3ab74c1d",
+    "aarch64.stdout": "ffdec9c847081b9bdfbbf581baaee3c0fbfe77d241034c6635d71cacee654793",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "portable-matrix.stdout": "fbb4fe96637c5bc446bba4bd0ee10cd4215afa7f20cd01b4ff3279b32c625dad"
+  },
+  "remaining_gates": [
+    "Serve the PDB-populated catalog through C RPC and validate with independent client",
+    "Detect library mutation/replacement after readiness and coordinate publication/withdrawal with runtime",
+    "Complete independent metadata/playlists/analysis service",
+    "Public address/transport ownership and mod lifecycle integration",
+    "Concurrent local/remote behavior, external-loaded safe eject, final candidate and physical trials"
+  ]
+}

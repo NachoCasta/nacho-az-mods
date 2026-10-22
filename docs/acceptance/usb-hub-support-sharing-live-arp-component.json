@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scope": "Retained candidate retry policy and isolated live Ethernet ARP adapter",
+  "tests": {
+    "candidate_retry_asan_ubsan": "passed",
+    "pinned_aarch64_adapter_build": "passed",
+    "candidate_retry_tsan": "passed",
+    "candidate_retry_plain": "passed",
+    "live_veth_asan_ubsan": "passed",
+    "live_veth_plain": "passed"
+  },
+  "source_sha256": {
+    "public-address-conflict.h": "3564e6d0d9b5c19930387473d6ba2e6513542eb1be58d83ff1f508e24022003a",
+    "test-public-address-conflict.c": "7709f5b62e14fe63c42e8e9bfe04d2a0a83e31a64bae6e2e1703f728686e18b2",
+    "public-address-arp.h": "1f86ced2b9d85e36f0dd24e498ee25d43b40cdcaa7466eef0b2a20d10900ce57",
+    "test-public-address-arp.c": "8f9d463e94b97b348492c77c6f8d94cd93f853c30bed890dec1e5b892709e55d"
+  },
+  "binary_sha256": {
+    "aarch64": "cf1d469020719b435714a03b93b3df0ddde6584341fbc6e8e331110a4316b33f",
+    "host_asan": "82e38a51b2e67c8fb9ab1bacc32fff5f6c9929c2c776eaa765afcc59c21fda53",
+    "host": "ff2d0f70c04a80260c0936ebca5d8371424a77a072c3c929a582a3f4e4d61486"
+  },
+  "validated": [
+    "At most one new candidate per minute after ten conflicts; context retained across candidates",
+    "Independent neighbor retry context",
+    "Live ARP competing probe conflict while acquiring",
+    "Live ARP announcement conflict while acquiring and active",
+    "Wrong interface MAC rejection",
+    "Explicit send confirmation; adapter does not advance protocol state",
+    "Owned isolated WSL namespace removed after each trial"
+  ],
+  "limitations": [
+    "No automatic interface/address allocator or DHCP client",
+    "No full local MAC inventory integration",
+    "No emulator or target4.4 live adapter runtime",
+    "Not wired into the mod",
+    "No actual-CDJ or physical-AZ acceptance"
+  ],
+  "host_namespaces_empty_after": true,
+  "physical_AZ_touched": false
+}

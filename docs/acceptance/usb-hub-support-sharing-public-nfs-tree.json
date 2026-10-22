@@ -1,0 +1,85 @@
+{
+  "recorded_at_utc": "2026-10-20T20:39:44.479155+00:00",
+  "scope": "Authorized C directory references and NFS GETATTR/LOOKUP bodies",
+  "production_runtime_integration": false,
+  "rpc_tree_dispatch_connected": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Root empty relative path is accepted only as an explicitly requested directory; regular file API retains previous restrictions",
+    "Directory leases use confined no-symlink traversal and inode validation; references retain no descriptors",
+    "GETATTR and LOOKUP expose only pre-registered catalog nodes; existing unregistered file is hidden",
+    "Symlink directories, type collisions and traversal names are refused; replaced child inode and withdrawn sources return STALE",
+    "Native fixture client uses UTF16LE names; wire-name decoding and actual directory RPC are still pending"
+  ],
+  "verification": {
+    "kernel": "6.6.138-dirty",
+    "aarch64_exit_code": 0,
+    "binary_sha256": "f7d6490fb0ebcdc787ead72653131cb84586b95d3edd6b696dc842f660840913",
+    "matrix_counts": {
+      "plain": 38,
+      "asan": 38,
+      "tsan": 38
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ]
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "3e82458fa1d7fb462f968e734158c2130a82e22f47d6fc164f007241b394a89a",
+    "public-file-root.h": "d40b536a4bb83f22f4fba53cf29cedc35a7326a264a1c8af70221080686c8ffb",
+    "public-nfs-read.h": "c1eef155fb7b72d02c76926df56fffcb721ca9e7030428dc06b2bbcc0540555f",
+    "public-nfs-tree.h": "23cd333f3923d5ba05d2853d1afc50ac651e91a02fc1321305372ff4d5625c24",
+    "test-host.sh": "bd5f9d6db515836f6f3410c0c68ee0f8aed0443dd720db3aac52fffa3fd48929",
+    "test-public-nfs-tree.c": "dbe53e48b338bf6a50c1b4fad0e0d8f810ea76ae11c168717071ced76f24e3ec"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "470d5f2ce9c4e82c5412c674aa456f612623a8a4062799c8f868bbfaef1feabd",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "portable-matrix.stdout": "a557dec0a63e9143e7803befdf54945f7bc030720103ad2f1fc12873c95d2888"
+  },
+  "remaining_gates": [
+    "RPC GETATTR/LOOKUP dispatch and native-compatible name decoding",
+    "READDIR pagination/cookies, mount and portmapper",
+    "Trusted live library/catalog population and runtime lifecycle",
+    "Independent client full source transfer, concurrent local/remote behavior and safe-eject integration",
+    "Final complete candidate and model-specific physical trials"
+  ]
+}

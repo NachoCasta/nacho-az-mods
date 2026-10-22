@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "scope": "SDK-managed IPC-only helper inside EP147 in the localhost emulator",
+  "source_sha256": {
+    "public-sdk-probe.h": "91be015afd1ddce8027b45aeaf21925ba958cde0161afbfd14cac41dd1e5dd00",
+    "public-broker-probe-child.h": "591050fef77b7038c1427857731550b60188d89d55d4dbf57448314741de9b83",
+    "public-broker-wire.h": "fe65bd49e604c6c55c767095d7946efdebf3d7c88c1c52065ccce331fac24c90",
+    "public-network-helper.c": "c6fcd4af53915aafd0f77f3bf7c64933634443bcc07e81ed13a8fc06713ad7b4",
+    "test-public-broker-probe.c": "f2749ae50446e1beaac1a93a9fb27c08795b74ce9c305b87d130771474712476"
+  },
+  "binary_sha256": {
+    "mod": "b7d5834aea93337224e71c5fbb2cfed3c9c5f5e6c702c61e434f4328f88b8e80",
+    "helper": "6af200f80e3e9cd820af3607fd2ad078d97d7b1b4cef1292911e91a876f36441"
+  },
+  "runtime": {
+    "run": "8e1143e6459347a4abe69649d58c517b",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 214199,
+    "peer_pid": 214199,
+    "namespace_inode": 4026532427
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-broker-probe-v4/result.json",
+    "local/diagnostics/sharing-sdk-broker-probe-v4/probe-result.json",
+    "local/diagnostics/sharing-sdk-broker-probe-v4/original-files.json",
+    "local/diagnostics/sharing-sdk-broker-probe-v4/guest-commands.json",
+    "local/integration/sdk-broker-probe-v1/bind-regression.txt",
+    "local/integration/sdk-broker-probe-v1/host-suite.log"
+  ],
+  "tests": {
+    "portable_plain": 65,
+    "portable_asan_ubsan": 65,
+    "portable_tsan": 65,
+    "hook_registration": "passed",
+    "bind_mounted_namespace_descriptor": "passed"
+  },
+  "validated": [
+    "Real core launch of reviewed mod-owned USB helper asset",
+    "Kernel peer credentials, executable identity and session token checks",
+    "Namespace FD transfer and inode acknowledgement without namespace entry",
+    "STOP acknowledgement and managed child liveness end; managed and peer PIDs absent",
+    "Original package, stage, approval and optional marker state restored; temporary helper asset, namespace and files removed"
+  ],
+  "limitations": [
+    "NSFS validation does not distinguish namespace types or authorize source operations",
+    "No namespace entry, public address configuration or library service in this probe",
+    "Production broker dispatch, allocation, refresh/expiry, source-worker and eject integration remain pending",
+    "Emulator kernel 6.6.138-dirty only; no target kernel 4.4 runtime or actual-CDJ interoperability acceptance"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

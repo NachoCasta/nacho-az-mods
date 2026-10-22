@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "scope": "Lease-to-endpoint context and ordered address retirement component; synthetic lease/ARP and removal callback controls",
+  "source_sha256": {
+    "public-broker-lease.h": "2ae79a14af17a750610c33f28c9db3c1e58815fa816a6ffe6623539fd0a6f30d",
+    "test-public-broker-lease.c": "59c6692765ca7d3cecd506c210fcdf3ea4851b356a95dfcf5dc4fd791a9ebadb"
+  },
+  "tests": {
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/broker-lease-targeted.log"
+  ],
+  "validated": [
+    "Only ready matching address/mask/broadcast can prepare endpoint context",
+    "Namespace descriptor is duplicated and retained until removal acknowledgement",
+    "Exact old address passed to removal while replacement is queued",
+    "Pending removal retains configured state and namespace reference",
+    "Removal acknowledgement advances queued lease generation",
+    "Expired lease is no longer endpoint-ready and can retire"
+  ],
+  "limitations": [
+    "Test uses synthetic lease/ARP states and a fake address-removal callback",
+    "Actual endpoint socket open not executed by this control",
+    "Caller must withdraw/join/close endpoints before calling release",
+    "Periodic lease check and dispatch retirement still need integration",
+    "Acquisition, configuration, SDK helper command loop and physical acceptance remain pending"
+  ],
+  "physical_AZ_touched": false
+}

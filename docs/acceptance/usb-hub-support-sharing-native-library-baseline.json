@@ -1,0 +1,64 @@
+{
+  "recorded_at_utc": "2026-10-20T17:27:37.608003+00:00",
+  "scope": "Initial independent native USB metadata/menu control; not hub-sharing acceptance",
+  "production_version": "0.3.2",
+  "production_changes": false,
+  "emulator_pid": 967182,
+  "native_mode": "On confirmed by reviewed Utility screenshot; not inferred from internal gate",
+  "client": "Unmodified Beat Link8.0.0 MetadataFinder/MenuLoader APIs, requester3, isolated azlink0 only",
+  "observations": [
+    "Native player1 USB media discovered",
+    "Root, playlist and full track menus returned",
+    "Native peers1/2 and mixer33 discovered; DB port query for device1 reports46393",
+    "No custom private-slot routing taught to independent client"
+  ],
+  "menus": {
+    "event": "menus",
+    "root_items": 7,
+    "playlist_items": 20,
+    "track_items": 2547
+  },
+  "cleanup": {
+    "transport": 0,
+    "peer": 0,
+    "observer": 0,
+    "namespace_removed": true
+  },
+  "limits": [
+    "No hub export implemented or feasibility conclusion",
+    "No audio-file transport or native remote-in-use eject trial yet",
+    "Native TCP inventory previously shows46425 while discovery reports46393; distinguish advertised and listening endpoint behavior before assuming one shared server",
+    "Asynchronous Beat Link CrateDigger mount-listener shutdown warnings retained; process exits0, but clean harness teardown still pending",
+    "No physical AZ/CDJ test or audio capture"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/peer.stdout",
+      "sha256": "6ca61a71e81e25f2082e4b7fa8cae7941026d822926b53addb5657ae607f2c39"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/peer.stderr",
+      "sha256": "9a077ecafca4277730e1d5a693ed5fd87f69dc14063664629288c9995ebe86e0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/wire.stdout",
+      "sha256": "5187506fac2ee09a4b76042c85af750e0a4b4954270fd4194a3bf5a374c41b2b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/transport.stdout",
+      "sha256": "323e91b8ead5cdb0b04716587865a4bc92205891f1c210eaf68b26504566440d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/results.json",
+      "sha256": "9b085688c189e31703f73aa4a47830de5fce05762d343c6a5bf48a187986d64b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-library-v1/export-inventory.txt",
+      "sha256": "345289ee425b87d36070b468f2e57a566965eb626512710505588d58e6233ea0"
+    },
+    {
+      "path": "local/diagnostics/sharing-native-mode-ui.png",
+      "sha256": "5e6a1ad6a01a224500d32e64201fea831c4787dbd87cd0e8a15452fafe8f1e9a"
+    }
+  ]
+}

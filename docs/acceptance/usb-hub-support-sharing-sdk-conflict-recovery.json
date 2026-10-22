@@ -1,0 +1,48 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "3ad4a570e9c034a355aff69dfd7dc4fc4fc09349ae7168ca84c2aab353db70a8",
+  "helper_sha256": "7af803712cbae458331185c127d94bbcb54f01a749343b47fdda7bf8ff29315b",
+  "native_application_pid": "573385",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "initial_ARP_conflict_declined": true,
+  "conflict_recovery_same_identity": true,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Emulator-only actual SDK-managed ALLOCATE recovery after initial ARP conflict; not production activation or physical CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-conflict-recovery-v1",
+  "initial_address": "192.0.2.3",
+  "recovered_address": "192.0.2.4",
+  "public_player": 41,
+  "client_mac": "02:00:00:00:12:03",
+  "observed_retry_seconds": 10.126305449,
+  "independent_client_results": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "exact_database_bytes": 4419584,
+    "exact_audio_bytes": 10881597
+  },
+  "terminal_runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "remaining": [
+    "Production inventory and activation wiring",
+    "Ongoing conflict and renewal",
+    "Multiple-source and local/remote concurrency",
+    "Native remote-loaded safe eject",
+    "Physical model-specific interoperability"
+  ],
+  "host_regression": {
+    "plain": 78,
+    "address_undefined_sanitizer": 78,
+    "thread_sanitizer": 78,
+    "exit_code": 0,
+    "log": "local/integration/sdk-broker-probe-v1/conflict-recovery-host-suite.log",
+    "additional_control": "Backoff cancellation and later generation also pass separate plain/ASan+UBSan/TSan executions."
+  }
+}

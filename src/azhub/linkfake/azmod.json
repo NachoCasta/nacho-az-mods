@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.3.2",
+  "version": "0.4.4",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -11,8 +11,8 @@
   ],
   "hooks": true,
   "min_core": "1.2.3",
-  "summary": "Experimental candidate: hub continuity across Link mode changes.",
-  "description": "Candidate awaiting full validation: retain local hub sources across PRO DJ LINK On/Off changes. Four local decks with Link off; two with external Link on. Hub libraries stay local and use independent servers/caches. Short-press USB STOP to select a stick; hold to eject the hub. Wait for safe-to-remove confirmation. Exact firmware2.00 only. Actual-CDJ, phase-sync, eight-source hardware and long-session use remain unvalidated.",
+  "summary": "Experimental PRO DJ LINK sharing for hub USB sticks.",
+  "description": "Local candidate for separately authorized physical AZ/CDJ trials. Browse and load hub USB libraries locally and through independent PRO DJ LINK software clients. Preserve native USB sources and four local decks with Link off, two with Link on. Use USB STOP to select a stick or hold to eject the hub. External players handle source loss according to their own cache. Actual-CDJ interoperability and target MACVLAN runtime are not validated. Exact firmware2.00 ep147 only; core1.2.3 or newer.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }

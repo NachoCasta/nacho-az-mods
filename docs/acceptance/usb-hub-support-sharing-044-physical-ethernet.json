@@ -1,0 +1,65 @@
+{
+  "scope": "Physical AZ0.4.4 Ethernet sharing to independent Windows Beat Link/Crate Digger software clients; not actual-CDJ or rendered-audio acceptance",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "core_minimum": "1.2.3",
+  "version": "0.4.4",
+  "package_sha256": "4bad6bad276e56b7eb33e508f8dc3328df5695271bca35637ca0298ace93a705",
+  "runtime_sha256": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+  "helper_sha256": "046cd1e6f3101f260fed565de3e759a63e37dfe3dae667b600e36ad89f3fb453",
+  "physical_hub_sources_tested": 1,
+  "source_identity": 41,
+  "source_IPv4": "169.254.234.0",
+  "native_AZ_IPv4": "169.254.7.213",
+  "workstation_Ethernet_IPv4": "169.254.7.17",
+  "independent_discovery_passed": true,
+  "discovery_note": "Unmodified DeviceFinder requires Java preferIPv4Stack=true on this multi-interface Windows setup; no firewall edits",
+  "full_library_comparison": {
+    "tracks": 3172,
+    "ordered_nodes": 166,
+    "ordered_memberships": 11022,
+    "passed": true
+  },
+  "complete_PDB_transfer": {
+    "bytes": 2973696,
+    "sha256": "b28fae567b5f06d17828b588aeb7d35f402c3ad92996e3a63098417e2d8de487",
+    "passed": true
+  },
+  "complete_real_audio_file_transfer": {
+    "rekordbox_track_id": 167,
+    "bytes": 3590545,
+    "sha256": "bd896b584cd2b7b0e663881e9d150c379d2437627a45874a6c2e6f849fc775a4",
+    "passed": true,
+    "audio_rendered": false
+  },
+  "native_USB1_control": {
+    "C_alias": "/media/usb/sda1",
+    "exact_mod_file_read_via_native_NFS": true,
+    "hub_backing_and_private_alias_still_mounted": true
+  },
+  "parent_receive_mode": "Descriptor-owned membership for helper lifetime; prior bounded physical A/B and emulator acquisition/release/restoration pass",
+  "rollback": "/media/usb/sda1/MODS/backups/usb-hub-support-before-0.4.4-20261021-213546/original",
+  "remaining_verification": [
+    "Final physical GUI Link Off/On check pending user availability; first emulator outlier remains unexplained despite two full passing repeats",
+    "Final source snapshot and requirement audit"
+  ],
+  "evidence_directory": "local\\diagnostics\\physical-ethernet-library-v1",
+  "evidence_sha256": {
+    "menus.log": "030d0c9d4dafa98c37c3f72f1b0930c386313c964001f90887d1d57a0f97a7a7",
+    "pdb-fetch.log": "ff7ffe6b75167a80d9a01a1f2e169f9d88c6c6c7641400d09df569c4a5a0e200",
+    "audio-fetch.log": "8a70f13789644ee1c44e9659088a9237923a6911c2634af65dcb85f35d3702c9",
+    "native-usb-file.log": "ad5cddafb1e0fecd8f79bc807743fdc2dc4951d04dd69bc274c082cc883f19a5"
+  },
+  "actual_CDJ_acceptance": false,
+  "published": false,
+  "stable_rollback": {
+    "version": "0.3.2",
+    "directory": "/media/usb/sda1/MODS/backups/usb-hub-support-before-040-20261021-163608/original",
+    "runtime_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+    "verified_read_only": true,
+    "rollback_performed": false
+  },
+  "current_helper_loaded_eject_emulator_record": "docs/acceptance/usb-hub-support-sharing-044-loaded-eject-emulator.json",
+  "discovery_evidence": "local/integration/ethernet-parent-rx-session-v1/physical-discovery-ipv4.log",
+  "discovery_evidence_sha256": "a507cb305dd893f838789b3f9b564be5ae260878b711d3b93d5d7fd34775c9d1"
+}

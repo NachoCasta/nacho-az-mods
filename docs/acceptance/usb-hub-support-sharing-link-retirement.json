@@ -1,0 +1,29 @@
+{
+  "output": "PASS: owned namespace/MACVLAN, namespace-bound ARP probe from controller, configure/remove and native namespace preservation",
+  "probe_sha256": "bcfdb0a4d47593cdb7a54a374f95d92388dbedf4c2781d86067c31e313d05a01",
+  "native_before": {
+    "pid": "661481",
+    "address": "2: eth0    inet 192.0.2.15/24 brd 192.0.2.255 scope global eth0\\       valid_lft forever preferred_lft forever",
+    "routes": "192.0.2.0/24 dev eth0 proto kernel scope link src 192.0.2.15",
+    "dns": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /etc/resolv.conf",
+    "namespace": "4026531840 /proc/self/ns/net"
+  },
+  "native_after": {
+    "pid": "661481",
+    "address": "2: eth0    inet 192.0.2.15/24 brd 192.0.2.255 scope global eth0\\       valid_lft forever preferred_lft forever",
+    "routes": "192.0.2.0/24 dev eth0 proto kernel scope link src 192.0.2.15",
+    "dns": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /etc/resolv.conf",
+    "namespace": "4026531840 /proc/self/ns/net"
+  },
+  "physical_AZ_touched": false,
+  "scope": "Emulator component control of exact-MAC virtual-link deletion and immediate same-name/MAC recreation in an owned namespace. Not managed reconnect or actual-CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-link-retirement-v1",
+  "wrong_MAC_rejected_and_interface_preserved": true,
+  "kernel_ACK_for_link_deletion": true,
+  "interface_absence_verified": true,
+  "same_name_and_MAC_recreated": true,
+  "second_link_explicitly_deleted": true,
+  "module_and_temporary_cleanup_complete": true,
+  "targeted_host_controls": "network-link and broker-allocator pass plain, ASan/UBSan and TSan",
+  "managed_reconnect_validated": false
+}

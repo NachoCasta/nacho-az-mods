@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "DHCP-granted address rejected after observed foreign ARP claim, before configuration",
+  "negative_evidence_directory": "local/diagnostics/sharing-address-conflict-v1",
+  "negative_runner_exit": 0,
+  "probe_sha256": "7d1ef2e305f058a42abfd38dff971badf294f571611bf2be4c3576a83a834308",
+  "source_sha256": {
+    "src/azhub/research/scripts/public-address-flow-probe.h": "a91a97d85769ae94baf0db456ef669b546eff787ed0b1838e5f385bae32b9a55",
+    "src/azhub/linkfake/test-public-dhcp-acquire.c": "f0f4e221ea01a7fe9c61a7ebbec48f08bc6ee66519c6b80bd29cdc2bab1bad57",
+    "src/azhub/research/scripts/test-live-dhcp-emulator.py": "c3c934aeabb7042982fde1311b3d9907d601175b794b21a45c9b98a24b505a1c",
+    "src/azhub/research/scripts/dhcp-fixture-server.py": "d2b29aaf20acbe6d1aa44bb85b1b83131cbe3d8f7706a655d3de3f8cf298cfb8"
+  },
+  "validated": [
+    "Native DHCP OFFER/ACK succeeds before the conflict test",
+    "Host fixture observes the first zero-sender ARP probe and injects foreign ownership claim",
+    "C adapter reports conflict before IP configuration; exact negative child outcome required",
+    "Final IPv4 absent",
+    "Host observes no fixture address announcement or IPv4 source use during bounded two-second window",
+    "Native process IDs/DNS/routes and parent namespace unchanged"
+  ],
+  "negative_cleanup": {
+    "transport_errors": [],
+    "test_module_removed": true,
+    "owned_guest_host_namespaces_removed": true,
+    "temporary_guest_files_removed": true
+  },
+  "limitations": [
+    "Initial candidate conflict only; no running library services",
+    "No DHCPDECLINE or retry/reacquisition",
+    "Repository-authored ARP injector/observer; not actual-CDJ evidence",
+    "Live branch is not sanitizer-instrumented",
+    "No target4.4 runtime or physical AZ acceptance"
+  ],
+  "physical_AZ_touched": false,
+  "positive_regression": {
+    "evidence_directory": "local/diagnostics/sharing-address-flow-v2",
+    "same_probe_binary": true,
+    "runner_exit": 0,
+    "configured_announced_UDP_roundtrip_and_removed": true,
+    "owned_network_and_module_cleanup": true,
+    "native_state_preserved": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scope": "Standalone C legacy detailed waveform response; not integrated into mod runtime",
+  "request": "0x2904, three numeric arguments: DMST, track ID, zero",
+  "response": "0x4a02",
+  "input": "Source-catalog-authorized EXT/PWV3",
+  "samples": 39862,
+  "independent_control": "Unchanged Beat Link Client.simpleRequest and WaveformDetail decoder compared to Crate Digger direct EXT decoding",
+  "concurrently_launched_clients": 2,
+  "additional_stalled_greeting_peer": true,
+  "per_request_overlap_instrumented": false,
+  "regressions": [
+    "Six original analysis sections match per client",
+    "306 original beat positions/tempos/times match per client"
+  ],
+  "targeted_controls": [
+    "Original sample bytes preserved",
+    "Non-unit entry width rejected",
+    "Mismatched sample count rejected",
+    "Plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "383faa8d7095fe5ab222081274a8a01b82abe133eb761fd32ae1bd19e2f94302",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "native_limit": "Nineteen prefix bytes are zero-filled and ignored by Beat Link; native interpretation/rendering not validated",
+  "references": [
+    "https://raw.githubusercontent.com/Deep-Symmetry/beat-link/v8.0.0/src/main/java/org/deepsymmetry/beatlink/data/WaveformDetail.java",
+    "https://raw.githubusercontent.com/Deep-Symmetry/beat-link/v8.0.0/src/main/java/org/deepsymmetry/beatlink/data/WaveformFinder.java",
+    "https://raw.githubusercontent.com/Deep-Symmetry/crate-digger/main/src/main/kaitai/rekordbox_anlz.ksy"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-waveform.h": "1e35e5d8fb61fea5461ad81cc0d12a2bbb6b45ca873c9747e421eaf839604c9a",
+    "src/azhub/linkfake/public-db-menus.h": "86cbd61c1600129a39a2d7023ae1c498cc16f248d8e205458d8d1cc18e2ff0b0",
+    "src/azhub/linkfake/test-public-db-menus.c": "68e4d6c0d292c544479486ce9c5d38e8bb0f0feecdcc97e9b9cd471dfaba246b",
+    "src/azhub/research/link-peer/src/main/java/DbAnalysisControl.java": "1dc22d2afc59377f9b10b0ae3e2f3b356e5b539712494d12485209251602e816",
+    "src/azhub/research/scripts/test-public-db-analysis.py": "95ad3a52579c75c0d70e231542e7fc5aa22b16e42c56dda1c8c4049d488b55b9"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-analysis-v1",
+  "evidence_files": [
+    "waveform.stdout",
+    "waveform.stderr",
+    "waveform-sanitizers.stdout",
+    "waveform-sanitizers.stderr",
+    "waveform-emulator.json"
+  ],
+  "physical_az_operations": false,
+  "published": false
+}

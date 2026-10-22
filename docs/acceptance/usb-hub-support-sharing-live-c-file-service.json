@@ -1,0 +1,108 @@
+{
+  "recorded_at_utc": "2026-10-21T00:54:24.729522+00:00",
+  "scope": "Standalone C AArch64 file service over live emulator hub0 with independent network Crate Digger clients",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Emulator6.6 supports namespaces but initially lacked loaded MACVLAN driver; initial interface creation failed and its namespace was removed",
+    "Locally built unmodified emulator6.6 MACVLAN module loads successfully; separate guest namespace/interface owns192.0.2.3:111, never replacing native0.0.0.0:111/2049 services",
+    "C server stages catalog directly from live/media/usb/sdc1 PDB:2546 tracks,10329 entries,2529 missing audio fixtures",
+    "Host test clients use only owned isolated TAP192.0.2.2 and existing QEMU Ethernet bridge; no physical NIC or physical controller touched",
+    "Unmodified Crate Digger0.2.1 fetches complete4419584-byte PDB and10881597-byte audio from live C server with exact prior source hashes",
+    "Distinct UDP peer successful READ intervals overlap, confirming interleaved network servicing",
+    "Explicit standalone-source withdrawal reports drained leases; it does not unmount USB or simulate external deck-loaded state",
+    "Owned guest/host namespaces, MACVLAN, temporary files/module and QMP objects removed; native NFS sockets still present"
+  ],
+  "results": {
+    "database": {
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+    },
+    "audio": {
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+    }
+  },
+  "peers": [
+    {
+      "port": 56548,
+      "first": 1,
+      "last": 4320,
+      "requests": 2158,
+      "bytes": 4419584
+    },
+    {
+      "port": 51122,
+      "first": 2,
+      "last": 7472,
+      "requests": 5314,
+      "bytes": 10881597
+    }
+  ],
+  "transport": {
+    "frames": {
+      "guest_to_tap": 15406,
+      "tap_to_guest": 7497,
+      "nat_to_guest": 26,
+      "nat_peer_suppressed": 0
+    },
+    "errors": []
+  },
+  "cleanup": {
+    "guest_namespace_absent": true,
+    "guest_interface_absent": true,
+    "emulator_test_module_absent": true,
+    "host_namespace_absent": true,
+    "QMP_guard_absent": true,
+    "QMP_channel_absent": true
+  },
+  "artifacts": {
+    "server_aarch64_sha256": "7ca63c49d829895280dcd2e81f81ff3efc8ced98ab124be2a37c1e19740a35af",
+    "emulator6_6_module_sha256": "d125c73ce850c91a8485f32a4ef52ea318f3fd5b1d7eb712f18c510654e268ad",
+    "module_is_production_target4_4_asset": false
+  },
+  "source_sha256": {
+    "LocalFileServiceClient.java": "bddfe7cc1003510175bfb2e91d625b874363f358ee49185396bfaef99c52e634",
+    "public-file-catalog.h": "29b12f58500543e1711293b05f9aa673e24eb214ae469704d04d7485249492ed",
+    "public-file-root.h": "d40b536a4bb83f22f4fba53cf29cedc35a7326a264a1c8af70221080686c8ffb",
+    "public-library-export.h": "fd9e638a77c561e2d82efd24ab4c8a11669d756e2f996889cdd7ff95d436977f",
+    "public-library-files.h": "e2ddcabed577cd9ac48a8712dde012a8a58d348349561e998164c77e2f98edea",
+    "public-nfs-read.h": "c1eef155fb7b72d02c76926df56fffcb721ca9e7030428dc06b2bbcc0540555f",
+    "public-nfs-tree.h": "f4caeb91ed6a67939efbfeaa29095937bc376986cfac2919c82234acb753629d",
+    "public-pdb-reader.h": "57a12296d7c369d53b29f4a54ee4e1ef01c85dd8fa90ca7350a0e8973c186857",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "public-read-server.c": "f47ea77702c04ae141bf67eec882f8f6878e9195105624987a49832b3c615049",
+    "public-rpc-export.h": "bdf9a210826b56855ac7429b6bda30f7a7a517cc0485fd6662b3a66d6527f1a8",
+    "public-rpc-read.h": "3f7da40293f66c8d69c4117b718f6c0bacbe2af838f8b0b3f4fc2936c0df4e6e",
+    "public-rpc-tree.h": "50847d027d646751af249e3e497e35ce5dde4ededc1e2db504b2f494ac1ac34a",
+    "public-rpc-udp.h": "dc25c31b355c8d5d91e5f3af7c1098f43baa9177dbf485ddd0deb81a98a6d9a4",
+    "public-rpc.h": "26494b4b7c9ccb0d5dfc179244705fddf3cd6f11093fe2c061c13747eb605430",
+    "public-wire-name.h": "d15cdb5bbd322759acef0d76a6338d2e4299ce476a3f0f558008e1880469d009",
+    "run-sharing-live-network-v2.py": "074a2cd095b221bf6ead22687f5e56c4beda4fee9354a3627ed79e82fb4ab49e",
+    "test-live-library-network.py": "64b1c28338ba14618e31c7751893de9915c9a9a68cd7a6bcf58afdfc36f5ff0e"
+  },
+  "evidence_sha256": {
+    "audio.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audio.stdout": "f1dddd645089e0de83543895b858d55b0c6095f1111d8c41e3b3c28f8bd933bc",
+    "database.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "database.stdout": "4bf483b12b6251613c9880836a7a61e4cbd94c556583b4507c58cfacf15b01bb",
+    "guest-commands.json": "5fbc98e4385a32cf57c5a425e2c2b710ff228722fe4ef2e10dd64be798b653f0",
+    "result.json": "0736e8bb4cc132aefa6bd6c1272713e076f741b965241cdfa49309d709f9af3b",
+    "server-ready.txt": "1dd44336ee7297da29f9e26a92dcda6ab87d6bda7440a177b1ae9ad953f25617",
+    "server.stderr": "a7968ba7ff22a201dc3f142a42a2a729f26012bc6147ba3cc5ceaa518edebd83",
+    "transport.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "transport.stdout": "3f5483e6855da6ecdd2ecc131e05a1e49862ba197cc588637c42dbe32859ed8f",
+    "verified-cleanup.json": "7ba567286cb5a9f41ee3ae8d5cf623ba69ef122f579fc774a49bab36e656a73b"
+  },
+  "limitations": [
+    "Standalone research binary, not mod runtime or released package",
+    "One live hub source and one audio file tested; no eight-source or all-track acceptance",
+    "No native local playback or external deck-loaded eject/unmount in this scope",
+    "No metadata TCP/discovery sharing, waveform/cue or actual-CDJ acceptance",
+    "Emulator6.6 module success does not establish target4.4 module runtime compatibility"
+  ],
+  "next_gate": "Independent on-device metadata backend plus public addressing/lifecycle integration, then native/external concurrent loading and safe eject"
+}

@@ -1,5 +1,2343 @@
 # Current state
 
+## Release0.4.4 publication preparation
+
+The user authorized publication of the exact physically tested0.4.4 package.
+See [release notes](releases/usb-hub-support-0.4.4.md) and the completed
+[goal audit](acceptance/usb-hub-support-sharing-044-completion-audit.json).
+The final physical native-GUI Off/On cycle passes. Pending-GUI statements in the
+frozen candidate reports below are superseded by its scoped acceptance record.
+
+
+## Physical Ethernet candidate0.4.4
+
+The real AZ now runs the unpublished0.4.4 candidate without suspension. The user
+reported local hub operation on the earlier0.4.0 runtime;0.4.4 retains the exact
+same runtime ELF (`ccf15593...`). Current instrumented Ethernet controls cover one
+hub stick: unchanged Beat Link DeviceFinder discovery, complete library menus
+(3172 tracks,166 ordered nodes,11022 memberships), exact complete PDB and one real
+MP3 download with unchanged Crate Digger. Native USB1 file access also passes.
+These are software-client/file-transfer results, not actual-CDJ or rendered-audio
+acceptance. See [physical evidence](acceptance/usb-hub-support-sharing-044-physical-ethernet.json).
+
+Two physical startup/transport issues were isolated: IPv4 labels such as
+eth0:avahi were excluded by exact-name enumeration; and secondary-MAC TCP delivery
+needed an owned parent receive-mode reference on the tested AZ. A bounded physical
+A/B control confirmed TCP works with that reference and fails again after release.
+The helper now holds a protocol-zero packet-socket membership for its session;
+normal close or process exit releases its own reference without overwriting NIC
+flags. No manual driver/OS/settings patch is involved. Java clients on this
+multi-interface Windows host require preferIPv4Stack=true for discovery. No
+firewall rules were changed. Wi-Fi remains a separate unsupported candidate path.
+
+Current-helper loaded-eject regression passes, as do97 portable tests per plain,
+ASan/UBSan and TSan mode. The final current-helper mode cycle reached Off withdrawal
+and fresh On readiness but recovered menus hit EOF and one MP3 handle was stale;
+that first run remains failed. Both a validation-trace repeat and an exact normal
+helper repeat now pass completely. An isolated VFAT inode-cache control does not
+reproduce the failure; no speculative identity-guard change was made. Final physical
+GUI Off/On observation now passes: same EP147 PID and retained native/private hub
+mounts, public withdrawal and rediscovery, complete3172-track menus and exact
+PDB/MP3 reads. This cycle does not assert physical loaded-deck playback. See
+[mode-cycle evidence](acceptance/usb-hub-support-sharing-044-physical-mode-cycle.json). Exact hashes and rollback are recorded in the physical evidence. Builds
+do not deploy implicitly; diagnostic candidate updates and normal framework
+reloads were explicitly authorized, and every activation checked fresh empty decks.
+No candidate release, tag or catalog update has been published.
+
+## Historical software-candidate completion and research
+
+## Active goal: share hub USBs with external Link players
+
+## Authoritative candidate status (latest integrated evidence)
+
+Current integrated automatic-controller network recovery now passes: unchanged
+EP147 PID, fresh helper/token, complete independent menus and four exact PDB/MP3
+reads after recovery, second graceful retirement, exact restoration and cleanup.
+See [integrated network result](acceptance/usb-hub-support-sharing-final-integrated-network-recovery.json)
+and [candidate handoff](HUB-LINK-CANDIDATE-HANDOFF.md). Physical trials remain separate.
+
+The experimental sharing candidate passes the software/emulator controls below.
+This supersedes pending statements in the chronological research notes below;
+those notes retain failures and the reasons controls were corrected.
+
+- Eight concurrent independent discovery/menu clients and exact PDB/MP3 files:
+  [capacity result](acceptance/usb-hub-support-sharing-capacity-eight-final.json).
+- Native shared-USB loaded withdrawal, with matching source/slot/track/file:
+  [native reference](acceptance/usb-hub-support-sharing-native-paired-reference.json).
+- Individual public withdrawal/reconnect with continuing synthetic external loaded
+  status, retained neighbor sessions and stale old handles:
+  [individual result](acceptance/usb-hub-support-sharing-individual-full-tuple.json).
+- Whole-hub withdrawal during native USB2 playback and eight complete clients:
+  [combined result](acceptance/usb-hub-support-sharing-whole-hub-full-tuple.json).
+  Source41/COLLECTION4/track1884 matches the retained MP3; native admission,
+  56 foreign-handle checks and native reads after withdrawal pass.
+- Native two-On/four-Off/returned-two-On, continuity and log retention:
+  [topology result](acceptance/usb-hub-support-sharing-topology-final.json).
+- Portable/sanitizer tests, SDK UI checks, hooks and byte-identical target rebuild:
+  [source checks](acceptance/usb-hub-support-sharing-final-source-checks.json).
+
+These are independent software-client protocol and emulator engine observations,
+not actual-CDJ interoperability or captured-audio acceptance. Target kernel4.4.194
+MACVLAN loading and model-specific CDJ behavior require separately authorized
+physical trials. SDK input-filter guards remain unchanged; emulator scheduling
+can quarantine the short selector, while the separately hooked long STOP passes.
+Outstanding-generation IPC/process faults refuse eject rather than infer safety.
+Local private hub track identities remain redacted from outgoing deck status;
+translation for instant doubles/current-deck metadata is not implemented.
+No physical AZ was touched and no candidate was published during this work.
+
+## Historical research updates (superseded where noted above)
+
+Bounded whole-hub paired withdrawal now passes with diagnostic admission of the
+correct track1884: eight independent discoveries/retained sessions, unique roots,
+56 foreign-handle STALE checks, exact first MP3 block and continued loaded status.
+Long STOP unmounts all eight hub roots and withdraws their services/discovery;
+five exact native USB1/2 file reads still pass, with unchanged EP147 PID. Exact
+restoration/owned cleanup pass. Full-capacity/native-USB2 late-selector combined
+case remains failed: the SDK quarantines raw input after eight over200us calls.
+A standalone real-callback timing control also measures overruns in an empty
+callback (11 across two500000-call batches); raw/edit medians96ns and p99<1us
+support an emulation timing/scheduling contribution, not physical timing proof.
+No SDK guard is changed. Paired native reference and individual hub repeat remain
+open. See the [whole-hub result](acceptance/usb-hub-support-sharing-whole-hub-paired.json),
+[combined failure](acceptance/usb-hub-support-sharing-whole-hub-combined-partial.json)
+and [timing control](acceptance/usb-hub-support-sharing-input-timing-control.json).
+
+Loaded-file binding audit found a test mismatch: independent Crate Digger maps
+the retained Aaliyah MP3 to rekordbox ID1884, while prior synthetic status used495
+(the different Algo mas M4A). Prior controls prove source withdrawal/file closure
+and status admission separately, not same-track pairing; five records now state
+that boundary explicitly. Status clients and wire/store assertions now use1884;
+an independent PDB-row/path verifier runs before future loaded-file controls.
+Parser self-test, binding verification and syntax/Java compilation pass. The
+running whole-hub case will load corrected classes before its status phase;
+paired native baseline and individual hub repeats remain required. Local native
+engine content495 controls are separate and unchanged. See the
+[binding audit](acceptance/usb-hub-support-sharing-loaded-file-binding.json).
+
+Latest non-diagnostic topology/mode/retention regression now passes with runtime
+a036b5ae/helper b5ff9ab7: all-four sdc1 load proofs, eight samples per topology
+phase,90/80 concurrent primary-engine observations during complete independent
+two-source menus/files, reviewed returned-On secondary rejection and native
+unload. Seeded old log families are pruned; exact restoration and owned cleanup
+pass. Whole-hub/native-USB2 control is now running as the remaining live gate.
+See the [final topology record](acceptance/usb-hub-support-sharing-topology-final.json).
+
+Whole-hub sharing withdrawal is an additional open gate from the original plan.
+`--integrated-whole-hub` is prepared with eight-source complete clients, retained
+metadata/root sessions, unique handles and56 cross-source STALE checks. The
+independent DeviceFinder watcher retains a real MP3 handle and continuing
+synthetic source41 loaded status across long STOP; the parent requires all eight
+hub mounts to vanish with native mounts/PID unchanged, then repeats exact native
+USB1/2 file reads. Short-selector ownership is checked before long STOP without
+bypassing SDK quarantine. Java compilation/Python syntax pass; no live whole-hub
+sharing result is claimed. Run only after the current final topology control.
+
+Latest non-diagnostic runtime/helper loaded-eject regression passes. Real MP3
+handle and loaded-status packets precede native eject, continue through withdrawal
+and reconnect (188 packets per destination), and require no manual external
+unload. Original neighbor sessions survive; old MP3 READ handles are STALE70 on
+both aliases. Exact restoration/owned cleanup pass. Native-store admission is
+separately proven by the final diagnostic case, not claimed from this wire-only
+control. Final latest-runtime topology/mode/retention repeat is now running.
+See the [non-diagnostic record](acceptance/usb-hub-support-sharing-loaded-eject-final-runtime.json).
+
+Latest helper/diagnostic runtime loaded-eject regression passes: native status
+store accepts source41/track495 while a real MP3 handle is retained; native
+selector withdraws and unmounts without manual external unload. Original neighbor
+services remain available; reconnect rejects old MP3 READ handles as STALE70 on
+both aliases.191 status packets per destination continue through the lifecycle.
+Exact restoration/owned cleanup pass. Non-diagnostic runtime repeat is running;
+no actual-CDJ/audio acceptance follows. See the
+[final diagnostic record](acceptance/usb-hub-support-sharing-loaded-eject-final-diagnostic.json).
+
+Final executable-asset helper b5ff9ab7/runtime a036b5ae now passes the complete
+eight-source/native control: all eight complete independent menus, nineteen exact
+hub/native file fetches, all-source renewals and117 concurrent native engine
+observations, with fresh USB1 load/backing proof, native unload and exact
+restoration/owned cleanup. This closes the packaged-helper capacity repeat;
+loaded-eject and final topology regressions remain separate gates. See the
+[final capacity record](acceptance/usb-hub-support-sharing-capacity-eight-final.json).
+
+Current-source final portable checks pass96 tests each in plain/ASan+UBSan/TSan.
+SDK UI passes10/8/8 checks (functional scenarios not measured), hook registration
+passes, and target runtime/helper rebuilt from the source snapshot are byte
+identical to the draft package inputs. See the
+[source-check record](acceptance/usb-hub-support-sharing-final-source-checks.json).
+
+Eight-source integrated capacity plus native fresh loading now passes in the
+emulator: eight independent complete menu clients, sixteen exact hub PDB/MP3
+downloads, three native USB file downloads and accepted renewals for all eight
+sources. A fresh native USB1 UI load proves the native request identity and /C/
+partition backing; engine positions advance before/during/after clients. Native
+unload, global retirement, exact restoration and owned network cleanup pass.
+Runtime a036b5ae is tested, but helper ab8773de predates the DHCP executable-asset
+suffix fix; repeat against the final helper is still required. Additional owned
+virtual media remain attached for subsequent controls. No captured audio or
+physical acceptance follows. See the
+[eight-source/native record](acceptance/usb-hub-support-sharing-capacity-eight-native.json).
+
+A local draft0.4.0 package now validates with the pinned preserved SDK packer:
+682234bytes, SHA2568edd7f78c89ca2aa75a0127c496e63acbfaf418bce0115f463da18d4607bd4c0.
+It stages target runtime ccf15593, helper2efe0ca3, the existing hub-depth module,
+target MACVLAN module and source/license/build material. Both executable assets
+(`usb-hub-support-network-helper.so` and shell `public-dhcp-event-hook.so`) have
+verified0755 archive modes without patching the SDK. The validator's existing
+settings-partition warning resolves to the optional azhub.conf read. This is
+draft packaging evidence only: latest helper, final integrated regressions,
+target transport runtime and source snapshot/reproduction remain pending. No
+catalog, published asset/tag or physical AZ change occurred. See the
+[draft package record](acceptance/usb-hub-support-sharing-package-draft.json).
+
+Candidate packaging review found an executable-mode mismatch: pinned azmod-pack
+stores non-.so assets as0644, while SDK launch requires X_OK. The runtime and
+managed harness now use `assets/usb-hub-support-network-helper.so`; the helper
+is still the same executable, with no core/packer workaround or production asset chmod.
+Emulator/target builds pass with hashes a036b5ae/ccf15593 respectively; earlier
+b2a3ce43 runtime evidence predates this path-only change and final regressions
+remain required. Eight virtual sources are now attached with owned receipts.
+The first combined eight-source/native-load control stops before remote clients:
+native LOAD succeeds but the harness incorrectly demands a synthetic player
+alias for USB1. Its fixed control requires the exact native request identity,
+`/C/` resolution and actual partition device identity. Syntax passes; repeat
+with the new runtime is running. Package restoration/owned network cleanup pass
+for the failed attempt. No eight-source acceptance is claimed yet.
+
+Native file preservation now passes with the integrated emulator runtime:
+independent Crate Digger clients fetch exact complete USB1 PDB/MP3 and the exact
+candidate mod file from USB2 while hub clients browse/fetch. Supported post-start
+re-announcement registers EP147 native exports; global retirement, restoration
+and owned cleanup pass. Fresh native UI load/playback remains a separate pending
+control. See the [native file record](acceptance/usb-hub-support-sharing-native-files.json).
+
+Five-source integrated capacity now passes: one independent DeviceFinder and
+five concurrent complete menu clients, ten exact PDB/MP3 downloads, accepted
+same-generation renewal for all five sources, global retirement and exact
+restoration/cleanup (exit0). This supersedes the earlier two-source full-client
+limit, but is not eight-source or actual-CDJ acceptance. See the
+[five-source record](acceptance/usb-hub-support-sharing-capacity-five.json).
+
+The complete non-diagnostic native topology control now passes. One EP147 PID
+retains primary playback through On/two decks, Off/four decks and returned On;
+all four loads prove sdc1 backing. Eight advancing engine samples pass for each
+topology phase, with80/75 additional observations during independent complete
+two-source menus and exact PDB/MP3 clients before/after. A reviewed retained
+Browse screenshot precedes rejected LOAD3/4 attempts in returned Link On. Native
+unload assertions, old-log retention, global retirement, exact package restoration
+and owned cleanup pass (runner exit0). No captured audio, native fresh-source,
+eight-source or actual-CDJ acceptance follows. See the
+[complete topology record](acceptance/usb-hub-support-sharing-local-deck-topology.json).
+The earlier attempts below remain historical evidence, not current completion gaps.
+
+The extended native topology run now proves engine continuity through returned
+Link On: eight samples each for initial two-On, four-Off, secondary native unload
+and returned two-On;81/75 additional samples keep primary decks loaded/playing
+while initial/recovered complete two-source clients pass. All four loads verify
+sdc1 and one EP147 PID is retained. Complete control still stops before final
+secondary-load rejection/unload: SDK quarantines the edited frame filter after
+eight over200us calls under emulation, and the eject selector correctly refuses
+encoder-calibration ownership. No guard/core change is made. Final control now
+reopens retained native Browse without selector calibration and requires a saved
+selected-track review. Syntax passes; live repeat pending. Package restoration/
+cleanup pass. Physical timing and long-session eject acceptance remain unproven.
+See the [returned-mode evidence](acceptance/usb-hub-support-sharing-local-deck-topology-return.json).
+
+
+The second native topology attempt proves initial two-On and four-Off engine
+operation: all four actual native requests resolve to sdc1; each tested phase
+has eight loaded/playing/content495 samples with advancing positions. Native
+secondary unload clears3/4 while1/2 continue. Initial independent full two-source
+menus/files also pass. The complete control still fails: recovered metadata
+clients time out when the original600-second TAP/DHCP fixture lifetime ends,
+before final returned-On secondary rejection/unload checks. Exact restoration/
+cleanup pass. The topology-only fixture window is now1200seconds and primary
+engine observation is added during remote client waits; individual operation
+limits and mod behavior are unchanged. Syntax passes, live repeat pending. See
+[partial topology evidence](acceptance/usb-hub-support-sharing-local-deck-topology-partial.json).
+
+
+A native four-Off/two-On control is prepared for the non-diagnostic integrated
+runtime, using real LOAD1..4, physical bank selection, native unload dialogs,
+per-deck content/playing/position telemetry and actual request-to-sdc1 bind proof.
+The first live attempt verifies deck1 content495/sdc1, but deck2 remains unloaded
+and no second native load request appears. It stops before Link Off/four-deck
+operation; exact package restoration and owned cleanup pass. The control now
+re-enters source/track selection between loads and saves per-load states/screens;
+Python syntax passes and a live repeat is pending. This is an automation finding,
+not proof of four-deck failure or acceptance. See the
+[topology preparation record](acceptance/usb-hub-support-sharing-local-deck-topology-preparation.json).
+
+
+Non-diagnostic runtime with log retention now passes integrated native Link
+On/Off/On. Native UI confirmations withdraw old endpoints, retire the old helper
+and restart sharing with a new PID/IPC session while EP147 and native/hub mounts
+remain. Complete independent two-source menus and exact PDB/MP3 pass before and
+after. Two old test log families (four files, year2000 mtime) are seeded in the
+emulator mod data folder; next launch removes all four and retains exactly the
+previous/current families. Final global retirement, package restoration and
+owned cleanup pass. Runtime SHA256 starts b2a3ce437cddee95. No loaded local-deck,
+native fresh-file or actual-CDJ acceptance is implied. See the
+[live retention/mode record](acceptance/usb-hub-support-sharing-log-retention-mode-cycle.json).
+
+
+Public helper logs now have session retention: before launching a new helper,
+keep the newest existing owned log family and remove older strict-name regular
+single-link families through a pinned SDK data-directory FD. The SDK caps and
+rotates each family once; normal cycles retain only previous/current families.
+Unknown files, links and directories are preserved; cleanup failure defers the
+public launch. Forty simulated cycles and boundary/error controls pass. Full
+portable suite passes96 tests per normal/ASan+UBSan/TSan mode, hook registration
+passes under WSL, and AArch64 emulator/target runtime builds pass. These binaries
+supersede prior runtime hashes; live retention/mode-cycle now passes as recorded above; final candidate
+regressions remain pending. No physical AZ or publication occurred. See the
+[retention record](acceptance/usb-hub-support-sharing-helper-log-retention.json).
+
+
+Integrated public-hub loaded withdrawal now passes. Shared-listener software
+client retains an actual MP3 handle with an exact1024-byte first READ while
+player3 sends180 source41/slot3/track495 loaded/playing frames to each of the
+provider and native AZ; the native store returns accepted=1. Eject retires before
+source close/unmount, drains RPC/metadata/query endpoints and expires discovery.
+Neighbor original RPC/TCP menus and native/other hub mounts remain available.
+Replug yields generation2/new root, STALE old root and MP3 READ handles on both
+RPC aliases and an exact fresh PDB. Final global retirement/helper exit, package
+restoration and owned cleanup pass. No manual external stop/unload is required.
+This is independent protocol evidence with a diagnostic emulator mod, not real
+external audio/cache, actual-CDJ interoperability or final package acceptance.
+The exact reference MP3 also passes strict FFmpeg decode to null; its hash equals
+the completed client downloads, but no direct external audio output is claimed.
+See the [loaded hub eject record](acceptance/usb-hub-support-sharing-integrated-remote-loaded-eject.json).
+Next close final candidate topology/capacity/resource/artifact gates in the
+[readiness checklist](HUB-LINK-CANDIDATE-READINESS.md). Earlier harness failures
+are preserved in the preparation record and superseded by this passing control.
+
+Native shared-USB loaded withdrawal now passes in the emulator. Verified fixture
+USB1/sdb1 receives ordinary STOP1 while external player3 continues announcing
+firmware-accepted source1/slot3/track495 loaded/playing status. Backing unmount is
+observed about2.87seconds after the request, the native first export is cleared
+while the mods export remains, and the retained NFS handle returns eight STALE70
+responses after an exact1024-byte initial read. Loaded status continues beyond
+the final STALE. Mods USB and all five hub mounts stay intact; the owned virtual
+fixture is replugged, database hash/mount snapshot return, and native PID/modules/
+network plus exact package restoration/cleanup pass. This establishes the native
+reference without manual external unload, not external audio/cache or actual-CDJ
+acceptance. The integrated public-hub comparison is recorded above. See the
+[native loaded-eject record](acceptance/usb-hub-support-sharing-native-loaded-eject.json).
+
+
+The corrected native joint control now passes. Supported AZ-MODS post-start
+re-announcement registers both native roots;300 synthetic player3 loaded/playing
+frames reach the firmware, and its actual store accepts source1/slot3/track495.
+A separate NFS process retains one/C/ handle and reads nine1024-byte blocks while
+status continues; all9216 bytes match the exact reference by per-block hash.
+Native snapshot, exact original package restoration and owned cleanup pass.
+No eject/audio renderer/physical AZ or actual-CDJ acceptance is claimed. Next
+perform verified native STOP1 with continuing status/held handle, preserve mods
+sda1 and hub roots, observe withdrawal/STALE and restore the owned native fixture.
+See the [joint control record](acceptance/usb-hub-support-sharing-native-loaded-handle.json).
+The post-start timeout and empty-root findings below are superseded by this
+successful control; older integrated runs still do not establish native file
+export preservation through their custom startup path.
+
+
+The joint native loaded-status/file-handle control exposed a harness startup
+omission: the normal EP147 unit invokes `az-usbload --post-start` to re-announce
+already-mounted native media, but the custom diagnostic unit did not. Read-only
+inspection finds native NFS root lengths0/0/0 there, versus15/15/0 and sdb1/sda1
+roots in the stable normal process. Bounded MOUNT retries still return13; no
+eject occurs. A separate stable-process control accepts/C/ UTF16LE unchanged,
+refuses alternative encodings/paths, and preserves its native snapshot/cleanup.
+The diagnostic harness now invokes the supported post-start operation and saves
+its log; live validation of restored roots and the joint handle remains pending.
+No export permissions, controller files or native tables were manually changed.
+The first corrected run timed out at the harness's20-second SSH limit while the
+official post-start operation was still executing; package/scope restoration
+completed. Subsequent process inspection found no remaining post-start process
+and its log ended with done. The harness now allows90seconds for that specific
+operation and asserts both native root registrations before a held-file client;
+that revision still needs a live run. Read-only topology inspection identifies
+native fixture sdb1 on usb1/1-1 (QEMU nativecontrol2, ehci.0 port1) and mods sda1
+on usb2/2-1. Do not infer physical native port from block-device enumeration.
+
+See the [observer/investigation record](acceptance/usb-hub-support-sharing-native-status-observer.json).
+
+
+Native loaded-status admission is now proven in the emulator for the synthetic
+external player3: the native connecting event identifies192.0.2.2, receiver fields
+identify USB source1/slot3/track495, and the actual store returns accepted=1.
+The diagnostic hooks the validated body at0x10d324c before its original STP frame;
+early null/key rejection stays native and all eight argument/live temporary
+registers are forwarded. Portable controls pass normal/ASan+UBSan/TSan and the
+isolated live run sends300 matching frames. Original bytes, native snapshot and
+owned cleanup pass; no physical AZ was touched. Earlier failed entry-hook and
+unobserved wrapper trials remain explicitly invalid/inconclusive in the
+[observer record](acceptance/usb-hub-support-sharing-native-status-observer.json).
+The first joint loaded-status/held-handle attempt fails before obtaining the
+handle: native MOUNT returns13 for/B/,/C/,/D/. Guest aliases resolve B/D to
+sda1 and C to sdb1; alias existence does not establish export authorization.
+No eject was attempted and exact normal restoration/owned cleanup pass. The
+held-handle control now accepts bounded sample/interval options and preserves
+explicit MOUNT status in future failure logs. Resolve native mount admission
+before loaded shared-USB withdrawal, then repeat for a public hub source. This is not an audio renderer,
+external-loaded eject or actual-CDJ acceptance. The
+[physical trial plan](HUB-LINK-PHYSICAL-TRIALS.md) defines per-model gates and
+explicitly treats all proposed model/firmware combinations as unconfirmed.
+
+A bounded synthetic loaded-deck control now builds status frames from unchanged
+Beat Link8.0.0 framing/template and validates loaded/playing USB track495 with its
+independent parser for native1/2 and public41..48. Initial namespace execution is
+refused. Isolated live controls emit300 matching player3/source1 packets per60s;
+native PID/modules/mounts/network/loaded-mod snapshot remain unchanged and cleanup
+passes. This is wire stimulus only: waveform screenshots retain LINK PLAYER
+placeholders, so native loaded-track admission remains unproven. No NFS read,
+eject, audio renderer or real CDJ was involved. The next external-loaded eject
+control must prove native admission/source mapping and pair this stimulus with a
+real held file handle; the older native held-handle baseline is separate. See the
+[wire control record](acceptance/usb-hub-support-sharing-loaded-status-wire.json).
+
+Target-helper MACVLAN asset loading is now integrated after parent IPC
+authentication and before any allocation. It independently gates kernel4.4.194,
+uses only sibling `assets/usb_hub_macvlan.ko` from the actual executable directory,
+refuses symlink/nonregular files, uses no force/modprobe/system installation and
+requires expected registration. The full portable suite passes95 tests per
+normal/ASan+UBSan/TSan mode; AArch64 target/emulator helper builds pass. The target
+helper exits126 on the6.6 emulator without module/namespace changes, and the
+emulator helper hash is unchanged. No target module was loaded: kernel symbol/
+ABI/runtime acceptance remains open for separately authorized physical trials.
+No package or deployment occurred. See the
+[asset component record](acceptance/usb-hub-support-sharing-macvlan-asset-component.json).
+
+Integrated local/remote concurrency now passes with native Link On: verified
+source0 backing, deck1 content495 four-beat loop, full independent two-source
+menus/exact PDB/audio and real refresh.75 samples retain one EP147/content ID,
+loaded/playing and advancing positions through native loaded-source eject/replug.
+Neighbor original RPC/TCP sessions, generation2 rediscovery/fresh root/STALE old
+handles/exact PDB, final retirement and complete restoration/cleanup pass. This
+is native engine telemetry, not captured audio, full-track playback or an external
+loaded deck. Four/two-deck topology, target4.4/module packaging, final capacity/
+compatibility and actual-CDJ trials remain open. See the
+[concurrency record](acceptance/usb-hub-support-sharing-integrated-local-remote.json).
+
+Integrated native Link On→Off→On now passes in the emulator through Utility and
+its real confirmation dialogs. Off persists0, native completion gates graceful
+public withdrawal, retained external RPC/metadata/query endpoints close and
+DeviceFinder expires the old source. Helper/namespace retirement completes while
+EP147 PID and native/hub mounts remain. On persists1, starts a different helper
+with fresh authenticated IPC, and both sources pass complete independent menus/
+exact PDB/audio again. Final global retirement, package/network restoration and
+cleanup pass. Full portable suite:94 tests per normal/ASan+UBSan/TSan. No loaded
+local four/two-deck regression, old-handle recheck across helper restart, external
+loaded deck, target4.4 or physical CDJ acceptance. See the
+[mode-cycle record](acceptance/usb-hub-support-sharing-integrated-mode-cycle.json).
+
+Integrated native eject/replug now passes without SDK probe activation: complete
+initial two-source clients/refresh, native selector withdrawal/backing unmount,
+original neighbor RPC/TCP continuity, generation2 rediscovery, fresh root handle,
+old handles STALE on both aliases and exact fresh PDB. Final global retirement,
+helper exit, network/package restoration and cleanup pass. The first attempt
+stopped before clients with framework suspension and a stale-marker verifier
+bug; normal Resume/Reload restored0.3.2, marker assignment now follows current
+helper/parent verification, and the harness waits for a stable normal startup.
+See the [integrated eject record](acceptance/usb-hub-support-sharing-integrated-eject.json).
+
+Native Link-mode gating is now wired to confirmed mode-completion callbacks,
+not the internal cache. Unknown/Off cannot start public sharing; Off latches a
+single graceful STOP, including transport backpressure and On-during-drain.
+The full portable suite passes94 tests per normal/ASan+UBSan/TSan mode, including
+STOP backpressure/On-during-drain controls. Explicit AArch64 builds pass. This
+change postdates the integrated eject binary and still needs live mode/startup/
+regression validation. See the [mode component record](acceptance/usb-hub-support-sharing-runtime-mode-component.json).
+
+The integrated controller now passes its first live emulator trial without SDK
+probe variables, masks or completion markers. Native inventory starts all five
+present hub roots; complete independent discovery/full menus/exact PDB/audio and
+same-generation DHCP refresh are validated for slots0/4. The other three log
+ACTIVE through emulator NAT DHCP but are not fully client-validated. A controlled
+native network change retires all five, reports EMPTY and exits the helper before
+scheduling restart; the test stops the unit before that restart. Namespace cleanup,
+network/package restoration pass. No integrated native eject, local playback,
+external loaded deck, Link-mode policy or target4.4 runtime acceptance yet. See the
+[integrated runtime record](acceptance/usb-hub-support-sharing-integrated-runtime.json).
+
+An integrated sharing controller now builds as explicit local runtime candidates
+for emulator and target helper modes. It starts from native inventory without
+probe environment variables, fixture masks, result markers or a service deadline;
+authenticates helper PID/UID/executable/token; waits for SDK-confirmed helper exit
+after graceful retirement before retrying; and retains outstanding native eject
+gates on channel faults. Portable startup/resource deferral, missing-source0
+allocation, authenticated eject retirement, SDK-exit ordering and broken-channel
+controls pass normal/ASan+UBSan/TSan. This is not live acceptance: native Link-mode
+policy, target MACVLAN module packaging, bounded recovery of outstanding crashed
+sessions, user-visible failure state and final runtime regressions remain open.
+The full portable suite passes94 tests per normal/ASan+UBSan/TSan mode. Exact
+build hashes and scope are in the [component record](acceptance/usb-hub-support-sharing-runtime-component.json).
+Default release builds are unchanged. No physical deployment is authorized by
+these explicit build targets.
+
+Managed IPv4LL-to-DHCP recovery now passes: after a fixture marker enables DHCP
+for source0 only, periodic acquisition accepts a grant, retires generation1 with
+authenticated EMPTY/ENETRESET and starts generation2 at192.0.2.3. Old RPC/metadata/
+query endpoints withdraw and DeviceFinder expires the old address. Original
+source4 RPC/TCP sessions survive while its DHCP remains withheld. Fresh complete
+independent menus/exact PDB/audio, final STOP, network/package restoration and
+owned cleanup pass. Together with the following conflict/eject records this
+closes the three primary isolated IPv4LL lifecycle controls, not physical native
+autoconfiguration, local playback or external loaded-deck acceptance. General
+production activation, final regressions and packaging remain open. See the
+[DHCP-return record](acceptance/usb-hub-support-sharing-sdk-link-local-dhcp-return.json).
+
+Managed IPv4LL native eject/replug now passes: the native selector withdraws one
+source, drains retained external RPC/metadata sessions, expires independent
+DeviceFinder discovery and unmounts after managed retirement. Neighbor mounts
+and original source4 RPC/TCP sessions survive. Virtual unplug/replug republishes
+player41 at a new address; complete independent menus/exact PDB/audio pass again.
+Final STOP, network/package restoration and owned cleanup pass. No external
+loaded-deck or physical-CDJ acceptance is claimed; DHCP return remains open.
+See the [eject record](acceptance/usb-hub-support-sharing-sdk-link-local-eject.json).
+
+Managed IPv4LL conflict recovery now passes in the emulator: a foreign ARP claim
+retires source0 with authenticated EMPTY/EADDRINUSE before generation2 receives
+a different address. Source4 keeps its original RPC root/TCP menu session;
+independent discovery/full menus/exact PDB/audio pass at the replacement address.
+No DHCP DECLINE is observed by the isolated fixture. Final STOP, native network,
+package restoration and owned cleanup pass. Retained retirement evidence avoids
+losing intermediate statuses to receive batching; targeted inventory controls
+pass normal/ASan+UBSan/TSan. Native eject/replug, old-address withdrawal observer,
+DHCP return, external loaded deck and physical CDJ controls remain open. See the
+[conflict recovery record](acceptance/usb-hub-support-sharing-sdk-link-local-conflict.json).
+
+Two managed IPv4LL libraries now pass in the emulator without DHCP replies:
+derived identities/native roots, independent discovery/full menus and exact
+PDB/audio downloads from both sources. Each client performs a second distinct
+DHCP transaction while its source stays published. Final STOP, helper/namespace
+cleanup, removal of the owned temporary native link-local alias, native network
+restoration and exact package restoration pass. The portable suite passes93
+tests per normal/ASan+UBSan/TSan mode. Native eject/replug, IPv4LL conflict and
+DHCP-return controls remain pending. This uses an explicit secondary link-local
+test domain, not physical native autoconfiguration acceptance. See the
+[managed link-local record](acceptance/usb-hub-support-sharing-sdk-link-local.json).
+
+Live standalone IPv4LL transport now passes in the emulator: anonymous owned
+namespace/MACVLAN, native no-offer, random candidate, ARP/configuration/readiness,
+direct UDP roundtrip over169.254/16 without default route/gateway, address
+retirement and explicit link deletion. Native PID/DNS/routes/DHCP-process state
+and owned cleanup pass. Route inspection uses `/proc/thread-self/net/route`
+inside the namespace-entered thread; the first attempt incorrectly inspected
+process-self procfs and failed, then cleaned up. Managed broker/library/client
+integration remains pending. See the
+[link-local transport record](acceptance/usb-hub-support-sharing-link-local-transport.json).
+
+IPv4LL allocator wiring is implemented but not live-validated: a candidate helper
+opts in only when native eth0 already has an eligible link-local /16 address.
+Qualified no-offer retains namespace ownership; unbiased sampling excludes native/
+other-source reservations, then existing ARP/configuration gates apply. Link-local
+conflicts use retained ACD backoff without DHCP DECLINE. Periodic supervised DHCP
+attempts continue every60 seconds; a valid ACK requests ENETRESET retirement,
+never live replacement. Candidate exclusion and periodic-attempt/transition
+component controls pass all three host modes; AArch64 helper builds pass.
+No live fallback, routing or conflict/recovery acceptance is claimed yet.
+
+Native udhcpc no-offer admission now passes on the isolated emulator: three
+DISCOVER packets, no server replies, deconfig→leasefail, normal exit1, child
+reaped and pipe EOF. No address is applied. Native PID/DNS/routes/DHCP-process
+snapshot and owned cleanup pass. See the
+[native no-offer record](acceptance/usb-hub-support-sharing-native-no-offer.json).
+
+The allocation supervisor can now explicitly retain its owned namespace/link
+after that qualified terminal result and returns2, distinct from grant success1.
+Default policy still rejects no-offer and closes ownership. Cancellation never
+permits fallback. Synthetic terminal-boundary ownership controls pass all three
+host modes; the allocator has not enabled this branch or configured IPv4LL yet.
+
+DHCP no-offer admission is now distinct from generic failure: only complete
+deconfig→leasefail records, normal exit1, reaped child and pipe EOF yield ENODATA
+and the explicit no-offer predicate. Exit1 alone, missing/out-of-order records,
+malformed output, exit0, cancellation and timeout cannot authorize fallback.
+Real spawned-child component controls pass normal/ASan+UBSan/TSan. Confirmation
+with the emulator's native udhcpc and allocator IPv4LL integration remain pending.
+
+No-DHCP groundwork: explicit LINK_LOCAL ownership is distinct from DHCP grants
+and has no synthetic expiry. Uniform candidate sampling, mandatory readiness and
+retired-generation transitions pass normal/ASan+UBSan/TSan, alongside DHCP lease/
+refresh regressions. Fallback admission, ongoing DHCP attempts, on-link routing
+and live isolated-network tests are not wired yet. See the latest section of
+`HUB-LINK-ADDRESS-OWNERSHIP.md`.
+
+Graceful native-network recovery now passes in the explicit emulator SDK path:
+old services withdraw and the old helper exits before a15-second configured
+backoff and SDK re-launch with fresh PID/token/log. Both sources rediscover with
+stable identities; independent complete menus and exact PDB/audio downloads pass
+again for both. Final STOP, native network equality, exact restoration and
+cleanup pass. A pending test STOP suppresses recovery. This is one graceful
+network-change cycle, not crash/start-failure recovery or eject-during-backoff
+runtime acceptance. Production activation remains pending. See the
+[network recovery record](acceptance/usb-hub-support-sharing-sdk-network-recovery.json).
+
+Controlled native-network change now passes in the emulator: adding an owned
+secondary address causes graceful public-source retirement while keeping the
+authenticated channel open through per-source EMPTY/global completion. The
+controller waits for SDK child exit instead of stopping a helper mid-cleanup.
+External old RPC/metadata/discovery withdrawal passes; native USB mounts survive,
+owned namespaces/processes disappear and the temporary address is removed.
+Native network equality, exact restoration and cleanup pass. V1 queried before
+retirement confirmation and failed; V2 corrects that verifier ordering. Global
+terminal-before-drain rejection and quiesce/no-republish controls pass all three
+host modes. Automatic recovery after the change remains pending. See the
+[network-change record](acceptance/usb-hub-support-sharing-sdk-native-network-change.json).
+
+Candidate runtime positive regression passes through the separate exact-emulator
+entry: native-subnet peer admission, immutable native-network monitoring,
+urandom ACD jitter and SDK-owned helper lifetime. Reusable inventory/derived
+identities, independent complete menus/exact PDB/audio, refresh, native eject/
+replug, original neighbor continuity and selected rediscovery/STALE/fresh PDB
+pass. Global STOP, native network equality, exact restoration and cleanup pass.
+The portable suite passes92 tests per normal/ASan+UBSan/TSan mode. No native
+address change was injected; physical4.4.194 execution, general activation and
+actual-CDJ acceptance remain pending. See the
+[candidate runtime record](acceptance/usb-hub-support-sharing-sdk-candidate-runtime.json).
+
+Candidate helper development: a fresh native subnet snapshot is compared once
+per second with the immutable service snapshot. A read failure or address/mask
+change requests managed session loss and complete owned-source retirement;
+worker peer policy is never mutated concurrently. Candidate ACD timing now uses
+unbiased16-bit rejection sampling from an owned urandom descriptor; missing
+entropy returns an invalid readiness sentinel and fails publication closed.
+Snapshot-order/change and jitter-bound/error controls pass all three host modes,
+and candidate/emulator AArch64 helper builds pass. Runtime network-change drain,
+automatic controller recovery and candidate random-timing integration still
+require emulator evidence. No physical AZ operation occurred.
+
+An explicit local `sharing-broker-candidate` helper build now provides
+`--broker-share` guarded by exact kernel4.4.194. It reuses the managed allocator
+with dynamic root/identity admission, independently snapshots native eth0 IPv4
+subnets for peer admission and removes the emulator's600-second lifetime limit.
+SDK session loss/STOP still drains ownership. Emulator wrappers retain exact
+6.6.138-dirty gating and bounded fixture lifetime. Peer subnet/native-address/
+broadcast/multicast/link-local controls pass normal/ASan+UBSan/TSan and both
+AArch64 helper variants build. No target execution or installation occurred.
+Native-address change handling, ACD jitter, no-DHCP policy, target transport/module
+packaging and production controller activation remain open; this build is not
+yet a hardware-ready candidate.
+
+The reusable inventory engine now passes through explicit emulator SDK launch/
+IPC/shutdown and the native unmount gate. Derived identities/native roots,
+independent helper admission, full independent menus/exact PDB/audio, refresh,
+native eject/replug, original neighbor RPC/TCP continuity and selected
+rediscovery/STALE/fresh PDB pass. Global STOP, native network equality, exact
+restoration and cleanup pass. The portable suite passes90 tests per normal/
+ASan+UBSan/TSan mode. Source0-absent startup remains component-level evidence;
+the live runner still uses its explicit mask and bounded lifetime. General
+production activation/target helper lifetime remain pending. See the
+[inventory engine integration record](acceptance/usb-hub-support-sharing-sdk-inventory-engine.json).
+
+Reusable controller inventory is implemented in `public-sharing-inventory.h`:
+after authenticated HELLO it receives bounded status batches, withdraws absent/
+reserved roots before allocation, derives declarations for any subset of eight
+sources and isolates per-root/capacity failures. Source0 is not required. Failed
+never-published roots release unused number reservations; active reservations
+wait for EMPTY. Real seqpacket controls cover source0-absent startup, root
+failure/neighbor isolation, eject/retirement/replug and lost-channel gate
+retention in plain/ASan+UBSan/TSan. This component still needs SDK/native adapter
+integration; the live native-inventory probe below is not using it yet.
+
+Native-inventory root selection now passes the two-source managed emulator
+runner with derived MACs and independent helper admission. The controller uses
+existing local source slots/roots instead of selected fixture disk-letter roots.
+Independent complete menus/exact files, refresh, native eject/replug, original
+neighbor RPC/TCP continuity and rediscovery/STALE/fresh PDB pass. Global STOP,
+native network equality, exact restoration and cleanup pass. The selected mask,
+initial source0 requirement and bounded probe lifetime remain explicit test
+constraints; arbitrary missing-source startup/production activation are not
+established. See the
+[native inventory record](acceptance/usb-hub-support-sharing-sdk-native-inventory.json).
+
+Dynamic identities now pass the managed two-source emulator runner: controller
+and helper independently read the parent MAC; helper enforces derived source
+MAC/interface/label/player bounds plus live root/mount/hub topology. Isolated
+DHCP serves the declared derived MACs. Independent full menus/exact files,
+refresh, native eject/replug, original neighbor RPC/TCP continuity and selected
+rediscovery/STALE/fresh PDB pass. Global STOP, native network equality, exact
+restoration and cleanup pass. Source paths/selection remain explicit fixtures;
+production activation and actual-CDJ acceptance remain open. Shared fixed C/
+Python MAC vectors and transport/network controls also pass. See the
+[dynamic identity record](acceptance/usb-hub-support-sharing-sdk-dynamic-identity.json).
+
+Dynamic helper identity policy is available in the separate explicit
+`sharing-broker-policy-emulator` build: the helper independently reads eth0's
+Ethernet MAC, derives the source MAC, checks source interface/label and bounds
+the public player to41..48, then applies live root/mount/topology admission.
+It does not use fixed disk letters or accept the legacy bind alias. Portable
+eight-source identity controls pass all three modes; AArch64 compilation passes.
+The controller/DHCP fixture still need matching dynamic-identity wiring before
+live acceptance. This remains exact-emulator-only and does not activate sharing
+on the physical4.4.194 target or alter normal builds.
+
+The generalized reconciliation now passes managed slot0 collision/recovery:
+generation1 EMPTY/EEXIST precedes player42/generation2; original neighbor RPC/TCP
+state survives, and independent full menus plus exact PDB/audio downloads pass
+after reselection. Global STOP, native network equality, original-byte restoration
+and cleanup pass. The complete portable suite passes88 tests in each normal/
+ASan+UBSan/TSan mode. Eight-slot/exhaustion/eject precedence evidence remains
+component-level, not all-slot runtime acceptance. See the
+[generalized reconciliation record](acceptance/usb-hub-support-sharing-sdk-player-reconcile.json).
+
+Post-recovery-trial generalization: the explicit SDK controller now uses
+`public-player-reconcile.h` for all eight selected source slots. Reservation
+release requires authenticated EMPTY, duplicate collision statuses are idempotent,
+and ENOSPC leaves only that source waiting instead of stopping the helper.
+Absence/eject takes precedence and retains a live generation's reservation until
+retirement. All-slot selection, duplicate status, exhaustion/neighbor isolation
+and release-order controls pass plain/ASan+UBSan/TSan; pinned AArch64 builds pass.
+The managed41→42 trial below predates this refactor. Generalized runtime recovery
+and exhausted-pool runtime controls remain pending.
+
+Explicit managed slot0 player recovery now passes: foreign41 claim retires
+generation1 to authenticated EMPTY/EEXIST before the controller reserves42 and
+publishes generation2 with the same root/MAC/IP/label. Original neighbor RPC/TCP
+state survives; unchanged Beat Link discovers42 and completes full menus, and
+Crate Digger fetches the exact PDB. Global STOP, native network equality, exact
+restoration and cleanup pass. This fixture path learns the occupied number from
+the helper's confirmed collision, not a complete initial peer inventory. General
+all-slot reselection, native eject precedence runtime, post-reselection audio
+fetch and actual-CDJ acceptance remain open. See the
+[player-recovery record](acceptance/usb-hub-support-sharing-sdk-player-recovery.json).
+
+The allocator now refuses duplicate public player numbers among its pending/
+active sources. Portable allocator controls pass all three modes; pinned
+AArch64 mod/helper builds pass. The emulator helper accepts41..48 alternatives
+while retaining the fixed fixture root/MAC/interface/label checks. Normal
+activation remains unchanged; recovery requires AZHUB_SDK_PLAYER_RECOVERY=1.
+
+Player discovery parsing now shares one implementation between the running UDP
+provider and reservation observations. Complete kind2/6 claims require exact
+datagram/embedded lengths, nonzero player and nonzero unicast MAC. The observer
+excludes controller-owned MACs before updating foreign reservations. Parser,
+provider loopback and actual source-worker collision controls pass in all three
+normal/ASan+UBSan/TSan modes. Controller discovery reception, confirmed-retirement
+release and replacement publication are still pending; this is not end-to-end
+reselection acceptance. The preceding managed collision hashes predate this parser.
+
+Public player reservation groundwork: `public-player-pool.h` tracks foreign
+claims and eight controller-owned reservations in the emulator-exercised41..48
+computer-identity range. Preferred slot numbers remain stable; an active
+reservation cannot move or be stolen. After caller-confirmed retirement/release,
+a free alternative may be reserved; exhaustion returns ENOSPC. Foreign claims
+remain excluded for60 seconds and backward clocks fail closed. Portable
+normal/ASan+UBSan/TSan controls and AArch64 compilation pass. Discovery parsing,
+own-packet exclusion, authenticated retirement/release and inventory updates are
+not yet wired to this component. This is not actual-CDJ range acceptance.
+
+Managed player-number collision now passes: after both sources complete
+independent full menus/exact files, an isolated TAP claim for player41 with a
+foreign payload MAC retires source0 to generation1 EMPTY/EEXIST. No newer
+generation status appears in the following two-second observation; component
+controls establish the no-retry policy. The neighbor retains original RPC/TCP
+state. Global STOP, native network equality, exact restoration and cleanup pass.
+No replacement-number selection, native eject/replug or external loaded deck
+was tested in this mode. See the
+[player-collision record](acceptance/usb-hub-support-sharing-sdk-player-collision.json).
+
+Player collision correction after the root-policy trial: the source worker now
+reports EEXIST for a foreign MAC claiming its public player number, separating
+that failure from allocator ACD/EADDRINUSE recovery. The inventory client leaves
+that identity retired instead of reacquiring the same occupied number. A real
+loopback discovery datagram through the running source worker, plus client
+no-retry controls, pass plain/ASan+UBSan/TSan. Dynamic number selection/reselection
+and managed multi-source collision injection remain pending; the prior runtime
+hashes do not include this correction.
+
+Dynamic root admission is now exercised inside the managed emulator helper,
+in addition to fixture MAC/player policy: two mounted roots pass independent
+complete menus/exact files, refresh, native eject/replug, neighbor original
+RPC/TCP continuity and selected rediscovery/STALE/fresh PDB. Global STOP,
+native network equality, exact restoration and cleanup pass. The legacy
+single-source bind-alias fixture retains its separate verification path.
+Production activation and dynamic public identity policy remain open. See the
+[root-policy integration record](acceptance/usb-hub-support-sharing-sdk-root-policy.json).
+
+The post-integration portable suite passes85 tests per plain/ASan+UBSan/TSan
+mode, including source MAC and dynamic root policy. The separate pinned-SDK
+hook-registration control passes. These checks do not replace final candidate
+mode/loaded-deck/target-kernel regressions.
+
+Dynamic root admission groundwork: `public-broker-root-policy.h` independently
+reopens the declared root, compares its pinned device/inode, requires one exact
+matching partition mount and checks nested USB sysfs topology using the existing
+discovery predicate. A second reopen rejects path replacement during inspection.
+Trusted helper policy supplies filesystem inventory paths; IPC does not. Mounted
+hub root, wrong capability, ambiguous mount and direct topology controls pass
+plain/ASan+UBSan/TSan. This is not yet wired into activation, does not authorize
+public MAC/player identities and is not a general mount-race security proof.
+
+Production identity groundwork: `public-source-mac.h` derives eight stable local
+unicast MAC candidates from the controller parent MAC and a versioned domain.
+Candidates do not depend on disk letters, mount order or a common fixture MAC;
+their source bits are distinct. Portable normal/ASan+UBSan/TSan controls pass.
+This utility is not yet wired into activation and does not prove global MAC
+uniqueness; native/local admission and on-wire conflict handling remain required.
+Public player-number policy, dynamic inventory authorization and target helper
+lifetime/activation remain separate integration work.
+
+Managed changed-address recovery now passes: slot0 retires generation1 with
+ENETRESET and publishes generation2 at192.0.2.4 after an initial192.0.2.3 grant.
+An independent old-address withdrawal observer passes, the neighbor's original
+RPC/TCP session survives the transition, and independent complete menus plus
+exact PDB/audio downloads pass at the new address. Global STOP, native network
+equality, exact restoration and cleanup pass. No native eject/replug or external
+loaded deck was exercised in this mode. See the
+[changed-refresh record](acceptance/usb-hub-support-sharing-sdk-changed-refresh.json).
+
+Post-trial development: changed DHCP configuration now retires with ENETRESET,
+distinct from hard root/identity ESTALE. The inventory client may reacquire the
+same pinned desired root only after authenticated EMPTY; a withdrawn desire
+still suppresses recovery, including repeated EMPTY notifications. Component
+ordering, hard-error refusal and eject precedence pass plain/ASan+UBSan/TSan;
+the pinned AArch64 mod/helper build passes. Real changed-address recovery is
+not yet validated. These new binaries postdate the pending-refresh trial hashes.
+
+Native selected eject now passes while a real refresh DHCP client is pending:
+the owned slot0 client is observed alive before eject and absent after backing
+unmount. Slot4 retains its original RPC/TCP session; source0 rediscovery, stale
+old handles and a fresh exact PDB download pass after virtual replug. Global STOP,
+native network equality, exact restoration and cleanup pass. This does not
+independently establish the client's terminating signal or external loaded-deck/
+actual-CDJ behavior. See the
+[pending-refresh eject record](acceptance/usb-hub-support-sharing-sdk-pending-refresh.json).
+
+The refresh host suite completed83 tests in each plain/ASan+UBSan/TSan mode.
+An additional targeted control passes in all three modes: a completed failed
+refresh caps its retry at the original lease expiry, cannot extend ownership,
+retires exactly at expiry and leaves an independent neighboring lease intact.
+These are component controls, not managed DHCP-outage or pending-refresh eject
+acceptance. The managed pending-refresh eject trial is recorded above.
+
+Real same-configuration refresh now passes with60-second grants on two managed
+emulator sources: accepted counts3/4 retain public/lease generation1 while independent
+complete TCP menus and exact files continue. Native selected eject/replug and
+original neighbor RPC/TCP continuity, fresh PDB, global STOP, native network checks,
+exact restoration and cleanup pass. This uses fresh supervised same-MAC acquisition,
+not RFC2131 unicast RENEWING. Changed-address recovery/expiry negatives remain open.
+See the [managed refresh record](acceptance/usb-hub-support-sharing-sdk-refresh.json).
+
+Positive two-source regression now passes on the same helper hash as both initial
+IP exclusion negatives: independent parallel complete menus/exact PDB/audio,
+neighbor session/handle survives native source eject/replug, selected rediscovery/
+STALE/fresh PDB and global STOP pass. Native address/routes/DNS/namespace snapshots
+match, exact restoration and cleanup complete. No local playback in this particular
+run. See the [address-guard positive record](acceptance/usb-hub-support-sharing-sdk-address-guard-positive.json).
+
+The managed native-IP grant rejection now passes: DHCP proposes the emulator's
+native192.0.2.15, helper reports EADDRNOTAVAIL without ACTIVE/readiness marker,
+then global STOP/managed exit and exact restoration/cleanup pass. Native address,
+routes, DNS hash and namespace snapshots match before/after. Continuous native
+address changes and the positive two-source regression remain pending. See the
+[native grant record](acceptance/usb-hub-support-sharing-sdk-native-grant.json).
+
+The managed duplicate-grant negative control passes: isolated DHCP grants the same
+IP to distinct source0/4 MACs; source4 reaches EMPTY/EADDRNOTAVAIL without ACTIVE,
+while source0 passes independent discovery/full menus/exact files. Global STOP,
+original-byte restoration and owned cleanup pass. Native-IP rejection and the
+positive two-source regression on this helper remain pending. See the
+[duplicate grant record](acceptance/usb-hub-support-sharing-sdk-duplicate-grant.json).
+
+Initial allocator grants now exclude native-controller IPv4 addresses and other
+source reservations before ARP/configuration. Bounded native snapshot and duplicate
+candidate controls pass plain/ASan+UBSan/TSan; AArch64 builds. This postdates the
+successful two-source/local-loop runtime hashes and needs managed negative/positive
+trials. Continuous native address changes and renewal remain pending. See
+`HUB-LINK-ADDRESS-OWNERSHIP.md`.
+
+Simultaneous native-deck and external-client use now passes the two-source emulator
+runner:73 samples retain the same native PID/content495, loaded/playing flags and
+advancing four-beat-loop position through remote menus/files and native loaded-source
+eject/replug. Backing identity is independently verified as `sdc`; external source
+and neighbor lifecycle checks, global STOP, exact restoration and cleanup pass.
+This is engine-state telemetry, not audio-signal capture or external loaded-deck/
+actual-CDJ acceptance. See the
+[local/remote record](acceptance/usb-hub-support-sharing-sdk-local-remote.json).
+
+Two managed native sources now pass the complete gated emulator runner: distinct
+owned networks, independent concurrent full menus and exact PDB/audio downloads
+from both. Native selector eject/replug of source0 preserves source4's original
+RPC handle/TCP menu session. Source0 rediscovery, old-handle STALE and fresh exact
+PDB fetch pass. Current-run predicates, per-slot/global STOP, exact restoration
+and all cleanup pass. No local/remote simultaneous playback, external loaded deck,
+production activation, target4.4 runtime or actual-CDJ claim. See the
+[two-source record](acceptance/usb-hub-support-sharing-sdk-two-sources.json).
+
+Managed native eject/replug now passes for one direct native root: independent
+complete menus/exact files, external reference withdrawal, backing unmount and
+neighbor mounts preserved, then generation2 with the same MAC/player/IP. Unchanged
+Beat Link rediscovers it, repository RPC controls reject old handles as STALE on
+both aliases and Crate Digger fetches the exact PDB again. Explicit link deletion
+and address-finalization reentry fix are included. Exact rollback and cleanup pass.
+Not production activation, multisource, external loaded deck or actual CDJ proof.
+See the [managed replug record](acceptance/usb-hub-support-sharing-sdk-native-reconnect.json).
+
+The corrected native-eject runner now passes end to end with an external metadata
+session and RPC root handle retained during selector eject. Both RPC aliases
+become unavailable, metadata/query closes and unchanged Beat Link DeviceFinder
+expires the source. Helper retirement precedes native closure/backing unmount;
+neighbor mounts survive. Exact original restoration and owned-scope cleanup pass
+without recovery. No remote loaded deck was tested. See the
+[observed eject record](acceptance/usb-hub-support-sharing-sdk-native-eject-observed.json).
+
+The single-source managed native-eject trial now confirms helper retirement
+before native source closure, alias/backing unmount and preservation of other
+USB mounts, after independent full menus/exact files. No external loaded deck
+was tested. Runner cleanup tripped on the already-unmounted alias; exact originals
+were restored and a separate scoped recovery completed/verified remaining cleanup.
+The runner fix awaits a fresh complete trial. See the
+[native-eject record](acceptance/usb-hub-support-sharing-sdk-native-eject.json).
+
+The inventory IPC client now retains desired root capabilities through channel
+backpressure, consumes generations only after sending, orders replacement after
+confirmed retirement and suppresses recovery when eject withdraws a source.
+Stale statuses and channel loss cannot open an outstanding unmount gate.
+Actual broker-session rejection/duplicate-EMPTY controls pass plain/ASan+UBSan/
+TSan; pinned AArch64 build passes. SDK probe ALLOCATE now uses this component;
+native inventory/eject wiring remains pending. See `HUB-LINK-BROKER.md`.
+
+Managed initial-conflict recovery now passes in the emulator: correct-source
+DECLINE, retained backoff (independently observed10.126 seconds), then a new
+address with the same client/public identity. Independent Beat Link completes
+2546 tracks,185 ordered nodes and8359 memberships; concurrent database/audio
+downloads match exact hashes. Managed retirement, original-byte restoration and
+owned-scope cleanup pass. This is one gated SDK fixture, not production activation,
+ongoing conflict/renewal or physical-CDJ acceptance. See the
+[recovery record](acceptance/usb-hub-support-sharing-sdk-conflict-recovery.json).
+
+Managed initial ARP conflict now retires without publication and sends DECLINE
+from the correct source namespace. Independent fixture receives zero-source
+DECLINE with matching grant identity and observes no announcement/IPv4 use of
+the disputed address. Managed exit/rollback/cleanup pass; targeted namespace/
+readiness/allocator controls pass all host sanitizer modes. Automatic retry and
+ongoing conflict/renewal remain pending. See the [managed conflict record](acceptance/usb-hub-support-sharing-sdk-arp-conflict.json).
+
+Managed helper IPC loss during pending native DHCP now passes: fixture observes
+DISCOVER without OFFER, runner identifies the live owned client, then closes
+the peer. Client and managed/peer helper PIDs disappear without ACTIVE/library
+publication. Exact originals are restored and owned network/module/bind/TAP/temp
+state cleans up; normal EP147 is active. Not native eject/unmount or a loaded
+remote/neighbor/renewal test. See the [pending DHCP cancellation record](acceptance/usb-hub-support-sharing-sdk-pending-dhcp-cancel.json).
+
+Actual SDK-managed ALLOCATE over IPC now passes with helper-owned namespace/
+MACVLAN/native DHCP/ARP/configuration and a real library: independent complete
+menus and exact concurrent PDB/MP3 downloads, then real retirement and managed
+exit. Runner supplies no guest network. Exact original files/approval/marker and
+absent helper/hook assets are restored; bind/module/TAP/fixtures/temp state is
+cleaned and normal EP147 active. One gated fixture with fixed identities/jitter;
+production policy, refresh/conflicts, concurrency and loaded native eject remain
+pending. See the [SDK owned-allocation record](acceptance/usb-hub-support-sharing-sdk-allocated-library.json).
+
+The positive ALLOCATE callback path now passes with real owned allocation and
+a hub library: native DHCP/ARP/configuration before ACTIVE, independent complete
+menus and exact PDB/MP3 downloads, then real callback retirement/namespace release.
+Native state and cleanup pass; portable77/77/77 passes. This is a direct dispatcher
+call in standalone research, not SDK helper IPC. One fixture; SDK executable
+integration, concurrency/loaded eject and network-policy gates remain pending.
+See the [real callback library record](acceptance/usb-hub-support-sharing-broker-allocated-library.json).
+
+Actual ALLOCATE callbacks now connect owned acquisition/readiness and endpoint/
+address retirement. Eight pending cancellations pass targeted sanitizers and
+pinned AArch64: creator threads join, no service publishes and FD count returns
+to baseline. This cancels before DHCP/MACVLAN; positive callback readiness and
+SDK executable wiring remain unvalidated. Removal faults retain ownership.
+See the [allocator callback record](acceptance/usb-hub-support-sharing-broker-allocator.json).
+
+A distinct ALLOCATE/root-FD command now defers publication until asynchronous
+network readiness and polls readiness through ACTIVE. Pending detach releases
+the root and waits for network cleanup; path replacement and later readiness
+loss controls pass targeted sanitizers/pinned AArch64. Mod/helper builds pass.
+Callbacks remain fixtures here; real DHCP/ARP executable wiring and SDK ALLOCATE
+trial remain pending. See the [allocation command record](acceptance/usb-hub-support-sharing-broker-allocate.json).
+
+The automatically allocated network now serves one real mounted hub library:
+native DHCP/ARP/configured READY precedes independent discovery, all2546 tracks/
+185 nodes/8359 memberships and concurrent exact PDB/MP3 downloads. Withdrawal/
+join/endpoint closure precedes quiesce and exact address retirement; native state
+and complete cleanup pass. Portable76/76/76 passes. The first marker-format
+attempt cleaned up; corrected v2 passes. This remains standalone research, with
+SDK allocation operation, concurrency, conflict/refresh and remote-loaded eject
+pending. See the [allocated real-library record](acceptance/usb-hub-support-sharing-allocated-library.json).
+
+Automatic allocation→native DHCP→controller ARP→async configuration→READY now
+passes in the emulator, including independent UDP reachability and exact address
+retirement. Native state and owned-resource cleanup pass. Host sanitizer controls
+cover wrong-namespace/backward-clock retirement and joining pending factory.
+Libraries/SDK allocator integration, integrated conflict/retry and refresh remain
+pending; the fixture uses fixed jitter. See the [automatic readiness record](acceptance/usb-hub-support-sharing-allocated-ready.json).
+
+The namespace-bound ARP factory now passes a pinned AArch64 emulator control:
+controller takes a validated nonblocking CLOEXEC source socket and submits a
+candidate probe while remaining in its namespace. Configure/remove regression
+and native/module cleanup pass. Targeted host sanitizers cover refusal/failure
+cleanup. This is one kernel-accepted send, not full ARP/DHCP readiness or wire
+observation. See the [ARP factory record](acceptance/usb-hub-support-sharing-arp-namespace-factory.json).
+
+Exclusive async IPv4 configuration now passes a real allocated-namespace/MACVLAN
+control: kernel ACK and address observation, EADDRINUSE on reconfigure, then exact
+removal and absent-IP observation. Native state survives and owned scope/module
+cleans up. Full portable74/74/74 passes. This operation test does not run DHCP/
+ARP/services; acquisition→ARP→configuration and SDK broker readiness integration
+remain pending. See the [configure record](acceptance/usb-hub-support-sharing-network-configure.json).
+
+A standalone controller now creates its own anonymous namespace/MACVLAN and
+obtains a real supervised native DHCP OFFER/ACK in the emulator, without guest
+network preparation by the runner. Native state survives and all owned network/
+module/TAP/temp resources clean up. Cancellation controls pass targeted host
+sanitizers. The proposal is not applied/public-ready; ARP/configuration, refresh
+and SDK broker allocator integration remain pending. See the [allocated DHCP record](acceptance/usb-hub-support-sharing-allocated-dhcp.json).
+
+Direct MACVLAN allocation into an anonymous owned namespace now passes a
+hash-verified pinned AArch64 emulator control: correct name/MAC, UP and no IPv4.
+Native PID/address/routes/DNS/controller namespace remain unchanged; closing
+namespace references permits module unload, with temporary files removed.
+Targeted host sanitizers cover request/native-namespace refusal. DHCP, broker
+allocator integration and target4.4 runtime remain pending. See the [link allocation record](acceptance/usb-hub-support-sharing-namespace-link.json).
+
+Anonymous namespace allocation now passes eight sequential pinned AArch64
+creations in the localhost emulator, retaining typed CLOEXEC FDs after creator
+thread exit without changing the controller namespace or native PID. Host
+sanitizers cover privilege-denial cleanup. Interface creation/configuration,
+DHCP and broker allocation integration remain pending; vendor4.4 source facts
+do not establish target runtime acceptance. See the [namespace creation record](acceptance/usb-hub-support-sharing-namespace-create.json).
+
+The SDK-managed helper now exports a real mounted emulator hub library to
+unchanged independent clients: discovery, all2546 tracks/185 nodes/8359 ordered
+memberships and concurrent exact-hash PDB/MP3 downloads pass. Held ACTIVE then
+STOP completes managed exit; exact original files are restored and owned bind/
+network/TAP/module/files are cleaned. Single fixture with external IP/interface
+setup; production allocation/DHCP, multisource/local playback and native/remote
+loaded eject remain pending. See the [SDK real-library record](acceptance/usb-hub-support-sharing-sdk-broker-library.json).
+
+SDK-managed executable service integration now passes inside EP147: authenticated
+SOURCE/namespace FD reaches the helper, actual endpoints open, synthetic library
+stages to ACTIVE, STOP drains and both managed/peer processes exit. Exact original
+files/approval/marker state and absent helper are restored; normal EP147 is active
+and owned network/module/library/files are cleaned. This supersedes the launch
+gate below. Address/interface preparation remains external, PDB is empty and
+independent client/native eject/DHCP allocation tests remain pending. See the
+[SDK service record](acceptance/usb-hub-support-sharing-sdk-broker-service.json).
+
+An explicit emulator-only helper executable now connects the authenticated session
+to dispatcher/verified-FD manager and real namespace endpoint factory, using one
+externally prepared synthetic source. Both pinned helper builds pass; the reused
+connection/probe regression passes plain/ASan+UBSan/TSan. The new service mode has
+not yet been executed or launched by the SDK. Production allocation and full
+source scope remain pending; this is an integration fixture, not a candidate.
+
+Saturated helper IPC now has a targeted plain/ASan+UBSan/TSan control: after
+parent disconnect an active worker still joins/closes, and pending network
+release prevents premature terminal completion. Network release remains a
+fixture; SDK executable-mode integration is still pending. See the
+[backpressure record](acceptance/usb-hub-support-sharing-broker-backpressure.json).
+
+Authenticated session polling now carries SCM_RIGHTS SOURCE commands through
+actual manager/staging threads and reports STOP only after drain. Parent loss
+while ACTIVE and wrong-token rejection pass71/71/71 and hash-verified pinned
+AArch64 execution in the localhost emulator, preserving EP147 PID. Network
+callbacks remain loopback fixtures; SDK-launched executable mode and real
+allocator integration remain pending. See the [session record](acceptance/usb-hub-support-sharing-broker-session.json).
+
+Real namespace service endpoints and a pinned synthetic library now stage through
+the manager, withdraw/join/close, then retire the address through the asynchronous
+netlink operation and lease acknowledgement. A neighboring address and native
+state survive; owned scope is cleaned. Portable negative controls pass all three
+modes. Lease/ARP proof and library are synthetic; independent client, native
+eject/unmount and SDK/DHCP integration remain pending. See the
+[live retirement record](acceptance/usb-hub-support-sharing-live-broker-retirement.json).
+
+Real asynchronous netlink removal now passes in an isolated emulator namespace:
+192.0.2.3/24 is removed with kernel ACK while192.0.2.4/24 remains on the same
+interface. Uploaded probe/module hashes match; native PID/address/routes/DNS/
+namespace are unchanged and owned scope/module/files are removed. Portable
+negative controls repeat under all three sanitizer modes. No music endpoints
+ran; lease-release/eject integration remains pending. See the [live removal record](acceptance/usb-hub-support-sharing-live-address-remove.json).
+
+An asynchronous exact netlink IPv4-removal component now passes targeted
+plain/ASan+UBSan/TSan negative controls and a pinned AArch64 build. It refuses
+the native namespace and requires matching kernel ACK; no successful address
+mutation is claimed yet. Live isolated removal and lease callback integration
+remain pending. See the [removal record](acceptance/usb-hub-support-sharing-address-remove.json).
+
+Lease-aware dispatch now retires an expired source through actual worker join
+and endpoint close before address removal. A pending removal keeps that source
+DRAINING while a longer-lived neighbor stays ACTIVE/READY. The combined synthetic
+lease/loopback/removal control passes69/69/69 and pinned AArch64 execution in the
+localhost emulator, preserving EP147 PID. Real DHCP refresh/interface mutation
+and SDK-managed command-loop integration remain pending. See the [combined record](acceptance/usb-hub-support-sharing-broker-lease-dispatch.json).
+
+A lease-owned endpoint context now gates preparation/open on exact READY lease
+data, retains the namespace reference and orders removal acknowledgement before
+queued replacement. Targeted plain/ASan+UBSan/TSan controls pass with synthetic
+lease/ARP and removal fixtures; no actual endpoint open/address mutation is
+claimed by this control. Periodic loss-to-dispatch retirement and SDK runtime
+integration remain pending. See the [lease adapter record](acceptance/usb-hub-support-sharing-broker-lease.json).
+
+Typed network-namespace validation and unexpected worker-loss retirement now
+pass68/68/68 plus the pinned AArch64 control in the localhost emulator. Native
+EP147 PID is unchanged and the temporary test executable is removed. Network
+prepare/release are still loopback fixtures; live SDK broker and allocator
+integration remain pending. See the [namespace record](acceptance/usb-hub-support-sharing-broker-namespace.json).
+
+The post-authentication dispatch adapter now connects SOURCE parsing, generation
+reservation, pinned root and actual manager/worker staging. Targeted plain,
+ASan/UBSan and TSan controls pass: replay/old detach and preparation denial,
+network-release wait before drained acknowledgement, surviving neighbor and
+terminal STOP. Network preparation/release use loopback fixtures; SDK helper
+and live allocator integration remain pending. See the [dispatch record](acceptance/usb-hub-support-sharing-broker-dispatch.json).
+
+A per-slot asynchronous generation gate now rejects replayed SOURCE/old DETACH
+and late readiness, requires drain before replacement and makes STOP terminal
+for its session. Targeted plain/ASan+UBSan/TSan controls pass for eight slots and
+UINT64_MAX. This is not yet connected to authenticated broker dispatch; real
+worker/network drain evidence remains a caller obligation. The complete66/66/66
+record below predates this extra component.
+
+Verified directory ownership now extends through the source manager into worker
+staging. Caller close, path replacement, same-identity object substitution and
+eject-before-first-poll controls pass66/66/66, with a pinned AArch64 build.
+Authenticated dispatch, external generation authorization and live SDK-managed
+export remain pending. See the [manager record](acceptance/usb-hub-support-sharing-pinned-manager.json).
+
+The SOURCE IPC codec and pinned directory identity component now pass the full
+portable66/66/66 matrix. Replacement directories and leaf/intermediate symlinks
+are rejected. An explicit worker start now carries the pinned FD through staging without
+reopening its pathname; rename/replacement controls and66/66/66 pass, as does
+the pinned AArch64 build. Broker dispatch still needs to invoke it and enforce
+source/generation authorization. See the [pinned worker record](acceptance/usb-hub-support-sharing-pinned-worker.json).
+See the [source component record](acceptance/usb-hub-support-sharing-broker-source.json).
+
+The actual core-managed helper launch/IPC probe now passes inside EP147 in the
+emulator: reviewed USB helper asset, real SDK launch, peer/token/executable checks,
+namespace FD acknowledgement, STOP and managed liveness end. Managed and peer
+PIDs are gone; exact0.3.2 package/stage/approval/start-marker state is restored and
+the temporary helper asset/namespace/files are removed. This IPC-only probe
+does not enter namespaces or enable public networking. An initial missing-stat
+preflight and two pathname-validation failures were cleaned/restored; replacing
+the namespace display-name assumption with NSFS/inode validation resolves them.
+The bind-mounted descriptor regression passes separately. Production broker
+dispatch and network/source lifecycle integration remain pending.
+See the [SDK-managed runtime record](acceptance/usb-hub-support-sharing-sdk-broker.json).
+
+Broker integration now follows the supported SDK boundary: core1.2.3 owns helper
+launch/reaping and closes inherited FDs, so namespace references need a separate
+local channel. Bounded Unix packet/FD transport and explicit credentials/executable/
+token checks pass targeted sanitizers and pinned AArch64 emulator controls. A
+separately executed standalone helper completes HELLO, namespace-inode acknowledgement
+and STOP on an owned private socket, preserving native state and cleaning up.
+This standalone probe does not enter namespaces or start libraries. The managed
+launch result above supersedes its earlier launch gate; operation/generation
+authorization and production broker dispatch remain pending.
+See [broker integration](HUB-LINK-BROKER.md).
+The complete portable matrix now passes65/65/65, with hook registration checked
+separately. See the [IPC transport/probe record](acceptance/usb-hub-support-sharing-broker-wire.json).
+
+One live hub library now passes end-to-end over its DHCP-acquired/ARP-validated
+address: unchanged Beat Link discovery and full2546-track/185-node/8359-membership
+menus, plus concurrent unchanged Crate Digger exact-hash PDB/MP3 downloads.
+Source-owned endpoints use the actual grant and a fresh nonce; the worker is
+withdrawn/joined and sockets closed before exact address removal. Native state
+and parent namespace survive; all owned resources are cleaned and transport
+reports no errors. This is a separate research process, not public networking
+inside the mod. Production broker/namespace lifecycle, refresh/expiry, local
+playback concurrency and multiple leased sources remain pending. The live branch
+is not sanitizer-instrumented; acquisition unit controls pass all three modes.
+See the [leased library record](acceptance/usb-hub-support-sharing-leased-library.json).
+
+One bounded live post-DECLINE recovery now passes: the conflicting192.0.2.3
+candidate is rejected without configuration, retained retry policy waits10001ms,
+then a fresh native client obtains192.0.2.4 with the same explicit client identity.
+The C lease controller advances generation after retirement/removal acknowledgements;
+the new address completes ARP/configuration/UDP and exact removal. Host observation
+sees about10.101 seconds between DECLINE and the next DISCOVER. Native processes,
+DNS/routes and parent namespace survive, and owned resources are cleaned. This is
+one research fixture retry without music services, not the production allocator
+or continuous refresh/expiry acceptance. Acquisition unit sanitizer controls pass
+again; the live recovery branch itself is not sanitizer-instrumented.
+See the [bounded recovery record](acceptance/usb-hub-support-sharing-dhcp-reacquire.json).
+
+Initial-conflict DHCPDECLINE now reaches the isolated fixture server's UDP
+socket with the rejected IP/server and same explicitly pinned native client ID.
+It uses source0.0.0.0 and valid IPv4/UDP checksums, and the disputed IP stays
+unconfigured. Actual current-namespace interface/MAC validation gates sending.
+The retained retry policy separately passes ten-second post-DECLINE quiet-period
+and stricter repeated-conflict backoff controls. Production automatic reacquisition and
+ongoing music-service conflict retirement remain pending. The full portable
+matrix passed63/63/63 at that boundary; live branch evidence is not sanitizer-instrumented.
+The same exact probe also passes the successful configure/announce/UDP/remove
+control. Both scopes finish with cleanup and preserved native state. See the
+[DECLINE record](acceptance/usb-hub-support-sharing-dhcp-decline.json).
+
+An integrated initial-conflict negative control now passes: after native DHCP
+ACK, the host observes the first ARP probe and injects a foreign claim. The client
+detects conflict before applying the IP and retires its candidate; the host sees
+no address announcement or IPv4 use in its bounded observation. Actual IPv4 stays
+absent and native state survives. Production retry and conflict retirement while
+music services are running remain pending; no library endpoint ran in this probe.
+The same probe binary also repeats the positive configure/announce/UDP/remove
+control successfully, and both runs finish with owned network/module cleanup.
+See the [initial conflict record](acceptance/usb-hub-support-sharing-address-conflict.json).
+
+An explicit integrated address-flow probe now passes in the emulator: supervised
+native DHCP grant, three real ARP probe sends and quiet interval, exact IP/prefix
+configuration, both announcements, lease readiness, host UDP roundtrip and exact
+address retirement/removal. Native processes/DNS/routes and parent namespace
+remain unchanged, and owned networks/module/files are cleaned. This is a research
+harness with no music endpoints, not the mod's production allocator. Its guarded
+single-threaded fork path must never run inside EP147. Asynchronous interface
+operations, source endpoint coupling, refresh/conflict/expiry and full local MAC
+inventory remain pending. See [address ownership](HUB-LINK-ADDRESS-OWNERSHIP.md).
+
+Supervised one-shot DHCP acquisition now resolves the grant-time reference for
+initial acquisition: the deadline is anchored before spawning a fresh native
+client, not when an event is eventually read. A dedicated nonblocking pipe,
+validated bound record, successful exit, EOF and reap are required. A separate
+exec'd helper enters the owned namespace with clean environment and closes other
+descriptors. Targeted plain/ASan+UBSan/TSan controls pass. Exact pinned AArch64
+control plus standalone helper complete real emulator OFFER/ACK and feed the C
+lease candidate using that conservative reference. The candidate remains unready
+and no IP is applied. Native processes/DNS/routes and parent namespace survive.
+Refresh scheduling, conflict/NAK handling and integration with owned interfaces
+and source endpoints remain pending; child-reaping ownership must be preserved.
+The preceding complete portable matrix passed62 cases each in plain/ASan+UBSan/TSan;
+hook registration passes separately. See the
+[supervised DHCP record](acceptance/usb-hub-support-sharing-supervised-dhcp.json).
+
+A socket-free lease/address controller now gates readiness on confirmed
+configuration and matching-address ARP readiness. Renewal retains its generation;
+expiry/invalidation/replacement requires drain before address removal and removal
+before a queued generation begins. Targeted plain/ASan+UBSan/TSan and pinned
+AArch64 emulator controls pass, including the actual ACD state machine and
+neighbor isolation. It is not wired into the mod. The v1 reporting channel alone
+lacks a grant-time reference; the supervised acquisition above supplies one.
+Do not infer live DHCP renewal/expiration or automatic networking from these
+simulated controls. The latest63/63/63 result includes address, DHCP,
+lease, acquisition and DECLINE components; earlier58/58/58 records retain their exact
+historical artifact scope.
+
+DHCP reuse research identifies native BusyBox1.27.2 `udhcpc`, but its default
+hook modifies global DNS/routes and can kill other DHCP clients. A separate
+reporting-only hook and bounded C event parser are now tested instead. Parser
+plain/ASan+UBSan/TSan and pinned AArch64 execution pass; native shell hook events
+also pass. An isolated emulator udhcpc process delivers deconfig/leasefail on
+inherited fd3, without changing native DNS/routes or EP147 PID, and its namespace
+is removed. A subsequent isolated live OFFER/ACK trial now delivers the exact
+192.0.2.3/24,60-second lease and server address through the native reporting hook;
+the proposal is not applied. Native EP147/DHCP process IDs, DNS and routes remain
+unchanged. The server is a repository-authored fixed fixture, not general DHCP
+interoperability acceptance. Refresh/expiration, production broker integration,
+owned interfaces and allocator integration remain
+pending; this code is not enabled in the mod or included in release assets.
+
+The first address-allocation component is now implemented: a socket-free ARP
+candidate detector with explicit probe/send completion, announcement readiness
+and immediate retirement on foreign conflict. Targeted plain/ASan+UBSan/TSan and
+pinned AArch64 emulator controls pass. It is not wired into the mod and performs
+no networking. A separate nonblocking Ethernet ARP adapter now passes isolated
+WSL veth controls plain and ASan/UBSan, including acquiring/active conflict
+retirement and MAC validation. The retained per-interface retry context passes
+plain/ASan+UBSan/TSan controls across candidate changes and neighbor isolation.
+Its pinned AArch64 adapter build succeeds; live emulator ARP remains pending.
+DHCP leases, allocator wiring, owned interface
+lifecycle and public player-number collision handling remain pending. See
+[address ownership](HUB-LINK-ADDRESS-OWNERSHIP.md). The portable runner now includes
+this component; the previous58/58/58 result predates its addition.
+
+Cold-start investigation has now located the recorded signal11 stack in native
+image-file loading, called by eager HUB badge preparation during mod init.
+The framework's `froze` marker alone did not establish this cause; the saved
+crash registers and executable return addresses supplied the evidence.
+The current candidate defers each badge composition until its first owned
+native widget update, publishes completed images atomically and preserves the
+original native badge on a failed or concurrent attempt. Targeted badge tests
+pass plain, ASan/UBSan and TSan; both AArch64 candidate variants build and the
+hook-registration control passes. The full portable component matrix also
+passes in plain, ASan/UBSan and TSan modes after this change; its ignored log is
+`local/integration/cold-badges-v1/host-suite.log`. The standard AZ candidate now
+passes one new emulator cold boot: exact mapped hash, zero application restarts,
+empty crash log and all eight persistent disk roots retained. SOURCE badges1–5
+were visually inspected after that boot. Cold browse/waveform validation remains
+pending. This does not establish a hardware boot fix.
+The lazy-badge sharing build also passes the complete two-source integrated
+discovery/menu/file and isolated eject/reconnect regression. Source badges1–5
+compose on widget updates without fallback logs. The runner exits0, restores
+normal0.3.2 and removes its networks/module; the transport reports no errors.
+See the [lazy initialization record](acceptance/usb-hub-support-lazy-badge-init.json).
+The cold runner's restore command used an unsupported guest `find` expression;
+an explicit verified owned USB backup path restored the original package, stage
+and approval bytes separately. Normal0.3.2 is loaded afterward with zero
+restarts. This runner error does not invalidate the saved cold-boot observation.
+
+Two live integrated public sources now pass independent concurrent discovery,
+complete menus and exact PDB/MP3 downloads. Each exposes2546 tracks,185 playlist
+nodes and8359 memberships from identical protected fixtures. Separate root
+nonces reject cross-source handles on111/50111. Native STOP ejects source1;
+source2's original TCP menu connection and root stay usable during eject and
+reconnect, and its discovery remains present at lifecycle checkpoints. Source1
+returns with a fresh root and its old handle is STALE. The application PID stays
+unchanged. Both networks/module/local socket are removed and exact0.3.2 is
+restored afterward. See the [two-source record](acceptance/usb-hub-support-sharing-integrated-two.json).
+
+The first two-process discovery attempt failed because two DeviceFinders tried
+to bind the same UDP port. The corrected observer uses one unchanged Finder
+with separate concurrent Client sessions. Public socket endpoints themselves
+were separate and delivered files in the failed observer trial.
+
+Local resource cleanup reduced QEMU TCP listeners from77 to5 (SSH2222,
+QMP4445/4446 and existing capture/injection15101/15102). Windows still listed
+old research listeners although QMP exposed no corresponding dynamic channels.
+A controlled emulator restart preserved all eight current persistent QCOW2 roots
+and original USB topology. The first EP147 cold start exited139; the framework
+quarantined the exact0.3.2 executable. Native Community Mods `Try again` followed
+by a warm application restart restored it. The crash-stack investigation and
+lazy-badge cold-boot control above supersede the original unresolved-cause note;
+this published-binary restart itself is not cold-boot acceptance.
+Port-cleanup research files remain ignored. See the
+[resource cleanup record](acceptance/usb-hub-support-emulator-port-cleanup.json).
+
+The integrated network runner now uses a temporary local socket for NAT capture
+instead of allocating another TCP listener. The Windows Python build lacks the
+AF_UNIX constant; a bounded native Winsock adapter supplies that local connection.
+A connect/remove probe and the full two-source integrated stream/cleanup pass.
+The QEMU listener count remains5 during and after that trial. Local sockets are
+now the default; legacy TCP requires the explicit `--nat-tcp` diagnostic flag.
+
+The integrated mod now passes native UI safe eject and reconnect for one public
+hub source. An external observer retains its root handle and metadata session;
+the native USB STOP selector ejects the stick, ordinary unmount removes its
+backing mount and all other observed USB mounts survive. The observer confirms
+both RPC endpoints drained, metadata/query closure and unchanged DeviceFinder
+expiry. Replugging the protected virtual fixture produces incarnation2 and
+rediscovery; the old root handle returns STALE on111 and50111, while the new
+root handle differs. The application PID stays unchanged. Full browsing and
+exact-hash PDB/MP3 transfers pass before eject. Cleanup restores0.3.2 and the
+fixture and removes the isolated network/module. See the
+[integrated eject record](acceptance/usb-hub-support-sharing-integrated-eject.json).
+This does not simulate an externally loaded/playing deck or establish concurrent
+local/remote playback, multiple live public exports or actual-CDJ acceptance.
+
+Earlier integrated boundary: the exact AArch64 sharing-emulator mod runs inside
+EP147 and exports one live hub source. Independent unchanged Beat Link discovers
+it and browses2546 tracks,185 ordered playlist nodes and8359 memberships;
+unchanged Crate Digger downloads the complete PDB and MP3 with exact hashes.
+The mapped executable hash and unchanged application PID were verified. The
+full portable suite passes58 cases each in plain/ASan+UBSan/TSan; hook
+registration passes separately. Eight-source bridge lifecycle controls also
+pass as an AArch64 synthetic fixture, not as eight live exports.
+
+User-authorized elevated WslService restart resolved the VM startup timeout;
+WSL and Docker responded afterward. The integrated trial completed and restored
+the previous emulator mod/approval bytes, verified normal EP147 with0.3.2,
+and removed its namespaces, MACVLAN test module and temporary files. No physical
+AZ action or publication occurred. See the [integrated mod record](acceptance/usb-hub-support-sharing-integrated-mod.json).
+`research/scripts/test-public-mod-network.py` preserves the reconstruction flow;
+its guarded runner was derived from the successful ignored trial runner and
+syntax/CLI checked after additional precondition checks.
+
+Automatic LAN allocation, live capacity beyond two exports,
+external loaded-deck removal, local/remote concurrency and target4.4 runtime
+validation remain pending. The earlier entries below preserve the sequence of
+intermediate builds and infrastructure failures; the latest record supersedes
+their pending-build and standalone-only boundaries.
+
+### Earlier integration steps
+
+An explicit `sharing-emulator` build now connects the public manager to the
+HubTransport presence poll and gates both natural alias removal and safe-eject
+alias unmount on public worker join/endpoint release. During the native listener
+shutdown it retains the withdrawn RPC service, then drains before unmount.
+Public UDP calls bypass the private datagram hooks so advertisements cannot
+overwrite the private observed address. This build requires the explicit
+`AZHUB_PUBLIC_EMULATOR=1` setting, exact emulator kernel and an externally prepared
+`azhub-pubtest` namespace; it exports only source0 for integration research.
+It does not allocate LAN addresses/interfaces and is not a production candidate.
+
+The complete AArch64 shared object compiles with the pinned compiler. A focused
+bridge fixture passes plain/ASan+UBSan/TSan and AArch64 execution in the guarded
+localhost emulator, covering presence, reservation, withdrawal, join-before-drain,
+reconnect and natural removal. Its temporary executable is removed. These are
+synthetic callback controls, not execution of the shared object inside EP147;
+actual integrated discovery, file access and native eject remain unverified.
+Artifacts stay in ignored `local/integration/sharing-mod-v1/`.
+
+The first integrated EP147 network trial stopped during the initial host
+namespace inventory: `wsl.exe -u root --exec ip netns list` exceeded its20-second
+deadline. This occurred before module, namespace or candidate installation;
+the runner completed its owned cleanup. The emulator still runs its previous
+mod. A subsequent WSL inventory reported no running distributions. This is an
+infrastructure prerequisite failure, not integrated sharing acceptance.
+The minimal WSL startup check also terminated with
+`Wsl/Service/CreateInstance/CreateVm/HCS_E_CONNECTION_TIMEOUT`. Automatic approval
+review rejected the subsequent host-wide `wsl.exe --shutdown` recovery action;
+it was not executed. Recovery requires explicit permission because it may stop
+Docker or unrelated WSL workloads. No integrated candidate was installed.
+Transition-only `public-sharing` diagnostics have since been added to the
+emulator bridge; those source changes still require rebuilding and verification.
+The recorded shared-object hash identifies the earlier compiled artifact.
+The user subsequently authorized WSL shutdown/restart. `wsl.exe --shutdown`
+completed successfully, but the following `wsl.exe --exec /bin/true` again
+terminated with `HCS_E_CONNECTION_TIMEOUT`. Read-only service checks showed
+WslService, vmcompute and hns running. No Windows restart or service restart
+was performed; integrated runtime validation and rebuilding remain pending.
+
+Current unbuilt source extends the emulator bridge to eight independently
+observed source slots. `AZHUB_PUBLIC_EMULATOR_COUNT` accepts1..8 (default1).
+Each configured slot requires its own externally prepared namespace/interface:
+slot0 uses `azhub-pubtest`/`azpub0`; later slots use `azhub-pubtestN`/`azpubN`.
+The isolated test addresses are192.0.2.(3+N), public identities41+N and distinct
+local MACs. Initialization closes already opened namespace descriptors if any
+later open fails. This remains a research configuration, not automatic LAN
+allocation or an actual eight-source interoperability claim.
+
+The expanded synthetic fixture now requests eight workers, fresh per-source
+nonces, transition-only diagnostics and isolation of seven neighbors during one
+source's withdrawal/drain/reconnect. These latest changes are uncompiled and
+unexecuted because WSL remains unavailable. A read-only compiler inventory found
+no gcc/clang/cc in the localhost emulator. `git diff --check` passes. Earlier
+acceptance records apply only to their exact earlier source/binary hashes.
+
+Automatic approval review also rejected `Restart-Service -Name WslService`:
+the prior user authorization covered `wsl.exe --shutdown`, not restarting the
+Windows service. The service restart was not executed. After repeated WSL VM
+startup failures and the completed independent code work above, further
+compilation/runtime evidence requires WSL recovery or another validated build
+environment. Do not treat automatic goal continuations as service-restart or
+Windows-restart approval.
+
+The source manager now suppresses endpoint opening when withdrawal arrives
+before its first poll, including a pending replacement after an older worker
+joins. Repeated observations of the same withdrawn incarnation do not restart
+it; a new incarnation can start normally. The focused manager regression passes
+plain, ASan/UBSan and TSan in the local network-disabled test container. This
+closes a pre-publication eject race; native mod callback integration remains open.
+
+Production remains immutable0.3.2; the physical AZ is untouched by this goal.
+Current sharing work combines host metadata prototypes and standalone AArch64
+emulator file components on an isolated network, not a new mod candidate. The [sharing plan](HUB-LINK-SHARING-PLAN.md)
+retains separate discoverable sticks, independent servers/caches, native sources,
+local continuity and native eject behavior with external loaded tracks.
+No sharing release or reduced scope is approved.
+
+Current tested boundary: one standalone AArch64 worker exports a mounted emulator
+hub source to independent discovery/menu/file clients, and external retirement
+checks pass. A separate native-emulator client loads an MP3 from the host C
+worker and advances playback position. Neither control is mod integration.
+The next integration work must connect source presence/generations, per-source
+network endpoints and native safe eject while preserving the private transport.
+Multiple live sources, reconnect, loaded-deck eject and combined local/remote
+operation remain required; the published mod and physical AZ are unchanged.
+
+### Named-table parser work in progress
+
+The C reader now traverses genres, artists, albums, labels, keys, playlist
+nodes, memberships and artwork. A real local PDB exposed two reader defects:
+the last row-index group can be partial, and the allocated offset count is a
+13-bit field at byte24; byte34 is a transaction index. The latter interpretation
+is documented in the current primary Crate Digger Kaitai schema:
+https://github.com/Deep-Symmetry/crate-digger/blob/main/src/main/kaitai/rekordbox_pdb.ksy
+Both C track and entity traversal now use these bounds/counts. Targeted controls
+cover partial groups and284 allocated offsets with a distinct transaction index.
+All44 portable cases pass in plain, ASan/UBSan and TSan; hook registration passes
+separately. No new target execution or runtime integration is claimed.
+
+The scan yields67 genres,2937 artists,1916 albums,175 labels,24 keys,185 playlist
+nodes,8359 membership rows and2504 artwork rows. All12730 referenced name
+comparisons and185 playlist-node comparisons match the previous independent
+Crate Digger snapshot. A corrected-count Crate Digger adapter now independently
+matches all16167 decoded records byte-for-byte, including8359 membership rows
+and their positions. The old snapshot omitted2404 memberships;151 playlist
+lengths changed. Earlier snapshot-backed browsing does not establish complete
+playlist content. See the [named-entity record](acceptance/usb-hub-support-sharing-named-entities.json).
+
+A new compact entity index preserves all16167 records after sorting, rejects
+duplicate named IDs/playlist positions, and provides generation-gated named
+lookups and ordered membership ranges. Retirement blocks new lookups without
+holding filesystem leases; callers must join existing readers before destruction.
+Measured buffers occupy720896 bytes for this fixture, excluding parser/allocator
+and other library storage. Bounds are262144 rows and8MiB name storage per source;
+eight-source resource limits are not validated. Joint lifecycle/cross-reference
+validation, target execution and metadata TCP integration remain open. Local
+raw comparison output stays ignored in local/diagnostics/sharing-pdb-tables-v1/.
+Nothing was installed or published.
+
+### Joint file, track and playlist staging
+
+The staged C library now traverses all named/playlist tables before publishing
+its catalog, track index and entity index together. Each worker step decodes
+at most one page. Cancellation, source replacement and post-ready PDB mutation
+retire all three views. Structural validation rejects missing playlist tracks,
+invalid folder parents and hierarchy cycles. Optional missing name IDs remain
+absent metadata so playable tracks survive; the real fixture has17 such refs.
+
+All45 portable cases pass in plain/ASan+UBSan/TSan, and hook registration passes
+separately. The pinned target-toolchain AArch64 harness passes synthetic controls
+and stages the emulator's live hub library:2546 tracks,16167 entity rows and10329
+file nodes, with2529 absent audio fixtures. No USB content is written. An unchanged
+Crate Digger client still completes concurrent exact-hash PDB/audio downloads
+from the integrated host service; hidden-file and post-mutation STALE controls
+pass. Owned temporary emulator executables are removed. See the
+[joint entity lifecycle record](acceptance/usb-hub-support-sharing-entity-lifecycle.json).
+Metadata TCP, public runtime integration and actual-CDJ acceptance remain open.
+
+### C metadata message codec
+
+A bounded C codec now reads/writes dbserver messages with typed arguments,
+UTF16BE text, binary payloads and native elided empty fields. It reports partial
+frames without dispatch and consumes one frame from coalesced input. Limits
+are16 arguments,64KiB per field and128KiB per frame; the future session adapter
+must enforce buffering/deadline/ownership limits. All46 portable cases pass
+in plain/ASan+UBSan/TSan. The pinned AArch64 synthetic harness passes in the
+emulator and its owned executable is removed.100 Python-generated messages
+round-trip through C; unchanged Beat Link8.0.0 also generates and decodes3
+C-normalized controls with identical arguments. See the
+[codec record](acceptance/usb-hub-support-sharing-db-wire.json).
+This codec record establishes wire framing only. Subsequent session and menu
+backend controls below extend it; native/actual-CDJ compatibility remains open.
+
+### C metadata connection lifecycle
+
+The C session component owns a nonblocking accepted socket, performs greeting
+and setup, preserves fragmented/coalesced input, and streams one response
+message at a time through bounded callbacks. Each session allocates128KiB input
+and128KiB output; aggregate provider capacity is still an integration obligation.
+Handshake/partial-frame deadlines are5s and idle timeout30s. Atomic cancellation
+and a source-alive guard close the connection; worker/readers must join before
+freeing session/source state. Backend callbacks still need DMST/source checks.
+
+All47 portable cases pass in plain/ASan+UBSan/TSan. AArch64 socketpair controls
+pass in the emulator. In an additional loopback TCP harness, the unchanged
+Beat Link8.0.0 Client completes provider41/requester3 setup while a second socket
+has only supplied one greeting byte; both connections close cleanly. See the
+[session record](acceptance/usb-hub-support-sharing-db-session.json).
+This harness rejects library requests: menu/metadata responses over the live
+indexes, public runtime wiring and native browsing remain the next gates.
+
+### C live-index menu backend
+
+The C nonblocking sessions now connect to source-owned library indexes in a
+standalone loopback-only service. Unchanged Beat Link8.0.0 retrieves all2546
+tracks with exact IDs/titles,185 ordered folder/playlist nodes and8359 ordered
+playlist memberships against the corrected independent Java oracle. Root menu
+contains TRACK and PLAYLIST. The fixture is copied from the local PDB into an
+owned temporary directory; this is not native emulator UI or live network-source
+acceptance. The harness and temporary fixture exit/clean up normally.
+
+Per-session menu descriptors isolate client selections. Responses stream one
+item at a time with bounded1..64-item pagination; DMST requester/collection-slot
+checks reject other identities and private/local slots. Track ordering folds
+ASCII case and otherwise compares UTF8 bytes, not locale-aware Unicode collation.
+Folder/PDB playlist ordering is retained. Eleven metadata rows, Unicode conversion,
+source retirement, spoofed slots and pagination pass synthetic controls.
+All48 portable cases pass in plain/ASan+UBSan/TSan; pinned AArch64 synthetic menu
+controls also pass in the emulator. See the [menu record](acceptance/usb-hub-support-sharing-db-menus.json).
+Load-info0x2102, analysis/cues/artwork, native UI controls, public runtime/file
+service integration and concurrent local/remote acceptance remain open.
+
+### C selected MP3 load-info response
+
+The C menu backend now serves0x2102 with seven MP3 load-info rows, using the
+previous native-emulator-confirmed decoder1 mapping. It requires the PDB audio
+path to exist in the source's authorized file catalog. Generic path lookup was
+moved unchanged into the catalog header so metadata and NFS use the same lookup.
+An unchanged Beat Link handshake/message codec control over loopback TCP verifies
+all seven rows against the independent PDB, including exact path/size, duration,
+tempo, comment and key ID. Host48/48/48 and pinned AArch64 synthetic controls pass.
+This is not a new native deck load/playback test. See the
+[load-info record](acceptance/usb-hub-support-sharing-db-load-info.json).
+
+Other formats remain an implementation/validation gate. The ignored local
+vynull reference suggests AAC/M4A4, FLAC5, WAV11 and AIFF12; these are candidate
+codes only, and its AIFF comment explicitly says inferred/unverified. Real
+analysis/cue/beatgrid/waveform/artwork responses and combined native metadata/file
+load controls are still required. The goal is not reduced to MP3-only support.
+
+### Incremental analysis sections and response size correction
+
+The new C ANLZ reader locates a requested section/occurrence and copies it in
+at most8192-byte chunks through supplied source I/O. It rejects malformed bounds,
+missing sections and read failures; it does not yet dispatch analysis responses.
+Ten real DAT/EXT/2EX sections match unchanged Crate Digger section boundaries/raw
+bodies byte-for-byte, including repeated cue tags and color/three-band waveforms.
+PQT2 is absent from the old enum, so the oracle adapter identifies its raw fourcc
+at the generated section boundary. This verifies bytes, not cue/tag semantics.
+The pinned AArch64 reader also reads the live emulator USB PWV5 section with
+exact79748-byte/hash equality. Source USB files are read only; temp executables
+are removed. All49 portable cases pass in plain/ASan+UBSan/TSan.
+
+Real PWV5/PWV7 sizes79748/119610 exceeded the initial64KiB codec limit. Fields now
+allow4MiB and frames4MiB+4096; incoming session buffers remain128KiB. Output starts
+at4KiB, grows on demand and shrinks after large sends. A119610-byte partial-write
+control with a small send buffer and257-byte peer reads passes on host/AArch64.
+Aggregate multi-provider memory quotas remain open. Reader bounds are64MiB/file,
+4MiB/selected section and1024 tag headers. See the
+[analysis reader record](acceptance/usb-hub-support-sharing-analysis-reader.json).
+The next gate is the source-catalog adapter and real analysis/cue/beatgrid response
+integration, followed by native rendering/load/playback and other-format controls.
+
+### Source-backed analysis tag responses
+
+The standalone C metadata backend now handles0x2c04 requests for registered DAT,
+EXT and2EX analysis files. Paths come exclusively from the source's PDB/catalog;
+generation, inode and file fingerprints guard incremental reads. The session
+producer yields between read steps. Withdrawal or mutation terminates pending
+work, and backend destruction releases pending allocations. A missing tag returns
+an empty0x4f02 response. Requests never supply filesystem paths.
+
+Unchanged Beat Link8.0.0 AnalysisTagFinder decodes six real sections over local TCP
+and matches the independent raw-section oracle: PQTZ, PWV4, PWV5, PCO2, PWV6 and
+PWV7, totaling212694 section bytes. The selected PCO2 fixture is empty; populated
+cue semantics are not validated. All49 cases pass in plain, ASan/UBSan and TSan;
+hook registration passes separately. The updated synthetic backend built with
+the pinned AArch64 compiler also passes in the guarded6.6.138-dirty emulator;
+its owned temporary executable was removed. Two concurrently launched unchanged
+Beat Link controls each complete all six section queries while a third accepted
+connection sends no greeting. This demonstrates service progress with a stalled
+peer, not measured per-request overlap or multi-player hardware acceptance.
+See the [analysis response record](acceptance/usb-hub-support-sharing-db-analysis.json).
+
+This supersedes the preceding pending adapter/0x2c04 statements only. Legacy
+analysis responses, populated cues, artwork, other audio formats, aggregate
+memory quotas and native runtime/rendering/playback remain open. No physical AZ
+operation, package change or publication occurred.
+
+### Legacy beatgrid response
+
+The C metadata backend now handles0x2204 using source-authorized DAT/PQTZ data.
+It converts the exported eight-byte big-endian beat records into the legacy
+sixteen-byte little-endian wire records, preserving each beat's position, tempo
+and time. It does not synthesize a constant-tempo grid. Header/count/length and
+output-size bounds reject malformed input before allocation.
+
+Two concurrently launched unchanged Beat Link controls each decode all306 beats
+from the real fixture and match Crate Digger's decoded PQTZ values. Targeted
+backend tests pass plain, ASan/UBSan and TSan, including a variable-tempo fixture
+and malformed lengths/counts. The pinned AArch64 synthetic harness also passes
+in the guarded emulator; its temporary executable was removed. This is not a
+new full49-case matrix run. Unknown wire fields follow a public-provider
+convention and still need native-client validation. No physical AZ operation or
+runtime integration is claimed. See the
+[beatgrid record](acceptance/usb-hub-support-sharing-db-beatgrid.json).
+
+### Legacy detailed waveform response
+
+The standalone C backend now handles0x2904 with the original EXT/PWV3 samples.
+It validates the tag envelope, one-byte entry size and exact sample count before
+building the response. Reads retain the existing catalog/generation/fingerprint
+guards and yield between chunks. The nineteen-byte legacy prefix is zero-filled;
+Beat Link ignores it, but its native meaning and acceptance remain unverified.
+
+Two concurrently launched Beat Link controls independently match all39862 samples
+against Crate Digger's direct EXT decoding, while the six analysis-section queries
+and306-beat conversion still pass. Targeted backend tests pass plain, ASan/UBSan,
+TSan and pinned-toolchain AArch64 execution in the guarded emulator. Temporary
+emulator executables were removed. This does not establish native waveform
+rendering, actual-CDJ interoperability or a new full host-matrix result.
+See the [detailed waveform record](acceptance/usb-hub-support-sharing-db-waveform-detail.json).
+Legacy previews, populated cues, artwork and joint runtime integration remain open.
+
+### Legacy waveform preview response
+
+The standalone C backend now handles0x2004 by combining DAT/PWAV and DAT/PWV2.
+It expands400 primary samples into height/color pairs and preserves the100-byte
+tiny preview, yielding900 bytes. Both reads reuse the same captured file
+fingerprint; mutation between sections fails, and a missing tiny section returns
+an empty response rather than publishing partial data. Four numeric arguments
+and the documented optional elided empty binary argument are accepted.
+
+Two concurrently launched unchanged Beat Link controls match all400 primary
+column heights/colors against direct Crate Digger decoding and all100 tiny bytes.
+Beat Link8 counts the tiny suffix as50 additional columns; the oracle explicitly
+compares the primary400 and tiny payload separately. This is a software-client
+display limitation, not native rendering acceptance. Prior analysis, beatgrid and
+detail controls still pass. Targeted backend tests pass plain, ASan/UBSan, TSan
+and guarded emulator AArch64, including mutation between sections and missing
+tiny-section cleanup. The temporary emulator executable was removed.
+See the [preview record](acceptance/usb-hub-support-sharing-db-waveform-preview.json).
+Populated cues, artwork, native rendering and joint runtime integration remain open.
+
+### Populated cue input validation
+
+A bounded C PCOB reader now preserves list kind, hot-cue ID, type, raw status,
+start time and loop end time. It validates section/entry lengths, counts and
+known cue types before publishing a decoded list. Status is retained verbatim;
+deleted-cue semantics are unresolved and no rows are silently filtered.
+
+Three populated DAT fixtures were copied read-only from the guarded emulator's
+hub library and remain ignored locally. All eight real hot-cue entries match
+unchanged Crate Digger's generated parser byte-for-byte in the numeric oracle.
+These fixtures have no memory cues or loops; those paths have synthetic tests
+only. Targeted plain, ASan/UBSan and TSan tests pass, including truncation,
+oversized entry and mismatched count rejection. The host test list now includes
+this component (50 cases); the full50-case matrix has not yet run.
+
+This parser is not yet connected to0x2104/0x2b04 responses. Combining hot/memory
+sections, extended comments/colors, populated loop fixtures and native acceptance
+remain open. See the [cue input record](acceptance/usb-hub-support-sharing-cue-input.json).
+No source USB writes, physical AZ operations or publication occurred.
+
+### Legacy cue network response
+
+The standalone backend now serves0x2104/0x4702 from the source's DAT/PCOB lists.
+It combines the first two cue sections with one captured file fingerprint,
+rejects duplicate list kinds, preserves cue/loop flags and hot IDs, and converts
+milliseconds to legacy half-frame positions. Counts distinguish hot and memory
+entries. Unknown entry fields and the undocumented auxiliary blob are empty;
+their native meaning remains unvalidated. Raw exported status is retained by
+the parser but is not interpreted as deletion by the wire converter.
+
+Unchanged Beat Link Client/CueList decodes all eight hot cues across three real
+fixtures, exactly matching direct Crate Digger decoding. Combined memory/hot
+loops and mutation between section reads pass synthetic backend tests. Memory
+cue decoding in Beat Link's legacy path is not covered by these real fixtures;
+native acceptance and extended cues remain separate gates. The full50 cases
+pass plain, ASan/UBSan and TSan; hook registration passes independently. Pinned
+AArch64 synthetic backend controls pass in the guarded emulator, with temporary
+executable cleanup. Analysis/beatgrid/detail/preview regression also passes with
+two concurrently launched clients and a stalled greeting peer.
+See the [legacy cue response record](acceptance/usb-hub-support-sharing-db-cues.json).
+No mod runtime integration, physical controller operation or publication occurred.
+
+### Extended cue network response
+
+The C backend now serves0x2b04/0x4e02 from source-authorized EXT/PCO2 sections,
+combining hot/memory lists under the same file fingerprint. It preserves
+millisecond positions, cue/loop types, memory color IDs, hot-cue colors and
+comments, converting UTF16BE exports to UTF16LE network text. Header/count/entry
+and comment lengths are checked; invalid surrogates/terminators are rejected.
+Missing EXT or absent extended tags reports unavailable so clients can fall back
+to legacy cues; existing empty extended sections remain a valid empty list.
+
+The corresponding real EXT fixtures contain12 hot cues, including IDs above C,
+and six nonempty comments. Unchanged Beat Link decodes all positions/types,
+comments and colors identically to direct Crate Digger decoding; eight legacy
+cues still match. Synthetic memory-loop/Unicode/color, partial-entry, duplicate
+kind, malformed comment and missing-EXT fallback controls pass plain, ASan/UBSan
+and TSan. The full50-case matrix and AArch64 execution predate this change and
+are not new acceptance for it. Unknown network fields remain zero-filled;
+native interpretation, real memory/loop fixtures and rendering are unvalidated.
+See the [extended cue record](acceptance/usb-hub-support-sharing-db-extended-cues.json).
+Artwork, other audio formats and joint runtime integration remain open.
+
+### Artwork catalog staging
+
+Library staging now registers original artwork paths from PDB table13 alongside
+the source-owned audio/analysis catalog, before publishing the combined views.
+Missing artwork is counted and retains its metadata row; unrelated files remain
+unregistered. Paths use the same confinement and generation rules as media.
+Only explicitly indexed artwork paths are registered; high-resolution companion
+naming remains a research gate.
+
+Targeted plain, ASan/UBSan and TSan staging controls pass for present/missing
+artwork and hidden unrelated files. The emulator's source fixture has no JPEG
+files under PIONEER, so the selected real artwork could not be copied. A host
+copy of the real PDB with one explicitly synthetic file at an independently
+decoded artwork path stages2546 tracks and16167 entities, with2503 missing
+artwork rows. This validates catalog staging, not image decoding or delivery.
+No artwork request handler or physical acceptance is claimed. See the
+[artwork staging record](acceptance/usb-hub-support-sharing-artwork-staging.json).
+
+### Original artwork network response
+
+The standalone C backend now serves two-argument0x2003/0x4002 artwork requests
+by table13 ID, resolving only catalog-registered paths. A source-owned reader
+captures inode/size/timestamps, checks them around each8192-byte read, yields
+between chunks and revalidates the PDB before response publication. The cap is
+4MiB; reads retain no filesystem lease between steps. Missing IDs return empty
+artwork. High-resolution/unanalyzed selection arguments remain unsupported and
+must be researched rather than silently mapped to the original image.
+
+An independent unchanged Beat Link codec/AlbumArt control receives byte-identical
+synthetic JPEG data (1246 bytes) and decodes80x80 pixels; unknown ID handling also
+passes. The JPEG was generated locally by the reconstruction control, not copied
+from a real USB. Targeted backend plain/ASan+UBSan/TSan tests cover original bytes,
+missing ID, unsupported high-resolution request, chunk yields and file mutation
+between reads with partial-buffer cleanup. No new full matrix, AArch64 execution,
+native rendering or actual-artwork acceptance is claimed. See the
+[artwork response record](acceptance/usb-hub-support-sharing-db-artwork.json).
+
+### High-resolution artwork and combined transport control
+
+The standalone backend now registers optional `_m` artwork companions derived
+from indexed table13 paths and serves third-argument1 artwork requests. The
+path convention matches pinned Beat Link8.0.0 `Util.highResolutionPath`.
+Missing companions return empty responses; arbitrary filesystem images remain
+unavailable. This supersedes the high-resolution pending statements above.
+Unchanged Beat Link codecs and JPEG decoding verify exact synthetic80x80 and
+240x240 images. File-catalog and metadata tests pass plain, ASan/UBSan and TSan.
+
+The research server's explicit `--combined` mode now serves TCP metadata and
+UDP file RPC from one staged source and generation, using a single owner loop.
+A local control passed40 UDP attribute queries during the independent artwork
+client run. Cancellation returned NFS STALE for the old handle and an empty
+export list; shutdown passed. UDP checks use our own protocol control, not an
+independent client. This is not streaming, native unmount, discovery, runtime
+integration, AArch64 or actual-CDJ acceptance. The socket harness was tested
+with a normal host build, not under sanitizers. See the
+[combined artwork record](acceptance/usb-hub-support-sharing-combined-artwork.json).
+No real AZ operations or publication occurred.
+
+### Combined library browsing and full file downloads
+
+The same standalone C service now passes an isolated-host control with unchanged
+Beat Link browsing and Crate Digger full-file downloads launched concurrently.
+The browser verifies2546 tracks,185 ordered nodes and8359 playlist memberships;
+the file clients verify exact SHA256 hashes for the4419584-byte database and
+10881597-byte MP3. Both transports share one staged catalog/generation. Packet
+interleaving and latency were not measured. An unrelated file stays hidden, and
+changing the owned temporary PDB invalidates the exported handle with STALE.
+The fixed-port research mode refuses the initial network namespace and permits
+only loopback interfaces. All fixtures are copied into an owned temporary tree;
+the source USB is untouched. See the
+[combined library record](acceptance/usb-hub-support-sharing-combined-library.json).
+
+This replaces the earlier attributes-only limit for the host combined-service
+control. Public discovery, multiple-source runtime lifecycle, native rendering,
+emulator integration, concurrent local decks and actual external-player eject
+still require validation. File download success is not playback acceptance.
+
+### Reusable per-source transport lifecycle
+
+`public-source-service.h` now owns the metadata view, eight bounded TCP sessions
+and the UDP export adapter for one already staged library. Its caller supplies
+nonblocking bound sockets, a provider identity and a mandatory peer policy used
+for both transports. Each worker round admits at most one TCP client, dispatches
+one datagram and advances each active session once. Withdrawal cancels the
+source and closes its TCP sessions immediately while retaining the catalog for
+STALE UDP responses. Accepted sockets are owned; listener/UDP sockets are borrowed.
+The library must outlive the stopped service. Advertisement and unmount ordering
+remain caller responsibilities, not implemented by this component.
+
+The research server now uses this component. Independent full browsing and
+PDB/MP3 transfer controls passed again after extraction. A focused plain,
+ASan/UBSan and TSan test covers capacity, peer rejection, withdrawal, neighboring
+source isolation, repeat destruction and listener ownership. That focused test
+uses empty synthetic catalogs and stalled greetings; it does not prove two-source
+streaming. The new test is included in the host matrix, but the full matrix has
+not been rerun. See the [source service record](acceptance/usb-hub-support-sharing-source-service.json).
+No mod worker, physical AZ operation or publication is included.
+
+### Asynchronous source worker
+
+`public-source-worker.h` now stages and serves one source on an owned pthread.
+The controller supplies its generation, fresh incarnation nonce and bound
+endpoints. Atomic requests distinguish withdrawal (close TCP, retain STALE UDP)
+from full stop (release the view, library and root). A terminal-state join gate
+must complete before the caller releases sockets, peer-policy context or mount.
+Staging failure and early stop clean up on the same owner thread. No pointer to
+the mutable library crosses into the controller.
+
+The research server now uses this worker. The independent combined library
+browse/PDB/MP3 control passed again. Focused plain, ASan/UBSan and TSan tests
+passed eight start/stop incarnations, running withdrawal, join polling and
+missing-PDB failure cleanup. Logs remain under ignored
+`local/diagnostics/sharing-artwork-v1/worker-{library,sanitizers}.{stdout,stderr}`.
+This does not yet attach workers to `community_refresh_presence` or the native
+safe-eject flow. In particular, `safe_eject_source_poll` and the backing-mount
+unmount phase still need the public advertisement/worker stop gates. No physical
+AZ changes or publication occurred.
+
+### Target worker lifecycle and native menu negotiation
+
+The pinned AArch64 source-worker lifecycle test passed on the guarded localhost
+emulator (kernel6.6.138-dirty), including staging, withdrawal, stop/join,
+reconnection and missing-PDB cleanup. The owned temporary executable was removed.
+See the [worker record](acceptance/usb-hub-support-sharing-source-worker.json).
+This does not change supported firmware/kernel compatibility or establish mod
+integration. No real AZ was contacted.
+
+Review against the previously exercised Python provider found a native-client
+gap in the C session: it accepted only single-argument setup. It now also accepts
+the observed `[requester,20]` extended-menu negotiation and remembers that choice
+per connection. Other second arguments are rejected. Extended item replies add
+the same four trailing fields as the prototype (zero, two, empty UTF16 string,
+track BPM); ordinary clients retain twelve fields. Focused session/menu tests
+pass plain, ASan/UBSan and TSan, covering setup20, unknown21 rejection and both
+row forms. These C extended rows have not yet been rendered by the native AZ
+client; the earlier native prototype evidence is not acceptance of this change.
+Logs: `local/diagnostics/sharing-artwork-v1/extended-sanitizers.{stdout,stderr}`.
+
+### Source-owned database-port lookup
+
+`public-db-port.h` implements the19-byte `RemoteDBServer` TCP query and returns
+the source's two-byte network-order metadata port. It handles eight bounded
+clients with fragmented reads, an absolute five-second deadline and the same
+mandatory peer policy as the source service. Invalid requests and unavailable
+sources close without publishing a port. The listener is caller-owned.
+
+The source worker now optionally owns this responder alongside metadata and
+file RPC. It becomes active only after staging succeeds and stops advertising
+the metadata port when the catalog is withdrawn or invalidated. The isolated
+research harness binds12523 only in its guarded fresh network namespace.
+The combined library control verifies lookup, independent browsing, exact
+PDB/MP3 transfers and port withdrawal following a temporary-fixture mutation.
+Port responder and worker tests pass plain, ASan/UBSan and TSan; the full matrix
+and native rendering remain pending. Evidence is in ignored
+`local/diagnostics/sharing-artwork-v1/port-{library,sanitizers}.{stdout,stderr}`.
+This is service-port lookup, not UDP device discovery or a native sharing
+candidate. Those advertisement and mod-lifecycle integrations remain open.
+
+### C public-provider packet encoding
+
+`public-provider-packets.h` now builds the computer-library initial/claim,
+stable identity and keepalive packets, activation responses, hello reply and
+collection-slot media response used by the earlier isolated Python prototype.
+Labels use strict UTF8 conversion to bounded UTF16BE; unsupported media slots,
+short/malformed requests and oversized labels are rejected. Track counts saturate
+at the protocol's16-bit field. This module only encodes packets; it does not bind
+or send network traffic, choose addresses, resolve identity conflicts or schedule
+activation. The prototype's fixed activation fields remain experimental.
+
+An offline control executes the unchanged prototype's `status_service` function
+with in-memory socket stand-ins and its `Activation.packet` helper. C activation,
+hello and media replies match their complete bytes; identity/keepalive fields
+match the declared fixture. This verifies translation, not independent protocol
+correctness or native acceptance. Boundary/Unicode tests pass plain, ASan/UBSan
+and TSan. Logs are in ignored
+`local/diagnostics/sharing-artwork-v1/provider-{oracle,sanitizers}.{stdout,stderr}`.
+Periodic transmission, per-peer activation and connection to the worker are
+still pending. No real network packets, AZ operations or publication occurred.
+
+### Provider scheduling and UDP worker adapter
+
+`public-provider-state.h` adds the bounded claim/identity/keepalive schedule and
+independent activation state for up to eight admitted peers per source. First
+activation emits0x16 with one delayed repeat; subsequent requests emit0x47.
+Peer state expires after60 seconds without activation traffic. Backpressure
+does not advance a claim or allocate a new activation slot. Withdrawal clears
+pending repeats and suppresses further announcements and replies.
+
+`public-provider-udp.h` handles caller-bound nonblocking50000/50002 sockets,
+validates peer policy/source port/datagram size, and suppresses the provider on
+observing its number with a different MAC in supported identity/keepalive frames.
+The source worker now optionally enables this adapter after catalog/service
+readiness. A detected conflict stops the worker with EADDRINUSE. Endpoint creation,
+address allocation and normal mod lifecycle integration remain caller work.
+
+Focused scheduler/UDP/worker tests pass plain, ASan/UBSan and TSan. UDP tests use
+two loopback addresses in a Docker network-none namespace. They verify initial
+announcement, activation, withdrawal silence and identity-conflict suppression;
+the full advertised worker and native client have not yet been tested together.
+No automatic identity conflict recovery or complete native eject sequence is
+claimed. See the [provider runtime record](acceptance/usb-hub-support-sharing-provider-runtime.json).
+No physical AZ operation or publication occurred.
+
+### First advertised C worker against the native emulator client
+
+The standalone research server now has a guarded `--isolated-provider` mode:
+one declared192.0.2.2 endpoint on `azpub1` inside an isolated namespace, bounded
+lifetime, copied private PDB/audio/analysis fixtures and no physical NIC. This
+mode enables discovery/status, port lookup, metadata and file RPC in one worker.
+It is not linked into the mod. Existing loopback modes remain separate.
+
+The first native attempt exposed an incorrect source-port admission assumption:
+the AZ sends status queries from ephemeral UDP ports. The adapter now admits
+these queries through the existing address/interface policy and replies to the
+well-known50002 receiver. Focused plain/ASan/UBSan/TSan regression covers an
+ephemeral query sender. A second attempt records the native hello request and C
+hello reply, but no visible public source or browse acceptance. Review of the
+previous successful prototype shows native portmapper requests to50111; the
+advertised C harness now binds50111 instead of the independent client's111.
+That change still requires the next native run. Failed/incomplete attempts are
+retained under ignored `local/diagnostics/sharing-c-provider-v{1,2,3}`; they are
+not passing source-sharing acceptance. The first failed bridge launch used an
+occupied local NAT test port; its namespace was removed before retrying on a
+different port. No physical AZ operation or publication occurred.
+
+### First native discovery and track-browser acceptance of the C worker
+
+The isolated native-client control now displays the C worker's public source
+with2546 songs, then renders its track browser with titles, BPM and keys.
+The source label is `Hub USB1 Research`; local/native USB rows remain visible.
+This is one host C provider with copied private fixtures consumed by the
+localhost native emulator, not the mod exporting a live stick.
+
+RPC header capture located the earlier registration stop: the client received
+an EXPORT list without a network group and issued no mount. The export adapter
+now supports an optional bounded IPv4/netmask group. The advertised research
+endpoint uses the previous prototype's `192.0.2.2/255.255.0.0` string; packet
+admission remains the endpoint policy. The native run then issues mount,
+READDIR and LOOKUP requests and displays the source. Default no-group replies
+are preserved. Valid group encoding, invalid address/noncontiguous-mask rejection
+and worker regression pass plain, ASan/UBSan and TSan.
+
+The playlist view is blank and remains a failure requiring request tracing.
+Track loading/playback, multi-source/native eject/concurrency and actual-CDJ
+acceptance remain open. See the [native C browse record](acceptance/usb-hub-support-sharing-c-native-browse.json).
+Screenshots and all raw packet/fixture evidence remain local and ignored.
+No physical AZ operation, mod installation or publication occurred.
+
+### Native C playlist rendering confirmed
+
+Numeric request tracing and a settled screenshot confirm native root-folder
+and nested-folder/playlist rendering from the C worker. The earlier blank
+playlist screenshot was taken before the UI completed its asynchronous update;
+it did not establish a protocol failure. No menu behavior change was needed.
+Native requests include1105 `[16843777,0,0,1]` and1105
+`[16909313,0,1,1]`, followed by eight-argument render requests for20 and21 rows.
+The reviewed local screenshot shows both the root and nested folder panes.
+This supersedes the playlist-failure statement in the preceding browse record.
+See the [native playlist record](acceptance/usb-hub-support-sharing-c-native-playlists.json).
+
+The research server has a compile-time numeric request observation hook and a
+bounded5..600-second local test lifetime option. The source component's default
+hook is a no-op; no private request strings are logged. The last scope's harness
+wait was mistakenly left at170 seconds while its bridge duration was220. The
+scope exited with that timeout and executed owned network cleanup. This does
+not negate the reviewed rendering evidence, but is not a fully passing scope.
+The next local scope script corrects the wait. Audio selection/loading was not
+verified before the bounded server ended. No physical AZ operation or release.
+
+### Native load and playback-position progression from the C worker
+
+The native emulator now loads the selected real MP3 through the isolated host
+C worker. Track1884's0x2102 load-info request and NFS READ requests are recorded;
+the deck displays its title, full-track overview and detailed multicolor waveform.
+After PLAY, reviewed screenshots show remaining time advancing from265324ms to
+241369ms with waveform scrolling. This establishes native load and playback
+position progression for one copied fixture, not captured audio or full-track
+playback acceptance. The unchanged source MP3 is10881597 bytes with the previously
+verified hash. No metadata or file-transport behavior changes were needed.
+See the [native load record](acceptance/usb-hub-support-sharing-c-native-load.json).
+
+This supersedes the pending-load statements for the single host-C/native-emulator
+control. Live AZ-side export, multiple sources, all formats/analysis indicators,
+concurrent local/remote use, disconnect/eject and physical model-specific trials
+remain open. In particular, the screenshots do not accept beatgrid/bar indicators
+or every analysis response. Source data, captures and screenshots remain ignored.
+No physical AZ operation, mod installation or publication occurred.
+
+### Live mounted-source combined AArch64 export
+
+The standalone source worker now runs on the guarded localhost emulator and
+exports the mounted hub0 directly over its isolated macvlan endpoint. Unchanged
+Beat Link DeviceFinder discovers provider41 at192.0.2.3, then the unchanged
+Client/menu codec verifies2546 tracks,185 ordered nodes and8359 memberships.
+Two concurrently launched unchanged Crate Digger clients download the live
+4419584-byte PDB and10881597-byte MP3 with their exact previously recorded hashes.
+No source files are copied or written by this test. This closes the combined
+live-source gap for one standalone AArch64 worker, not mod integration.
+See the [live combined record](acceptance/usb-hub-support-sharing-live-combined.json).
+
+The worker acknowledges withdrawal and exits0 after Q; this is a root/service
+shutdown control, not native USB unmount or an external loaded-deck eject test.
+This guest research endpoint serves port111 for FileFetcher. A50111 alias for
+native clients remains necessary before production; the earlier host/native
+control used50111 separately. Simultaneous clients were launched, but packet
+interleaving and local/native deck concurrency were not measured here.
+
+The first scope hit an occupied local NAT test port and cleaned up; the second
+passed discovery/downloads but exhausted its65-second exhaustive-menu deadline.
+The successful scope allows120 seconds for that complete traversal. No normal
+interaction-latency acceptance is inferred. The reusable script now accepts an
+explicit free NAT port and verifies remote child identity/termination during
+failure cleanup instead of assuming SSH-client exit stopped the server. The
+earlier timed-out server had exited before the follow-up process audit.
+No physical AZ operation, firmware compatibility change or publication occurred.
+
+### Dual RPC ports and externally observed source withdrawal
+
+The per-source service now supports a second caller-owned UDP RPC socket. Both
+aliases dispatch through the same staged catalog, generation and peer policy;
+each worker round processes at most one datagram per alias. The advertised
+research endpoints bind111 and50111 together, removing the previous guest/host
+port split. Focused source-service/worker tests pass plain, ASan/UBSan and TSan,
+including alias replies and borrowed descriptor ownership.
+
+The live AArch64 control passes again with independent discovery, full menus
+and exact PDB/MP3 downloads. An external lifecycle client retains a valid root
+handle and completes the unchanged Beat Link Client handshake before withdrawal.
+After E, both RPC aliases return STALE/empty exports, the TCP session and DB
+port lookup close, and unchanged Beat Link DeviceFinder expires the source.
+RPC lifecycle probes are repository-authored; discovery expiry and the metadata
+handshake use independent library implementations. See the
+[live withdrawal record](acceptance/usb-hub-support-sharing-live-withdrawal.json).
+
+This retires the service, not the USB filesystem: no native unmount, external
+loaded-deck playback/cache acceptance, neighboring-source or reconnect test is
+included. No physical AZ operation or publication occurred.
+
+### Source-incarnation controller
+
+`public-source-manager.h` now coordinates up to eight source workers on one
+controller thread. Presence/path/mount-identity changes create a new requested
+incarnation. An identical observation leaves the current source alone. The old
+worker must join before endpoint callbacks release or recreate its sockets;
+each new incarnation receives a fresh generation and16 random nonce bytes.
+Endpoint failures remain retired until a new observed incarnation, preventing
+an unbounded retry loop. The drain predicate includes endpoint release and is
+an additional lifecycle gate, not unmount proof.
+
+Two real workers with empty synthetic libraries pass plain, ASan/UBSan and TSan
+tests for replacement, nonce/generation freshness, neighbor isolation, retirement
+and failed-open retry. The pinned AArch64 test also passes in the guarded local
+emulator; its owned executable is removed. See the
+[source manager record](acceptance/usb-hub-support-sharing-source-manager.json).
+The endpoint allocator and native presence/safe-eject callbacks are not yet
+wired to this controller. No multi-stick browsing, loaded external-deck eject,
+physical AZ operation or publication is claimed.
+
+### Managed network endpoints and two-phase retirement
+
+`public-network-endpoint.h` creates six fresh sockets for one declared source
+inside an already allocated namespace. A short helper thread performs setns,
+interface IPv4/mask/broadcast/MAC checks and binding; the controller's network
+namespace is unchanged. It binds RPC111/50111, discovery/status and the metadata
+listeners to the owned interface. Partial failures close all new descriptors.
+Interface creation/address allocation remain separate caller responsibilities.
+
+The source manager now offers explicit withdrawal while retaining STALE RPC
+responses; a later absent request stops/joins and releases endpoints. This
+separates public retirement from the final drain needed before unmount. The
+advertised research harness now uses manager callbacks with the socket factory
+and fresh random incarnation nonces. Independent discovery/full-menu/exact-file
+and external withdrawal controls pass again against the mounted emulator source.
+
+A guarded AArch64 endpoint test runs from the emulator's principal namespace
+against the distinct owned test namespace. It verifies namespace preservation,
+six live descriptors, duplicate-bind partial cleanup, invalid MAC/broadcast
+rejection and fresh reopening. Source-manager two-phase retirement tests pass
+plain, ASan/UBSan and TSan. Loopback original/high-resolution artwork also passes.
+See the [managed endpoint record](acceptance/usb-hub-support-sharing-managed-endpoint.json).
+An initial endpoint run correctly rejected the test fixture's missing broadcast
+configuration; the fixture now supplies it explicitly.
+
+Native mod discovery/eject callbacks, automatic network allocation, multiple
+live sources, aggregate memory/descriptor/scheduling budgets and native loaded
+external-deck eject still require integration and validation. No real AZ changes,
+release or compatibility expansion occurred.
+
+### Measured protocol feasibility
+
+- Independent Beat Link native controls retrieve7 root entries,20 playlist
+  entries and2547 tracks. Crate Digger transfers the native4.4MB PDB and10.9MB
+  audio with exact USB hashes. Native STOP with an NFS handle unmounts and later
+  reads return STALE70; external loaded-track status was not simulated.
+- The host prototype serves a snapshot of hub0's own PDB:2546 tracks,185 folder/
+  playlist entries. The native client navigates folders, playlists and metadata.
+- Eight public providers41..48 use distinct socket-bound virtual Ethernet/IP
+  identities, independent menu maps and file handle namespaces. All eight have
+  native track-browsing evidence. Filtered libraries101..808 distinguish routing;
+  they are copies of one PDB, not eight live USBs. See
+  [eight-provider browsing](acceptance/usb-hub-support-sharing-eight-provider-browse.json).
+- An independent unchanged Crate Digger client retrieves complete PDB/audio
+  from the fixture NFS service with exact source hashes. A native emulator deck
+  loads one selected MP3 and advances playback position. No audible/decoded or
+  full-track playback is claimed. Actual waveform/beatgrid/cue data is absent.
+
+The successful multi-provider controls use real read-only file backends for
+all providers and staggered startup. Earlier shared-MAC, empty-export and
+simultaneous-start controls were unstable; they do not prove source-count
+limits or isolate a single cause. Native computer icons above4 are blank,
+while source labels and menus remain usable. Captures stay local/ignored.
+Six portable suites/22 groups pass, including session isolation, bounded
+shutdown, malformed stream rejection and eight-source handle replacement.
+
+### Integration gates still open
+
+The prepared target kernel config is4.4.194 with MODULES enabled and MACVLAN/
+IPVLAN disabled. This is local prepared-config evidence, not a fresh physical
+AZ inspection. Emulator6.6 virtual-interface support must not be extrapolated:
+a compatible module or alternative transport still needs research/build.
+
+A research-only standalone module now builds from the unmodified vendor GPL
+MACVLAN driver with the pinned target config/compiler. Its stripped size is
+29,592 bytes and vermagic matches4.4.194 SMP/preempt/aarch64. All79 undefined
+symbols have static GPL export declarations, but Module.symvers is absent
+and runtime resolution/load are untested. A pinned builder and source-export
+auditor are provided as source only; the binary remains ignored. See the
+[module build](acceptance/usb-hub-support-sharing-macvlan-module-build.json) and
+[reproduction notes](HUB-LINK-TRANSPORT-BUILD.md). No installation occurred.
+
+A new C root/file-lifetime component is implemented but not wired into the
+public service or mod runtime. It confines relative paths, refuses symlinks
+and non-regular files, caps reads/leases, rejects new operations on withdrawal
+and drains accepted operations without waiting for a remote deck. Generation
+replacement and neighbor isolation pass. All32 portable cases pass in each
+plain/ASan+UBSan/TSan matrix; hook registration passes separately. The component
+also executes successfully as pinned-toolchain AArch64 code in the emulator
+with synthetic temporary files. See the [file-root record](acceptance/usb-hub-support-sharing-public-file-root.json).
+File authorization and NFS handle/instance identity remain adapter obligations.
+No public runtime integration or actual USB unmount is inferred.
+
+The C NFSv2 READ body now uses source-owned file references and validates
+device/inode to reject a replaced file. It encodes status/attributes/data with
+zero padding and releases operation leases before network send. Its AArch64
+test reads4096 PDB and8192 audio bytes from live emulator hub0; a host test
+decoder verifies body fields and exact payload hashes. This is an SSH-emitted
+body control, not C RPC/network interoperability or full-file playback. All33
+cases pass in each portable matrix. See the [C READ record](acceptance/usb-hub-support-sharing-public-nfs-read.json).
+RPC, owned opaque handles, authorized lookup/directory service and mod lifecycle
+remain unconnected; published0.3.2 and the physical AZ are unchanged.
+
+The bounded C ONC RPCv2 decoder now dispatches NFSv2 READ calls to that reader.
+Truncated packets, invalid credentials and unsupported write procedures are rejected
+before handle resolution. AUTH_SYS is syntax-checked only; its self-reported user
+identity is not trusted as an OS credential. All35 cases pass in each portable
+matrix, hook registration passes separately, and the pinned AArch64 RPC READ test
+passes in the localhost emulator. See the [RPC READ record](acceptance/usb-hub-support-sharing-public-rpc-read.json).
+This remains an unconnected component: no public socket, instance-scoped handle
+catalog, directory/mount service or live metadata adapter is inferred.
+
+A bounded source-owned C file catalog now issues32-byte opaque handles with a
+caller-supplied fresh instance nonce and generation. Duplicate paths keep their
+identity, references hold no descriptors, and withdrawal rejects all new resolves.
+Targeted GCC/Clang plain, ASan+UBSan and TSan tests pass, including concurrent
+withdrawal and neighbor isolation. See the [catalog record](acceptance/usb-hub-support-sharing-public-file-catalog.json).
+The original256-entry layout is superseded by a compact dynamically allocated
+catalog: up to65536 references and8MiB path bytes per source, with explicit ENOSPC
+and no eviction. Hashed path registration and direct bounds-checked handle lookup
+preserve identities through growth. A synthetic1025-path/read control, catalog/UDP
+plain/ASan+UBSan/TSan tests and the independent Python transfer regression pass.
+See the [growth record](acceptance/usb-hub-support-sharing-public-file-catalog-growth.json).
+Full-library/global eight-source memory, exact capacity boundaries and allocation
+failure controls remain open. This is not a full37-case or updated AArch64 run.
+
+The C READ dispatcher and source catalog now run through a nonblocking UDP
+adapter with mandatory peer policy and truncated-datagram rejection. Targeted
+plain/ASan+UBSan/TSan controls and pinned AArch64 emulator loopback tests pass.
+An independent handwritten Python wire client reconstructs30001 synthetic bytes,
+checks EOF/write refusal and observes STALE after withdrawal. See the
+[UDP record](acceptance/usb-hub-support-sharing-public-rpc-udp.json).
+The research server is localhost-only with bounded lifetime and fresh nonce;
+it is not a public provider or runtime daemon. Native mount/lookup/directory
+procedures, real-library capacity validation and live metadata remain open. No unchanged
+Crate Digger, actual-CDJ or full37-case acceptance is inferred from these tests.
+
+C directory references now support the attached root and authorized nested folders
+through confined operation leases. NFS GETATTR/LOOKUP bodies validate inode identity
+and reveal only pre-registered nodes, hiding an existing unregistered file. Symlink,
+type and traversal controls pass, as do replacement/withdrawal STALE checks. The
+complete38-case plain/ASan+UBSan/TSan matrices and separate hook registration pass;
+the pinned AArch64 synthetic tree test passes in the emulator. See the
+[tree record](acceptance/usb-hub-support-sharing-public-nfs-tree.json).
+GETATTR/LOOKUP now dispatch over RPC with strict native-style UTF16LE name
+decoding, including surrogate pairs. The independent Python client traverses
+accented/emoji folders from a root handle, queries the file and reconstructs30001
+bytes over UDP. The updated38/38/38 matrix, separate hook registration and pinned
+AArch64 tree/RPC test pass. See the [tree RPC record](acceptance/usb-hub-support-sharing-public-rpc-tree.json).
+READDIR, mount/portmapper, unchanged Crate Digger and trusted live catalog
+population remain open; this localhost harness is not the mod runtime.
+
+The C service now adds paginated UTF16LE READDIR, synthetic read-only STATFS,
+portmapper GETPORT and mountv1 MNT/EXPORT/UMNT. Cookies retain catalog identity;
+reply bounds, invalid cookies, cannot-fit entries and strict UTF8 encoding are
+checked. Peer UMNT never withdraws the USB; source withdrawal removes the export.
+The independent Python client completes portmapper/mount/list/lookup/full READ
+and checks withdrawal. All39 cases pass in each portable matrix; separate hook
+registration and pinned AArch64 mount/export tests pass. See the
+[mount/directory record](acceptance/usb-hub-support-sharing-public-rpc-mount.json).
+This is still a localhost synthetic harness; unchanged Crate Digger, public
+addressing and trusted live library/metadata integration remain unvalidated.
+
+Unmodified Crate Digger0.2.1 now mounts and fetches files from the C service in
+a fresh isolated loopback namespace. Complete synthetic Unicode30001-byte,
+4419584-byte PDB and10881597-byte MP3 fixtures match exact source hashes. The
+PDB/audio are ignored local copies of the emulator hub0 files, not a live export.
+The guarded harness refuses port111 operation in the initial namespace; no physical
+or emulator interface participates. See the [C Crate Digger record](acceptance/usb-hub-support-sharing-c-crate-digger.json).
+This closes a C file-protocol interoperability gate, not metadata, playback or
+runtime integration. Production component39/39/39 evidence remains the prior
+mount record; only research harness/client code changed for this control.
+
+A new bounded classic-PDB research reader follows only the active track page
+chain and present-row flags. Its2546 IDs, titles, audio paths and analysis paths
+match the existing Crate Digger snapshot exactly; four synthetic groups cover
+structural/string bounds, cycles, duplicate identities and deleted rows. See the
+[PDB path reader record](acceptance/usb-hub-support-sharing-pdb-path-reader.json).
+This Python oracle is not an on-device parser or path authorization mechanism.
+A bounded C implementation and live metadata/catalog population remain needed;
+no native private requester or source server was changed.
+
+The classic track reader is now implemented in bounded incremental C. One step
+processes one page; the source adapter uses at-most8192-byte read leases and checks
+generation/device/inode/size/mtime/ctime. Synthetic cancellation, withdrawal and
+replacement tests pass without retained descriptors. All40 cases pass in each
+portable matrix, with separate hook registration. A pinned AArch64 execution reads
+the live emulator hub0 PDB: all2546 IDs/titles/audio/analysis paths match host C and
+the Crate Digger oracle. See the [C reader record](acceptance/usb-hub-support-sharing-c-pdb-reader.json).
+Staging/atomic publication, path authorization and complete metadata/playlists
+remain unconnected. This standalone scan is not a new mod/provider or playback test.
+
+A C staged file builder now populates independent catalogs from PDB audio/
+analysis paths and known DAT companions, adding only required parents/PDB. Unsafe
+paths fail the build; missing optional media is counted. The ready catalog is
+withheld until full traversal and final source fingerprint validation; cancellation
+withdraws only that public root. All41 cases pass per portable matrix, plus hook
+registration. AArch64 staging on live emulator hub0 yields2546 tracks/10329 nodes,
+408643 path bytes and16384 entry capacity;2529 audio paths are absent (17 present).
+See the [file staging record](acceptance/usb-hub-support-sharing-library-file-staging.json).
+The PDB-derived catalog now serves through a C RPC wrapper that blocks partial
+BUILDING state and revalidates the PDB before valid file operations. Mutation
+retires the catalog; malformed/write calls do not trigger PDB reads. Two unchanged
+Crate Digger clients download complete PDB/audio fixtures with exact hashes and
+measured overlapping READ intervals. Hidden unrelated-file and post-ready STALE
+controls pass. Updated41/41/41, hook registration and AArch64 synthetic controls
+pass. See the [library export record](acceptance/usb-hub-support-sharing-library-file-export.json).
+This network test uses copied host fixtures (one audio), not live emulator USBs.
+Complete metadata, public transport/lifecycle and concurrent local/eject remain open.
+
+The standalone research harness now has a guarded emulator network mode for
+192.0.2.3:111 on an owned azpub0 interface in a separate namespace. Exact6.6.138-dirty
+and namespace/interface checks precede root/socket access; host invocation refuses.
+Host/pinned AArch64 builds and the existing independent loopback flow pass. Native
+emulator111/2049 are occupied, motivating namespace separation. No guest network
+resource/listener has been created yet. See the [network preparation record](acceptance/usb-hub-support-sharing-live-network-preparation.json).
+Next execute an owned, bounded macvlan/namespace live-root control with cleanup.
+
+The standalone AArch64 C file service now serves the live emulator hub0 over an
+owned guest MACVLAN/namespace192.0.2.3 and isolated host TAP192.0.2.2. Two unchanged
+Crate Digger clients transfer complete PDB/audio with exact hashes and overlapping
+READ intervals. Staging sees2546 tracks/10329 nodes; only17 audio files exist in
+the image. Explicit service withdrawal drains leases; no USB unmount/deck-loaded
+state was tested. Native NFS endpoints remain separate. See the
+[live C service record](acceptance/usb-hub-support-sharing-live-c-file-service.json).
+The initial interface attempt lacked a loaded6.6 MACVLAN driver. A local6.6 test
+module loads and enables the control; all resources/module/QMP objects are removed
+and independently checked. This does not validate the target4.4 module. The
+explicit-artifact reconstruction script is test-live-library-network.py.
+Public metadata/discovery, runtime lifecycle and concurrent native playback/eject
+remain open; no standalone test is a new mod candidate or actual-CDJ acceptance.
+
+C track extraction now includes comment and scalar/reference metadata: file size,
+artwork/key/label/genre/album/artist IDs, bitrate/BPM/duration/rating. All16 fields
+for2546 tracks match the Crate Digger v3 snapshot, and pinned AArch64 reads of the
+live emulator PDB match host output. Updated41/41/41 and hook checks pass, with
+nonzero synthetic scalar/comment assertions. See the
+[track metadata record](acceptance/usb-hub-support-sharing-pdb-track-metadata.json).
+This is extraction only: compact metadata indexing, referenced names/playlists,
+TCP response encoding and native file-type/analysis coverage remain open.
+
+A compact per-source C track index now retains all16 fields using scalar rows
+and string offsets. Lookup is withheld until seal, keyed by exact generation and
+track ID; duplicate IDs refuse, retirement blocks new queries without filesystem
+leases, and neighbor indexes remain independent. All42 cases pass per portable
+matrix plus hook registration. Host and live AArch64 index output matches all2546
+Crate Digger rows. Measured row/text buffers reserve770048 bytes for this fixture
+(excluding allocator/bookkeeping), with60-byte rows. See the
+[compact index record](acceptance/usb-hub-support-sharing-compact-track-index.json).
+It is not wired to staged source lifecycle or metadata TCP yet. Referenced names/
+playlists and global eight-source memory/performance limits remain unvalidated.
+
+The compact track index is now populated in the same staged PDB traversal as
+the file catalog. Both become publicly accessible only after index seal and final
+source validation. Cancel/failure or detected post-ready PDB change retires both;
+missing audio keeps its metadata entry without a nonexistent file handle. Updated
+42/42/42 and hook checks pass. AArch64 synthetic lifecycle and live2546-track/
+10329-node staging pass, and independent concurrent PDB/audio transfers retain
+exact hashes. See the [joint lifecycle record](acceptance/usb-hub-support-sharing-library-metadata-lifecycle.json).
+Referenced names/playlists and metadata TCP remain unimplemented; this lifecycle
+integration is standalone component work, not the mod runtime or a release.
+
+Next implement a live per-stick backend and compatible public transport with
+address ownership/conflict handling. Preserve local/private5/6 sessions, native
+USB slots, independent SQL/tagged caches and0.3.2 Link continuity. Validate
+concurrent local/remote browsing/audio, reconnect/replacement, and native-style
+withdrawal/unmount with external loaded-track status. Then build/audit the exact
+candidate and prepare separately authorized physical/model-specific trials.
+No actual-CDJ, eight-source hardware or long-session acceptance is established.
+
 ## Latest publication: USB Hub Support0.3.2
 
 [Release0.3.2](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.3.2)

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scope": "One live mounted hub library served after native DHCP and ARP address acquisition",
+  "evidence_directory": "local/diagnostics/sharing-leased-library-v1",
+  "runner_exit": 0,
+  "probe_sha256": "424194801bce9ce402107398cc103d8e3c02336ad7897440171709bb84d56576",
+  "helper_sha256": "70338c237f8e83eff9624fe08695cdd18dc699a695c6995bfac098735efc8ade",
+  "source_sha256": {
+    "src/azhub/research/scripts/public-address-library-probe.h": "559b17025d07c67932262f8cc6fa9822803a4eaed7bafd48572aea7c98b6968e",
+    "src/azhub/research/scripts/public-address-flow-probe.h": "f9c8bad505bde8f6857423e2be6e1cde5f05508ccfad1f173615100fb080e372",
+    "src/azhub/linkfake/test-public-dhcp-acquire.c": "116bf3300e00e4ad6d02f2b875d644543f4260073ab22e564cc900d898771062",
+    "src/azhub/research/scripts/test-live-dhcp-emulator.py": "e6a8087a564c97b96bd75959fccadc2495264861dbb048296c12c4553cdf4a6f",
+    "src/azhub/research/scripts/dhcp-fixture-server.py": "833e12be6821fb8e7db6d54cf5c43c87516859079c5fb95a7da9d9afd13c1540"
+  },
+  "independent_client_class_sha256": {
+    "LiveProviderControl.class": "f0a694af30ff97a84b0d88e3a26e791cfdaad35e727536ec3f38ad6dc40c31a7",
+    "DbLibraryControl.class": "95cd43c4e81e393dc5743e4f6a3f6dff5a236e6f0113ad8027915606c73fb83d",
+    "LocalFileServiceClient.class": "10832c7044e63d40ab77a699c7522fb6fa2b99bc5560c5db1179eb902123dd48"
+  },
+  "source": {
+    "tracks": 2546,
+    "ordered_playlist_nodes": 185,
+    "lease_seconds": 600,
+    "address": "192.0.2.3",
+    "provider": 41,
+    "ordered_memberships": 8359,
+    "root": "emulator /media/usb/sdc1"
+  },
+  "files": {
+    "MP3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+    "PDB_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+  },
+  "validated": [
+    "Native supervised DHCP grant followed by real ACD probes/announcements and actual configuration",
+    "Public endpoint address/mask/broadcast derived from validated grant",
+    "Unchanged Beat Link discovery and complete ordered library comparison",
+    "Concurrent unchanged Crate Digger complete database/audio hash verification",
+    "Source worker withdraw/stop/join and endpoint closure before drain acknowledgement/address removal",
+    "Final IPv4 absent and native processes/DNS/routes/parent namespace preserved"
+  ],
+  "regression": {
+    "acquisition_unit_tsan": "passed",
+    "live_library_sanitizer_instrumented": false,
+    "acquisition_unit_asan_ubsan": "passed",
+    "acquisition_unit_plain": "passed"
+  },
+  "cleanup": {
+    "temporary_guest_files_removed": true,
+    "transport_errors": [],
+    "owned_guest_host_namespaces_removed": true,
+    "test_module_removed": true
+  },
+  "limitations": [
+    "Standalone research process, not networking integrated into EP147/mod",
+    "One initially leased source; no continuous refresh/expiry or multiple leased exports",
+    "No local concurrent playback, externally loaded deck eject or actual-CDJ acceptance",
+    "Production broker, automatic namespace/interface lifecycle and identity allocation pending",
+    "No target4.4 runtime or physical AZ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

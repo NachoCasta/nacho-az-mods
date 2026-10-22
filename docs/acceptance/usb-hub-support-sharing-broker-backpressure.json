@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "Source retirement after saturated helper IPC and parent disconnect",
+  "source_sha256": {
+    "public-broker-session.h": "364940e4e7fcf59deda2e36162c7fedcbefbbddd078a672ba81d086ac9ed871b",
+    "test-public-broker-dispatch.c": "f69cd2faa6fb5afd783834c9273ae1307ce87f09afc7f8a020766f7175dbd163"
+  },
+  "tests": {
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/session-backpressure-targeted.log"
+  ],
+  "validated": [
+    "Helper send queue saturated while parent does not read",
+    "Pending HELLO retained under EAGAIN",
+    "Parent disconnect while source active triggers source draining",
+    "Actual worker joins/endpoints close despite blocked response queue",
+    "Pending network release prevents terminal session completion",
+    "Terminal return only after network release acknowledgement"
+  ],
+  "limitations": [
+    "Network release is a fixture",
+    "No SDK-launched executable mode acceptance yet",
+    "Full71/71/71 record predates this saturation case"
+  ],
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,68 @@
+{
+  "scope": "Standalone source-backed C analysis-tag responses over local TCP; no mod runtime integration",
+  "request": "0x2c04",
+  "response": "0x4f02",
+  "independent_client": "Unchanged Beat Link 8.0.0 AnalysisTagFinder.getTagViaDbServer invoked by a local control adapter",
+  "matched_sections": [
+    "DAT/PQTZ",
+    "EXT/PWV4",
+    "EXT/PWV5",
+    "EXT/PCO2",
+    "2EX/PWV6",
+    "2EX/PWV7"
+  ],
+  "section_bytes": 212694,
+  "missing_tag_returns_null": true,
+  "fixture_reference": "usb-hub-support-sharing-analysis-reader.json",
+  "controls": [
+    "Source catalog path authorization",
+    "File size mutation during incremental read rejected",
+    "Replacement inode at registered path rejected",
+    "Withdrawal terminates pending analysis",
+    "No filesystem lease retained between reads",
+    "Unknown extension rejected",
+    "Session producer yields between bounded read steps"
+  ],
+  "host_matrix": {
+    "asan_ubsan": 49,
+    "tsan": 49,
+    "plain": 49
+  },
+  "hook_registration": "passed separately under WSL",
+  "target": {
+    "revision_executed": true,
+    "binary_sha256": "d2393d10cedbaffea7719ad6cf3b96718cd263c04def1d2f10581b8ef3ec782d",
+    "pinned_aarch64_compile": "passed"
+  },
+  "limitations": [
+    "Selected PCO2 fixture has no cue entries",
+    "Legacy analysis responses and artwork remain pending",
+    "No native rendering or playback acceptance for this handler",
+    "No aggregate multi-provider memory quota acceptance",
+    "No physical CDJ interoperability acceptance",
+    "No package change, deployment or publication"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-library-analysis.h": "c65b05bcba7cd43d04ba20b9293b1d09f43a7db56e26fa49d6ceb3026ea1619a",
+    "src/azhub/linkfake/public-db-menus.h": "0b6c7885b98450f3a723d863c57519a302a9670bb84ea369ad6473bd999148ee",
+    "src/azhub/linkfake/public-db-session.h": "fab5b8ce2d729d30909ea76c9c073e2fcf4284f31dc0f24451a716161e5d42b0",
+    "src/azhub/linkfake/test-public-db-menus.c": "99ef6a06d450dc8b325731ebf17b31046aa6829f7ece3027991121342045b91c",
+    "src/azhub/research/scripts/public-db-library-server.c": "c23b0f44e380e6c32ec7a313d4803f37587ca1eb72014aef245f62b0faedfc4b",
+    "src/azhub/research/scripts/test-public-db-analysis.py": "64ecded443471a87a8cfea52177ee77d0d7b3824b3c4dd432cb3759f28a9c472",
+    "src/azhub/research/link-peer/src/main/java/DbAnalysisControl.java": "828618c9ba46d0023ad172b78ea67007b1f7421ee7dce81413885528684ea013"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-analysis-v1",
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "d2393d10cedbaffea7719ad6cf3b96718cd263c04def1d2f10581b8ef3ec782d",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "concurrent_control": {
+    "per_request_overlap_instrumented": false,
+    "additional_stalled_greeting_peer": true,
+    "clients_launched": 2,
+    "completed_queries_per_client": 7,
+    "section_bytes_per_client": 212694
+  }
+}

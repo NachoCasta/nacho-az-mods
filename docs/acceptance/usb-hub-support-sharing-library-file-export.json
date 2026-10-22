@@ -1,0 +1,138 @@
+{
+  "recorded_at_utc": "2026-10-20T21:08:45.521412+00:00",
+  "scope": "C staged PDB-populated catalog served through RPC with post-ready mutation retirement",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Library RPC wrapper drops requests while BUILDING, preventing accidental partial catalog publication",
+    "Single-owner worker revalidates source PDB fingerprint before well-formed file/mount operations; changed PDB withdraws source and returns STALE/empty export",
+    "Malformed RPC and write procedures do not trigger PDB fingerprint I/O",
+    "Fresh loopback-only namespace hosts C server using PDB-derived catalog, not operator-registered individual paths",
+    "Two unmodified Crate Digger0.2.1 clients fetch complete PDB and MP3 concurrently with exact fixture hashes",
+    "Successful READ sequence intervals overlap across distinct UDP peer ports, proving interleaved servicing rather than merely overlapping Java process lifetimes",
+    "Unrelated file remains hidden; mutating only temporary PDB after readiness makes old root return STALE",
+    "Fixture has2546 track records but only one copied audio; missing_audio2545 is explicit, not all-track acceptance"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 41,
+      "asan": 41,
+      "tsan": 41
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "public-library-files",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "aarch64_synthetic": {
+      "kernel": "6.6.138-dirty",
+      "exit_code": 0,
+      "binary_sha256": "1c088d530b360afb014b3cee10c3e7a99cf45708bd8023fb0b7e929de52d8d5b"
+    },
+    "independent_results": {
+      "database": {
+        "event": "c_service_crate_digger_fetch",
+        "bytes": 4419584,
+        "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+      },
+      "audio": {
+        "event": "c_service_crate_digger_fetch",
+        "bytes": 10881597,
+        "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+      }
+    },
+    "peer_overlap": {
+      "peers": [
+        {
+          "port": 49330,
+          "first": 1,
+          "last": 4386,
+          "requests": 2158,
+          "bytes": 4419584
+        },
+        {
+          "port": 59591,
+          "first": 2,
+          "last": 7472,
+          "requests": 5314,
+          "bytes": 10881597
+        }
+      ],
+      "read_intervals_overlap": true
+    }
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "29b12f58500543e1711293b05f9aa673e24eb214ae469704d04d7485249492ed",
+    "public-file-root.h": "d40b536a4bb83f22f4fba53cf29cedc35a7326a264a1c8af70221080686c8ffb",
+    "public-library-export.h": "fd9e638a77c561e2d82efd24ab4c8a11669d756e2f996889cdd7ff95d436977f",
+    "public-library-files.h": "e2ddcabed577cd9ac48a8712dde012a8a58d348349561e998164c77e2f98edea",
+    "public-nfs-read.h": "c1eef155fb7b72d02c76926df56fffcb721ca9e7030428dc06b2bbcc0540555f",
+    "public-nfs-tree.h": "f4caeb91ed6a67939efbfeaa29095937bc376986cfac2919c82234acb753629d",
+    "public-pdb-reader.h": "57a12296d7c369d53b29f4a54ee4e1ef01c85dd8fa90ca7350a0e8973c186857",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "public-read-server.c": "0e4a7ec1c196794ab9aa07300a407594cb80b3d9f32e128c5de2833004672df7",
+    "public-rpc-export.h": "bdf9a210826b56855ac7429b6bda30f7a7a517cc0485fd6662b3a66d6527f1a8",
+    "public-rpc-read.h": "3f7da40293f66c8d69c4117b718f6c0bacbe2af838f8b0b3f4fc2936c0df4e6e",
+    "public-rpc-tree.h": "50847d027d646751af249e3e497e35ce5dde4ededc1e2db504b2f494ac1ac34a",
+    "public-rpc-udp.h": "dc25c31b355c8d5d91e5f3af7c1098f43baa9177dbf485ddd0deb81a98a6d9a4",
+    "public-rpc.h": "26494b4b7c9ccb0d5dfc179244705fddf3cd6f11093fe2c061c13747eb605430",
+    "public-wire-name.h": "d15cdb5bbd322759acef0d76a6338d2e4299ce476a3f0f558008e1880469d009",
+    "test-host.sh": "4f648cc097adabcec4eb06675ce03ebb0e4c2b24c9d4b9ce8ede56905287692c",
+    "test-public-library-crate-digger.py": "8060f1d029cc03f6b9319414b44ea92ae20913c9323f61c79a88b1cba65209bf",
+    "test-public-library-files.c": "067dd3b6e67c10a8e7b06c65ad5107f71bddf2516ea4c44b88a47f79f73378e2"
+  },
+  "server_binary_sha256": "07e9ffd0691716f58468d624511fcd31b29c9a8662525d65810eb2c0dbc0ed6e",
+  "log_sha256": {
+    "aarch64.stdout": "b27d1e431a826b9f674e0a526a6b108fcc5d4a1f8e5e1674507e749905c671ef",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "independent.stdout": "758fcd46f255bb3a36e6037838cc993586e61d86ab666b56ea21b2593f2c19b0",
+    "portable-matrix.stdout": "4fc234203c204f962f3ed5902bf55d625b84f693df3bc349209d446a3996915e"
+  },
+  "remaining_gates": [
+    "On-emulator network file service over live hub root rather than host fixture copies",
+    "Full independent metadata/playlists/analysis backend and source discovery integration",
+    "Public address/conflict ownership and target-compatible transport lifecycle",
+    "Concurrent native local playback plus external load and external-loaded safe eject",
+    "Final candidate build/audit and separately authorized physical model tests"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "scope": "Native-mode integration component controls and explicit AArch64 builds only. This binary postdates integrated eject acceptance. No live mode-cycle, native four/two deck topology, local playback, external loaded deck, target4.4 or actual-CDJ acceptance. Release default unchanged.",
+  "host_suite": {
+    "plain": 94,
+    "asan": 94,
+    "tsan": 94
+  },
+  "host_suite_exit": 0,
+  "host_suite_log": "local/integration/sdk-broker-probe-v1/runtime-mode-host-suite.log",
+  "hook_registration_included": false,
+  "sha256": {
+    "src/azhub/linkfake/public-sharing-runtime.h": "e1a367ba07e2af579a425276067415b90e72848eec116649b14f7e695ba3fbfd",
+    "src/azhub/linkfake/link-mode-recovery.h": "4d382ec8c57878b2cc76d0a9ebce996502b3e571849873e2fca25f42b02a644c",
+    "src/azhub/linkfake/test-public-sharing-runtime.c": "234adbc3e1f9675c00d8bb67d86765f3139639ae21d0c44a4b7fdd3843fa14d1",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-sharing-runtime-emulator.so": "513344f235a1af963ee8bf6fbba7c8550d879a3bf0db4bf17379eb1190817a38",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-sharing-runtime-candidate.so": "875851889775a4dc647d1b59c145ef0bfb51cef853615301a748e8bc865c9e79"
+  },
+  "controls": [
+    "Unknown/Off cannot launch",
+    "Confirmed native completion publishes mode independently of internal cache",
+    "Off latches graceful STOP",
+    "EAGAIN cannot lose STOP if On arrives before transport becomes writable",
+    "STOP is sent once",
+    "On during retirement cannot allocate before global completion and SDK-observed child exit",
+    "Existing exact retirement eject and broken IPC refusal preserved"
+  ],
+  "observed_emulator_baseline": {
+    "utility_PRO_DJ_LINK_Mode": "On",
+    "persisted_ProDjLinkMode_payload_hex": "01050101000000",
+    "preceding_native_completion_mode": 1,
+    "changed_setting_in_this_observation": false
+  },
+  "live_mode_cycle_tested": false,
+  "physical_AZ_touched": false
+}

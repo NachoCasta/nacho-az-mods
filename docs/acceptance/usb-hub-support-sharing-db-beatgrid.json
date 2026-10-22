@@ -1,0 +1,54 @@
+{
+  "scope": "Standalone C legacy beatgrid handler, not integrated into the mod runtime",
+  "request": "0x2204",
+  "response": "0x4602",
+  "input": "Source-catalog-authorized DAT/PQTZ",
+  "conversion": "Preserve per-beat bar position, tempo and millisecond time; eight-byte big-endian source entries to sixteen-byte little-endian network entries",
+  "references": [
+    "https://raw.githubusercontent.com/Deep-Symmetry/beat-link/v8.0.0/src/main/java/org/deepsymmetry/beatlink/data/BeatGrid.java",
+    "https://raw.githubusercontent.com/Deep-Symmetry/crate-digger/main/src/main/kaitai/rekordbox_anlz.ksy",
+    "https://djl-analysis.deepsymmetry.org/djl-analysis/track_metadata.html"
+  ],
+  "independent_control": {
+    "client": "Unchanged Beat Link BeatGrid decoder and message codec",
+    "per_request_overlap_instrumented": false,
+    "oracle": "Crate Digger parsed PQTZ section previously matched to independent fixture bytes",
+    "beats": 306,
+    "clients_launched_concurrently": 2,
+    "stalled_greeting_peer": true
+  },
+  "targeted_backend_tests": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed",
+    "Variable-tempo/time preservation",
+    "Invalid section header and mismatched beat count rejected"
+  ],
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "d879212d369ef4f8f0b0e4ceb0c4283faaf942e75e367ac1d74eb03675257e92",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "unknown_wire_fields": "Public-provider convention only; native-client interpretation not yet validated",
+  "remaining": [
+    "Native response acceptance",
+    "Legacy waveform and populated cue responses",
+    "Joint service/runtime integration",
+    "Physical model-specific interoperability"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-beatgrid.h": "fb9c8ad7efe98f29f839a4276fc84ad50c92929d48983a04f82113f08d170235",
+    "src/azhub/linkfake/public-db-menus.h": "5bff6001495378f8e1e85db74736e1479c5b144b8d57582cd784b747e2467826",
+    "src/azhub/linkfake/test-public-db-menus.c": "2dfa1bcfe9ab02d5f35d5a151071c4d8f92b3d3126c54525ec313c3b69faaff0",
+    "src/azhub/research/link-peer/src/main/java/DbAnalysisControl.java": "08285b79060b97db2751a6f292ca703a6a588b8bb73a1f2ac1e3f49d0abd74cf"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-analysis-v1",
+  "evidence_files": [
+    "beatgrid.stdout",
+    "beatgrid.stderr",
+    "beatgrid-sanitizers.stdout",
+    "beatgrid-sanitizers.stderr",
+    "emulator.json"
+  ]
+}

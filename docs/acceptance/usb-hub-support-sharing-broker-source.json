@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "scope": "SOURCE IPC codec and pinned directory identity component; not production dispatch",
+  "source_sha256": {
+    "public-broker-source.h": "19fc0990a36f283fd86724cc6497320952afd07da537b2a3200e86ea26ec617c",
+    "test-public-broker-source.c": "290b7b531067e9c6db708981a66243319c280537646822d3727804d17481b768"
+  },
+  "tests": {
+    "plain": 66,
+    "asan": 66,
+    "tsan": 66
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/source-host-suite.log"
+  ],
+  "validated": [
+    "Exact bounded versioned payload, reserved fields and truncation rejection",
+    "Replacement directory rejected with ESTALE",
+    "Leaf and intermediate symlinks rejected",
+    "Verified directory descriptor remains pinned after rename and is CLOEXEC"
+  ],
+  "pending": [
+    "Generation authorization and live mount inventory checks",
+    "Use verified descriptor throughout production worker staging",
+    "SDK broker dispatch, namespace allocation and source/eject lifecycle integration"
+  ],
+  "physical_AZ_touched": false
+}

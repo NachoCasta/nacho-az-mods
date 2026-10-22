@@ -1,0 +1,38 @@
+{
+  "scope": "Original PDB artwork paths registered in source-owned catalog before publication",
+  "table": 13,
+  "fixture": "Real private PDB and explicitly synthetic non-image content at one independently decoded artwork path",
+  "scan": {
+    "tracks": 2546,
+    "missing_audio": 2546,
+    "missing_analysis": 7638,
+    "entries": 7,
+    "path_bytes": 123,
+    "entry_capacity": 32,
+    "entity_rows": 16167,
+    "missing_names": 17,
+    "missing_artwork": 2503
+  },
+  "tests": [
+    "Present artwork registered",
+    "Missing artwork counted while metadata retained",
+    "Unrelated file stays hidden",
+    "Targeted plain passed",
+    "Targeted ASan/UBSan passed",
+    "Targeted TSan passed"
+  ],
+  "emulator_fixture_observation": "No JPEG files found under source PIONEER directory; selected actual artwork unavailable",
+  "limitations": [
+    "No image decoding or network delivery acceptance",
+    "High-resolution companion naming pending",
+    "No new AArch64 or full matrix execution"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-library-files.h": "4d2c43eeb5d7b2b8be3ba7b5df105792f428dc41c361563f0f091ead8ecbb4ad",
+    "src/azhub/linkfake/test-public-library-files.c": "60622496a72da868c71900676cf6d793479297b0bdaa00c2c51423c9b1213331"
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "Target-helper MACVLAN asset-loading integration: exact kernel and asset policy tested with mocked syscalls; explicit pinned AArch64 builds and non-target emulator exit control. No target module load, runtime ABI, physical trial, package or publication acceptance.",
+  "host_suite": {
+    "plain": 95,
+    "asan": 95,
+    "tsan": 95
+  },
+  "host_suite_exit": 0,
+  "host_suite_log": "local/integration/sdk-broker-probe-v1/macvlan-asset-host-suite.log",
+  "hook_registration_included": false,
+  "sha256": {
+    "src/azhub/linkfake/public-macvlan-asset.h": "62538220bb3c76f3d93288ca9bbba7d670fdb03752544b21eceae2ae7e432664",
+    "src/azhub/linkfake/test-public-macvlan-asset.c": "614a40ac6466443a7d1f9b872c46f3277dd9c8d4f050573ec2bfbeadc1361a71",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-network-helper-candidate": "d716408b4adb21a3fcccdd301d1e86858d3dbde79d8bc0ffc1f3b81c51871f95",
+    "local/integration/sdk-broker-probe-v1/usb-hub-support-network-helper-candidate-emulator": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+    "local/integration/sharing-macvlan-build-v2/usb_hub_macvlan.ko": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667"
+  },
+  "non_target_control": {
+    "helper_sha256": "d716408b4adb21a3fcccdd301d1e86858d3dbde79d8bc0ffc1f3b81c51871f95",
+    "emulator_kernel": "6.6.138-dirty",
+    "target_helper_exit": 126,
+    "kernel_module_inventory_unchanged": true,
+    "no_named_namespaces": true,
+    "scope": "Non-target exit control only; no target module load or ABI acceptance"
+  },
+  "loader_order": "Target kernel guard; authenticate parent IPC; prepare sibling MACVLAN asset; initialize allocator/namespaces",
+  "kernel_release": "4.4.194",
+  "module_asset": "assets/usb_hub_macvlan.ko",
+  "target_module_loaded": false,
+  "physical_AZ_touched": false,
+  "limits": [
+    "Static declarations of79 symbol exports do not prove running-kernel resolution/ABI",
+    "Target module is the preceding pinned GPL research build; not rebuilt or loaded by these tests",
+    "Only the target helper compiles this loader; emulator helper SHA remains unchanged",
+    "Driver registration is in memory; mod disable/reload does not promise module unload",
+    "No internal-controller file installation or modprobe fallback"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "scope": "Physical Ethernet goal audit completed with scoped software-client and emulator evidence",
+  "requirements": [
+    {
+      "requirement": "Diagnose helper startup failure",
+      "status": "pass",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-ethernet-alias-diagnosis.json",
+        "docs/acceptance/usb-hub-support-sharing-parent-rx-probe.json"
+      ],
+      "assessment": "Labelled eth0 IPv4 omission corrected; helper survives. Bounded RX membership A/B proves tested unicast delivery dependency, not precise driver-register defect."
+    },
+    {
+      "requirement": "Validate locally/emulator before physical update",
+      "status": "pass",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-044-host-checks.json",
+        "docs/acceptance/usb-hub-support-sharing-parent-rx-session.json"
+      ],
+      "assessment": "97 tests per plain/ASan+UBSan/TSan; labelled address and RX ownership emulator controls precede physical installation."
+    },
+    {
+      "requirement": "Authorized exact candidate installation/approval/reload with empty decks",
+      "status": "pass",
+      "evidence": [
+        "local/publishing/usb-hub-support-sharing-parent-rx-session-044/physical-install.json",
+        "docs/acceptance/usb-hub-support-sharing-044-physical-ethernet.json"
+      ],
+      "assessment": "17 package members verified. Exact runtime approval remains valid because runtime hash is unchanged; USB/staged hashes and fresh matching-PID EEEE checked before apply."
+    },
+    {
+      "requirement": "Independent discovery on real Ethernet",
+      "status": "pass",
+      "evidence": [
+        "local/integration/ethernet-parent-rx-session-v1/physical-discovery-ipv4.log"
+      ],
+      "assessment": "Unmodified DeviceFinder detects public41 and native AZ; Windows Java IPv4Stack option required. No firewall edits."
+    },
+    {
+      "requirement": "Complete real library browsing",
+      "status": "pass",
+      "evidence": [
+        "local/diagnostics/physical-ethernet-library-v1/menus.log"
+      ],
+      "assessment": "Unmodified Beat Link menu classes compare3172 tracks,166 nodes and11022 memberships to independent PDB/entity oracle."
+    },
+    {
+      "requirement": "Exact track-file transfer on real Ethernet",
+      "status": "pass",
+      "evidence": [
+        "local/diagnostics/physical-ethernet-library-v1/audio-fetch.log",
+        "local/diagnostics/physical-ethernet-library-v1/pdb-fetch.log"
+      ],
+      "assessment": "Whole MP3 track167 and whole PDB match source read-only hashes; no audio-rendering claim."
+    },
+    {
+      "requirement": "Preserve local hub use, native sources and independent ownership",
+      "status": "pass_with_scoped_evidence",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-044-physical-ethernet.json",
+        "docs/acceptance/usb-hub-support-sharing-044-loaded-eject-emulator.json",
+        "docs/acceptance/usb-hub-support-sharing-topology-final.json"
+      ],
+      "assessment": "Current physical native USB1 NFS control and hub/private mounts; user local acceptance applies to byte-identical runtime first installed as0.4.0. Per-source component/eight-source emulator evidence remains emulator-only."
+    },
+    {
+      "requirement": "Preserve Link mode/deck continuity",
+      "status": "pass_with_scoped_evidence",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-044-mode-cycle-partial.json",
+        "docs/acceptance/usb-hub-support-sharing-044-mode-validation-repeat.json",
+        "docs/acceptance/usb-hub-support-sharing-044-mode-final.json",
+        "docs/acceptance/usb-hub-support-sharing-044-physical-mode-cycle.json"
+      ],
+      "assessment": "User operated native GUI Off/On. Same physical EP147 PID and native/private hub mounts; owned RX membership released/reacquired; old public endpoint withdrawn, fresh source independently rediscovered, complete menus and exact PDB/MP3 reads pass. Loaded-deck topology continuity remains emulator-scoped. Earlier failed emulator cycle remains unexplained."
+    },
+    {
+      "requirement": "Preserve safe eject",
+      "status": "pass_emulator",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-044-loaded-eject-emulator.json"
+      ],
+      "assessment": "Current helper/non-diagnostic runtime: source41/COLLECTION4/track1884, continued synthetic loaded status, no manual unload, original neighbor preserved, stale old handles after reconnect and flags restored. Actual-CDJ behavior separate."
+    },
+    {
+      "requirement": "Hashes, reproducible package/source and stable rollback",
+      "status": "pass",
+      "evidence": [
+        "docs/acceptance/usb-hub-support-sharing-044-package.json",
+        "docs/HUB-LINK-PHYSICAL-ETHERNET.md",
+        "local/integration/ethernet-044-source-verification/result.json"
+      ],
+      "assessment": "Frozen current-source snapshot verified member-by-member. Both target outputs rebuild identically to installed bytes; package unchanged. Stable0.3.2 USB rollback verified read-only."
+    },
+    {
+      "requirement": "Compatibility and device boundaries",
+      "status": "pass",
+      "evidence": [
+        "src/azhub/linkfake/azmod.json",
+        "src/azhub/linkfake/public-parent-rx.h",
+        "src/azhub/linkfake/public-broker-allocate-emulator.h"
+      ],
+      "assessment": "Exact firmware/kernel/core boundary retained; manual writes limited to mods USB and authorized approval exception, staging/reload via framework. Parent RX reference is volatile and descriptor-owned."
+    },
+    {
+      "requirement": "No publication and no actual-CDJ/Wi-Fi overclaim",
+      "status": "pass",
+      "evidence": [
+        "docs/HUB-LINK-PHYSICAL-ETHERNET.md"
+      ],
+      "assessment": "One physical source/library only, independent software clients, no actual CDJ/rendered audio/Wi-Fi/eight-source hardware acceptance. No release/tag/catalog mutation or publication."
+    }
+  ],
+  "goal_complete": true,
+  "actual_CDJ_acceptance": false,
+  "published": false,
+  "additional_diagnostic_prepared": {
+    "source": "src/azhub/research/scripts/pdb-inode-cache-emulator.c",
+    "scope": "Exact6.6.138-dirty emulator only, generated temporary64-byte VFAT fixture and inode-cache comparison; no physical AZ deployment",
+    "executed": true,
+    "reason": "Investigate possible inode-identity churn without weakening catalog/PDB validation. Do not execute during active integration run.",
+    "result": "No inode churn or PDB read failure reproduced, with or without pinning. No behavior fix made from this hypothesis.",
+    "receipt": "local/integration/ethernet-parent-rx-session-v1/pdb-inode-cache-result.json"
+  },
+  "pending_user_input": null
+}

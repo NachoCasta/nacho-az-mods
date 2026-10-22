@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scope": "Positive ALLOCATE dispatcher with real owned-network callbacks, live hub library and independent clients; standalone research process",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-broker-allocator.h": "5d2eb676945b13f5878c61015f9bf239be56397f5d02367d76e34e13fadd3bda",
+    "src\\azhub\\research\\scripts\\broker-allocated-library-probe.h": "a5080090f8a34d520fe1756597efce4f58f5bb4a08c325fe01fa03f62d939954",
+    "src\\azhub\\linkfake\\test-public-network-acquire.c": "4d124b93432174184be1b47df4cfb99a82398c9022c8ea5b91a4978545a7b3d4",
+    "src\\azhub\\research\\scripts\\test-live-dhcp-emulator.py": "f3db713ef8f6ae82cbdc9e56f619ee7d58cc60fec1dccf3a95fd5a37948d2035"
+  },
+  "binary_sha256": "5241f09889871111aa0d9fb4856502b34422957a834cba643c218660ee830191",
+  "tests": {
+    "plain": 77,
+    "asan": 77,
+    "tsan": 77
+  },
+  "evidence": [
+    "local/diagnostics/sharing-broker-allocated-library-v1/acquisition.stdout",
+    "local/diagnostics/sharing-broker-allocated-library-v1/discovery-and-menus.stdout",
+    "local/diagnostics/sharing-broker-allocated-library-v1/database.stdout",
+    "local/diagnostics/sharing-broker-allocated-library-v1/audio.stdout",
+    "local/diagnostics/sharing-broker-allocated-library-v1/result.json",
+    "local/diagnostics/sharing-broker-allocated-library-v1/guest-commands.json",
+    "local/diagnostics/sharing-broker-allocated-library-v1/transport.stdout",
+    "local/integration/sdk-broker-probe-v1/broker-allocated-library-host-suite.log"
+  ],
+  "library": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "mp3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+  },
+  "validated": [
+    "Encoded ALLOCATE command pins real root capability and starts actual allocation callbacks",
+    "Callback-owned anonymous namespace/MACVLAN/native DHCP/ARP/configure precedes publication",
+    "Actual source worker and independent provider discovery/full ordered menus",
+    "Concurrent exact PDB/MP3 downloads",
+    "STOP uses real callbacks to join/close services, quiesce ARP/configure and remove address before namespace release",
+    "Native state preserved and complete module/TAP/temp cleanup with no transport errors"
+  ],
+  "limitations": [
+    "Command is passed directly to dispatcher in a standalone research process, not SDK helper IPC in this trial",
+    "One source, fixed jitter/MAC/player/DHCP fixture and hardcoded root authorization",
+    "No native eject/unmount or external loaded/playing deck",
+    "No local playback concurrency, renewal/conflict/no-DHCP fallback acceptance",
+    "Live branch not sanitizer-instrumented; portable controls are",
+    "No physical CDJ or target4.4 runtime acceptance"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

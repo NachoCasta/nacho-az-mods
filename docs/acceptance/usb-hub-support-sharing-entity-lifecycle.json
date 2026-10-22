@@ -1,0 +1,59 @@
+{
+  "scope": "Joint C file/track/entity staging and retirement, host and standalone AArch64 emulator; no mod runtime or physical-CDJ acceptance",
+  "host_matrix": {
+    "plain": 45,
+    "asan": 45,
+    "tsan": 45
+  },
+  "hook_registration": "Passed separately on WSL",
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "e8d7b38ce05233a0c80a27e275dc367168bf8f9f9f4da12af3910ed9919db4e6",
+    "live": {
+      "tracks": 2546,
+      "missing_audio": 2529,
+      "missing_analysis": 0,
+      "entries": 10329,
+      "path_bytes": 408643,
+      "entry_capacity": 16384,
+      "entity_rows": 16167,
+      "missing_names": 17
+    },
+    "synthetic_pass": true
+  },
+  "independent_file_regression": {
+    "client": "Unchanged Crate Digger0.2.1 FileFetcher",
+    "parallel_downloads": [
+      "complete PDB",
+      "complete audio"
+    ],
+    "hashes_match": true,
+    "hidden_unregistered_file": true,
+    "post_ready_PDB_mutation": "STALE70 and combined library retirement",
+    "network": "Fresh loopback-only WSL namespace, automatically removed on process exit"
+  },
+  "behavior": [
+    "One table page per worker step; no combined publication until all tables and structural validation complete",
+    "Optional absent name/artwork IDs retain tracks and are counted; real fixture contains17",
+    "Reject missing playlist tracks, missing/nonfolder parents, folder membership and hierarchy cycles",
+    "Cancel/changed PDB retires files, track metadata and entity index together",
+    "Accepted immutable metadata readers may finish; no filesystem lease is retained; join readers before destroy"
+  ],
+  "source_sha256": {
+    "public-pdb-reader.h": "d7ecd688a07b5371821c5aaa1132cea23de608184bf3aa6f7190223b4717198c",
+    "public-entity-index.h": "157fa18096587477717ecfe016cc1fd973fff92ea1f5a6cbc48358fd1a01f6d9",
+    "public-library-metadata.h": "333ec83ffbfbed979deb0b1275ffc9dad48c1ac6cec54a335ef5f53d4c57def9",
+    "public-library-files.h": "8ed63132ac09ee18170044a77799c450295dfce3162f39330e0fb8c1d6c349c9",
+    "test-public-library-files.c": "666b44f0f9495e604d343841501342fc06a035989fd29549b0e0daa07375c4cd",
+    "test-public-library-metadata.c": "e0427fae7abf1ed2d6aaf2d0881440fc4b8c12aa3dbdb0157a73423ad0d048a5",
+    "test-host.sh": "4590d9df14473b2aefd61ba01404906a686f5eadd86a9970b1b575e570e0e48a"
+  },
+  "evidence_directory": "local/diagnostics/sharing-entity-lifecycle-v1",
+  "remaining": [
+    "Metadata TCP wire/session implementation and native browsing over C live index",
+    "Artwork-path export integration where required",
+    "Runtime discovery/transport and mod integration",
+    "Eight-source aggregate memory, concurrency and input-latency acceptance",
+    "Physical AZ/CDJ trials separately authorized"
+  ]
+}

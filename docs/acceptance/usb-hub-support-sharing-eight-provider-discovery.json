@@ -1,0 +1,271 @@
+{
+  "recorded_at_utc": "2026-10-20T19:32:33.050326+00:00",
+  "scope": "Eight public-provider discovery and session initialization in isolated native AZ client",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "providers": [
+    {
+      "source": 1,
+      "number": 41,
+      "address": "192.0.2.2",
+      "snapshot_tracks": 101,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 2,
+      "number": 42,
+      "address": "192.0.2.3",
+      "snapshot_tracks": 202,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 3,
+      "number": 43,
+      "address": "192.0.2.4",
+      "snapshot_tracks": 303,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 4,
+      "number": 44,
+      "address": "192.0.2.5",
+      "snapshot_tracks": 404,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 5,
+      "number": 45,
+      "address": "192.0.2.6",
+      "snapshot_tracks": 505,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 6,
+      "number": 46,
+      "address": "192.0.2.7",
+      "snapshot_tracks": 606,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 7,
+      "number": 47,
+      "address": "192.0.2.8",
+      "snapshot_tracks": 707,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    },
+    {
+      "source": 8,
+      "number": 48,
+      "address": "192.0.2.9",
+      "snapshot_tracks": 808,
+      "native_media_query": true,
+      "native_db_setup": true,
+      "native_0x3007": true
+    }
+  ],
+  "observations": [
+    "Eight explicit socket-bound virtual Ethernet identities with separate read-only file backends start5 seconds apart",
+    "Reviewed Source captures show providers1..7 and scrolled view5..8, including Hub USB8 Research",
+    "Every provider receives native media query, TCP setup and0x3007; backend replies successfully",
+    "Native computer icons are blank for sources5..8; labels remain visible",
+    "Initial clockwise encoder scroll refuses at range end; counterclockwise input later reveals5..8; no successful initial scroll is inferred"
+  ],
+  "checks": {
+    "suites": 6,
+    "groups": 22,
+    "new_file_coverage": "Eight independent handle namespaces reject neighbor handles; replacement cannot reuse withdrawn source handles; surviving neighbors remain readable"
+  },
+  "cleanup": {
+    "transport": 0,
+    "peer": 0,
+    "providers": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "observer": 0
+  },
+  "namespace_removed": true,
+  "limits": [
+    "Eight discoverable initialized sources, not eight completed native browse/load sessions",
+    "Filtered snapshots of one PDB, not eight live USB sticks",
+    "No actual-CDJ, simultaneous eight-source audio, withdrawal/reconnect or physical kernel MACVLAN acceptance",
+    "Host-side prototype only; live mod implementation, address ownership/conflicts and native compatibility regression remain required",
+    "Blank native computer icons above4 are an observed client presentation limitation"
+  ],
+  "next_gate": "Browse real tracks from providers5..8, then live backend/transport integration and lifecycle validation",
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/results.json",
+      "sha256": "55209483abca3846bd821c29f8da38d37216e261a138972022afd19766ac8341"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/registered-provider17.png",
+      "sha256": "3c59e21e59ed9580114c5d9dac9d7857e933aa904c87c36ae642732c7c769947"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/after-counter-room.png",
+      "sha256": "7334564c0a65a944addf4fe9afb26befffc6cbb56356278bb6a1f1df92b1fbe4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/eighth-source.png",
+      "sha256": "3aca7677e9bb26fea3ade120b6873ba8305c07dcea84bcb84b6660393cf9736f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/wire.stdout",
+      "sha256": "55f5ce8b3b61a63a08fa87ae7a7855260a1153b30b8932f020d2a37b4e493f7e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/namespace-addresses.json",
+      "sha256": "cb0cba98219a1e99de8efc0ca6a92395ac4d7d216217481424ba66a5b0f9a49d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/portable-checks.json",
+      "sha256": "1f27aa0e2120e60e37ceb4005afd1c36c46ff7cfedb24a0ab5891876c89d5309"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer1.stdout",
+      "sha256": "a669abc6e329d72e07c1971c3a14ac36a79436dc81d78859c269bdeac66ace3a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer2.stdout",
+      "sha256": "9d4782911b1a8492c87977fa3e315a83e09790e12a30871fdf43a65ea5e16538"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer3.stdout",
+      "sha256": "fa04b4ba8ebd34f7f098b099199186effaa556ff862ce21e8b94dad042db02be"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer4.stdout",
+      "sha256": "2993a15ee02e6e50a01fc457e6d647017dea3bfb101df126183de34af0c4c65c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer5.stdout",
+      "sha256": "016d3fc4bc5656a2eab4aeed8c990980a4a3d10cd5d6d010a9011494aede4bb4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer6.stdout",
+      "sha256": "3b3e24905282a7482229a697bbe05abfe2e37db4b55fbb3cb8a2c48f1c6a8658"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer7.stdout",
+      "sha256": "617f9021b15a665371ca27eabea8db0c083e1f8af8e76b15185ab0fdc908f881"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer8.stdout",
+      "sha256": "8902a3e6a9b090ba3b02db100b6d942cfb94fb5da91ced21c77b04bff7b8aca5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer5.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer6.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer7.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/peer8.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link-public-provider-probe.py",
+      "sha256": "ce83700b132e829af015d0df53379c47f678545d2bd9b77ad7a26e1bec444eee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-activation.py.stderr",
+      "sha256": "4cd49ad0c73a8aa832fab522c6a78b7c7920d0020aa82b81b4234fa118a1a5f0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-db-wire.py.stderr",
+      "sha256": "46a59d823d772c3809446eba836399e2612ba33924b6c71abe8e15b736b8f4b7"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-fixture-files.py.stderr",
+      "sha256": "19fb1277e806965433f37d1e1695fa8140a3bd96ce5bfc7ce965ba51f3e4e98d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-fixture-network.py.stderr",
+      "sha256": "ada2231f6651cb08d76fe665f46b18458ad6072708e751f0bc09a6b4ca4f9c89"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-sessions.py.stderr",
+      "sha256": "9cb12bdd7918f7505a1a64a56d7645597ad9f248d7778318e3d088aaec541d9f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v40/test-link-snapshot-backend.py.stderr",
+      "sha256": "ea27b6d70a8c9558f0aac22313a5df2e4deea31e3188906d80bae6ced4ccbb6e"
+    }
+  ]
+}

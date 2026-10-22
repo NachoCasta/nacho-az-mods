@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": "Actual SDK helper IPC loss while native DHCP client is pending; no source publication",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-sdk-probe.h": "c1a64c5f71bd5a7cd488b7a235d834c64915ba0873351a4d041ca5f7c4727425",
+    "src\\azhub\\research\\scripts\\test-sdk-broker-probe.py": "7f3250655a047c5f126a0762a1cbe4d9ce2db4ba805de81fdc3e13eab8f21b81",
+    "src\\azhub\\research\\scripts\\dhcp-fixture-server.py": "855373541ff21801fddb545a0ab79f6d3ae68f8d83a2647b02915455bc1abf7b"
+  },
+  "binary_sha256": {
+    "mod": "5ccefee9d14254518581c412529840be9fd8f2b8883beeebe67d772468a5ca88",
+    "helper": "204381ae54b140a5c090a6339bb3fa5b5bc794fe31f21b5fe42eae2768da6156"
+  },
+  "runtime": {
+    "run": "9139d03c55984ac78d03c0684ed924b4",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 503758,
+    "peer_pid": 503758,
+    "namespace_inode": 0,
+    "root_inode": 1
+  },
+  "pending_client": {
+    "native_DHCP_client_pid": 503780,
+    "discover_observed": true,
+    "no_OFFER": true
+  },
+  "tests": {
+    "live_pending_DHCP_peer_loss": "passed"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/result.json",
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/pending-client.json",
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/probe-result.json",
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/mod.log",
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/dhcp-server.stdout",
+    "local/diagnostics/sharing-sdk-pending-dhcp-cancel-v1/guest-commands.json",
+    "local/diagnostics/sdk-allocation-preflight/pending-dhcp-empty-decks.png"
+  ],
+  "validated": [
+    "Server observes native DISCOVER but deliberately sends no OFFER",
+    "Exact native udhcpc PID identified through owned reporting-hook command line and alive before IPC drop",
+    "Parent closes authenticated channel during allocation, not after readiness",
+    "No ACTIVE status or library-ready marker",
+    "Pending native client gone before success; allocator code requires owned reap/EOF cleanup",
+    "Managed and peer helper PIDs gone before success",
+    "Exact original files/approval/marker and absent helper/hook restored",
+    "Owned network/module/bind/TAP/fixture/temp state cleaned; normal EP147 active"
+  ],
+  "limitations": [
+    "No allocated address or public library in this cancellation control",
+    "Not a native USB eject/unmount test",
+    "No loaded external deck, concurrent neighbor or DHCP renewal case",
+    "One declared emulator fixture, kernel6.6 only",
+    "Live branch not sanitizer-instrumented; previous full77/77/77 precedes added probe/fixture flags"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

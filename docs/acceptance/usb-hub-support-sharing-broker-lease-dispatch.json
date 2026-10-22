@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Lease expiry coupled to actual source-worker draining and ordered removal; synthetic network fixtures",
+  "source_sha256": {
+    "public-broker-lease.h": "94ce1272070ca5fca399584b3bac851b468c422c7ae0d71467aa02acb51e31de",
+    "test-public-broker-dispatch.c": "ac9b7010afe11497e34ee54106d291f6e49b64ef4e6e02909e18e380223c7472"
+  },
+  "binary_sha256": "e80271f83a1dff11c3a00e1616a168de63b414e083ffef2a1909ed9e15de832c",
+  "tests": {
+    "plain": 69,
+    "asan": 69,
+    "tsan": 69
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/lease-dispatch-suite.log",
+    "local/integration/sdk-broker-probe-v1/lease-dispatch-emulator.json"
+  ],
+  "validated": [
+    "Two actual staging workers under synthetic leases",
+    "Expired source withdraws and worker joins before removal callback",
+    "Pending address removal keeps generation draining",
+    "Longer-lived neighbor remains active and lease-ready",
+    "Removal acknowledgement allows drained transition",
+    "STOP retires remaining valid lease and source",
+    "AArch64 control runs with unchanged native EP147 PID and temporary executable removed"
+  ],
+  "limitations": [
+    "Synthetic DHCP/ARP proof and clock",
+    "Loopback endpoint and fake address removal callbacks",
+    "No actual DHCP refresh or namespace/interface mutation in this control",
+    "SDK managed command loop and real allocator integration remain pending"
+  ],
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Bounded public helper log families; portable component and build evidence only",
+  "policy": "Before new helper launch, retain the newest existing session family by mtime (deterministic name tie-break); SDK creates the next family and caps/rotates each log once. At most two owned normal session families after launch, without accumulating random filenames indefinitely.",
+  "preserved": [
+    "Unknown or malformed names",
+    "Symlinks, hardlinks and directories",
+    "Per-session random names and separate receipts"
+  ],
+  "filesystem_boundary": "Pinned SDK-owned data directory opened O_DIRECTORY/O_NOFOLLOW; no recursion; fstatat without following links; unlinkat only strict regular single-link owned log names. Cleanup errors defer public helper launch.",
+  "targeted_controls": "Forty session cycles, paired rotations, strict names, links/directories/unrelated files, directory symlink refusal and injected cleanup EIO; all three sanitizer modes pass",
+  "full_portable_tests_per_mode": {
+    "plain": 96,
+    "asan": 96,
+    "tsan": 96
+  },
+  "full_suite_exit": 0,
+  "suite_log": "local/integration/sdk-broker-probe-v1/helper-log-retention-host-suite.log",
+  "hook_registration": "Pass under WSL host compiler; initial native-Windows invocation lacked cc and was rerun in the supported compiler environment",
+  "AArch64_builds": {
+    "usb-hub-support-sharing-runtime-emulator.so": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+    "usb-hub-support-sharing-runtime-candidate.so": "c1047d4e93e6affed965c307be16aa141607859b5891c758b6147fefd98aa80e"
+  },
+  "physical_AZ_touched": false,
+  "live_retention_mode_cycle_tested": true,
+  "release_published": false,
+  "live_record": "usb-hub-support-sharing-log-retention-mode-cycle.json"
+}

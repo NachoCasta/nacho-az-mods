@@ -1,0 +1,313 @@
+{
+  "recorded_at_utc": "2026-10-20T19:28:49.093520+00:00",
+  "scope": "Four simultaneous public providers with independently rendered native libraries",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "conditions": [
+    "Normal emulator application restart with empty decks",
+    "Exact isolated macvlan/TAP namespace; each socket bound to its matching real virtual Ethernet MAC",
+    "Provider startup staggered5 seconds",
+    "Every provider uses an independent read-only FixtureFiles instance, including valid PDB/audio virtual tree"
+  ],
+  "observations": [
+    "v37 concurrent startup still shows incomplete/mismatched source rows despite corrected Ethernet MACs",
+    "v38 staggered startup with three empty file stubs shows consistent providers1..3 but missing4",
+    "v39 staggered startup with real file backend for every provider shows all four native Source rows",
+    "Reviewed Browse headers/computer icons and counts match provider1=101,2=202,3=303,4=404 tracks; no result is inferred from filenames alone",
+    "Each provider receives native setup/menu/render requests on its own endpoint"
+  ],
+  "cleanup": {
+    "37": {
+      "transport": 0,
+      "peer": 0,
+      "providers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "observer": 0
+    },
+    "38": {
+      "transport": 0,
+      "peer": 0,
+      "providers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "observer": 0
+    },
+    "39": {
+      "transport": 0,
+      "peer": 0,
+      "providers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "observer": 0
+    }
+  },
+  "namespace_removed_each_scope": true,
+  "limits": [
+    "Changes across controls do not isolate a single root cause for earlier unstable discovery",
+    "Differently filtered copies of one PDB, not four live independently mounted hub sticks",
+    "Only one explicit audio file is offered in every backend; no multi-source audio/deck acceptance",
+    "Eight-provider capacity, live integration, withdrawal/reconnect, allocation conflicts and actual-CDJ compatibility remain pending",
+    "No physical controller actions or publication"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/results.json",
+      "sha256": "677c0a5e08bb97bddaf3f024768fb58c80bf3d784c3112908a5aa3ca679b0c77"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/registered-provider17.png",
+      "sha256": "82f1bfe7a3f925361d4a36753201b0cb526d950f2393bb9615af7ba303372fcf"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer1.stdout",
+      "sha256": "07b7310909ec2f0580f53088574d8b5e3a3e46d544ce8370cd0ab4e93409960f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer2.stdout",
+      "sha256": "0419e76b3f3b24f0362ef8322a98e948d3ad2382c504f85317bccd9d887e16d9"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer3.stdout",
+      "sha256": "3e2d45fbcd3f3b6db414fa76f5b6f76fdeef9b8affe6ae3aa3a4dd257fa8edb9"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer4.stdout",
+      "sha256": "da7dada0b85fb45b14231fa4e08b2d8c607b7eaf2b101bf566ba86654f97a298"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link-public-provider-probe.py",
+      "sha256": "8ad3abd6f6eb50f23176b1c4a74c3007f3f6c21fe79d7f842becf1c9db72f338"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v37/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/results.json",
+      "sha256": "18822bb98ff6eb8a990a6b69d21bdaef1df747fa2b5f369f3cd0a30281336bb6"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/registered-provider17.png",
+      "sha256": "72415c4d1126eed23f0a0124671c7df308d3700ad8f27f904ebe12252415b655"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer1.stdout",
+      "sha256": "50975f1b50134d20eff9368d85538f787a2baf551de681dcd24b1a6c03574d73"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer2.stdout",
+      "sha256": "055dcab2dc903ff3ba35ff9244b202158d7d3868a3b07aa5d323dcf65e3ce5bf"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer3.stdout",
+      "sha256": "ac275a85a49b4d1f6a544dc73d846f8069c064da27e0d8d39056616fc73d878b"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer4.stdout",
+      "sha256": "01c8548ca337ff01384d91c4a03cd7470d222afb866772e288a8f7317d57dc08"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link-public-provider-probe.py",
+      "sha256": "ce83700b132e829af015d0df53379c47f678545d2bd9b77ad7a26e1bec444eee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v38/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/results.json",
+      "sha256": "e636b50585835d3418e7e75ec763962fbfc1a4069a1fc283c5553a024ff3eb7c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/registered-provider17.png",
+      "sha256": "b8c416b938bd437d94197483ea8e1be6c722eab5711043631543dfd73a354314"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer1.stdout",
+      "sha256": "eba17a2ee1c411a50942a50f186bba34be163a50ab13995b3c56fe968782bbcd"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer2.stdout",
+      "sha256": "68a021545aabffcc97e8e5ed4c9420be55ea2ff3c215ca73a96a97deb791ffea"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer3.stdout",
+      "sha256": "27ac6f43e0070bb7b607cc33faf29b283b7a99057530c08ed144303ec4713e70"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer4.stdout",
+      "sha256": "556b7ba00c184bc54460d94ff537e37f0ba6cc85ae2cfc85488575f025cf36b2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/peer4.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link-packet-observer.py",
+      "sha256": "0c85f5878bb325a3fc0e9f3b35aab4d6717b7a72c455f32a73ad07a11caa7e58"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link-primary-tap-transport.py",
+      "sha256": "6fa34b955c5007125c3871401f16c91d6b73cc51083df99467b9e3ce3cdde41c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link-public-provider-probe.py",
+      "sha256": "ce83700b132e829af015d0df53379c47f678545d2bd9b77ad7a26e1bec444eee"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_activation.py",
+      "sha256": "b3d72ad36e9090c13997bc4ec2e78a0c3d4522d3f22745e6e21923be98eb9422"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_fixture_files.py",
+      "sha256": "6843814f67928e4660c7129ab3b9cc98858dec921526e55cdc9edc3fa8e816fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_fixture_network.py",
+      "sha256": "b2da7b6d32d8e1fe6a7a16630df5495bf22a652a51cba86d8aab9e46064711b0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_session_pool.py",
+      "sha256": "537034fffe91c5c3bca01f3cd54edcc22f8f75816dabf76efbdbcc32febdb431"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/source-used/link_snapshot_backend.py",
+      "sha256": "42855b0d950c3c73f6e49043198dd1c4f69bc1e8785ce5f4b78d419eb61a6375"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/provider1-tracks.png",
+      "sha256": "337036d817af152bc5438dcd305bbd6d370bb1c524dd9963197ec8c10b0ad9f9"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/provider2-tracks.png",
+      "sha256": "106dd16ad7359c85d1a28e71c9615d33a31b99d0bb2cb4c6e340b987e9dec0c2"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/provider3-tracks.png",
+      "sha256": "9229e54d16b0a10f5f37ad1b9883b4ac6ff10cc719e957aaa9424e60f76460d6"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/provider4-tracks.png",
+      "sha256": "e2c1aa887ab60400591645b55082ac30ea4a238b1a70b624bb8592b34af17486"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v39/wire.stdout",
+      "sha256": "f20b85263d7b14dff8ac7b0ffcdd736b50c32b1dcaa8aae4ddde59cf44000a90"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scope": "Managed helper initial ARP conflict retirement and namespace-correct DHCPDECLINE observed by independent fixture server",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-dhcp-decline-namespace.h": "ea18bfbba28647431de8cb21d8896aa4da48948c1faae0d6647a817a84841206",
+    "src\\azhub\\linkfake\\public-network-ready.h": "b55293a94b9a530bb051df8c6cf7bb1c68b5c3df4ab8d32a40a6f63b7472cbee",
+    "src\\azhub\\linkfake\\public-broker-allocator.h": "9751f86e28b57de2c77e1d8d03fb4d65635a3467c87bcb88890f327f4ce3522d",
+    "src\\azhub\\linkfake\\public-sdk-probe.h": "9b03cb7083bfe570657458891160e00d94ca724c1aa415dc1915e0dd93f1d6af",
+    "src\\azhub\\research\\scripts\\test-sdk-broker-probe.py": "0312e965a895cd6efca4e4b3b10786091a10e047a9c1a7af4972066e5cf3d9ab"
+  },
+  "binary_sha256": {
+    "mod": "637dde33ac78bff7ff1989ba9b152ab391f3c0fe8ef455eb5cb5de341255b125",
+    "helper": "0dbb596ea087a2cb6024d5f561579c4360164c22cd449f8312b5979eada02043"
+  },
+  "runtime": {
+    "run": "920409b67f3a48019353204a56f6fe62",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 525616,
+    "peer_pid": 525616,
+    "namespace_inode": 0,
+    "root_inode": 1
+  },
+  "tests": {
+    "live_managed_initial_conflict_and_decline": "passed",
+    "targeted_plain_asan_ubsan_tsan_namespace_ready_allocator": "passed"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-arp-conflict-v1/result.json",
+    "local/diagnostics/sharing-sdk-arp-conflict-v1/probe-result.json",
+    "local/diagnostics/sharing-sdk-arp-conflict-v1/mod.log",
+    "local/diagnostics/sharing-sdk-arp-conflict-v1/dhcp-server.stdout",
+    "local/diagnostics/sharing-sdk-arp-conflict-v1/guest-commands.json",
+    "local/integration/sdk-broker-probe-v1/decline-namespace-targeted.log",
+    "local/diagnostics/sdk-allocation-preflight/arp-conflict-empty-decks.png"
+  ],
+  "validated": [
+    "Native grant followed by independently observed first ARP probe and injected foreign ownership claim",
+    "Readiness preserves conflict proof until notification attempt",
+    "Disposable thread enters source namespace and sends DECLINE with fresh transaction ID",
+    "Server receives zero-source DECLINE with same MAC client identity, rejected IP and server option",
+    "No address announcement or IPv4 use during server observation after conflict",
+    "No ACTIVE status/library-ready marker",
+    "Notification thread joins before transport/namespace cleanup; helper managed exit completes",
+    "Exact originals restored and absent helper/hook assets removed; owned scope cleaned"
+  ],
+  "limitations": [
+    "Initial conflict only; no automatic retry/backoff/renewal through managed path yet",
+    "No active music services or loaded external deck in this trial",
+    "DECLINE send failure is recorded as diagnostic and does not imply server receipt",
+    "No physical CDJ/target4.4 acceptance",
+    "Live branch not sanitizer-instrumented; portable negative paths are",
+    "Earlier full77/77/77 predates namespace DECLINE addition"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

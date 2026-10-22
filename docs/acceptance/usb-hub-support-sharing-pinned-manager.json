@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "scope": "Verified directory descriptor ownership through manager and worker; portable controls and pinned build",
+  "source_sha256": {
+    "public-source-manager.h": "7f1998481301a4f83d6fe0d2513a69aeab5531622af53690ce7a0c75a3e1b6ba",
+    "test-public-source-manager.c": "a95037e1aae691d746bd8be52ee7235abb595265fd46049b435bc00e3c34695e"
+  },
+  "tests": {
+    "plain": 66,
+    "asan": 66,
+    "tsan": 66
+  },
+  "candidate_sha256": "1a78363f3495a328ce485c99d524248b200e3ad48b90bfb85188db451aab4bd4",
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/pinned-manager-host-suite.log",
+    "local/integration/sdk-broker-probe-v1/pinned-manager-build.log"
+  ],
+  "validated": [
+    "Manager duplicates verified root before caller closes it",
+    "Pending source survives rename and replacement before staging",
+    "Same identity with different directory object rejected",
+    "Withdraw before first poll closes retained FD and prevents publication",
+    "Identical request after withdrawal cannot clear hold",
+    "Wanted0 closes manager root reference; worker join precedes endpoint release"
+  ],
+  "limitations": [
+    "No authenticated source dispatch or external generation authorization yet",
+    "No live SDK-managed export using this descriptor API yet",
+    "Production namespace/address ownership and full remote eject remain pending"
+  ],
+  "physical_AZ_touched": false
+}

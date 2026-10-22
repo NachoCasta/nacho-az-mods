@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "scope": "Actual SDK-managed helper ALLOCATE over authenticated IPC, owned namespace/DHCP/ARP and independent real-library clients",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-broker-allocate-emulator.h": "6b744d7b919515578822d0775a3793cf94ee5851b6da4d026a5485e7173d97f8",
+    "src\\azhub\\linkfake\\public-broker-allocator.h": "5d2eb676945b13f5878c61015f9bf239be56397f5d02367d76e34e13fadd3bda",
+    "src\\azhub\\linkfake\\public-sdk-probe.h": "9da898a929ef0fba3b2baae00d3e2d4c142ca396d040760c12a28c8b5f9e42d2",
+    "src\\azhub\\linkfake\\public-network-helper.c": "60644c8db454b7c937428d9a898067faa44ccf388a88f2b5a74c85855f5952e0",
+    "src\\azhub\\research\\scripts\\test-sdk-broker-probe.py": "cabd78f590a24b9f4e970287cc1bb5ef15d1ea0c18abf6284b93aa43ad06f5cd",
+    "src\\azhub\\research\\scripts\\public-dhcp-event-hook.sh": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec"
+  },
+  "binary_sha256": {
+    "mod": "01428c27553954aebb792f71d16b80ecc9e50d3b34a3330fb921efcf99bffec1",
+    "helper": "204381ae54b140a5c090a6339bb3fa5b5bc794fe31f21b5fe42eae2768da6156"
+  },
+  "runtime": {
+    "run": "912892a6de794ba980b185d5a4e7f35f",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 481081,
+    "peer_pid": 481081,
+    "namespace_inode": 0,
+    "root_inode": 1
+  },
+  "tests": {
+    "sdk_managed_owned_allocation": "passed",
+    "independent_full_menus_and_exact_files": "passed",
+    "hook_registration": "passed"
+  },
+  "library": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "mp3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-allocated-library-v1/result.json",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/probe-result.json",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/original-files.json",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/guest-commands.json",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/mod.log",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/dhcp-server.stdout",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/discovery-and-menus.stdout",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/database.stdout",
+    "local/diagnostics/sharing-sdk-allocated-library-v1/audio.stdout",
+    "local/diagnostics/sdk-allocation-preflight/empty-decks.png"
+  ],
+  "validated": [
+    "Empty emulator decks visually inspected before installation",
+    "Exact mod/package/stage/helper/hook hashes checked and mapped mod verified",
+    "Core launches actual helper from own USB assets",
+    "Authenticated ALLOCATE carries root capability, not namespace FD",
+    "Helper owns namespace/MACVLAN creation, native DHCP client/reaping, ARP/configuration and endpoints",
+    "Runner supplies no guest namespace/interface/IP",
+    "Unchanged independent discovery, full ordered menus and concurrent exact PDB/MP3 downloads",
+    "STOP follows worker join/endpoint closure and real address/namespace retirement",
+    "Managed and peer helper PIDs absent",
+    "Exact original package/stage/approval/marker and absent helper/hook assets restored",
+    "Owned bind alias/module/TAP/fixtures/temp files removed; normal EP147 active afterward"
+  ],
+  "limitations": [
+    "One explicitly gated emulator fixture, not production activation/inventory policy",
+    "Fixed MAC/player/jitter and DHCP fixture; no production collision/no-DHCP/refresh policy acceptance",
+    "No concurrent local playback, native eject/unmount or external loaded/playing deck test",
+    "No physical CDJ or target4.4 runtime acceptance",
+    "Live branch not sanitizer-instrumented; previous full77/77/77 predates new executable/SDK mode"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

@@ -1,0 +1,138 @@
+{
+  "scope": "Emulator diagnostic hook installation and synthetic wire control; native loaded-track admission remains unproven",
+  "firmware": "ep147-9e9454e357389ece",
+  "evidence_directory": "local/diagnostics/sharing-native-status-admission-live-v2",
+  "diagnostic_mod_sha256": "f946f54c47e81376af1b776365659e450f11657c9565afec34e3893662e42dde",
+  "hook_address": "0x10cee40",
+  "hook_role": "Mapped-owner wrapper returning double-buffer store acceptance",
+  "framework_loaded_success": true,
+  "matching_wire_packets": 300,
+  "native_store_samples": 0,
+  "interpretation": "No wrapper calls were observed. This does not prove native rejection; direct receiver callers bypass this wrapper.",
+  "native_admission_proven": false,
+  "eject_attempted": false,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "prior_trial": {
+    "evidence_directory": "local/diagnostics/sharing-native-status-admission-live-v1",
+    "valid_native_admission_evidence": false,
+    "reason": "Core declined store-entry hook 0x10d3230; init returned -4 despite early install marker."
+  },
+  "next_required_evidence": "Validate supported post-start media re-announcement restores native NFS roots and joint accepted-status/held-handle reads, then reproduce native loaded-source eject and candidate hub eject.",
+  "receiver_trial": {
+    "evidence_directory": "local/diagnostics/sharing-native-status-admission-live-v3",
+    "diagnostic_mod_sha256": "46aaebf277d9ca1b88b89822c4713a216676ba295c48870cefcad7b51f1837ca",
+    "hook_address": "0x10cf350",
+    "framework_loaded_success": true,
+    "receiver_samples": 128,
+    "members": [
+      "1538",
+      "1794"
+    ],
+    "interpretation": "Receiver callback executes, but its initial global128-message cap is exhausted by internal statuses. This run cannot determine external status admission. Receiver return is mutex unlock result, not acceptance.",
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "physical_AZ_touched": false
+  },
+  "receiver_per_identity_trial": {
+    "evidence_directory": "local/diagnostics/sharing-native-status-admission-live-v4",
+    "diagnostic_mod_sha256": "815d1a0dbd4ae99e068b3aa110b1101ca414feabc418610091bc89624063a369",
+    "receiver_samples": 384,
+    "members": [
+      "1538",
+      "1794",
+      "514"
+    ],
+    "matching_wire_packets": 300,
+    "native_admission_proven": false,
+    "interpretation": "Receiver observes external member514 (compact CDJ player3 mapping) as well as private internal members. Correlate source/track fields next; receiver return is not store acceptance.",
+    "original_bytes_restored": true,
+    "physical_AZ_touched": false,
+    "external_receiver_observed": true
+  },
+  "validated_store_body_trial": {
+    "evidence_directory": "local/diagnostics/sharing-native-status-admission-live-v5",
+    "diagnostic_mod_sha256": "1f3321f7ac1509df0bd5124128c64ba2352fb6a652ba44cc12141493e5a380fc",
+    "hook_address": "0x10d324c",
+    "hook_role": "Validated store body before original STP frame; native null/key rejection remains untouched; x0..x7 forwarded including live x5/x6 temporaries",
+    "matching_wire_packets": 300,
+    "external_native_store_accepted": true,
+    "accepted_sample": "native-status-observer key=3:1:4:3 accepted=1 b0=3 b1=0 b4=1 b5=3 b6=1 word8_le=495 word8_be=4009820160",
+    "sample_count": 1,
+    "external_member_connecting_observed": true,
+    "native_snapshot_unchanged": true,
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "eject_attempted": false,
+    "audio_renderer": false,
+    "actual_CDJ_acceptance": false,
+    "physical_AZ_touched": false,
+    "log_sha256": "3ce0de4872698a7396d914c6fa00eead80c707a2125534a4e3563f4b755c8ed6"
+  },
+  "joint_loaded_handle_attempt": {
+    "evidence_directory": "local/diagnostics/sharing-native-loaded-handle-v1",
+    "result": "failed before obtaining a file handle; no eject attempted",
+    "native_mount_control_status": 13,
+    "mount_paths_tested": [
+      "/B/",
+      "/C/",
+      "/D/"
+    ],
+    "native_aliases_observed": {
+      "/B/": "/media/usb/sda1",
+      "/C/": "/media/usb/sdb1",
+      "/D/": "/media/usb/sda1"
+    },
+    "interpretation": "Correct alias alone does not establish native NFS export authorization. Investigate native mount admission before pairing handle with loaded eject.",
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "physical_AZ_touched": false
+  },
+  "mount_admission_investigation": {
+    "stable_control_directory": "local/diagnostics/sharing-native-mount-path-control-v1",
+    "stable_control_native_snapshot_unchanged": true,
+    "stable_control_mount_variants_file": "local/diagnostics/sharing-native-mount-path-control-v1/mount-variants.stdout",
+    "stable_native_registered_lengths": [
+      15,
+      15,
+      0
+    ],
+    "stable_native_registered_roots": [
+      "/media/usb/sdb1",
+      "/media/usb/sda1",
+      ""
+    ],
+    "diagnostic_joint_repeat_directory": "local/diagnostics/sharing-native-loaded-handle-v2",
+    "diagnostic_registered_lengths": [
+      0,
+      0,
+      0
+    ],
+    "diagnostic_registered_roots": [
+      "",
+      "",
+      ""
+    ],
+    "bounded_status13_retries_exhausted": true,
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "finding": "Normal EP147 ExecStartPost invokes az-usbload --post-start to re-announce already-mounted native USBs. The custom diagnostic unit omitted this supported step. Its NFS roots remain empty despite existing aliases and accepted remote loaded status.",
+    "fix_status": "Diagnostic harness now invokes the normal supported post-start command and records its log; live validation pending. No controller files or export tables manually changed.",
+    "physical_AZ_touched": false
+  },
+  "poststart_first_attempt": {
+    "evidence_directory": "local/diagnostics/sharing-native-loaded-handle-v3",
+    "result": "SSH20-second harness timeout before the official post-start operation completed; no joint client/eject ran",
+    "subsequent_observation": "No post-start process remained; log records native media/software-control re-announcement and done",
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "fix": "Explicit90-second subprocess timeout only for the official post-start operation; read-only exact-EP147 native root registration assertion before held-file client. Live validation pending."
+  },
+  "current_emulator_native_mapping": {
+    "fixture": "sdb1 at usb1/1-1; QEMU nativecontrol2 on ehci.0 port1",
+    "mods": "sda1 at usb2/2-1; QEMU modsusb",
+    "native_NFS_C": "/media/usb/sdb1",
+    "warning": "Do not infer physical USB port from sdX enumeration. Native STOP1 baseline must preserve mods sda1 and all hub roots."
+  }
+}

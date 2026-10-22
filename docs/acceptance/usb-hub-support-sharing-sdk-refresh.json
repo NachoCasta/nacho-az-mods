@@ -1,0 +1,92 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "171b088938ab8f4e02f60a8fb5781db2ee8af9d3d5c9b8d838dda0ced8fe63f9",
+  "helper_sha256": "41740475e575b4ea4d5d52677bed5ea6b18711ceb516cd24e2fe52dc6002428e",
+  "native_application_pid": "887615",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Two-source gated emulator with repeated supervised same-MAC fresh acquisitions on60-second grants. Independent complete menu TCP sessions/files continue, then native selected eject/replug with original neighbor RPC/TCP state preserved and full cleanup. Not RFC2131 unicast RENEWING, changed-address reacquisition, physical CDJ or external loaded-deck acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-refresh-v1",
+  "lease_seconds": 60,
+  "accepted_refreshes": [
+    {
+      "slot": 0,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 1,
+      "expires_ms": 26111974
+    },
+    {
+      "slot": 4,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 1,
+      "expires_ms": 26120095
+    },
+    {
+      "slot": 0,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 2,
+      "expires_ms": 26141975
+    },
+    {
+      "slot": 4,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 2,
+      "expires_ms": 26150095
+    },
+    {
+      "slot": 0,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 3,
+      "expires_ms": 26171976
+    },
+    {
+      "slot": 4,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 3,
+      "expires_ms": 26180097
+    },
+    {
+      "slot": 4,
+      "public_generation": 1,
+      "lease_generation": 1,
+      "count": 4,
+      "expires_ms": 26210097
+    }
+  ],
+  "complete_parallel_menus_both_sources": true,
+  "exact_PDB_audio_both_sources": true,
+  "native_selected_eject_replug_and_external_rediscovery_STALE": true,
+  "neighbor_original_RPC_handle_TCP_session_preserved": true,
+  "fresh_exact_PDB_after_replug": true,
+  "native_network_unchanged": true,
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "remaining": [
+    "Changed-configuration reacquisition",
+    "Failed refresh/expiry/pending-refresh eject managed controls",
+    "Continuous native address monitoring",
+    "No-DHCP/production policies",
+    "Native local playback on this helper hash",
+    "Physical model-specific validation"
+  ]
+}

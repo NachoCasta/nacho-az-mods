@@ -1,0 +1,54 @@
+{
+  "scope": "Native shared USB withdrawal with firmware-accepted synthetic external loaded/playing state and real retained NFS handle; emulator baseline only",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "diagnostic_mod_sha256": "1f3321f7ac1509df0bd5124128c64ba2352fb6a652ba44cc12141493e5a380fc",
+  "evidence_directory": "local/diagnostics/sharing-native-loaded-eject-v1",
+  "native_fixture": "USB1 sdb1 at1-1, QEMU nativecontrol2",
+  "mods_preserved": "sda1 at2-1",
+  "accepted_status_receipt": "wire/native-accepted-before-stop.log",
+  "operation": "Native STOP1 held1.7seconds; no manual external stop/unload",
+  "unmount_observed_after_seconds": 2.8655164,
+  "retained_handle_statuses": [
+    0,
+    70,
+    70,
+    70,
+    70,
+    70,
+    70,
+    70,
+    70
+  ],
+  "first_read_exact_reference_bytes": 1024,
+  "loaded_status_wire_packets": 599,
+  "loaded_status_packets_after_final_STALE_read": 397,
+  "native_export_root_lengths_after_stop": [
+    0,
+    15,
+    0
+  ],
+  "neighbor_mounts_preserved": "Mods USB and all five hub mounts; fresh neighbor browse/load not tested in this baseline",
+  "native_pid_modules_network_loaded_state_preserved": true,
+  "owned_native_replug_database_hash_restored": true,
+  "mount_snapshot_restored_ignoring_line_order": true,
+  "original_package_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "actual_CDJ_acceptance": false,
+  "audio_renderer": false,
+  "limits": [
+    "Synthetic status sender and NFS reader share one isolated peer address but are separate processes",
+    "Native baseline only: public hub loaded-source withdrawal remains to test",
+    "Actual external audio/cache behavior is not established",
+    "Generic raw child scope label predates native-eject wording; explicit flags/events/statuses establish this native control"
+  ],
+  "next": "Run equivalent continuing external loaded-status/held-handle withdrawal against an integrated public hub source, with original neighbor sessions and full restoration.",
+  "track_file_binding_verified": false,
+  "track_file_binding_mismatch": {
+    "status_track_id": 495,
+    "retained_file_track_id": 1884
+  },
+  "superseded_for_same_track_loaded_file_acceptance": true,
+  "binding_audit": "usb-hub-support-sharing-loaded-file-binding.json"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Typed network namespace and unexpected worker loss in post-authentication source dispatch; fixture networking",
+  "source_sha256": {
+    "public-broker-namespace.h": "0d8f31d02a1bd4cf0463072b65671e1ae1659ac9e6e9b2e96604f390ef832282",
+    "public-broker-dispatch.h": "466e8396db6e5a00958f3b43fc0aa0fe8f50340b87dcb547fe4ae16e46fb7d0b",
+    "test-public-broker-dispatch.c": "0f11dd5b75687ff47ca55f1c2b84f8ed0fafaf2c96e4fbeef28bc461374530da"
+  },
+  "binary_sha256": "c8f48cf321749aab574c74c2aafa8a3187ae044e77bbe10129597464d06578cf",
+  "tests": {
+    "plain": 68,
+    "asan": 68,
+    "tsan": 68
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/dispatch-namespace-suite.log",
+    "local/integration/sdk-broker-probe-v1/dispatch-namespace-host.log",
+    "local/integration/sdk-broker-probe-v1/dispatch-namespace-emulator.json"
+  ],
+  "validated": [
+    "Current network namespace identity accepted",
+    "Regular directory and mount namespace rejected",
+    "Controller namespace remains unchanged",
+    "Unexpected clean worker stop retires generation with EPIPE",
+    "Pinned AArch64 control passes with unchanged EP147 PID and temporary executable removed"
+  ],
+  "limitations": [
+    "No live noncurrent-network namespace allocator integration in this control",
+    "Prepare/release use loopback fixtures",
+    "Not yet invoked through SDK helper command loop",
+    "No target4.4 runtime or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

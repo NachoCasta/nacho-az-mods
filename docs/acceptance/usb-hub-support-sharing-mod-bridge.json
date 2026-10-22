@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scope": "Emulator-only native mod lifecycle bridge; synthetic callback execution",
+  "shared_object": {
+    "path": "local/integration/sharing-mod-v1/usb-hub-support-sharing-emulator.so",
+    "sha256": "ec2480ecdcaa9f0aff716e3a172393c1ace6d826fb44918a60d7b0a98bf1941e",
+    "compiled": true,
+    "executed_inside_EP147": false
+  },
+  "tests": {
+    "plain": "pass",
+    "asan_ubsan": "pass",
+    "tsan": "pass",
+    "aarch64_synthetic_emulator": "pass",
+    "emulator_kernel": "6.6.138-dirty",
+    "binary_sha256": "5e36e0794a948db6f15f036655afb069a953cd4e4858d393d9da7bb6eea83862",
+    "owned_executable_removed": true
+  },
+  "validated": [
+    "Presence starts a source without restarting unchanged observations",
+    "Eject reservation withdraws visibility and prevents reopening",
+    "Drain waits for worker join and endpoint release",
+    "Reconnect advances source incarnation",
+    "Natural removal drains the worker"
+  ],
+  "limitations": [
+    "Only source0 is wired in this explicit research build",
+    "Requires externally prepared namespace and explicit emulator environment setting",
+    "Automatic LAN allocation is not implemented",
+    "No integrated EP147 runtime or real-AZ/CDJ acceptance",
+    "Published 0.3.2 is unchanged"
+  ],
+  "source_sha256": {
+    "public-mod-emulator.h": "dfd902834bdc013ae01970e5d85c76ef8c4d54546e45db141addfaec0f7e2075",
+    "test-public-mod-emulator.c": "9469853c8e98f101c728f90ef8e78a56ed69bb77ce45260c594cd0bf0825da04",
+    "community.c": "19dfba83c82ccfe8ca84296cac78584c6472f2da67e9a26efdd18f6e2d578436",
+    "linkfake.c": "02d260bad8128576e84e975af59d9071d80eaf7e17c156d7a923e8b2dacf6678",
+    "hubservers.h": "1d1812545329e64119940afedffe52497c3743c1e085fcfd031ab2e6dc9dc1da",
+    "safe-eject.h": "45881ca041352991872ef371ce3c1480e5a88d266d6293b1d33ce3eaf81cd0eb",
+    "Makefile": "bea75a0d7ffd0eff11f5b47801e31ed4255f5c370f7fd2a6229ba120ff4dfc7b"
+  }
+}

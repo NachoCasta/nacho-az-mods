@@ -1,0 +1,48 @@
+{
+  "scope": "Bounded C dbserver field/message codec only; not a TCP server or playable public provider",
+  "bounds": {
+    "arguments": 16,
+    "field_bytes": 65536,
+    "frame_bytes": 131072
+  },
+  "host_matrix": {
+    "plain": 46,
+    "asan": 46,
+    "tsan": 46
+  },
+  "controls": [
+    "All truncated prefixes request more bytes without dispatch",
+    "Coalesced messages consume exactly one frame",
+    "Strict UTF16BE terminator and surrogate validation",
+    "Numeric tags4/5/6, count-width or12/16 type arrays",
+    "Native elided empty binary field after numeric zero",
+    "Malformed tag/type/length rejection and capacity-before-write"
+  ],
+  "python_interop": {
+    "messages": 100,
+    "result": "Python encode -> C normalize -> Python decode equals original arguments"
+  },
+  "independent_interop": {
+    "dependency": "Beat Link8.0.0 unchanged Message/Field classes",
+    "messages": 3,
+    "result": "Java encode -> C normalize -> Java decode equals synthetic headers/arguments, including Unicode and empty binary"
+  },
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "3d5ddb8d7610ac1fe4ff709868827339aea2174d671f3e58b77c40767848cfe6",
+    "synthetic_pass": true
+  },
+  "source_sha256": {
+    "src/azhub/linkfake/public-db-wire.h": "28f1e0cb0496f09c38ca6beb93275e68f5293fdfe03e995e24e04aba3907b8ac",
+    "src/azhub/linkfake/test-public-db-wire.c": "ad772c7066ece2724a6cfd9d23bf6586f8cedd176ed0af197cd3b50394ef814c",
+    "src/azhub/research/scripts/test-public-db-wire.py": "863793679505799006b0051e6787ae890d1a606bca273ae1ef5bcd5544212eba",
+    "src/azhub/research/link-peer/src/main/java/DbWireControl.java": "c6dedd333c123ef833477adce20fd29ba03e62c5749dd0f679bd9e00aec76357"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-wire-v1",
+  "remaining": [
+    "Bounded connection/session I/O, timeouts and shutdown",
+    "Handshake/request ownership and per-session menus",
+    "Metadata/menu backend over live source indexes",
+    "Native emulator client and external-CDJ integration"
+  ]
+}

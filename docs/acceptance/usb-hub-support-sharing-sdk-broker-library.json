@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scope": "SDK-managed helper exports one real mounted emulator hub library to unchanged independent discovery/menu/file clients",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-sdk-probe.h": "4bb7d6c20f988be0d6f69b3124927d01b683289215cc576a5bcfafdfe082975d",
+    "src\\azhub\\linkfake\\public-broker-service-emulator.h": "f03c151687a2aaea7c52f4c2042f6682313d4f55677a113b8beb677d3516cf8d",
+    "src\\azhub\\research\\scripts\\test-sdk-broker-probe.py": "12fbc4c70b42035d04eda6bdf3d8c37893600f80a8dc782f3d2d09a3051f88a0"
+  },
+  "binary_sha256": {
+    "mod": "18adaf3a31e916a790c84ed758a99092d454b78f10e7d1f6b25a8bcceb0e6169",
+    "helper": "6d5b7560d52026a63dfefeb04ab28c7465da0a04c7901fdde2d3e90496a26f63"
+  },
+  "runtime": {
+    "run": "bba7c361aff140f4b88eba94197e2412",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 315086,
+    "peer_pid": 315086,
+    "namespace_inode": 4026532427
+  },
+  "tests": {
+    "sdk_managed_library_export": "passed",
+    "independent_discovery_and_ordered_menus": "passed",
+    "concurrent_exact_pdb_and_mp3_downloads": "passed",
+    "hook_registration": "passed"
+  },
+  "library": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "mp3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-broker-library-v1/result.json",
+    "local/diagnostics/sharing-sdk-broker-library-v1/mod.log",
+    "local/diagnostics/sharing-sdk-broker-library-v1/guest-commands.json",
+    "local/diagnostics/sharing-sdk-broker-library-v1/discovery-and-menus.stdout",
+    "local/diagnostics/sharing-sdk-broker-library-v1/database.stdout",
+    "local/diagnostics/sharing-sdk-broker-library-v1/audio.stdout",
+    "local/diagnostics/sharing-sdk-broker-library-v1/transport.stderr"
+  ],
+  "validated": [
+    "Core launch and authenticated SOURCE/namespace FD to helper",
+    "Real library root pinned through temporary bind alias; no music copy",
+    "Actual independent discovery and complete ordered menus",
+    "Concurrent unchanged Crate Digger downloads match exact PDB/MP3 hashes",
+    "Runner signals completion before STOP; helper joins/closes and exits managed lifetime",
+    "Exact original mod/approval/marker/asset state restored",
+    "Temporary bind alias, namespace/interface/module, host TAP and files cleaned"
+  ],
+  "limitations": [
+    "Single integration fixture, not eight-source acceptance",
+    "Namespace/interface/IP still externally prepared; no production allocator/DHCP refresh",
+    "No concurrent local playback, native eject/unmount or remote loaded deck in this trial",
+    "No physical CDJ, phase-sync or cached remote playback acceptance",
+    "Live branch not sanitizer-instrumented; earlier full71/71/71 predates held service mode"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

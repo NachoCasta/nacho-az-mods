@@ -1,0 +1,32 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "4893f9e4c5dcd9676581b56651369759f7c6ea0225783e0917dad6c356cb1121",
+  "helper_sha256": "7af803712cbae458331185c127d94bbcb54f01a749343b47fdda7bf8ff29315b",
+  "native_application_pid": "613849",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "One native-inventory root correlated by device/inode, managed allocation and independent library access; no eject triggered in this trial.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-inventory-gate-v1",
+  "matched_native_source": 0,
+  "matched_root": "/media/usb/sdc1",
+  "full_menus": [
+    2546,
+    185,
+    8359
+  ],
+  "exact_database_audio_downloads": true,
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "native_eject_validated": false,
+  "source_boundary": "Predates closing the parent root FD in the inventory withdrawal gate."
+}

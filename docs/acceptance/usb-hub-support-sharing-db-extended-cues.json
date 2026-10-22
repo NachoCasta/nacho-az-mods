@@ -1,0 +1,111 @@
+{
+  "scope": "Standalone C extended cue response, not integrated into mod runtime",
+  "request": "0x2b04",
+  "response": "0x4e02",
+  "fixtures": [
+    {
+      "file": "populated-0.EXT",
+      "size": 106941,
+      "sha256": "0c43f82fe27a519fe1a7621f30b1fcef879e5e63807f5456ac2ce51d38bb45a6",
+      "counts": [
+        4,
+        0
+      ],
+      "comment_bytes": [
+        0,
+        10,
+        0,
+        10
+      ]
+    },
+    {
+      "file": "populated-1.EXT",
+      "size": 127352,
+      "sha256": "d2c3317512de79a5b9f55009c2ddf920f8d047f5384ab16735bae09e57404962",
+      "counts": [
+        3,
+        0
+      ],
+      "comment_bytes": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "file": "populated-2.EXT",
+      "size": 122974,
+      "sha256": "e0896b45a3b05a31d46e327869660914c22aa0e6637f170db243b2d62fe389c6",
+      "counts": [
+        5,
+        0
+      ],
+      "comment_bytes": [
+        20,
+        0,
+        6,
+        8,
+        12
+      ]
+    }
+  ],
+  "independent_client": "Unchanged Beat Link Client/CueList compared to direct Crate Digger EXT decoding",
+  "matched_entries_per_fixture": [
+    4,
+    3,
+    5
+  ],
+  "matched_nonempty_comments_per_fixture": [
+    2,
+    0,
+    4
+  ],
+  "matched_fields": [
+    "hot cue IDs including above C",
+    "cue/loop types",
+    "positions",
+    "comments",
+    "memory color IDs",
+    "embedded RGB",
+    "rekordbox color codes"
+  ],
+  "real_fixture_scope": "Hot cues only",
+  "legacy_regression_entries": 8,
+  "tests": [
+    "Targeted plain passed",
+    "Targeted ASan/UBSan passed",
+    "Targeted TSan passed",
+    "Synthetic Unicode surrogate pair and memory loop",
+    "Malformed lengths/UTF16 rejected",
+    "Duplicate kind rejected",
+    "Short entry without comment/colors accepted",
+    "Missing EXT reports unavailable for legacy fallback"
+  ],
+  "new_full_matrix": false,
+  "new_aarch64_execution": false,
+  "limitations": [
+    "Unknown wire fields zero-filled",
+    "Real memory/loop fixtures still missing",
+    "Native rendering and model-specific acceptance pending",
+    "Artwork and runtime integration pending"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-cues.h": "dc430e3cc8c26e584e896c3a19de99ada9547902eda3bd2048b9d47b0660c55d",
+    "src/azhub/linkfake/public-db-menus.h": "a08f89edff5e7acff14581e21fd677955ccacabd08c7992376985cf8042c506b",
+    "src/azhub/linkfake/test-public-cues.c": "6befec6556d3e954bdb42115cfc8f469ef0d6d9f12e4590aa277192a205c98e3",
+    "src/azhub/linkfake/test-public-db-menus.c": "1e580005a940748a6fc67430ab702b087546dc2f4e855017696ea7506e3fc661",
+    "src/azhub/research/link-peer/src/main/java/DbCueControl.java": "64d57720b3dac3b4153f062af15b194a37a1c59d35abf593d631de70d47bfcbc",
+    "src/azhub/research/scripts/test-public-db-cues.py": "2ff100782ad64efd1ae3995543298fecb4b09ae55e0a49a8cc017f508738807c"
+  },
+  "evidence_directory": "local/diagnostics/sharing-cues-v1",
+  "evidence_files": [
+    "extended.stdout",
+    "extended.stderr",
+    "extended-sanitizers.stdout",
+    "extended-fallback.stdout",
+    "extended-inventory.json"
+  ],
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false
+}

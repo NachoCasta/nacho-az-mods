@@ -1,0 +1,30 @@
+{
+  "native_DHCP_OFFER_ACK": false,
+  "native_DHCP_no_offer": true,
+  "reporting_only_bound_event": false,
+  "proposal_not_applied": true,
+  "address_flow_applied_then_removed": false,
+  "arp_conflict_before_configuration": false,
+  "reacquired_after_decline": false,
+  "standalone_leased_library": false,
+  "native_state_unchanged": true,
+  "supervised_acquisition": true,
+  "standalone_helper": true,
+  "broker_allocate_callbacks": false,
+  "physical_AZ_touched": false,
+  "scope": "Native emulator udhcpc supervised through standalone namespace-entering helper with reporting-only hook. Isolated server observes three DISCOVER packets and sends no OFFER. Native deconfig/leasefail, exit1, reaped child and EOF satisfy explicit no-offer admission; no address is applied. Native EP147 PID/DNS/routes/DHCP process snapshot unchanged; owned interface/namespace/module/transport cleanup completes. Not IPv4LL selection/configuration/publication or physical AZ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-native-no-offer-v1",
+  "runner_exit": 0,
+  "owned_scope_cleaned": true,
+  "artifact_sha256": {
+    "local\\integration\\sdk-broker-probe-v1\\test-native-no-offer-aarch64": "302e5c694f80fa90392e8312cbd2d4d815100a83df0ec73a3c89367b5dcde6a1",
+    "local\\integration\\sdk-broker-probe-v1\\usb-hub-support-network-helper-candidate-emulator": "ba76fd613dc9ee8b5ffcd8012a101163266f86977f09494477433a1b2b6f8b87",
+    "src\\azhub\\research\\scripts\\public-dhcp-event-hook.sh": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec"
+  },
+  "evidence_sha256": {
+    "result.json": "f44387d695a757751b53792a58ae897a5772b91f8e019ab17278be907935f1ec",
+    "client-events.txt": "58b3785a3a98e4e8c91c371dc4ac86e3fa372eb9692b445832a88fc88d982133",
+    "server.stdout": "ebbab344f7abf47e000b2f089b82840c948dd14013ff2c69412e2ca8bbe1881e",
+    "guest-commands.json": "271a91439b1540d19505a35db43d0b3b6946a1fd92c409744c2600d3f656535a"
+  }
+}

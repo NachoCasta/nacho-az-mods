@@ -1,0 +1,241 @@
+{
+  "scope": "Incremental ANLZ raw-section reader and larger bounded DB responses; analysis request handlers not integrated",
+  "primary_format_reference": "https://djl-analysis.deepsymmetry.org/rekordbox-export-analysis/anlz.html",
+  "fixtures": [
+    {
+      "extension": "DAT",
+      "size": 4880,
+      "sha256": "af3306adf637c4865bbef0f5fdf107f6e3062120b1407a7a152f6a63f97afe3c",
+      "tags": [
+        {
+          "tag": "PPTH",
+          "size": 172
+        },
+        {
+          "tag": "PVBR",
+          "size": 1620
+        },
+        {
+          "tag": "PQTZ",
+          "size": 2472
+        },
+        {
+          "tag": "PWAV",
+          "size": 420
+        },
+        {
+          "tag": "PWV2",
+          "size": 120
+        },
+        {
+          "tag": "PCOB",
+          "size": 24
+        },
+        {
+          "tag": "PCOB",
+          "size": 24
+        }
+      ]
+    },
+    {
+      "extension": "EXT",
+      "size": 127814,
+      "sha256": "0e0b933f0ca23509b02f36951a832b7c44eefb19e0b047d32643cfd4cc005fef",
+      "tags": [
+        {
+          "tag": "PPTH",
+          "size": 172
+        },
+        {
+          "tag": "PWV3",
+          "size": 39886
+        },
+        {
+          "tag": "PCOB",
+          "size": 24
+        },
+        {
+          "tag": "PCOB",
+          "size": 24
+        },
+        {
+          "tag": "PCO2",
+          "size": 20
+        },
+        {
+          "tag": "PCO2",
+          "size": 20
+        },
+        {
+          "tag": "PQT2",
+          "size": 668
+        },
+        {
+          "tag": "PWV5",
+          "size": 79748
+        },
+        {
+          "tag": "PWV4",
+          "size": 7224
+        }
+      ]
+    },
+    {
+      "extension": "2EX",
+      "size": 123450,
+      "sha256": "3cd3dad870d77d5e39c24f1e89c3ced2d4d1eeef1dc733e6edb54cccd069ab37",
+      "tags": [
+        {
+          "tag": "PPTH",
+          "size": 172
+        },
+        {
+          "tag": "PWV7",
+          "size": 119610
+        },
+        {
+          "tag": "PWV6",
+          "size": 3620
+        },
+        {
+          "tag": "PWVC",
+          "size": 20
+        }
+      ]
+    }
+  ],
+  "independent_section_matches": [
+    {
+      "extension": "DAT",
+      "tag": "PQTZ",
+      "occurrence": 0,
+      "bytes": 2472,
+      "sha256": "e59789a290a7bfa4d19ad276b0c02dd4d3fef7428d252f90cc67d9d7663542d7"
+    },
+    {
+      "extension": "DAT",
+      "tag": "PCOB",
+      "occurrence": 0,
+      "bytes": 24,
+      "sha256": "9643750c922c3d97b7fcd62ab7ba1ed28c6843e105f2cb68afb35d343b9ead86"
+    },
+    {
+      "extension": "DAT",
+      "tag": "PCOB",
+      "occurrence": 1,
+      "bytes": 24,
+      "sha256": "76b4eaf972747aad0cc57d68f09d58cbfd00278eb13d7253482f09f1d5040c31"
+    },
+    {
+      "extension": "EXT",
+      "tag": "PWV4",
+      "occurrence": 0,
+      "bytes": 7224,
+      "sha256": "3e5a7de7c4540236e183f0696ada85961ad896e995fec6baa21292e66b8cd751"
+    },
+    {
+      "extension": "EXT",
+      "tag": "PWV5",
+      "occurrence": 0,
+      "bytes": 79748,
+      "sha256": "df0b9f3cd37fb8cb4981b38f43b5a3c9e48c94ecb8f278e00c5d2803ba58a1ac"
+    },
+    {
+      "extension": "EXT",
+      "tag": "PQT2",
+      "occurrence": 0,
+      "bytes": 668,
+      "sha256": "9ee6696627d268cb244328a775b944964b3c6a172c5afe324a80b38e944d6c82"
+    },
+    {
+      "extension": "EXT",
+      "tag": "PCO2",
+      "occurrence": 0,
+      "bytes": 20,
+      "sha256": "9301c3c7f20e45855c4b0b19445e1e08b68a115be4e61709e968c7185f2b8d5d"
+    },
+    {
+      "extension": "EXT",
+      "tag": "PCO2",
+      "occurrence": 1,
+      "bytes": 20,
+      "sha256": "9fe5495b6f4d12d41cabd3cd8b0f863213d13c7e9d5d9dbc19986f5ea91bff84"
+    },
+    {
+      "extension": "2EX",
+      "tag": "PWV6",
+      "occurrence": 0,
+      "bytes": 3620,
+      "sha256": "a7ffee800bff5bad9f9bbd7d37e8537d1f2f6e1bd197ade71edabfc35d976c97"
+    },
+    {
+      "extension": "2EX",
+      "tag": "PWV7",
+      "occurrence": 0,
+      "bytes": 119610,
+      "sha256": "a11594c8869990fd0cabb837b30599032e9812109fa353df6e15ef5a6644c5d3"
+    }
+  ],
+  "oracle": "Unchanged Crate Digger0.2.1 generated section boundaries/raw bodies. For unknown enum PQT2, adapter reads its fourcc at the generated section offset; no body semantic validation is claimed.",
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "components": [
+      {
+        "component": "reader",
+        "binary_sha256": "d45336434c1ab86a3813ee07c7890beffbb529621046c51ac301d7cbc17eee3d",
+        "synthetic_pass": true,
+        "live_PWV5_bytes": 79748,
+        "live_PWV5_sha256": "df0b9f3cd37fb8cb4981b38f43b5a3c9e48c94ecb8f278e00c5d2803ba58a1ac"
+      },
+      {
+        "component": "session",
+        "binary_sha256": "94180a5bac145221e3eef063ef743fbc8a92f9110794ef12042ca60a1a2f96f0",
+        "synthetic_pass": true
+      }
+    ],
+    "owned_executables_removed": true
+  },
+  "host_matrix": {
+    "plain": 49,
+    "asan": 49,
+    "tsan": 49
+  },
+  "reader_limits": {
+    "file_bytes": 67108864,
+    "selected_section_bytes": 4194304,
+    "tag_headers": 1024,
+    "payload_chunk_bytes": 8192,
+    "scope": "Selected section including its12-byte envelope; duplicate tags selectable by occurrence; sections after the selected one are not inspected"
+  },
+  "wire_change": {
+    "reason": "Observed real PWV5 is79748 bytes and PWV7 is119610 bytes, exceeding initial64KiB bound",
+    "maximum_field_bytes": 4194304,
+    "maximum_frame_bytes": 4198400,
+    "session_input_bytes": 131072,
+    "initial_output_bytes": 4096,
+    "allocation": "Output grows to validated encoded size on demand; after sending buffers above16KiB shrink to4KiB when realloc succeeds",
+    "large_partial_write_control": {
+      "payload_bytes": 119610,
+      "socket_send_buffer_requested": 1024,
+      "peer_read_chunk_bytes": 257,
+      "exact_payload_match": true,
+      "output_shrinks_after_send": true
+    }
+  },
+  "remaining": [
+    "Source catalog/generation adapter and cancellation around completed data",
+    "0x2c04 wire layout and actual analysis response handlers",
+    "Cue/beatgrid/preview conversion with populated cues",
+    "Native emulator analysis rendering and playback",
+    "Aggregate multi-provider memory quotas and scheduling"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-analysis-reader.h": "0c9b7c299adbaa96efc8ba54604d18c0b43563ac7bd1b3fa77d566ef957cc150",
+    "src/azhub/linkfake/public-db-wire.h": "c574499660d7898854e54c1f872096ae3481681c3400d2cce6533cdaff61da72",
+    "src/azhub/linkfake/public-db-session.h": "3e758c0a397eeb6d0fb482d596a38e19fbce0c6a585a31cda222d258a9a0b3f5",
+    "src/azhub/linkfake/test-public-analysis-reader.c": "b27dce417ca8bf50c4fc77f90a72bedde80a59e9992ca24ffcfa00534cde6039",
+    "src/azhub/linkfake/test-public-db-session.c": "fe42e57aa5ccbe09607ecff43f9c694c92fb301d35fbec49791c9c875a4ccabf",
+    "src/azhub/research/link-peer/src/main/java/AnalysisSectionControl.java": "37564d6c41d4d9ffc93220f3d4cee6e41d0469b571f5ec29b03ed114a04a6522"
+  },
+  "evidence_directory": "local/diagnostics/sharing-analysis-v1"
+}

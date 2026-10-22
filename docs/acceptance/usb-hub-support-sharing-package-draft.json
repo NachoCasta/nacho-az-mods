@@ -1,0 +1,110 @@
+{
+  "scope": "Local draft package only, not hardware-trial accepted or published",
+  "package": "local\\publishing\\usb-hub-support-sharing-candidate-final\\mod\\dist\\usb-hub-support-0.4.0.azmod",
+  "package_sha256": "8edd7f78c89ca2aa75a0127c496e63acbfaf418bce0115f463da18d4607bd4c0",
+  "package_bytes": 682234,
+  "package_validation_passed": true,
+  "executable_asset_modes_verified": true,
+  "members": {
+    "LICENSE": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "mode": "0o644"
+    },
+    "assets/azhub-LICENSE.txt": {
+      "bytes": 18693,
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "mode": "0o644"
+    },
+    "assets/azhub-source.c": {
+      "bytes": 2845,
+      "sha256": "a36f15ab4cdc427f900c1f3d4e97b0b86522c2db52cf1ca18e98ce0b2823fde9",
+      "mode": "0o644"
+    },
+    "assets/azhub.ko": {
+      "bytes": 183848,
+      "sha256": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/BUILD.md": {
+      "bytes": 2722,
+      "sha256": "d208e948c759aff98deb89360db14175a74c8bdd2b22c66f18cb7dc58111b1af",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/LICENSE": {
+      "bytes": 18693,
+      "sha256": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/Makefile": {
+      "bytes": 97,
+      "sha256": "b7a5dd1d8924baa3c44bc31a08ce10d541a98c40ef12a0a75f378150417e0204",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/build-receipt.json": {
+      "bytes": 864,
+      "sha256": "f2c598670e1ddd2cbe240eba2797567d64c3f6d8418e8cb34265856306f29c65",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/build-sharing-macvlan.py": {
+      "bytes": 3859,
+      "sha256": "8d55abc4b1752d9bcf485c53ff315052f015e7e8c9b90a84f0ee59641696f429",
+      "mode": "0o644"
+    },
+    "assets/macvlan-source/macvlan.c": {
+      "bytes": 41113,
+      "sha256": "2aa65660418fa6121ba2b63b16c9540426bc43f83ffd0baf000c0d21662df54a",
+      "mode": "0o644"
+    },
+    "assets/mount-hub.sh": {
+      "bytes": 1416,
+      "sha256": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+      "mode": "0o644"
+    },
+    "assets/public-dhcp-event-hook.so": {
+      "bytes": 1217,
+      "sha256": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+      "mode": "0o755"
+    },
+    "assets/usb-hub-support-network-helper.so": {
+      "bytes": 123816,
+      "sha256": "2efe0ca3d86cae8c556e881429ddac78b0fabcd7c11974743c5b8ae53135859a",
+      "mode": "0o755"
+    },
+    "assets/usb_hub_macvlan.ko": {
+      "bytes": 29592,
+      "sha256": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667",
+      "mode": "0o644"
+    },
+    "azmod.json": {
+      "bytes": 953,
+      "sha256": "c5774e2f07354ec30c467bd324e3b14c13073ec649c685f9e8371b9a94e4d02d",
+      "mode": "0o644"
+    },
+    "icon.png": {
+      "bytes": 945,
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+      "mode": "0o644"
+    },
+    "usb-hub-support.so": {
+      "bytes": 214248,
+      "sha256": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+      "mode": "0o755"
+    }
+  },
+  "known_validator_warning": "/home/root/settings reference; existing optional legacy configuration read",
+  "final_emulator_regressions_pending": true,
+  "target_macvlan_load_unproven": true,
+  "physical_AZ_touched": false,
+  "published": false,
+  "reproduced_with_script": true,
+  "preparation_script": "src/azhub/research/scripts/prepare-sharing-candidate.py",
+  "reproduction_receipt": "local/publishing/usb-hub-support-sharing-candidate-v3/receipt.json",
+  "source_tar_sha256": "a45931dba30bafe40f1371fdb32453ca6a218da6052b44c436b91d65bf8c96ae",
+  "source_snapshot_member_count": 424,
+  "source_snapshot_is_commit_claim": false,
+  "latest_source_snapshot": "local\\publishing\\usb-hub-support-sharing-candidate-final\\source.tar",
+  "latest_source_snapshot_sha256": "0b1ca12be87cd31099cdbfd02aa880b6aa7990604ef0da94f0088a5660c0a035",
+  "final_requirement_audit_complete": true,
+  "final_candidate_ready_for_separately_authorized_physical_trials": true
+}

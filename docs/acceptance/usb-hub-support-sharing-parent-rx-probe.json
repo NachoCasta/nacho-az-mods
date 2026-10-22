@@ -1,0 +1,41 @@
+{
+  "scope": "Explicit temporary receive-mode diagnostic, not a confirmed fix or default candidate behavior",
+  "compiled_opt_in": "LF_PUBLIC_PARENT_RX_PROBE",
+  "mechanism": "AF_PACKET protocol0 receives no payload; PACKET_MR_PROMISC membership owns a parent RX-mode reference released by descriptor close/process exit",
+  "schedule": "After first library ready:10 seconds baseline,60 seconds membership, then close; no repeated acquisition",
+  "plain_lifecycle_control_pass": true,
+  "emulator_control": {
+    "state": "passed",
+    "directory": "local/diagnostics/sharing-parent-rx-membership-v1",
+    "parent_flags_in_restoration_snapshot": true,
+    "runner_exit": 0,
+    "membership_acquired_and_released_logged": true,
+    "parent_flags_restored": true
+  },
+  "physical_installation_performed": true,
+  "published": false,
+  "binaries": {
+    "usb-hub-support-broker-probe.so": "c68ff065c8da7d5fa471aabac86a84b277e42208c346807f5ccbe9b55a2dc66c",
+    "usb-hub-support-network-helper-rx-probe-candidate": "e87ef6b7679be5ed5c0e89a4ea960cceacc9044ccff88668db9cfd219e6d0519",
+    "usb-hub-support-network-helper-rx-probe-candidate-emulator": "0893d53fe8f16ade8a127f8a6cb0a80c9f94af16e17b1bf1a145b158d9f1851d"
+  },
+  "ASan_UBSan_lifecycle_control_pass": true,
+  "physical_version": "0.4.3",
+  "physical_runtime_sha256": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+  "physical_helper_sha256": "e87ef6b7679be5ed5c0e89a4ea960cceacc9044ccff88668db9cfd219e6d0519",
+  "physical_package_sha256": "23219dcbbc14831116c3f9b65253f78a573accbd6ef52a28cdd4e192b491d0c9",
+  "physical_observations": {
+    "source": "169.254.127.72",
+    "metadata_port": 42124,
+    "parent_flags_before_after": "0x1003",
+    "parent_flags_during": "0x1103",
+    "successful_DB_queries": 60,
+    "failed_connect_queries": 40,
+    "first_success_time": 1792643387.3477771,
+    "last_success_time": 1792643446.3657818,
+    "connection_returns_to_timeout_after_membership_release": true,
+    "BeatLink_passive_devices_during20_seconds": 0,
+    "complete_external_browsing_or_track_file_acceptance": false
+  },
+  "rollback": "/media/usb/sda1/MODS/backups/usb-hub-support-before-043-20261021-212834/original"
+}

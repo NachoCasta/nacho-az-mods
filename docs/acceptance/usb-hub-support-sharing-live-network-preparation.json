@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-21T00:44:24.977043+00:00",
+  "scope": "Prepare guarded isolated emulator network mode for standalone C research service",
+  "physical_AZ_touched": false,
+  "production_runtime_integration": false,
+  "emulator_network_mode_executed": false,
+  "observations": [
+    "Native emulator port111/2049 are already bound, so a separate owned network namespace is needed; no native service is replaced",
+    "Research-only emulator mode requires exact6.6.138-dirty kernel, distinct network namespace and sole active non-loopback interface azpub0 with192.0.2.3",
+    "Research socket binds192.0.2.3:111 and SO_BINDTODEVICE azpub0, admitting only isolated test peer192.0.2.2",
+    "Host initial-namespace invocation is refused with exit2 before opening root/socket",
+    "Host and pinned AArch64 binaries compile; existing independent loopback portmapper/mount/Unicode/READ/withdrawal regression passes",
+    "No guest namespace/interface or public C listener was created in this preparation step"
+  ],
+  "verification": {
+    "host_refusal_exit": 2,
+    "aarch64_sha256": "7ca63c49d829895280dcd2e81f81ff3efc8ced98ab124be2a37c1e19740a35af",
+    "scope": "Build and host refusal only; emulator link not started"
+  },
+  "source_sha256": "f47ea77702c04ae141bf67eec882f8f6878e9195105624987a49832b3c615049",
+  "regression_log_sha256": "148972ec34c39ef3730a4d06c8bb437609f36e5cda3b1bf4ce5314243fab88dd",
+  "next_gate": "Owned emulator macvlan/namespace setup and bounded live-root Crate Digger transfer with complete cleanup"
+}

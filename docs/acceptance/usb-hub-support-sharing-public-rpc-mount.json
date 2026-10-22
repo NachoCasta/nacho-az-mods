@@ -1,0 +1,99 @@
+{
+  "recorded_at_utc": "2026-10-20T20:47:33.376880+00:00",
+  "scope": "C read-only portmapper/mount/export and paginated UTF16LE NFS directory service",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "READDIR serializes only registered direct children in stable catalog order; opaque cookie is last catalog ID, not a filesystem descriptor",
+    "Pagination reserves XDR list/EOF footer, bounds reply bytes, rejects invalid cookies and cannot-fit-first-entry requests",
+    "UTF8 catalog names encode strictly to UTF16LE, including surrogate pairs, without accepting overlong UTF8",
+    "Portmapper only reports configured NFSv2/mountv1 UDP endpoints; SET and other mutation procedures are unavailable",
+    "Mount accepts known ASCII/UTF16LE export path and returns source-owned root handle; withdrawal removes export and refuses mount",
+    "UMNT/UMNTALL are stateless peer acknowledgments and do not withdraw shared source",
+    "Independent handwritten Python wire client exercises portmapper/export/mount/UMNT, Unicode READDIR/LOOKUP/GETATTR, full30001-byte READ and withdrawal"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 39,
+      "asan": 39,
+      "tsan": 39
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "aarch64_export_test": {
+      "kernel": "6.6.138-dirty",
+      "exit_code": 0,
+      "binary_sha256": "ff9549dc6f192a1832a74fe51d4a6138a582ac5c778a9a875a4b058cf698f296"
+    },
+    "independent_payload_bytes": 30001,
+    "independent_payload_sha256": "25e2bf3a883695f6370bec399b2a10008c849a425cb2d17ec6077b6c4d98ed16"
+  },
+  "source_sha256": {
+    "public-file-catalog.h": "29b12f58500543e1711293b05f9aa673e24eb214ae469704d04d7485249492ed",
+    "public-nfs-tree.h": "f4caeb91ed6a67939efbfeaa29095937bc376986cfac2919c82234acb753629d",
+    "public-read-server.c": "1244218f498dc587a0d0970d0033d3139778767cc15477b2a0260a931b8f8687",
+    "public-rpc-export.h": "bdf9a210826b56855ac7429b6bda30f7a7a517cc0485fd6662b3a66d6527f1a8",
+    "public-rpc-read.h": "3f7da40293f66c8d69c4117b718f6c0bacbe2af838f8b0b3f4fc2936c0df4e6e",
+    "public-rpc-tree.h": "50847d027d646751af249e3e497e35ce5dde4ededc1e2db504b2f494ac1ac34a",
+    "public-rpc-udp.h": "dc25c31b355c8d5d91e5f3af7c1098f43baa9177dbf485ddd0deb81a98a6d9a4",
+    "public-wire-name.h": "d15cdb5bbd322759acef0d76a6338d2e4299ce476a3f0f558008e1880469d009",
+    "test-host.sh": "e28e0b80acdc2484ab990627f22e91d6cce90f1b47347b767a8d864064bb6b0e",
+    "test-public-nfs-tree.c": "6c11f6bdf83a94d440267c2411437edf8deaf29d38f313180420ae97320e9221",
+    "test-public-read-server.py": "1616898068c59cf71db50c391cda9ad896bd4cadd923d86abf281182c3ff72fa",
+    "test-public-rpc-export.c": "ae2b94b02d65d9dae3daee5fa2ad67996fa27bacb4a25a660cbc074f5dfedf41"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "735454070fd873a8dd82a0b915c1e67dfe78502da2894ee7c2b2e259f3e2f0c3",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "independent.stdout": "34a711dfabb1f612ea86d25c10b25e07dd0d5c23090faa28b63b0fcab5cab1e7",
+    "portable-matrix.stdout": "c08ba10dfe56bc745b16dd826032d95eda90892a5940256a27ecb4619b998771"
+  },
+  "remaining_gates": [
+    "Unchanged Crate Digger interoperability against this C service",
+    "Trusted live USB library/catalog/metadata population and real-library memory limits",
+    "Public transport address ownership/conflict management and mod lifecycle integration",
+    "Concurrent local/remote reads/loads and safe eject under external loaded status",
+    "Final exact candidate build/regressions and separately authorized physical model tests"
+  ]
+}

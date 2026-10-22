@@ -1,0 +1,71 @@
+{
+  "scope": "Integrated public hub eject/reconnect with native-accepted continuing synthetic external loaded/playing state and real MP3 handle; independent software protocol evidence only",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "evidence_directory": "local/diagnostics/sharing-integrated-remote-loaded-eject-v4",
+  "diagnostic_mod_sha256": "9fd91ddfd905e7f61861e6b2636beb553976277c6c7720329d536dbf1bd2ac04",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "source": {
+    "local_slot": 0,
+    "root": "/media/usb/sdc1",
+    "public_player": 41,
+    "public_address": "192.0.2.3"
+  },
+  "external_requester": 3,
+  "track_id": 495,
+  "initial_clients": "Two independent complete libraries,2546 tracks/185 ordered nodes/8359 memberships each; exact PDB and10881597-byte MP3 downloads",
+  "MP3_handle": "LOOKUP and exact1024-byte initial READ; retained through withdrawal/replug",
+  "native_status_accepted": true,
+  "loaded_status_frames_by_destination": {
+    "192.0.2.3": 180,
+    "192.0.2.15": 180
+  },
+  "manual_external_stop_or_unload": false,
+  "withdrawal": {
+    "authenticated_retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "RPC_endpoints_closed": true,
+    "metadata_and_port_query_closed": true,
+    "independent_DeviceFinder_expired_source": true
+  },
+  "neighbor": "Original source4 RPC root and TCP menu session remain live through withdrawal/recovery; both native USB mounts and other hub mounts preserved",
+  "reconnect": {
+    "generation2_discovered": true,
+    "new_root_handle": true,
+    "old_root_and_MP3_READ_handles_STALE_both_RPC_aliases": true,
+    "fresh_database_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "fresh_complete_MP3_download_after_reconnect": false
+  },
+  "final_global_retirement_and_helper_exit": true,
+  "original_package_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "actual_CDJ_acceptance": false,
+  "external_audio_renderer": false,
+  "supplementary_reference_decode": {
+    "decoder": "FFmpeg8.0-full_build",
+    "decoder_executable_sha256": "81b5832f6c548d64feba0ec7d643397e2351d9f3460a65c6c296956045eebaea",
+    "reference_MP3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+    "strict_full_decode_to_null_exit": 0,
+    "scope": "Local reference with the same SHA256 as the downloaded files; not direct external audio output, streaming playback or actual-CDJ evidence"
+  },
+  "limits": [
+    "Emulator-only diagnostic integrated mod, not final packaged candidate",
+    "Synthetic status represents loaded/playing; no actual external audio/cache or phase-sync claim",
+    "Final non-diagnostic bytes, native deck topology, full integrated capacity and resource lifetime gates remain open",
+    "Real-model identity/count/interoperability acceptance requires separately authorized physical trials"
+  ],
+  "track_file_binding_verified": false,
+  "track_file_binding_mismatch": {
+    "status_track_id": 495,
+    "retained_file_track_id": 1884
+  },
+  "superseded_for_same_track_loaded_file_acceptance": true,
+  "binding_audit": "usb-hub-support-sharing-loaded-file-binding.json",
+  "advertised_source_slot_matched": false,
+  "source_slot_mismatch": {
+    "status_slot": 3,
+    "advertised_collection_slot": 4
+  },
+  "full_loaded_identity_tuple_verified": false
+}

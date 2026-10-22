@@ -1,0 +1,68 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "4ff65cefcfd6eaab599543930f30486c50c56d4a9bdcdbd3d1598b39e8ebfd7c",
+  "helper_sha256": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b",
+  "native_application_pid": "1265045",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": false,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "old_address": "169.254.132.228",
+  "new_address": "169.254.20.93",
+  "acknowledged_retired_generation": 1,
+  "empty_status_directly_logged": true,
+  "active_generation": 2,
+  "neighbor_original_sessions_preserved": true,
+  "fixture_observed_DHCP_DECLINE": false,
+  "old_handle_withdrawal_observed": false,
+  "scope": "Isolated emulator only: two managed IPv4LL libraries without DHCP replies, initial full independent discovery/menus/exact PDB/audio, injected foreign ARP claim for source0, authenticated EMPTY/EADDRINUSE generation1 then ACTIVE generation2 at a different address. Original source4 RPC root and TCP menu session survive. Independent DeviceFinder/full menus/exact PDB/audio pass again at the replacement address. No DHCP DECLINE observed by the isolated fixture server. Final STOP, process/namespace cleanup, native network and exact normal package restoration pass. No old-address withdrawal observer, native eject/replug, external loaded deck, DHCP-return transition, local playback or physical CDJ tested. Native link-local test domain is explicitly prepared; this is not physical autoconfiguration acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-link-local-conflict-v4",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "targeted_inventory_tests": {
+    "plain": "passed",
+    "asan_ubsan": "passed",
+    "tsan": "passed"
+  },
+  "initial_addresses": {
+    "0": "169.254.132.228",
+    "4": "169.254.68.149"
+  },
+  "prior_attempts": [
+    {
+      "directory": "local/diagnostics/sharing-sdk-link-local-conflict-v1",
+      "result": "Harness MAC bytes/string mismatch before injection; restoration/cleanup passed."
+    },
+    {
+      "directory": "local/diagnostics/sharing-sdk-link-local-conflict-v2",
+      "result": "Recovery reached generation2; verifier incorrectly required EMPTY in an end-of-poll snapshot. Restoration/cleanup passed."
+    },
+    {
+      "directory": "local/diagnostics/sharing-sdk-link-local-conflict-v3",
+      "result": "Recovery reached generation2; DRAINING snapshot was also skipped by batching. Added retained authenticated retirement evidence. Restoration/cleanup passed."
+    }
+  ]
+}

@@ -16,6 +16,9 @@ import struct
 import subprocess
 import threading
 import time
+import tempfile
+import os
+import select
 
 
 class Frames:
@@ -46,33 +49,43 @@ def framed(frame):
     return struct.pack('!I', len(frame)) + frame
 
 
-def owned_peer(frame):
+from link_fixture_network import verify_namespace, fixture_addresses,source_mac
+
+
+def owned_peer(frame,addresses=(bytes([192,0,2,2]),)):
     """Only the TAP owns192.0.2.2; NAT must not impersonate it."""
     if len(frame) >= 34 and frame[12:14] == b'\x08\x00':
         ihl = (frame[14] & 15) * 4
         total = int.from_bytes(frame[16:18], 'big')
         if frame[14] >> 4 == 4 and ihl >= 20 and ihl <= total <= len(frame) - 14:
-            return frame[26:30] == bytes([192, 0, 2, 2])
+            return frame[26:30] in addresses
     if len(frame) >= 42 and frame[12:14] == b'\x08\x06':
         if frame[14:20] == b'\x00\x01\x08\x00\x06\x04':
-            return frame[28:32] == bytes([192, 0, 2, 2])
+            return frame[28:32] in addresses
     return False
 
 
-def verify_namespace(rows):
-    peers = [row for row in rows if row.get('ifname') != 'lo']
-    if len(peers) != 1 or peers[0].get('ifname') != 'azlink0':
-        raise ValueError('Expected only lo and isolated azlink0')
-    peer = peers[0]
-    if 'UP' not in peer.get('flags', []):
-        raise ValueError('TAP must already be up')
-    addresses = [(a.get('local'), a.get('prefixlen'), a.get('broadcast'))
-                 for a in peer.get('addr_info', []) if a.get('family') == 'inet']
-    if addresses != [('192.0.2.2', 24, '192.0.2.255')]:
-        raise ValueError('Unexpected isolated peer address')
-    for address in peer.get('addr_info', []):
-        if address.get('family') == 'inet6' and not ipaddress.ip_address(address['local']).is_link_local:
-            raise ValueError('Unexpected global IPv6 address')
+
+
+def fixture_dhcp_clients(value,parent=None):
+    slots=[int(part) for part in value.split(',')]
+    if not 1<=len(slots)<=8 or len(slots)!=len(set(slots)) or any(slot<0 or slot>7 for slot in slots):
+        raise ValueError('Distinct fixture slots0..7 required')
+    return tuple(source_mac(parent,slot) if parent else bytes([2,0,0,0,0x12,3+slot]) for slot in slots)
+
+
+def fixture_dhcp_reply(frame,clients=(bytes.fromhex('020000001203'),)):
+    """Only NAT DHCP replies naming explicitly selected virtual fixture MACs."""
+    if len(frame)<34 or frame[12:14]!=b'\x08\x00' or frame[14]>>4!=4:return False
+    ihl=(frame[14]&15)*4;total=int.from_bytes(frame[16:18],'big')
+    if ihl<20 or total>len(frame)-14 or total<ihl+8+240 or frame[23]!=17:return False
+    if int.from_bytes(frame[20:22],'big')&0x3fff:return False
+    udp=14+ihl;length=int.from_bytes(frame[udp+4:udp+6],'big')
+    if frame[udp:udp+4]!=b'\x00\x43\x00\x44' or length<248 or length>total-ihl:return False
+    bootp=udp+8
+    return (frame[bootp:bootp+3]==b'\x02\x01\x06' and
+            frame[bootp+28:bootp+34] in clients and
+            frame[bootp+236:bootp+240]==b'\x63\x82\x53\x63')
 
 
 def qmp(command, arguments=None):
@@ -106,13 +119,52 @@ def write_all(stream, data):
         remaining = remaining[count:]
 
 
+def connect_local_socket(path):
+    """Windows Python may omit AF_UNIX even though Winsock/QEMU support it."""
+    if hasattr(socket,'AF_UNIX'):
+        stream=socket.socket(socket.AF_UNIX,socket.SOCK_STREAM)
+        try:
+            stream.settimeout(5);stream.connect(str(path));return stream
+        except BaseException:stream.close();raise
+    if os.name!='nt':raise OSError('Local socket support unavailable')
+    import ctypes
+    encoded=str(path).encode('utf-8')
+    if len(encoded)>=108:raise ValueError('Local socket path exceeds sockaddr_un')
+    class Address(ctypes.Structure):
+        _fields_=[('family',ctypes.c_ushort),('path',ctypes.c_char*108)]
+    winsock=ctypes.WinDLL('ws2_32')
+    winsock.connect.argtypes=[ctypes.c_size_t,ctypes.c_void_p,ctypes.c_int]
+    address=Address(1,encoded)
+    stream=socket.socket(1,socket.SOCK_STREAM)
+    try:
+        stream.settimeout(5)
+        if winsock.connect(stream.fileno(),ctypes.byref(address),ctypes.sizeof(address)):
+            error=winsock.WSAGetLastError()
+            if error not in (10035,10036):raise OSError(error,'Local socket connect failed')
+            _,ready,failed=select.select([],[stream],[stream],5)
+            if not ready or failed:raise OSError('Local socket connection timeout/failure')
+            error=stream.getsockopt(socket.SOL_SOCKET,socket.SO_ERROR)
+            if error:raise OSError(error,'Local socket connection failed')
+        return stream
+    except BaseException:stream.close();raise
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seconds', type=int, required=True)
     parser.add_argument('--capture-port', type=int, default=15101)
     parser.add_argument('--inject-port', type=int, default=15102)
-    parser.add_argument('--nat-port', type=int, default=15103)
+    parser.add_argument('--nat-port', type=int, default=15103,help='Legacy TCP backend port, only with --nat-tcp')
+    parser.add_argument('--nat-unix',action='store_true',default=True,help='Use a temporary local socket (default)')
+    parser.add_argument('--nat-tcp',action='store_false',dest='nat_unix',help='Explicit legacy TCP backend for transport diagnostics')
+    parser.add_argument('--fixture-macvlan',action='store_true')
+    parser.add_argument('--fixture-address-count',type=int,choices=range(1,9),default=1)
+    parser.add_argument('--fixture-dhcp',action='store_true',help='Suppress only NAT DHCP replies to fixture MAC02:00:00:00:12:03; TAP server owns its lease')
+    parser.add_argument('--fixture-dhcp-slots',default='0',help='Bounded selected fixture slots; affects only NAT DHCP suppression')
+    parser.add_argument('--controller-mac',help='Explicit isolated controller MAC for selected DHCP identities')
+    parser.add_argument('--fixture-link-local',action='store_true',help='Explicit secondary169.254.2.2/16 on the isolated TAP only')
     args = parser.parse_args()
+    try:dhcp_clients=fixture_dhcp_clients(args.fixture_dhcp_slots,args.controller_mac)
+    except ValueError as error:parser.error(str(error))
     ports = [args.capture_port, args.inject_port, args.nat_port]
     if not 5 <= args.seconds <= 3600 or len(set(ports)) != 3 or any(not 1024 <= p <= 65535 for p in ports):
         parser.error('Use5..3600 seconds and three distinct unprivileged loopback ports')
@@ -120,30 +172,40 @@ def main():
     if script.drive.upper() != 'C:':
         parser.error('Review explicit WSL path mapping before using another drive')
     prefix = ['wsl.exe', '-u', 'root', '-e', 'ip', 'netns', 'exec', 'azhub-link']
-    check = subprocess.run(prefix + ['ip', '-j', 'addr', 'show'], capture_output=True, check=True)
-    verify_namespace(json.loads(check.stdout))
+    check = subprocess.run(prefix + ['ip', '-j', '-d', 'addr', 'show'], capture_output=True, check=True)
+    verify_namespace(json.loads(check.stdout),args.fixture_address_count,args.fixture_macvlan,args.fixture_link_local)
+    owned_addresses=tuple(socket.inet_aton(a) for a in fixture_addresses(args.fixture_address_count))
+    if args.fixture_link_local:owned_addresses+=(socket.inet_aton('169.254.2.2'),)
     channel, guard = 'azhubtapnat', 'azhubtapguard'
     if any(row.get('label') == channel for row in qmp('query-chardev')):
         raise RuntimeError('Existing NAT channel requires owner inspection; never replace it')
     sockets, threads = [], []
+    nat_directory=nat_path=None
     created = installed = False
     child = timer = None
     stopped = threading.Event()
     inject_lock = threading.Lock()
     errors = []
-    counts = dict(guest_to_tap=0, tap_to_guest=0, nat_to_guest=0, nat_peer_suppressed=0)
+    counts = dict(guest_to_tap=0, tap_to_guest=0, nat_to_guest=0, nat_peer_suppressed=0,nat_dhcp_suppressed=0)
     deadline = time.monotonic() + args.seconds
     try:
         capture = socket.create_connection(('127.0.0.1', args.capture_port), timeout=5)
         sockets.append(capture)
         inject = socket.create_connection(('127.0.0.1', args.inject_port), timeout=5)
         sockets.append(inject)
+        if args.nat_unix:
+            nat_directory=Path(tempfile.mkdtemp(prefix='azhub-nat-'))
+            nat_path=nat_directory/'n.sock'
+            address={'type':'unix','data':{'path':str(nat_path)}}
+        else:address={'type': 'inet', 'data': {'host': '127.0.0.1', 'port': str(args.nat_port)}}
         qmp('chardev-add', {'id': channel, 'backend': {'type': 'socket', 'data': {
-            'addr': {'type': 'inet', 'data': {'host': '127.0.0.1', 'port': str(args.nat_port)}},
+            'addr': address,
             'server': True, 'wait': False}}})
         created = True
-        nat = socket.create_connection(('127.0.0.1', args.nat_port), timeout=5)
-        sockets.append(nat)
+        if args.nat_unix:
+            nat=connect_local_socket(nat_path);sockets.append(nat)
+        else:nat = socket.create_connection(('127.0.0.1', args.nat_port), timeout=5)
+        if not args.nat_unix:sockets.append(nat)
         capture.settimeout(1)
         nat.settimeout(1)
         child = subprocess.Popen(prefix + ['python3', '/mnt/c/' + script.as_posix()[3:]],
@@ -165,7 +227,10 @@ def main():
                         break
                     for frame in records.feed(data):
                         if management:
-                            if owned_peer(frame):
+                            if args.fixture_dhcp and fixture_dhcp_reply(frame,dhcp_clients):
+                                counts['nat_dhcp_suppressed'] += 1
+                                continue
+                            if owned_peer(frame,owned_addresses):
                                 counts['nat_peer_suppressed'] += 1
                                 continue
                             with inject_lock:
@@ -225,6 +290,11 @@ def main():
                 qmp('chardev-remove', {'id': channel})
             except Exception as error:
                 errors.append('Remove capture channel: ' + str(error))
+        if nat_directory:
+            try:
+                if nat_path.exists():nat_path.unlink()
+                nat_directory.rmdir()
+            except OSError as error:errors.append('Remove owned local socket: '+str(error))
         print(json.dumps({'frames': counts, 'errors': errors}), flush=True)
     if errors:
         raise SystemExit(1)

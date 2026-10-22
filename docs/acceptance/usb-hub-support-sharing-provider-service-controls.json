@@ -1,0 +1,153 @@
+{
+  "recorded_at_utc": "2026-10-20T17:55:19.685795+00:00",
+  "scope": "Empty public computer-provider services and native protocol progression; not hub-sharing acceptance",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "Probe3 offers TCP12523/1051 empty DB control; no native TCP connection observed",
+    "Probe4 secondary computer keepalive triggers native0x10 hello on50002; stub answers0x11 hostname; no new Source row in timed capture",
+    "Probe5 empty RPC service receives native portmapper GETPORT on50111 and mountd v1 EXPORT on40000",
+    "Probe5 has no export groups and no real files; explicit network-group variant is prepared but not executed",
+    "Generic discovery replies0x05 contain fields[1,1],[1,2],[1,3]; do not infer number17 assignment from them"
+  ],
+  "limits": [
+    "No usable library, music, native slot borrowing or production sharing implementation",
+    "No conclusion that computer-provider architecture is impossible",
+    "TCP endpoint absence alone was not enough; native availability workflow includes separate RPC export negotiation",
+    "Multiple public endpoints and per-client source sessions remain unproven"
+  ],
+  "scopes": [
+    {
+      "version": 3,
+      "events": {
+        "listener_ready": 2,
+        "discovery_reply": 4,
+        "provider_probe_finished": 1
+      },
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    },
+    {
+      "version": 4,
+      "events": {
+        "listener_ready": 3,
+        "discovery_reply": 12,
+        "status_query": 428,
+        "provider_probe_finished": 1
+      },
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    },
+    {
+      "version": 5,
+      "events": {
+        "listener_ready": 6,
+        "discovery_reply": 12,
+        "status_query": 427,
+        "rpc_request": 2,
+        "provider_probe_finished": 1
+      },
+      "cleanup": {
+        "transport": 0,
+        "peer": 0,
+        "observer": 0
+      },
+      "namespace_removed": true
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/peer.stdout",
+      "sha256": "19dcd690a4c2f96cbb60869f0be160290927e28bc271286310c85ca52d2812d5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/wire.stdout",
+      "sha256": "93cc0a823546646fff550a8fb0134499ce876d347a66afb3102ee32b727744fc"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/transport.stdout",
+      "sha256": "e39773cbe2dd2fb54aaf077cb5ef509cb350f254f8ca4b5f15ff73929efc8062"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/results.json",
+      "sha256": "18fdd5b663a49a5f1883e0a2c39669dc177b7946b9905ca29f371f32559680ca"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/registered-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v3/probe-source.py",
+      "sha256": "46cfe82e0439f404a0c67813a3cce0e4b707065e6faa6d5392e3f6cdea2e7fb6"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/peer.stdout",
+      "sha256": "6990909e926f1874add0d9c4419780f4fcdd7b3c40aebcd30e68032015762a94"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/wire.stdout",
+      "sha256": "b478348992e435bda26ccc58afac10217e0c2a56fc54c4064a4227092827c37f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/transport.stdout",
+      "sha256": "0d96be135c8d5b64f74585c5e7f3cc9b6355fecd73cbe7fc4000613615956928"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/results.json",
+      "sha256": "dbb94167c9a899fd57bc2e8a653d78d9b789ee195ec22e6b0fd226cae9e7c486"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/registered-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v4/probe-source.py",
+      "sha256": "09962a919d0bf7e23fc99b0f68e3b69f46ff021dd7fc9d8c9e1d64fdacf9816c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/peer.stdout",
+      "sha256": "98911947fab405aaff886e2099839bee8d2adab80994c8a0bfa53a70d9e62ecc"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/wire.stdout",
+      "sha256": "f8be0bcb01e2aa9542fcc2a9d83096e303adc1f5cd2b1f3c91bb9fe592b4578e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/transport.stdout",
+      "sha256": "68e40dc6f135d121ffed18c5cc7973c4a91228df1edff6d4e3b05a49d4ee97fb"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/results.json",
+      "sha256": "360e70e0f7290e2f6dffdd5590e6479983372281dec43ae2de7160728f7b6f59"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/registered-provider17.png",
+      "sha256": "fca31fe94ff92088018e8d63c17fb3d1e9c508c4c2fb2c89579520233cd724a5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v5/probe-source.py",
+      "sha256": "1866e67d4f1c2a28b213a94f045880f036d3bc2eb9773313a22eebedee6b919d"
+    }
+  ]
+}

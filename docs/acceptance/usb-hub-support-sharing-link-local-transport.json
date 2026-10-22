@@ -1,0 +1,34 @@
+{
+  "native_DHCP_OFFER_ACK": false,
+  "native_DHCP_no_offer": true,
+  "IPv4LL_configured_and_retired": true,
+  "reporting_only_bound_event": false,
+  "proposal_not_applied": false,
+  "address_flow_applied_then_removed": true,
+  "arp_conflict_before_configuration": false,
+  "reacquired_after_decline": false,
+  "standalone_leased_library": false,
+  "native_state_unchanged": true,
+  "supervised_acquisition": true,
+  "standalone_helper": true,
+  "broker_allocate_callbacks": false,
+  "physical_AZ_touched": false,
+  "scope": "Standalone emulator allocation/readiness control: anonymous namespace and owned MACVLAN, supervised native no-offer, random IPv4LL candidate, ARP/configuration/readiness, repository UDP echo over direct169.254/16 route with no default/gateway, address retirement and explicit link deletion. Native PID/DNS/routes/DHCP snapshot unchanged and complete owned cleanup pass. Not managed broker allocator/public library/independent CDJ client acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-link-local-transport-v2",
+  "runner_exit": 0,
+  "owned_scope_cleaned": true,
+  "prior_attempt": {
+    "directory": "local/diagnostics/sharing-link-local-transport-v1",
+    "result": "Route assertion inspected /proc/net from a namespace-entered worker thread; no UDP success claimed. Complete cleanup passed. V2 reads /proc/thread-self/net/route and passes."
+  },
+  "artifact_sha256": {
+    "local\\integration\\sdk-broker-probe-v1\\test-link-local-acquire-aarch64": "620c041afe89da345abc16e4c3e73845b238e0cb29b2e25260b855670e52fc9e",
+    "local\\integration\\sdk-broker-probe-v1\\usb-hub-support-network-helper-candidate-emulator": "ab8773de42f069928fa740ecfaa8c4eb056160f86404d2ae57a0f2b1881c364b"
+  },
+  "evidence_sha256": {
+    "result.json": "4535ebf3ee73a7041800a00a65ad043239755812e3a04e4b2cfab3e9886aff92",
+    "client-events.txt": "377d183158bc1ae29c2e92006eac8ffc3f7dd31cb433a9a895df6deb5dd6b26f",
+    "server.stdout": "1cf3bfb65f84ef62872547c800a909c3c7e9125cc6eeffeea46fb8f5012397a4",
+    "guest-commands.json": "857474c3cdccdf6ba5d8e92b4d1d681853c59ad85478f07d38cb3ee7735d01cc"
+  }
+}

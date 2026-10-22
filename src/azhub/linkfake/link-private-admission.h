@@ -32,6 +32,14 @@ static uint64_t probe_operate(uint64_t state, uint64_t event,
     if (lf_runtime_ready() && (event&255)==9) {
         uint64_t parser=((uint64_t *)state)[1];
         const unsigned char *record=*(const unsigned char **)(parser+0x78);
+#ifdef LF_PUBLIC_NATIVE_STATUS_OBSERVER
+        if (record) {
+            static unsigned diagnostic_notes;
+            if (__atomic_fetch_add(&diagnostic_notes,1,__ATOMIC_RELAXED)<64)
+                lf_log("native-member-connecting compact=%u ip=%u.%u.%u.%u; event only, admission unproven",
+                    record[0],record[8],record[9],record[10],record[11]);
+        }
+#endif
         if (record && (record[0]==7 || record[0]==8) &&
             record[8]==127 && record[9]==77 && record[10]==0 &&
             record[11]==record[0])

@@ -1,0 +1,64 @@
+{
+  "recorded_at_utc": "2026-10-20T17:31:05.140089+00:00",
+  "scope": "Independent native exported-file control; not hub-sharing or playback acceptance",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "client": "Beat Link8.0.0 menus and Crate Digger0.2.1 FileFetcher, unchanged protocol implementations",
+  "native_source": "player1 USB, mount/C/, path PIONEER/rekordbox/export.pdb",
+  "file_bytes": 4419584,
+  "file_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+  "native_USB_hash_matches": true,
+  "temporary_download": "Deleted by client finally block; only hash/count emitted",
+  "menus": {
+    "event": "menus",
+    "root_items": 7,
+    "playlist_items": 20,
+    "track_items": 2547
+  },
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true,
+    "transport_errors": []
+  },
+  "limits": [
+    "Native exported database bytes verified, no audio-file or playback claim",
+    "No hub export or public representation feasibility conclusion",
+    "Kernel socket inventory absence is not proof of missing RPC/NFS service; on-wire protocol endpoints need tracing",
+    "Existing Beat Link asynchronous mount-listener shutdown warnings still present",
+    "No physical AZ changes or tests"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/peer.stdout",
+      "sha256": "9c8270a6b62d216550e9b2fff7d285dc7ada086ff48bc977846e2c41a673ff2a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/peer.stderr",
+      "sha256": "3bf6f707f1424238d00e13661001641731a8b2b1de0ca44327e2a839678a1917"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/wire.stdout",
+      "sha256": "2077d936a477db5770ea39bf27fb414b18b3c449d8b5b339a15e212fb88ebaae"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/transport.stdout",
+      "sha256": "64266f64d311981e1c7fb3bee753141e62a7fe932b25556cc4b5d9766636a637"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/results.json",
+      "sha256": "fd699fcd56f2dc494b220a52358d77c2d9c6f388bf656e115a84b267fbeb12ba"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/guest-file-control.txt",
+      "sha256": "e4c2a2552bb2ed65b2082927905de4c4ac95956b5c11b05e9ab6c8deabf8776a"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-native-file-v1/ipv6-sockets.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

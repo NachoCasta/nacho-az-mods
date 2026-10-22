@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scope": "Namespace-bound ARP descriptor factory; controller sends through owned socket without entering source namespace",
+  "source_sha256": {
+    "src\\azhub\\linkfake\\public-address-arp-namespace.h": "6208a345f6a5c22fbd6f8673753eabf3a326b2c06ee1c059f4502eb48f950c5f",
+    "src\\azhub\\linkfake\\test-public-address-arp-namespace.c": "01dd366adf2351de17c4f5c512d3dd2b9be33f289305b583a06c9ca7d5a3fd54",
+    "src\\azhub\\linkfake\\test-public-network-link.c": "124b0e87539fffecdad808e9cae18f9cc0bd945438f15d48f1fac94598a8f3c1",
+    "src\\azhub\\research\\scripts\\test-owned-network-emulator.py": "74251ebbc54ae79e6159056d56a46737adb856d7320a5d53e5aae21a774b83ef"
+  },
+  "binary_sha256": "7ebbb53548a0c5290eb56b2bd4562153f03dede60bb7571242fc6f332340665b",
+  "tests": {
+    "pinned_aarch64_live_factory": "passed",
+    "targeted_host_plain_asan_ubsan_tsan": "passed; refusal/wrong-kind cleanup"
+  },
+  "evidence": [
+    "local/diagnostics/sharing-arp-namespace-factory-v1/result.json",
+    "local/diagnostics/sharing-arp-namespace-factory-v1/commands.json",
+    "local/integration/sdk-broker-probe-v1/arp-namespace-targeted.log"
+  ],
+  "validated": [
+    "Owned source namespace/MACVLAN created automatically",
+    "Disposable factory thread enters source namespace and opens validated bound ARP socket",
+    "Controller takes nonblocking CLOEXEC descriptor after join",
+    "Controller submits one candidate ARP probe via source-bound socket without entering its namespace",
+    "Configure/reconfigure-refusal/remove operation regression passes",
+    "Native state preserved and module/temp resources cleaned"
+  ],
+  "limitations": [
+    "One ARP send accepted by kernel, no independent wire observer in this control",
+    "Not a full RFC5227 sequence or DHCP/ARP readiness integration",
+    "Host sanitizers cover negative paths, not successful privileged factory branch",
+    "Full74/74/74 matrix predates this added component",
+    "No production SDK allocator or target4.4 runtime acceptance"
+  ],
+  "physical_AZ_touched": false
+}

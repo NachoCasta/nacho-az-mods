@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-10-20T18:41:43.833947+00:00",
+  "scope": "Independent Crate Digger complete-file transfers from host-side read-only fixture NFS backend",
+  "baseline_version": "0.3.2",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "client": "Unmodified Crate Digger0.2.1 FileFetcher invoked by FixtureFileClient",
+  "network_scope": "Owned isolated azhub-link namespace; same-namespace client targets192.0.2.2 with explicit fixture-self-client option; no physical interface",
+  "results": [
+    {
+      "event": "fixture_file_fetch",
+      "kind": "database",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+    },
+    {
+      "event": "fixture_file_fetch",
+      "kind": "audio",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+    }
+  ],
+  "source_proof": "Both hashes match source files read-only hashed on emulator hub0/sdc1; evidence file retained locally",
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true,
+    "client_exit_code": 0,
+    "client_temporary_outputs_deleted": true
+  },
+  "local_checks": {
+    "file_backend_groups": 3,
+    "metadata_backend_groups": 3,
+    "wire_groups": 5
+  },
+  "limits": [
+    "Host-side explicit-file snapshot export only; no on-device live integration",
+    "Same-namespace independent library transport control, not external hardware or native deck audio acceptance",
+    "No decoded playback, concurrent-client, multi-public-source, reconnect or loaded-remote-eject acceptance",
+    "Later mount-path validation is synthetic-test checked but not part of frozen v17 runtime sources",
+    "Default provider accepts only emulator192.0.2.15;111/same-host-client access requires explicit isolated control option"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/file-client.stdout",
+      "sha256": "db17174c01d58d05aa5e26199ac748157cb58e3ef15794577f28433cc345fe73"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/file-client.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/peer.stdout",
+      "sha256": "99e3bd925e40c56ca34f8eaeebc0f548deea5446f6eff411c6ce86010203e663"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/results.json",
+      "sha256": "ab5ae29aea8e83eb9560af54534bb460577ed4405ad13d2bb113611d36dab399"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/hub-source-hashes.txt",
+      "sha256": "77a0c895ec74a65a0dd92b7894c868df90817791d0aaaf56fce96836e9aeab55"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/source-used/FixtureFileClient.java",
+      "sha256": "83cd2002d8cdcdf10fedc75f2879f0dc5e032e505f70f4d854da4df78893f21d"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/source-used/link-public-provider-probe.py",
+      "sha256": "060bdba103c3dd6f5cb95fc369ea5b854786625da4c70afa5c3c3aa4b736eaf0"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/source-used/link_fixture_files.py",
+      "sha256": "91271c5ca739ce0e897023b806aed80368e42a2dd36ec61f8671821440a55ec4"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v17/source-used/link_snapshot_backend.py",
+      "sha256": "0c9fa22d04de281bea9bab03fe3b7edae4e465dbf1c01de05ffde43c23985d5f"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "C0x2102 MP3 load-info response and catalog authorization; no new native deck playback acceptance",
+  "host_matrix": {
+    "plain": 48,
+    "asan": 48,
+    "tsan": 48
+  },
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "8f5655762ed62227f06a4bbb3b78979ebe01ddb73fc4f87345b461f19a6c819a",
+    "synthetic_load_info_controls_pass": true
+  },
+  "independent_control": {
+    "client": "Unchanged Beat Link Client handshake and Message codecs",
+    "transport": "Loopback TCP to C live-index backend",
+    "fixture": "Private PDB plus exactly one copied MP3 in owned temporary export root",
+    "rows": 7,
+    "checks": [
+      "MP3 decoder1",
+      "duration",
+      "tempo",
+      "comment",
+      "PDB path and file size",
+      "track ID",
+      "row0x2f value1",
+      "key ID"
+    ],
+    "result": "Exact independent Crate Digger PDB field match"
+  },
+  "authorization": "Load-info is refused unless the PDB audio path is registered in this source catalog; native/private DMST rejection remains in place",
+  "catalog_change": "Generic catalog path lookup moved from public-nfs-tree.h to public-file-catalog.h unchanged, shared by file and metadata adapters",
+  "format_coverage": {
+    "implemented": "MP3 only, case-insensitive extension; mapping previously confirmed by native emulator fixture load",
+    "other_formats": "Open implementation/validation gate, not removed from goal"
+  },
+  "research_candidates": {
+    "provenance": "Ignored local vynull-menuitem.go trackInfoTitleID, code facts only; candidate mappings need our native emulator controls",
+    "source_sha256": "42f4f9fe6ccddcae2380f29ddc8dc37f6db2b9b933d14cdc4a95496e5e6785cb",
+    "codes": {
+      "m4a_aac": 4,
+      "flac": 5,
+      "wav": 11,
+      "aiff": 12
+    },
+    "qualification": "Reference explicitly describes AIFF mapping as inferred, not hardware-verified; no compatibility claim is based on these values"
+  },
+  "remaining": [
+    "Other audio-format native controls and implementation",
+    "Real analysis/cue/beatgrid/waveform/artwork responses",
+    "Joint metadata/file service native load and playback",
+    "Runtime multi-source sharing and remote-loaded safe eject"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-db-menus.h": "cc87edda2008540f0c6dd99e4f52fad3655f29afdcbba68864e5eaf66598f5f2",
+    "src/azhub/linkfake/public-file-catalog.h": "a561ba46350246c093c795dcd0b69ecc3566703f0adec9197a66e8025a0c4c5f",
+    "src/azhub/linkfake/public-nfs-tree.h": "3e36e97d5d4480c6169205e4afbb1c0076b57f0200e44298b3cb4db2f4c9242d",
+    "src/azhub/linkfake/test-public-db-menus.c": "617872df345f90408a4fc750c08d089fbf08903a8ebe4cf26103bf11650a2ccb",
+    "src/azhub/research/link-peer/src/main/java/DbLoadInfoControl.java": "6bd519cd7dd6c7235a6df5451444d73369231b04b85fc6c65dcdb5847258d101",
+    "src/azhub/research/scripts/test-public-db-load-info.py": "ff1d885ee5f802bee39ec04ca45cde2648a2595c80b7740e71afcdb31b6232d3"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-load-info-v1"
+}

@@ -18,19 +18,24 @@ enum hub_source_badge_family { HUB_BADGE_SOURCE, HUB_BADGE_BROWSE, HUB_BADGE_WAV
 /* Private composites remain alive for the mod's process lifetime. Native
  * resources stay on the device; copy assignment retains a widget reference. */
 static uintptr_t source_badge_images[3][8];
+static unsigned char source_badge_attempted[3][8];
+#ifndef HUB_BADGE_LOG
+#define HUB_BADGE_LOG(...) ((void)0)
+#endif
 static int source_badge_prepared;
 static fn8 source_badge_callback_original,source_badge_base_original,source_badge_root_original;
 struct source_badge_scope { uintptr_t controller; int number; };
 static __thread struct source_badge_scope source_badge_current;
 
-/* Only use before hook installation, or on preparation failure. The native
+/* Only use before hook installation or in a quiescent test teardown. The native
  * destructor does not clear its handle, so explicitly clear each released word. */
 static void source_badge_discard_images(void) {
     for (int family=0;family<3;family++) for (int number=0;number<8;number++) {
-        HUB_BADGE_DESTROY(&source_badge_images[family][number]);
+        if (source_badge_images[family][number]) HUB_BADGE_DESTROY(&source_badge_images[family][number]);
         source_badge_images[family][number]=0;
     }
     source_badge_prepared=0;
+    memset(source_badge_attempted,0,sizeof source_badge_attempted);
 }
 #ifndef HUB_BADGE_COMPOSE
 #define HUB_NATIVE_COMPOSE_LOG(...) lf_core->log(EJECT_ID,__VA_ARGS__)
@@ -38,16 +43,10 @@ static void source_badge_discard_images(void) {
 #define HUB_BADGE_COMPOSE source_badge_native_compose
 #endif
 static int source_badge_prepare(void) {
-    if (source_badge_prepared) return 0;
-    for (int family=0;family<3;family++) for (int number=1;number<=8;number++) {
-        if (!HUB_BADGE_COMPOSE(family,number,&source_badge_images[family][number-1]) ||
-            !source_badge_images[family][number-1]) goto failed;
-    }
+    /* init() may precede native File/image services on a cold start. Native
+     * resource calls belong to the first actual widget update, not init(). */
     source_badge_prepared=1;
     return 0;
-failed:
-    source_badge_discard_images();
-    return -90;
 }
 static int source_badge_widget_family(uintptr_t widget) {
     if (!widget) return -1;
@@ -91,19 +90,38 @@ static uint64_t source_badge_base(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     uintptr_t widget=0;
     int family=source_badge_owned_widget((uintptr_t)a,&widget);
     if (family<0 || !b) return source_badge_base_original(a,b,c,d,e,f,g,h);
+    int number=source_badge_current.number;
+    uintptr_t image=__atomic_load_n(&source_badge_images[family][number-1],__ATOMIC_ACQUIRE);
+    if (!image) {
+        unsigned char expected=0;
+        if (!__atomic_compare_exchange_n(&source_badge_attempted[family][number-1],&expected,1,0,
+                __ATOMIC_ACQ_REL,__ATOMIC_ACQUIRE))
+            return source_badge_base_original(a,b,c,d,e,f,g,h);
+        /* Let native UI construction complete first. A failed/in-flight
+         * composition keeps the full native presentation and never blocks a
+         * different callback or retries a missing resource every frame. */
+        uint64_t native=source_badge_base_original(a,b,c,d,e,f,g,h);
+        if (!HUB_BADGE_COMPOSE(family,number,&image) || !image) {
+            if (image) HUB_BADGE_DESTROY(&image);
+            HUB_BADGE_LOG("hub label native fallback family=%d number=%d",family,number);
+            return native;
+        }
+        __atomic_store_n(&source_badge_images[family][number-1],image,__ATOMIC_RELEASE);
+        HUB_BADGE_LOG("hub label prepared on widget update family=%d number=%d",family,number);
+    }
     unsigned char description[16];
     memcpy(description,(const void *)(uintptr_t)b,sizeof description);
     description[5]=0; /* Hide the native LINK and numeric-player children. */
     memset(description+8,0,8);
     uint64_t result=source_badge_base_original(a,(uintptr_t)description,c,d,e,f,g,h);
-    HUB_BADGE_ASSIGN((uintptr_t *)(widget+0xd0),
-                     &source_badge_images[family][source_badge_current.number-1]);
+    HUB_BADGE_ASSIGN((uintptr_t *)(widget+0xd0),&image);
     return result;
 }
 static uint64_t source_badge_root(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
                                 uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     uintptr_t widget=0;
-    if (source_badge_owned_widget((uintptr_t)a,&widget)<0 || !b)
+    int family=source_badge_owned_widget((uintptr_t)a,&widget);
+    if (family<0 || !b || !__atomic_load_n(&source_badge_images[family][source_badge_current.number-1],__ATOMIC_ACQUIRE))
         return source_badge_root_original(a,b,c,d,e,f,g,h);
     unsigned char description[16];
     memcpy(description,(const void *)(uintptr_t)b,sizeof description);

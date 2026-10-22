@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "Native emulator DHCP OFFER/ACK through isolated TAP and reporting-only hook",
+  "evidence_directory": "local/diagnostics/sharing-live-dhcp-v1",
+  "runner_exit": 0,
+  "native_client": "BusyBox1.27.2 udhcpc",
+  "server": "Repository-authored fixed UDP fixture; not an independent general-purpose DHCP server",
+  "lease": {
+    "address": "192.0.2.3",
+    "server": "192.0.2.2",
+    "seconds": 60,
+    "MAC": "02:00:00:00:12:03",
+    "mask": "255.255.255.0"
+  },
+  "validated": [
+    "Actual OFFER and ACK share the native client transaction ID",
+    "Native hook emits exact deconfig and bound records",
+    "No proposed IPv4 address applied",
+    "Native EP147 and DHCP PIDs, DNS and routes unchanged",
+    "Eight transport framing/ownership/DHCP filtering controls pass"
+  ],
+  "source_sha256": {
+    "test-live-dhcp-emulator.py": "d3b56bb160a37fa65d4d6b4bf595939708b39616b40b35453ee46735aa2c71ec",
+    "dhcp-fixture-server.py": "9b17f39c2007eb47482d0479a9d426032b5532f6bd218d02a3af01e005414c0e",
+    "public-dhcp-event-hook.sh": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+    "link-primary-tap-transport.py": "8cdb4da6a59bf20623fe39c511847152c4fb110f8206d82ffcd7ff8a4f5f797a",
+    "test-link-primary-tap-transport.py": "7f9be47d4f29bd9abdc276c9c21580577df25f82cc27f590c3987dcb1057d90b"
+  },
+  "cleanup": {
+    "temporary_guest_files_removed": true,
+    "QEMU_listeners_after": 5,
+    "transport_errors": [],
+    "owned_guest_and_host_namespaces_removed": true,
+    "emulator_macvlan_module_removed": true,
+    "NAT_fixture_DHCP_replies_suppressed": 2
+  },
+  "limitations": [
+    "Initial acquisition only; no renewal, expiry or release acceptance",
+    "No automatic address application or ARP/allocator integration",
+    "No target4.4 runtime or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

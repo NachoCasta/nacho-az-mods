@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scope": "SDK-managed executable helper with actual authenticated SOURCE to real service endpoints and synthetic library staging in localhost emulator",
+  "source_sha256": {
+    "public-sdk-probe.h": "1a991a05eef8cfa44549ed8d13b398c44fd092bf4192af81864d7f2831c48a7e",
+    "public-broker-service-emulator.h": "359111b547002b733115b12f566942b828c069fe4caf6677112dbbe8877a0ec4",
+    "public-broker-probe-child.h": "1f48c216619082ef938e6c86a542242a5a65a2e3b576c9c7be36a9afb8f266e5",
+    "public-broker-session.h": "364940e4e7fcf59deda2e36162c7fedcbefbbddd078a672ba81d086ac9ed871b",
+    "public-network-helper.c": "fd3975577f61813bbbb4afbdd992621d80ca0aeea12b6774429a6abd710f78b0"
+  },
+  "binary_sha256": {
+    "mod": "2057ca23fae7f93632ececb75f9095b3cefdab04e98c1fa5c8d401ab048879b7",
+    "helper": "49f0359f11762e17bd7e338e0fb2c3da94aa8c01ce43350fe31da487ff2b130a"
+  },
+  "runtime": {
+    "run": "13ddf012ed434a958b394e9b4602409e",
+    "success": true,
+    "phase": 5,
+    "managed_pid": 303414,
+    "peer_pid": 303414,
+    "namespace_inode": 4026532427
+  },
+  "evidence": [
+    "local/diagnostics/sharing-sdk-broker-service-v1/result.json",
+    "local/diagnostics/sharing-sdk-broker-service-v1/probe-result.json",
+    "local/diagnostics/sharing-sdk-broker-service-v1/mod.log",
+    "local/diagnostics/sharing-sdk-broker-service-v1/original-files.json",
+    "local/diagnostics/sharing-sdk-broker-service-v1/guest-commands.json",
+    "local/diagnostics/sdk-service-preflight/empty-decks.png",
+    "local/integration/sdk-broker-probe-v1/service-connect-regression.log"
+  ],
+  "validated": [
+    "Empty emulator decks visually inspected before temporary installation",
+    "Exact candidate package/stage/helper hashes checked; native mapped mod hash verified",
+    "Real core launch of helper from own USB asset",
+    "Peer credentials/executable and session token authentication",
+    "SCM_RIGHTS SOURCE reaches dispatcher and pinned-root manager",
+    "Actual namespace service sockets open and synthetic library reaches ACTIVE",
+    "STOP completion follows worker join and endpoint closure",
+    "Managed and peer PIDs absent before success",
+    "Exact original package/stage/approval/optional marker and absent helper state restored",
+    "Temporary namespace/interface/module/library and files removed; normal EP147 active afterward"
+  ],
+  "limitations": [
+    "One explicit emulator integration fixture, not production supported-source limit",
+    "Externally prepared address/interface; no automatic namespace/DHCP allocation",
+    "Empty PDB, not real library browse/load or independent client validation",
+    "No native eject/unmount or loaded external deck in this control",
+    "No target4.4 runtime or actual-CDJ interoperability acceptance",
+    "Previous full71/71/71 predates new service mode; shared connection targeted regression passes all three modes"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

@@ -1,0 +1,65 @@
+{
+  "recorded_at_utc": "2026-10-20T18:31:56.448769+00:00",
+  "scope": "Native emulator client browses nested folders and playlist tracks from independent hub snapshot provider",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "baseline_version": "0.3.2",
+  "observations": [
+    "Provider17 serves hub0 PDB snapshot with2546 tracks and185 folder/playlist entries",
+    "Reviewed v13 screenshot displays root folders and selected folder children",
+    "Reviewed v14 screenshot displays selected nested playlist and its real track titles",
+    "Elided empty binary fields are accepted without consuming the following field/message",
+    "Per-connection and preview-context isolation pass synthetic controls"
+  ],
+  "checks": {
+    "wire_test_groups": 5,
+    "backend_test_groups": 2
+  },
+  "limits": [
+    "Host-side immutable metadata snapshot only; no live on-device export",
+    "No audio service, loaded-track acceptance, multi-public-source acceptance or actual-CDJ compatibility established",
+    "Unsupported metadata and analysis queries remain"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/peer.stdout",
+      "sha256": "d5dcc5828085cbf121f04a3c172e605f9fea4d7f487654da57f663c7127cb95c"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/playlist-root.png",
+      "sha256": "c1e414029511bc64e9c22f645e9e86fd6d64ca3768a8ecbfe4e4bd3d90079d26"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/playlist-tracks.png",
+      "sha256": "78bab2d749d7775963ea6e3fe43521ce5742a247930ad8de1cf47c1515fb3421"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/source-used/link-public-provider-probe.py",
+      "sha256": "b1e338070bf7dd3022b60f357d1ca76e9783cf09482357883af6912334d19534"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/source-used/link_snapshot_backend.py",
+      "sha256": "770d637e2ad225f9e0ed191a999e227c671695443a8cf64f5d4207d3e4f2c427"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v14/results.json",
+      "sha256": "f5914b7fd0fbdc7de26a52b54af737a1e354a24834a4169e5531dc051aaf039d"
+    }
+  ],
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  }
+}

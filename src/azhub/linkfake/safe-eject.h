@@ -530,6 +530,16 @@ static int safe_eject_source_poll(struct fake *source,time_t now,time_t *ready_a
     if (source->eject_phase==1) {
         struct safe_listener *music=source->eject_music_listener,*info=source->eject_info_listener;
         if (!music->done || !info->done || waiting>=0 || now<*ready_at) return 1;
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+        /* Join public readers before releasing the private alias/backing mount. */
+        if (!public_mod_drain((unsigned)(source-fakes))) return 1;
+#endif
+#ifdef LF_PUBLIC_SDK_PROBE
+        if (!public_sdk_inventory_drain((unsigned)(source-fakes))) return 1;
+#endif
+#ifdef LF_PUBLIC_SHARING_RUNTIME
+        if (!public_runtime_drain((unsigned)(source-fakes))) return 1;
+#endif
         FILE *box=fopen("/proc/udev_nfs","we"); if (!box) return 1;
         int failed=fprintf(box,"umount %s nfs",source->mp)<0;
         if (fclose(box)) failed=1;

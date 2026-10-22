@@ -1,0 +1,85 @@
+{
+  "recorded_at_utc": "2026-10-20T19:53:56.288511+00:00",
+  "scope": "Research-only standalone MACVLAN module build for prepared4.4.194 target",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "installation_or_load_attempt": false,
+  "build": {
+    "scope": "Local build only; not runtime or physical acceptance",
+    "config_sha256": "f7f4f8aafbc9cede5be22dc36dac06e934c442fc834d7c6e5e30b0578755b3f3",
+    "driver_source_sha256": "2aa65660418fa6121ba2b63b16c9540426bc43f83ffd0baf000c0d21662df54a",
+    "kernel_release": "4.4.194",
+    "compiler": "aarch64-linux-gnu-gcc (Linaro GCC 6.3-2017.05) 6.3.1 20170404",
+    "module_unstripped_sha256": "da8a6723b514b4dbdec896593f4d12db483db330f8fda6aad7ed561d326c3fd6",
+    "module_stripped_sha256": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667",
+    "module_bytes": 29592,
+    "symbol_versions_available": false,
+    "limits": [
+      "No symbol-export or load acceptance follows from compilation",
+      "MACVLAN disabled in target config; core/helper assumptions need review",
+      "No firmware compatibility expansion, packaging, installation or deployment"
+    ]
+  },
+  "static_exports": {
+    "undefined_count": 79,
+    "declarations_found": 79,
+    "missing": []
+  },
+  "header_review": "Only CONFIG_MACVLAN conditional found under prepared include/ is if_macvlan.h macvlan_dev_real_dev inline helper; module-only CONFIG_MACVLAN_MODULE selects its real pointer helper instead of BUG fallback",
+  "observations": [
+    "Unmodified vendor GPL macvlan.c is copied only to ignored local output; wrapper pins source/config hashes and Linaro6.3.1",
+    "Initial vendor default CC wrapper needs missing python command; explicit pinned gcc override resolves the build without changing system Python or vendor source",
+    "Standalone renamed module builds/strips to29592 bytes with exact4.4.194 SMP preempt mod_unload aarch64 vermagic",
+    "Module.symvers is unavailable; empty module dependency metadata is not accepted as dependency verification",
+    "Static GPL source declarations exist for all79 undefined symbols; actual running-kernel exports/load remain untested"
+  ],
+  "limits": [
+    "No runtime load, symbol resolution, network behavior, ABI or physical acceptance",
+    "No source/config change to broaden firmware compatibility; future integration must retain exact firmware/kernel guards",
+    "No package/manifest/catalog/release modification or deployment",
+    "No byte-reproducibility claim across build directories/toolchain installations",
+    "Production transport address allocation, lifecycle and live backend remain unimplemented"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/build-receipt.json",
+      "sha256": "f2c598670e1ddd2cbe240eba2797567d64c3f6d8418e8cb34265856306f29c65"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/build.stdout",
+      "sha256": "43a399cf35ec1dc58cce8d9f2d4ef4dd68600a184fe70583317e4dc699e5bc15"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/module-info.txt",
+      "sha256": "2e592ec4c3951aaa48c33a9f67b029a2521129f91ef5c055359382fffad21a09"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/undefined-symbols.txt",
+      "sha256": "d7ea77d2f0e468b1213e80e6f20d7aae94186fdbd7a19fdcb1fba398895b5e10"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/source-export-audit.json",
+      "sha256": "034b98641bc8347bf8d090a0851ccafb5b5211b86b13d255372bdeaddaa5bfba"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/header-conditional-audit.json",
+      "sha256": "ddee5291ad48d94068842e6528ea52f05b150d163d6e4360062c6d16b3408ec8"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/build-sharing-macvlan.py",
+      "sha256": "8d55abc4b1752d9bcf485c53ff315052f015e7e8c9b90a84f0ee59641696f429"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/audit-kernel-module-exports.py",
+      "sha256": "75d656a9398d49d3a577834387bcf646c2116418f9768f3e273da39dddbadc1b"
+    },
+    {
+      "path": "local/integration/sharing-macvlan-build-v2/usb_hub_macvlan.ko",
+      "sha256": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667"
+    }
+  ]
+}

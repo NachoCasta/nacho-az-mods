@@ -1,0 +1,23 @@
+{
+  "scope": "Independent unchanged Crate Digger PDB row binding audit; software fixture facts only",
+  "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+  "retained_file_track_id": 1884,
+  "retained_file_path": "/Contents/Aaliyah/Are You That Somebody/Aaliyah - Are You That Somebody-1.mp3",
+  "retained_file_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+  "old_synthetic_status_track_id": 495,
+  "old_status_path": "/Contents/#TocoParaVos/#Tocoparavos/#TocoParaVos - Algo m\u00e1s.m4a",
+  "old_same_track_pairing_proven": false,
+  "corrected_status_self_test_passed": true,
+  "corrected_fixture_verification_passed": true,
+  "local_native_engine_content495_controls_unchanged": true,
+  "paired_native_and_individual_hub_eject_repeats_pending": false,
+  "physical_AZ_touched": false,
+  "public_advertised_slot": 4,
+  "old_public_status_slot": 3,
+  "old_public_slot_pairing_proven": false,
+  "native_source_slot": 3,
+  "corrected_tuple_verification_passed": true,
+  "paired_native_reference_passed": true,
+  "corrected_public_collection4_repeat_passed": true,
+  "corrected_individual_full_tuple_repeat_passed": true
+}

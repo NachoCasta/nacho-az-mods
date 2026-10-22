@@ -304,6 +304,12 @@ static void hub_mount_poll(void) {
         if (safe_eject_source_poll(f,now,&ready_at,waiting)) continue;
 #endif
         if (f->unmount_pending==1 && waiting<0 && now>=ready_at) {
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+            if (!public_mod_drain((unsigned)i)) continue;
+#endif
+#ifdef LF_PUBLIC_SDK_PROBE
+            if (!public_sdk_inventory_drain((unsigned)i)) continue;
+#endif
             uint16_t id=0x102;
             if (f->srv_music) ((void (*)(uint64_t,void *,void *))0x1373928)(f->srv_music,&id,NULL);
             if (f->srv_info) ((void (*)(uint64_t,void *,void *))0x1975468)(f->srv_info,&id,NULL);

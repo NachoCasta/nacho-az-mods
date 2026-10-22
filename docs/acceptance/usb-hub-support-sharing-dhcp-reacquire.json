@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "scope": "One bounded live recovery from DHCP-granted ARP conflict to another address",
+  "evidence_directory": "local/diagnostics/sharing-dhcp-reacquire-v1",
+  "runner_exit": 0,
+  "probe_sha256": "a98f1b7c2e1f557480c40947551ceaf44a51d34c5cb84b48172d915e2530b539",
+  "helper_sha256": "70338c237f8e83eff9624fe08695cdd18dc699a695c6995bfac098735efc8ade",
+  "source_sha256": {
+    "src/azhub/linkfake/test-public-dhcp-acquire.c": "8e71b3b780bfea61d05376b1a9d5b97180f875e5bcb807a03ee68779aa10347b",
+    "src/azhub/research/scripts/test-live-dhcp-emulator.py": "95df58eea34064c4d957485871b338a1b932a75a70b083cb78e5e36c63729bd2",
+    "src/azhub/research/scripts/dhcp-fixture-server.py": "0c2af228be1541cbfac2c05c41071550d99472e819203a2b9f24e42758826d37",
+    "src/azhub/research/scripts/public-address-flow-probe.h": "b3f2242a74551d8e4337b7753d5e1e6d3adea8aa1014d729cb1919272ab9cef9",
+    "src/azhub/linkfake/public-address-conflict.h": "47994e2c5392595aa93e92638a76d285562128bdf57576942a0626de212debf6"
+  },
+  "first_address": "192.0.2.3",
+  "reacquired_address": "192.0.2.4",
+  "guest_quiet_ms": 10001,
+  "host_decline_to_discover_seconds": 10.100738171000003,
+  "validated": [
+    "First address never configured; server receives matching DECLINE",
+    "Retained retry context enforces at least ten seconds before next native client",
+    "Fresh pipe/process with same explicit MAC-based option61 identity",
+    "Second actual OFFER/ACK assigns a different address",
+    "Lease generation advances after first retirement/removal acknowledgements",
+    "Second ARP/configure/announcement/UDP/remove path succeeds",
+    "Native process IDs/DNS/routes and parent namespace preserved"
+  ],
+  "regression": {
+    "acquisition_unit_tsan": "passed",
+    "acquisition_unit_asan_ubsan": "passed",
+    "acquisition_unit_plain": "passed",
+    "live_recovery_sanitizer_instrumented": false
+  },
+  "cleanup": {
+    "test_module_removed": true,
+    "temporary_guest_files_removed": true,
+    "transport_errors": [],
+    "owned_guest_host_namespaces_removed": true
+  },
+  "limitations": [
+    "One repository-authored two-address fixture; not arbitrary DHCP-server acceptance",
+    "No running music endpoints or ongoing-service conflict",
+    "No production broker, unbounded retry or continuous refresh/expiry integration",
+    "No target4.4 runtime, physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scope": "Real ALLOCATE dispatcher callbacks for owned acquisition/readiness/endpoint retirement; eight pending cancellations",
+  "source_sha256": {
+    "public-broker-allocator.h": "5d2eb676945b13f5878c61015f9bf239be56397f5d02367d76e34e13fadd3bda",
+    "test-public-broker-allocator.c": "9c9367adb8dff8250eb487bb167f1ecc02daeada121d925e75d95ee9daff4432"
+  },
+  "binary_sha256": "201def9d294ffd9aa98d146711543b01c0ca5887240ab37e40834f0198d1734a",
+  "tests": {
+    "targeted_plain_asan_ubsan_tsan": "passed",
+    "pinned_aarch64_pending_cancellation": "passed"
+  },
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/broker-allocator-targeted.log",
+    "local/integration/sdk-broker-probe-v1/broker-allocator-emulator.json"
+  ],
+  "validated": [
+    "ALLOCATE starts actual owned namespace acquisition callbacks",
+    "STOP cancels eight pending sources before publication",
+    "Pending creator threads joined before namespace/root capability release",
+    "No worker/endpoints start during pending cancellation",
+    "Descriptor count returns to baseline",
+    "Pinned AArch64 run preserves EP147 PID and removes test executable"
+  ],
+  "implemented_not_yet_runtime_validated": [
+    "Successful callback path from native DHCP to ARP/configure and endpoint factory",
+    "Configured callback retirement through exact netlink removal before namespace release"
+  ],
+  "limitations": [
+    "This control cancels before DHCP/MACVLAN creation; not successful eight-source service acceptance",
+    "Positive callback path and SDK executable wiring still require trials",
+    "Address-removal failure retains ownership and reports a fault, not successful closure",
+    "Production identity allocation, inventory discovery, jitter policy, no-DHCP fallback and refresh remain pending",
+    "Earlier full76/76/76 predates allocator adapter/ALLOCATE changes"
+  ],
+  "physical_AZ_touched": false
+}

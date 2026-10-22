@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-10-20T18:21:20.833108+00:00",
+  "scope": "First host-side public metadata backend over a hub stick snapshot; native AZ client renders real track list",
+  "baseline_version": "0.3.2",
+  "emulator_pid": 967182,
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "data_source": "Emulator hub0 mounted at/media/usb/sdc1, own PIONEER/rekordbox/export.pdb copied read-only to ignored local research",
+  "source_PDB_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+  "snapshot": {
+    "track_count": 2546,
+    "playlist_entries": 185,
+    "root_entries": 20
+  },
+  "observations": [
+    "Crate Digger parses the hub database into a private local snapshot; no native USB library slot or local5/6 requester is reused",
+    "Public provider17 advertises2546 tracks, completes setup/0x3007, and serves root/track pages from its own per-connection menu state",
+    "Reviewed native Browse screenshot shows2546 real titles under the public rekordbox provider",
+    "Native client uses short argument-type arrays and8-argument render requests; wire parser now supports standard12 and native count-length dialects",
+    "Playlist selection is still blank in reviewed capture; folder type correction and numeric request logging are prepared but not yet exercised",
+    "Missing metadata/analysis commands trigger retries/timeouts; no audio files or track load are implemented"
+  ],
+  "local_checks": {
+    "wire_framing_tests": 3,
+    "coverage": "Fragmented/coalesced messages, UTF-16 surrogate text, native short type array, oversize/truncated/type-invalid input"
+  },
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "limits": [
+    "Host-side immutable snapshot prototype, not live on-device export or final candidate",
+    "Direction is independent native AZ client browsing external prototype; actual CDJs querying AZ remain untested",
+    "Only one public source; no concurrent-client, eight-source address ownership, loaded remote eject or audio/phase acceptance",
+    "No claim that all playlist/metadata/analysis browsing works",
+    "Production0.3.2 remains unchanged"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/peer.stdout",
+      "sha256": "3636f4c54608d3dfab894a9f93773e7a16f809b350e2eb416589e3d1e133415f"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/transport.stdout",
+      "sha256": "ffd966e072337dc276c0c013385734d7255012101a9714da82afd52fdb6bbbe1"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/results.json",
+      "sha256": "e66b0c22be4579d72fa08420f9fa940135c524334d9d6e6449bc6f852ff66470"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/hub-source-proof.txt",
+      "sha256": "ca9fb82e2a671cf4318ad9bb2cd088664df718e17e244d1791c16f7e4e20ae11"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/real-library-root.png",
+      "sha256": "da2e8dee82f58552373852a9b6d6447b3ec29e99fd9516e319df03c8151a331e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/real-library-playlists.png",
+      "sha256": "ce8f2309dda4f6e525c7d5c824029974ef35a1008a63c6041f0f37bfd1ac2058"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/registered-provider17.png",
+      "sha256": "89697085a8d44a1de901c51340f671495a28c3613b68318c825e74e1fbea05ec"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/source-used/link-public-provider-probe.py",
+      "sha256": "007f579e942616859f42c499c5c7c073b90e10e40ba19ef37142ecdb8438b6c5"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/source-used/link_db_wire.py",
+      "sha256": "6a862941cad025507dfaac29251c3ab4498ea8e33ca227462761a8fba1e1db87"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v10/source-used/link_snapshot_backend.py",
+      "sha256": "a61589fe4ea147ae5997fe1a1132464447d876197fa8e67c68ed7291827e4ffb"
+    },
+    {
+      "path": "local/diagnostics/sharing-hub0-library.json",
+      "sha256": "60175df1c548d912bf7fbeb9772fef66a6345bbc623545ae3b2d6917a536c976"
+    }
+  ]
+}

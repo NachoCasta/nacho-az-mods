@@ -1,0 +1,106 @@
+{
+  "recorded_at_utc": "2026-10-21T01:00:30.359569+00:00",
+  "scope": "Compact immutable per-source C track metadata index",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Rows retain scalar metadata plus relocatable string offsets, not native object pointers or4096-byte string buffers per field",
+    "One owner builds; lookups require successful seal and exact generation; sorted binary lookup rejects unknown IDs",
+    "Independent indexes may contain same track ID without shared state; growth/sort preserves all fields",
+    "Duplicate IDs fail seal; retirement blocks new lookups while in-flight readers finish immutable memory without any filesystem lease",
+    "Synthetic2048-track growth and concurrent read/retirement controls pass",
+    "All2546 tracks preserve16 fields against Crate Digger oracle, both host and live emulator AArch64 scan",
+    "Measured host layout60 bytes/row,4096 row capacity,387963 used string bytes and524288 text capacity; allocated row/text buffers770048 bytes excluding allocator/bookkeeping"
+  ],
+  "verification": {
+    "matrix_counts": {
+      "plain": 42,
+      "asan": 42,
+      "tsan": 42
+    },
+    "cases": [
+      "source-name",
+      "source-display",
+      "source-badge-render",
+      "source-badge-native-compose",
+      "source-badge-native-text",
+      "source-badge-native-image",
+      "source-badge-native-glyph",
+      "browser-guard",
+      "network-identity",
+      "link-status",
+      "usb-presence",
+      "link-socket-registry",
+      "link-mode-recovery",
+      "link-member-retention",
+      "link-load-origin",
+      "link-udp-policy",
+      "link-udp-receive",
+      "link-request-tasks",
+      "link-cached-status",
+      "eject-gesture",
+      "eject-presentation",
+      "eject-source",
+      "eject-input-health",
+      "eject-listener",
+      "eject-detach",
+      "public-file-root",
+      "public-nfs-read",
+      "public-rpc",
+      "public-rpc-read",
+      "public-file-catalog",
+      "public-rpc-udp",
+      "public-nfs-tree",
+      "public-rpc-export",
+      "public-pdb-reader",
+      "public-library-files",
+      "public-track-index",
+      "alias-mount",
+      "discovery",
+      "kernel-asset",
+      "mount-worker",
+      "source-settings",
+      "link-member-native-unwind"
+    ],
+    "hook_registration": true,
+    "oracle": {
+      "tracks": 2546,
+      "fields": 16,
+      "all_match": true
+    },
+    "aarch64": {
+      "kernel": "6.6.138-dirty",
+      "synthetic_exit_code": 0,
+      "live_scan_exit_code": 0,
+      "live_rows": 2546,
+      "fields_per_row": 16,
+      "matches_host_and_java_oracle": true,
+      "binary_sha256": "07bc0ac756f4029b182d3bb12a42a90399ef7b6fa75d53cbcaef29b4a8fa28fb"
+    }
+  },
+  "budgets": {
+    "tracks_max": 100000,
+    "text_bytes_max": 16777216,
+    "full_library_global_memory_validated": false
+  },
+  "source_sha256": {
+    "public-pdb-reader.h": "850e45c26b4c8891e9add8ecb1013b1dc908762eeaae1ca73dce3fd05a3c3117",
+    "public-pdb-source.h": "2bc345548f50aea871e9e495cddde663e836ba1cfbb76167d6dd440ed97a8a17",
+    "public-track-index.h": "af651d579fd39b48a397e2f5813d1215c34f00f089fff9612ffdd9810b2229d8",
+    "test-host.sh": "941015f21a5ce7b18d387250a45f7550fff5199887ae89f31d24293b5910ea42",
+    "test-public-track-index.c": "63abf9343fc888ea7bde44216686dd1a89b9760ea4d47f6fd4b5561cbb94d652"
+  },
+  "log_sha256": {
+    "aarch64.stdout": "13135f0663613e79fafa746defd15b7247cf058cdc23c282ca5a959355c65f5e",
+    "hook-registration.stdout": "dcc954fb223d1531ddf7100ad8557ded17113bc8d288d049ff9295ddeaa4a28b",
+    "portable-matrix.stdout": "39897b18a1f07a0a94f80612d7a7e808cfd0d0ef1d6f88f47f8b029430c54460"
+  },
+  "remaining_gates": [
+    "Connect track index to source-owned staged publication/withdrawal lifecycle",
+    "Referenced names/playlists and full metadata TCP encoding",
+    "Global eight-source memory/performance and allocation failure boundaries",
+    "Public discovery/transport integration, local/remote concurrency and external-loaded eject",
+    "Final exact candidate and separately authorized physical tests"
+  ]
+}

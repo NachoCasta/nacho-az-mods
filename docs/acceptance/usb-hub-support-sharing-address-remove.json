@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "scope": "Asynchronous exact IPv4 netlink removal component; negative controls without address mutation",
+  "source_sha256": {
+    "public-address-remove.h": "1a111f2cbd6731486d057c99829e698962ca40424e4682e2a63e7eed74fa80a6",
+    "test-public-address-remove.c": "eb3a4fb5a8e2ae63262470a54343a4c178735c17e05c932140196b8e730650dd"
+  },
+  "tests": {
+    "targeted_plain": "passed",
+    "targeted_asan_ubsan": "passed",
+    "targeted_tsan": "passed",
+    "pinned_aarch64_build": "passed"
+  },
+  "binary_sha256": "659599228eb89baa089116975ea8dffe1ad32b75abf8c01bd6a4851b81b4c078",
+  "evidence": [
+    "local/integration/sdk-broker-probe-v1/address-remove-targeted.log"
+  ],
+  "validated": [
+    "Exact RTM_DELADDR with explicit interface index, prefix, IFA_LOCAL and IFA_ADDRESS",
+    "Strict matching ACK sequence, kernel error and truncation checks",
+    "Native network namespace refused before thread creation",
+    "Wrong namespace type fails asynchronously and closes owned descriptor",
+    "Nonblocking controller poll joins completed operation"
+  ],
+  "limitations": [
+    "No successful live address removal executed at this boundary",
+    "No AArch64 runtime acceptance for this new component yet",
+    "Not yet connected to broker lease removal callback",
+    "Caller must prove workers/endpoints drained before starting operation",
+    "Timeout or missing ACK does not prove removal"
+  ],
+  "physical_AZ_touched": false
+}

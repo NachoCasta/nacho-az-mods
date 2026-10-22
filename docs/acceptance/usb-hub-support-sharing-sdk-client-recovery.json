@@ -1,0 +1,30 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "71376f29bc8d4ce5210b644e59649501bfb0207b9b4e8ef03599fd6afacc478c",
+  "helper_sha256": "7af803712cbae458331185c127d94bbcb54f01a749343b47fdda7bf8ff29315b",
+  "native_application_pid": "600865",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "initial_ARP_conflict_declined": true,
+  "conflict_recovery_same_identity": true,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Emulator-only managed SDK ALLOCATE via inventory client; initial conflict recovery and independent library access. Not native inventory activation or physical-CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-client-recovery-v1",
+  "retry_seconds": 10.093428176999964,
+  "source_player": 41,
+  "recovered_address": "192.0.2.4",
+  "complete_menus": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359
+  },
+  "database_and_audio_hashes_exact": true,
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true
+}

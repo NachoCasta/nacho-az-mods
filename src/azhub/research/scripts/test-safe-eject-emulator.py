@@ -110,6 +110,17 @@ def assert_load_disk(marker, deck, disk):
     requests = re.findall(rf"safe-eject load-request deck={deck} location=(0x[0-9a-f]+):", logs()[marker:])
     assert requests, "Requires AZHUB_EJECT_TRACE_LOAD=1 and a native load request"
     media = int(requests[-1], 16)
+    if disk in ('sda','sdb'):
+        # Native fixtures use /C/ (USB1) and /B/ (USB2), rather than synthetic
+        # /media/playerNN aliases. Require the exact native request form and
+        # prove the actual root's filesystem/backing.
+        expected = 0x1010200000001 if disk == 'sdb' else 0x1012200000001
+        assert media == expected, ('Unexpected native USB request', disk, hex(media))
+        root = ssh('readlink -f '+('/C' if disk == 'sdb' else '/B')).strip()
+        assert root == '/media/usb/'+disk+'1', root
+        table = {line.split()[4]: line.split()[2] for line in ssh('cat /proc/self/mountinfo').splitlines()}
+        assert root in table and table[root] == ssh('cat /sys/class/block/'+disk+'1/dev').strip()
+        return
     player = ((media >> 8) & 255) + 1
     leaf = {2: "usb", 0x22: "usb2", 0x42: "usb3", 3: "sd"}[(media >> 32) & 255]
     table = {line.split()[4]: line.split()[2] for line in ssh("cat /proc/self/mountinfo").splitlines()}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "scope": "Integrated EP147 emulator export of one live hub source; eight-source synthetic lifecycle controls",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "shared_object": {
+    "path": "local/integration/sharing-mod-v2/usb-hub-support-sharing-emulator.so",
+    "sha256": "d759efd832336eb044e78ebcfa841c6a172f7bf0a84d0c982b353512a7a2315f",
+    "mapped_hash_verified": true,
+    "executed_inside_EP147": true
+  },
+  "integrated": {
+    "live_sources": 1,
+    "discovery_client": "Unchanged Beat Link 8.0.0",
+    "file_client": "Unchanged Crate Digger 0.2.1",
+    "tracks": 2546,
+    "playlist_nodes": 185,
+    "ordered_memberships": 8359,
+    "database_bytes": 4419584,
+    "database_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "audio_bytes": 10881597,
+    "audio_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321",
+    "application_pid_unchanged": true,
+    "evidence_directory": "local/diagnostics/sharing-integrated-mod-v4"
+  },
+  "portable": {
+    "plain_cases": 58,
+    "asan_ubsan_cases": 58,
+    "tsan_cases": 58,
+    "full_suite_exit": 0,
+    "hook_registration": "pass, separately executed under WSL",
+    "eight_source_bridge_aarch64": "pass",
+    "bridge_sha256": "ea8b6058b052f625766ceff26f8d035d8d21424dd1e042aa412501863113a46f"
+  },
+  "cleanup": {
+    "runner_exit": 0,
+    "original_mod_and_approval_bytes_restored": true,
+    "normal_EP147_active": true,
+    "restored_mod_version": "0.3.2",
+    "host_and_guest_test_namespaces_absent": true,
+    "emulator_macvlan_test_module_absent": true,
+    "temporary_files_removed": true,
+    "physical_AZ_touched": false
+  },
+  "limitations": [
+    "Only one live source was exported by the integrated mod trial",
+    "Eight workers were exercised only with a synthetic empty-library fixture",
+    "Automatic LAN namespace/interface/IP allocation remains unimplemented",
+    "Integrated safe eject, loaded external deck behavior, local/remote concurrency and reconnect remain pending",
+    "No actual-CDJ or physical-AZ sharing acceptance",
+    "Published release and firmware compatibility are unchanged"
+  ],
+  "source_sha256": {
+    "public-mod-emulator.h": "c2dd88cb6076b7847081fc01eb4695a454b3bf010164760498f92ec13fa76a2f",
+    "test-public-mod-emulator.c": "1dc2817f7202d16b4d47f82111dc0ebceeb47ab9a796f2f815ad0281aa38a32e",
+    "public-source-manager.h": "dbc2073dea7203b9898177e0e15b73dcbcbbfb75659949737286f3b21c842fd7",
+    "community.c": "fd7d6fdc5d4a0a679864ed6b6952fe155a94eefa67cf7788ab785ee9793775df",
+    "linkfake.c": "02d260bad8128576e84e975af59d9071d80eaf7e17c156d7a923e8b2dacf6678",
+    "hubservers.h": "1d1812545329e64119940afedffe52497c3743c1e085fcfd031ab2e6dc9dc1da",
+    "safe-eject.h": "45881ca041352991872ef371ce3c1480e5a88d266d6293b1d33ce3eaf81cd0eb",
+    "Makefile": "bea75a0d7ffd0eff11f5b47801e31ed4255f5c370f7fd2a6229ba120ff4dfc7b"
+  }
+}

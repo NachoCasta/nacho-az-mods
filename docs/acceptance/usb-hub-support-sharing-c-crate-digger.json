@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-10-20T20:50:50.277631+00:00",
+  "scope": "Unmodified Crate Digger0.2.1 FileFetcher library against C RPC/NFS export in isolated loopback namespace",
+  "production_runtime_integration": false,
+  "physical_AZ_touched": false,
+  "published_release_changed": false,
+  "observations": [
+    "Fresh unshare network namespace has only loopback, no physical/emulator interface; scope disappears automatically on process exit",
+    "Guarded research server binds127.0.0.1:111 only outside initial namespace with no up non-loopback interfaces; initial-namespace option refused with exit2",
+    "Unmodified Crate Digger library obtains mount/NFS port using portmapper and traverses exported paths to download complete fixtures",
+    "Synthetic Unicode/surrogate-pair directory control returns30001 exact bytes",
+    "Local ignored copies of prior emulator hub0 PDB and MP3 transfer completely with exact source SHA256; this is not a live USB service or playback test",
+    "Initial v1 isolation guard queried inherited sysfs and aborted before server launch; v2/v3 use actual namespace interface query"
+  ],
+  "results": {
+    "synthetic": {
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 30001,
+      "sha256": "25e2bf3a883695f6370bec399b2a10008c849a425cb2d17ec6077b6c4d98ed16"
+    },
+    "database": {
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+    },
+    "audio": {
+      "event": "c_service_crate_digger_fetch",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+    }
+  },
+  "binary_sha256": "ff4aa8207520968544ad3144d4e57da05a15b4729f661fd2fea15ab7ab1da905",
+  "crate_digger_jar_sha256": "68403a26d79c34787b8fd2eb04740cd9310accc4bf0cb7dca366a9d40d8c85ef",
+  "source_sha256": {
+    "LocalFileServiceClient.java": "e63f6ba9d483cb0798fc56533dd589c5b01819fbeb9ea2e3eedb24ff6fa25560",
+    "public-read-server.c": "2d4da0b26e37c84a023d1f6b4b22bb4d0f303a3d0ed421042f7a081f05be7f2d",
+    "test-public-crate-digger.py": "ea63a3d2d27f59d840e65326ad5f8f967f0cc75ff8f0d01828dd45e0ee8e4852"
+  },
+  "log_sha256": {
+    "audio.stdout": "ecb89a6ff899b362a5771e3ec4e9356cc91571e47d66e70365d215f2ddf2f3b3",
+    "database.stdout": "cea8aada05cea15599ecfb0b6555539b32b9170d7f14dca7ba380cf3c3519c42",
+    "synthetic.stdout": "283e54695d1246c782acfa84e9028969e0efc8a24d4e0b0c8a710bc62ba632bc"
+  },
+  "production_component_baseline": "usb-hub-support-sharing-public-rpc-mount.json",
+  "remaining_gates": [
+    "Live trusted library path/catalog population and public metadata service",
+    "Owned public transport addresses/conflicts and target kernel module runtime acceptance",
+    "On-emulator integrated C provider serving live hub USBs",
+    "Concurrent local/remote use, reconnect and external-loaded eject controls",
+    "Exact candidate build, final regression and separately authorized model-specific hardware testing"
+  ]
+}

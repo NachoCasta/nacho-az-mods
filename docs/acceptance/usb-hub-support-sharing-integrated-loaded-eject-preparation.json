@@ -1,0 +1,42 @@
+{
+  "scope": "Prepared integrated public-hub loaded-source withdrawal control; live acceptance still pending",
+  "diagnostic_mod_sha256": "9fd91ddfd905e7f61861e6b2636beb553976277c6c7720329d536dbf1bd2ac04",
+  "diagnostic_build_target": "sharing-runtime-observer-emulator",
+  "production_release_changed": false,
+  "components": [
+    "Controlled synthetic player3 status continues until explicit end-of-test signal and is sent to public source41 plus native AZ",
+    "Optional lifecycle MP3 LOOKUP/first1024-byte READ with exact fixture hash, retained file handle and post-reconnect READ STALE on both aliases",
+    "Existing integrated retirement-before-close, backing unmount, original neighbor RPC/TCP, replug/fresh root and exact PDB controls retained"
+  ],
+  "offline_checks": {
+    "Java_compilation": "pass",
+    "loaded_status_parser_self_test": "pass for native1/2 and41..48; unchanged library template",
+    "AArch64_integrated_diagnostic_build": "pass",
+    "Python_syntax": "pass"
+  },
+  "live_attempt": {
+    "evidence_directory": "local/diagnostics/sharing-integrated-remote-loaded-eject-v2",
+    "full_initial_two_source_clients": "passed before the fail-closed file readiness guard",
+    "result": "Harness attached Java loaded-file property to the network-change branch instead of the native-eject branch; FILE_READY guard aborted before status/eject",
+    "external_loaded_status_started": false,
+    "eject_attempted": false,
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "fix": "Move JVM properties to the exact native-eject lifecycle launch. Corrected code compiles; live repeat pending."
+  },
+  "limits": [
+    "No public-hub externally loaded eject acceptance yet",
+    "No actual external audio or physical-CDJ acceptance",
+    "Integrated diagnostic binary is not the final release candidate"
+  ],
+  "physical_AZ_touched": false,
+  "second_live_attempt": {
+    "evidence_directory": "local/diagnostics/sharing-integrated-remote-loaded-eject-v3",
+    "real_MP3_first_block": "pass; FILE_READY confirms exact1024-byte read and retained handle",
+    "result": "External standalone status process could not bind UDP discovery because the lifecycle client already owns DeviceFinder listener. Guard aborts before eject.",
+    "eject_attempted": false,
+    "original_bytes_restored": true,
+    "owned_scope_cleaned": true,
+    "fix": "Lifecycle client and status sender now share the same JVM DeviceFinder singleton, with bounded worker lifetime/error propagation and explicit close after withdrawal/reconnect. Java compilation/parser self-test/Python syntax pass; live repeat pending."
+  }
+}

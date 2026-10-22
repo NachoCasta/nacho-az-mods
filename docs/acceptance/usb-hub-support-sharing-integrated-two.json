@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "scope": "Two live hub sources exported by the exact mod inside EP147; independent concurrent menus/files and isolated eject/reconnect",
+  "firmware": "ep147-9e9454e357389ece",
+  "emulator_kernel": "6.6.138-dirty",
+  "shared_object_sha256": "d759efd832336eb044e78ebcfa841c6a172f7bf0a84d0c982b353512a7a2315f",
+  "evidence_directory": "local/diagnostics/sharing-integrated-two-v2",
+  "sources": [
+    {
+      "number": 41,
+      "address": "192.0.2.3",
+      "live_root": "emulator hub0",
+      "tracks": 2546,
+      "playlist_nodes": 185,
+      "ordered_memberships": 8359
+    },
+    {
+      "number": 42,
+      "address": "192.0.2.4",
+      "live_root": "emulator hub1",
+      "tracks": 2546,
+      "playlist_nodes": 185,
+      "ordered_memberships": 8359
+    }
+  ],
+  "fixtures": "Both protected sticks contain identical PDB/audio fixtures; isolation is established separately by cross-source handle rejection and unchanged neighbor root/session",
+  "validated": [
+    "One unchanged DeviceFinder discovers both sources",
+    "Separate unchanged Beat Link Clients browse complete menus concurrently",
+    "Unchanged Crate Digger verifies complete PDB and MP3 hashes from each source",
+    "Distinct roots reject cross-source handles on both111/50111",
+    "Native STOP selector ejects source1 while other USB mounts survive",
+    "Original source2 TCP menu session and root remain usable throughout source1 eject/reconnect",
+    "Source2 discovery remains present at lifecycle checkpoints",
+    "Reconnected source1 gets a fresh root and its previous root handle is STALE on both RPC ports",
+    "Application PID remains unchanged"
+  ],
+  "cleanup": {
+    "runner_exit": 0,
+    "original_mod_and_approval_restored": true,
+    "normal_mod_version": "0.3.2",
+    "original_mod_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+    "owned_networks_and_module_removed": true,
+    "Unix_socket_removed": true,
+    "transport_errors": [],
+    "QEMU_listeners_after": 5,
+    "physical_AZ_touched": false
+  },
+  "tested_transport_sha256": "cc1e8fb14db6aeebe318e1c9d68a14b50d529165cb74118e920fd0075f064fdc",
+  "transport_note": "Trial explicitly used --nat-unix; afterward this tested mode became the default. Legacy TCP now requires --nat-tcp.",
+  "limitations": [
+    "Two live public sources; eight-source lifecycle evidence is synthetic",
+    "No local concurrent playback or externally loaded/playing deck was simulated",
+    "RPC handle observer is repository-authored; discovery/menu/file libraries are unchanged",
+    "No actual-CDJ or physical-AZ sharing acceptance",
+    "Automatic LAN allocation, target4.4 runtime, broader audio formats and emulator cold-start exit139 remain open"
+  ],
+  "source_sha256": {
+    "LiveProviderControl.java": "f2a3edcdf97188d7f7daee0f6aacc8f0927706b10f56b4a004ac19aff973dfb3",
+    "LiveProvidersControl.java": "45e1f391a2da83c46d16a6f0f92078d6d4d832099612e347c6358b7933341e2d",
+    "DbLibraryControl.java": "219c5c3cb30c4b5492da87145172da63dc07a88ec9d42aba54eeec8b1748dc21",
+    "LocalFileServiceClient.java": "9591d2092de5127a8bb137370c562802ce0eff86dbdb62e2502cf3672cbf952a",
+    "ProviderLifecycleControl.java": "9ee882ad8e56c3173eb5aca2924946e8f400493bbf0a3f18ea4f7c2278a4e18d",
+    "ProviderNeighborControl.java": "0f0f99e5cfdb6b62e6923cd0446d6f82b161b0198f335cb7ac8295ad70ddab1e",
+    "test-public-mod-network.py": "ed933b0021b1dc0dd6a67779d90b4526cb6bbcfdbacfec6e66f05f8b50a631d5"
+  }
+}

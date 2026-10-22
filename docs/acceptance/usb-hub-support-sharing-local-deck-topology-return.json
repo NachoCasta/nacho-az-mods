@@ -1,0 +1,33 @@
+{
+  "scope": "Native mode/engine continuity proven through return to On; final secondary-load negative controls still pending",
+  "mod_sha256": "b2a3ce437cddee95609ae72ac6d777ce521495e6a1cfe044d651304b628dc413",
+  "evidence_directory": "local/diagnostics/sharing-integrated-local-deck-topology-v3",
+  "phase_sample_counts": {
+    "load verified deck1": 1,
+    "load verified deck2": 1,
+    "initial Link On": 8,
+    "initial remote clients active": 81,
+    "load verified deck3": 1,
+    "load verified deck4": 1,
+    "Link Off four local decks": 8,
+    "Link Off secondary decks unloaded": 8,
+    "recovered remote clients active": 75,
+    "Link On restored": 8
+  },
+  "native_pid_preserved": 1794284,
+  "four_actual_sdc1_loads": true,
+  "initial_and_recovered_external_full_two_source_clients": "pass",
+  "first_and_recovered_remote_client_primary_engine_observation": "pass",
+  "complete_test_pass": false,
+  "failure": "Final track reselection attempted eject selector for encoder calibration; core had quarantined the edited frame filter. Selector correctly refused ownership. Final secondary-load rejection/unload checks were not reached.",
+  "core_diagnostics": [
+    "eject-ui input-unavailable port=2 raw=12154 edited=8591 raw-age=0 edit-age=185065",
+    "frame filter switched off for this session: it took longer than 200 us 8 times"
+  ],
+  "interpretation": "Observed under emulation; no physical timing conclusion. Do not disable the SDK budget or input-health guard.",
+  "harness_revision": "Final phase now reopens retained native Browse without eject-selector calibration; requires screenshot review of the actual selected track before secondary negative loads. Python syntax passes; live repeat pending.",
+  "original_package_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "physical_AZ_touched": false,
+  "audio_signal_captured": false
+}

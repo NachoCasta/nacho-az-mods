@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scope": "One integrated supervised DHCP/ARP/configuration/UDP/removal lifecycle on an isolated emulator interface",
+  "evidence_directory": "local/diagnostics/sharing-address-flow-v1",
+  "runner_exit": 0,
+  "probe_sha256": "06789ec53747ac7fa9f1a5891240f89bf957f18d20180228876b9add519afae4",
+  "source_sha256": {
+    "src/azhub/research/scripts/public-address-flow-probe.h": "73e0acd4ac2d1627987844a9f7c68ce14aedbf426ed97f7ec98e08cba76220b0",
+    "src/azhub/linkfake/test-public-dhcp-acquire.c": "06c0bd4e2eb110820bb4fe37299e257c0302113e5f8c723e0fcc84452b04e604",
+    "src/azhub/research/scripts/test-live-dhcp-emulator.py": "f0117f046c00825ab1a39a4ae048a81eccf70488b0c89c3f6d1332eab5b14707",
+    "src/azhub/research/scripts/dhcp-fixture-server.py": "06a131ec19324a5a2956aedcbd1fa661108a5e36db90b418e1bf62aaeab9c5ea"
+  },
+  "validated": [
+    "Actual native DHCP OFFER/ACK and conservative pre-spawn grant reference",
+    "Three confirmed real ARP probe sends and quiet interval before configuration",
+    "Only validated IPv4/prefix/broadcast applied; actual address/mask inspected",
+    "Both ARP announcements and matching lease/ACD readiness",
+    "Host fixture verifies UDP exchange from assigned192.0.2.3",
+    "UDP closed and empty service drain acknowledged before exact address removal",
+    "Final IPv4 absent and parent namespace/native processes/DNS/routes unchanged"
+  ],
+  "cleanup": {
+    "temporary_guest_files_removed": true,
+    "transport_errors": [],
+    "test_module_removed": true,
+    "owned_guest_host_namespaces_removed": true
+  },
+  "regression": {
+    "acquisition_unit_asan_ubsan": "passed",
+    "acquisition_unit_plain": "passed",
+    "live_flow_sanitizer_instrumented": false,
+    "acquisition_unit_tsan": "passed"
+  },
+  "limitations": [
+    "Research harness; single-threaded fork path forbidden inside EP147",
+    "No music endpoints or public source activation",
+    "Fixed fixture jitter and partial local MAC inventory",
+    "No refresh, live injected conflict, cable-change or expiration control",
+    "No target4.4 runtime, physical AZ or actual-CDJ acceptance"
+  ],
+  "physical_AZ_touched": false
+}

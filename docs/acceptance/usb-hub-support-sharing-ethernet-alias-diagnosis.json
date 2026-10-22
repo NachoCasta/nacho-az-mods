@@ -1,0 +1,43 @@
+{
+  "scope": "Startup Ethernet IPv4 label diagnosis; physical cause remains a hypothesis until corrected candidate trial",
+  "observed_physical_interface": "eth0 with IPv4 label eth0:avahi,169.254.7.213/16",
+  "old_snapshot_exact_name_rejects_labelled_address": true,
+  "old_header_regression_failed_as_expected": true,
+  "fixed_focused_plain_pass": true,
+  "fixed_focused_ASan_UBSan_pass": true,
+  "emulator_labelled_library_control": {
+    "state": "passed",
+    "evidence_directory": "local/diagnostics/sharing-ethernet-alias-link-local-v1",
+    "runner_exit": 0,
+    "restored": true,
+    "owned_scope_cleaned": true
+  },
+  "candidate_hashes": {
+    "usb-hub-support-broker-probe.so": "c68ff065c8da7d5fa471aabac86a84b277e42208c346807f5ccbe9b55a2dc66c",
+    "usb-hub-support-network-helper-candidate": "5570886c3e86bf4e8fb8beac8e06d9f8419492f1bb9c86286a3b6b9a7a6960e9",
+    "usb-hub-support-network-helper-candidate-emulator": "05ae80fb097cd9dddcafaaca295e23cf003838d367ab0a32ca25d8e04efcd11f",
+    "usb-hub-support-sharing-runtime-candidate.so": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+    "usb-hub-support-sharing-runtime-emulator.so": "a036b5aefecf8a597b4074390ea90a37a45a00898f6b7a5b73349d43610ec7de"
+  },
+  "physical_candidate_updated": true,
+  "published": false,
+  "physical_version": "0.4.1",
+  "physical_framework_loaded": true,
+  "physical_framework_suspended": false,
+  "physical_startup_progress": "Helper now logs IPv4LL candidate allocation; public service/client acceptance pending",
+  "package_sha256": "cb8c70992ddb0bd7e2d2ad1f12480f0bee7dc88b8f72389c4ef4d8b78b7eaaa9",
+  "helper_sha256": "5570886c3e86bf4e8fb8beac8e06d9f8419492f1bb9c86286a3b6b9a7a6960e9",
+  "runtime_sha256": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+  "rollback": "/media/usb/sda1/MODS/backups/usb-hub-support-before-041-20261021-210952/original",
+  "physical_observations_after_fix": {
+    "helper_pid": 462117,
+    "helper_still_running": true,
+    "source0_ipv4ll": "169.254.150.25",
+    "source0_ARP_observed_on_workstation": true,
+    "source0_MAC": "a2:87:f3:9a:e6:40",
+    "workstation_ethernet_ipv4": "169.254.7.17",
+    "TCP_12523_connect": "timeout",
+    "library_preparation_observed": "Read-only fd observations progressed through Contents and USBANLZ; source worker later polling with media subdirectory descriptors closed. No client discovery/menu/file pass yet.",
+    "native_interface_alias_bug": "Corrected; helper survives and reaches allocation/staging. Full functional sharing remains pending."
+  }
+}

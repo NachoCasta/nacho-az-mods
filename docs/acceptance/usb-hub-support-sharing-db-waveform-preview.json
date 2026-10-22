@@ -1,0 +1,50 @@
+{
+  "scope": "Standalone C legacy preview response, no mod runtime integration",
+  "request": "0x2004",
+  "response": "0x4402",
+  "input": "DAT/PWAV plus DAT/PWV2 from source catalog",
+  "response_bytes": 900,
+  "primary_columns": 400,
+  "tiny_samples": 100,
+  "independent_control": "Unchanged Beat Link message and preview decoders compared against direct Crate Digger DAT decoding",
+  "software_client_limitation": "Beat Link8 counts the100-byte tiny suffix as50 additional columns; primary400 heights/colors and tiny bytes are compared separately",
+  "concurrent_clients_launched": 2,
+  "per_request_overlap_instrumented": false,
+  "tests": [
+    "Plain backend passed",
+    "ASan/UBSan passed",
+    "TSan passed",
+    "Mutation between sections rejected with ESTALE",
+    "Missing tiny section returns empty response with released partial allocation",
+    "Real analysis/beatgrid/detail regressions pass"
+  ],
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "binary_sha256": "a319bb694d3b7efc04470bb251838416c322d94e8a09d62eb733585e6886d4d5",
+    "synthetic_pass": true,
+    "owned_executable_removed": true
+  },
+  "source_sha256": {
+    "src/azhub/linkfake/public-waveform.h": "9a8a26e7d6d8e73db8996880b4f4f56a4d43ec51eab66bc6d4ecd33eaf41e7fc",
+    "src/azhub/linkfake/public-db-menus.h": "13bcc7389937dadec21a75e58fa93f6bd4e3a443876e0c69e505d9173d5a50e4",
+    "src/azhub/linkfake/test-public-db-menus.c": "bea99a6416e82adf302d78979b882ddaef09132d41dc42765cd5ed655e87368b",
+    "src/azhub/research/link-peer/src/main/java/DbAnalysisControl.java": "876a3f33ac2bb0232771c36a95bb88c0d500757d3fc810a6d22d4c4719145d3d"
+  },
+  "evidence_directory": "local/diagnostics/sharing-db-analysis-v1",
+  "evidence_files": [
+    "preview.stdout",
+    "preview.stderr",
+    "preview-sanitizers.stdout",
+    "preview-sanitizers.stderr",
+    "preview-emulator.json"
+  ],
+  "remaining": [
+    "Native rendering acceptance",
+    "Populated cue responses",
+    "Artwork",
+    "Joint service/runtime integration",
+    "Physical interoperability"
+  ],
+  "physical_az_operations": false,
+  "publication": false
+}

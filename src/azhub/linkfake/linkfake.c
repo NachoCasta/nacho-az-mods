@@ -340,6 +340,15 @@ static void *injector(void *arg) {
             if (tick % 15 == 0 && first_for_player(i)) send_keepalive(&fakes[i]);
             if (tick % 2 == 0 && first_for_player(i)) send_status(&fakes[i]);
         }
+#ifdef LF_PUBLIC_SHARING_EMULATOR
+        public_mod_poll();
+#endif
+#ifdef LF_PUBLIC_SDK_PROBE
+        public_sdk_probe_poll();
+#endif
+#ifdef LF_PUBLIC_SHARING_RUNTIME
+        public_runtime_poll();
+#endif
         if (tick % 10 == 0 && getenv("LINKFAKE_HUBSRV")) hub_mount_poll();
         usleep(100000);
     }

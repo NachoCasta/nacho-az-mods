@@ -1,0 +1,69 @@
+{
+  "recorded_at_utc": "2026-10-20T18:35:48.218950+00:00",
+  "scope": "Host snapshot metadata query prototype",
+  "production_changes": false,
+  "physical_AZ_touched": false,
+  "observations": [
+    "Enriched hub0 snapshot retains2546 tracks with artist/album/key/genre/label, numeric metadata, comments and analysis paths",
+    "Native emulator client issues41 metadata0x2002 queries during track/playlist browsing; no connection_end errors logged",
+    "Nested playlist track list remains visible in reviewed screenshot"
+  ],
+  "local_checks": {
+    "framing_groups": 5,
+    "backend_groups": 3,
+    "metadata_scope_isolation": true,
+    "java_snapshot_compiled": true
+  },
+  "cleanup": {
+    "exit_codes": {
+      "transport": 0,
+      "peer": 0,
+      "observer": 0
+    },
+    "namespace_removed": true
+  },
+  "limits": [
+    "No visual metadata-info-panel acceptance or independent metadata semantic-parser acceptance yet",
+    "No audio service, loaded playback, live backend or actual-CDJ acceptance",
+    "Source-used text reconstructs executed sources by reverting only subsequent provider-number parameterization; it is not a contemporaneous byte capture",
+    "Current parameterized provider-number change is unit-regression checked but not emulator exercised"
+  ],
+  "local_evidence": [
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/peer.stdout",
+      "sha256": "fde08d18e7b48e830e12eab53fc96337214827fc72f635c4e8db175292ed1096"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/peer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/results.json",
+      "sha256": "573efb01eef980fbbcec289fdc2b02ae4b2759eb8c568adc7d134df62f484c69"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/playlist-tracks.png",
+      "sha256": "78bab2d749d7775963ea6e3fe43521ce5742a247930ad8de1cf47c1515fb3421"
+    },
+    {
+      "path": "local/diagnostics/sharing-hub0-library-v2.json",
+      "sha256": "667e0a21690559ffd985734deabfefed8a77463918f22de8e611be639d582e93"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/source-used/LibraryFixtureSnapshot.java",
+      "sha256": "f1f900cc17884728122eccce3bb89bd4b2efe434a2fd0b52a38bb7391b02c83e"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/source-used/link-public-provider-probe.py",
+      "sha256": "b1e338070bf7dd3022b60f357d1ca76e9783cf09482357883af6912334d19534"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/source-used/link_db_wire.py",
+      "sha256": "4d931a7788bcadf2c4b560131441eebf98d26696c34058d9a05c2a99ab3dc3a3"
+    },
+    {
+      "path": "local/diagnostics/link-sharing-public-provider-v15/source-used/link_snapshot_backend.py",
+      "sha256": "5015b974dcb980cb04332fd5c13c2e49ce37e512bd18ad6b92a38a1c095fc4b4"
+    }
+  ]
+}

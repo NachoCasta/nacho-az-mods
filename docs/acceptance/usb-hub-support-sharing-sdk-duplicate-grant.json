@@ -1,0 +1,53 @@
+{
+  "SDK_launch_and_IPC": true,
+  "mod_sha256": "069d6dee257aa76cbb2db05a542d01fc4643ad3b2a5d0244b78d73b90266d3ba",
+  "helper_sha256": "2196016b6ac2da022364747b3c58c966f5c5e8330408d5cf1f5e385e0c992c3d",
+  "native_application_pid": "829818",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "duplicate_grant_rejected": true,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Managed emulator duplicate DHCP grant rejection for second native source while the first retains independent discovery/full menus/exact files. Not native-address collision, continuous reassignment, no-DHCP or physical CDJ acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-sdk-duplicate-grant-v1",
+  "duplicate_address": "192.0.2.3",
+  "source_slots": [
+    0,
+    4
+  ],
+  "distinct_client_MACs": [
+    "02:00:00:00:12:03",
+    "02:00:00:00:12:07"
+  ],
+  "negative_control": {
+    "original_source_full_clients_passed": true,
+    "duplicate_source_EMPTY_error": 99,
+    "duplicate_source_never_ACTIVE": true,
+    "both_ACTIVE_marker_absent": true
+  },
+  "original_source_menu": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359
+  },
+  "original_source_exact_PDB_audio": true,
+  "rejected_source_no_ACTIVE_status": true,
+  "external_discovery_absence_of_rejected_source_independently_monitored": false,
+  "runner_exit_code": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "remaining": [
+    "Native-controller address rejection live trial",
+    "Positive two-source regression on this helper hash",
+    "Continuous native address changes/renewal",
+    "Production identity/activation policy"
+  ]
+}

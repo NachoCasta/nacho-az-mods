@@ -1,0 +1,30 @@
+{
+  "scope": "Source-worker DB port lookup on isolated host",
+  "query_bytes": 19,
+  "reply_bytes": 2,
+  "maximum_clients": 8,
+  "absolute_deadline_ms": 5000,
+  "peer_policy_required": true,
+  "combined_library_regression_passed": true,
+  "mutation_withdraws_port": true,
+  "targeted_sanitizers": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-db-port.h": "830df4b6670e441d0ede653612df736715893c0bdbd47ffd1297b6d313b6b47c",
+    "src/azhub/linkfake/public-source-worker.h": "c180819b9d6173ea23fde7538b715d097ef9167bce64df0be769f3917b76a7a8",
+    "src/azhub/linkfake/test-public-db-port.c": "c58cb5448043fc4f6ffe8ebbc5a232ca261d68480af2db8461f347ea7953e539"
+  },
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": [
+    "port-library.stdout",
+    "port-library.stderr",
+    "port-sanitizers.stdout",
+    "port-sanitizers.stderr"
+  ],
+  "native_device_discovery_tested": false,
+  "physical_az_operations": false,
+  "publication": false
+}

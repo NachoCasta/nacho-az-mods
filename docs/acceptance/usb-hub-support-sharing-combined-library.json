@@ -1,0 +1,45 @@
+{
+  "scope": "Single-source standalone combined C TCP metadata and UDP file service in a fresh loopback-only network namespace",
+  "independent_clients": {
+    "metadata": "Beat Link 8.0.0 unchanged Client/menu codec",
+    "files": "Crate Digger 0.2.1 unchanged FileFetcher"
+  },
+  "browse": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "oracle": "Previously corrected independent entity TSV and Crate Digger track index"
+  },
+  "downloads": [
+    {
+      "kind": "database",
+      "bytes": 4419584,
+      "sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760"
+    },
+    {
+      "kind": "audio",
+      "bytes": 10881597,
+      "sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+    }
+  ],
+  "clients_launched_concurrently": true,
+  "packet_interleaving_measured": false,
+  "unrelated_file_hidden": true,
+  "owned_fixture_mutation_returns_stale": true,
+  "fixed_port_mode_refuses_initial_namespace": true,
+  "clean_shutdown": true,
+  "evidence_directory": "local/diagnostics/sharing-artwork-v1",
+  "evidence_files": ["combined-library.stdout", "combined-library.stderr"],
+  "reproduction": "Run test-public-library-crate-digger.py in a fresh unshare -n namespace with combined server, Java classpath, private PDB, private MP3 and independent entity TSV arguments. The optional TSV argument selects combined mode; the script owns and removes its temporary fixture.",
+  "limitations": [
+    "Host test, not emulator or actual-CDJ acceptance",
+    "File transfer does not establish playback or native metadata rendering",
+    "No public discovery, mod lifecycle, multiple sources or local deck concurrency",
+    "Mutation invalidation is not the native safe-eject sequence",
+    "No latency, scheduling fairness or long-session acceptance",
+    "No new sanitizer matrix or target execution"
+  ],
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false
+}

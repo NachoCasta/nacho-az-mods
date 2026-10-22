@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "scope": "Controller-owned namespace/interface/native DHCP/ARP/configuration to one real hub library with independent clients and retirement",
+  "source_sha256": {
+    "src\\azhub\\research\\scripts\\allocated-library-probe.h": "a7c004d1aa9928d644020ceb16ef087ac532a01135c4c252b2bd5231e41c7600",
+    "src\\azhub\\linkfake\\test-public-network-acquire.c": "930e47690a987fce7605a0e9f0faf98a405e82897976c999c20e49a1147c4a25",
+    "src\\azhub\\research\\scripts\\test-live-dhcp-emulator.py": "882e011724955d85890e534e553b710c7e5af2272b7ca7314f78263c13d83ebf"
+  },
+  "binary_sha256": "0f5cd7d4a9b2252cfb749495de3404a6155bb7f4e77bd3e4f1b78b90b5fe9417",
+  "tests": {
+    "plain": 76,
+    "asan": 76,
+    "tsan": 76
+  },
+  "evidence": [
+    "local/diagnostics/sharing-allocated-library-v2/client-events.txt",
+    "local/diagnostics/sharing-allocated-library-v2/discovery-and-menus.stdout",
+    "local/diagnostics/sharing-allocated-library-v2/database.stdout",
+    "local/diagnostics/sharing-allocated-library-v2/audio.stdout",
+    "local/diagnostics/sharing-allocated-library-v2/result.json",
+    "local/diagnostics/sharing-allocated-library-v2/guest-commands.json",
+    "local/diagnostics/sharing-allocated-library-v2/transport.stdout",
+    "local/integration/sdk-broker-probe-v1/allocated-library-host-suite.log"
+  ],
+  "library": {
+    "tracks": 2546,
+    "ordered_nodes": 185,
+    "ordered_memberships": 8359,
+    "pdb_sha256": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "mp3_sha256": "295de8ef66f57a41778256d1f381d6ebe31084c2fb71b3e305d2acb955af9321"
+  },
+  "validated": [
+    "No runner-prepared guest namespace/interface/IP",
+    "Native grant with ARP and configured READY precedes actual service endpoint open",
+    "Pinned real hub root stages through source manager",
+    "Unchanged Beat Link discovery and complete ordered library menus",
+    "Concurrent unchanged Crate Digger exact PDB/MP3 bytes",
+    "Readiness monitoring continues while worker serves",
+    "Source withdraw/join/endpoint close before ARP quiesce/address removal",
+    "Native state unchanged; owned module/TAP/temp resources cleaned with no transport errors"
+  ],
+  "attempt_history": [
+    "v1 stopped before clients because readiness marker omitted metadata_port; marker corrected and owned resources cleaned",
+    "v2 passed complete independent clients and cleanup"
+  ],
+  "limitations": [
+    "Standalone research controller, not yet SDK helper-owned allocation operation",
+    "One source only in this live trial; no concurrent local playback or loaded external deck eject",
+    "Fixed jitter, fixture DHCP600s; no renewal/conflict/retry acceptance through this path",
+    "No actual remote player decoding/playback in this trial",
+    "Live branch not sanitizer-instrumented; portable negative/component controls are",
+    "No physical AZ/CDJ or target4.4 runtime acceptance"
+  ],
+  "physical_AZ_touched": false,
+  "published": false
+}

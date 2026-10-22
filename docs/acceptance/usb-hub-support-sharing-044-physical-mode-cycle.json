@@ -1,0 +1,53 @@
+{
+  "scope": "Physical native-GUI PRO DJ LINK Off/On cycle, unpublished candidate0.4.4; one hub stick; read-only observations",
+  "user_operated_native_setting": true,
+  "ep147_pid_before_off_and_after_on": 532688,
+  "process_unchanged": true,
+  "mounts_preserved": [
+    "/media/usb/sda1",
+    "/media/usb/sdb1",
+    "/media/player07/usb"
+  ],
+  "off": {
+    "parent_eth0_flags": "0x1003",
+    "owned_rx_release_logged": true,
+    "previous_address": "169.254.234.0",
+    "previous_query_connect": "timeout on both bounded attempts",
+    "local_receipt": "local/diagnostics/physical-ethernet-library-v1/manual-link-off.json"
+  },
+  "on": {
+    "parent_eth0_flags": "0x1103",
+    "owned_rx_acquisition_logged": true,
+    "new_public_address": "169.254.72.33",
+    "public_player": 41,
+    "metadata_port": 34944,
+    "independent_DeviceFinder": "PASS; public41 plus native AZ players1,2,33",
+    "independent_Beat_Link_menus": {
+      "status": "PASS",
+      "tracks": 3172,
+      "ordered_nodes": 166,
+      "ordered_memberships": 11022
+    },
+    "independent_Crate_Digger_complete_files": [
+      {
+        "type": "PDB",
+        "bytes": 2973696,
+        "sha256": "b28fae567b5f06d17828b588aeb7d35f402c3ad92996e3a63098417e2d8de487",
+        "status": "PASS"
+      },
+      {
+        "type": "MP3",
+        "bytes": 3590545,
+        "sha256": "bd896b584cd2b7b0e663881e9d150c379d2437627a45874a6c2e6f849fc775a4",
+        "status": "PASS"
+      }
+    ]
+  },
+  "result": "PASS",
+  "limits": [
+    "No physical loaded-deck playback assertion for this cycle",
+    "No actual-CDJ, rendered-audio, Wi-Fi sharing or eight-source hardware acceptance",
+    "Earlier emulator EOF/STALE failure remains unexplained; two subsequent full repeats passed"
+  ],
+  "published": false
+}

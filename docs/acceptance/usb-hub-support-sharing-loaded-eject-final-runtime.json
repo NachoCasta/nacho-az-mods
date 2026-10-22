@@ -1,0 +1,303 @@
+{
+  "SDK_launch_and_IPC": true,
+  "native_status_observer": false,
+  "integrated_runtime": true,
+  "integrated_native_eject": true,
+  "integrated_mode_cycle": false,
+  "probe_environment_used": false,
+  "mod_sha256": "a036b5aefecf8a597b4074390ea90a37a45a00898f6b7a5b73349d43610ec7de",
+  "native_complete_file_control": false,
+  "native_fresh_local_playback_control": false,
+  "helper_sha256": "b5ff9ab717fc608e32cb86c076e2339414f5af9fb5805e063cfe54897185f9fb",
+  "native_application_pid": "1979221",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "capacity_sources_tested": null,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Latest non-diagnostic integrated runtime/helper loaded-eject regression: real retained MP3 handle and wire loaded status before/during native eject/reconnect, old file READs STALE on both aliases and original neighbor sessions preserved. Native-store admission is not instrumented here; see separate final diagnostic evidence. No actual-CDJ/audio acceptance.",
+  "evidence_directory": "local/diagnostics/sharing-integrated-remote-loaded-eject-final-runtime-v1",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "loaded_eject": {
+    "native_store_accepted": null,
+    "native_store_admission_observed": false,
+    "public_source": 41,
+    "track_id": 495,
+    "first_MP3_block_exact": true,
+    "old_MP3_handle_STALE_after_reconnect": true,
+    "status_continued_through_eject_reconnect": true,
+    "wire_packets_by_destination": {
+      "192.0.2.3": 188,
+      "192.0.2.15": 188
+    },
+    "manual_external_unload": false,
+    "actual_CDJ_acceptance": false,
+    "audio_renderer": false
+  },
+  "native_eject": {
+    "before": {
+      "pid": 1979221,
+      "clock_ms": 52143889,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 0,
+          "generation": 119405,
+          "devnum": 32
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdh",
+          "port": 2,
+          "state": 0,
+          "generation": 112585,
+          "devnum": 29
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdi",
+          "port": 2,
+          "state": 0,
+          "generation": 112758,
+          "devnum": 30
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdj",
+          "port": 2,
+          "state": 0,
+          "generation": 113182,
+          "devnum": 31
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "after": {
+      "pid": 1979221,
+      "clock_ms": 52151949,
+      "view": 1,
+      "devices": [
+        {
+          "label": "HUB_LIB",
+          "disk": "sdc",
+          "port": 2,
+          "state": 2,
+          "generation": 119405,
+          "devnum": 32
+        },
+        {
+          "label": "HUB_LIB2",
+          "disk": "sdd",
+          "port": 2,
+          "state": 0,
+          "generation": 21692,
+          "devnum": 4
+        },
+        {
+          "label": "HUB_LIB3",
+          "disk": "sde",
+          "port": 2,
+          "state": 0,
+          "generation": 21865,
+          "devnum": 5
+        },
+        {
+          "label": "HUB_LIB4",
+          "disk": "sdf",
+          "port": 2,
+          "state": 0,
+          "generation": 22038,
+          "devnum": 6
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdg",
+          "port": 2,
+          "state": 0,
+          "generation": 22379,
+          "devnum": 7
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdh",
+          "port": 2,
+          "state": 0,
+          "generation": 112585,
+          "devnum": 29
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdi",
+          "port": 2,
+          "state": 0,
+          "generation": 112758,
+          "devnum": 30
+        },
+        {
+          "label": "HUB_LIB",
+          "disk": "sdj",
+          "port": 2,
+          "state": 0,
+          "generation": 113182,
+          "devnum": 31
+        }
+      ],
+      "decks": [
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        },
+        {
+          "loaded": 0,
+          "playing": 0,
+          "pos_s": -1.0,
+          "content_id": 0,
+          "title": ""
+        }
+      ]
+    },
+    "source": 0,
+    "root": "/media/usb/sdc1",
+    "retirement_before_source_close": true,
+    "backing_unmounted": true,
+    "neighbor_mounts_preserved": [
+      "/dev/sda1 /media/usb/sda1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sde1 /media/usb/sde1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdd1 /media/usb/sdd1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdf1 /media/usb/sdf1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdg1 /media/usb/sdg1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdb1 /media/usb/sdb1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdj1 /media/usb/sdj1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdi1 /media/usb/sdi1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0",
+      "/dev/sdh1 /media/usb/sdh1 vfat rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,usefree,utf8,flush,errors=remount-ro 0 0"
+    ],
+    "remote_loaded_deck_tested": true
+  },
+  "wire_status_before_eject": {
+    "192.0.2.3": 10,
+    "192.0.2.15": 10
+  },
+  "diagnostic_runtime": false,
+  "actual_CDJ_acceptance": false,
+  "track_file_binding_verified": false,
+  "track_file_binding_mismatch": {
+    "status_track_id": 495,
+    "retained_file_track_id": 1884
+  },
+  "superseded_for_same_track_loaded_file_acceptance": true,
+  "binding_audit": "usb-hub-support-sharing-loaded-file-binding.json",
+  "advertised_source_slot_matched": false,
+  "source_slot_mismatch": {
+    "status_slot": 3,
+    "advertised_collection_slot": 4
+  },
+  "full_loaded_identity_tuple_verified": false
+}

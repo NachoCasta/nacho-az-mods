@@ -1,0 +1,70 @@
+{
+  "scope": "Bounded original PCOB cue input parser; no network response integration",
+  "comparison": {
+    "fixtures": [
+      {
+        "sha256": "d941301298dd398d7dae1f3f0516818c2906abb5603cd1d86790cb25da05e05d",
+        "bytes": 6018,
+        "matched_entries": 2,
+        "decoded_sha256": "689dce4e940e8521d8a12650e93777dfbc33d5013ebcf4181b4dcdc8b0caf016"
+      },
+      {
+        "sha256": "f12d399402e440a84ed31099bafd4330cb4f92c847514b188a9399b71f7e414d",
+        "bytes": 6978,
+        "matched_entries": 3,
+        "decoded_sha256": "43e10ce5b06ebe3fa8dcea570aea7a0f96dc5d051bd4dcd76f766d8b8f92a446"
+      },
+      {
+        "sha256": "6e76d7eb8c4f6c1336f3305fa20a6c43b88cf11ab6338004bfe98281de5b94b5",
+        "bytes": 7210,
+        "matched_entries": 3,
+        "decoded_sha256": "181061090713fe490c2db45241f1bd178a6aae4157615310144825d7a174175c"
+      }
+    ],
+    "matched": true
+  },
+  "oracle": "Unchanged Crate Digger0.2.1 generated CueTag/CueEntry parser",
+  "fields": [
+    "list kind",
+    "hot cue ID",
+    "cue or loop type",
+    "raw status",
+    "start milliseconds",
+    "loop end milliseconds"
+  ],
+  "real_fixture_scope": "Eight hot cues, no memory cues or loops",
+  "synthetic_controls": [
+    "Memory cue",
+    "Hot loop",
+    "Raw status preservation",
+    "Truncated section at every length",
+    "Mismatched count",
+    "Oversized entry",
+    "Unknown cue type"
+  ],
+  "targeted_tests": [
+    "plain passed",
+    "ASan/UBSan passed",
+    "TSan passed"
+  ],
+  "full_50_case_matrix": "not run",
+  "fixture_acquisition": "Read-only archive of up to64 DAT files from emulator localhost2222, guarded kernel6.6.138-dirty; three populated fixtures retained under ignored local diagnostics",
+  "remaining": [
+    "Legacy and extended network responses",
+    "Combined memory/hot lists",
+    "Extended comments and colors",
+    "Deleted-cue semantics",
+    "Real loop/memory fixtures",
+    "Native/physical acceptance"
+  ],
+  "source_sha256": {
+    "src/azhub/linkfake/public-cues.h": "f2adbd7a854ae4c113c9ff8db2b79c17bb5380a831f795fdcc3928a9138212f0",
+    "src/azhub/linkfake/test-public-cues.c": "8208e1e8ac7924fbad181fc85df2929d680e4e266261db47c28d3199449c9cb9",
+    "src/azhub/research/link-peer/src/main/java/CueSectionControl.java": "416be2a58334b111a54a8a9ec0d3f69f0f3c75b24644cdca1ab01fd4ad53a76f",
+    "src/azhub/research/scripts/test-public-cue-sections.py": "c06a5ada5ba5b7aa791927d27a2f2436426af1344b0f182f6042da1fa754da57"
+  },
+  "evidence_directory": "local/diagnostics/sharing-cues-v1",
+  "physical_az_operations": false,
+  "source_usb_writes": false,
+  "publication": false
+}
