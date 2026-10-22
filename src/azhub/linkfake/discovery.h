@@ -10,6 +10,7 @@
 #include <string.h>
 #include <unistd.h>
 #include "source-name.h"
+#include "port-topology.h"
 
 static int azhub_nested_usb_path(const char *path) {
     const char *part=path;
@@ -37,7 +38,7 @@ static int azhub_nested_usb_path(const char *path) {
     }
     return 0;
 }
-struct azhub_candidate { char mount[256],topology[PATH_MAX],device[64],name[128]; };
+struct azhub_candidate { char mount[256],topology[PATH_MAX],device[64],name[128],port_route[96]; unsigned port_number; };
 static int azhub_candidate_cmp(const void *a,const void *b) {
     const struct azhub_candidate *x=a,*y=b;
     int order=strcmp(x->topology,y->topology);
@@ -66,11 +67,20 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
         char node[PATH_MAX],resolved[PATH_MAX],database[512];
         if (snprintf(node,sizeof node,"%s/%s",sysblock,device)>=(int)sizeof node) continue;
         if (!realpath(node,resolved) || !azhub_nested_usb_path(resolved)) continue;
+        struct hub_port_route route;struct hub_port_sysfs topology;
+        if (!hub_port_route_parse(resolved,&route) || !hub_port_sysfs_init(&topology,resolved,&route)) continue;
+        unsigned port_number=hub_port_number(&route,hub_port_sysfs_children,&topology);
+
         snprintf(database,sizeof database,"%s/PIONEER/rekordbox/exportLibrary.db",m->mnt_dir);
         if (access(database,R_OK)) continue;
         int duplicate=0;
         for (unsigned i=0;i<count;i++) if (!strcmp(found[i].device,device)) duplicate=1;
         if (duplicate) continue;
+        found[count].port_number=port_number;
+        int route_length=snprintf(found[count].port_route,sizeof found[count].port_route,"%u-%u",route.bus,route.root);
+        for (unsigned level=0;level<route.depth;level++)
+            route_length+=snprintf(found[count].port_route+route_length,
+                sizeof found[count].port_route-(size_t)route_length,".%u",route.ports[level]);
         strcpy(found[count].device,device);
         strcpy(found[count].mount,m->mnt_dir);
         strcpy(found[count].topology,resolved);
@@ -89,7 +99,7 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
     static const unsigned slots[]={3,7,3,7,8,8,2,2};
     int failed=0;
     for (unsigned i=0;i<count;i++)
-        if (fprintf(config,"%u 10.0.2.%u %u %s %s\n",players[i],47+players[i],slots[i],found[i].mount,found[i].name)<0) failed=1;
+        if (fprintf(config,"#hub-port %u %s\n%u 10.0.2.%u %u %s %s\n",found[i].port_number,found[i].port_route,players[i],47+players[i],slots[i],found[i].mount,found[i].name)<0) failed=1;
     if (fclose(config)) failed=1;
     if (failed || rename(temporary,output)) { unlink(temporary); return -1; }
     return (int)count;

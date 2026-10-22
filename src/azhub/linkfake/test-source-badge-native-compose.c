@@ -138,7 +138,7 @@ static void blend_crop(void *graphics,const uintptr_t *image,int dx,int dy,int w
 }
 static void graphics_draw(void *graphics,const uintptr_t *image,int x,int y) {blend_crop(graphics,image,x,y,get_int(*image,0x10),get_int(*image,0x14),0,0);}
 static void draw_crop(void *graphics,const uintptr_t *image,int dx,int dy,int width,int height,int sx,int sy) {
-    static const int anchors[]={63,62,82},baselines[]={68,53,28};
+    static const int anchors[]={63,62,82},baselines[]={69,53,28};
     assert(dx==anchors[family]&&dy+height==baselines[family]);crop_draws++;
     blend_crop(graphics,image,dx,dy,width,height,sx,sy);
     if(corrupt_outside)set_pixel(context(graphics)->image,40,35,0x12345678);

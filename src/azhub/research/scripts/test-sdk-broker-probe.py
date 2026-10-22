@@ -234,6 +234,11 @@ try:
  if args.integrated_mode_cycle:assert persisted_link_mode()==1,'Mode-cycle control requires native Link On initially'
  loaded=guest('cat /tmp/azmod-community/loaded').stdout
  assert 'suspended=0' in loaded and 'mod=usb-hub-support|1|' in loaded,'Resume community mods through the framework UI before testing'
+ if args.integrated_eject and args.library_root:
+  device=args.library_root.rsplit('/',1)[1]
+  physical=guest('readlink -f /sys/class/block/'+device).stdout.strip()
+  assert '/3-2.1/' in physical, 'Selected library root must match protected source0 port3-2.1; Linux sdX names can change after hotplug: '+physical
+
  active=guest('systemctl show EP147 -p ActiveEnterTimestampMonotonic').stdout.strip()
  assert re.fullmatch(r'ActiveEnterTimestampMonotonic=[0-9]+',active)
  stable_after=int(active.split('=')[1])/1_000_000+150
@@ -301,7 +306,7 @@ try:
    expected=hashlib.sha256((root/'local/diagnostics/sharing-hub0-export.pdb').read_bytes()).hexdigest()
    assert guest('sha256sum '+args.library_root+'/PIONEER/rekordbox/export.pdb').stdout.split()[0]==expected
    if args.two_sources:assert guest('sha256sum /media/usb/sdg1/PIONEER/rekordbox/export.pdb').stdout.split()[0]==expected
-   if args.inventory_gate:assert args.library_root=='/media/usb/sdc1'
+   if args.inventory_gate:assert args.library_root=='/media/usb/sdc1' or args.integrated_eject
    else:
     guest('mount --bind '+args.library_root+' /tmp/azhub-sdk-library');bound=True
    assert not host('ip','netns','list').stdout.strip()
@@ -922,7 +927,7 @@ print('FOREIGN_PLAYER_41_CLAIM_SENT')
     while 'WITHDRAWN:' not in (out/'withdrawal.stdout').read_text():
      assert withdrawal.poll() is None and time.monotonic()<limit,(out/'withdrawal.stderr').read_text()
      time.sleep(.2)
-    assert args.library_root=='/media/usb/sdc1'
+    assert args.library_root=='/media/usb/sdc1' or args.integrated_eject
     assert 'return' in e.qmp('device_del',{'id':'functionalstickA'})
     limit=time.monotonic()+15
     while guest('test ! -e /sys/bus/usb/devices/3-2.1',check=False).returncode:

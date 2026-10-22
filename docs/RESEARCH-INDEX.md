@@ -4,6 +4,8 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| HUB-PORT-NUMBERING.md | Active physical-port numbering, empty/nested ports, route-aware lifecycle and Source baseline work; deployment not accepted yet |
+| acceptance/usb-hub-support-port-numbering-emulator-progress.json | Actual emulator hotplug and nested-hub UI observations with restoration; remaining integration gates |
 | acceptance/usb-hub-support-emulator-port-cleanup.json | Historical emulator listener reduction from77 to5, transport controls and recovery limitations |
 | acceptance/usb-hub-support-lazy-badge-init.json | Historical lazy badge initialization, cold boot and warm integrated regression evidence; current status is recorded separately |
 | HUB-LINK-PHYSICAL-ETHERNET.md | Current physical Ethernet result, fixes/ownership, client reproduction, limits, failed-run history and stable rollback |

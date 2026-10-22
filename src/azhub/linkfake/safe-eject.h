@@ -373,6 +373,7 @@ static int safe_eject_display_number(const struct eject_item *item) {
     int number=0;
     pthread_mutex_lock(&safe_source_mutex);
     for (int s=0;s<nfakes;s++) {
+        if (!fakes[s].present) continue; /* Retired paths may now belong to another port. */
         struct stat st;
         if (stat(fakes[s].dir,&st)) continue;
         char node[64],resolved[PATH_MAX];

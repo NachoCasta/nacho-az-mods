@@ -1,5 +1,15 @@
 # Current state
 
+## Active development: physical hub-port numbers
+
+Unpublished changes assign USB 1-8 from hub-port topology and move Source-only
+numerals 3-8 down one pixel. Real emulator detach/move/return and fresh nested-hub
+UI controls pass; loaded/public-sharing and cross-view regressions remain open.
+Published 0.4.4 and the physical AZ are unchanged. See
+[implementation notes](HUB-PORT-NUMBERING.md) and
+[scoped emulator progress](acceptance/usb-hub-support-port-numbering-emulator-progress.json).
+
+
 ## Published release0.4.4
 
 [USB Hub Support0.4.4](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.4)

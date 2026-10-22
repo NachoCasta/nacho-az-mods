@@ -1,0 +1,36 @@
+{
+  "scope": "Actual emulator local UI runtime; no physical AZ and no public helper/loaded-playback claim",
+  "hotplug": {
+    "result": "PASS",
+    "evidence": "local/diagnostics/physical-port-hotplug-v1",
+    "same_EP147_process": true,
+    "moved_port1_to_port2_label": 2,
+    "returned_to_port1_label": 1,
+    "original_neighbor_labels_preserved": [
+      3,
+      4,
+      5
+    ],
+    "native_alias_release_preceded_transport_reuse": true,
+    "mod_bytes_and_USB_topology_restored": true
+  },
+  "nested": {
+    "result": "PASS",
+    "evidence": "local/diagnostics/physical-port-nested-v1",
+    "route": "3-2.2.3",
+    "flattened_label": 4,
+    "primary_port1_empty_reserved": true,
+    "first_two_secondary_ports_empty_reserved": true,
+    "secondary_hub_ports": 8,
+    "beyond_eighth_leaf_positions_not_admitted": true,
+    "mod_bytes_and_USB_topology_restored": true
+  },
+  "remaining": [
+    "Integrated loaded-track continuity and public-helper regression",
+    "Browse/Waveform/eject selector consistency after port changes",
+    "Additional high numeral screenshot review",
+    "Final sanitizer/source checks and pushed commits",
+    "User screenshot review and separately authorized physical validation"
+  ],
+  "published": false
+}

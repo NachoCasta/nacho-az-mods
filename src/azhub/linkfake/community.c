@@ -87,25 +87,34 @@ static void community_refresh_presence(const char *config) {
     unsigned char seen[MAX_FAKES]={0};
     FILE *file=fopen(config,"re");
     if (!file) return; /* A failed scan must not withdraw all sources. */
-    char line[512],ip[32],directory[256]; int player,slot;
+    char line[512],ip[32],directory[256]; int player,slot;unsigned next_port=0;char next_route[96]={0};
     while (fgets(line,sizeof line,file)) {
+        if (sscanf(line,"#hub-port %u %95s",&next_port,next_route)==2) continue;
+        next_port=0;char route[96];strcpy(route,next_route);next_route[0]=0;
         if (sscanf(line,"%d %31s %d %255s",&player,ip,&slot,directory)!=4) continue;
-        for (int i=0;i<nfakes;i++) if (!strcmp(fakes[i].dir,directory)) seen[i]=1;
+        for (int i=0;i<nfakes;i++)
+            if (!strcmp(fakes[i].dir,directory) && *route && !strcmp(fakes[i].port_route,route)) seen[i]=1;
     }
     fclose(file);
-    for (int i=0;i<nfakes;i++) {
+    /* Withdraw every outgoing route before considering old-route revival. */
+    for (int phase=0;phase<2;phase++) for (int i=0;i<nfakes;i++) {
         struct fake *source=&fakes[i];
 #ifdef LF_SAFE_EJECT
         if (source->eject_reserved) continue;
 #endif
-        if (!seen[i] && source->present) {
+        if (phase==0 && !seen[i] && source->present) {
             source->present=0;
             source->notify_pending=0;
             source->mount_at=0;
             source->announced_at=source->queried_at=0;
             source->unmount_pending=1;
             lf_log("hub source absent player %d slot %d path=%s",source->player,source->slot,source->dir);
-        } else if (seen[i] && !source->present && !source->unmount_pending) {
+        } else if (phase==1 && seen[i] && !source->present && !source->unmount_pending) {
+            int draining=0;
+            for (int other=0;other<nfakes;other++)
+                if (other!=i && fakes[other].unmount_pending &&
+                    !strcmp(fakes[other].dir,source->dir)) draining=1;
+            if (draining) continue;
             source->present=1;
             source->notify_pending=1;
             lf_log("hub source returned player %d slot %d path=%s",source->player,source->slot,source->dir);

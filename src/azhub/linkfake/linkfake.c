@@ -59,6 +59,7 @@ struct fake {
     struct in_addr ip;
     char dir[256];
     char name[128];
+    char port_route[96]; /* Physical route, independent of flattened display rank. */
     unsigned char device_settings[8]; /* source DEVSETTING.DAT; zero means unspecified */
     int sock;          /* loopback socket the player's packets come from */
     uint16_t port;     /* its local port, network order */
@@ -1025,16 +1026,20 @@ static int is_ep147(void) {
     return b && !strcmp(b + 1, "EP147");
 }
 
+#include "source-display.h"
 static int linkfake_load_config(void) {
     const char *conf=getenv("LINKFAKE_CONF") ? getenv("LINKFAKE_CONF") : "/home/root/linkfake.conf";
     FILE *c=fopen(conf,"re");
     if (!c) { lf_log("no %s, inactive",conf); return 0; }
     int parsed=nfakes;
     int automatic=getenv("LINKFAKE_AUTODISCOVER")!=NULL;
-    char line[512];
+    char line[512],next_route[96]={0};unsigned next_port=0;
     while (fgets(line,sizeof line,c)) {
+        if (sscanf(line,"#hub-port %u %95s",&next_port,next_route)==2) continue;
+        unsigned physical_port=next_port;next_port=0;
         struct fake candidate={0};
         struct fake *f=&candidate;
+        strcpy(f->port_route,next_route);next_route[0]=0;
         char ip[32]; int used=0,explicit_slot=0;
         f->slot=3;
         if (line[0]=='#') continue;
@@ -1051,10 +1056,14 @@ static int linkfake_load_config(void) {
         snprintf(f->name,sizeof f->name,"%s",line+used);
         f->name[strcspn(f->name,"\r\n")]=0;
         if (automatic) {
+            if (physical_port<1 || physical_port>8) continue;
             int known=0,reuse=-1;
             for (int i=0;i<parsed;i++) {
-                if (!strcmp(fakes[i].dir,f->dir)) known=1;
+                if (!strcmp(fakes[i].dir,f->dir) &&
+                    (fakes[i].unmount_pending ||
+                     !strcmp(fakes[i].port_route,f->port_route))) known=1;
                 if (!fakes[i].present && !fakes[i].unmount_pending && reuse<0
+                    && hub_source_display_number(fakes[i].player,fakes[i].slot)==(int)physical_port
 #ifdef LF_SAFE_EJECT
                     && !fakes[i].eject_reserved
 #endif
@@ -1069,16 +1078,18 @@ static int linkfake_load_config(void) {
                 struct fake *old=&fakes[reuse];
                 strcpy(old->dir,f->dir);
                 strcpy(old->name,f->name);
+                strcpy(old->port_route,f->port_route);
                 old->mount_at=old->announced_at=old->queried_at=0;
                 old->mounted=0; old->notify_pending=1;
                 old->present=1; /* Publish replacement only after fields agree. */
-                lf_log("hub source reused player %d slot %d path=%s",old->player,old->slot,old->dir);
+                lf_log("hub source reused player %d slot %d path=%s port=%u route=%s",old->player,old->slot,old->dir,physical_port,old->port_route);
                 continue;
             }
             if (parsed>=MAX_FAKES) continue;
             static const int players[]={7,7,8,8,7,8,7,8};
             static const int slots[]={3,7,3,7,8,8,2,2};
             f->player=players[parsed]; f->slot=slots[parsed];
+            if (!hub_source_port_available(f->player,f->slot,physical_port)) continue;
             if (!hub_peer_ips[0] && !hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),hub_peer_ips)) {
                 /* Interface discovery can finish after mod init. Retry on the
                  * normal poll without publishing unusable fixed-subnet peers. */
@@ -1108,8 +1119,11 @@ static int linkfake_load_config(void) {
         }
         f->port=address.sin_port;
         probe_udp_sender_add(f->sock,f->player);
+        if (automatic && !hub_source_port_reserve(f->player,f->slot,physical_port)) {
+            close(f->sock);continue;
+        }
         memcpy(&fakes[parsed],f,sizeof *f);
-        lf_log("player %d slot %d at %s serves %s",f->player,f->slot,ip,f->dir);
+        lf_log("player %d slot %d at %s serves %s port=%u route=%s",f->player,f->slot,ip,f->dir,physical_port,f->port_route);
         parsed++;
     }
     fclose(c);

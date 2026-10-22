@@ -164,6 +164,12 @@ int main(void) {
     /* No callback scope means no claim, even for a recognized widget. */
     initialize(&fixture,0,1);fixture.owned=0;current=&fixture;render_current();
     assert(fixture.widget[26]==1000);
+    /* Physical port reservation must select the same label in all three views. */
+    assert(hub_source_port_reserve(7,3,8));
+    for (int family=0;family<3;family++) {
+        initialize(&fixture,family,8);fixture.closure[1]=100;run(&fixture);
+        assert(fixture.widget[26]==(uintptr_t)(family*8+8));release_widget(&fixture);
+    }
     assert(base_calls==root_calls+compose_successes && callback_calls>24 && live_handles==24);
     source_badge_discard_images();assert(!live_handles);
     for (int i=1;i<=24;i++) assert(!refs[i]);

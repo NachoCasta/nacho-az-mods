@@ -78,12 +78,13 @@ static int hub_native_compose_digit(int family,int number,const uintptr_t *stock
 /* Compose one cache entry before hook installation. Caller retains the returned
  * native Image reference and releases it with source_badge_native_image_release.
  * Native USB1/2 icon, caption, digit and spacing stay literal. Only digits3..8
- * use the user-approved nearest native face, preserving their original baseline. */
+ * use the user-approved nearest native face. Source adds one pixel vertically
+ * to align its solid glyph rows with the untouched native USB caption. */
 static int source_badge_native_compose(int family,int number,uintptr_t *out) {
     static const char *names[]={"Source","StatusArea","Waveform"};
     static const struct hub_native_edit_rect digit_regions[]={
         {62,49,18,23},{61,40,14,18},{81,7,20,27}};
-    static const int anchors[]={63,62,82},baselines[]={68,53,28};
+    static const int anchors[]={63,62,82},baselines[]={69,53,28};
     uintptr_t stock=0,private_image=0,canvas=0,frame=0,marker=0;
     struct hub_native_graphics graphics={{0}},marker_graphics={{0}};
     struct hub_native_pixels pixels;

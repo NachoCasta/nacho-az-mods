@@ -14,5 +14,15 @@ int main(void) {
     assert(!hub_source_display_number(9,3));
     assert(!hub_source_display_number(7,1));
     assert(!hub_source_display_number(8,0));
+    /* First inserted stick is in port4; second inserted stick is in port1. */
+    assert(hub_source_port_reserve(7,3,4));
+    assert(hub_source_port_reserve(7,7,1));
+    assert(hub_source_display_number(7,3)==4);
+    assert(hub_source_display_number(7,7)==1);
+    assert(!hub_source_port_reserve(8,3,4)); /* Never steal an existing label. */
+    assert(!hub_source_port_reserve(7,3,3)); /* Never rename a cached identity. */
+    assert(hub_source_port_reserve(7,3,4)); /* Same-port reconnect is idempotent. */
+    assert(!hub_source_port_reserve(1,3,2));
+    assert(!hub_source_port_reserve(8,3,9));
     return 0;
 }
