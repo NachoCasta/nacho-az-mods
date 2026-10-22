@@ -1,5 +1,7 @@
 // Headless helper for EP147 research.
 // args: a list of commands, each one of
+//   asm:<hexaddr>:<n>  inspect at most 64 instructions at a candidate hook site
+//   out:<path>         write research output to the explicit local path
 //   dec:<hexaddr>      decompile the function containing addr
 //   xref:<hexaddr>     list callers / references to addr (with containing function)
 //   str:<text>         find defined strings containing text, then their referencing functions
@@ -63,7 +65,10 @@ public class Probe extends GhidraScript {
 
 	@Override
 	public void run() throws Exception {
-		out = new java.io.PrintWriter(new java.io.FileWriter(System.getProperty("user.home") + "/probe.out"));
+		String output = System.getProperty("user.home") + "/probe.out";
+		for (String cmd : getScriptArgs())
+			if (cmd.startsWith("out:")) output = cmd.substring(4);
+		out = new java.io.PrintWriter(new java.io.FileWriter(output));
 		dec = new DecompInterface();
 		dec.openProgram(currentProgram);
 		for (String cmd : getScriptArgs()) {
@@ -75,6 +80,16 @@ public class Probe extends GhidraScript {
 				xref(toAddr(Long.parseLong(v, 16)));
 			else if (k.equals("str"))
 				str(v);
+			else if (k.equals("asm")) {
+				String[] parts = v.split(":");
+				int count = Integer.parseInt(parts[1]);
+				if (count < 1 || count > 64) throw new IllegalArgumentException("Instruction count1..64");
+				ghidra.program.model.listing.Instruction ins = currentProgram.getListing().getInstructionAt(toAddr(Long.parseLong(parts[0], 16)));
+				for (int j = 0; j < count && ins != null; ++j) {
+					println(ins.getAddress() + " " + ins.toString());
+					ins = currentProgram.getListing().getInstructionAfter(ins.getAddress());
+				}
+			}
 			else if (k.equals("vt")) {
 				// vt:<hexaddr>:<count>  list (and decompile) vtable slots
 				String[] p = v.split(":");

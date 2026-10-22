@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "scope": "Local emulator TCP listener cleanup; no physical AZ action",
+  "before": {
+    "process_id": 65300,
+    "listening_ports": 77,
+    "qmp_TCP_channels": 4,
+    "host_forwards": 1,
+    "dynamic_test_channels_absent": true
+  },
+  "after": {
+    "process_id": 35016,
+    "listening_ports": 5,
+    "ports": [
+      2222,
+      4445,
+      4446,
+      15101,
+      15102
+    ],
+    "freed": 72,
+    "persistent_live_disk_roots": 8,
+    "normal_mod_version": "0.3.2",
+    "normal_mod_executable_sha256": "a3d6c7ba438494008edf66fdda43d4be5ae702ed3afa4cdcb57791b9964d1add",
+    "framework_Try_again_used": true,
+    "application_reload_used": true
+  },
+  "transport": {
+    "temporary_Unix_channel_connect_and_remove": "pass",
+    "Windows_Python_native_Winsock_adapter": "pass",
+    "integrated_stream_trial": "pass: two live sources, full menus, exact files, eject/reconnect and transport cleanup",
+    "TCP_listener_count_during_integrated_trial": 5
+  },
+  "limitations": [
+    "The first emulator cold-boot EP147 exited139 and the framework quarantined the mod; warm UI recovery succeeded",
+    "Cold-boot failure cause is not established and remains an investigation gate",
+    "The VM RAM state was restarted; the eight persistent live disk roots and USB topology were preserved",
+    "All research metadata and screenshots remain local and ignored"
+  ],
+  "evidence_directory": "local/diagnostics/port-audit-v1",
+  "physical_AZ_touched": false,
+  "historical_record": true,
+  "interpretation": "Historical scoped experiment. Pending statements apply to this experiment at recording time; consult CURRENT-STATE.md and the0.4.4 completion/publication records for current release status."
+}

@@ -4,6 +4,8 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-emulator-port-cleanup.json | Historical emulator listener reduction from77 to5, transport controls and recovery limitations |
+| acceptance/usb-hub-support-lazy-badge-init.json | Historical lazy badge initialization, cold boot and warm integrated regression evidence; current status is recorded separately |
 | HUB-LINK-PHYSICAL-ETHERNET.md | Current physical Ethernet result, fixes/ownership, client reproduction, limits, failed-run history and stable rollback |
 | acceptance/usb-hub-support-sharing-044-package.json | Exact validated unpublished0.4.4 package, source snapshot and reproducible target hashes |
 | acceptance/usb-hub-support-sharing-044-host-checks.json |97 portable tests per plain/ASan+UBSan/TSan mode; scoped source checks |

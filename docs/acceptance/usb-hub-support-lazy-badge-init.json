@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "scope": "Lazy native HUB badge initialization regression; cold-start runtime acceptance pending",
+  "firmware": "ep147-9e9454e357389ece",
+  "builds": {
+    "az_candidate_sha256": "618ade7846e07b8dae814df84f41dba0a7fa66a46d4d3bd44c39c9eac3ba9456",
+    "sharing_emulator_sha256": "9fbb24db6080a7684efe1daeac4d89ac0ae412c8f7f3c5b9c0c0633559862593"
+  },
+  "tests": {
+    "hook_registration": "passed",
+    "plain": 58,
+    "asan_ubsan": 58,
+    "host_log": "local/integration/cold-badges-v1/host-suite.log",
+    "tsan": 58
+  },
+  "reason": "Recorded cold-start signal11 stack reached native image-file loading through eager badge preparation during mod init",
+  "change": "Compose each badge lazily after its first native widget update; atomically publish completed images; preserve native presentation on failed or concurrent attempts",
+  "limitations": [
+    "One cold boot of the standard AZ candidate in the emulator; sharing candidate independently passed warm integrated regression",
+    "Cold browse/waveform visual validation pending; SOURCE badges1-5 visually inspected",
+    "No physical AZ or actual-CDJ acceptance",
+    "Public sharing remains emulator-gated with externally prepared networking"
+  ],
+  "integrated_regression": {
+    "evidence_directory": "local/diagnostics/sharing-lazy-badges-two-v1",
+    "runner_exit": 0,
+    "live_sources": 2,
+    "independent_complete_menus_and_exact_database_audio_hashes": true,
+    "eject_reconnect_and_neighbor_original_session": true,
+    "lazy_source_badges_prepared": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "transport_errors": [],
+    "original_0_3_2_restored": true,
+    "owned_namespaces_and_module_removed": true,
+    "physical_AZ_touched": false
+  },
+  "cold_boot_regression": {
+    "evidence_directory": "local/diagnostics/cold-badge-trial-v1",
+    "candidate": "standard az-candidate",
+    "sha256": "618ade7846e07b8dae814df84f41dba0a7fa66a46d4d3bd44c39c9eac3ba9456",
+    "new_guest_boot": true,
+    "NRestarts": 0,
+    "crash_log_bytes": 0,
+    "persistent_roots_preserved": 8,
+    "source_screenshot": "local/diagnostics/cold-badge-trial-v1/cold-source.png",
+    "source_badges_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "original_bytes_restored": true,
+    "normal_0_3_2_loaded_after_restoration": true,
+    "QEMU_listeners_after": 5,
+    "runner_restore_issue": "Guest find command failed; explicit verified owned USB backup path restored exact originals through a separate emulator-only recovery script",
+    "physical_AZ_touched": false
+  },
+  "historical_record": true,
+  "interpretation": "Historical scoped experiment. Pending statements apply to this experiment at recording time; consult CURRENT-STATE.md and the0.4.4 completion/publication records for current release status."
+}
