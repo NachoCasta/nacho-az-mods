@@ -90,7 +90,8 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
     }
     endmntent(table);
     qsort(found,count,sizeof found[0],azhub_candidate_cmp);
-    if (count>8) count=8;
+    /* Keep every observed route in presence reconciliation, including an active
+     * route whose rank moved past8. The loader alone enforces eight transports. */
     char temporary[PATH_MAX];
     if (snprintf(temporary,sizeof temporary,"%s.%ld.tmp",output,(long)getpid())>=(int)sizeof temporary) return -1;
     FILE *config=fopen(temporary,"we");
@@ -99,10 +100,10 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
     static const unsigned slots[]={3,7,3,7,8,8,2,2};
     int failed=0;
     for (unsigned i=0;i<count;i++)
-        if (fprintf(config,"#hub-port %u %s\n%u 10.0.2.%u %u %s %s\n",found[i].port_number,found[i].port_route,players[i],47+players[i],slots[i],found[i].mount,found[i].name)<0) failed=1;
+        if (fprintf(config,"#hub-port %u %s\n%u 10.0.2.%u %u %s %s\n",found[i].port_number,found[i].port_route,players[i%8],47+players[i%8],slots[i%8],found[i].mount,found[i].name)<0) failed=1;
     if (fclose(config)) failed=1;
     if (failed || rename(temporary,output)) { unlink(temporary); return -1; }
-    return (int)count;
+    return count>8 ? 8:(int)count;
 }
 #endif
 #ifdef AZHUB_DISCOVERY_MAIN

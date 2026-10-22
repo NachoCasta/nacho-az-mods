@@ -26,11 +26,19 @@
     "mod_bytes_and_USB_topology_restored": true
   },
   "remaining": [
-    "Integrated loaded-track continuity and public-helper regression",
-    "Browse/Waveform/eject selector consistency after port changes",
-    "Additional high numeral screenshot review",
-    "Final sanitizer/source checks and pushed commits",
-    "User screenshot review and separately authorized physical validation"
+    "User screenshot review",
+    "Physical candidate installation and acceptance authorization",
+    "Final reviewed commits pushed after approval"
   ],
-  "published": false
+  "published": false,
+  "cross_view_component_control": "PASS: reserve display8 for internal source1 and verify all three actual renderer callback families select8; Source/Browse/Waveform share reservation table",
+  "shared_eject_control": "PASS: docs/acceptance/usb-hub-support-port-numbering-sharing-eject.json",
+  "neighbor_loaded_playback": {
+    "result": "PASS",
+    "evidence_directory": "local/diagnostics/port-numbering-local-playback-v1",
+    "loaded_backing": "sdc at port3-2.2",
+    "ejected_backing": "sdd at port3-2.1",
+    "scope": "Neighbor loaded-loop continuity, not own-source loaded eject; initial historical source-row offset selected the second visible row and the native bind proof verified it"
+  },
+  "own_source_loaded_playback": "PASS; usb-hub-support-port-numbering-own-loaded-final.json"
 }

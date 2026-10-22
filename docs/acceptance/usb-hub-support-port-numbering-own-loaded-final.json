@@ -1,0 +1,988 @@
+{
+  "SDK_launch_and_IPC": true,
+  "native_status_observer": false,
+  "integrated_runtime": true,
+  "integrated_native_eject": true,
+  "integrated_mode_cycle": false,
+  "integrated_network_recovery": false,
+  "probe_environment_used": false,
+  "mod_sha256": "20fe0bd0a80285016e8d5765524bcc537512dd7c11e8d55aac6be48735975ff9",
+  "native_complete_file_control": false,
+  "native_fresh_local_playback_control": false,
+  "native_local_playback_usb": null,
+  "integrated_whole_hub_eject": false,
+  "whole_hub_withdrawal_only": false,
+  "capacity_complete_menu_file_clients_tested": false,
+  "helper_sha256": "cc1d64857738939861521514c2fcc31737f0002c4d1b07abbef2cf0aed168dff",
+  "native_application_pid": "3675530",
+  "namespace_only_acknowledged": false,
+  "service_active_and_drained": true,
+  "helper_owned_allocation": true,
+  "native_inventory_gate_enabled": true,
+  "two_managed_sources": true,
+  "capacity_sources_tested": null,
+  "duplicate_grant_rejected": false,
+  "native_grant_rejected": false,
+  "short_grant_refresh": true,
+  "eject_pending_refresh": false,
+  "changed_refresh_address": false,
+  "player_collision": false,
+  "player_collision_recovery": false,
+  "dynamic_identity": true,
+  "native_inventory_roots": true,
+  "reusable_inventory_engine": true,
+  "candidate_runtime": true,
+  "native_network_change_retirement": false,
+  "native_network_recovery": false,
+  "managed_link_local": false,
+  "native_ipv4_label": false,
+  "managed_link_local_conflict": false,
+  "managed_link_local_eject": false,
+  "managed_link_local_dhcp_return": false,
+  "initial_ARP_conflict_declined": false,
+  "conflict_recovery_same_identity": false,
+  "pending_DHCP_peer_loss_drained": false,
+  "pending_clients": [],
+  "independent_real_library_clients": true,
+  "managed_and_peer_processes_gone": true,
+  "physical_AZ_touched": false,
+  "scope": "Final port-numbering runtime: own-source native loaded-loop eject/reconnect with exact backing proof and concurrent independent library/file clients; emulator engine observation, no audio-signal capture",
+  "evidence_directory": "local\\diagnostics\\port-numbering-own-loaded-final-v2",
+  "runner_exit": 0,
+  "original_bytes_restored": true,
+  "owned_scope_cleaned": true,
+  "playback": {
+    "samples": [
+      {
+        "case": "before independent clients",
+        "clock_ms": 88950226,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.586,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88950550,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.83,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88951938,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.036,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88953083,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.132,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88954581,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.535,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88956053,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.952,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88956985,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.861,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88958349,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.196,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88959692,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.496,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88961007,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.787,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88961962,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.708,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88963457,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.181,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88964415,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.122,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88965737,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.434,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88967074,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.737,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88968158,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.804,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88969599,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.166,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88970882,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.419,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88971848,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.369,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88973247,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.736,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88974276,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.741,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88975548,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.961,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88976860,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.232,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88978180,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.517,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88979208,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.531,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88980650,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.937,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88981669,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.916,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88983039,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.252,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88984594,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.734,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88985555,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.643,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88986969,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.943,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88988172,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.052,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88989397,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.175,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88990658,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.322,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88991876,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.445,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88993124,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.595,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88994346,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.738,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88995298,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.566,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88996569,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.715,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88997807,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.868,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 88999025,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.945,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89000314,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.127,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89001563,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.286,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89002803,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.43,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89004002,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.542,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89005221,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.68,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89006522,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.906,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89007785,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.068,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89009031,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.229,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89009959,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.1,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89011188,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.25,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89012545,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.512,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89013874,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.742,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89015145,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.9,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89016185,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.882,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89017753,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.242,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89018975,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.36,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89020286,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.589,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89021548,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.762,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89022854,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.96,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89023781,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.815,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89025041,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 2.983,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89026304,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.153,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89027526,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.286,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89028737,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.412,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89029989,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.575,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89031201,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.71,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89032425,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.86,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89033763,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.09,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89034657,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.854,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89035969,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.084,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89037219,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.23,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89038474,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.381,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients active",
+        "clock_ms": 89039754,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.58,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "external clients completed",
+        "clock_ms": 89040937,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.633,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "selected backing ejected",
+        "clock_ms": 89051916,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 3.488,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      },
+      {
+        "case": "after eject/replug observers",
+        "clock_ms": 89088901,
+        "pid": 3675530,
+        "deck": {
+          "loaded": 1,
+          "playing": 1,
+          "pos_s": 4.097,
+          "content_id": 495,
+          "title": "Algo m\u00c3\u00a1s"
+        }
+      }
+    ],
+    "physical_backing_verified": "sdd",
+    "native_four_beat_loop": true,
+    "audio_signal_captured": false
+  },
+  "reviewed_source_offset": -1,
+  "actual_CDJ_acceptance": false,
+  "published": false
+}

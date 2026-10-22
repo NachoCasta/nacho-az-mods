@@ -1,0 +1,32 @@
+{
+  "scope": "Final physical-port numbering source checks; no deployment or release",
+  "components": {
+    "plain": 98,
+    "asan": 98,
+    "tsan": 98
+  },
+  "sdk_UI": [
+    [
+      "plain",
+      "10"
+    ],
+    [
+      "asan",
+      "8"
+    ],
+    [
+      "tsan",
+      "8"
+    ]
+  ],
+  "components_and_SDK_UI_exit": 0,
+  "component_log": "local/integration/physical-port-numbering-final-checks.log",
+  "hook_registration": "PASS; local/integration/physical-port-numbering-final-hooks.log",
+  "actual_loader_presence_bodies": "PASS; local/integration/physical-port-numbering-final-reconciliation.log",
+  "prior_container_TSan_runtime_failure_preserved": true,
+  "final_container": "Offline, read-only workspace, one CPU, seccomp unconfined for sanitizer address-map runtime",
+  "target_runtime_sha256": "6af80c6f686c76856c41eb18d9e963c3cd9b1ee41f1da0b6dbd5449eda3422a1",
+  "emulator_runtime_sha256": "20fe0bd0a80285016e8d5765524bcc537512dd7c11e8d55aac6be48735975ff9",
+  "physical_AZ_touched": false,
+  "published": false
+}

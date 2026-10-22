@@ -36,6 +36,7 @@ p.add_argument('--two-sources',action='store_true',help='Use existing matching n
 p.add_argument('--topology-source-row',type=int,choices=range(-1,8),help='Explicit previously reviewed emulator source row; each load still proves its physical backing')
 p.add_argument('--local-deck-topology',action='store_true',help='Native two-On/four-Off/two-On loaded engine control alongside integrated clients')
 p.add_argument('--local-playback',action='store_true',help='Keep a native hub deck looping while external clients browse/fetch and eject/replug its source')
+p.add_argument('--local-source-row',type=int,choices=range(-1,8),help='Explicit previously visually reviewed source-row offset for local playback; actual physical backing is still asserted')
 p.add_argument('--reject-duplicate-grant',action='store_true',help='Reject a duplicate second-source lease while preserving the original source')
 p.add_argument('--reject-native-grant',action='store_true',help='Offer the emulator native IPv4 address and require rejection before publication')
 p.add_argument('--refresh-grants',action='store_true',help='Use60-second grants and verify real same-generation refresh while clients stay active')
@@ -99,6 +100,7 @@ if args.reconnect_selected:assert args.eject_selected
 if args.two_sources:assert args.inventory_gate and (args.reconnect_selected or args.reject_duplicate_grant)
 if args.reject_duplicate_grant:assert args.two_sources and not (args.eject_selected or args.local_playback or args.arp_conflict)
 if args.local_playback:assert args.inventory_gate and args.eject_selected
+if args.local_source_row is not None:assert args.local_playback
 if args.link_local_dhcp_return:assert args.link_local and not (args.link_local_conflict or args.link_local_eject)
 if args.link_local_eject:assert args.link_local and args.reconnect_selected and not args.link_local_conflict
 if args.link_local_conflict:assert args.link_local
@@ -448,7 +450,10 @@ try:
    local_suite.drive('source')
    subprocess.run([sys.executable,'C:/Users/icast/xdj-az-emu/tools/az-drive.py','shot','native-source-menu'],env=shot_env,check=True)
    selection=out/'native-source-row.txt';limit=time.monotonic()+90
-   print('NATIVE_SOURCE_SELECTION_REQUIRED '+str(selection),flush=True)
+   if args.local_source_row is not None:
+    selection.write_text(str(args.local_source_row)+'\n')
+    print('USING_REVIEWED_NATIVE_SOURCE_ROW '+str(args.local_source_row),flush=True)
+   else:print('NATIVE_SOURCE_SELECTION_REQUIRED '+str(selection),flush=True)
    while not selection.exists():
     assert time.monotonic()<limit,'Review the saved emulator source menu and provide its verified hub row offset'
     time.sleep(.2)
@@ -460,7 +465,7 @@ try:
    limit=time.monotonic()+30
    while not json.loads(guest('cat /run/azhub-eject-status').stdout)['decks'][0]['loaded']:
     assert time.monotonic()<limit;time.sleep(.3)
-   local_suite.assert_load_disk(marker,1,'sdc')
+   local_suite.assert_load_disk(marker,1,args.library_root.rsplit('/',1)[1][:-1])
    deck=json.loads(guest('cat /run/azhub-eject-status').stdout)['decks'][0]
    if not deck['playing']:local_suite.drive('press',1,'play')
    time.sleep(2);local_suite.drive('press',1,'loop4');time.sleep(1)
@@ -969,7 +974,7 @@ print('FOREIGN_PLAYER_41_CLAIM_SENT')
   if args.local_playback:
    sample_playback('after eject/replug observers')
    assert max(item['deck']['pos_s'] for item in playback_samples)-min(item['deck']['pos_s'] for item in playback_samples)>.1
-   (out/'local-playback.json').write_text(json.dumps({'samples':playback_samples,'physical_backing_verified':'sdc','native_four_beat_loop':True,'audio_signal_captured':False},indent=2))
+   (out/'local-playback.json').write_text(json.dumps({'samples':playback_samples,'physical_backing_verified':args.library_root.rsplit('/',1)[1][:-1],'native_four_beat_loop':True,'audio_signal_captured':False},indent=2))
   if not args.integrated_runtime:guest(': > '+done_file)
  if args.native_status_observer:
   pid=application_pid();mapped=guest('grep usb-hub-support.so /proc/'+pid+'/maps | head -1').stdout.split()[0]

@@ -4,7 +4,9 @@
 
 Unpublished changes assign USB 1-8 from hub-port topology and move Source-only
 numerals 3-8 down one pixel. Real emulator detach/move/return and fresh nested-hub
-UI controls pass; loaded/public-sharing and cross-view regressions remain open.
+UI controls, final own-source loaded eject/public clients and cross-view callback
+controls pass. The local0.4.5 package validates; visual review, push approval and
+separately authorized physical acceptance remain open.
 Published 0.4.4 and the physical AZ are unchanged. See
 [implementation notes](HUB-PORT-NUMBERING.md) and
 [scoped emulator progress](acceptance/usb-hub-support-port-numbering-emulator-progress.json).

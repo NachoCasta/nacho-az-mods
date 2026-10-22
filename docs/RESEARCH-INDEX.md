@@ -4,6 +4,10 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-port-numbering-final-source-checks.json |98 components per mode, SDK UI, hook and actual loader/presence controls |
+| acceptance/usb-hub-support-port-numbering-045-package.json | Exact validated local0.4.5 candidate; physical installation/publication pending |
+| acceptance/usb-hub-support-port-numbering-own-loaded-final.json | Final exact runtime native own-source loaded loop, eject/reconnect and independent clients with restoration |
+| acceptance/usb-hub-support-port-numbering-sharing-eject.json | Shared loaded-status/eject control, neighbor continuity and explicit earlier harness failures |
 | HUB-PORT-NUMBERING.md | Active physical-port numbering, empty/nested ports, route-aware lifecycle and Source baseline work; deployment not accepted yet |
 | acceptance/usb-hub-support-port-numbering-emulator-progress.json | Actual emulator hotplug and nested-hub UI observations with restoration; remaining integration gates |
 | acceptance/usb-hub-support-emulator-port-cleanup.json | Historical emulator listener reduction from77 to5, transport controls and recovery limitations |

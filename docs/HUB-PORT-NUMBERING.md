@@ -104,3 +104,37 @@ library root was always sdc1. The lifecycle client correctly rejected acceptance
 because source0 remained exported. An upfront sysfs physical-route guard now
 requires the supplied root to match protected port3-2.1; integrated eject permits
 the observed device name rather than weakening that route guard. Repeat pending.
+
+## Final component checks and candidate
+
+Final checks pass98 components per plain/ASan+UBSan/TSan mode, SDK UI controls,
+hook-registration extraction and the actual loader/presence control. Source,
+Browse and Waveform callback tests now verify that reserving display8 for the
+first internal source selects8 in all three families. The scanner retains all32
+bounded observed routes for presence reconciliation while the loader enforces
+eight transports; a9-route fixture proves lexicographic port10 cannot truncate
+valid port8. Unknown/out-of-capacity routes remain unavailable for new admission.
+
+The ignored0.4.5 candidate is packaged and validated with all17 expected members,
+unchanged helper/kernel assets, executable asset modes and exact hash records.
+It has not been installed on the physical AZ or published. A local source commit
+exists; automatic approval review rejected pushing the unaccepted feature to the
+public main branch. No push workaround was attempted. Public release0.4.4 remains
+unchanged. Final own-source local playback testing and user gates remain open.
+
+## Final own-source loaded regression
+
+The final exact emulator runtime passes real native hub-track loading with the
+physical bind verified as the selected source0 disk. Loaded/playing engine
+samples remain valid before independent clients, after complete clients, after
+own-source native eject and after reconnect. Complete two-source Beat Link menus,
+exact Crate Digger files, original neighbor sessions and stale old handles pass.
+The native four-beat loop is intentional; no rendered-audio or full-song playback
+claim is made. Original mod/approval bytes, emulator USB topology and owned network
+resources are restored. See the final own-loaded acceptance record.
+
+The earlier neighbor-loaded run proved a different, useful case: the historical
+row offset selected source1 and its native bind was verified. The corrected
+harness accepts an explicitly reviewed source-row offset and still asserts the
+actual requested backing; source0 own-loaded acceptance uses offset-1. A prior
+selection-file timeout remains a failed pre-load attempt, not a mod failure.

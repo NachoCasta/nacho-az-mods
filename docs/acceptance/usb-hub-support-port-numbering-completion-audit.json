@@ -1,0 +1,70 @@
+{
+  "goal_complete": false,
+  "scope": "Physical-port numbering and Source baseline completion audit",
+  "requirements": [
+    {
+      "requirement": "Insertion-independent physical labels with empty/nested ports",
+      "status": "pass_emulator_and_host",
+      "evidence": [
+        "usb-hub-support-port-numbering-emulator-progress.json",
+        "src/azhub/linkfake/test-port-topology.c",
+        "src/azhub/linkfake/test-discovery.c"
+      ]
+    },
+    {
+      "requirement": "Safe changes preserve active labels and independent transports/caches",
+      "status": "pass_scoped",
+      "evidence": [
+        "src/azhub/linkfake/test-port-reconciliation.py",
+        "usb-hub-support-port-numbering-own-loaded-final.json"
+      ],
+      "limits": "Structural rank changes are covered by actual loader/presence body controls. Real emulator USB move/return and loaded eject are separate observations; no hardware/audio claim."
+    },
+    {
+      "requirement": "Consistent Source/Browse/Waveform/eject display",
+      "status": "pass_component_and_scoped_runtime",
+      "evidence": [
+        "src/azhub/linkfake/test-source-badge-render.c",
+        "src/azhub/linkfake/safe-eject.h",
+        "usb-hub-support-port-numbering-own-loaded-final.json"
+      ]
+    },
+    {
+      "requirement": "Measure/correct numerals3-8 and preserve native body",
+      "status": "pass_software",
+      "evidence": [
+        "local/diagnostics/physical-port-ui-v4/alignment-result.json",
+        "src/azhub/linkfake/test-source-badge-native-compose.c"
+      ],
+      "limits": "Source moved1pixel; Browse/Waveform placement unchanged. User visual review pending."
+    },
+    {
+      "requirement": "Tests, compatible package and English documentation",
+      "status": "pass_local",
+      "evidence": [
+        "usb-hub-support-port-numbering-final-source-checks.json",
+        "usb-hub-support-port-numbering-045-package.json",
+        "docs/HUB-PORT-NUMBERING.md"
+      ]
+    },
+    {
+      "requirement": "Reviewed commits pushed",
+      "status": "pending_user_approval_after_auto_review_rejection",
+      "evidence": [
+        "local commit da6a909; final evidence commit pending creation"
+      ],
+      "reason": "Automatic review rejected public main push for unaccepted current feature; no workaround attempted."
+    },
+    {
+      "requirement": "User screenshot review and authorized physical validation",
+      "status": "pending_user",
+      "physical_AZ_changed": false
+    },
+    {
+      "requirement": "No unapproved release and no expanded compatibility/capacity claim",
+      "status": "pass",
+      "published": false,
+      "limits": "Eight visible leaf positions, one primary external hub topology; casing/companion-root mapping unvalidated."
+    }
+  ]
+}
