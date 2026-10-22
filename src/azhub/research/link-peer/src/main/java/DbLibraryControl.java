@@ -55,7 +55,9 @@ public final class DbLibraryControl {
         }
         for(var rows:memberships.values()) rows.sort(Comparator.comparingLong(r->r[0]));
         for(var rows:folders.values()) rows.sort(Comparator.<long[]>comparingLong(r->r[0]).thenComparingLong(r->r[1]));
-        try(Socket socket=new Socket(emulator ? LiveProviderControl.sourceAddress(source) : "127.0.0.1",Integer.parseInt(args[0])); Database db=new Database(Path.of(args[1]).toFile())) {
+        // Index the independent local oracle before connecting. Concurrent PDB
+        // decoding must not consume the provider's bounded handshake deadline.
+        try(Database db=new Database(Path.of(args[1]).toFile()); Socket socket=new Socket(emulator ? LiveProviderControl.sourceAddress(source) : "127.0.0.1",Integer.parseInt(args[0]))) {
             socket.setSoTimeout(5000);
             var constructor=Client.class.getDeclaredConstructor(Socket.class,int.class,int.class); constructor.setAccessible(true);
             Client client=constructor.newInstance(socket,LiveProviderControl.sourceNumber(source),3);

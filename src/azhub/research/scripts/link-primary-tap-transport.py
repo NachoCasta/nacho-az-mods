@@ -151,6 +151,7 @@ def connect_local_socket(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--seconds', type=int, required=True)
+    parser.add_argument('--stop-file', type=Path, help='Explicit supervisor request for graceful transport cleanup')
     parser.add_argument('--capture-port', type=int, default=15101)
     parser.add_argument('--inject-port', type=int, default=15102)
     parser.add_argument('--nat-port', type=int, default=15103,help='Legacy TCP backend port, only with --nat-tcp')
@@ -213,6 +214,15 @@ def main():
         timer = threading.Timer(args.seconds + 10, lambda: child.terminate() if child.poll() is None else None)
         timer.daemon = True
         timer.start()
+
+        def supervisor_stop():
+            while not stopped.wait(.2):
+                if args.stop_file and args.stop_file.exists():
+                    stopped.set()
+                    child.stdin.close()
+                    return
+        if args.stop_file:
+            threading.Thread(target=supervisor_stop, daemon=True).start()
 
         def socket_reader(connection, management):
             records = Frames()

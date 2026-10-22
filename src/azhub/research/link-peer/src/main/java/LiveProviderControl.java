@@ -35,6 +35,10 @@ public final class LiveProviderControl {
         if(index<0 || index>=8) throw new IllegalArgumentException("Source index");
         String selected=System.getProperty("azhub.testSourceAddress"+index);
         if(selected!=null) {
+            if(Boolean.getBoolean("azhub.testDhcpFixture") && selected.matches("192\\.0\\.2\\.[0-9]{1,3}")) {
+                String last=selected.substring(8);int value=Integer.parseInt(last);
+                if(value>=3 && value<=254 && value!=15 && last.equals(Integer.toString(value))) return selected;
+            }
             if(!Boolean.getBoolean("azhub.testLinkLocalPeer") || !linkLocalCandidate(selected)) throw new IllegalArgumentException("Bounded isolated link-local source required");
             return selected;
         }
