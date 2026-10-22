@@ -519,6 +519,7 @@ static int safe_eject_source_poll(struct fake *source,time_t now,time_t *ready_a
     if (!source->eject_reserved) return 0;
     if (source->eject_dispatching) return 1;
     if (__atomic_exchange_n(&source->eject_withdraw,0,__ATOMIC_ACQ_REL)) {
+        hub_metadata_invalidate((int)(source-fakes));
         source->present=0; source->notify_pending=0; source->mount_at=0;
         source->announced_at=source->queried_at=0; source->unmount_pending=3;
         uint16_t id=0x102;

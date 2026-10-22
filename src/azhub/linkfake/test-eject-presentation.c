@@ -36,5 +36,18 @@ int main(void) {
     assert(hub_eject_step(-1,1,-1)==0 && hub_eject_step(0,1,1)==0);
     assert(hub_eject_step(0,3,-1)==2 && hub_eject_step(2,3,1)==0);
     assert(hub_eject_step(-1,0,1)==-1);
+    /* Physical numbering can leave holes, and transport observation order is
+     * independent of the displayed port. Keep the selected USB8 connection. */
+    live=(struct eject_inventory){.count=8};
+    static const int ports[]={8,2,5,1,7,3,6,4};
+    for (int i=0;i<8;i++) live.items[i]=row(ports[i],"Same label",ports[i]);
+    shown=(struct eject_inventory){0};
+    assert(hub_eject_refresh(&shown,&live,0,-1)==-1);
+    for (int i=0;i<8;i++) assert(shown.items[i].display_number==i+1);
+    physical=shown.items[7];
+    live.items[3]=live.items[--live.count]; /* Remove USB1, retaining USB8. */
+    selected=hub_eject_refresh(&shown,&live,0,7);
+    assert(selected==6 && hub_eject_same_row(&shown.items[selected],&physical));
+    assert(shown.items[0].display_number==2 && shown.items[6].display_number==8);
     return 0;
 }

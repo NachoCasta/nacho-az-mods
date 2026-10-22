@@ -50,11 +50,14 @@ def check(source, directory):
     # or duplicate literal parser registrations surviving the real build flags.
     calls = re.findall(r'make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*\)', source)
     assert [(a, h) for a, h in calls if int(a, 16) == 0xef05c8] == [('0xef05c8', 'probe_parse')], 'Parser must be claimed exactly once'
+    assert [(a, h) for a, h in calls if int(a, 16) == 0x1376c98] == [('0x1376c98', 'hub_metadata_mount')], 'Metadata task body must be claimed exactly once'
     init = body(source, 'community_init')
     ordered = ['setenv("LINKFAKE_PROBE","1",1)', 'probe_install()',
                'probe_private_admission_install()', 'probe_library_ownership_install()',
                'probe_mode_recovery_install()', 'probe_queue_install()',
                'source_badge_install()',
+               'hub_source_order_install()',
+               'hub_metadata_install()',
                '__atomic_store_n(&community_ready,1,3)']
     compact = re.sub(r'\s+', '', init)
     positions = [compact.index(token) for token in ordered]

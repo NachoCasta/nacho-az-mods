@@ -132,7 +132,7 @@ static void hub_create_music(int i) {
 }
 __attribute__((used,noinline)) static void hub_factory_c(void *vec,void *name,void *sdid,void *flag,uint64_t *out) {
     struct hub_result stock=hub_factory_original(vec,name,sdid,flag);
-    if (lf_runtime_ready() && *(uint8_t *)sdid==2) for (int i=0;i<nfakes;i++) hub_create_music(i);
+    if (lf_runtime_ready() && *(uint8_t *)sdid==2) for (int i=0;i<MAX_FAKES;i++) hub_create_music(i);
     *out=stock.object;
 }
 /* The stock unique_ptr result occupies only 8 bytes. Never return the 24-byte
@@ -142,7 +142,11 @@ __asm__(".text\n.align 2\n.type hub_factory_entry,%function\nhub_factory_entry:\
         "bl hub_factory_c\nldp x29,x30,[sp],#16\nret\n");
 extern void hub_factory_entry(void);
 static void hub_finish_servers(uint64_t common,uint64_t timer) {
-    for (int i=0; i<nfakes; i++) {
+    /* Prepare the bounded transport capacity on the native initialization
+     * thread. Dormant slots open no database. Later arrivals can mount their
+     * private library before the first media response instead of needing that
+     * response to construct their servers. */
+    for (int i=0; i<MAX_FAKES; i++) {
         uint64_t s=fakes[i].srv_music;
         if (!s || fakes[i].srv_info) continue;
         uint8_t id=2,alternate=0;
@@ -184,7 +188,7 @@ static uint64_t hub_holder(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
 }
 /* Register on the dispenser thread, before it traverses the list. */
 static void hub_register(uint64_t owner) {
-    unsigned count=nfakes;
+    unsigned count=MAX_FAKES;
     int k;
     for (k=0; k<16 && hub_owners[k] && hub_owners[k]!=owner; k++) {}
     if (k==16 || !count || count>MAX_FAKES || hub_owner_counts[k]>=count) return;
@@ -273,6 +277,7 @@ static int hub_queue_mount(int source) {
 #endif
     int ready=f->present && !f->unmount_pending && f->srv_music && f->srv_info;
     if (ready && !f->mounted) {
+        hub_metadata_prepare(source,f->dir,f->port_route);
         uint16_t id=0x102;
         uint64_t path=0;
         ((void (*)(void *,const char *))0x24a1180)(&path,f->dir);
@@ -286,6 +291,20 @@ static int hub_queue_mount(int source) {
     pthread_mutex_unlock(&safe_source_mutex);
 #endif
     return ready;
+}
+static int hub_prepare_announcement(int source,time_t now) {
+    struct fake *f=&fakes[source];
+    if (!f->mount_at) f->mount_at=now;
+    if (!f->mounted && f->srv_music && f->srv_info) {
+#ifdef LF_SAFE_EJECT
+        if (!safe_server_begin(source)) return 0;
+#endif
+        hub_queue_mount(source);
+#ifdef LF_SAFE_EJECT
+        safe_server_end(source);
+#endif
+    }
+    return hub_metadata_complete(source,f->dir,f->port_route) || now-f->mount_at>=10;
 }
 static void hub_mount_poll(void) {
     static time_t started, ready_at;
@@ -318,6 +337,7 @@ static void hub_mount_poll(void) {
             fprintf(box,"umount %s nfs",f->mp); fclose(box);
             f->unmount_pending=2; f->removed_at=now;
             f->mounted=0; f->mount_at=0;
+            hub_metadata_invalidate(i);
             ready_at=now+3;
             lf_log("hub removal queued player %d slot %d path=%s",f->player,f->slot,f->dir);
             break;
@@ -346,9 +366,13 @@ static void hub_mount_poll(void) {
             if (!f->present || f->unmount_pending || !__atomic_load_n(&f->notify_pending,__ATOMIC_ACQUIRE) || access(f->dir,R_OK)) continue;
             /* Startup grace may already have elapsed when a new member arrives.
              * Wait until native Link responds to that member before advertising
-             * its media. The first media request constructs its owned servers. */
+             * its media. Prepare an available private library before the first
+             * response, so native metadata starts with the configured values. */
             struct fake *member=fake_by_ip(f->ip);
             if (!member || !__atomic_load_n(&member->link_ready,__ATOMIC_ACQUIRE)) continue;
+            /* A missing database or unavailable server must still expose the
+             * existing volume-name/default-color fallback after a bounded wait. */
+            if (!hub_prepare_announcement(i,now)) continue;
             int rc=hub_alias_prepare(f->dir,f->mp);
             if (rc) { lf_log("hub alias failed player %d slot %d rc=%d",f->player,f->slot,rc); continue; }
             __atomic_store_n(&f->announced_at,now,__ATOMIC_RELEASE);

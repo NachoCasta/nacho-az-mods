@@ -140,6 +140,8 @@ static void lf_log(const char *fmt, ...) {
 
 #include "network-identity.h"
 #include "source-name.h"
+#include "source-display.h"
+#include "source-metadata.h"
 #include "source-settings.h"
 static unsigned char hub_default_settings[8]={1,1,1,1,1,1,1,1};
 static _Atomic uint32_t hub_observed_address;
@@ -243,6 +245,19 @@ static void send_status(struct fake *f) {
 }
 
 /* Media slot response 0x06 (dysentery media page): D at 0x24..0x27, S at 0x28..0x2b. */
+static uint64_t hub_media_fields(struct fake *f,char *name,size_t size,unsigned char *color) {
+    struct hub_source_properties properties;
+#ifdef LF_SAFE_EJECT
+    pthread_mutex_lock(&safe_source_mutex);
+#endif
+    uint64_t revision=hub_metadata_read((int)(f-fakes),f->dir,f->port_route,&properties);
+    hub_metadata_name(&properties,f->name,hub_source_display_number(f->player,f->slot),name,size);
+    *color=properties.color_valid ? properties.color:0;
+#ifdef LF_SAFE_EJECT
+    pthread_mutex_unlock(&safe_source_mutex);
+#endif
+    return revision;
+}
 static void send_media(struct fake *f, int slot) {
     uint8_t r[0x24 + 0x9c] = { 0 };
     memcpy(r, MAGIC, 10);
@@ -251,7 +266,10 @@ static void send_media(struct fake *f, int slot) {
     r[0x1f] = 0x01; r[0x21] = f->player; r[0x22] = 0x00; r[0x23] = 0x9c;
     r[0x27] = f->player;
     r[0x2b] = slot;
-    hub_name_utf16be(f->name,r+0x2c,32);
+    char name[128];unsigned char color=0;
+    hub_media_fields(f,name,sizeof name,&color);
+    hub_name_utf16be(name,r+0x2c,32);
+    r[0xa8]=color;
     const char *dt = "2026-10-16";
     for (int j = 0; dt[j]; j++) r[0x6c + 2 * j + 1] = dt[j];
     if (!getenv("LINKFAKE_NORB")) {
@@ -262,6 +280,18 @@ static void send_media(struct fake *f, int slot) {
     uint64_t tot = 128ULL * 1000000000ULL, fr = 64ULL * 1000000000ULL;
     for (int j = 0; j < 8; j++) { r[0xb0 + j] = tot >> (56 - 8 * j); r[0xb8 + j] = fr >> (56 - 8 * j); }
     to_loopback(f, 50002, r, sizeof r);
+}
+
+static void hub_media_refresh(struct fake *f,uint64_t *sent) {
+    struct fake *member=fake_by_ip(f->ip);
+    if (!f->present || !__atomic_load_n(&f->announced_at,__ATOMIC_ACQUIRE) || !member ||
+        !__atomic_load_n(&member->link_ready,__ATOMIC_ACQUIRE)) return;
+    char name[128];unsigned char color;
+    uint64_t revision=hub_media_fields(f,name,sizeof name,&color);
+    if (revision && revision!=*sent) {
+        send_media(f,f->slot);
+        *sent=revision;
+    }
 }
 
 static void mem_scan(void);
@@ -302,6 +332,7 @@ static void media_lookup(unsigned id) {
 static int linkfake_load_config(void);
 static void *injector(void *arg) {
     (void)arg;
+    uint64_t metadata_sent[8]={0};
     for (unsigned tick = 0;; tick++) {
 #ifdef LF_COMMUNITY
         int state=__atomic_load_n(&community_ready,__ATOMIC_ACQUIRE);
@@ -340,6 +371,7 @@ static void *injector(void *arg) {
         for (int i = 0; i < nfakes; i++) {
             if (tick % 15 == 0 && first_for_player(i)) send_keepalive(&fakes[i]);
             if (tick % 2 == 0 && first_for_player(i)) send_status(&fakes[i]);
+            hub_media_refresh(&fakes[i],&metadata_sent[i]);
         }
 #ifdef LF_PUBLIC_SHARING_EMULATOR
         public_mod_poll();
@@ -1076,6 +1108,7 @@ static int linkfake_load_config(void) {
                  * before a dormant pair can serve another mount path. Keep
                  * its member, socket, private request code and native objects. */
                 struct fake *old=&fakes[reuse];
+                hub_metadata_invalidate(reuse);
                 strcpy(old->dir,f->dir);
                 strcpy(old->name,f->name);
                 strcpy(old->port_route,f->port_route);
@@ -1122,6 +1155,10 @@ static int linkfake_load_config(void) {
         if (automatic && !hub_source_port_reserve(f->player,f->slot,physical_port)) {
             close(f->sock);continue;
         }
+        /* Native initialization may already have prepared this dormant slot.
+         * Keep its independent servers when publishing a newly discovered USB. */
+        f->srv_music=fakes[parsed].srv_music;
+        f->srv_info=fakes[parsed].srv_info;
         memcpy(&fakes[parsed],f,sizeof *f);
         lf_log("player %d slot %d at %s serves %s port=%u route=%s",f->player,f->slot,ip,f->dir,physical_port,f->port_route);
         parsed++;

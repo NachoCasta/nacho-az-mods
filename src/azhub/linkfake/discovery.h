@@ -85,7 +85,7 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
         strcpy(found[count].mount,m->mnt_dir);
         strcpy(found[count].topology,resolved);
         if(!hub_device_label(node,m->mnt_fsname,found[count].name,sizeof found[count].name))
-            hub_port_name(resolved,found[count].name,sizeof found[count].name);
+            snprintf(found[count].name,sizeof found[count].name,"USB %u",port_number);
         count++;
     }
     endmntent(table);

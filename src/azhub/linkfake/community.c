@@ -63,6 +63,16 @@ static int public_runtime_drain(unsigned slot);
 #ifdef LF_EJECT_UI
 #define HUB_BADGE_LOG(...) lf_log(__VA_ARGS__)
 #include "source-badge-render.h"
+#ifdef LF_SOURCE_ORDER_TRACE
+#define HUB_SOURCE_ORDER_LOG(...) lf_log(__VA_ARGS__)
+#endif
+#include "source-order-native.h"
+#ifdef LF_SOURCE_PROPERTIES_TRACE
+#include "source-properties-native.h"
+#else
+#include "source-metadata-native.h"
+#endif
+#undef HUB_SOURCE_ORDER_LOG
 #undef HUB_BADGE_LOG
 #endif
 #endif
@@ -103,6 +113,7 @@ static void community_refresh_presence(const char *config) {
         if (source->eject_reserved) continue;
 #endif
         if (phase==0 && !seen[i] && source->present) {
+            hub_metadata_invalidate(i);
             source->present=0;
             source->notify_pending=0;
             source->mount_at=0;
@@ -246,6 +257,12 @@ static int community_init(const az_core_v1 *core) {
 #if defined(LF_SAFE_EJECT) && defined(LF_EJECT_UI)
     int badge_result=source_badge_install();
     if (badge_result || lf_hook_failures) return community_abort(-91);
+    if (hub_source_order_install() || lf_hook_failures) return community_abort(-92);
+#ifdef LF_SOURCE_PROPERTIES_TRACE
+    if (hub_native_property_observer_install() || lf_hook_failures) return community_abort(-93);
+#else
+    if (hub_metadata_install() || lf_hook_failures) return community_abort(-93);
+#endif
 #endif
     __atomic_store_n(&community_ready,1,__ATOMIC_RELEASE);
 #ifdef LF_SAFE_EJECT

@@ -26,6 +26,7 @@ harness=r"""
 #include <time.h>
 #include <unistd.h>
 #include "source-display.h"
+#include "source-metadata.h"
 #define MAX_FAKES 8
 #define lf_log(...) ((void)0)
 """+fake+r"""
@@ -54,14 +55,23 @@ int main(void) {
  config(path,4,1,"2-1.4","2-1.1");community_refresh_presence(path);assert(linkfake_load_config()==2);
  assert(hub_source_display_number(fakes[1].player,fakes[1].slot)==1);
  assert(fakes[0].sock==original_socket && fakes[0].srv_info==0xabc && fakes[0].tag_cache==0xdef);
+ hub_metadata_prepare(0,fakes[0].dir,fakes[0].port_route);
+ struct hub_metadata_ticket metadata=hub_metadata_capture(0);
+ struct hub_source_properties properties={.name_valid=1,.color_valid=1,.color=6};
+ strcpy(properties.name,"Configured name");assert(hub_metadata_publish(0,&metadata,&properties));
  /* Structural rank changes must not retire a source on the same physical route. */
  config(path,7,1,"2-1.4","2-1.1");community_refresh_presence(path);assert(linkfake_load_config()==2);
  assert(fakes[0].present && !fakes[0].unmount_pending);
  assert(hub_source_display_number(fakes[0].player,fakes[0].slot)==4);
+ assert(hub_metadata_read(0,metadata.root,metadata.route,&properties) && properties.name_valid);
  /* Move that mount to physical port3: wait for old native unmount before admission. */
  config(path,3,1,"2-1.3","2-1.1");community_refresh_presence(path);
  assert(!fakes[0].present && fakes[0].unmount_pending);assert(linkfake_load_config()==2);
+ assert(!hub_metadata_read(0,metadata.root,metadata.route,&properties));
+ assert(!hub_metadata_publish(0,&metadata,&properties));
+ fakes[2].srv_music=0x1234;fakes[2].srv_info=0x5678;
  fakes[0].unmount_pending=0;assert(linkfake_load_config()==3);
+ assert(fakes[2].srv_music==0x1234 && fakes[2].srv_info==0x5678);
  assert(hub_source_display_number(fakes[2].player,fakes[2].slot)==3);
  assert(!fakes[0].present && fakes[1].present && fakes[2].present);
  assert(fakes[0].srv_info==0xabc && fakes[0].tag_cache==0xdef);
@@ -76,5 +86,5 @@ int main(void) {
 """
 with tempfile.TemporaryDirectory(prefix='azhub-port-reconciliation-') as tmp:
  p=Path(tmp);(p/'test.c').write_text(harness)
- subprocess.run(shlex.split(os.environ.get('TEST_CC','cc'))+['-O2','-Wall','-Wextra','-I'+str(root),str(p/'test.c'),'-o',str(p/'test')],check=True)
+ subprocess.run(shlex.split(os.environ.get('TEST_CC','cc'))+['-O2','-Wall','-Wextra','-pthread','-I'+str(root),str(p/'test.c'),'-o',str(p/'test')],check=True)
  subprocess.run([str(p/'test')],check=True)
