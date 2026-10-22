@@ -1,0 +1,30 @@
+{
+  "version": "0.4.4",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.4",
+  "source_commit": "22f6b2ff1f416fa90146fc1a7441649b767b17b2",
+  "catalog_commit": "6a6622b",
+  "package_sha256": "4bad6bad276e56b7eb33e508f8dc3328df5695271bca35637ca0298ace93a705",
+  "runtime_sha256": "ccf155934164689901c50f80f05dd965ee23ac8afad4e0443f6f666cfd7a1963",
+  "helper_sha256": "046cd1e6f3101f260fed565de3e759a63e37dfe3dae667b600e36ad89f3fb453",
+  "package_bytes": 682234,
+  "accepted_package_unchanged": true,
+  "source_rebuild_byte_identical": true,
+  "source_rebuild_receipt": "local/publishing/usb-hub-support-044-release-source/rebuild-receipt.json",
+  "source_CI": {
+    "run_url": "https://github.com/NachoCasta/nacho-az-mods/actions/runs/39730261453",
+    "behavior_tests": "success",
+    "sdk_build": "success"
+  },
+  "anonymous_catalog_and_package_download_verification": "PASS: pinned azmod-pack repo check NachoCasta/nacho-az-mods --download",
+  "anonymous_source_manifest_verification": "PASS",
+  "known_validator_warning": "Existing optional legacy settings reference; no newly introduced manual internal write",
+  "physical_evidence": [
+    "usb-hub-support-sharing-044-physical-ethernet.json",
+    "usb-hub-support-sharing-044-physical-mode-cycle.json"
+  ],
+  "actual_CDJ_acceptance": false,
+  "wifi_sharing_validated": false,
+  "immutable_candidate_manifest_wording_preserved": true,
+  "CI_fixture_fix": "Keep simulated device outside scanned label directory; no production binary change",
+  "published": true
+}

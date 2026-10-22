@@ -1,13 +1,17 @@
 # Current state
 
-## Release0.4.4 publication preparation
+## Published release0.4.4
 
-The user authorized publication of the exact physically tested0.4.4 package.
-See [release notes](releases/usb-hub-support-0.4.4.md) and the completed
+[USB Hub Support0.4.4](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.4)
+is published and the root catalog points to its exact accepted package.
+Source CI passed both jobs; anonymous catalog/package download validation and
+source-manifest access passed. Source commit: `22f6b2ff1f416fa90146fc1a7441649b767b17b2`.
+See [publication record](acceptance/usb-hub-support-0.4.4-publication.json),
+[release notes](releases/usb-hub-support-0.4.4.md) and the completed
 [goal audit](acceptance/usb-hub-support-sharing-044-completion-audit.json).
-The final physical native-GUI Off/On cycle passes. Pending-GUI statements in the
-frozen candidate reports below are superseded by its scoped acceptance record.
-
+The physical native-GUI Off/On cycle passes. Pending-GUI/unpublished statements
+in the frozen candidate reports below describe their earlier recording time.
+Actual-CDJ interoperability and Wi-Fi sharing remain unvalidated.
 
 ## Physical Ethernet candidate0.4.4
 
