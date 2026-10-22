@@ -2,6 +2,16 @@
 
 ## Active development: hub source presentation
 
+The user approved the emulator presentation and explicitly requested physical
+installation, approval and reload. The local0.4.5 candidate is now active on the
+real AZ: exact mapped hardware runtime SHA256
+`91b470fbd3cd8458a83ea5dedda3b0662fdf45525105ec577981ac1884af968e`,
+EP147 PID3139484, firmware tag/kernel/core unchanged and decks empty. USB rollback
+and approval backups exist; approval preceded the application restart. This is
+installation evidence, not functional hardware acceptance. User testing is pending.
+See [physical installation](acceptance/usb-hub-support-source-presentation-045-physical-install.json).
+Published0.4.4 and catalog remain unchanged.
+
 The current emulator candidate is
 `6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270`.
 It retains physical-port numbering and Source numeral alignment, orders hub rows
@@ -47,8 +57,9 @@ kernel and core requirements and unchanged kernel assets. Its ELF differs from
 the tested emulator build by explicit target flags; it is not physically accepted.
 See [package receipt](acceptance/usb-hub-support-source-presentation-capacity-package.json)
 and [remaining-work audit](acceptance/usb-hub-support-source-presentation-progress.json).
-User screenshot review, final source review/commits and approved public push are
-pending. The real AZ, published0.4.4, release tags/assets and catalog are unchanged.
+Local code, controls and documentation are committed; approved public push remains
+pending. The user subsequently approved screenshots and installed the physical
+candidate as recorded above. Published0.4.4, release tags/assets and catalog are unchanged.
 The current user instructions authorize the bounded emulator-first USB/framework
 testing workflow in AZ-TESTING-POLICY.md without repeated per-action questions.
 Screenshot review still precedes physical validation for this goal. No release

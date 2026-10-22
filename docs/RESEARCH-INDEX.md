@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| acceptance/usb-hub-support-source-presentation-045-physical-install.json | User-reviewed/authorized0.4.5 USB install, exact pre-approval, framework reload and mapped runtime verification; functional user testing pending |
 | acceptance/usb-hub-support-source-presentation-native-reconnect-emulator.json | Native USB reconnect after five hub libraries retains native-first order, hub metadata and advancing cached deck |
 | acceptance/usb-hub-support-source-presentation-capacity-package.json | Validated unpublished hardware-target0.4.5 package, member hashes and unchanged kernel/assets; physical acceptance pending |
 | acceptance/usb-hub-support-source-presentation-late-slot-emulator.json | Current capacity candidate: native startup prepares eight private server pairs; previously unused nested USB8 initially shows configured name/color |

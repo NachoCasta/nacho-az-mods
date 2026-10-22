@@ -1,6 +1,6 @@
 {
   "status": "in_progress",
-  "physical_AZ_touched": false,
+  "physical_AZ_touched": true,
   "published_release": "0.4.4 unchanged",
   "requirements": [
     {
@@ -29,11 +29,11 @@
     },
     {
       "requirement": "Ignored emulator screenshots and user review before physical tests",
-      "status": "Research screenshots saved locally; final successful presentation screenshots and user review pending"
+      "status": "User approved emulator captures and explicitly requested AZ install/approval/reload. Exact hardware-target0.4.5 installed and mapped hash verified; user functional testing pending."
     },
     {
       "requirement": "Exact firmware/kernel/core compatibility and stable ID",
-      "status": "Local hardware-target0.4.5 package validates: exact stable ID, firmware tag, min core and kernel vermagic retained; kernel/assets unchanged. See capacity-package evidence. Hardware-target binary is not physically accepted."
+      "status": "Exact stable ID, firmware tag, kernel and core retained; local package validates and exact hardware runtime is active on AZ. Installation is not functional acceptance."
     },
     {
       "requirement": "Reviewed English documentation, commits and push",
@@ -48,5 +48,6 @@
     "sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
     "activation": "Native UI Allow/Reload and mapped hash verified; current EP147 PID102793 after normal menu reload. Eight independent server pairs prepared. Previously unused nested USB8 initial metadata, five-menu/twelve-file clients, own-source loaded eject/cache/engine/reconnect and cache-backed Link mode cycle/post-cycle clients pass. Earlier frame-filter budget failure remains documented. Hardware-target local package validates; user screenshot review and approved public push remain pending."
   },
-  "host_evidence": "usb-hub-support-source-presentation-host-checks.json"
+  "host_evidence": "usb-hub-support-source-presentation-host-checks.json",
+  "physical_installation_evidence": "usb-hub-support-source-presentation-045-physical-install.json"
 }
