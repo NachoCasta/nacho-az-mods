@@ -7,24 +7,24 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.3.2",
+      "version": "0.4.4",
       "author": "NachoCasta",
-      "summary": "Hub sources stay available when switching PRO DJ LINK on or off.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.2/usb-hub-support-0.3.2-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.3.2/usb-hub-support-0.3.2.azmod",
-      "sha256": "d461a7791ea0977eda3daf776933567197f19461b6abc73e4de370646b9caa81",
-      "size": 416803,
+      "summary": "Experimental Ethernet sharing of hub USB libraries over PRO DJ LINK.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.4/usb-hub-support-0.4.4-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.4/usb-hub-support-0.4.4.azmod",
+      "sha256": "4bad6bad276e56b7eb33e508f8dc3328df5695271bca35637ca0298ace93a705",
+      "size": 682234,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
       "hooks": true,
       "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
-      "updated": "2026-10-20",
+      "updated": "2026-10-21",
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "Browse playlists/tracks and load USB sticks connected through a hub. Version0.3.2 preserves hub sources across PRO DJ LINK On/Off, with owner-reported loaded-track continuity on the physical AZ. Four local decks Off; two local decks On. Hub libraries stay local and are not shared with external CDJs. Native-style HUB labels and individual/whole-hub safe eject are retained; wait for safe-to-remove confirmation. Exact firmware2.00 (ep147-9e9454e357389ece), kernel4.4.194 and core>=1.2.3. Actual-CDJ, phase-sync, eight-source hardware, long-session timing and cache capacity remain unvalidated. A same-process post-eject/replug source-list anomaly recovered after normal reload in the emulator. AZ-MODS stages files internally. The immutable package retains its tested candidate wording.",
-      "assets_kb": 200
+      "description": "Browse and load USB sticks connected through a hub, with experimental Ethernet sharing over PRO DJ LINK. One physical hub stick passed independent software-client discovery, complete3172-track library browsing and exact whole database/MP3 downloads, including after native Link Off/On. Native USB access remains available. Four local decks Off; two local decks On. HUB labels and individual/whole-hub safe eject are retained; wait for safe-to-remove confirmation. External players handle source loss according to their cache. Actual-CDJ interoperability, Wi-Fi sharing, phase alignment, eight-source hardware, long-session timing and cache capacity remain unvalidated. One emulator recovery run failed EOF/STALE; two full repeats passed, original cause unresolved. Exact firmware2.00 ep147-9e9454e357389ece, kernel4.4.194 and core>=1.2.3. Includes GPL kernel modules. AZ-MODS stages files internally. Immutable package retains its tested candidate wording; see release notes for current validation.",
+      "assets_kb": 419
     }
   ]
 }
