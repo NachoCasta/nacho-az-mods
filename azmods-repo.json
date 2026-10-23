@@ -7,23 +7,27 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "author": "NachoCasta",
-      "summary": "Experimental Ethernet sharing of hub USB libraries over PRO DJ LINK.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.4/usb-hub-support-0.4.4-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.4/usb-hub-support-0.4.4.azmod",
-      "sha256": "4bad6bad276e56b7eb33e508f8dc3328df5695271bca35637ca0298ace93a705",
-      "size": 682234,
+      "summary": "Hub USB sources with port-based numbers and rekordbox names/colors.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.5/usb-hub-support-0.4.5-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.5/usb-hub-support-0.4.5.azmod",
+      "sha256": "b3b0c9225a06f3ed5d4c76d67d87d51b2a875a8aad3a6704ef8acff673ec76c9",
+      "size": 879067,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
       "hooks": true,
       "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
-      "updated": "2026-10-21",
+      "updated": "2026-10-22",
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "Browse and load USB sticks connected through a hub, with experimental Ethernet sharing over PRO DJ LINK. One physical hub stick passed independent software-client discovery, complete3172-track library browsing and exact whole database/MP3 downloads, including after native Link Off/On. Native USB access remains available. Four local decks Off; two local decks On. HUB labels and individual/whole-hub safe eject are retained; wait for safe-to-remove confirmation. External players handle source loss according to their cache. Actual-CDJ interoperability, Wi-Fi sharing, phase alignment, eight-source hardware, long-session timing and cache capacity remain unvalidated. One emulator recovery run failed EOF/STALE; two full repeats passed, original cause unresolved. Exact firmware2.00 ep147-9e9454e357389ece, kernel4.4.194 and core>=1.2.3. Includes GPL kernel modules. AZ-MODS stages files internally. Immutable package retains its tested candidate wording; see release notes for current validation.",
+      "description": "Connect up to eight USB sticks through a hub. USB numbers follow hub ports; native sources appear first, followed by hub sources in numeric order. Shows rekordbox device names and colors, with analyzed waveforms. Press USB STOP to select one stick or hold to eject the hub; wait for safe-to-remove confirmation. Experimental Ethernet PRO DJ LINK sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Exact firmware 2.00 ep147-9e9454e357389ece, kernel 4.4.194; core >=1.2.3.",
+      "screenshots": [
+        "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.5/usb-hub-support-0.4.5-shot1.png",
+        "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.5/usb-hub-support-0.4.5-shot2.png"
+      ],
       "assets_kb": 419
     }
   ]
