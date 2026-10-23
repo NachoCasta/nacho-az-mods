@@ -1,0 +1,30 @@
+{
+  "scope": "Bounded request and file-open diagnostics in local emulator only",
+  "diagnostic_runtime_sha256": "f852e9e3112eb439a8d37dc786d29a68d62364dc15c104869c2c15254889a987",
+  "EP147_pid": 26381,
+  "mapped_hash_verified": true,
+  "request_evidence": "local/diagnostics/waveform-regression-v1/request-trace-v1.log",
+  "request_observation": "Parser receives0x2c04 with private slot0xe0 and owned player7; private info server0 processes0x2c04 after remapping to slot3. Private music requests also reach source0.",
+  "diagnostic_limits": "Explicit LF_HUB_REQUEST_TRACE, at most256 parser and256 processing records; later requests can exceed those limits",
+  "file_observation": {
+    "duration_seconds": 25,
+    "method": "Read-only syscall tracing of emulator EP147 and its tasks; only the separately launched observer was stopped",
+    "log": "local/diagnostics/waveform-regression-v1/file-opens-v1.log",
+    "ANLZ_path_mentions": 0,
+    "hub_root_mentions": 8,
+    "limit": "Fresh selection/load actions were sent, but caches and selected-track provenance limit causal inference. This is not proof that all waveform requests avoid file I/O."
+  },
+  "startup_observation": "Native analyzed-file initialization reports missing PIONEER path and MountMediaInfoReference lookup warnings before media advertisement; correlation only",
+  "candidate_hypothesis": "The metadata pre-mount runs before alias preparation. Prepare the source alias before private mount tasks, retaining delayed configured metadata announcement.",
+  "experimental_candidate_sha256": "d56dea3855df97cb81693c3326f4a6660e3f2b6db4bc9f3545e33025843f3596",
+  "component_test": "PASS: actual announcement helper requires alias before queueing mount, refuses alias failure, preserves bounded fallback and eject leases",
+  "candidate_visual_result": "Alias-first candidate fails both graphs on valid Algo más load; see waveform-alias-ab.json",
+  "physical_AZ_changed": false,
+  "identity_trace": {
+    "runtime_sha256": "debaca06db5f5dd1313d0efd9a89be342f2d35bd3c00d675d7dbb06ac4c6194d",
+    "pid": 76323,
+    "local_log": "local/diagnostics/waveform-regression-v1/identity-trace-v1.log",
+    "observation": "Owned HubLib/HubInfo mount lookups produce remote media identities, but native e5fb00 path resolution returns status -1 and empty path for all five initial sources. This is mount-time evidence, not proof that later resolution remains unavailable.",
+    "next_step": "Correctly defer mounting until media-query scheduling and compare path/visual results"
+  }
+}

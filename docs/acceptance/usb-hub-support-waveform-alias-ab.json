@@ -1,0 +1,55 @@
+{
+  "scope": "Emulator diagnosis only; no physical deployment or acceptance",
+  "runtime_sha256": "d56dea3855df97cb81693c3326f4a6660e3f2b6db4bc9f3545e33025843f3596",
+  "experiment": "Prepare the owned remote filesystem alias before private library mounting",
+  "valid_track": {
+    "title": "Algo mÃ¡s",
+    "key": "11B",
+    "duration_display": "03:22.647",
+    "deck": 1,
+    "source": "H USB1"
+  },
+  "local_capture": "local/diagnostics/waveform-regression-v1/alias-first-valid-algo.png",
+  "visual_result": {
+    "detail": {
+      "colored_pixels": 0,
+      "visible": false
+    },
+    "overview": {
+      "colored_pixels": 585,
+      "occupied_rows": 1,
+      "visible": false
+    }
+  },
+  "conclusion": "Filesystem alias preparation alone does not restore either waveform view. It is not an accepted fix.",
+  "excluded_attempt": "The preceding alias-first-hub-waveform capture loaded the wrong first row and returned E-8306 NO FILE; it cannot evaluate waveform restoration.",
+  "next_experiment": "Diagnostic-only LF_WAVEFORM_NO_PREMOUNT_DIAGNOSTIC bypasses the new metadata pre-mount to isolate native registration ordering. Build SHA256 c5d9b363edc0426f9481d416bbc194f5a07d4b542cf5f7e9e911a8029d822689; rendering acceptance pending.",
+  "no_premount_result": {
+    "runtime_sha256": "c5d9b363edc0426f9481d416bbc194f5a07d4b542cf5f7e9e911a8029d822689",
+    "pid": 62056,
+    "track": "Algo más",
+    "local_capture": "local/diagnostics/waveform-regression-v1/no-premount-valid-waveform.png",
+    "detail_visible": false,
+    "overview_visible": false,
+    "conclusion": "Both graphs remain blank, but this experiment does NOT isolate deferred mounting: mount_at was set to now and the final poll loop could queue the mount immediately. Do not use it to exclude initialization ordering.",
+    "setup_failures": "Initial automation ran before deck monitor readiness; a later attempt hit the encoder bound and was in Artist view. Neither is waveform evidence. Final Track selection was visually verified before loading."
+  },
+  "corrected_deferred_experiment": {
+    "flag": "LF_WAVEFORM_NO_PREMOUNT_DIAGNOSTIC",
+    "change": "Return before assigning mount_at, retaining the media-query scheduled deadline",
+    "runtime_sha256": "4f56bb1b24ff38218355c1f6b1ed996567778727404ff3dc8092e2fa6d54adb8",
+    "status": "Exact mapped diagnostic runtime verified by loader script; positive visual result on same known analyzed track",
+    "pid": 84087,
+    "track": "Algo más",
+    "local_selected_capture": "local/diagnostics/waveform-regression-v1/deferred-v2-selected.png",
+    "local_waveform_capture": "local/diagnostics/waveform-regression-v1/deferred-v2-waveform.png",
+    "local_source_capture": "local/diagnostics/waveform-regression-v1/deferred-v2-source.png",
+    "local_runtime_log": "local/diagnostics/waveform-regression-v1/deferred-v2-runtime.log",
+    "analysis_paths": "All five source mount lookups return native status0 and matching remote paths",
+    "detail_colored_pixels": 18517,
+    "overview_colored_pixels": 8847,
+    "both_graphs_visible": true,
+    "browse_previews_visible": true,
+    "remaining_regression": "Source retains fallback HUB_LIB labels/default color despite metadata acquisition; not an accepted final fix"
+  }
+}

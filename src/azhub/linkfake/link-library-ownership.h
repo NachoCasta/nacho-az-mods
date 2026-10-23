@@ -92,6 +92,13 @@ static uint64_t probe_parse(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
         probe_ticket_discard(message);
         uint32_t dmst=((uint32_t (*)(uint64_t,int))0xf05680)(message,0);
         unsigned slot=(dmst>>8)&255;
+#ifdef LF_HUB_REQUEST_TRACE
+        static unsigned count;
+        unsigned command=*(uint16_t *)message;
+        if (command>=0x2000 && command<=0x4fff &&
+            __atomic_fetch_add(&count,1,__ATOMIC_RELAXED)<256)
+            lf_log("hub parser trace command=%#x dmst=%#x owned_player=%d",command,dmst,player);
+#endif
         if (slot>=0xe0 && slot<0xe0+MAX_FAKES) {
             if (player) {
                 probe_ticket_put(message,proof);

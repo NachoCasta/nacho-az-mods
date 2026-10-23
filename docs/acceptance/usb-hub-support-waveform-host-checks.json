@@ -1,0 +1,20 @@
+{
+  "scope": "Portable production components and actual-source queue/announcement controls; no final emulator or hardware acceptance",
+  "components": {"plain": 103, "asan_ubsan": 103, "tsan": 103},
+  "compiler": "Clang in existing usb-hub-host-tests:local image; network disabled, repository mounted read-only",
+  "logs": ["local/diagnostics/waveform-regression-v1/host-components-final-v2.log", "local/diagnostics/waveform-regression-v1/host-tsan-final-v2.log"],
+  "actual_source_controls": [
+    "Hook registration and historical compile path pass in WSL",
+    "Loader/presence and media encoder controls pass in WSL",
+    "Announcement retires early analysis state, clears mount deadline, respects eject admission and does not repeat",
+    "Actual mount queue preserves complete same-source metadata across remount, invalidates retired generations and refuses pending removal"
+  ],
+  "environment_failures": [
+    "Initial WSL suite stopped at missing g++ after plain C components passed",
+    "Unmodified container runner could not execute preliminary Python controls because the existing image lacks Python; those controls ran in WSL",
+    "First local runner copy had CRLF shell line endings; corrected to LF",
+    "Combined container run passed plain and ASan/UBSan but TSan could not start under default seccomp personality restriction",
+    "Separate TSan repeat with seccomp unconfined, no network and read-only repository completed all103 components with exit0"
+  ],
+  "limits": "The final same-source metadata preservation guard is covered by its actual-body enqueue test. Portable components do not prove native worker task ordering or waveform visibility; exact-runtime emulator and physical checks are separate."
+}

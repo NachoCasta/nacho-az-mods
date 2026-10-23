@@ -1,0 +1,83 @@
+{
+  "result": "Emulator regression gates pass; corrected physical installation and user waveform confirmation pending",
+  "first_production_runtime_sha256": "2a02cc4f4c601e8001eaf2586cbddd9f7d8b0b27bb05cb166e1e3b04a41bf179",
+  "first_production_pid": 110066,
+  "mapped_runtime_verified": true,
+  "first_production_visual": "Same known Algo mÃ¡s loads; detail18517 colored pixels and overview8847; both graphs and Browse previews pass",
+  "first_production_remaining_defect": "Source USB4 shows fallback HUB_LIB4. Remount preparation invalidates captured properties before first native media response can use them; other four configured names/colors are visible.",
+  "local_captures": [
+    "local/diagnostics/waveform-regression-v1/final-v1-selected.png",
+    "local/diagnostics/waveform-regression-v1/final-v1-waveform.png",
+    "local/diagnostics/waveform-regression-v1/final-v1-source.png"
+  ],
+  "correction": "Preserve complete metadata when preparing a remount of the same root and route. Removal/reuse still invalidate generations. Actual mount enqueue body regression passes.",
+  "corrected_emulator_runtime_sha256": "b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c",
+  "corrected_status": "Exact mapped runtime verified, PID124946; both graph checks pass and Source shows five configured names/colors in numeric order",
+  "physical_AZ_changed": false,
+  "publication_changed": false,
+  "corrected_captures": [
+    "local/diagnostics/waveform-regression-v1/final-v2-selected.png",
+    "local/diagnostics/waveform-regression-v1/final-v2-waveform.png",
+    "local/diagnostics/waveform-regression-v1/final-v2-source.png"
+  ],
+  "mode_cycle": {
+    "sequence": "On-Off-On",
+    "same_pid": 124946,
+    "native_confirmation_dialogs_verified": true,
+    "engine_advances_both_modes": true,
+    "both_graphs_visible_both_modes": true,
+    "mode_recovery": "Both internal members retained; external removed0; final epoch3 mode1",
+    "evidence_prefix": "local/diagnostics/waveform-regression-v1/final-v2-link-",
+    "limits": "No audio capture or external CDJ; network-client checks separate"
+  },
+  "eject_attempt": {
+    "result": "Not accepted: selector refuses input after core disables frame filter for eight calls above200us",
+    "evidence": "local/diagnostics/waveform-regression-v1/final-v2-eject-selector.png",
+    "next": "Normal framework reload with empty decks to retest in a fresh session; core limits unchanged"
+  },
+  "fresh_session_loaded_eject": {
+    "pid": 139100,
+    "exact_mapped_runtime_verified": true,
+    "selector_opened": true,
+    "native_loaded_track": "Algo más, content495",
+    "result": "safe-eject success targets1 sources0x1; backing and alias mounts absent; four hub neighbors remain mounted",
+    "engine_advances_after_eject": true,
+    "completed_cache_ticket": {
+      "deck": 1,
+      "content_id": 495,
+      "media": "0x10200000602",
+      "phase": 2,
+      "submitted": 1
+    },
+    "reconnect": "QMP restored the same protected A overlay at functionalxhci port2.1; USB1 returns ahead of USB2-5 with configured name/color; metadata probe retirement runs again for source0",
+    "reconnect_caveat": "Legacy QEMU drive auto-deleted with USB device; recreated qcow2 node from the original named protected overlay before restoring the same port. Initial device_add refused missing drive and changed no device.",
+    "local_evidence": [
+      "local/diagnostics/waveform-regression-v1/final-v2-fresh-loaded-selector.png",
+      "local/diagnostics/waveform-regression-v1/final-v2-after-eject-engine.json",
+      "local/diagnostics/waveform-regression-v1/final-v2-reconnected-source.png"
+    ],
+    "remaining": "Corrected hardware candidate installation and user waveform confirmation"
+  },
+  "fresh_load_after_reconnect": {
+    "pid": 139100,
+    "deck": 2,
+    "title": "Algo más",
+    "duration": "03:22.647",
+    "detail_colored_pixels": 19000,
+    "overview_colored_pixels": 8844,
+    "both_visible": true,
+    "selected_capture": "local/diagnostics/waveform-regression-v1/reconnected-valid-algo.png",
+    "waveform_capture": "local/diagnostics/waveform-regression-v1/reconnected-valid-waveform.png",
+    "excluded_attempt": "Earlier automation left focus on Browse category tabs and loaded no track; not waveform evidence"
+  },
+  "physical_preflight": {
+    "read_only": true,
+    "pid": 3139484,
+    "kernel": "4.4.194",
+    "firmware": "ep147-9e9454e357389ece",
+    "decks": "LEEE",
+    "framework": "done",
+    "decision": "No installation or reload while deck1 remains loaded; user asked to empty decks when convenient"
+  },
+  "network": "Five complete independent libraries and12 exact file reads pass; see usb-hub-support-waveform-network.json"
+}

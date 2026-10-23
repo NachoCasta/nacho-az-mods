@@ -1,0 +1,22 @@
+{
+  "scope": "Existing exact emulator runtime, isolated independent software clients; no physical controller or actual CDJs",
+  "runtime_sha256": "b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c",
+  "pid": 139100,
+  "result": "pass",
+  "sources": 5,
+  "per_library": {"tracks": 2546, "ordered_nodes": 185, "ordered_memberships": 8359},
+  "exact_PDB_audio_reads_including_native_USB1": 12,
+  "same_process": true,
+  "host_namespace_removed": true,
+  "transport_errors": [],
+  "local_evidence": "local/diagnostics/waveform-regression-v1/final-v2-network-ready",
+  "initial_attempt": "Stopped before attaching clients: no source interfaces, acquisition errno95 because the cold emulator lacked its macvlan test module. Not a passing network test.",
+  "fixture_restoration": {
+    "module": "Existing self-built azhub_test_macvlan, exact6.6.138-dirty emulator kernel",
+    "module_sha256": "d125c73ce850c91a8485f32a4ef52ea318f3fd5b1d7eb712f18c510654e268ad",
+    "method": "Verified ELF/vermagic/hash; copied to emulator mods USB data directory and explicitly loaded into emulator only. Native Link Off was allowed to finish, retiring the old helper; On started a fresh managed helper with five ready libraries.",
+    "state": "Test module remains loaded as the running emulator's network fixture; temporary client TAP/namespace/filters were removed. It is excluded from the hardware package.",
+    "earlier_cycle": "An immediate Off/On sequence completed only the returned-On event and did not retire the terminal failed helper; not used as fixture recovery evidence."
+  },
+  "limits": ["No captured audio", "No actual-CDJ or physical network acceptance", "Hardware uses unchanged target4.4 assets, not this emulator fixture"]
+}

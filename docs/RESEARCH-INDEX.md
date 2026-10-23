@@ -4,6 +4,14 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| HUB-WAVEFORM-REGRESSION-GOAL.md | Current goal: restore absent hub waveforms and add actual graph visibility assertions |
+| acceptance/usb-hub-support-waveform-alias-ab.json | Alias-first negative result, invalid deferred-mount experiment and corrected diagnostic scope |
+| acceptance/usb-hub-support-waveform-metadata-retirement.json | Two-phase private mount experiment preserves names/colors/order and restores Browse/detail/overview waveforms; final runtime validation pending |
+| acceptance/usb-hub-support-waveform-host-checks.json |103 portable components in plain/ASan+UBSan/TSan and actual mount/announcement controls; environment failures preserved |
+| acceptance/usb-hub-support-waveform-production-progress.json | First non-diagnostic visual pass, first-response metadata race and corrected exact-runtime validation status |
+| acceptance/usb-hub-support-waveform-package.json | Validated unpublished hardware-target0.4.5 package with unchanged helper/kernel assets; physical acceptance pending |
+| acceptance/usb-hub-support-waveform-network.json | Exact-runtime five complete software-client libraries and12 exact file reads; emulator module prerequisite and cleanup scoped explicitly |
+| acceptance/usb-hub-support-waveform-regression-reproduction.json | Exact current runtime: same-title native deck renders both graphs, hub deck blank; visual positive/negative controls |
 | acceptance/usb-hub-support-source-presentation-045-physical-install.json | User-reviewed/authorized0.4.5 USB install, exact pre-approval, framework reload and mapped runtime verification; functional user testing pending |
 | acceptance/usb-hub-support-source-presentation-native-reconnect-emulator.json | Native USB reconnect after five hub libraries retains native-first order, hub metadata and advancing cached deck |
 | acceptance/usb-hub-support-source-presentation-capacity-package.json | Validated unpublished hardware-target0.4.5 package, member hashes and unchanged kernel/assets; physical acceptance pending |

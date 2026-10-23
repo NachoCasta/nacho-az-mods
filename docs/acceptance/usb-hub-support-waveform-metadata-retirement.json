@@ -1,0 +1,30 @@
+{
+  "scope": "Emulator causal experiment; final production build and physical acceptance remain pending",
+  "runtime_sha256": "7bfb15f6b355725f1ded6452802afa86cff32ecd9b3e199560aafcbdca6cf774",
+  "mapped_runtime_verified": true,
+  "pid": 94466,
+  "method": "Capture configured properties from each private library, queue both private unmount tasks before announcement, clear mounted/deadline state, and let native media registration schedule a new mount. Per-worker FIFO preserves task order.",
+  "track": "Algo más",
+  "source": "HUB USB1",
+  "deck": 1,
+  "same_audio_sha256_native_hub_alias": "373a65b58e3801b5c56feb01a02b3aa73cec2aa9765f4e0083b699e3523626b2",
+  "observations": {
+    "source_names": "Five configured Nacho Chips names preserve case",
+    "source_colors": "Aqua on USB1/2/3/5, Default on USB4",
+    "source_order": "Native USB1/2 precede ordered HUB USB1 through USB5",
+    "browse_previews": "Visible, including selected Algo más",
+    "detail_visible": true,
+    "detail_colored_pixels": 18517,
+    "overview_visible": true,
+    "overview_colored_pixels": 8847,
+    "path_resolution": "Early metadata mounts fail remote path resolution; post-retirement analysis mounts resolve to the matching registered source path"
+  },
+  "local_evidence": [
+    "local/diagnostics/waveform-regression-v1/metadata-retire-v1-source.png",
+    "local/diagnostics/waveform-regression-v1/metadata-retire-v1-selected.png",
+    "local/diagnostics/waveform-regression-v1/metadata-retire-v1-waveform.png",
+    "local/diagnostics/waveform-regression-v1/metadata-retire-v1-runtime.log"
+  ],
+  "production_followup": "Remove experimental branches, protect retirement with source admission, reset retirement state on removal/reuse, test bounded metadata fallback and repeat prevention, then verify exact non-diagnostic runtime and lifecycle/Link/eject regressions.",
+  "not_claimed": ["Final production runtime acceptance", "Physical waveform acceptance", "Captured audio", "Actual CDJ interoperability", "Eight-source waveform acceptance"]
+}

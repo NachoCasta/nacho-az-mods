@@ -1,0 +1,45 @@
+{
+  "result": "regression reproduced; not fixed",
+  "environment": "Local QEMU, existing protected USB COW fixtures",
+  "runtime_sha256": "6cc52cacba0861282e37807297c993f61e708d282c399e0e094f1e7bce50d270",
+  "EP147_pid": 997,
+  "mapped_runtime_hash_verified": true,
+  "track": "Algo más",
+  "native_control": "Native USB1, deck1: detailed and overview waveforms visibly rendered",
+  "hub_control": "HUB/USB1, deck2: same title/key/duration loaded, detailed waveform absent and overview only a flat line",
+  "comparison_screenshot": "local/diagnostics/waveform-regression-v1/native-hub-algo-comparison.png",
+  "visual_checker": "src/azhub/research/scripts/check-waveform-visible.py",
+  "checker_controls": "local/diagnostics/waveform-regression-v1/visibility-controls.json",
+  "checker_scope": "Unscaled1280x800 native two-deck layout; colored sample area, horizontal coverage and vertical coverage in both graph areas. Excludes labels/time/controls and overview phrase strip; flat lines fail.",
+  "native_detail_colored_pixels": 18517,
+  "native_overview_colored_pixels": 8847,
+  "hub_detail_colored_pixels": 0,
+  "hub_overview": "580 colored pixels on one row; rejected as a flat line",
+  "negative_controls": [
+    "Same-frame hub deck2 fails",
+    "Earlier blank capacity-v3-loaded-waveform.png deck1 fails"
+  ],
+  "analysis_provenance": {
+    "track_id": 495,
+    "classic_pdb_sha256_native_and_hub": "d463cbd2742ea8fa1ec741b2f9b204bfeb60bc50b1c2a4c4a4daa1bbb0b3a760",
+    "analysis_root": "PIONEER/USBANLZ/P057/0001DB65/ANLZ0000",
+    "compared_paths": [
+      "/media/usb/sda1",
+      "/media/usb/sdc1",
+      "/media/player07/usb"
+    ],
+    "all_three_paths_identical": true,
+    "DAT_sha256": "99cbe91b8227b24f69ee61740d7112619710a5d1b8e8476945dd61c44f404ae4",
+    "EXT_sha256": "773933a05d954c5f68a0db38368ee9418d5d9e835cedc811aa806b993c95674c",
+    "2EX_sha256": "28bf5b6ad875185c2b8576e744b06bb1d5e6d32d98acff022fc3ef94617db760",
+    "audio_sha256_native_hub_alias": "373a65b58e3801b5c56feb01a02b3aa73cec2aa9765f4e0083b699e3523626b2",
+    "audio_hash_control": "local/diagnostics/waveform-regression-v1/audio-provenance.json"
+  },
+  "important_boundaries": [
+    "Classic PDB, exact audio file and all three analysis companions match across native/hub paths; native SQL analysis-path provenance remains a separate control",
+    "Mapped emulator runtime is exact; normal boot mirrored different USB/staged bytes afterward without restarting. Do not reload until the intended candidate is restored through the supported USB/framework flow.",
+    "Physical user reports normal audio with missing waveforms; no physical mutation in this reproduction",
+    "No root cause or corrected candidate accepted yet"
+  ],
+  "physical_AZ_changed_during_reproduction": false
+}

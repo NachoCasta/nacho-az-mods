@@ -71,6 +71,7 @@ struct fake {
     char mp[64];          /* the LINK mount point, once EP147 asked for it */
     long mount_at;        /* epoch seconds when to mount the servers on mp, 0 = not yet */
     _Atomic int mounted;
+    int metadata_probe_retired;
     _Atomic int present;
     int unmount_pending;
     long removed_at;
@@ -936,6 +937,19 @@ static uint64_t h_mlookup(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64
              * but give it the actual remote member and media identity. */
             *(uint64_t *)r=((uint64_t)(0x100|media_sdid(fakes[i].slot))<<32)
                          |((fakes[i].player-1)<<8)|2;
+#ifdef LF_HUB_REQUEST_TRACE
+            static unsigned identity_traces;
+            if (__atomic_fetch_add(&identity_traces,1,__ATOMIC_RELAXED)<32) {
+                uint64_t fields[3]={0};
+                ((void (*)(void *))0x247c9b0)(&fields[1]);
+                ((void (*)(void *))0x247c9b0)(&fields[2]);
+                int status=((int (*)(uint64_t,void *))0xe5fb00)(r,fields);
+                lf_log("hub identity trace source=%d thread=%s id=%#x media=%#lx status=%d path=%.160s",
+                    i,name,lid,*(uint64_t *)r,status,jstr((uint64_t)&fields[1]));
+                ((void (*)(void *))0x2469aa0)(&fields[2]);
+                ((void (*)(void *))0x2469aa0)(&fields[1]);
+            }
+#endif
             break;
         }
     }
@@ -1113,6 +1127,7 @@ static int linkfake_load_config(void) {
                 strcpy(old->name,f->name);
                 strcpy(old->port_route,f->port_route);
                 old->mount_at=old->announced_at=old->queried_at=0;
+                old->metadata_probe_retired=0;
                 old->mounted=0; old->notify_pending=1;
                 old->present=1; /* Publish replacement only after fields agree. */
                 lf_log("hub source reused player %d slot %d path=%s port=%u route=%s",old->player,old->slot,old->dir,physical_port,old->port_route);

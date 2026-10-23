@@ -1,5 +1,65 @@
 # Current state
 
+## Active development: missing hub waveforms
+
+The user confirms physical candidate0.4.5 names/colors work and tracks load/play,
+but waveforms are absent. The same defect is visible in recent emulator captures.
+Previous source-presentation checks validated labels and playback state, not
+rendered waveform content; they do not prove waveform visibility. The current
+goal is to reproduce against a native positive control, identify/fix the cause
+and add actual rendering regression coverage before corrected physical validation.
+See [waveform goal](HUB-WAVEFORM-REGRESSION-GOAL.md). No corrected physical
+waveform acceptance exists yet. The earlier presentation progress below
+is scoped evidence and must not be read as complete functional acceptance.
+
+Diagnostic A/B now isolates premature native mount initialization: preparing the
+alias alone does not help, while preserving the media-query scheduled mount
+restores all five native analysis-path resolutions and both graphs for Algo más.
+Exact emulator diagnostic `4f56bb1b24ff38218355c1f6b1ed996567778727404ff3dc8092e2fa6d54adb8`
+passes the pixel visibility check and restores Browse previews. It still exposes
+fallback names/default colors in Source, so it is not the final fix. Preserve
+configured metadata while separating its acquisition from early analysis setup.
+See [diagnostic comparison](acceptance/usb-hub-support-waveform-alias-ab.json).
+
+The subsequent two-phase diagnostic preserves configured names/colors and source
+order while restoring Browse previews and both deck graphs. It retires the
+pre-announcement metadata mount and mounts again after native registration;
+the comparison is recorded in [retirement evidence](acceptance/usb-hub-support-waveform-metadata-retirement.json).
+Production code now includes admission-protected retirement and lifecycle resets;
+the first non-diagnostic build restores both graphs but exposed a first-response
+metadata race. Remount preparation now preserves complete same-source metadata;
+the corrected exact runtime now passes the waveform and presentation controls. All103 portable components
+pass in plain, ASan/UBSan and TSan modes, with separate actual queue/announcement
+controls and preserved environment failures. See [host checks](acceptance/usb-hub-support-waveform-host-checks.json)
+and [production progress](acceptance/usb-hub-support-waveform-production-progress.json).
+No corrected physical waveform acceptance exists yet.
+
+Corrected non-diagnostic emulator runtime
+`b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c`
+shows both graphs and configured names/colors in native-first numeric order.
+Native Link On/Off/On retains the loaded source and both graphs with the same
+process and advancing engine. A fresh session passes own-source loaded eject,
+mount/alias removal, retained completed cache ticket and continued engine advance;
+reconnection restores USB1 and configured metadata. A new load after reconnect
+into deck2 again passes both graph assertions. These are emulator observations,
+without captured audio or actual CDJs. The first eject attempt refused input
+after the core's cumulative200us frame-filter limit; normal reload with empty
+decks restored input. Core limits were not changed.
+
+The unpublished0.4.5 hardware-target package validates; only its manifest and
+runtime differ from the preceding presentation package. Kernel assets/helper,
+stable ID and exact compatibility remain unchanged. See
+[package receipt](acceptance/usb-hub-support-waveform-package.json).
+Network-client regression passes five complete libraries and12 exact file reads,
+with unchanged process, clean transport and namespace removal. The existing6.6
+emulator macvlan test fixture was restored after the initial attempt stopped
+before clients because that fixture was absent. This fixture is not part of the4.4
+hardware package. See [network evidence](acceptance/usb-hub-support-waveform-network.json).
+Read-only physical preflight still observes the prior0.4.5 process with deck1
+loaded. No corrected physical installation/reload has occurred; wait for empty
+decks and then obtain user waveform confirmation. Published0.4.4/catalog remain
+unchanged and public push approval remains separate.
+
 ## Active development: hub source presentation
 
 The user approved the emulator presentation and explicitly requested physical

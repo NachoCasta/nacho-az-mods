@@ -117,6 +117,7 @@ static void community_refresh_presence(const char *config) {
             source->present=0;
             source->notify_pending=0;
             source->mount_at=0;
+            source->metadata_probe_retired=0;
             source->announced_at=source->queried_at=0;
             source->unmount_pending=1;
             lf_log("hub source absent player %d slot %d path=%s",source->player,source->slot,source->dir);

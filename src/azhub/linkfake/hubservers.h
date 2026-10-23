@@ -12,6 +12,20 @@ static uint64_t hub_owners[16];
 static unsigned hub_owner_counts[16];
 static uint64_t *hub_mount_caches[MAX_FAKES];
 static int hub_queue_mount(int source);
+#ifdef LF_HUB_REQUEST_TRACE
+/* Explicit bounded request diagnostics; never enabled in release builds. */
+static void hub_trace_request(const char *kind,int source,uint64_t message) {
+    static unsigned count;
+    unsigned command=*(uint16_t *)message;
+    if (command<0x2000 || command>0x4fff ||
+        __atomic_fetch_add(&count,1,__ATOMIC_RELAXED)>=256) return;
+    uint32_t dmst=((uint32_t (*)(uint64_t,int))0xf05680)(message,0);
+    lf_log("hub request trace kind=%s source=%d command=%#x dmst=%#x mounted=%d",
+        kind,source,command,dmst,source>=0 ? fakes[source].mounted:0);
+}
+#else
+#define hub_trace_request(kind,source,message) ((void)0)
+#endif
 static int hub_slot_code(int player, int slot) {
     if (!getenv("LINKFAKE_HUBSRV")) return 0;
     for (int i=0; i<nfakes; i++) if (fakes[i].player==player && fakes[i].slot==slot) return 0xe0+i;
@@ -79,6 +93,7 @@ static void hub_info_process(uint64_t server,uint64_t message,uint32_t connectio
     if (!hub_queue_mount(source)) {
         safe_server_end(source); hub_info_library=previous; return;
     }
+    hub_trace_request("info",source,message);
 #else
     for (int i=0;i<nfakes;i++) if (fakes[i].srv_info==server)
         hub_info_library=fakes[i].srv_music;
@@ -95,6 +110,7 @@ static void hub_music_process(uint64_t server,uint64_t message,uint32_t connecti
     for (int i=0;i<nfakes;i++) if (fakes[i].srv_music==server) source=i;
     if (!safe_server_begin(source)) return;
     if (!hub_queue_mount(source)) { safe_server_end(source); return; }
+    hub_trace_request("music",source,message);
     ((void (*)(uint64_t,uint64_t,uint32_t))((uint64_t *)0x2bb1268)[0x50/8])(server,message,connection);
     safe_server_end(source);
 }
@@ -277,7 +293,10 @@ static int hub_queue_mount(int source) {
 #endif
     int ready=f->present && !f->unmount_pending && f->srv_music && f->srv_info;
     if (ready && !f->mounted) {
-        hub_metadata_prepare(source,f->dir,f->port_route);
+        /* The post-registration mount must retain the metadata used by its
+         * first media response. Requests can enqueue it before that response. */
+        if (!hub_metadata_complete(source,f->dir,f->port_route))
+            hub_metadata_prepare(source,f->dir,f->port_route);
         uint16_t id=0x102;
         uint64_t path=0;
         ((void (*)(void *,const char *))0x24a1180)(&path,f->dir);
@@ -292,8 +311,19 @@ static int hub_queue_mount(int source) {
 #endif
     return ready;
 }
+static void hub_retire_metadata_mount(int source) {
+    uint16_t id=0x102;
+    struct fake *f=&fakes[source];
+    ((void (*)(uint64_t,void *,void *))0x1373928)(f->srv_music,&id,NULL);
+    ((void (*)(uint64_t,void *,void *))0x1975468)(f->srv_info,&id,NULL);
+}
 static int hub_prepare_announcement(int source,time_t now) {
     struct fake *f=&fakes[source];
+    /* Native analysis initialization may resolve the source's remote alias.
+     * Establish it before any private library mount task can run. */
+    int rc=hub_alias_prepare(f->dir,f->mp);
+    if (rc) { lf_log("hub alias failed player %d slot %d rc=%d",f->player,f->slot,rc); return 0; }
+    if (f->metadata_probe_retired) return 1;
     if (!f->mount_at) f->mount_at=now;
     if (!f->mounted && f->srv_music && f->srv_info) {
 #ifdef LF_SAFE_EJECT
@@ -304,7 +334,24 @@ static int hub_prepare_announcement(int source,time_t now) {
         safe_server_end(source);
 #endif
     }
-    return hub_metadata_complete(source,f->dir,f->port_route) || now-f->mount_at>=10;
+    int complete=hub_metadata_complete(source,f->dir,f->port_route) || now-f->mount_at>=10;
+    if (complete) {
+#ifdef LF_SAFE_EJECT
+        if (!safe_server_begin(source)) return 0;
+#endif
+        /* Keep the captured properties, but discard analysis state initialized
+         * before native media registration. Per-worker FIFO places the real
+         * mount after these unmount tasks; the media query sets its deadline. */
+        if (f->mounted) hub_retire_metadata_mount(source);
+        f->mounted=0;
+        f->mount_at=0;
+        f->metadata_probe_retired=1;
+        lf_log("hub metadata probe retired source=%d",source);
+#ifdef LF_SAFE_EJECT
+        safe_server_end(source);
+#endif
+    }
+    return complete;
 }
 static void hub_mount_poll(void) {
     static time_t started, ready_at;
@@ -337,6 +384,7 @@ static void hub_mount_poll(void) {
             fprintf(box,"umount %s nfs",f->mp); fclose(box);
             f->unmount_pending=2; f->removed_at=now;
             f->mounted=0; f->mount_at=0;
+            f->metadata_probe_retired=0;
             hub_metadata_invalidate(i);
             ready_at=now+3;
             lf_log("hub removal queued player %d slot %d path=%s",f->player,f->slot,f->dir);
@@ -373,8 +421,6 @@ static void hub_mount_poll(void) {
             /* A missing database or unavailable server must still expose the
              * existing volume-name/default-color fallback after a bounded wait. */
             if (!hub_prepare_announcement(i,now)) continue;
-            int rc=hub_alias_prepare(f->dir,f->mp);
-            if (rc) { lf_log("hub alias failed player %d slot %d rc=%d",f->player,f->slot,rc); continue; }
             __atomic_store_n(&f->announced_at,now,__ATOMIC_RELEASE);
             FILE *box=fopen("/proc/udev_nfs","we");
             if (!box) { __atomic_store_n(&f->announced_at,0,__ATOMIC_RELEASE); continue; }
