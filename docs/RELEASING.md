@@ -15,6 +15,12 @@ The current SDK is v1.2.3, commit `62a156abf3a4789e9e3cdd610fe106227a3a8967`.
 Use the matching tool/template versions. Upgrading the SDK or compiler is an explicit change;
 review the guide and validate the resulting binary again.
 
+Release 0.4.5 uses an isolated screenshot-aware packer from SDK commit
+`3dcaf8f7331ea94135d7161f653edfaf906d5ea6` for optional `shots/*.png` and catalog
+screenshot URLs. This does not upgrade the build headers/compiler or minimum core.
+Its exact accepted executable and the resulting package also pass the preserved
+SDK 1.2.3 validator. Screenshots are selected release assets, not Git-tracked research.
+
 ## 1. Establish the release target
 
 Read [CURRENT-STATE.md](CURRENT-STATE.md), the mod manifest, and relevant acceptance records.

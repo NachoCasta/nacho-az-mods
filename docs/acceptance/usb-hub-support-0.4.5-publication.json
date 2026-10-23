@@ -1,0 +1,53 @@
+{
+  "version": "0.4.5",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.5",
+  "source_commit": "3ced6248383395d9ddcdc8c617f31e7a6559ac44",
+  "runtime_sha256": "6ec384330f43f5126e7d70492727f4d42c6e120dd55a9c856f5226c49812c904",
+  "public_source_manifest_version": "0.4.5",
+  "anonymous_assets": [
+    {
+      "name": "usb-hub-support-0.4.5-icon.png",
+      "status": 200,
+      "bytes": 945,
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+    },
+    {
+      "name": "usb-hub-support-0.4.5-shot1.png",
+      "status": 200,
+      "bytes": 81464,
+      "sha256": "ad047a54629bddf9a3207cf1f7cd7496a2e43382571bf6464070597032a1b6c7"
+    },
+    {
+      "name": "usb-hub-support-0.4.5-shot2.png",
+      "status": 200,
+      "bytes": 107133,
+      "sha256": "5065d5c07884c4cc876adac081f0ef090705eb9f16f42f0465704f966df5b835"
+    },
+    {
+      "name": "usb-hub-support-0.4.5.azmod",
+      "status": 200,
+      "bytes": 879067,
+      "sha256": "b3b0c9225a06f3ed5d4c76d67d87d51b2a875a8aad3a6704ef8acff673ec76c9"
+    }
+  ],
+  "screenshot_scope": "Two emulator previews, not physical five-source acceptance",
+  "physical_acceptance": "User-reported source presentation and restored waveforms; see waveform-completion receipt",
+  "ci_source_run": 39881395971,
+  "ci_source_jobs": {
+    "sdk_build": "success",
+    "behavior_tests": "failure: GCC-specific atomic extension compiled with Clang"
+  },
+  "ci_harness_correction_commit": "15a260b",
+  "ci_corrected_run": 39881752121,
+  "ci_corrected_jobs": {
+    "sdk_build": "success",
+    "behavior_tests": "success"
+  },
+  "ci_correction_scope": "Test compiler selection only; tagged production source and accepted executable unchanged",
+  "build_sdk_ref": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "packaging_tool_ref": "3dcaf8f7331ea94135d7161f653edfaf906d5ea6",
+  "compiler": "Linaro GCC 6.3.1 AArch64",
+  "assets_replaced": false,
+  "release_tag_moved": false,
+  "catalog_anonymous_download_check": "passed separately with official screenshot-aware packer"
+}

@@ -4,6 +4,9 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
+| acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
+| acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |
 | HUB-WAVEFORM-REGRESSION-GOAL.md | Completed waveform regression goal and actual graph visibility assertions |
 | acceptance/usb-hub-support-waveform-completion.json | Requirement audit: exact-runtime emulator controls, preserved features, package and user-reported physical waveform acceptance |
 | acceptance/usb-hub-support-waveform-alias-ab.json | Alias-first negative result, invalid deferred-mount experiment and corrected diagnostic scope |

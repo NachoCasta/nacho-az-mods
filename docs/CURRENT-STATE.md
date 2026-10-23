@@ -1,5 +1,23 @@
 # Current state
 
+## Published: USB Hub Support 0.4.5
+
+[Release 0.4.5](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.5)
+is available through the root catalog. It includes port-based USB numbering,
+numeric source ordering, rekordbox names/colors, native badge alignment and the
+accepted waveform restoration. Two selected emulator Source/eject previews are
+published as release assets for screenshot-aware AZ-MODS clients.
+
+The release executable matches the physically accepted candidate byte for byte.
+The owner confirmed presentation and restored waveforms; audio/rendering remain
+user-reported. Both CI jobs passed after a test-only GCC compiler selection fix;
+the release tag was not moved. Anonymous catalog/package/image downloads passed.
+See the [publication record](acceptance/usb-hub-support-0.4.5-publication.json)
+and [release notes](releases/usb-hub-support-0.4.5.md) for hashes and limitations.
+Actual-CDJ interoperability, Wi-Fi sharing, phase alignment, eight-source hardware
+and long-session acceptance remain open. Earlier unpublished-candidate entries
+below describe their historical state, not current catalog availability.
+
 ## Completed development: hub waveform regression
 
 The user confirmed that the corrected physical0.4.5 candidate restores waveforms
