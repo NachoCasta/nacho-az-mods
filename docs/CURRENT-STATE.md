@@ -1,16 +1,17 @@
 # Current state
 
-## Active development: missing hub waveforms
+## Completed development: hub waveform regression
 
-The user confirms physical candidate0.4.5 names/colors work and tracks load/play,
-but waveforms are absent. The same defect is visible in recent emulator captures.
+The user confirmed that the corrected physical0.4.5 candidate restores waveforms
+after the authorized USB install, exact approval and normal framework reload.
+This is user-reported manual acceptance, not agent-instrumented rendering/audio.
+The original presentation candidate loaded/played tracks but lacked waveforms.
 Previous source-presentation checks validated labels and playback state, not
-rendered waveform content; they do not prove waveform visibility. The current
-goal is to reproduce against a native positive control, identify/fix the cause
-and add actual rendering regression coverage before corrected physical validation.
-See [waveform goal](HUB-WAVEFORM-REGRESSION-GOAL.md). No corrected physical
-waveform acceptance exists yet. The earlier presentation progress below
-is scoped evidence and must not be read as complete functional acceptance.
+rendered waveform content; they do not prove waveform visibility. The completed
+[waveform goal](HUB-WAVEFORM-REGRESSION-GOAL.md) adds actual graph assertions and
+preserves its native positive/blank-hub negative controls. See the
+[completion audit](acceptance/usb-hub-support-waveform-completion.json).
+Earlier presentation evidence below retains its original, narrower scope.
 
 Diagnostic A/B now isolates premature native mount initialization: preparing the
 alias alone does not help, while preserving the media-query scheduled mount
@@ -32,7 +33,6 @@ the corrected exact runtime now passes the waveform and presentation controls. A
 pass in plain, ASan/UBSan and TSan modes, with separate actual queue/announcement
 controls and preserved environment failures. See [host checks](acceptance/usb-hub-support-waveform-host-checks.json)
 and [production progress](acceptance/usb-hub-support-waveform-production-progress.json).
-No corrected physical waveform acceptance exists yet.
 
 Corrected non-diagnostic emulator runtime
 `b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c`
@@ -61,8 +61,9 @@ reload completed: PID3412453, exact mapped hardware runtime
 `6ec384330f43f5126e7d70492727f4d42c6e120dd55a9c856f5226c49812c904`.
 USB rollback and approval backups exist; no other manual internal edits occurred.
 See [installation evidence](acceptance/usb-hub-support-waveform-physical-install.json).
-User confirmation of both physical waveforms remains pending. Published0.4.4 and
-catalog remain unchanged; public push approval remains separate.
+The user replied "it works" to the request to check both physical waveform views.
+No eight-source, long-session or actual-CDJ hardware acceptance is inferred.
+Published0.4.4 and catalog remain unchanged; public push approval remains separate.
 
 ## Active development: hub source presentation
 

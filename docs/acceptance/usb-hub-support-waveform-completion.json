@@ -1,0 +1,20 @@
+{
+  "result": "complete for the waveform regression goal",
+  "source_implementation_commit": "e591aa3",
+  "physical_installation_commit": "b209153",
+  "emulator_runtime_sha256": "b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c",
+  "hardware_runtime_sha256": "6ec384330f43f5126e7d70492727f4d42c6e120dd55a9c856f5226c49812c904",
+  "requirements": [
+    {"requirement": "Reproduce known analyzed track and distinguish both waveform views", "evidence": "usb-hub-support-waveform-regression-reproduction.json: same audio/PDB/analysis hashes; real native positive and blank hub negative in one capture"},
+    {"requirement": "Identify cause and restore graphs", "evidence": "usb-hub-support-waveform-alias-ab.json and usb-hub-support-waveform-metadata-retirement.json: premature analysis mount fails remote resolution; retirement and registered remount restore it"},
+    {"requirement": "Meaningful automated visual regression", "evidence": "check-waveform-visible.py and test-waveform-capture-controls.py: independent detail/overview pixel coverage and CLI exits; real blank/flat-line negative fails, native positive passes"},
+    {"requirement": "Preserve source names/colors, numeric topology presentation and native artwork", "evidence": "usb-hub-support-waveform-production-progress.json: exact corrected runtime shows five ordered configured names/colors and existing HUB/H/native-body labels; no numbering/artwork implementation change"},
+    {"requirement": "Preserve independent libraries, playback, loaded eject and Link", "evidence": "usb-hub-support-waveform-host-checks.json, usb-hub-support-waveform-production-progress.json and usb-hub-support-waveform-network.json:103 components per mode, actual queue/announcement controls, same-process On/Off/On, loaded cache-backed eject, neighbor retention, reconnect/fresh waveform load and five complete independent software-client libraries plus12 exact reads"},
+    {"requirement": "Stable ID and exact compatibility", "evidence": "usb-hub-support-waveform-package.json: validated package retains ID, firmware tag, core minimum and byte-identical helper/kernel assets; only runtime/manifest change"},
+    {"requirement": "Authorized emulator-first physical validation", "evidence": "usb-hub-support-waveform-physical-install.json: empty decks, USB rollback, exact USB/staged approval, normal framework reload, mapped runtime proof and subsequent user confirmation"},
+    {"requirement": "English documentation, reviewed commits and publication boundary", "evidence": "Implementation and installation commits are local, source/evidence reviewed and JSON validated as UTF-8; published0.4.4, tags/assets and catalog unchanged. No public push or publication authorized by this completion."
+    }
+  ],
+  "physical_acceptance": "User replied 'it works' to the request to check both physical waveform views; manual report, not agent-instrumented audio/rendering",
+  "limitations": ["No eight-source hardware acceptance", "No actual-CDJ interoperability or phase-sync acceptance", "No long-session hardware acceptance", "Emulator input-budget failure and missing network fixture remain documented rather than hidden", "Publication and public push remain separate user decisions"]
+}

@@ -1,5 +1,10 @@
 # Hub waveform visibility regression
 
+Status: complete for the scoped regression. The exact corrected hardware runtime
+was installed/approved/reloaded through the framework and the user confirmed
+waveform restoration. See [completion audit](acceptance/usb-hub-support-waveform-completion.json).
+This does not publish0.4.5 or expand actual-CDJ/eight-source/long-session acceptance.
+
 The user reports that physical candidate0.4.5 loads and plays a hub track, and
 its device name/color work, but the waveform is absent. Recent emulator captures
 also show blank waveforms. The earlier presentation controls checked source

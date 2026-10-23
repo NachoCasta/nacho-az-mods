@@ -1,5 +1,5 @@
 {
-  "result": "Emulator regression gates pass; corrected physical installation and user waveform confirmation pending",
+  "result": "Completed: emulator regression gates and exact-candidate physical installation pass; user confirms waveform restoration",
   "first_production_runtime_sha256": "2a02cc4f4c601e8001eaf2586cbddd9f7d8b0b27bb05cb166e1e3b04a41bf179",
   "first_production_pid": 110066,
   "mapped_runtime_verified": true,
@@ -56,7 +56,7 @@
       "local/diagnostics/waveform-regression-v1/final-v2-after-eject-engine.json",
       "local/diagnostics/waveform-regression-v1/final-v2-reconnected-source.png"
     ],
-    "remaining": "Corrected hardware candidate installation and user waveform confirmation"
+    "remaining": "None within the waveform regression goal; broader interoperability remains outside this acceptance"
   },
   "fresh_load_after_reconnect": {
     "pid": 139100,
@@ -79,5 +79,6 @@
     "framework": "done",
     "decision": "No installation or reload while deck1 remains loaded; user asked to empty decks when convenient"
   },
-  "network": "Five complete independent libraries and12 exact file reads pass; see usb-hub-support-waveform-network.json"
+  "network": "Five complete independent libraries and12 exact file reads pass; see usb-hub-support-waveform-network.json",
+  "physical_acceptance": "See usb-hub-support-waveform-physical-install.json: exact mapped runtime and subsequent user confirmation"
 }
