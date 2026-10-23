@@ -25,6 +25,9 @@
 - The user authorized renaming the mod to USB Hub Support, ID usb-hub-support, in 0.1.6.
   Keep that ID stable. Uninstall legacy hub-libraries before enabling the new ID; both claim the same hooks.
 - Snapshots/screenshots stay local and gitignored. Do not create screenshot backups or upload them.
+  Exception: the user explicitly requested two release screenshots for0.4.5. The selected
+  emulator Source/eject previews may be packaged and uploaded as release assets; raw research
+  captures remain local and ignored. Do not commit the image files to Git.
 - Never commit firmware, keys, raw firmware decompilation, full disassemblies, USB images or music.
   Document facts (addresses/layouts/control flow) and keep reconstruction scripts instead.
 - Do not commit generated binaries except the deliberate self-built GPL kernel release asset.

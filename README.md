@@ -1,6 +1,12 @@
 # Nacho AZ Mods
 
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
+
+USB Hub Support0.4.5 adds port-based USB1-8 numbering, ordered hub sources,
+rekordbox device names/colors and preserved analyzed waveforms. The owner confirmed
+the corrected waveform candidate on the physical AZ. See the
+[0.4.5 release notes](docs/releases/usb-hub-support-0.4.5.md) for validation and limits.
+
 Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the
 AZ-MODS app or on the deck, then refresh **Browse** to find USB Hub Support.
 Downloads are hosted in this repository's GitHub Releases. The official Mod Index

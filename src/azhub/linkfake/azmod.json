@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -11,8 +11,8 @@
   ],
   "hooks": true,
   "min_core": "1.2.3",
-  "summary": "Experimental PRO DJ LINK sharing for hub USB sticks.",
-  "description": "Local candidate for separately authorized physical AZ/CDJ trials. Browse and load hub USB libraries locally and through independent PRO DJ LINK software clients. Preserve native USB sources and four local decks with Link off, two with Link on. Use USB STOP to select a stick or hold to eject the hub. External players handle source loss according to their own cache. Actual-CDJ interoperability and target MACVLAN runtime are not validated. Exact firmware2.00 ep147 only; core1.2.3 or newer.",
+  "summary": "Hub USB sources with port-based numbers and rekordbox names/colors.",
+  "description": "Connect up to eight USB sticks through a hub. USB numbers follow hub ports; native sources appear first, followed by hub sources in numeric order. Shows rekordbox device names and colors, with analyzed waveforms. Press USB STOP to select one stick or hold to eject the hub; wait for safe-to-remove confirmation. Experimental Ethernet PRO DJ LINK sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Exact firmware 2.00 ep147-9e9454e357389ece, kernel 4.4.194; core >=1.2.3.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }
