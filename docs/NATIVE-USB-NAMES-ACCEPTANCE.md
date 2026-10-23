@@ -71,3 +71,14 @@ Each swap checks the observed native USB1 controller, current-PID empty decks, n
 The authoritative [candidate receipt](acceptance/native-usb-names-0.1.0-candidate.json) records final source digests, executable/archive/member hashes and all scoped evidence. The package is `local/candidate-0.1.0/mod/dist/nachocasta-native-usb-names-0.1.0.azmod` (61,331 bytes). Package SHA256: `96f78e4945002ff3af95172167d846cef169cd49ff68078d9001826ba4a8e1d5`. Hardware executable SHA256: `fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4`. SDK directory and archive validation pass without warnings. The archive contains only manifest, icon, license and hardware executable; no fault helper, hub dependency, screenshot, firmware or music.
 
 Installation, rollback and the physical test checklist are in `src/native-usb-names/README.md`. Physical tests require separate user approval for this new mod. Remaining hardware work includes real USB insertion timing, both native ports with configured/unnamed Unicode media, actual waveform visibility, audible playback, removal/reinsert, rollback, and hub coexistence. No phase-sync, actual-CDJ, eight-source or long-session acceptance is claimed. No release, public catalog change, push or physical deployment occurred. All remaining physical work requires a new, explicit approval.
+
+
+## Physical follow-up and description revision
+
+The user explicitly authorized physical testing and subsequently authorized an exact-hash approval-list update for this new mod. All installed package members were verified. The prior approval list was backed up on the mods USB; the update held the approval lock, preserved unrelated entries and replaced the list atomically. Enable and Reload used supported framework IPC with current-PID empty-deck checks.
+
+Physical PID 2296644 mapped hardware executable SHA256 `fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4`, kernel `4.4.194`, firmware tag `ep147-9e9454e357389ece`. Native USB Names 0.1.0 and USB Hub Support 0.4.5 were loaded, all three new-mod hook claims succeeded, and reload finished with `state=done`. Local records are under `local/physical-0.1.0/`.
+
+The user reported that it works well on the physical device and requested only a clearer description. This establishes general user-reported physical operation; it does not separately establish waveform, audio, reinsertion, Unicode, standalone or rollback acceptance. Those detailed physical checks remain unclaimed.
+
+The source manifest description now explains generic USB1/USB2 names, rekordbox configured-name priority and filesystem volume-label fallback. The executable, tested archive and original candidate receipt remain unchanged. No revised package or manifest was deployed or published for this description-only edit. The earlier candidate readiness statements above describe its original pre-deployment scope; this follow-up records subsequent authorized physical work.
