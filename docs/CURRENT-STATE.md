@@ -1,5 +1,21 @@
 # Current state
 
+## Independent local candidate: Native USB Names 0.1.0
+
+`nachocasta-native-usb-names` is a separate presentation-only mod targeting exact
+firmware 2.00 `ep147-9e9454e357389ece`, kernel 4.4.194 and the pinned SDK 1.2.3.
+It preserves valid configured names and falls back to the native volume label,
+then the native generic name. It does not mount libraries, change disk metadata,
+borrow native servers/caches or depend on USB Hub Support.
+See [the goal](NATIVE-USB-NAMES-GOAL.md), [exact native hooks](NATIVE-USB-NAMES-RESEARCH.md)
+and [local acceptance](NATIVE-USB-NAMES-ACCEPTANCE.md). Plain, ASan/UBSan and TSan
+regressions pass. Exact-runtime emulator standalone/coexistence checks include real
+waveforms, independent labels, source reuse and unchanged native icon/color crops.
+The [candidate receipt](acceptance/native-usb-names-0.1.0-candidate.json) identifies
+the local archive and executable hashes. Candidate validation is local;
+physical testing requires a separate approval. This task does not publish a release,
+update the public catalog, push or deploy to the physical AZ.
+
 ## Published: USB Hub Support 0.4.5
 
 [Release 0.4.5](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.5)

@@ -4,6 +4,9 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| NATIVE-USB-NAMES-GOAL.md | Standalone native naming candidate goal and acceptance boundaries |
+| NATIVE-USB-NAMES-RESEARCH.md | Exact native presentation ABI, hooks and preserved refresh failures |
+| NATIVE-USB-NAMES-ACCEPTANCE.md | Local host/emulator evidence, candidate package and remaining physical checklist |
 | releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
 | acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
 | acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |

@@ -1,0 +1,17 @@
+{
+  "azmod": 1,
+  "id": "nachocasta-native-usb-names",
+  "name": "Native USB Names",
+  "version": "0.1.0",
+  "author": "NachoCasta",
+  "summary": "Native USB names with volume-label fallback.",
+  "description": "Preserves rekordbox device names exactly. Unnamed native USB sources show their volume label, retaining native icons, colors and USB identity. Presentation only; no disk renaming or hub dependency. Exact firmware 2.00 ep147-9e9454e357389ece, kernel 4.4.194; core 1.2.3 or newer. Physical testing pending.",
+  "license": "GPL-3.0-only",
+  "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/native-usb-names",
+  "api": 1,
+  "firmware": [
+    "ep147-9e9454e357389ece"
+  ],
+  "hooks": true,
+  "min_core": "1.2.3"
+}
