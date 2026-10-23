@@ -55,10 +55,14 @@ with unchanged process, clean transport and namespace removal. The existing6.6
 emulator macvlan test fixture was restored after the initial attempt stopped
 before clients because that fixture was absent. This fixture is not part of the4.4
 hardware package. See [network evidence](acceptance/usb-hub-support-waveform-network.json).
-Read-only physical preflight still observes the prior0.4.5 process with deck1
-loaded. No corrected physical installation/reload has occurred; wait for empty
-decks and then obtain user waveform confirmation. Published0.4.4/catalog remain
-unchanged and public push approval remains separate.
+After the user's reload instruction, physical preflight confirmed empty decks.
+The corrected0.4.5 package is installed and approved, and the normal framework
+reload completed: PID3412453, exact mapped hardware runtime
+`6ec384330f43f5126e7d70492727f4d42c6e120dd55a9c856f5226c49812c904`.
+USB rollback and approval backups exist; no other manual internal edits occurred.
+See [installation evidence](acceptance/usb-hub-support-waveform-physical-install.json).
+User confirmation of both physical waveforms remains pending. Published0.4.4 and
+catalog remain unchanged; public push approval remains separate.
 
 ## Active development: hub source presentation
 

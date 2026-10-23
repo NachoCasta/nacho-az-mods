@@ -1,0 +1,23 @@
+{
+  "scope": "Authorized physical USB installation, exact approval and normal framework reload; waveform acceptance pending user observation",
+  "version": "0.4.5",
+  "package_sha256": "384d4641fa5b245fb11d2daf91969dcb05a5303fc562eaf8f6901134c7502e6f",
+  "mapped_runtime_sha256": "6ec384330f43f5126e7d70492727f4d42c6e120dd55a9c856f5226c49812c904",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "old_pid": 3139484,
+  "new_pid": 3412453,
+  "framework_loaded_status": 1,
+  "decks_before_and_after": "EEEE",
+  "mods_USB": "/media/usb/sdb1/MODS",
+  "rollback_USB": "/media/usb/sdb1/MODS/backups/usb-hub-support-before-waveform-045-20261022-173645/original",
+  "approval_backup_USB": "/media/usb/sdb1/MODS/backups/approved-before-waveform-045-20261022-173705",
+  "approval": "USB and framework-staged executable hashes verified; approval lock held, unrelated entries preserved, backup on USB and atomic list replacement before application restart",
+  "activation": "Supported apply request; framework performed staging/restart; exact mapped runtime verified through map_files",
+  "observation": "Initial SSH observation transiently failed during restart; same observer retried successfully. No second restart was requested.",
+  "manual_internal_edits": "Exact-candidate approval exception only; no firmware/OS/core/settings or process-memory edits",
+  "local_evidence": "local/integration/waveform-metadata-retire-final-v2/physical-observation.json",
+  "user_waveform_confirmation": "pending",
+  "published": false,
+  "catalog_changed": false
+}
