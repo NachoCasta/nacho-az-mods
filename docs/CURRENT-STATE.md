@@ -1,20 +1,21 @@
 # Current state
 
-## Independent local candidate: Native USB Names 0.1.0
+## Native USB Names 0.1.0 release preparation
 
-`nachocasta-native-usb-names` is a separate presentation-only mod targeting exact
-firmware 2.00 `ep147-9e9454e357389ece`, kernel 4.4.194 and the pinned SDK 1.2.3.
-It preserves valid configured names and falls back to the native volume label,
-then the native generic name. It does not mount libraries, change disk metadata,
-borrow native servers/caches or depend on USB Hub Support.
-See [the goal](NATIVE-USB-NAMES-GOAL.md), [exact native hooks](NATIVE-USB-NAMES-RESEARCH.md)
-and [local acceptance](NATIVE-USB-NAMES-ACCEPTANCE.md). Plain, ASan/UBSan and TSan
-regressions pass. Exact-runtime emulator standalone/coexistence checks include real
-waveforms, independent labels, source reuse and unchanged native icon/color crops.
-The [candidate receipt](acceptance/native-usb-names-0.1.0-candidate.json) identifies
-the local archive and executable hashes. Candidate validation is local;
-physical testing requires a separate approval. This task does not publish a release,
-update the public catalog, push or deploy to the physical AZ.
+Independent mod `nachocasta-native-usb-names` preserves valid rekordbox device names
+exactly and uses the filesystem volume label when the configured name is absent,
+empty or invalid. Otherwise it preserves the native generic fallback. Presentation
+only; no disk renaming, library mounts, routing changes or hub dependency.
+Exact firmware tag `ep147-9e9454e357389ece`, kernel 4.4.194, pinned SDK 1.2.3.
+
+The user authorized publication after reporting successful physical operation.
+The loaded hardware executable hash was verified; the release preserves those exact
+bytes and expands the description. Host sanitizer suites and exact-runtime emulator
+standalone/coexistence waveform, naming and source-reuse controls passed. Detailed
+physical waveform/audio, Unicode, standalone, reinsertion and rollback acceptance
+remain unclaimed. See [release notes](releases/nachocasta-native-usb-names-0.1.0.md),
+[acceptance](NATIVE-USB-NAMES-ACCEPTANCE.md), [goal](NATIVE-USB-NAMES-GOAL.md)
+and [native hook research](NATIVE-USB-NAMES-RESEARCH.md).
 
 ## Published: USB Hub Support 0.4.5
 

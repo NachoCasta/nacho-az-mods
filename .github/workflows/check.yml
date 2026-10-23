@@ -22,6 +22,9 @@ jobs:
         working-directory: src/azhub/linkfake
         run: |
           make test TEST_CC=clang AZ_SDK_INCLUDE=../../../.azmod-sdk/include
+      - name: Native USB Names host regressions (plain and ASan plus UBSan)
+        working-directory: src/native-usb-names
+        run: make test SAN="plain asan" TEST_CC=clang TEST_CXX=clang++ AZ_SDK_INCLUDE=../../.azmod-sdk/include
   sdk-build:
     runs-on: ubuntu-latest
     steps:
@@ -43,3 +46,9 @@ jobs:
           python3 .azmod-sdk/tools/azmod-pack package src/azhub/linkfake
           python3 .azmod-sdk/tools/azmod-pack validate src/azhub/linkfake/dist/*.azmod
           python3 .azmod-sdk/tools/azmod-pack repo check azmods-repo.json
+      - name: Build Native USB Names with pinned SDK
+        run: python3 .azmod-sdk/tools/azmod-pack build src/native-usb-names
+      - name: Package and validate Native USB Names (no publication)
+        run: |
+          python3 .azmod-sdk/tools/azmod-pack package src/native-usb-names
+          python3 .azmod-sdk/tools/azmod-pack validate src/native-usb-names/dist/*.azmod
