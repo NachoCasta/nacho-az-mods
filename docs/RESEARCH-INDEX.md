@@ -4,6 +4,9 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| releases/nachocasta-native-usb-names-0.1.0.md | Published standalone native naming release, exact compatibility and validation limits |
+| acceptance/native-usb-names-0.1.0-publication.json | Anonymous source/assets/catalog verification and successful release/catalog CI |
+| acceptance/native-usb-names-0.1.0-release-package.json | Release archive hashes and byte-identical physically tested executable |
 | NATIVE-USB-NAMES-GOAL.md | Standalone native naming candidate goal and acceptance boundaries |
 | NATIVE-USB-NAMES-RESEARCH.md | Exact native presentation ABI, hooks and preserved refresh failures |
 | NATIVE-USB-NAMES-ACCEPTANCE.md | Local host/emulator evidence, candidate package and remaining physical checklist |

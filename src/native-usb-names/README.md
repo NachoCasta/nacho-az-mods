@@ -1,6 +1,6 @@
 # Native USB Names
 
-Standalone AZ-MODS candidate, stable ID `nachocasta-native-usb-names`, version 0.1.0.
+Standalone AZ-MODS mod, stable ID `nachocasta-native-usb-names`, version 0.1.0.
 
 Keeps a valid rekordbox device name exactly, including its case and Unicode. When the configured name is unavailable, empty or invalid, the native USB source displays a usable filesystem volume label. If both are unavailable it keeps the native generic fallback. Volume labels are bounded to 31 UTF-16 units without splitting Unicode; configured names are not reformatted.
 
@@ -21,7 +21,7 @@ make -C src/native-usb-names CXX=aarch64-linux-gnu-g++ \
   OUT=/absolute/worktree/local/emulator
 ```
 
-Use the pinned `azmod-pack` to validate and package a local staging directory containing the manifest, original reproducible storefront icon, GPL license and exact hardware executable. Record hashes before installing. Source and compatibility research are in [the goal](../../docs/NATIVE-USB-NAMES-GOAL.md) and [native research](../../docs/NATIVE-USB-NAMES-RESEARCH.md). See [local acceptance](../../docs/NATIVE-USB-NAMES-ACCEPTANCE.md) for validation status and evidence. The [candidate receipt](../../docs/acceptance/native-usb-names-0.1.0-candidate.json) identifies the reviewed package and executable hashes. No hardware acceptance is claimed.
+Use the pinned `azmod-pack` to validate and package a local staging directory containing the manifest, original reproducible storefront icon, GPL license and exact hardware executable. Record hashes before installing. Source and compatibility research are in [the goal](../../docs/NATIVE-USB-NAMES-GOAL.md) and [native research](../../docs/NATIVE-USB-NAMES-RESEARCH.md). See [local acceptance](../../docs/NATIVE-USB-NAMES-ACCEPTANCE.md) for validation status and evidence. The [candidate receipt](../../docs/acceptance/native-usb-names-0.1.0-candidate.json) identifies the reviewed package and executable hashes. The exact hardware executable was verified as loaded alongside USB Hub Support 0.4.5, and the user reported successful physical operation. Detailed physical waveform, audio and remaining checklist acceptance are not separately claimed. See the [release notes](../../docs/releases/nachocasta-native-usb-names-0.1.0.md) for the published package.
 
 ## Physical installation, after separate user approval
 
@@ -46,4 +46,4 @@ With empty decks, turn Native USB Names off in Community Mods and use normal Rel
 - Inspect actual Browse preview, detailed waveform and overview waveform on analyzed tracks, then play and seek. Report visible waveform and audible playback separately.
 - Unload, disable/reload and confirm native fallback presentation. Record failures and exact bytes; do not claim long-session or hardware timing acceptance from a short trial.
 
-No physical deployment, release, catalog update or public push is authorized by this candidate task.
+The user subsequently authorized physical installation, exact-hash approval and publication of 0.1.0. That authorization is recorded in the acceptance follow-up. Future publication or device changes require their applicable authorization.

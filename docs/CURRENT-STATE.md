@@ -1,6 +1,6 @@
 # Current state
 
-## Native USB Names 0.1.0 release preparation
+## Published: Native USB Names 0.1.0
 
 Independent mod `nachocasta-native-usb-names` preserves valid rekordbox device names
 exactly and uses the filesystem volume label when the configured name is absent,
@@ -8,7 +8,8 @@ empty or invalid. Otherwise it preserves the native generic fallback. Presentati
 only; no disk renaming, library mounts, routing changes or hub dependency.
 Exact firmware tag `ep147-9e9454e357389ece`, kernel 4.4.194, pinned SDK 1.2.3.
 
-The user authorized publication after reporting successful physical operation.
+[Release 0.1.0](https://github.com/NachoCasta/nacho-az-mods/releases/tag/nachocasta-native-usb-names-0.1.0)
+is published and listed in the root catalog after user-reported physical success.
 The loaded hardware executable hash was verified; the release preserves those exact
 bytes and expands the description. Host sanitizer suites and exact-runtime emulator
 standalone/coexistence waveform, naming and source-reuse controls passed. Detailed
