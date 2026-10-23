@@ -86,5 +86,7 @@ int main(void) {
 '''
 with tempfile.TemporaryDirectory(prefix='azhub-media-') as directory:
     d=Path(directory);(d/'test.c').write_text(harness,encoding='utf-8')
-    subprocess.run(shlex.split(os.environ.get('TEST_CC','cc'))+['-O2','-Wall','-Wextra','-Wno-unused-function','-pthread','-I'+str(root),str(d/'test.c'),'-o',str(d/'test')],check=True)
+    # These extracted production bodies use GCC __atomic builtins on _Atomic fields.
+    # Match the production compiler family; Clang rejects that GCC extension.
+    subprocess.run(shlex.split(os.environ.get('GCC_TEST_CC','gcc'))+['-O2','-Wall','-Wextra','-Wno-unused-function','-pthread','-I'+str(root),str(d/'test.c'),'-o',str(d/'test')],check=True)
     subprocess.run([str(d/'test')],check=True)
