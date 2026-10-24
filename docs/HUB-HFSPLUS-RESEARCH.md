@@ -61,4 +61,7 @@ FAT playback also advances alongside the loaded HFS+ hub track. Cold startup
 passes after the existing native filesystem checker completes; nested playlists
 and populated track rows are visible. Full portable plain/ASan+UBSan/TSan checks
 and the separate SDK UI contract harness pass. Physical acceptance remains open.
+An additional stock exFAT-FUSE fixture loads its confirmed sample and renders
+both graphs alongside HFS+, with advancing exFAT engine state. The whole-device
+fixture was manually mounted; automatic superfloppy mounting is not inferred.
 Raw research, screenshots, media and databases remain local and ignored.

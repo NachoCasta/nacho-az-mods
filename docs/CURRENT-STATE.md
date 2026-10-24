@@ -16,7 +16,11 @@ and fresh deck2 waveforms. The initial long-session selector refusal remains
 recorded. A native FAT load/playback control also passes alongside HFS+ hub
 waveforms. Cold startup, nested playlists and populated playlist tracks pass;
 the native HFS+ checker delayed startup until it declared the dirty overlay OK.
-Physical acceptance remains pending. The large public PDB reaches the existing
+An exFAT-FUSE control also loads a populated sample and renders both graphs while
+HFS+ remains loaded; its playhead advances with the same process. That small
+whole-device emulator fixture was manually mounted, not an automatic-mount test.
+Physical acceptance remains pending: the configured AZ timed out on read-only
+SSH preflight, with no device mutation. The large public PDB reaches the existing
 catalog capacity; external sharing is not validated for this fixture.
 See the [goal](HUB-HFSPLUS-SUPPORT-GOAL.md) and
 [progress evidence](acceptance/usb-hub-support-hfsplus-progress.json).

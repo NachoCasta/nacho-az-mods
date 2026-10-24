@@ -189,6 +189,34 @@
         "Selected despacio playlist populates track rows and artwork"
       ],
       "scope": "Native local browsing, not public network catalog acceptance"
+    },
+    "exfat_control": {
+      "status": "pass",
+      "EP147_pid": 743,
+      "exfat_hub_number": 3,
+      "HFS_hub_number": 2,
+      "mount_type": "Stock exFAT-FUSE, fuseblk",
+      "fixture": "Disposable overlay over existing 32MiB EJECT_EXFAT whole-device image; one confirmed FAT sample and its DAT/EXT/2EX analysis files copied into overlay",
+      "mount_scope": "Manually mounted owned whole-device emulator fixture with stock mount.exfat-fuse. This does not claim automatic native mounting of this superfloppy layout.",
+      "metadata_scope": "Existing exFAT modern database differs from current FAT export; selected content495 title/duration resolves and loads. No all-track database identity is inferred.",
+      "sample_content_id": 495,
+      "detail_colored_pixels": 18638,
+      "overview_colored_pixels": 9586,
+      "hfs_detail_colored_pixels": 22894,
+      "hfs_overview_colored_pixels": 8259,
+      "playhead_seconds": [
+        1.1723809523809523,
+        1.795328798185941,
+        2.4508843537414964,
+        3.067891156462585
+      ],
+      "audio_signal_captured": false,
+      "candidate_emulator_sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
+      "private_evidence": [
+        "mixed-exfat-source.png",
+        "exfat-and-hfs-waveforms.png",
+        "exfat-and-hfs-engine.json"
+      ]
     }
   },
   "hardware_target_build": {
@@ -198,5 +226,13 @@
     "installed": false,
     "packaged": true,
     "published": false
+  },
+  "physical_preflight": {
+    "status": "unreachable",
+    "operation": "Read-only SSH connection attempt to configured physical AZ",
+    "result": "Connection timed out, return code255; no remote command ran",
+    "mutations": false,
+    "remaining": "Physical AZ must be reachable, and original favlab USB must be available for manual playback/waveform/eject acceptance",
+    "private_evidence": "local/favlab-clone/physical-readonly-preflight.json"
   }
 }
