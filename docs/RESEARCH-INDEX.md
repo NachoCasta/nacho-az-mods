@@ -8,6 +8,7 @@ Read CURRENT-STATE.md first. Then:
 | HUB-HFSPLUS-RESEARCH.md | Three HFS+ boundaries, private analysis-root ABI, instruction guard and scoped emulator evidence |
 | acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, mount flag, waveform negative/positive controls, mixed FAT playback and Link cycle; lifecycle/physical gates remain open |
 | acceptance/usb-hub-support-hfsplus-package.json | Validated unpublished0.4.6 candidate, exact member/runtime hashes and unchanged helper/kernel assets; physical acceptance pending |
+| acceptance/usb-hub-support-hfsplus-physical-install.json | Authorized0.4.6 USB install, exact approval and mapped activation; ordinary USB manual check pending, original HFS+ physical trial deferred by owner |
 | releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
 | acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
 | acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |

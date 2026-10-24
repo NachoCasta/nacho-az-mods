@@ -1,8 +1,8 @@
 {
-  "status": "in progress; local HFS+ compatibility and emulator regressions pass, unpublished 0.4.6 candidate prepared; physical acceptance pending",
+  "status": "in progress; physical0.4.6 installed/approved/activated, ordinary USB user regression check pending; original favlab physical trial deferred by owner",
   "fixture": "Private reduced HFS+ disk image; original geometry/metadata/databases/analysis retained, only three audio samples populated",
   "original_modified": false,
-  "physical_AZ_changed": false,
+  "physical_AZ_changed": true,
   "publication_changed": false,
   "emulator": {
     "kernel": "6.6.138-dirty",
@@ -228,11 +228,9 @@
     "published": false
   },
   "physical_preflight": {
-    "status": "unreachable",
-    "operation": "Read-only SSH connection attempt to configured physical AZ",
-    "result": "Connection timed out, return code255; no remote command ran",
-    "mutations": false,
-    "remaining": "Physical AZ must be reachable, and original favlab USB must be available for manual playback/waveform/eject acceptance",
-    "private_evidence": "local/favlab-clone/physical-readonly-preflight.json"
+    "status": "reachable; installation and activation completed",
+    "original_unreachable_attempt": "Retained in historical private receipt; owner subsequently powered on AZ",
+    "remaining": "User ordinary USB smoke check; original favlab physical acceptance explicitly deferred",
+    "evidence": "usb-hub-support-hfsplus-physical-install.json"
   }
 }

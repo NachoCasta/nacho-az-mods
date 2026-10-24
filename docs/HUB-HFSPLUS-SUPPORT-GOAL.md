@@ -27,3 +27,8 @@ Discovery, private mount layout and private analysis-root selection are separate
 confirmed gaps; see [research](HUB-HFSPLUS-RESEARCH.md). Fragmented database extents
 required correct fixture acquisition but are not established as a mod defect.
 Physical acceptance must be distinguished from emulator work.
+
+The owner subsequently confirmed that favlab was returned, accepts the emulator
+HFS+ evidence for this stage and requests candidate installation/reload with an
+ordinary USB regression check. Do not block this stage on access to the original
+USB, and do not claim that a future HFS+ physical trial has already passed.

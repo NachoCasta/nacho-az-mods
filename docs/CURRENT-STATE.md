@@ -19,15 +19,21 @@ the native HFS+ checker delayed startup until it declared the dirty overlay OK.
 An exFAT-FUSE control also loads a populated sample and renders both graphs while
 HFS+ remains loaded; its playhead advances with the same process. That small
 whole-device emulator fixture was manually mounted, not an automatic-mount test.
-Physical acceptance remains pending: the configured AZ timed out on read-only
-SSH preflight, with no device mutation. The large public PDB reaches the existing
+The owner no longer has favlab and explicitly accepts the emulator evidence for
+this stage, deferring original-USB physical acceptance. After the owner powered
+on the AZ, candidate0.4.6 was installed on the mods USB, approved under the exact
+candidate exception and activated through the framework. Mapped runtime matches
+the validated hardware candidate; PID20167, firmware/kernel unchanged, core1.2.5,
+empty decks and loaded status1. The ordinary USB manual regression check remains
+pending. See [physical installation](acceptance/usb-hub-support-hfsplus-physical-install.json).
+The large public PDB reaches the existing
 catalog capacity; external sharing is not validated for this fixture.
 See the [goal](HUB-HFSPLUS-SUPPORT-GOAL.md) and
 [progress evidence](acceptance/usb-hub-support-hfsplus-progress.json).
 The unpublished0.4.6 hardware-target package validates with pinned SDK1.2.3;
 helpers/kernel assets remain byte-identical to0.4.5. See the
 [candidate package receipt](acceptance/usb-hub-support-hfsplus-package.json).
-No physical AZ or published release/catalog was changed for this investigation.
+No published release/catalog was changed for this investigation.
 
 ## Published: USB Hub Support 0.4.5
 
