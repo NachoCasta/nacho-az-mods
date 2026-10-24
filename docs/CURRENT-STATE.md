@@ -1,5 +1,30 @@
 # Current state
 
+## Active development: HFS+ hub USB compatibility
+
+The private reduced HFS+ fixture uses `.PIONEER`. Filesystem-aware discovery,
+settings and public PDB paths restore admission. Native private mounts also need
+the Mac-layout flag; waveform analysis needs a guarded per-owned-repository root
+adapter rather than the native USB1 filesystem reference. The current exact
+emulator candidate loads populated samples and renders detailed/overview graphs
+alongside a FAT hub neighbor. Native Link On/Off/On retains both loaded sources,
+both graphs and advancing HFS playback state with the same process. No audio
+signal was captured. Complete plain/ASan+UBSan/TSan component checks and the SDK
+UI contract harness pass. A fresh framework session passes loaded
+HFS+ eject, backing/alias mount removal, retained cache/engine advance, reconnect
+and fresh deck2 waveforms. The initial long-session selector refusal remains
+recorded. A native FAT load/playback control also passes alongside HFS+ hub
+waveforms. Cold startup, nested playlists and populated playlist tracks pass;
+the native HFS+ checker delayed startup until it declared the dirty overlay OK.
+Physical acceptance remains pending. The large public PDB reaches the existing
+catalog capacity; external sharing is not validated for this fixture.
+See the [goal](HUB-HFSPLUS-SUPPORT-GOAL.md) and
+[progress evidence](acceptance/usb-hub-support-hfsplus-progress.json).
+The unpublished0.4.6 hardware-target package validates with pinned SDK1.2.3;
+helpers/kernel assets remain byte-identical to0.4.5. See the
+[candidate package receipt](acceptance/usb-hub-support-hfsplus-package.json).
+No physical AZ or published release/catalog was changed for this investigation.
+
 ## Published: USB Hub Support 0.4.5
 
 [Release 0.4.5](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.5)

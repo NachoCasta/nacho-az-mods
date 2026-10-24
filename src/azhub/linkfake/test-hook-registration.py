@@ -13,6 +13,7 @@ CC = shlex.split(os.environ.get('TEST_CC', 'cc'))
 HISTORICAL_CC = shlex.split(os.environ.get('TEST_HISTORICAL_CC', 'gcc'))
 SDK = os.environ.get('AZ_SDK_INCLUDE', '../../azmod')
 INSTALLERS = {
+    'hub_info_directory_install': {0x1978970: 'hub_info_directory_entry'},
     'probe_install': {0xef05c8: 'probe_parse'},
     'probe_private_admission_install': {0x13df908: 'probe_network_snapshot', 0x13f22b8: 'probe_operate'},
     'probe_library_ownership_install': {0xf00de0: 'probe_message_destroy', 0xeee540: 'probe_handshake'},
@@ -51,6 +52,7 @@ def check(source, directory):
     calls = re.findall(r'make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*\)', source)
     assert [(a, h) for a, h in calls if int(a, 16) == 0xef05c8] == [('0xef05c8', 'probe_parse')], 'Parser must be claimed exactly once'
     assert [(a, h) for a, h in calls if int(a, 16) == 0x1376c98] == [('0x1376c98', 'hub_metadata_mount')], 'Metadata task body must be claimed exactly once'
+    assert [(a, h) for a, h in calls if int(a, 16) == 0x1978970] == [('0x1978970', 'hub_info_directory_entry')], 'Private analysis directory must be claimed exactly once'
     init = body(source, 'community_init')
     ordered = ['setenv("LINKFAKE_PROBE","1",1)', 'probe_install()',
                'probe_private_admission_install()', 'probe_library_ownership_install()',
@@ -60,6 +62,8 @@ def check(source, directory):
                'hub_metadata_install()',
                '__atomic_store_n(&community_ready,1,3)']
     compact = re.sub(r'\s+', '', init)
+    assert compact.index('hub_info_directory_prepare()') < compact.index('linkfake_init()'), 'Instruction guard must precede initialization'
+    assert 'hub_info_directory_install()' in body(source, 'hub_install'), 'Private analysis installer must be reached'
     positions = [compact.index(token) for token in ordered]
     assert positions == sorted(positions), 'Installers must precede worker readiness'
     assert 'o_dbparse(a, b, c, d, e, f, g, h)' in body(source, 'h_dbparse')
@@ -71,6 +75,7 @@ def check(source, directory):
     # This detects runtime omissions (e.g. a new false guard), callback mistakes,
     # missing trampoline assignments and duplicate claims across installers.
     bodies = {name: body(source, name) for name in INSTALLERS}
+    returns = {name: 'int' if name == 'hub_info_directory_install' else 'void' for name in bodies}
     assignments = re.findall(r'(\w+)\s*=\s*make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*\)', '\n'.join(bodies.values()))
     variables = sorted({a for a, _, _ in assignments} | {'o_dbparse'})
     callbacks = sorted({c for _, _, c in assignments})
@@ -82,11 +87,11 @@ def check(source, directory):
     harness += 'static void hub_install(void){} static void hub_tag_cache_install(void){}\n'
     harness += ''.join('static fn ' + name + ';\n' for name in variables)
     harness += ''.join('static void ' + name + '(void){}\n' for name in callbacks)
-    harness += ''.join('static void ' + name + '(void);\n' for name in bodies)
-    harness += ''.join('static void ' + name + '(void){' + content + '}\n' for name, content in bodies.items())
+    harness += ''.join('static ' + returns[name] + ' ' + name + '(void);\n' for name in bodies)
+    harness += ''.join('static ' + returns[name] + ' ' + name + '(void){' + content + '}\n' for name, content in bodies.items())
     # The member installer must be reached through the mode installer; calling
     # it separately would hide a missing nested installation or double claims.
-    harness += 'int main(void){' + ''.join(name + '();' for name in INSTALLERS if name != 'probe_member_continuity_install')
+    harness += 'int main(void){' + ''.join(('assert(!' + name + '());') if returns[name] == 'int' else name + '();' for name in INSTALLERS if name != 'probe_member_continuity_install')
     harness += 'assert(o_dbparse==native);'
     for expected in INSTALLERS.values():
         for address, callback in expected.items():
@@ -99,11 +104,30 @@ def check(source, directory):
     subprocess.run([str(binary)], check=True)
 
 
+def check_directory_guard(source, directory):
+    # Execute the actual guard against a local instruction window. Every byte
+    # must participate: changing any one byte must refuse the native hook.
+    guard = body(source, 'hub_info_directory_prepare')
+    guard, count = re.subn(r'\(const void \*\)\s*0x1978970', '(const void *)window', guard)
+    assert count == 1, 'Guard must inspect the pinned native entry'
+    test = directory / 'directory-guard.c'
+    binary = directory / 'directory-guard'
+    test.write_text('#include <assert.h>\n#include <stdint.h>\n#include <string.h>\n'
+                    'static uint32_t window[]={0xa9b97bfd,0xd2892a02,0xf2a9c9e2,0x910003fd};\n'
+                    'static int prepare(void){' + guard + '}\n'
+                    'int main(void){assert(prepare());unsigned char *p=(void *)window;'
+                    'for(unsigned i=0;i<sizeof window;i++){p[i]^=1;assert(!prepare());'
+                    'p[i]^=1;assert(prepare());}return 0;}\n')
+    subprocess.run(CC + ['-Wall', '-Wextra', str(test), '-o', str(binary)], check=True)
+    subprocess.run([str(binary)], check=True)
+
+
 def main():
     supported = preprocess('community.c', ('-DLF_EJECT_UI', '-DLF_SAFE_EJECT', '-DLF_EJECT_AZ'))
     with tempfile.TemporaryDirectory(prefix='azhub-hooks-') as temporary:
         directory = Path(temporary)
         check(supported, directory)
+        check_directory_guard(supported, directory)
         for replacement in ('', 'o_dbparse=make_hook(0xef05c8,probe_parse);' * 2):
             broken, count = re.subn(r'o_dbparse\s*=\s*make_hook\(0xef05c8,\s*probe_parse\);', replacement, supported)
             assert count == 1

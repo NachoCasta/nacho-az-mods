@@ -4,6 +4,10 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| HUB-HFSPLUS-SUPPORT-GOAL.md | Active HFS+ USB hub compatibility goal, invariants and acceptance gates |
+| HUB-HFSPLUS-RESEARCH.md | Three HFS+ boundaries, private analysis-root ABI, instruction guard and scoped emulator evidence |
+| acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, mount flag, waveform negative/positive controls, mixed FAT playback and Link cycle; lifecycle/physical gates remain open |
+| acceptance/usb-hub-support-hfsplus-package.json | Validated unpublished0.4.6 candidate, exact member/runtime hashes and unchanged helper/kernel assets; physical acceptance pending |
 | releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
 | acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
 | acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |

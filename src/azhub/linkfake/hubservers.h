@@ -3,6 +3,7 @@
  * through x8; a 24-byte C aggregate uses that same indirect-result register.
  * Objects are intentionally retained until process exit. */
 #include "alias-mount.h"
+#include "library-path.h"
 struct hub_result { uint64_t object, unused[2]; };
 typedef struct hub_result (*hub_factory_fn)(void *, void *, void *, void *);
 static hub_factory_fn hub_factory_original;
@@ -300,7 +301,7 @@ static int hub_queue_mount(int source) {
         uint16_t id=0x102;
         uint64_t path=0;
         ((void (*)(void *,const char *))0x24a1180)(&path,f->dir);
-        ((void (*)(uint64_t,void *,void *,int,void *))0x1373ca8)(f->srv_music,&id,&path,0,NULL);
+        ((void (*)(uint64_t,void *,void *,int,void *))0x1373ca8)(f->srv_music,&id,&path,hub_library_is_mac(f->dir),NULL);
         ((void (*)(uint64_t,void *,void *))0x1974ff8)(f->srv_info,&id,NULL);
         ((void (*)(void *))0x2469aa0)(&path);
         f->mounted=1;
@@ -464,7 +465,13 @@ static uint64_t hub_usb2(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,
 static uint64_t hub_usb3(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     return hub_available(8,hub_usb3_original,a,b,c,d,e,f,g,h);
 }
+#ifdef LF_SAFE_EJECT
+#include "info-directory-native.h"
+#endif
 static void hub_install(void) {
+#ifdef LF_SAFE_EJECT
+    if (hub_info_directory_install()) {lf_hook_failures++;return;}
+#endif
     hub_usb2_original=make_hook(0x1869b48,hub_usb2);
     hub_usb3_original=make_hook(0x1869e98,hub_usb3);
     hub_identity_lookup_original=make_hook(0x1981560,hub_identity_lookup);

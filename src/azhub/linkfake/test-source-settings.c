@@ -2,11 +2,31 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/stat.h>
+#include <sys/vfs.h>
+static int fixture_mac_filesystem;
+static int fixture_statfs(const char *path,struct statfs *out) {
+    int result=statfs(path,out);
+    if (!result && fixture_mac_filesystem) out->f_type=0x482b;
+    return result;
+}
+#define statfs(path,out) fixture_statfs(path,out)
 #include "source-settings.h"
+#undef statfs
 int main(int argc,char **argv) {
     assert(argc==2);unsigned char data[141],row[8],defaults[8]={1,1,1,1,1,1,1,1};
     FILE *f=fopen(argv[1],"rb");assert(f);size_t n=fread(data,1,sizeof data,f);fclose(f);
     assert(n==140 && hub_settings_decode(data,n,row));
+    char directory[]="/tmp/azhub-mac-settings.XXXXXX";assert(mkdtemp(directory));
+    char hidden[256],normal[256],file[256];
+    snprintf(hidden,sizeof hidden,"%s/.PIONEER",directory);assert(!mkdir(hidden,0700));
+    snprintf(normal,sizeof normal,"%s/PIONEER",directory);assert(!mkdir(normal,0700));
+    snprintf(file,sizeof file,"%s/.PIONEER/DEVSETTING.DAT",directory);
+    f=fopen(file,"wb");assert(f && fwrite(data,1,n,f)==n && !fclose(f));
+    fixture_mac_filesystem=1;unsigned char loaded[8];
+    assert(hub_settings_read(directory,loaded) && !memcmp(loaded,row,8));
+    fixture_mac_filesystem=0;assert(!hub_settings_read(directory,loaded));
+    assert(!unlink(file) && !rmdir(hidden) && !rmdir(normal) && !rmdir(directory));
     assert(row[1]==3 && row[4]==2); /* actual rekordbox export: RGB, bottom */
     assert(!hub_settings_decode(data,n-1,row));assert(!hub_settings_decode(data,n+1,row));
     data[114]^=1;assert(!hub_settings_decode(data,n,row));data[114]^=1;

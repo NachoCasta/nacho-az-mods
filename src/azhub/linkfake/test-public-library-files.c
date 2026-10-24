@@ -1,8 +1,17 @@
 /* SPDX-License-Identifier: GPL-3.0-only */
 #define _GNU_SOURCE
 #include <assert.h>
+#include <sys/vfs.h>
+static int fixture_mac_filesystem;
+static int fixture_fstatfs(int fd,struct statfs *info) {
+    int result=fstatfs(fd,info);
+    if (!result && fixture_mac_filesystem) info->f_type=0x482b;
+    return result;
+}
+#define fstatfs(fd,info) fixture_fstatfs(fd,info)
 #include "public-library-export.h"
 #include "public-nfs-tree.h"
+#undef fstatfs
 static void put16(unsigned char *p,unsigned n) { p[0]=(unsigned char)n; p[1]=(unsigned char)(n>>8); }
 static void put32(unsigned char *p,unsigned n) { put16(p,n); put16(p+2,n>>16); }
 static void pdb_fixture(unsigned char data[1024],const char *path) {
@@ -30,6 +39,33 @@ static int finish(struct hub_public_library_files *library) {
     int result; while ((result=hub_public_library_files_step(library))==0) {}
     return result;
 }
+static void hidden_library_fixture(void) {
+    char directory[]="/tmp/azhub-mac-library.XXXXXX";assert(mkdtemp(directory));
+    char pioneer[512],rekordbox[512],pdb[512],contents[512],track[512];
+    snprintf(pioneer,sizeof pioneer,"%s/.PIONEER",directory);assert(!mkdir(pioneer,0700));
+    snprintf(rekordbox,sizeof rekordbox,"%s/.PIONEER/rekordbox",directory);assert(!mkdir(rekordbox,0700));
+    snprintf(pdb,sizeof pdb,"%s/.PIONEER/rekordbox/export.pdb",directory);
+    snprintf(contents,sizeof contents,"%s/Contents",directory);assert(!mkdir(contents,0700));
+    snprintf(track,sizeof track,"%s/Contents/track.mp3",directory);write_file(track,"abc",3);
+    unsigned char data[1024];pdb_fixture(data,"/Contents/track.mp3");write_file(pdb,data,sizeof data);
+    struct hub_public_root root;assert(!hub_public_root_init(&root));
+    assert(!hub_public_root_attach(&root,directory,1));
+    fixture_mac_filesystem=1;
+    struct hub_public_library_files library;unsigned char nonce[16]={1},handle[32];
+    assert(!hub_public_library_files_init(&library,&root,1,nonce));
+    assert(!root.active && finish(&library)==1 && library.tracks==1 && !library.missing_audio);
+    const char *relative=".PIONEER/rekordbox/export.pdb";
+    assert(hub_public_catalog_find(&library.catalog,relative,strlen(relative),handle));
+    const char *ordinary="PIONEER/rekordbox/export.pdb";
+    assert(!hub_public_catalog_find(&library.catalog,ordinary,strlen(ordinary),handle));
+    hub_public_library_files_destroy(&library);
+    fixture_mac_filesystem=0;
+    assert(!hub_public_root_attach(&root,directory,2));
+    assert(hub_public_library_files_init(&library,&root,2,nonce)<0 && errno==ENOENT);
+    assert(!root.active);
+    hub_public_library_files_destroy(&library);assert(!hub_public_root_destroy(&root));
+    assert(!unlink(pdb) && !unlink(track) && !rmdir(rekordbox) && !rmdir(pioneer) && !rmdir(contents) && !rmdir(directory));
+}
 static int scan(const char *directory) {
     struct hub_public_root root; assert(!hub_public_root_init(&root));
     assert(!hub_public_root_attach(&root,directory,1));
@@ -46,6 +82,7 @@ static int scan(const char *directory) {
 int main(int argc,char **argv) {
     if (argc==3 && !strcmp(argv[1],"scan")) return scan(argv[2]);
     assert(argc==1);
+    hidden_library_fixture();
     char directory[]="/tmp/azhub-library.XXXXXX"; assert(mkdtemp(directory));
     char pioneer[512],rekordbox[512],contents[512],pdb[512],track[512],secret[512];
     snprintf(pioneer,sizeof pioneer,"%s/PIONEER",directory); assert(!mkdir(pioneer,0700));

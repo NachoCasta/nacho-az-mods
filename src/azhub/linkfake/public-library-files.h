@@ -7,6 +7,7 @@
 #include "public-pdb-source.h"
 #include "public-file-catalog.h"
 #include "public-library-metadata.h"
+#include "library-path.h"
 enum hub_public_library_state { HUB_LIBRARY_BUILDING,HUB_LIBRARY_READY,HUB_LIBRARY_FAILED };
 struct hub_public_library_files {
     struct hub_public_pdb_reader reader;
@@ -123,7 +124,15 @@ static int hub_public_library_files_init(struct hub_public_library_files *librar
     if (hub_public_catalog_init(&library->catalog,root,generation,nonce)<0)
         return hub_public_library_fail(library,errno);
     library->initialized=1;
-    const char *pdb="PIONEER/rekordbox/export.pdb"; unsigned char handle[32];
+    char pdb[64]; unsigned char handle[32];
+    struct hub_public_file_lease lease=HUB_PUBLIC_FILE_LEASE_INIT;
+    if (hub_public_node_open(root,generation,"",0,1,&lease)<0)
+        return hub_public_library_fail(library,errno);
+    struct statfs filesystem;
+    int result=fstatfs(lease.fd,&filesystem),error=errno;
+    hub_public_file_finish(&lease);
+    if (result<0) return hub_public_library_fail(library,error);
+    snprintf(pdb,sizeof pdb,"%s/rekordbox/export.pdb",hub_library_directory(filesystem.f_type));
     if (hub_public_catalog_register_node(&library->catalog,"",0,1,handle)<0 ||
         hub_public_pdb_source_init(&library->source,root,generation,pdb,strlen(pdb))<0 ||
         hub_public_library_add(library,pdb)!=0 ||

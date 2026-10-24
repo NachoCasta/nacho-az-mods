@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include "library-path.h"
 /* EP147 DeviceSettingManager -> IPLinkset_DevSetting wire order:
  * WaveSelect, waveform color, cue list, key style, position, and three extras.
  * DEVSETTING.DAT is distinct from MYSETTING.DAT (player My Settings). */
@@ -30,7 +31,7 @@ static inline int hub_settings_decode(const unsigned char *data,size_t n,unsigne
 }
 static inline int hub_settings_read(const char *directory,unsigned char out[8]) {
     char path[512];unsigned char data[141];
-    if(snprintf(path,sizeof path,"%s/PIONEER/DEVSETTING.DAT",directory)>=(int)sizeof path)return 0;
+    if(hub_library_path(directory,"DEVSETTING.DAT",path,sizeof path))return 0;
     FILE *f=fopen(path,"rbe");if(!f)return 0;
     size_t n=fread(data,1,sizeof data,f);int failed=ferror(f);fclose(f);
     return !failed && hub_settings_decode(data,n,out);

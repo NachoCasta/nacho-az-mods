@@ -3,10 +3,24 @@
 #include <assert.h>
 #include <unistd.h>
 #include <sys/stat.h>
-static int fixture_access(const char *path,int mode) {(void)path;(void)mode;return 0;}
+#include <sys/vfs.h>
+#include <string.h>
+static int fixture_statfs(const char *path,struct statfs *out) {
+    memset(out,0,sizeof *out);
+    out->f_type=!strcmp(path,"/media/usb/sda1") ? 0x482b:0x4d44;
+    return 0;
+}
+static int fixture_access(const char *path,int mode) {
+    (void)mode;
+    /* The HFS+ fixture has no non-hidden PIONEER directory. */
+    return !strncmp(path,"/media/usb/sda1/",16) &&
+        strcmp(path,"/media/usb/sda1/.PIONEER/rekordbox/exportLibrary.db") ? -1:0;
+}
+#define statfs(path,out) fixture_statfs(path,out)
 #define access fixture_access
 #include "discovery.h"
 #undef access
+#undef statfs
 int main(void) {
     const struct { const char *path; int nested; } cases[]={
         {"/sys/devices/usb2/2-1/2-1.1/2-1.1:1.0/host1/target1:0:0",1},

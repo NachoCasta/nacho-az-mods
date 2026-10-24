@@ -1,0 +1,33 @@
+{
+  "status": "validated unpublished candidate; physical acceptance pending",
+  "version": "0.4.6",
+  "package_sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc",
+  "package_bytes": 694686,
+  "hardware_runtime_sha256": "76bad01155355a8cfca6ee3ee877f8175fba4d0bc6f08f627dd28b3bc57fbca2",
+  "emulator_runtime_sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
+  "package_members_sha256": {
+    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/azhub-source.c": "a36f15ab4cdc427f900c1f3d4e97b0b86522c2db52cf1ca18e98ce0b2823fde9",
+    "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+    "assets/macvlan-source/BUILD.md": "d208e948c759aff98deb89360db14175a74c8bdd2b22c66f18cb7dc58111b1af",
+    "assets/macvlan-source/LICENSE": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/macvlan-source/Makefile": "b7a5dd1d8924baa3c44bc31a08ce10d541a98c40ef12a0a75f378150417e0204",
+    "assets/macvlan-source/build-receipt.json": "f2c598670e1ddd2cbe240eba2797567d64c3f6d8418e8cb34265856306f29c65",
+    "assets/macvlan-source/build-sharing-macvlan.py": "8d55abc4b1752d9bcf485c53ff315052f015e7e8c9b90a84f0ee59641696f429",
+    "assets/macvlan-source/macvlan.c": "2aa65660418fa6121ba2b63b16c9540426bc43f83ffd0baf000c0d21662df54a",
+    "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+    "assets/public-dhcp-event-hook.so": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+    "assets/usb-hub-support-network-helper.so": "0b2e0a02d5473a3032b4d654128ae71491d05265aef20c970c2d3b6b252d12de",
+    "assets/usb_hub_macvlan.ko": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667",
+    "azmod.json": "e6d36bae5068bc856e99fd4e74db2935c27104472768aaf796e5228cc397223a",
+    "icon.png": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc",
+    "usb-hub-support.so": "76bad01155355a8cfca6ee3ee877f8175fba4d0bc6f08f627dd28b3bc57fbca2"
+  },
+  "validator": "Preserved pinned SDK 1.2.3 packer; package and directory validation pass",
+  "warning": "Known legacy read-only /home/root/settings configuration reference; no new persistent internal writes introduced",
+  "assets": "All helper/kernel assets byte-identical to 0.4.5. No new screenshot assets included.",
+  "physical_AZ_changed": false,
+  "catalog_changed": false,
+  "published": false
+}

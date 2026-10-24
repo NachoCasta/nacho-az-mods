@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -11,8 +11,8 @@
   ],
   "hooks": true,
   "min_core": "1.2.3",
-  "summary": "Hub USB sources with port-based numbers and rekordbox names/colors.",
-  "description": "Connect up to eight USB sticks through a hub. USB numbers follow hub ports; native sources appear first, followed by hub sources in numeric order. Shows rekordbox device names and colors, with analyzed waveforms. Press USB STOP to select one stick or hold to eject the hub; wait for safe-to-remove confirmation. Experimental Ethernet PRO DJ LINK sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Exact firmware 2.00 ep147-9e9454e357389ece, kernel 4.4.194; core >=1.2.3.",
+  "summary": "Hub USB sources with HFS+ support and rekordbox names/colors.",
+  "description": "Connect up to eight USB sticks through a hub, including HFS+ rekordbox exports. USB numbers follow hub ports; native sources appear first, then hub sources in numeric order. Shows rekordbox names/colors and analyzed waveforms. Press USB STOP to select a stick or hold to eject the hub; wait for confirmation. Experimental Ethernet PRO DJ LINK sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Large libraries may exceed sharing catalog limits. Exact firmware 2.00 ep147-9e9454e357389ece, kernel 4.4.194; core >=1.2.3.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }

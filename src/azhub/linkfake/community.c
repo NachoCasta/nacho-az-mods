@@ -213,6 +213,9 @@ static int community_init(const az_core_v1 *core) {
 #if defined(LF_SAFE_EJECT) && defined(LF_EJECT_UI)
     if (source_badge_prepare()) return community_abort(-90);
 #endif
+#ifdef LF_SAFE_EJECT
+    if (!hub_info_directory_prepare()) return community_abort(-95);
+#endif
     linkfake_init();
 #ifdef LF_PUBLIC_NATIVE_STATUS_OBSERVER
     if (native_status_observer_install()) return community_abort(-94);

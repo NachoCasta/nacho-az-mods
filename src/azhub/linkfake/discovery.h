@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include "source-name.h"
 #include "port-topology.h"
+#include "library-path.h"
 
 static int azhub_nested_usb_path(const char *path) {
     const char *part=path;
@@ -71,8 +72,8 @@ static int azhub_discover(const char *mounts,const char *sysblock,const char *ou
         if (!hub_port_route_parse(resolved,&route) || !hub_port_sysfs_init(&topology,resolved,&route)) continue;
         unsigned port_number=hub_port_number(&route,hub_port_sysfs_children,&topology);
 
-        snprintf(database,sizeof database,"%s/PIONEER/rekordbox/exportLibrary.db",m->mnt_dir);
-        if (access(database,R_OK)) continue;
+        if (hub_library_path(m->mnt_dir,"rekordbox/exportLibrary.db",database,sizeof database) ||
+            access(database,R_OK)) continue;
         int duplicate=0;
         for (unsigned i=0;i<count;i++) if (!strcmp(found[i].device,device)) duplicate=1;
         if (duplicate) continue;

@@ -1,0 +1,202 @@
+{
+  "status": "in progress; local HFS+ compatibility and emulator regressions pass, unpublished 0.4.6 candidate prepared; physical acceptance pending",
+  "fixture": "Private reduced HFS+ disk image; original geometry/metadata/databases/analysis retained, only three audio samples populated",
+  "original_modified": false,
+  "physical_AZ_changed": false,
+  "publication_changed": false,
+  "emulator": {
+    "kernel": "6.6.138-dirty",
+    "isolated_ssh_port": 2322,
+    "isolated_automation_qmp_port": 4546,
+    "disposable_owned_disks": true,
+    "missing_environment_dependencies": "Stock emulator kernel lacks HFS+ and UTF-8 NLS modules; matching emulator-only modules built locally and loaded",
+    "docker_failure": "ARM64 binary handler unavailable; privileged global handler repair rejected by automatic approval review. Used local WSL cross compilation without global handler changes.",
+    "mount": "HFS+ on /media/usb/sdb1, real emulated nested USB topology 3-2.2",
+    "native_control": "Source row appears; native library opens the hidden exportLibrary.db after writable-overlay notification. Initial read-only/protect:1 trial failed to open that database. Playlist/track-count and audio acceptance still pending.",
+    "source_database_sha256": {
+      "export.pdb": "09166109bcd27ca08d6b5c0bc4e59a30cd454fbef490a9324cd34092f23e066f",
+      "exportLibrary.db": "24c992d66c9739fa624fa7bba6c1720beaa2167b2ca05effca412da6ad91a8fd"
+    }
+  },
+  "native_research": {
+    "firmware": "ep147-9e9454e357389ece",
+    "facts_only": "Native library constructor 0x1352ee8 contains both directory variants; track repository selector 0x1978970 chooses the hidden variant using MountMediaInfoReference 0xe5ff30, whose filesystem enum comparison is 3.",
+    "remaining": "Cold boot, lifecycle regression and physical acceptance remain open.",
+    "analysis_root_adapter": "Exact firmware 0x1978970, first four instructions pinned. Nontrivial eight-byte File returns through AArch64 x8. Scoped to private owned repositories; guarded before irreversible installation."
+  },
+  "scanner_comparison": {
+    "same_mounts_and_sysfs": true,
+    "baseline_count": 1,
+    "fixed_count": 2,
+    "baseline": "Only ordinary FAT neighbor admitted",
+    "fixed": "FAT neighbor remains USB1; HFS+ source admitted as USB2 at route3-2.2",
+    "cause": "Scanner required PIONEER/rekordbox/exportLibrary.db while HFS+ export uses .PIONEER/rekordbox/exportLibrary.db"
+  },
+  "implementation": "Filesystem-aware discovery/settings/public PDB paths, native private-mount Mac flag and guarded per-owned-repository analysis-root selection. Native repositories delegate unchanged. No USB changes or native library slots borrowed.",
+  "candidate_emulator_sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
+  "activation": "USB rollback and exact USB/staged checks; normal framework discovery apply, locked atomic exact-candidate approval with USB list backup, normal activation apply requested",
+  "tests": {
+    "discovery": "passes mixed filesystem hidden-library scanner fixture and existing excess-route controls",
+    "public_library": "passes hidden HFS+ PDB catalog, playable synthetic track, ordinary-filesystem exclusion and generation lease cleanup, plus existing library suite",
+    "full_plain": {
+      "status": "pass",
+      "components": 105,
+      "private_log": "local/favlab-clone/host-v3-final.log"
+    },
+    "sanitizers": {
+      "status": "pass",
+      "asan_ubsan_components": 105,
+      "tsan_components": 105,
+      "private_log": "local/favlab-clone/host-v3-sanitizers.log",
+      "scope": "Portable production components; exact runtime waveform and lifecycle evidence recorded separately"
+    },
+    "runtime_browse_load_waveforms_eject_reconnect_link": "Native HFS+ menus/playlists/tracks, populated sample loads and both graphs, mixed FAT hub and native FAT playback, Link cycle, loaded eject/cache advance, reconnect/fresh deck2 and cold boot pass; physical acceptance remains pending",
+    "aarch64_abi": "Actual adapter passes 1000 mixed Mac/FAT/native calls with eight-byte C++ x8 return, native argument preservation and exception unwinding in emulator",
+    "instruction_guard": "Actual compiled guard accepts pinned window and rejects all 16 single-byte corruptions; installer ordering and native standalone controls pass",
+    "current_tree_rebuild": "Fresh emulator build matches tested v3 SHA256 exactly",
+    "sdk_ui": {
+      "status": "pass",
+      "passes": [
+        "plain",
+        "ASan+UBSan",
+        "TSan"
+      ],
+      "private_log": "local/favlab-clone/sdk-ui-v3.log",
+      "scope": "SDK UI contract harness; actual waveform pixels and engine movement are separate controls"
+    }
+  },
+  "local_evidence_directory": "local/favlab-clone/",
+  "limitations": "No physical HFS+ hub acceptance or captured audio. Only populated fixture samples support audio-load assertions. Public PDB initialization finds hidden database but this 14518-track fixture reaches the existing public catalog capacity (ENOSPC); external sharing is not validated. Emulator-only filesystem modules are not AZ release assets.",
+  "candidate_history": [
+    {
+      "sha256": "6cd04419a0f27902f0caec6747ead41e64b0e8564f9d07416e3bc5b9af6e3dbe",
+      "scope": "Filesystem-aware paths restore source discovery, not native metadata or waveforms"
+    },
+    {
+      "sha256": "61e46c34cf7f11c48d83885ef058ec03def011bdd25f0bb3831ea3fc12b41112",
+      "scope": "Native private mount Mac flag restores browsing and sample loading; both waveform graphs remain blank"
+    },
+    {
+      "sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
+      "scope": "Owned repository analysis-root adapter restores both waveform graphs; current candidate"
+    }
+  ],
+  "runtime": {
+    "pid": 100008,
+    "fixture_sample_content_ids": [
+      33,
+      1024
+    ],
+    "sample_duration_seconds": 22.04,
+    "hfs_and_fat_simultaneous_graphs": true,
+    "hfs_engine_advance_seconds": [
+      1.3275056689342404,
+      1.9773015873015873,
+      2.621201814058957,
+      3.2621768707482994
+    ],
+    "audio_signal_captured": false,
+    "link_cycle": "Native UI On/Off/On, same PID and both sources loaded; detailed and overview waveform pixel assertions pass for both decks after each transition",
+    "eject": {
+      "status": "pass in fresh normal framework session",
+      "pid": 117867,
+      "source": "HFS+ hub USB2",
+      "mounts_removed": [
+        "/media/usb/sdb1",
+        "/media/player07/usb2"
+      ],
+      "neighbor_mounts_retained": [
+        "/media/usb/sdc1",
+        "/media/player07/usb"
+      ],
+      "retained_content_id": 33,
+      "cache_phase": 2,
+      "playhead_after_unmount_seconds": [
+        1.40984126984127,
+        2.0537414965986396,
+        2.6653061224489796,
+        3.3886167800453513
+      ],
+      "audio_signal_captured": false,
+      "earlier_attempt": "Selector input unavailable in long emulator session; normal apply with empty decks restored input without changing core limits"
+    },
+    "private_evidence": [
+      "hfs-waveform-controls.json",
+      "hfs-and-fat-waveforms.png",
+      "hfs-link-off-waveforms.png",
+      "hfs-link-on-waveforms.png",
+      "hfs-after-link-engine.json",
+      "candidate-v3/activation.json",
+      "hfs-after-unmount-engine.json",
+      "hfs-reconnect-settled.png",
+      "hfs-reconnected-fresh-deck2.png"
+    ],
+    "reconnect": {
+      "status": "pass",
+      "same_pid": 117867,
+      "same_hub_port": 2,
+      "restored_source_name": "favlab",
+      "restored_hfs_mount_and_alias": true,
+      "fresh_load_deck": 2,
+      "detail_colored_pixels": 23876,
+      "overview_colored_pixels": 8163,
+      "private_screenshot": "hfs-reconnected-fresh-deck2.png"
+    },
+    "native_control": {
+      "status": "pass",
+      "native_source": "USB2 FAT mods fixture",
+      "native_deck": 1,
+      "hfs_hub_deck": 2,
+      "both_graphs_each_deck": true,
+      "native_engine_advances": true,
+      "same_pid": 117867,
+      "private_evidence": [
+        "native-fat-and-hfs-control.png",
+        "native-fat-with-hfs-engine.json"
+      ]
+    },
+    "cold_boot": {
+      "status": "pass after native filesystem check",
+      "qemu_pid": 58860,
+      "EP147_pid": 743,
+      "modules_loaded_before_system_init": true,
+      "source_present_without_replug": true,
+      "sample_content_id": 33,
+      "detail_colored_pixels": 22894,
+      "overview_colored_pixels": 8259,
+      "engine_advances": true,
+      "audio_signal_captured": false,
+      "private_evidence": [
+        "cold-hfs-sources.png",
+        "cold-hfs-waveform.png",
+        "cold-hfs-engine.json",
+        "emulator/cold-initramfs-receipt.json"
+      ],
+      "initial_delay": "Native quick-check reports dirty, then its existing full HFS+ check runs for approximately two minutes and declares volume OK. Initial absence was a verified wait, not terminal mounting failure.",
+      "diagnostic_error": "A redundant manual fsck was started before observing the still-live native checker; the redundant PID3069 was stopped. No pass is inferred from that redundant process. Source is accepted only after native checker completion, unchanged candidate hash, load, graph assertions and advancing engine.",
+      "scope": "Owned disposable emulator disks only; original capture and physical USB unchanged"
+    },
+    "playlists": {
+      "status": "pass",
+      "private_evidence": [
+        "hfs-playlists.png",
+        "hfs-playlist-folder.png",
+        "hfs-playlist-settled.png"
+      ],
+      "checks": [
+        "Root folders and playlists are visible",
+        "Sets folder opens nested playlists",
+        "Selected despacio playlist populates track rows and artwork"
+      ],
+      "scope": "Native local browsing, not public network catalog acceptance"
+    }
+  },
+  "hardware_target_build": {
+    "sha256": "76bad01155355a8cfca6ee3ee877f8175fba4d0bc6f08f627dd28b3bc57fbca2",
+    "compiler": "Pinned Linaro 6.3.1 2017.05 AArch64",
+    "sdk": "Pinned SDK 1.2.3 headers",
+    "installed": false,
+    "packaged": true,
+    "published": false
+  }
+}

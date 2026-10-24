@@ -25,11 +25,14 @@ harness = r'''
 static pthread_mutex_t safe_source_mutex=PTHREAD_MUTEX_INITIALIZER;
 static struct fake {int mounted,present,unmount_pending;uint64_t srv_music,srv_info;
  char dir[256],port_route[96];} fakes[8];
-static int music_calls,info_calls;
+static int music_calls,info_calls,mac_filesystem;
+static int hub_library_is_mac(const char *root) {
+ assert(root==fakes[0].dir);return mac_filesystem;
+}
 static void make_path(void *p,const char *path) {*(uintptr_t *)p=(uintptr_t)path;}
 static void free_path(void *p) {(void)p;}
 static void mount_music(uint64_t server,void *id,void *path,int flag,void *listener) {
- assert(server==11 && *(uint16_t *)id==0x102 && !flag && !listener);
+ assert(server==11 && *(uint16_t *)id==0x102 && flag==mac_filesystem && !listener);
  assert(!strcmp((char *)*(uintptr_t *)path,fakes[0].dir));music_calls++;
 }
 static void mount_info(uint64_t server,void *id,void *listener) {
@@ -54,8 +57,12 @@ int main(void) {
  assert(hub_queue_mount(0));
  second=hub_metadata_capture(0);assert(second.generation!=first.generation);
  assert(!hub_metadata_complete(0,fakes[0].dir,fakes[0].port_route));
+ mac_filesystem=1;fakes[0].mounted=0;
+ assert(hub_queue_mount(0) && music_calls==4 && info_calls==4);
+ mac_filesystem=0;fakes[0].mounted=0;
+ assert(hub_queue_mount(0) && music_calls==5 && info_calls==5);
  fakes[0].mounted=0;fakes[0].unmount_pending=1;
- assert(!hub_queue_mount(0) && music_calls==3 && info_calls==3);
+ assert(!hub_queue_mount(0) && music_calls==5 && info_calls==5);
  puts("PASS: actual mount queue preserves captured metadata across remount, invalidates retired generations and refuses pending removal");
 }
 '''
