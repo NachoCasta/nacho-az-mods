@@ -2,10 +2,10 @@
 
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
 
-USB Hub Support0.4.6 adds HFS+ rekordbox libraries through hubs, including
-analyzed waveforms, while retaining port-based numbering and configured names/colors.
-HFS+ was validated in the emulator; the owner confirmed ordinary USB operation on
-the physical AZ. See the [0.4.6 release notes](docs/releases/usb-hub-support-0.4.6.md)
+USB Hub Support0.4.7 automatically recovers already-connected hubs at power-on,
+retaining HFS+ libraries, analyzed waveforms and configured names/colors.
+An emulator startup model and one physical cold boot passed; a second physical
+repetition remains pending. See the [0.4.7 release notes](docs/releases/usb-hub-support-0.4.7.md)
 for validation and limits.
 
 Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the

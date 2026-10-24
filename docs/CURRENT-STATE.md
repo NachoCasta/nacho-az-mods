@@ -18,7 +18,10 @@ The unpublished0.4.7 hardware package validates and is installed, exactly approv
 and active through the normal framework workflow on the physical AZ. Its mapped
 runtime hash matches the candidate; already-bound hubs and Native USB Names remain
 available after the warm reload. Two real cold-boot acceptance cycles remain
-pending; the warm reload does not count. No release publication has occurred. See the
+planned. The first real cold boot now passes: rejection at0.75s, guarded patch
+at10.05s and hub discovery at13.19s without USB disconnect; native USB1 and both
+FAT/exFAT hub sources are mounted. The owner reports success and authorized
+publication after this first cycle; the second repetition remains pending. See the
 [goal](HUB-COLD-BOOT-GOAL.md) and
 [progress evidence](acceptance/usb-hub-support-cold-boot-progress.json), plus the
 [candidate package](acceptance/usb-hub-support-cold-boot-package.json) and
