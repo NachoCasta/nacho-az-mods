@@ -14,12 +14,15 @@ and17 private-sysfs helper cases cover the target/skip policy. The model proves
 baseline failure with an unbound hub and candidate recovery without hub hotplug.
 A fresh candidate cold boot restores FAT/HFS+ sources, waveforms and loaded
 eject/cache continuity; child reconnect and Link On/Off/On controls pass.
-The unpublished0.4.7 hardware package validates; physical installation and two
-real cold-boot acceptance cycles remain pending. No new physical mutation or
-release publication has occurred. See the
+The unpublished0.4.7 hardware package validates and is installed, exactly approved
+and active through the normal framework workflow on the physical AZ. Its mapped
+runtime hash matches the candidate; already-bound hubs and Native USB Names remain
+available after the warm reload. Two real cold-boot acceptance cycles remain
+pending; the warm reload does not count. No release publication has occurred. See the
 [goal](HUB-COLD-BOOT-GOAL.md) and
 [progress evidence](acceptance/usb-hub-support-cold-boot-progress.json), plus the
-[candidate package](acceptance/usb-hub-support-cold-boot-package.json).
+[candidate package](acceptance/usb-hub-support-cold-boot-package.json) and
+[physical installation](acceptance/usb-hub-support-cold-boot-physical.json).
 
 ## Published: USB Hub Support 0.4.6 (HFS+)
 

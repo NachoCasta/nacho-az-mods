@@ -106,5 +106,6 @@
       "local/favlab-clone/coldboot-v1-reconnected-waveforms.png"
     ]
   },
-  "physical_candidate": "0.4.7 packaged/validated; installation and multiple real cold boots pending"
+  "physical_candidate": "0.4.7 installed, exact hash approved and normal activation verified; two physical cold boots pending",
+  "physical_install_evidence": "usb-hub-support-cold-boot-physical.json"
 }

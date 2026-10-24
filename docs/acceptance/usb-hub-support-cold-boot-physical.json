@@ -1,0 +1,32 @@
+{
+  "status": "exact0.4.7 active after normal framework reload; two real cold-boot tests pending",
+  "version": "0.4.7",
+  "source_commit": "12c8e62",
+  "package_sha256": "8d4ae75facfff8c62985b5df0a4ebc913b58c9aaf13807ea3338c3caf01166f4",
+  "mapped_runtime_sha256": "3d18e4ed7d13da55909eac45548396e0e9be613a7722935dc81b4ccfdc9a1012",
+  "firmware": "ep147-9e9454e357389ece",
+  "kernel": "4.4.194",
+  "core_observed": "1.2.5",
+  "old_pid": 20167,
+  "discovery_pid": 251702,
+  "active_pid": 256548,
+  "mods_usb": "/media/usb/sda1/MODS",
+  "rollback_usb": "/media/usb/sda1/MODS/backups/usb-hub-support-before-cold047-20261024-160207/original",
+  "approval_backup_usb": "/media/usb/sda1/MODS/backups/approved-before-cold047-20261024-160348",
+  "approval": "USB and staged hashes verified, helper executable on mods USB, lock held, unrelated approval entries preserved and list replaced atomically",
+  "activation": "One supported discovery apply, exact approval after discovery terminal, one supported activation apply; transient SSH loss observed without duplicate requests",
+  "warm_hubs": "Already-bound parent/nested hub driver links remain bound; parent device number3 unchanged",
+  "other_mod": "Native USB Names0.1.0 remains loaded",
+  "cold_boot_acceptance": {
+    "completed_cycles": 0,
+    "required_cycles": 2,
+    "result": "pending; warm application reload is not a cold-boot acceptance test"
+  },
+  "manual_internal_edits": "Only the exact-candidate approval exception; no manual firmware/OS/core/service/process-memory edits",
+  "published": false,
+  "catalog_changed": false,
+  "private_evidence": [
+    "local/cold-boot/physical-activation-047.json",
+    "local/cold-boot/physical-warm-observation-047.txt"
+  ]
+}

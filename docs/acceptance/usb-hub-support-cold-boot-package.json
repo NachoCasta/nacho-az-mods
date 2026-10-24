@@ -1,5 +1,5 @@
 {
-  "status": "validated unpublished0.4.7 candidate; physical cold-boot acceptance pending",
+  "status": "validated unpublished0.4.7 package, installed and exact runtime active; physical cold-boot acceptance pending",
   "version": "0.4.7",
   "package_sha256": "8d4ae75facfff8c62985b5df0a4ebc913b58c9aaf13807ea3338c3caf01166f4",
   "package_bytes": 696456,
@@ -30,5 +30,6 @@
   "warning": "Existing legacy read-only /home/root/settings config reference; no new persistent internal writes",
   "execution": "Physical mods USB is FAT with executable mount permissions; installer verifies helper X_OK before framework activation",
   "published": false,
-  "catalog_changed": false
+  "catalog_changed": false,
+  "physical_install_evidence": "usb-hub-support-cold-boot-physical.json"
 }
