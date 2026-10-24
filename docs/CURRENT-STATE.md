@@ -1,6 +1,6 @@
 # Current state
 
-## Active development: HFS+ hub USB compatibility
+## Release preparation: USB Hub Support 0.4.6 (HFS+)
 
 The private reduced HFS+ fixture uses `.PIONEER`. Filesystem-aware discovery,
 settings and public PDB paths restore admission. Native private mounts also need
@@ -24,8 +24,8 @@ this stage, deferring original-USB physical acceptance. After the owner powered
 on the AZ, candidate0.4.6 was installed on the mods USB, approved under the exact
 candidate exception and activated through the framework. Mapped runtime matches
 the validated hardware candidate; PID20167, firmware/kernel unchanged, core1.2.5,
-empty decks and loaded status1. The ordinary USB manual regression check remains
-pending. See [physical installation](acceptance/usb-hub-support-hfsplus-physical-install.json).
+empty decks and loaded status1. The owner confirmed ordinary USB operation
+and authorized publication. Original HFS+ physical acceptance remains deferred. See [physical installation](acceptance/usb-hub-support-hfsplus-physical-install.json).
 The large public PDB reaches the existing
 catalog capacity; external sharing is not validated for this fixture.
 See the [goal](HUB-HFSPLUS-SUPPORT-GOAL.md) and

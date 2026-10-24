@@ -1,5 +1,5 @@
 {
-  "status": "validated unpublished candidate; installed and active on physical AZ, ordinary USB check pending; HFS+ physical acceptance deferred",
+  "status": "validated exact accepted0.4.6 package; publication authorized",
   "version": "0.4.6",
   "package_sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc",
   "package_bytes": 694686,

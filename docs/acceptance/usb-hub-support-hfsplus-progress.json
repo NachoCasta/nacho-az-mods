@@ -1,5 +1,5 @@
 {
-  "status": "in progress; physical0.4.6 installed/approved/activated, ordinary USB user regression check pending; original favlab physical trial deferred by owner",
+  "status": "development acceptance complete for owner-approved scope; release preparation authorized, original HFS+ hardware trial deferred",
   "fixture": "Private reduced HFS+ disk image; original geometry/metadata/databases/analysis retained, only three audio samples populated",
   "original_modified": false,
   "physical_AZ_changed": true,
@@ -230,7 +230,7 @@
   "physical_preflight": {
     "status": "reachable; installation and activation completed",
     "original_unreachable_attempt": "Retained in historical private receipt; owner subsequently powered on AZ",
-    "remaining": "User ordinary USB smoke check; original favlab physical acceptance explicitly deferred",
+    "remaining": "Original HFS+ physical trial deferred by owner; ordinary USB regression confirmed manually",
     "evidence": "usb-hub-support-hfsplus-physical-install.json"
   }
 }

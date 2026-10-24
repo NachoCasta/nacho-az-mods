@@ -1,6 +1,6 @@
 # HFS+ USB hub compatibility
 
-Status: active. The user requests support for a USB that works on a native AZ
+Status: implementation and owner-approved validation complete; publication in progress. The user requests support for a USB that works on a native AZ
 port but not through the hub. A private, reduced HFS+ image is available locally.
 
 ## Required outcome

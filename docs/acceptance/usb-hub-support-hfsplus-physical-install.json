@@ -1,5 +1,5 @@
 {
-  "status": "installed, exact candidate approved and normal activation completed; user native USB smoke check pending",
+  "status": "exact candidate installed/approved/activated; owner confirms ordinary USB operation",
   "version": "0.4.6",
   "source_commit": "ba1b64d",
   "package_sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc",
@@ -22,7 +22,12 @@
   "manual_internal_edits": "Only exact USB Hub Support approval-list exception. No firmware/OS/core/general settings or process-memory edits.",
   "user_scope_update": "Owner no longer has favlab. Owner accepts existing emulator HFS+ evidence for this stage and requests installation/reload plus ordinary USB regression check; original favlab physical acceptance deferred until a future opportunity.",
   "physical_hfsplus_acceptance": false,
-  "physical_native_usb_acceptance": "pending user check",
+  "physical_native_usb_acceptance": {
+    "result": "pass, user-reported",
+    "quote": "S\u00ed funciona todo as\u00ed que hagamos el release de la nueva versi\u00f3n.",
+    "context": "Reply after exact0.4.6 activation and request to load/play a song and check both waveform views using an available USB",
+    "scope": "Ordinary USB manual regression; original favlab unavailable. No physical HFS+ acceptance or agent-captured audio/rendering claimed."
+  },
   "published": false,
   "catalog_changed": false,
   "private_evidence": "local/favlab-clone/physical-activation-046.json"
