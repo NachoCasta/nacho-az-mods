@@ -1,0 +1,110 @@
+{
+  "status": "root cause confirmed; fix and validation in progress",
+  "scope": "Read-only physical SSH plus existing boot log; no new physical mutation",
+  "baseline_release": "0.4.6",
+  "kernel": "4.4.194",
+  "firmware": "ep147-9e9454e357389ece",
+  "boot_events": [
+    {
+      "seconds": 0.757981,
+      "event": "hub2-1:1.0 rejected: hub nested too deep"
+    },
+    {
+      "seconds": 0.758014,
+      "event": "hub probe failed with error-7"
+    },
+    {
+      "seconds": 10.237399,
+      "event": "azhub module enabled external hubs"
+    },
+    {
+      "seconds": 299.520572,
+      "event": "physical hub disconnected"
+    },
+    {
+      "seconds": 301.454116,
+      "event": "after reconnect hub probe succeeds"
+    }
+  ],
+  "cause": "Kernel probes the already-connected hub before the mod loads its guarded depth patch. The failed interface remains unbound and needs a fresh probe. Mount scanning cannot find storage devices that were never enumerated.",
+  "current_hub_state": "Bound and working after prior reconnection; no automatic recovery claim from current state",
+  "fix": "Bounded startup SDK helper requests hub driver bind only for validated unbound external hub interfaces after kernel readiness; no unbind/reset/controller changes",
+  "physical_acceptance": "pending multiple cold boots",
+  "private_log": "local/cold-boot/physical-baseline.txt",
+  "emulator_baseline": {
+    "status": "reproduced modeled failure",
+    "qemu_pid": 85180,
+    "EP147_pid": 627,
+    "runtime_sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
+    "runtime_scope": "Exact0.4.6-equivalent emulator runtime; historical running manifest0.3.2 while boot loader restages USB manifest0.4.6",
+    "state": "Owned external hub present/class09, driver absent, child USB devices/block nodes absent after application ready; ordinary mods USB remains mounted",
+    "model": "Before system init, load emulator xHCI controller then unbind only verified QEMU USB Hub3-2:1.0. No physical depth-rejection claim.",
+    "initial_model_failure": "First fixture attempt waited for an xHCI controller that was only loaded by later system init; corrected private initramfs loads its existing matching module earlier and skips redundant service insertion",
+    "private_evidence": [
+      "local/cold-boot/model-receipt.json",
+      "local/cold-boot/baseline-model.txt"
+    ]
+  },
+  "emulator_candidate": {
+    "old_pid": 627,
+    "discovery_pid": 7421,
+    "active_pid": 10468,
+    "runtime_sha256": "17360ed63ff00370c394e814f8d6bf7d810e3bdf2160fe2c7477f6482ac3fc91",
+    "scope": "Owned localhost emulator only; exact approval and normal framework apply; no QMP USB hotplug",
+    "recovery": "Hub driver bound and FAT/HFS+ child devices enumerated in the same boot, with parent USB device address2 unchanged and no QMP unplug/replug",
+    "mounts": [
+      "FAT backing and read-only private alias",
+      "HFS+ backing and read-only private alias"
+    ],
+    "waveforms": {
+      "HFS_deck1_detail_pixels": 22894,
+      "HFS_deck1_overview_pixels": 8259,
+      "FAT_deck2_detail_pixels": 19000,
+      "FAT_deck2_overview_pixels": 8844
+    },
+    "link_cycle": "On/Off/On retains both source labels and both waveform views, same PID",
+    "engine": "HFS+ engine advancement passes exact-core observer; no captured audio",
+    "eject": "First selector attempt unavailable in long emulator session; fresh-session repeat pending",
+    "private_evidence": [
+      "local/cold-boot/candidate-v1/activation.json",
+      "local/cold-boot/candidate-v1/hfs-engine.json",
+      "local/favlab-clone/coldboot-candidate-v1-sources.png",
+      "local/favlab-clone/coldboot-v1-mixed-waveforms.png",
+      "local/favlab-clone/coldboot-v1-link-off.png",
+      "local/favlab-clone/coldboot-v1-link-on.png"
+    ],
+    "environment_limitation": "Inherited mods USB FAT fixture remounted read-only during baseline boot; explicit emulator-only remount enabled candidate copy. No original USB or physical controller changes."
+  },
+  "host_tests": {
+    "status": "pass",
+    "components_per_mode": {
+      "plain": 105,
+      "asan": 105,
+      "tsan": 105
+    },
+    "helper_sysfs_cases": 17,
+    "SDK_UI": "plain/ASan+UBSan/TSan all pass",
+    "private_logs": [
+      "local/cold-boot/host-v1.log",
+      "local/cold-boot/sdk-ui-v1.log"
+    ]
+  },
+  "emulator_cold_start": {
+    "status": "pass with candidate installed before boot",
+    "qemu_pid": 37632,
+    "EP147_pid": 626,
+    "model": "Verified QEMU hub unbound before system init, automatically rebound by candidate worker",
+    "runtime_sha256": "17360ed63ff00370c394e814f8d6bf7d810e3bdf2160fe2c7477f6482ac3fc91",
+    "sources": "Native mods USB plus FAT and HFS+ hub sources mounted/announced without QMP hub reconnection",
+    "waveform": "Fresh HFS+ load passes detail22894 and overview8259 colored-pixel assertions",
+    "loaded_eject": "Fresh-session selector works; HFS+ backing and alias unmounted, FAT neighbor retained; exact-core engine/cache observer passes afterward",
+    "reconnect": "Only the ejected child USB was QMP reconnected for lifecycle regression; parent hub stayed bound. Fresh deck2 load passes both waveform assertions.",
+    "private_evidence": [
+      "local/favlab-clone/coldboot-v1-fresh-boot-waveform.png",
+      "local/cold-boot/candidate-v1/loaded-eject-mounts.txt",
+      "local/cold-boot/candidate-v1/loaded-eject-engine.json",
+      "local/favlab-clone/coldboot-v1-reconnected-waveforms.png"
+    ]
+  },
+  "physical_candidate": "0.4.7 packaged/validated; installation and multiple real cold boots pending"
+}

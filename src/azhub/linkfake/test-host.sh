@@ -19,6 +19,7 @@ TEST_CC="$compiler" python3 ./test-port-reconciliation.py
 TEST_CC="$compiler" python3 ./test-source-media.py
 TEST_CC="$compiler" python3 ./test-source-announcement.py
 TEST_CC="$compiler" python3 ./test-source-mount-metadata.py
+python3 ./test-hub-startup.py
 for pass in $passes; do
     case "$pass" in
         plain) flags='-O2'; symbol='' ;;

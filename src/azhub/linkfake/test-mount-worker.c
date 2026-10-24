@@ -20,9 +20,11 @@ static struct test_core *lf_core;
 static char fault_file[PATH_MAX];
 #define HUB_MOUNT_FAULT_FILE fault_file
 static int launch_calls,alive_calls,stop_calls,sleep_calls,launch_result=42,alive_steps;
+static char recovery_helper[PATH_MAX];
+static int recovery_mode;
 static int test_launch(const char *id,const char *path,const char *const args[],const void *opts) {
- assert(!strcmp(id,"usb-hub-support") && !strcmp(path,"/fixture/mount-hub.sh"));
- assert(args && !strcmp(args[0],"sdg") && !args[1] && !opts);
+ assert(!strcmp(id,"usb-hub-support") && !strcmp(path,recovery_mode ? recovery_helper:"/fixture/mount-hub.sh"));
+ assert(args && !strcmp(args[0],recovery_mode ? "startup":"sdg") && !args[1] && !opts);
  launch_calls++;return launch_result;
 }
 static int test_alive(const char *id,int pid) {
@@ -71,6 +73,18 @@ int main(void) {
  reset_helper();core.launch_stop=NULL;
  hub_run_mount_helper("/fixture/mount-hub.sh","sdg");assert(!launch_calls);
  lf_core=NULL;hub_run_mount_helper("/fixture/mount-hub.sh","sdg");assert(!launch_calls);
+ lf_core=&core;core.launch_stop=test_stop;reset_helper();recovery_mode=1;
+ unsigned passes=0;
+ hub_recover_startup(&passes,NULL);hub_recover_startup(&passes,directory);assert(!passes && !launch_calls);
+ assert(snprintf(recovery_helper,sizeof recovery_helper,"%s/recover-hubs.sh",directory)>0);
+ FILE *helper=fopen(recovery_helper,"w");assert(helper);assert(fputs("fixture",helper)>=0);assert(!fclose(helper));
+ alive_steps=0;
+ for(int i=0;i<20;i++) hub_recover_startup(&passes,directory);
+ assert(passes==3 && launch_calls==3 && !stop_calls);
+ reset_helper();passes=0;alive_steps=-1;
+ hub_recover_startup(&passes,directory);assert(passes==1 && hub_mount_faulted() && stop_calls==1);
+ hub_recover_startup(&passes,directory);assert(passes==1 && launch_calls==1);
+ assert(!unlink(fault_file));assert(!unlink(recovery_helper));
  assert(!rmdir(directory));
  puts("mount worker: device policy, SDK arguments/refusal, timeout inhibition across reload and missing services passed");
  return 0;

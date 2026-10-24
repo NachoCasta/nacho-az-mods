@@ -34,7 +34,7 @@ static int community_prepare_kernel(const az_core_v1 *core) {
         core->log("usb-hub-support","azhub.ko refused by kernel: %s",strerror(error));
         return -26;
     }
-    core->log("usb-hub-support","hub compatibility module loaded; reconnect a previously rejected hub");
+    core->log("usb-hub-support","hub compatibility module loaded; startup worker will retry unbound external hubs");
     return 0;
 }
 #endif

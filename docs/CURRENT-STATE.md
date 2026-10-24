@@ -1,5 +1,26 @@
 # Current state
 
+## Active development: automatic hub recovery after cold boot
+
+The owner reports that a hub connected before power-on needs reconnection.
+Read-only physical boot logs confirm the boundary: the4.4 kernel rejects the
+external hub before azhub loads its guarded depth patch; the later hotplug
+succeeds. Existing block-device scans cannot recover a hub that has no driver.
+A startup helper now retries only unbound external hub interfaces on the known
+USB controllers, with three bounded SDK worker passes and the existing helper
+timeout/fault policy. It never unbinds or resets an already-working device.
+All105 portable components pass plain/ASan+UBSan/TSan, the SDK UI harness passes,
+and17 private-sysfs helper cases cover the target/skip policy. The model proves
+baseline failure with an unbound hub and candidate recovery without hub hotplug.
+A fresh candidate cold boot restores FAT/HFS+ sources, waveforms and loaded
+eject/cache continuity; child reconnect and Link On/Off/On controls pass.
+The unpublished0.4.7 hardware package validates; physical installation and two
+real cold-boot acceptance cycles remain pending. No new physical mutation or
+release publication has occurred. See the
+[goal](HUB-COLD-BOOT-GOAL.md) and
+[progress evidence](acceptance/usb-hub-support-cold-boot-progress.json), plus the
+[candidate package](acceptance/usb-hub-support-cold-boot-package.json).
+
 ## Published: USB Hub Support 0.4.6 (HFS+)
 
 The private reduced HFS+ fixture uses `.PIONEER`. Filesystem-aware discovery,

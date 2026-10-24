@@ -13,7 +13,7 @@ static int community_require_usb(const az_core_v1 *core) {
     if (!AZ_HAS(core,assets_dir)) return -40;
     const char *assets=core->assets_dir("usb-hub-support");
     if (!assets || !*assets) return -40;
-    const char *required[]={"mount-hub.sh","azhub.ko"};
+    const char *required[]={"mount-hub.sh","recover-hubs.sh","azhub.ko"};
     for (unsigned i=0;i<sizeof required/sizeof required[0];i++) {
         char path[1024];
         int length=snprintf(path,sizeof path,"%s/%s",assets,required[i]);

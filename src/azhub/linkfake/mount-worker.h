@@ -91,8 +91,18 @@ static void hub_run_mount_helper(const char *helper,const char *device) {
         lf_log("fallback hub helper %s for %s",alive<0 ? "state unavailable":"timed out",device);
     }
 }
+static void hub_recover_startup(unsigned *passes,const char *assets) {
+    if (*passes>=3 || hub_mount_faulted() || !assets) return;
+    char helper[1024];
+    if (snprintf(helper,sizeof helper,"%s/recover-hubs.sh",assets)>=(int)sizeof helper || access(helper,R_OK)) return;
+    ++*passes;
+    /* The same isolated SDK child/timeout policy protects a potentially slow
+     * driver probe. Bound hubs are skipped by the helper on every pass. */
+    hub_run_mount_helper(helper,"startup");
+}
 static void *community_mount_worker(void *unused) {
     (void)unused;
+    unsigned recovery_passes=0;
     for (;;) {
 #ifdef LF_COMMUNITY
         int state=__atomic_load_n(&community_ready,__ATOMIC_ACQUIRE);
@@ -102,6 +112,7 @@ static void *community_mount_worker(void *unused) {
         if (hub_mount_faulted()) { sleep(3); continue; }
         hub_cleanup_missing_mounts();
         const char *assets=lf_core->assets_dir("usb-hub-support");
+        hub_recover_startup(&recovery_passes,assets);
         char helper[1024];
         if (assets && snprintf(helper,sizeof helper,"%s/mount-hub.sh",assets)<(int)sizeof helper && !access(helper,R_OK)) {
             DIR *blocks=opendir("/sys/class/block"); struct dirent *entry;

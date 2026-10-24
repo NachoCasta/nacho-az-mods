@@ -24,10 +24,13 @@ int main(void) {
     present=1;assert(community_require_usb(&core)==-40);
     create_asset("mount-hub.sh",1);assert(community_require_usb(&core)==-40);
     create_asset("azhub.ko",0);assert(community_require_usb(&core)==-40);
-    create_asset("azhub.ko",1);assert(!community_require_usb(&core));
+    create_asset("azhub.ko",1);assert(community_require_usb(&core)==-40);
+    create_asset("recover-hubs.sh",0);assert(community_require_usb(&core)==-40);
+    create_asset("recover-hubs.sh",1);assert(!community_require_usb(&core));
     present=0;assert(community_require_usb(&core)==-40);
     char path[256];snprintf(path,sizeof path,"%s/mount-hub.sh",directory);assert(!unlink(path));
-    snprintf(path,sizeof path,"%s/azhub.ko",directory);assert(!unlink(path));assert(!rmdir(directory));
+    snprintf(path,sizeof path,"%s/azhub.ko",directory);assert(!unlink(path));
+    snprintf(path,sizeof path,"%s/recover-hubs.sh",directory);assert(!unlink(path));assert(!rmdir(directory));
     core.assets_dir=NULL;assert(community_require_usb(&core)==-40);
     puts("USB presence initialization gate passed");
 }
