@@ -1,0 +1,34 @@
+{
+  "status": "Validated release package; publication authorized; not yet published",
+  "mod_id": "nachocasta-native-usb-names",
+  "version": "0.1.0",
+  "tag": "nachocasta-native-usb-names-0.1.0",
+  "package_sha256": "ef160aca01418ce84af3e21a5d7502c761f9d9faf998134b3e052f1c975cece4",
+  "package_bytes": 61577,
+  "members": {
+    "LICENSE": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "azmod.json": {
+      "bytes": 987,
+      "sha256": "2035d287afa05477605c25a4f972610ef7b0faf27f1fb7891e75fad7b40610fe"
+    },
+    "icon.png": {
+      "bytes": 973,
+      "sha256": "f3c633c0138360f5eb75ce97c7bd5b7e60487c36d438291da37e3eaa30eb7dfa"
+    },
+    "nachocasta-native-usb-names.so": {
+      "bytes": 24032,
+      "sha256": "fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4"
+    }
+  },
+  "hardware_runtime_sha256": "fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4",
+  "candidate_package_sha256": "96f78e4945002ff3af95172167d846cef169cd49ff68078d9001826ba4a8e1d5",
+  "candidate_difference": "Manifest description and summary only; hardware executable, icon and license unchanged.",
+  "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "compiler": "GCC/G++ 7.5.0 Ubuntu 18.04 AArch64",
+  "host_tests": "Five suites pass plain, ASan/UBSan and TSan; executable source files verified unchanged from candidate receipt.",
+  "hardware_scope": "Exact mapped executable verified alongside USB Hub Support 0.4.5; user reports works well. Detailed hardware waveform/audio and other checklist items remain unclaimed.",
+  "screenshots_included": false
+}

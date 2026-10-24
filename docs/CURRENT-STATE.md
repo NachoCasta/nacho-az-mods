@@ -35,6 +35,24 @@ helpers/kernel assets remain byte-identical to0.4.5. See the
 [candidate package receipt](acceptance/usb-hub-support-hfsplus-package.json).
 No published release/catalog was changed for this investigation.
 
+## Published: Native USB Names 0.1.0
+
+Independent mod `nachocasta-native-usb-names` preserves valid rekordbox device names
+exactly and uses the filesystem volume label when the configured name is absent,
+empty or invalid. Otherwise it preserves the native generic fallback. Presentation
+only; no disk renaming, library mounts, routing changes or hub dependency.
+Exact firmware tag `ep147-9e9454e357389ece`, kernel 4.4.194, pinned SDK 1.2.3.
+
+[Release 0.1.0](https://github.com/NachoCasta/nacho-az-mods/releases/tag/nachocasta-native-usb-names-0.1.0)
+is published and listed in the root catalog after user-reported physical success.
+The loaded hardware executable hash was verified; the release preserves those exact
+bytes and expands the description. Host sanitizer suites and exact-runtime emulator
+standalone/coexistence waveform, naming and source-reuse controls passed. Detailed
+physical waveform/audio, Unicode, standalone, reinsertion and rollback acceptance
+remain unclaimed. See [release notes](releases/nachocasta-native-usb-names-0.1.0.md),
+[acceptance](NATIVE-USB-NAMES-ACCEPTANCE.md), [goal](NATIVE-USB-NAMES-GOAL.md)
+and [native hook research](NATIVE-USB-NAMES-RESEARCH.md).
+
 ## Published: USB Hub Support 0.4.5
 
 [Release 0.4.5](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.5)

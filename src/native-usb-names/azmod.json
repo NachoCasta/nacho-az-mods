@@ -1,0 +1,17 @@
+{
+  "azmod": 1,
+  "id": "nachocasta-native-usb-names",
+  "name": "Native USB Names",
+  "version": "0.1.0",
+  "author": "NachoCasta",
+  "summary": "Show USB volume labels when no rekordbox device name is set.",
+  "description": "The XDJ-AZ can show a generic USB1 or USB2 name when a USB drive has no device name configured in rekordbox. Native USB Names uses the drive's filesystem volume label instead, making unnamed drives easier to identify. A valid rekordbox device name always takes priority and keeps its original case. If neither name is usable, the native USB1/USB2 fallback remains. Changes display names only: no disk renaming or library changes. Native icons, colors and USB identities are preserved; USB Hub Support is not required.",
+  "license": "GPL-3.0-only",
+  "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/native-usb-names",
+  "api": 1,
+  "firmware": [
+    "ep147-9e9454e357389ece"
+  ],
+  "hooks": true,
+  "min_core": "1.2.3"
+}

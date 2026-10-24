@@ -9,6 +9,13 @@ Read CURRENT-STATE.md first. Then:
 | acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, mount flag, waveform negative/positive controls, mixed FAT playback and Link cycle; lifecycle/physical gates remain open |
 | acceptance/usb-hub-support-hfsplus-package.json | Validated unpublished0.4.6 candidate, exact member/runtime hashes and unchanged helper/kernel assets; physical acceptance pending |
 | acceptance/usb-hub-support-hfsplus-physical-install.json | Authorized0.4.6 USB install, exact approval and mapped activation; ordinary USB manual check pending, original HFS+ physical trial deferred by owner |
+
+| releases/nachocasta-native-usb-names-0.1.0.md | Published standalone native naming release, exact compatibility and validation limits |
+| acceptance/native-usb-names-0.1.0-publication.json | Anonymous source/assets/catalog verification and successful release/catalog CI |
+| acceptance/native-usb-names-0.1.0-release-package.json | Release archive hashes and byte-identical physically tested executable |
+| NATIVE-USB-NAMES-GOAL.md | Standalone native naming candidate goal and acceptance boundaries |
+| NATIVE-USB-NAMES-RESEARCH.md | Exact native presentation ABI, hooks and preserved refresh failures |
+| NATIVE-USB-NAMES-ACCEPTANCE.md | Local host/emulator evidence, candidate package and remaining physical checklist |
 | releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
 | acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
 | acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |

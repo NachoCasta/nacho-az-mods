@@ -1,0 +1,366 @@
+{
+  "status": "Validated local candidate ready for separately approved physical testing",
+  "created_utc": "2026-10-23T06:11:48.687010+00:00",
+  "mod_id": "nachocasta-native-usb-names",
+  "version": "0.1.0",
+  "firmware": "ep147-9e9454e357389ece",
+  "hardware_kernel": "4.4.194",
+  "emulator_kernel": "6.6.138-dirty",
+  "sdk_version": "1.2.3",
+  "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "sdk_header_sha256": "b94e2ba6656c2b852f18691d32225486f29265953c8bf09dcac9a18ce561a630",
+  "compiler": "GCC/G++ 7.5.0 Ubuntu 18.04 AArch64",
+  "compiler_image": "sha256:0841dadfa0d27aacc9a49df5fce637922e074b26504cde381273dfc49008e4a7",
+  "host_test_image": "sha256:26f63a19917648620590e47e6e9165d8ae34dd12dad480471c66cad544c7f6b6",
+  "source_base_commit": "eebb822d0b632ee9f75e8909e77a6eb48c0d7525",
+  "package_path": "local/candidate-0.1.0/mod/dist/nachocasta-native-usb-names-0.1.0.azmod",
+  "package_sha256": "96f78e4945002ff3af95172167d846cef169cd49ff68078d9001826ba4a8e1d5",
+  "package_bytes": 61331,
+  "hardware_runtime_sha256": "fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4",
+  "emulator_runtime_sha256": "8888153fcb3e6f5c736313f241d9c9eefd02b23be62bd8f9f81a8d20e1130d25",
+  "package_members": {
+    "LICENSE": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    "azmod.json": {
+      "sha256": "e542d4c9cdf69d6b683cd72b9e115d4263938857f362d176c28a43423855554a",
+      "bytes": 741
+    },
+    "icon.png": {
+      "sha256": "f3c633c0138360f5eb75ce97c7bd5b7e60487c36d438291da37e3eaa30eb7dfa",
+      "bytes": 973
+    },
+    "nachocasta-native-usb-names.so": {
+      "sha256": "fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4",
+      "bytes": 24032
+    }
+  },
+  "validation": "Pinned SDK staging-directory, package creation and archive validation pass without warnings; exact members and hardware kernel guard verified; single public entry follows SDK export map",
+  "host_tests": {
+    "passes": [
+      "plain",
+      "ASan+UBSan",
+      "TSan"
+    ],
+    "suites": 5,
+    "exit_code": 0,
+    "log_path": "local/v9-host-checks.json",
+    "log_sha256": "d67286ff95e8f5273f12dcb8efac0eea892ce83f16dca7dbc06a0da0b09295a0",
+    "TSan": "Per-process setarch -R in isolated seccomp-unconfined container; no host ASLR changes"
+  },
+  "emulator_runtime_scopes": {
+    "standalone": {
+      "pid": "221993",
+      "mapped_runtime_sha256": "8888153fcb3e6f5c736313f241d9c9eefd02b23be62bd8f9f81a8d20e1130d25",
+      "loaded": "fw=ep147-9e9454e357389ece\nsuspended=0\noff=0\nmod=nachocasta-native-usb-names|1|0.1.0|\nmod=nachocasta-name-fixture|2|0.1.0|Turned off\nmod=usb-hub-support|2|0.4.5|Turned off\n",
+      "decks": "azdecks 1\npid 221993\nup 9977.14\ndecks EEEE\n",
+      "scope": "Final corrected v9 mod alone. No active fault helper or USB Hub Support. Emulator only; no hardware acceptance."
+    },
+    "faults": {
+      "pid": "237088",
+      "mapped_runtime_sha256": {
+        "nachocasta-native-usb-names": "8888153fcb3e6f5c736313f241d9c9eefd02b23be62bd8f9f81a8d20e1130d25",
+        "nachocasta-name-fixture": "e95ff49124ad8c44c789e2728c43ec776ed60de7305615e0c6e758966c1905ad"
+      },
+      "loaded": "fw=ep147-9e9454e357389ece\nsuspended=0\noff=0\nmod=nachocasta-name-fixture|1|0.1.0|\nmod=nachocasta-native-usb-names|1|0.1.0|\nmod=usb-hub-support|2|0.4.5|Turned off\n",
+      "decks": "azdecks 1\npid 237088\nup 10624.54\ndecks EEEE\n",
+      "scope": "faults",
+      "kernel": "6.6.138-dirty",
+      "physical_acceptance": false
+    },
+    "coexistence": {
+      "pid": "270655",
+      "mapped_runtime_sha256": {
+        "nachocasta-native-usb-names": "8888153fcb3e6f5c736313f241d9c9eefd02b23be62bd8f9f81a8d20e1130d25",
+        "nachocasta-name-fixture": "e95ff49124ad8c44c789e2728c43ec776ed60de7305615e0c6e758966c1905ad",
+        "usb-hub-support": "b98896db19708b4a3eddecbab51555ae15a7dbad223b11009e07de65a26b672c"
+      },
+      "loaded": "fw=ep147-9e9454e357389ece\nsuspended=0\noff=0\nmod=nachocasta-name-fixture|1|0.1.0|\nmod=nachocasta-native-usb-names|1|0.1.0|\nmod=usb-hub-support|1|0.4.5|\n",
+      "decks": "azdecks 1\npid 270655\nup 13387.09\ndecks LLEE\n",
+      "scope": "coexistence",
+      "kernel": "6.6.138-dirty",
+      "physical_acceptance": false
+    }
+  },
+  "waveform_controls": {
+    "v9-standalone-waveform.png:deck1": {
+      "exit_code": 0,
+      "expected_visible": true,
+      "result": {
+        "deck": 1,
+        "detail": {
+          "colored_pixels": 18517,
+          "occupied_columns": 619,
+          "occupied_rows": 118,
+          "visible": true,
+          "box": [
+            410,
+            112,
+            1055,
+            230
+          ]
+        },
+        "overview": {
+          "colored_pixels": 8847,
+          "occupied_columns": 553,
+          "occupied_rows": 35,
+          "visible": true,
+          "box": [
+            30,
+            730,
+            620,
+            770
+          ]
+        },
+        "visible": true
+      }
+    },
+    "v9-standalone-waveform.png:deck2": {
+      "exit_code": 1,
+      "expected_visible": false,
+      "result": {
+        "deck": 2,
+        "detail": {
+          "colored_pixels": 0,
+          "occupied_columns": 0,
+          "occupied_rows": 0,
+          "visible": false,
+          "box": [
+            410,
+            315,
+            1055,
+            435
+          ]
+        },
+        "overview": {
+          "colored_pixels": 854,
+          "occupied_columns": 106,
+          "occupied_rows": 20,
+          "visible": false,
+          "box": [
+            670,
+            730,
+            1250,
+            770
+          ]
+        },
+        "visible": false
+      }
+    },
+    "v9-coex-both-waveforms.png:deck1": {
+      "exit_code": 0,
+      "expected_visible": true,
+      "result": {
+        "deck": 1,
+        "detail": {
+          "colored_pixels": 18517,
+          "occupied_columns": 619,
+          "occupied_rows": 118,
+          "visible": true,
+          "box": [
+            410,
+            112,
+            1055,
+            230
+          ]
+        },
+        "overview": {
+          "colored_pixels": 8847,
+          "occupied_columns": 553,
+          "occupied_rows": 35,
+          "visible": true,
+          "box": [
+            30,
+            730,
+            620,
+            770
+          ]
+        },
+        "visible": true
+      }
+    },
+    "v9-coex-both-waveforms.png:deck2": {
+      "exit_code": 0,
+      "expected_visible": true,
+      "result": {
+        "deck": 2,
+        "detail": {
+          "colored_pixels": 19000,
+          "occupied_columns": 621,
+          "occupied_rows": 120,
+          "visible": true,
+          "box": [
+            410,
+            315,
+            1055,
+            435
+          ]
+        },
+        "overview": {
+          "colored_pixels": 8844,
+          "occupied_columns": 550,
+          "occupied_rows": 35,
+          "visible": true,
+          "box": [
+            670,
+            730,
+            1250,
+            770
+          ]
+        },
+        "visible": true
+      }
+    }
+  },
+  "native_presentation_pixels": {
+    "crop": [
+      0,
+      74,
+      90,
+      250
+    ],
+    "baseline": "local/emu/v9-standalone-source-settled.png",
+    "native_icons_colors_equal": {
+      "v9-both-fallbacks.png": true,
+      "nusb-v9-empty.png": true,
+      "nusb-v9-invalid.png": true,
+      "nusb-v9-noname.png": true,
+      "nusb-v9-restored.png": true,
+      "v9-coexistence-source.png": true
+    }
+  },
+  "source_reuse": {
+    "nusb-v9-empty": {
+      "pid": "237088",
+      "old_device": "nusbvolumeusb4",
+      "new_device": "nusb-v9-empty",
+      "owned_overlay": "C:/Users/icast/orca/workspaces/nacho-az-mods/native-usb-names/local/emu/volume-fallback-mbr.qcow2",
+      "old_native_root": "/media/usb/sda1",
+      "old_epoch": 3,
+      "new_epoch": 5,
+      "usable_label": true,
+      "screenshot": "local/emu/nusb-v9-empty.png",
+      "guard": "Owned native USB1 controller observed in sysfs; hub off; current-PID empty decks; native unmount verified before detach; exact private overlay; unchanged EP147 PID"
+    },
+    "nusb-v9-invalid": {
+      "pid": "237088",
+      "old_device": "nusb-v9-empty",
+      "new_device": "nusb-v9-invalid",
+      "owned_overlay": "C:/Users/icast/orca/workspaces/nacho-az-mods/native-usb-names/local/emu/volume-fallback-mbr.qcow2",
+      "old_native_root": "/media/usb/sda1",
+      "old_epoch": 5,
+      "new_epoch": 7,
+      "usable_label": true,
+      "screenshot": "local/emu/nusb-v9-invalid.png",
+      "guard": "Owned native USB1 controller observed in sysfs; hub off; current-PID empty decks; native unmount verified before detach; exact private overlay; unchanged EP147 PID"
+    },
+    "nusb-v9-noname": {
+      "pid": "237088",
+      "old_device": "nusb-v9-invalid",
+      "new_device": "nusb-v9-noname",
+      "owned_overlay": "C:/Users/icast/orca/workspaces/nacho-az-mods/native-usb-names/local/emu/unnamed-fallback-mbr.qcow2",
+      "old_native_root": "/media/usb/sda1",
+      "old_epoch": 7,
+      "new_epoch": 9,
+      "usable_label": false,
+      "screenshot": "local/emu/nusb-v9-noname.png",
+      "guard": "Owned native USB1 controller observed in sysfs; hub off; current-PID empty decks; native unmount verified before detach; exact private overlay; unchanged EP147 PID"
+    },
+    "nusb-v9-restored": {
+      "pid": "237088",
+      "old_device": "nusb-v9-noname",
+      "new_device": "nusb-v9-restored",
+      "owned_overlay": "C:/Users/icast/orca/workspaces/nacho-az-mods/native-usb-names/local/emu/volume-fallback-mbr.qcow2",
+      "old_native_root": "/media/usb/sda1",
+      "old_epoch": 9,
+      "new_epoch": 11,
+      "usable_label": true,
+      "screenshot": "local/emu/nusb-v9-restored.png",
+      "guard": "Owned native USB1 controller observed in sysfs; hub off; current-PID empty decks; native unmount verified before detach; exact private overlay; unchanged EP147 PID"
+    }
+  },
+  "screenshots_local_only": {
+    "local/emu/v9-standalone-source-settled.png": {
+      "sha256": "9393467fcf5e275072073db404e3b7ad42f7638a6020c5d46444b8dc84da5dd7"
+    },
+    "local/emu/v9-standalone-selected.png": {
+      "sha256": "6d91f55746445b69309bb0890211f6d8948f324f84db6f05adf47354348dcd06"
+    },
+    "local/emu/v9-standalone-waveform.png": {
+      "sha256": "2326d8be0c752bd1d17774bf0f0fda39b27d0c9e8530db9d62e1fd5f523fef09"
+    },
+    "local/emu/v9-play-a.png": {
+      "sha256": "0d23678d8b3965ef5f0df426e1b8d961d6a091cfb029220b5285e2fe8fd2e365"
+    },
+    "local/emu/v9-play-b.png": {
+      "sha256": "206b07b53bfe43af57899d7bceebd37a349d2595e52bb5f77bfe03623dac014c"
+    },
+    "local/emu/v9-both-fallbacks.png": {
+      "sha256": "f4e12220d26599bd0481f14a8102921e3a3f8e4d01bba8aff62ac5825a54f35f"
+    },
+    "local/emu/v9-empty-choice.png": {
+      "sha256": "5089d63240b8c3e4557328f071e1ca6f5a731b16c3147cea8e4a191df11b512f"
+    },
+    "local/emu/nusb-v9-empty.png": {
+      "sha256": "8caee12c9bf968b08e68046a64fb019474e8bff4779ef45fcbf12161b7fca6af"
+    },
+    "local/emu/v9-invalid-choice.png": {
+      "sha256": "3f04d935b5bc5c05ac739a3f8c9bc94df50d93c99e3912986b18320582104f2c"
+    },
+    "local/emu/nusb-v9-invalid.png": {
+      "sha256": "8caee12c9bf968b08e68046a64fb019474e8bff4779ef45fcbf12161b7fca6af"
+    },
+    "local/emu/v9-unavailable-choice.png": {
+      "sha256": "d182c1218ab2dae9b0ccb82bfdb3e46967f765c9eb5d9c4997fb64db7db6d7af"
+    },
+    "local/emu/nusb-v9-noname.png": {
+      "sha256": "264e93abeee325b4c404a3061f4e6a2e45599412c80ea72f9fd12cb676280de5"
+    },
+    "local/emu/nusb-v9-restored.png": {
+      "sha256": "8caee12c9bf968b08e68046a64fb019474e8bff4779ef45fcbf12161b7fca6af"
+    },
+    "local/emu/v9-coexistence-source.png": {
+      "sha256": "e456ef18699d09e3a6329cc01db320cd40b259e84d0c80ae3783974b9742cb4d"
+    },
+    "local/emu/v9-coex-native-selected.png": {
+      "sha256": "7ee1284f6ba3c2a22886b960b67c9401df7298fd853bc32c3f659c83d2d799cf"
+    },
+    "local/emu/v9-coex-hub-selected.png": {
+      "sha256": "d9ffa9ec1fc156130c440d72ce28863275576b90f0f18ceb3166150f577d1712"
+    },
+    "local/emu/v9-coex-both-waveforms.png": {
+      "sha256": "f6d8b2066a79c7a062fa8d39510ae46c899663b898ec2d0c6f025995f4034440"
+    }
+  },
+  "rollback_scope": "Supported disable/reload and re-enable/reload were demonstrated in the v8 integration controls. v9 changes only invalid-label output/publication; remaining physical rollback is explicitly required.",
+  "physical_AZ_touched": false,
+  "hardware_acceptance": false,
+  "physical_test_requires_new_mod_approval": true,
+  "manual_internal_controller_edits": false,
+  "public_catalog_changed": false,
+  "published": false,
+  "pushed": false,
+  "test_helper_in_package": false,
+  "framework_staging": "Persistent internal storage managed by normal framework UI/IPC; not RAM or USB-only persistence",
+  "remaining_physical_checklist": "src/native-usb-names/README.md",
+  "source_files_sha256": {
+    "src/native-usb-names/azmod.json": "e542d4c9cdf69d6b683cd72b9e115d4263938857f362d176c28a43423855554a",
+    "src/native-usb-names/icon.png": "f3c633c0138360f5eb75ce97c7bd5b7e60487c36d438291da37e3eaa30eb7dfa",
+    "src/native-usb-names/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "src/native-usb-names/Makefile": "a4b8f960d69f6a9b7c21f864148c64691f5bd1edd86f45cab0422aaa5e37c39f",
+    "src/native-usb-names/name-policy.h": "d818698fd7af767febaf1ede4ea9bf47b6d591faafc31fddb38deb8e46ff55f2",
+    "src/native-usb-names/native-names.cpp": "3d1449479a59558b0e683f0bc5847894ee4a4f12e41106ced2c11f3e4e6cda84",
+    "src/native-usb-names/README.md": "faa5c130a481385c73d02a403ab3e347697db8d71d64135181835d07468255ba",
+    "src/native-usb-names/source-refresh.h": "4da59414162a6403da03b03bd9cbfdec10cf834941db252bd95dbd7446ab52f9",
+    "src/native-usb-names/test-host.sh": "ffe92649bae7e746e54ca98c6ce1434fbbf5aa2c23c8c51e4d91ab1e65fcea4e",
+    "src/native-usb-names/test-name-policy.c": "f5becfc6d1e06bd427566fc628e5b416d39e3da4a79bb70a4476baa3d6f7b75d",
+    "src/native-usb-names/test-volume-label.c": "f2e1790b4f5f107cd10aefcdf00d65896d7184892a7b90820ad6300b37e408d2",
+    "src/native-usb-names/tests/name-provider-fixture.cpp": "bc0ede898fe24e245be6ad2206e5aa2c919f789830ecfa6282f46346ccb2689d",
+    "src/native-usb-names/tests/test-information-task.cpp": "3d4edbc8d74ffcbfbc99bb1b68f6b110be0dd86d1e8c138b69166052fb08472e",
+    "src/native-usb-names/tests/test-source-refresh.cpp": "fbda19115eab1290888cd8ce784303af6a97db42692d7a57964081ed598dd59d",
+    "src/native-usb-names/tests/test-worker.cpp": "5cf39ff0415bc0ef0a0ebf3b7f1c238a1a3309676a1ea697dc90cf0cdedc47c0",
+    "src/native-usb-names/volume-label.h": "07fe0898db33e431b8d8de393140abe5c4ab8d9abd52face627567ca5407e57f",
+    "tools/make-native-usb-names-icon.py": "37b6935b9b207e11c53ac0a40a45231a39e72547a92f09315cda70596558c55a"
+  }
+}

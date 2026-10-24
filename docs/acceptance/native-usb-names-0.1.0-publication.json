@@ -1,0 +1,30 @@
+{
+  "verified_utc": "2026-10-23T22:15:18.760583+00:00",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/nachocasta-native-usb-names-0.1.0",
+  "source_commit": "628ba1032deea75de59f2847c68e6d6dc5f2826c",
+  "catalog_commit": "37a4b27e6c59efbf259a76a53e8c9a9ae39b1f73",
+  "package_sha256": "ef160aca01418ce84af3e21a5d7502c761f9d9faf998134b3e052f1c975cece4",
+  "package_bytes": 61577,
+  "hardware_runtime_sha256": "fe8d50ead1488a7f72211042bd119390827b364a8eee541efe024444ea06d4c4",
+  "icon_sha256": "f3c633c0138360f5eb75ce97c7bd5b7e60487c36d438291da37e3eaa30eb7dfa",
+  "anonymous_source_manifest_matches": true,
+  "anonymous_icon_matches": true,
+  "anonymous_package_matches": true,
+  "anonymous_catalog_all_packages_check": "Pinned SDK repo check NachoCasta/nacho-az-mods --download: OK",
+  "validator_warnings": "Existing USB Hub Support screenshots key is newer than the pinned validator; existing Hub binary settings-path warning. No Native USB Names validation warning.",
+  "ci_status": "Both source release and catalog commits: all jobs passed",
+  "no_research_or_screenshots_uploaded": true,
+  "ci_source_run": 40032291879,
+  "ci_source_jobs": {
+    "sdk_build": "success",
+    "behavior_tests": "success"
+  },
+  "ci_coverage": "Hub sanitizer controls/regressions; Native USB Names plain and ASan/UBSan host suites; pinned SDK builds and package validation for both mods. Native TSan was separately validated locally as recorded in the candidate receipt.",
+  "release_tag_moved": false,
+  "assets_replaced": false,
+  "ci_catalog_run": 40032345967,
+  "ci_catalog_jobs": {
+    "sdk_build": "success",
+    "behavior_tests": "success"
+  }
+}
