@@ -37,12 +37,13 @@
     ]
   },
   "manual_internal_edits": "Only the exact-candidate approval exception; no manual firmware/OS/core/service/process-memory edits",
-  "published": false,
-  "catalog_changed": false,
+  "published": true,
+  "catalog_changed": true,
   "private_evidence": [
     "local/cold-boot/physical-activation-047.json",
     "local/cold-boot/physical-warm-observation-047.txt",
     "local/cold-boot/physical-cold-cycle1.txt"
   ],
-  "publication_decision": "Owner requested publication after first successful cold boot; second acceptance repetition remains pending"
+  "publication_decision": "Owner requested publication after first successful cold boot; second acceptance repetition remains pending",
+  "publication_evidence": "usb-hub-support-0.4.7-publication.json"
 }

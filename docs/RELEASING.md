@@ -66,7 +66,8 @@ If development stays private, perform publication from the reviewed public expor
 - For hooks, both the manifest and descriptor must contain the exact tested firmware tag. Do not
   broaden compatibility just to pass installation checks. Review the kernel asset if firmware changes.
 - Include the original 256x256 PNG icon, LICENSE, and all required assets. USB Hub Support needs
-  `azhub.ko`, its license, and `mount-hub.sh`. The kernel asset has separate GPL-2.0 source/build notes.
+  `azhub.ko`, its license, `mount-hub.sh` and (since0.4.7) `recover-hubs.sh`.
+  The kernel asset has separate GPL-2.0 source/build notes.
 - Update the current-state notes and write English release notes describing behavior, validation,
   compatibility, and material limitations. Version screenshots only if deliberately approved;
   research screenshots remain local and ignored by default.

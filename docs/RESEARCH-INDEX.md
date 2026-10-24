@@ -5,9 +5,11 @@ Read CURRENT-STATE.md first. Then:
 | Resource | Purpose |
 |---|---|
 | HUB-COLD-BOOT-GOAL.md | Active automatic startup recovery goal, explicit emulator model and multiple physical cold-boot acceptance gates |
+| releases/usb-hub-support-0.4.7.md | Published automatic hub recovery at power-on; one physical cold boot passes, second repetition pending |
+| acceptance/usb-hub-support-0.4.7-publication.json | Immutable accepted package, source tag, CI and anonymous catalog/package checks |
 | acceptance/usb-hub-support-cold-boot-progress.json | Physical boot ordering proves rejected unbound hub precedes guarded depth patch; candidate validation in progress |
-| acceptance/usb-hub-support-cold-boot-package.json | Unpublished0.4.7 startup-recovery package, new helper and exact hashes; existing kernel/helper assets preserved |
-| acceptance/usb-hub-support-cold-boot-physical.json | Exact0.4.7 USB installation, approval and mapped activation; two physical cold-boot cycles pending |
+| acceptance/usb-hub-support-cold-boot-package.json | Published0.4.7 startup-recovery package, new helper and exact hashes; existing kernel/helper assets preserved |
+| acceptance/usb-hub-support-cold-boot-physical.json | Exact0.4.7 USB installation, approval and mapped activation; first physical cold boot passes; second repetition pending |
 | HUB-HFSPLUS-SUPPORT-GOAL.md | HFS+ USB hub compatibility goal, invariants and owner-approved acceptance gates |
 | HUB-HFSPLUS-RESEARCH.md | Three HFS+ boundaries, private analysis-root ABI, instruction guard and scoped emulator evidence |
 | acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, waveform controls, mixed FAT/exFAT playback, Link/eject/reconnect and cold startup; physical HFS+ trial deferred |

@@ -1,6 +1,6 @@
 # Current state
 
-## Active development: automatic hub recovery after cold boot
+## Published0.4.7: automatic hub recovery after cold boot
 
 The owner reports that a hub connected before power-on needs reconnection.
 Read-only physical boot logs confirm the boundary: the4.4 kernel rejects the
@@ -14,10 +14,10 @@ and17 private-sysfs helper cases cover the target/skip policy. The model proves
 baseline failure with an unbound hub and candidate recovery without hub hotplug.
 A fresh candidate cold boot restores FAT/HFS+ sources, waveforms and loaded
 eject/cache continuity; child reconnect and Link On/Off/On controls pass.
-The unpublished0.4.7 hardware package validates and is installed, exactly approved
+The0.4.7 hardware package validates and is installed, exactly approved
 and active through the normal framework workflow on the physical AZ. Its mapped
 runtime hash matches the candidate; already-bound hubs and Native USB Names remain
-available after the warm reload. Two real cold-boot acceptance cycles remain
+available after the warm reload. Two real cold-boot acceptance cycles were
 planned. The first real cold boot now passes: rejection at0.75s, guarded patch
 at10.05s and hub discovery at13.19s without USB disconnect; native USB1 and both
 FAT/exFAT hub sources are mounted. The owner reports success and authorized
@@ -26,6 +26,10 @@ publication after this first cycle; the second repetition remains pending. See t
 [progress evidence](acceptance/usb-hub-support-cold-boot-progress.json), plus the
 [candidate package](acceptance/usb-hub-support-cold-boot-package.json) and
 [physical installation](acceptance/usb-hub-support-cold-boot-physical.json).
+Release0.4.7 is published with the exact tested package and updated root catalog.
+Anonymous source, assets and official catalog/package downloads pass; see the
+[publication record](acceptance/usb-hub-support-0.4.7-publication.json).
+The broader two-cycle goal remains active pending the second physical repetition.
 
 ## Published: USB Hub Support 0.4.6 (HFS+)
 
