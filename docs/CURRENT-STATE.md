@@ -8,8 +8,11 @@ two loaded tracks after both SDK frame filters were disabled by cumulative timin
 strikes. The physical incident's cause is not instrumented. A separate production
 health-component control proves that one duplicate valid read stays latched even
 after a million healthy observations. Neither idle nor invalid CRC is that case.
-A private SDK-surface-only emulator prototype compiles but is not accepted or
-deployed: held-click safety and native encoder release remain explicit gates.
+A private SDK-surface-only prototype opens and selects in the emulator, but
+BACK leaks to native navigation after immediate focus release. It is rejected
+for promotion; held-button safety and encoder release remain explicit gates.
+Only the owned emulator was activated, after native unloading and EEEE checks;
+no physical candidate was deployed.
 Published0.4.7 and production source are unchanged. See the
 [goal](HUB-EJECT-INPUT-GOAL.md) and
 [progress](acceptance/usb-hub-support-eject-input-progress.json).

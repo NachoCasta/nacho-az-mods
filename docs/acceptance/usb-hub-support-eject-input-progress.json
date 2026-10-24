@@ -30,7 +30,7 @@
   "prototype": {
     "scope": "Private SDK-surface-only emulator experiment; production source unchanged",
     "build": "AArch64 emulator compile passes with existing pinned compiler and headers",
-    "validation": "Pending; not safe to promote or deploy yet",
+    "validation": "Rejected for promotion: opens and knob selection works, but native BACK leaks after immediate focus release, changing SOURCE to BROWSE",
     "gates": [
       "No false eject from stale or held clicks",
       "No native SOURCE/BROWSE jump or lost turn on release",
@@ -38,7 +38,17 @@
       "True focus refusal remains safe",
       "Loaded eject, reconnect and background playback",
       "Prolonged session without restart"
-    ]
+    ],
+    "runtime_sha256": "50a64ac4e56347b42615a600200e144d5c4f5c5a36996dadf120174bb6db354d",
+    "active_emulator_pid": 62676,
+    "activation": "Owned emulator only; both tracks unloaded through native dialogs and EEEE verified before normal framework discovery/approval/activation",
+    "private_evidence": [
+      "local/eject-input/sdk-prototype-build/activation.json",
+      "local/favlab-clone/eject-input-sdk-selector.png",
+      "local/favlab-clone/eject-input-sdk-knob.png",
+      "local/favlab-clone/eject-input-sdk-cancel.png"
+    ],
+    "next": "Prove a release-safe input strategy; preserve the baseline raw/edit health gate until a replacement covers held-button ownership and encoder restoration"
   },
   "physical_mutations": false,
   "release_assets_changed": false,

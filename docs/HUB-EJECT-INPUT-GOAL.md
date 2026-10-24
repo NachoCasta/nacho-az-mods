@@ -52,3 +52,15 @@ also restores the physical encoder counter and suppresses held keys on release.
 Any replacement must validate native SOURCE/BROWSE position, click/BACK release,
 counter wrap, competing dialogs and true loss of control ownership. Simply
 clearing a fault or raising a timing budget does not satisfy this goal.
+
+## First replacement experiment
+
+A private SDK-only prototype, hash
+`50a64ac4e56347b42615a600200e144d5c4f5c5a36996dadf120174bb6db354d`,
+opens the selector and moves its selection using SDK knob events. It is not an
+accepted fix: native BACK changes the underlying SOURCE view after immediate
+focus release. The SDK focus contract provides press events but no physical
+knob/BACK release state; its touch UP events do not prove button release.
+Existing production code remains unchanged. Do not promote this prototype or
+replace its safety gate with an unconditional open. Preserve this negative
+control when evaluating release ownership and encoder restoration.
