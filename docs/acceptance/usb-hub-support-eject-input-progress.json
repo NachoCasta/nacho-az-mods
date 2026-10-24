@@ -1,0 +1,46 @@
+{
+  "status": "active investigation; no fix accepted or deployed",
+  "published_baseline": "0.4.7",
+  "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
+  "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
+  "emulator_baseline": {
+    "pid": 626,
+    "runtime_sha256": "17360ed63ff00370c394e814f8d6bf7d810e3bdf2160fe2c7477f6482ac3fc91",
+    "scope": "Prior startup-recovery emulator runtime, not the hardware release executable; both share the same selector implementation",
+    "result": "Short USB2 STOP reproduces exact unavailable banner while two tracks remain loaded and both waveform views remain rendered",
+    "core_log": "Two frame filter shutdown messages after eight calls exceeding200us each",
+    "diagnostic": "raw9255 edited11415; both stale for more than2000000ms",
+    "audio": "No audio captured",
+    "private_evidence": [
+      "local/eject-input/baseline-refusal.txt",
+      "local/favlab-clone/eject-input-baseline-refusal.png"
+    ]
+  },
+  "deterministic_health_control": {
+    "result": "Production component permanently refuses after a duplicate valid read despite one million subsequent healthy observations; a stopped raw callback separately refuses",
+    "interpretation": "A second possible refusal path, not proof that a duplicate caused the owner's incident",
+    "private_evidence": "local/eject-input/health-baseline.txt"
+  },
+  "core_contract_review": {
+    "timing": "Elapsed architectural counter around each callback; strikes cumulative until process restart",
+    "registration": "Init-only; runtime re-registration is unsupported",
+    "focus": "SDK surface focus routes knob/click/BACK and suppresses native input with an overlay watchdog",
+    "unresolved": "Held-click release and native encoder position on focus release require explicit regression controls before removing custom filters"
+  },
+  "prototype": {
+    "scope": "Private SDK-surface-only emulator experiment; production source unchanged",
+    "build": "AArch64 emulator compile passes with existing pinned compiler and headers",
+    "validation": "Pending; not safe to promote or deploy yet",
+    "gates": [
+      "No false eject from stale or held clicks",
+      "No native SOURCE/BROWSE jump or lost turn on release",
+      "Counter wrap and repeated open/cancel",
+      "True focus refusal remains safe",
+      "Loaded eject, reconnect and background playback",
+      "Prolonged session without restart"
+    ]
+  },
+  "physical_mutations": false,
+  "release_assets_changed": false,
+  "publication_authorized": false
+}

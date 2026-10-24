@@ -1,5 +1,19 @@
 # Current state
 
+## Active investigation: prolonged-session eject selector refusal
+
+The owner reports selector input unavailable after extended playing, while hub
+sources remain functional. The owned emulator reproduces the exact banner with
+two loaded tracks after both SDK frame filters were disabled by cumulative timing
+strikes. The physical incident's cause is not instrumented. A separate production
+health-component control proves that one duplicate valid read stays latched even
+after a million healthy observations. Neither idle nor invalid CRC is that case.
+A private SDK-surface-only emulator prototype compiles but is not accepted or
+deployed: held-click safety and native encoder release remain explicit gates.
+Published0.4.7 and production source are unchanged. See the
+[goal](HUB-EJECT-INPUT-GOAL.md) and
+[progress](acceptance/usb-hub-support-eject-input-progress.json).
+
 ## Published0.4.7: automatic hub recovery after cold boot
 
 The owner reports that a hub connected before power-on needs reconnection.
