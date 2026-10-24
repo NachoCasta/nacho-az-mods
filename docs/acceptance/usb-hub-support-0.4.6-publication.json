@@ -1,0 +1,48 @@
+{
+  "version": "0.4.6",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.6",
+  "source_commit": "ffcf6b3d83cf4715369e367687c0d9747a1caad6",
+  "catalog_commit": "0f2c65b7f72c8d7c3339ee0656cc90e9038f26c0",
+  "package_sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc",
+  "runtime_sha256": "76bad01155355a8cfca6ee3ee877f8175fba4d0bc6f08f627dd28b3bc57fbca2",
+  "anonymous_assets": [
+    {
+      "name": "usb-hub-support-0.4.6.azmod",
+      "status": 200,
+      "bytes": 694686,
+      "sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc"
+    },
+    {
+      "name": "usb-hub-support-0.4.6-icon.png",
+      "status": 200,
+      "bytes": 945,
+      "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+    }
+  ],
+  "canonical_catalog_version": "0.4.6",
+  "native_usb_names_entry_preserved": true,
+  "source_manifest_verified": true,
+  "source_ci_run": 40135823242,
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "catalog_ci_run": 40136096945,
+  "catalog_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "sdk_ref": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "compiler": "Linaro GCC6.3.1 AArch64",
+  "accepted_package_unchanged": true,
+  "assets_replaced": false,
+  "release_tag_moved": false,
+  "physical_scope": "User-reported ordinary USB regression after exact activation; original HFS+ physical trial deferred by owner",
+  "hfsplus_scope": "Original reduced private fixture, exact-runtime emulator controls; no captured audio",
+  "screenshots": "Existing0.4.5 public emulator preview URLs retained in catalog; no new screenshot uploaded",
+  "catalog_download_check": "Passed official screenshot-aware azmod-pack repo check NachoCasta/nacho-az-mods --download after HEAD cache convergence; output explicitly identifies usb-hub-support0.4.6",
+  "canonical_catalog_url": "https://raw.githubusercontent.com/NachoCasta/nacho-az-mods/HEAD/azmods-repo.json",
+  "canonical_cache_observation": "Initial HEAD requests served0.4.5; existing verifier waited for default SDK URL to converge to0.4.6 before the final official download check",
+  "tag_object": "e39ce6936f013dfff85786155509f33546ac4dc7",
+  "tag_peeled_commit": "ffcf6b3d83cf4715369e367687c0d9747a1caad6"
+}

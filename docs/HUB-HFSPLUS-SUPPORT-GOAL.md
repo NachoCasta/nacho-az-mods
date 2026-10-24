@@ -1,6 +1,8 @@
 # HFS+ USB hub compatibility
 
-Status: implementation and owner-approved validation complete; publication in progress. The user requests support for a USB that works on a native AZ
+Status: complete for the owner-approved scope. Release0.4.6 is published and
+verified through the canonical anonymous SDK catalog/package download flow.
+See the [completion audit](acceptance/usb-hub-support-hfsplus-completion.json). The user requests support for a USB that works on a native AZ
 port but not through the hub. A private, reduced HFS+ image is available locally.
 
 ## Required outcome

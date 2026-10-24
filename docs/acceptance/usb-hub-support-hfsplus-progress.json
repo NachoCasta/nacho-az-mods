@@ -1,9 +1,9 @@
 {
-  "status": "development acceptance complete for owner-approved scope; release preparation authorized, original HFS+ hardware trial deferred",
+  "status": "complete for owner-approved scope;0.4.6 published, ordinary USB physical regression accepted and HFS+ physical trial explicitly deferred",
   "fixture": "Private reduced HFS+ disk image; original geometry/metadata/databases/analysis retained, only three audio samples populated",
   "original_modified": false,
   "physical_AZ_changed": true,
-  "publication_changed": false,
+  "publication_changed": true,
   "emulator": {
     "kernel": "6.6.138-dirty",
     "isolated_ssh_port": 2322,
@@ -21,7 +21,7 @@
   "native_research": {
     "firmware": "ep147-9e9454e357389ece",
     "facts_only": "Native library constructor 0x1352ee8 contains both directory variants; track repository selector 0x1978970 chooses the hidden variant using MountMediaInfoReference 0xe5ff30, whose filesystem enum comparison is 3.",
-    "remaining": "Cold boot, lifecycle regression and physical acceptance remain open.",
+    "remaining": "Original HFS+ physical acceptance explicitly deferred by owner; emulator lifecycle/cold-boot and ordinary USB physical regression are complete",
     "analysis_root_adapter": "Exact firmware 0x1978970, first four instructions pinned. Nontrivial eight-byte File returns through AArch64 x8. Scoped to private owned repositories; guarded before irreversible installation."
   },
   "scanner_comparison": {
@@ -34,7 +34,7 @@
   },
   "implementation": "Filesystem-aware discovery/settings/public PDB paths, native private-mount Mac flag and guarded per-owned-repository analysis-root selection. Native repositories delegate unchanged. No USB changes or native library slots borrowed.",
   "candidate_emulator_sha256": "35ac4c061347eb8f26781c1be037eb7812dddac7e0a4b8f8224ecbac6f0684de",
-  "activation": "USB rollback and exact USB/staged checks; normal framework discovery apply, locked atomic exact-candidate approval with USB list backup, normal activation apply requested",
+  "activation": "Physical exact candidate installed, approved with USB backup/locking/atomic replacement and activated through supported framework apply; mapped hash verified",
   "tests": {
     "discovery": "passes mixed filesystem hidden-library scanner fixture and existing excess-route controls",
     "public_library": "passes hidden HFS+ PDB catalog, playable synthetic track, ordinary-filesystem exclusion and generation lease cleanup, plus existing library suite",
@@ -50,7 +50,7 @@
       "private_log": "local/favlab-clone/host-v3-sanitizers.log",
       "scope": "Portable production components; exact runtime waveform and lifecycle evidence recorded separately"
     },
-    "runtime_browse_load_waveforms_eject_reconnect_link": "Native HFS+ menus/playlists/tracks, populated sample loads and both graphs, mixed FAT hub and native FAT playback, Link cycle, loaded eject/cache advance, reconnect/fresh deck2 and cold boot pass; physical acceptance remains pending",
+    "runtime_browse_load_waveforms_eject_reconnect_link": "All listed emulator controls pass; owner confirms ordinary USB physical regression. Original HFS+ physical trial is explicitly deferred.",
     "aarch64_abi": "Actual adapter passes 1000 mixed Mac/FAT/native calls with eight-byte C++ x8 return, native argument preservation and exception unwinding in emulator",
     "instruction_guard": "Actual compiled guard accepts pinned window and rejects all 16 single-byte corruptions; installer ordering and native standalone controls pass",
     "current_tree_rebuild": "Fresh emulator build matches tested v3 SHA256 exactly",
@@ -232,5 +232,6 @@
     "original_unreachable_attempt": "Retained in historical private receipt; owner subsequently powered on AZ",
     "remaining": "Original HFS+ physical trial deferred by owner; ordinary USB regression confirmed manually",
     "evidence": "usb-hub-support-hfsplus-physical-install.json"
-  }
+  },
+  "completion_evidence": "usb-hub-support-hfsplus-completion.json"
 }

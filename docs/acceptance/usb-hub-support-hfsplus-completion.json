@@ -1,0 +1,49 @@
+{
+  "status": "complete for owner-approved scope; release published and anonymous SDK download verified",
+  "source_tag": "usb-hub-support-0.4.6",
+  "source_commit": "ffcf6b3d83cf4715369e367687c0d9747a1caad6",
+  "requirements": [
+    {
+      "requirement": "Reproduce original layout failure and distinguish mounting from library admission",
+      "result": "proven",
+      "evidence": "usb-hub-support-hfsplus-progress.json: native control and same-mount scanner A/B"
+    },
+    {
+      "requirement": "Support original HFS+ library without altering original USB or re-export",
+      "result": "proven in emulator with original reduced image",
+      "evidence": "Filesystem-specific hidden library paths, native mount layout flag and owned analysis-root hook; original_modified=false"
+    },
+    {
+      "requirement": "Browse playlists/tracks, load populated audio, render both graphs",
+      "result": "proven in exact-runtime emulator",
+      "evidence": "progress runtime.playlists, cold_boot, hfs_and_fat_simultaneous_graphs; waveform negative/positive controls"
+    },
+    {
+      "requirement": "Preserve FAT/exFAT, native libraries, independent roots, source UI, Link, safe eject/reconnect",
+      "result": "proven by boundary tests and exact-runtime controls",
+      "evidence": "progress runtime.native_control, exfat_control, link_cycle, eject, reconnect; 105 components in three modes"
+    },
+    {
+      "requirement": "Record remaining physical checks without blocking owner-approved scope",
+      "result": "proven",
+      "evidence": "physical-install receipt: exact mapped hardware runtime, owner ordinary USB confirmation; original favlab explicitly unavailable/deferred"
+    },
+    {
+      "requirement": "Preserve stable ID/exact firmware/kernel/core, validate accepted package",
+      "result": "proven",
+      "evidence": "Manifest and all package member hashes match tested candidate; pinned SDK1.2.3 package validator; hardware kernel4.4.194 and core1.2.5"
+    },
+    {
+      "requirement": "Publish only after authorization and anonymous verification",
+      "result": "proven",
+      "evidence": "usb-hub-support-0.4.6-publication.json: source/catalog CI both green, exact assets unchanged, canonical HEAD0.4.6 and official anonymous catalog/package check pass"
+    }
+  ],
+  "limitations": [
+    "No physical HFS+ or actual-CDJ acceptance claimed",
+    "Existing public catalog capacity limits large library sharing",
+    "No eight-source or long-session hardware acceptance claimed"
+  ],
+  "private_assets_published": false,
+  "publication_evidence": "usb-hub-support-0.4.6-publication.json"
+}

@@ -28,7 +28,7 @@
     "context": "Reply after exact0.4.6 activation and request to load/play a song and check both waveform views using an available USB",
     "scope": "Ordinary USB manual regression; original favlab unavailable. No physical HFS+ acceptance or agent-captured audio/rendering claimed."
   },
-  "published": false,
-  "catalog_changed": false,
+  "published": true,
+  "catalog_changed": true,
   "private_evidence": "local/favlab-clone/physical-activation-046.json"
 }

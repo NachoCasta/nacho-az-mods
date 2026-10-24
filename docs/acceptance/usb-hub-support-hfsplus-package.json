@@ -1,5 +1,5 @@
 {
-  "status": "validated exact accepted0.4.6 package; publication authorized",
+  "status": "published exact accepted0.4.6 package; owner ordinary USB regression passed, HFS+ physical trial deferred",
   "version": "0.4.6",
   "package_sha256": "e65c0cda23741678d541d9e713563e786e03bb84611f757a9c2f6cb0b0b329dc",
   "package_bytes": 694686,
@@ -28,7 +28,7 @@
   "warning": "Known legacy read-only /home/root/settings configuration reference; no new persistent internal writes introduced",
   "assets": "All helper/kernel assets byte-identical to 0.4.5. No new screenshot assets included.",
   "physical_AZ_changed": true,
-  "catalog_changed": false,
-  "published": false,
+  "catalog_changed": true,
+  "published": true,
   "physical_install_evidence": "usb-hub-support-hfsplus-physical-install.json"
 }

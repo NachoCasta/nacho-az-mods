@@ -1,6 +1,6 @@
 # Current state
 
-## Release preparation: USB Hub Support 0.4.6 (HFS+)
+## Published: USB Hub Support 0.4.6 (HFS+)
 
 The private reduced HFS+ fixture uses `.PIONEER`. Filesystem-aware discovery,
 settings and public PDB paths restore admission. Native private mounts also need
@@ -30,10 +30,14 @@ The large public PDB reaches the existing
 catalog capacity; external sharing is not validated for this fixture.
 See the [goal](HUB-HFSPLUS-SUPPORT-GOAL.md) and
 [progress evidence](acceptance/usb-hub-support-hfsplus-progress.json).
-The unpublished0.4.6 hardware-target package validates with pinned SDK1.2.3;
+[Release0.4.6](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.6)
+is published and the root catalog now lists it. The exact accepted hardware-target
+package validates with pinned SDK1.2.3;
 helpers/kernel assets remain byte-identical to0.4.5. See the
 [candidate package receipt](acceptance/usb-hub-support-hfsplus-package.json).
-No published release/catalog was changed for this investigation.
+Source CI passed both jobs. See the
+[publication record](acceptance/usb-hub-support-0.4.6-publication.json) for exact
+hashes and anonymous-download verification. Previous releases and tags were not changed.
 
 ## Published: Native USB Names 0.1.0
 

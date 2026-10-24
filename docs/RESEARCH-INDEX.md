@@ -4,11 +4,11 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
-| HUB-HFSPLUS-SUPPORT-GOAL.md | Active HFS+ USB hub compatibility goal, invariants and acceptance gates |
+| HUB-HFSPLUS-SUPPORT-GOAL.md | HFS+ USB hub compatibility goal, invariants and owner-approved acceptance gates |
 | HUB-HFSPLUS-RESEARCH.md | Three HFS+ boundaries, private analysis-root ABI, instruction guard and scoped emulator evidence |
-| acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, mount flag, waveform negative/positive controls, mixed FAT playback and Link cycle; lifecycle/physical gates remain open |
-| acceptance/usb-hub-support-hfsplus-package.json | Validated unpublished0.4.6 candidate, exact member/runtime hashes and unchanged helper/kernel assets; physical acceptance pending |
-| acceptance/usb-hub-support-hfsplus-physical-install.json | Authorized0.4.6 USB install, exact approval and mapped activation; ordinary USB manual check pending, original HFS+ physical trial deferred by owner |
+| acceptance/usb-hub-support-hfsplus-progress.json | Native/scanner A/B, waveform controls, mixed FAT/exFAT playback, Link/eject/reconnect and cold startup; physical HFS+ trial deferred |
+| acceptance/usb-hub-support-hfsplus-package.json | Exact0.4.6 package/member/runtime hashes and unchanged helper/kernel assets |
+| acceptance/usb-hub-support-hfsplus-physical-install.json | Authorized0.4.6 install, exact approval/mapped activation and owner ordinary USB acceptance; HFS+ physical trial deferred |
 
 | releases/nachocasta-native-usb-names-0.1.0.md | Published standalone native naming release, exact compatibility and validation limits |
 | acceptance/native-usb-names-0.1.0-publication.json | Anonymous source/assets/catalog verification and successful release/catalog CI |
@@ -16,6 +16,9 @@ Read CURRENT-STATE.md first. Then:
 | NATIVE-USB-NAMES-GOAL.md | Standalone native naming candidate goal and acceptance boundaries |
 | NATIVE-USB-NAMES-RESEARCH.md | Exact native presentation ABI, hooks and preserved refresh failures |
 | NATIVE-USB-NAMES-ACCEPTANCE.md | Local host/emulator evidence, candidate package and remaining physical checklist |
+| releases/usb-hub-support-0.4.6.md | HFS+ support release, validation and exact compatibility/remaining limits |
+| acceptance/usb-hub-support-0.4.6-publication.json | Source tag, exact accepted package, CI and anonymous catalog/package verification |
+| acceptance/usb-hub-support-hfsplus-completion.json | Requirement audit and owner-approved HFS+ emulator/ordinary USB physical acceptance boundaries |
 | releases/usb-hub-support-0.4.5.md | Published numbering, order, names/colors and restored-waveform release with two emulator previews |
 | acceptance/usb-hub-support-0.4.5-package.json | Immutable package preparation, accepted executable identity and screenshot hashes |
 | acceptance/usb-hub-support-0.4.5-publication.json | Source tag, CI correction scope and anonymous catalog/package/image verification |
