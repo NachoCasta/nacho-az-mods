@@ -39,7 +39,8 @@
   "description_bytes": 566,
   "published": false,
   "catalog_changed": false,
-  "physical_deployed": false,
+  "physical_deployed": true,
+  "physical_installation": "usb-hub-support-eject-input-physical.json; owner functional acceptance pending",
   "private_package": "local/eject-input/hardware-candidate/mod/dist/usb-hub-support-0.4.8.azmod",
   "validation": "Pinned SDK1.2.3 package validate: OK after terminal emulator controls; package hash unchanged"
 }

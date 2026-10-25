@@ -50,7 +50,11 @@ confirms backing/alias removal, native/HFS+ retention, a phase2 cache ticket,
 advancing deck2 and both waveform assertions. Native unloading finishes at EEEE.
 The hardware package validates with unchanged helper/kernel assets; see the
 [candidate receipt](acceptance/usb-hub-support-eject-input-package.json).
-No0.4.8 release, catalog update or physical installation has occurred.
+No0.4.8 release or catalog update has occurred. The owner subsequently authorized
+the physical trial: the exact candidate is now installed, approved and active,
+PID3525750, with EEEE before/after both framework reloads and native/hub mounts
+present. Owner functional acceptance is pending; see the
+[physical installation](acceptance/usb-hub-support-eject-input-physical.json).
 The requested emulator-first candidate-preparation goal is complete; physical
 acceptance and the proposed fallback interaction remain for owner testing. See
 the [requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
