@@ -22,6 +22,7 @@
   "owner_report": "it works. let's release the new version and push",
   "owner_functional_acceptance": "General user-reported success; no separate instrumented audio, physical quarantine or prolonged-session acceptance inferred",
   "publication_authorized": true,
-  "published": false,
-  "private_evidence": "local/eject-input/physical-activation-048.json"
+  "published": true,
+  "private_evidence": "local/eject-input/physical-activation-048.json",
+  "publication": "usb-hub-support-0.4.8-publication.json"
 }

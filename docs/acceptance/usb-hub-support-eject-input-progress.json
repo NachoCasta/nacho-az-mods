@@ -1,5 +1,5 @@
 {
-  "status": "Emulator validation complete; exact unpublished0.4.8 candidate ready for physical testing",
+  "status": "Published0.4.8 after general owner physical success; emulator preparation complete; physical quarantine/prolonged-session acceptance unclaimed",
   "published_baseline": "0.4.7",
   "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
   "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
@@ -280,5 +280,6 @@
     "Cold startup uses an explicit QEMU6.6 unbound-hub model, not actual4.4 depth rejection",
     "Inherited mods USB FAT fixture remounts read-only at boot; local native loads still pass; no physical USB changes",
     "No physical0.4.8 installation, actual-CDJ/phase-sync/eight-source hardware acceptance or publication"
-  ]
+  ],
+  "publication": "usb-hub-support-0.4.8-publication.json"
 }

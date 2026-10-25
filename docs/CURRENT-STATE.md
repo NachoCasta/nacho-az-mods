@@ -1,6 +1,6 @@
 # Current state
 
-## Approved for publication:0.4.8 reliable eject selector
+## Published0.4.8: reliable eject selector
 
 The owner reports selector input unavailable after extended playing, while hub
 sources remain functional. The owned emulator reproduces the exact banner with
@@ -13,7 +13,7 @@ BACK leaks to native navigation after immediate focus release. It is rejected
 for promotion; held-button safety and encoder release remain explicit gates.
 Only the owned emulator was activated, after native unloading and EEEE checks;
 no physical candidate was deployed.
-Published0.4.7 is unchanged. Development source now recovers observation faults
+Published0.4.7 assets remain unchanged. Release0.4.8 recovers observation faults
 after eight consecutive healthy reads; focused plain/ASan+UBSan/TSan checks and
 both runtime builds pass. This does not recover an SDK-quarantined filter. A
 local snapshot API proposal passes concurrent and actual-SDK filter controls,
@@ -50,7 +50,7 @@ confirms backing/alias removal, native/HFS+ retention, a phase2 cache ticket,
 advancing deck2 and both waveform assertions. Native unloading finishes at EEEE.
 The hardware package validates with unchanged helper/kernel assets; see the
 [candidate receipt](acceptance/usb-hub-support-eject-input-package.json).
-No0.4.8 release or catalog update has occurred. The owner subsequently authorized
+Release0.4.8 and its root catalog entry are published. The owner authorized
 the physical trial: the exact candidate is now installed, approved and active,
 PID3525750, with EEEE before/after both framework reloads and native/hub mounts
 present. The owner reports "it works" and requests release and push. This is
@@ -59,6 +59,9 @@ general manual success, not physical quarantine/prolonged-session acceptance. Se
 The requested emulator-first candidate-preparation goal is complete; physical
 quarantine and prolonged-session acceptance remain unclaimed. See
 the [requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
+The accepted package bytes are unchanged. Anonymous asset/source/catalog
+downloads and the official package download check pass; see the
+[publication record](acceptance/usb-hub-support-0.4.8-publication.json).
 
 ## Published0.4.7: automatic hub recovery after cold boot
 

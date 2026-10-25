@@ -104,4 +104,9 @@ individual eject/cache/graphs/engine controls pass. The host launcher explicitly
 passes its sanitizer selection to the actual-open coordinator; its10000-reopen
 controls pass in plain, ASan/UBSan and TSan. See the
 [requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
-No physical candidate was installed and no release was published.
+Those controls preceded physical installation. The exact hardware candidate was
+subsequently installed and activated; the owner reported general success and
+requested publication. Release0.4.8 preserves those accepted package bytes. See
+the [physical record](acceptance/usb-hub-support-eject-input-physical.json) and
+[publication record](acceptance/usb-hub-support-0.4.8-publication.json). This does
+not add physical filter-quarantine or prolonged-session acceptance.

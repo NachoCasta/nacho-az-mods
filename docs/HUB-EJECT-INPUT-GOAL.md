@@ -104,5 +104,9 @@ measurement remains recorded rather than being relabeled a pass.
 
 The [requirement audit](acceptance/usb-hub-support-eject-input-completion.json)
 and [exact package](acceptance/usb-hub-support-eject-input-package.json) close
-the preparation deliverable. Physical installation/acceptance, owner approval
-of the proposed fallback interaction and publication have not occurred.
+the preparation deliverable. Physical installation and publication were outside
+that completed milestone. The exact candidate was subsequently installed and
+the owner reported general success and requested release; see the
+[physical](acceptance/usb-hub-support-eject-input-physical.json) and
+[publication](acceptance/usb-hub-support-0.4.8-publication.json) records. Physical
+quarantine and prolonged-session acceptance remain unclaimed.
