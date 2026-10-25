@@ -82,7 +82,10 @@ int main(void) {
     puts("selector open: normal focus, touch after faults,10000 retries, recovered mode, missing panel/surface, competing focus/menu and held-close refusals passed");
 }
 '''
-compiler=shlex.split(os.environ.get('TEST_CC','cc'))
+# The extracted production body uses GCC __atomic builtins on _Atomic fields.
+# Match the production compiler family, as test-source-media.py does; Clang
+# rejects this GCC extension. All requested sanitizer modes still run.
+compiler=shlex.split(os.environ.get('GCC_TEST_CC','gcc'))
 sdk=os.environ.get('AZ_SDK_INCLUDE','../../azmod')
 flags={'plain':['-O2'],'asan':['-g','-O1','-fsanitize=address,undefined','-fno-sanitize-recover=undefined'],
        'tsan':['-g','-O1','-fsanitize=thread']}
