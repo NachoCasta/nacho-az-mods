@@ -1,5 +1,5 @@
 {
-  "status": "Validated unpublished0.4.8 exact candidate ready for physical testing; emulator gates complete",
+  "status": "Exact physically accepted0.4.8 package approved for publication; bytes unchanged",
   "version": "0.4.8",
   "implementation_commit": "e574561eae0c62e47586f507182ee06d2f06b7ca",
   "rebuild_after_commit": "Both runtime outputs reproduce their exact recorded SHA256 values; source and packaged manifest hashes also match",
@@ -40,7 +40,8 @@
   "published": false,
   "catalog_changed": false,
   "physical_deployed": true,
-  "physical_installation": "usb-hub-support-eject-input-physical.json; owner functional acceptance pending",
+  "physical_installation": "usb-hub-support-eject-input-physical.json; general owner success, no physical quarantine/prolonged-session acceptance inferred",
   "private_package": "local/eject-input/hardware-candidate/mod/dist/usb-hub-support-0.4.8.azmod",
-  "validation": "Pinned SDK1.2.3 package validate: OK after terminal emulator controls; package hash unchanged"
+  "validation": "Pinned SDK1.2.3 package validate: OK after terminal emulator controls; package hash unchanged",
+  "release_rebuild": "Fresh output from final runtime source reproduces the physically tested hardware ELF hash"
 }

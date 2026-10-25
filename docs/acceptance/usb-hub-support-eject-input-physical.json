@@ -1,5 +1,5 @@
 {
-  "status": "Installed, exactly approved and activated; owner functional testing pending",
+  "status": "Installed, exactly approved and activated; owner reports success and authorizes release",
   "version": "0.4.8",
   "package_sha256": "a2d4edb2ba73619da88920d55a76879c8dbe54105ccb061d533ba416a651a7aa",
   "mapped_runtime_sha256": "c35df90775b60c4bff2dbb70bc3606efd82825595bce8e1151152ce2c6953ff2",
@@ -19,7 +19,9 @@
   "controller_cold_restart": false,
   "manual_internal_edits": "Only the explicit exact-candidate approval exception; no firmware/core/service/process-memory edits",
   "observations": "Temporary SSH failures during framework reloads were observed without resending either apply request",
-  "owner_functional_acceptance": "Pending selector/eject and prolonged-session trial; no audio or physical fallback acceptance claimed",
+  "owner_report": "it works. let's release the new version and push",
+  "owner_functional_acceptance": "General user-reported success; no separate instrumented audio, physical quarantine or prolonged-session acceptance inferred",
+  "publication_authorized": true,
   "published": false,
   "private_evidence": "local/eject-input/physical-activation-048.json"
 }

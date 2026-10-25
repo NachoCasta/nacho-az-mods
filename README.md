@@ -2,10 +2,12 @@
 
 **NachoCasta's** collection of XDJ-AZ mods, tools, and research notes.
 
-USB Hub Support0.4.7 automatically recovers already-connected hubs at power-on,
-retaining HFS+ libraries, analyzed waveforms and configured names/colors.
-An emulator startup model and one physical cold boot passed; a second physical
-repetition remains pending. See the [0.4.7 release notes](docs/releases/usb-hub-support-0.4.7.md)
+USB Hub Support0.4.8 keeps individual USB selection available through touch
+controls if encoder-input filters stop, without restarting the mod. Healthy
+input retains the usual encoder selector. It also retains automatic hub startup
+recovery, HFS+ libraries, waveforms and configured names/colors. The owner
+confirmed general physical operation; prolonged filter-quarantine coverage is
+emulator-only. See the [0.4.8 release notes](docs/releases/usb-hub-support-0.4.8.md)
 for validation and limits.
 
 Add `NachoCasta/nacho-az-mods` under **Community Mods > Repositories** in the

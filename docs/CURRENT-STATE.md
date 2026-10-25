@@ -1,6 +1,6 @@
 # Current state
 
-## Unpublished0.4.8 candidate: reliable eject selector
+## Approved for publication:0.4.8 reliable eject selector
 
 The owner reports selector input unavailable after extended playing, while hub
 sources remain functional. The owned emulator reproduces the exact banner with
@@ -53,10 +53,11 @@ The hardware package validates with unchanged helper/kernel assets; see the
 No0.4.8 release or catalog update has occurred. The owner subsequently authorized
 the physical trial: the exact candidate is now installed, approved and active,
 PID3525750, with EEEE before/after both framework reloads and native/hub mounts
-present. Owner functional acceptance is pending; see the
+present. The owner reports "it works" and requests release and push. This is
+general manual success, not physical quarantine/prolonged-session acceptance. See the
 [physical installation](acceptance/usb-hub-support-eject-input-physical.json).
 The requested emulator-first candidate-preparation goal is complete; physical
-acceptance and the proposed fallback interaction remain for owner testing. See
+quarantine and prolonged-session acceptance remain unclaimed. See
 the [requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
 
 ## Published0.4.7: automatic hub recovery after cold boot
