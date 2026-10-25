@@ -288,8 +288,8 @@ static void eject_open(int port) {
     uint64_t now=eject_clock_ms();
     if (!hub_input_health_ready(&eject_input_health) || !eject_panel_present()) {
         lf_core->banner(EJECT_ID,"Hub selector input is unavailable. Restart the mod before retrying.",4000);
-        lf_core->log(EJECT_ID,"eject-ui input-unavailable port=%d raw=%u edited=%u raw-age=%llu edit-age=%llu",
-            port+1,eject_seen_raw,eject_seen_edit,
+        lf_core->log(EJECT_ID,"eject-ui input-unavailable port=%d fault=%u panel=%d raw=%u edited=%u raw-age=%llu edit-age=%llu",
+            port+1,hub_input_health_fault(&eject_input_health),eject_panel_present(),eject_seen_raw,eject_seen_edit,
             (unsigned long long)(now-eject_raw_seen_ms),
             (unsigned long long)(now-eject_edit_seen_ms)); return;
     }

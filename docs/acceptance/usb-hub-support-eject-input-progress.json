@@ -1,5 +1,5 @@
 {
-  "status": "active investigation; no fix accepted or deployed",
+  "status": "active: partial production health recovery tested; permanent SDK quarantine remains unresolved",
   "published_baseline": "0.4.7",
   "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
   "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
@@ -48,9 +48,36 @@
       "local/favlab-clone/eject-input-sdk-knob.png",
       "local/favlab-clone/eject-input-sdk-cancel.png"
     ],
-    "next": "Prove a release-safe input strategy; preserve the baseline raw/edit health gate until a replacement covers held-button ownership and encoder restoration"
+    "next": "Prove a release-safe input strategy; preserve the baseline raw/edit health gate until a replacement covers held-button ownership and encoder restoration",
+    "latest_probe": {
+      "pid": 80737,
+      "runtime_sha256": "fafa2330a209654599477479612271d3f34f934246de4394ed4e727833fc2d20",
+      "scope": "Owned emulator only, diagnostic GuiButton/encoder observer; forwards notifications unchanged and is not a production fix"
+    }
   },
   "physical_mutations": false,
   "release_assets_changed": false,
-  "publication_authorized": false
+  "publication_authorized": false,
+  "health_recovery_change": {
+    "behavior": "Eight consecutive valid reads advancing raw and edit callbacks clear an observation fault; any new missing callback resets recovery; idle and permanent SDK shutdown never heal it",
+    "diagnostics": "UI refusal log now includes raw/edit fault mask and panel-FD presence",
+    "checks": {
+      "plain": "pass",
+      "ASan_UBSan": "pass",
+      "TSan": "pass"
+    },
+    "runtime_builds": "Hardware and emulator compile pass; neither deployed",
+    "not_a_complete_fix": true
+  },
+  "sdk_snapshot_proposal": {
+    "upstream_commit_reviewed": "214a058b94120ec6c15070abddd6d04bbffef230",
+    "concurrent_publications": 2000000,
+    "actual_core_filter_checks": 31,
+    "plain": "pass",
+    "ASan_UBSan": "pass",
+    "TSan": "pass",
+    "quarantine": "Original200us/eight-strike test retained; quarantined filter stays disabled while proposed snapshot remains readable",
+    "integration": "Publication modeled separately; actual core dispatcher/API/focus integration and mod runtime not validated",
+    "deployed": false
+  }
 }

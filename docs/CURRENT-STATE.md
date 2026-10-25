@@ -13,7 +13,11 @@ BACK leaks to native navigation after immediate focus release. It is rejected
 for promotion; held-button safety and encoder release remain explicit gates.
 Only the owned emulator was activated, after native unloading and EEEE checks;
 no physical candidate was deployed.
-Published0.4.7 and production source are unchanged. See the
+Published0.4.7 is unchanged. Development source now recovers observation faults
+after eight consecutive healthy reads; focused plain/ASan+UBSan/TSan checks and
+both runtime builds pass. This does not recover an SDK-quarantined filter. A
+local snapshot API proposal passes concurrent and actual-SDK filter controls,
+but no framework integration or custom core deployment is validated. See the
 [goal](HUB-EJECT-INPUT-GOAL.md) and
 [progress](acceptance/usb-hub-support-eject-input-progress.json).
 

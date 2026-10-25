@@ -5,6 +5,7 @@ Read CURRENT-STATE.md first. Then:
 | Resource | Purpose |
 |---|---|
 | HUB-EJECT-INPUT-GOAL.md | Active prolonged-session selector reliability goal and input-ownership constraints |
+| HUB-EJECT-INPUT-RESEARCH.md | Filter shutdown versus recoverable health faults; SDK release-state gap, native notification observations and local API proposal |
 | acceptance/usb-hub-support-eject-input-progress.json | Reproduced SDK filter shutdown, separate latched-health control and unvalidated SDK-only prototype |
 | HUB-COLD-BOOT-GOAL.md | Active automatic startup recovery goal, explicit emulator model and multiple physical cold-boot acceptance gates |
 | releases/usb-hub-support-0.4.7.md | Published automatic hub recovery at power-on; one physical cold boot passes, second repetition pending |
