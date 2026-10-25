@@ -4,10 +4,11 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
-| HUB-EJECT-INPUT-GOAL.md | Active prolonged-session selector reliability goal and input-ownership constraints |
+| HUB-EJECT-INPUT-GOAL.md | Completed emulator-first selector reliability candidate goal and input-ownership constraints |
 | HUB-EJECT-INPUT-RESEARCH.md | Filter shutdown versus recoverable health faults; SDK release-state gap, native notification observations and local API proposal |
 | acceptance/usb-hub-support-eject-input-progress.json | Reproduced SDK filter shutdown, recoverable health fix, rejected SDK-only prototype and integrated touch fallback controls |
-| acceptance/usb-hub-support-eject-input-package.json | Unpublished0.4.8 exact package/runtime hashes; remaining runtime acceptance gates |
+| acceptance/usb-hub-support-eject-input-package.json | Validated unpublished0.4.8 exact package/runtime hashes, ready for physical testing |
+| acceptance/usb-hub-support-eject-input-completion.json | Completed emulator-first candidate audit:61 cycles/30minutes, forced/unforced quarantine, startup, native load and loaded eject; physical acceptance unclaimed |
 | HUB-COLD-BOOT-GOAL.md | Active automatic startup recovery goal, explicit emulator model and multiple physical cold-boot acceptance gates |
 | releases/usb-hub-support-0.4.7.md | Published automatic hub recovery at power-on; one physical cold boot passes, second repetition pending |
 | acceptance/usb-hub-support-0.4.7-publication.json | Immutable accepted package, source tag, CI and anonymous catalog/package checks |

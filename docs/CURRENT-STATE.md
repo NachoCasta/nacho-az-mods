@@ -1,6 +1,6 @@
 # Current state
 
-## Active investigation: prolonged-session eject selector refusal
+## Unpublished0.4.8 candidate: reliable eject selector
 
 The owner reports selector input unavailable after extended playing, while hub
 sources remain functional. The owned emulator reproduces the exact banner with
@@ -41,11 +41,19 @@ FAT/HFS+ loading and waveform assertions, loaded whole-hub eject with both
 retained cache tickets and advancing engines, and native Link Off/On completion
 before each capture. A subsequent unforced SDK timing quarantine in that same
 normal process also opens touch selection successfully. These are emulator
-controls, not physical or hours-long acceptance. Exact-runtime fresh-load,
-individual eject, startup and extended-duration controls remain pending.
+controls, not physical or hours-long acceptance. The terminal duration control
+passes61 open/cancel cycles over1801.65 seconds after unforced SDK quarantine,
+without restart or unexpected removal requests. The exact candidate also passes
+modeled cold startup with FAT/HFS+ recovery, native USB fresh loading/engine
+advance/both graphs, and final individual FAT loaded eject. That final control
+confirms backing/alias removal, native/HFS+ retention, a phase2 cache ticket,
+advancing deck2 and both waveform assertions. Native unloading finishes at EEEE.
 The hardware package validates with unchanged helper/kernel assets; see the
 [candidate receipt](acceptance/usb-hub-support-eject-input-package.json).
 No0.4.8 release, catalog update or physical installation has occurred.
+The requested emulator-first candidate-preparation goal is complete; physical
+acceptance and the proposed fallback interaction remain for owner testing. See
+the [requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
 
 ## Published0.4.7: automatic hub recovery after cold boot
 

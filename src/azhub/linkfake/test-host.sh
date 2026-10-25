@@ -20,7 +20,7 @@ TEST_CC="$compiler" python3 ./test-source-media.py
 TEST_CC="$compiler" python3 ./test-source-announcement.py
 TEST_CC="$compiler" python3 ./test-source-mount-metadata.py
 python3 ./test-hub-startup.py
-TEST_CC="$compiler" AZ_SDK_INCLUDE="$sdk_include" python3 ./test-eject-selector-open.py
+SAN="$passes" TEST_CC="$compiler" AZ_SDK_INCLUDE="$sdk_include" python3 ./test-eject-selector-open.py
 for pass in $passes; do
     case "$pass" in
         plain) flags='-O2'; symbol='' ;;

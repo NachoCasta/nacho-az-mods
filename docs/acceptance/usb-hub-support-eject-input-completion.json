@@ -1,0 +1,41 @@
+{
+  "status": "complete for the requested emulator-first candidate preparation",
+  "version": "0.4.8",
+  "package_sha256": "a2d4edb2ba73619da88920d55a76879c8dbe54105ccb061d533ba416a651a7aa",
+  "emulator_runtime_sha256": "e29dacac07738a807e95a438836bedddcf96491a6724315388c5da32648acea5",
+  "hardware_runtime_sha256": "c35df90775b60c4bff2dbb70bc3606efd82825595bce8e1151152ce2c6953ff2",
+  "requirements": {
+    "diagnosis_and_negative_control": "Baseline exact banner with SDK quarantine; separate permanent health-latch control; historical physical cause remains unproven",
+    "deterministic_faults": "Eight real SDK timing strikes per callback, after-open ownership loss, next STOP touch opening without restart; hardware diagnostic build refuses compilation",
+    "transient_health": "Eight consecutive healthy valid reads required; missing callbacks/idle/CRC-invalid input cannot fabricate recovery; wrap/concurrency sanitizer controls pass",
+    "reliable_prolonged_selection": "Exact normal runtime, unforced quarantine,61 open/cancel cycles over1801.65seconds, same PID, no removal requests",
+    "ownership_and_refusals": "Healthy modal retains focus/release logic; touch requests no physical focus; missing panel/surface, held close and focus refusal covered; late/foreign events rejected",
+    "native_controls": "Healthy226-detent/BACK and next-native-detent controls; touch native-view closure and encoder controls; fresh native USB engine/waveform control",
+    "individual_loaded_eject": "Final exact FAT control: backing/alias absent, native/HFS retained, phase2 cache and advancing deck2, both waveform assertions",
+    "whole_hub_loaded_eject": "Two loaded sources removed, independent phase2 tickets and both advancing engines; native USB remains",
+    "metadata_and_independence": "Cold Source capture shows native first, ordered USB1/2, configured name/color; mixed libraries and independent retained tickets; server/cache implementation unchanged",
+    "pro_dj_link": "Native UI Off/On completion before each capture, same exact runtime and cached tracks; earlier mixed attached-source transition controls retained; no actual-CDJ claim",
+    "startup_recovery": "Exact candidate cold boot recovers explicit unbound-hub QEMU model without QMP replug; FAT/HFS mounts and acknowledgements verified",
+    "source_checks": {
+      "plain": 106,
+      "asan": 106,
+      "tsan": 106
+    },
+    "exact_candidate": "Only manifest/executable differ from0.4.7; all kernel/helper/assets unchanged; package/manifest/runtime hashes match; validator passes",
+    "device_and_publication_boundaries": "All new runtime operations owned-emulator only; final native EEEE preflight verified; no physical mutation, core replacement, release/tag/catalog update or push"
+  },
+  "limitations": [
+    "Historical physical incident cause not proven; elapsed SDK overruns do not identify CPU work versus scheduling/page faults",
+    "Touch fallback is proposed without claiming owner UI approval; encoder remains native after SDK quarantine",
+    "Thirty-minute repeated-operation emulator control is not hours-long physical acceptance or audio capture",
+    "Cold startup uses an explicit QEMU6.6 unbound-hub model, not actual4.4 depth rejection",
+    "Inherited mods USB FAT fixture remounts read-only at boot; local native loads still pass; no physical USB changes",
+    "No physical0.4.8 installation, actual-CDJ/phase-sync/eight-source hardware acceptance or publication"
+  ],
+  "physical_acceptance": "Not performed; deliverable is the prepared candidate",
+  "user_test": [
+    "Normal short STOP selection with encoder",
+    "Touch fallback during a prolonged session if filters stop",
+    "Individual and whole-hub loaded eject with audible playback confirmation"
+  ]
+}

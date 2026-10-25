@@ -97,5 +97,11 @@ physical focus. Source/sanitizer checks and package validation pass. An
 after-open injection exercises actual SDK quarantine and recovery through touch
 without process restart. A subsequent unforced quarantine on the exact normal
 runtime also opens the touch selector with both cached tracks still loaded.
-Fresh-load/individual eject, startup and extended-duration controls remain
-pending; no physical candidate was installed and no release was published.
+The final normal-runtime duration control passes61 open/cancel cycles over
+1801.65 seconds, without restart or new removal requests. Subsequent exact-runtime
+modeled startup, native USB loading/graphs/engine advance and longer FAT loaded
+individual eject/cache/graphs/engine controls pass. The host launcher explicitly
+passes its sanitizer selection to the actual-open coordinator; its10000-reopen
+controls pass in plain, ASan/UBSan and TSan. See the
+[requirement audit](acceptance/usb-hub-support-eject-input-completion.json).
+No physical candidate was installed and no release was published.

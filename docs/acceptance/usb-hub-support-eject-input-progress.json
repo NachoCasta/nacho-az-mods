@@ -1,5 +1,5 @@
 {
-  "status": "active: proposed fallback integrated, sanitizer suites pass,0.4.8 package validates; exact-runtime regressions/duration pending",
+  "status": "Emulator validation complete; exact unpublished0.4.8 candidate ready for physical testing",
   "published_baseline": "0.4.7",
   "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
   "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
@@ -232,14 +232,53 @@
         "local/favlab-clone/eject-input-normal-hfs-eject-selector.png"
       ]
     },
-    "extended_session": "Owned emulator30minute61cycle open/cancel control running; receipt local/eject-input/soak-normal.json. No result claimed yet.",
-    "pending": [
-      "Current exact-runtime startup recovery",
-      "Native USB fresh-load control",
-      "Extended-session terminal result",
-      "Final source/package audit"
-    ],
+    "extended_session": {
+      "status": "pass",
+      "cycles": 61,
+      "elapsed_seconds": 1801.65,
+      "pid": 142860,
+      "runtime_sha256": "e29dacac07738a807e95a438836bedddcf96491a6724315388c5da32648acea5",
+      "unexpected_removal_requests": 0,
+      "scope": "Owned emulator; unforced SDK quarantine; cached track at end; no audio captured",
+      "private_evidence": "local/eject-input/soak-normal.json"
+    },
+    "pending": [],
     "physical_installation": false,
-    "published": false
-  }
+    "published": false,
+    "cold_start": {
+      "status": "pass",
+      "pid": 620,
+      "model": "Owned QEMU6.6 hub driver unbound before init; not actual4.4 depth rejection",
+      "automatic_recovery": true,
+      "qmp_hotplug": false,
+      "private_evidence": "local/eject-input/check-coldboot.json"
+    },
+    "native_usb_control": {
+      "status": "pass",
+      "engine_advance_seconds": 1.720023,
+      "waveform_detail_pixels": 24707,
+      "waveform_overview_pixels": 8823,
+      "private_evidence": "local/eject-input/normal-native-load-engine.json"
+    },
+    "final_individual_loaded_eject": {
+      "status": "pass",
+      "source": "FAT hub USB1/content495",
+      "engine_advance_seconds": 1.687868,
+      "retained_cache_phase": 2,
+      "backing_and_alias_absent": true,
+      "native_usb_and_hfs_neighbor_retained": true,
+      "waveform_detail_pixels": 27418,
+      "waveform_overview_pixels": 8464,
+      "private_evidence": "local/eject-input/final-fat-individual-eject-engine.json",
+      "audio_captured": false
+    }
+  },
+  "limitations": [
+    "Historical physical incident cause not proven; elapsed SDK overruns do not identify CPU work versus scheduling/page faults",
+    "Touch fallback is proposed without claiming owner UI approval; encoder remains native after SDK quarantine",
+    "Thirty-minute repeated-operation emulator control is not hours-long physical acceptance or audio capture",
+    "Cold startup uses an explicit QEMU6.6 unbound-hub model, not actual4.4 depth rejection",
+    "Inherited mods USB FAT fixture remounts read-only at boot; local native loads still pass; no physical USB changes",
+    "No physical0.4.8 installation, actual-CDJ/phase-sync/eight-source hardware acceptance or publication"
+  ]
 }

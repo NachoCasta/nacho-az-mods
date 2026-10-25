@@ -1,6 +1,7 @@
 # Reliable hub eject input during prolonged sessions
 
-Status: active. Baseline release0.4.7 remains published and unchanged.
+Status: complete for emulator-first candidate preparation. Baseline release0.4.7
+remains published and unchanged;0.4.8 physical acceptance is not claimed.
 
 ## Required outcome
 
@@ -65,7 +66,7 @@ Existing production code remains unchanged. Do not promote this prototype or
 replace its safety gate with an unconditional open. Preserve this negative
 control when evaluating release ownership and encoder restoration.
 
-## Integrated candidate and remaining gates
+## Integrated candidate and completed emulator gates
 
 The SDK-only experiment above remains rejected. Unpublished candidate0.4.8
 instead keeps the normal encoder modal and its release behavior when filters
@@ -91,7 +92,17 @@ native Link Off/On and fresh HFS+ reconnect/individual removal have emulator
 evidence. The individual22second sample reached its end before advancement
 observation, so that individual measurement is not a playback pass.
 
-Remaining gates are the terminal extended-session result, current exact-runtime
-startup recovery and native USB fresh-load control, then a requirement audit and
-final candidate receipt. Do not confuse a running soak with a passed duration
-test. Physical installation/acceptance and publication have not occurred.
+The terminal duration control passes61 open/cancel cycles over1801.65 seconds in
+the same normal process after unforced SDK quarantine, with zero new removal
+requests. A subsequent cold startup verifies the exact runtime and automatic
+FAT/HFS+ recovery in the explicit unbound-hub QEMU model, without hotplug.
+Native USB fresh loading advances and renders both graphs. A final longer FAT
+individual loaded-source eject confirms removed backing/alias mounts, retained
+native/HFS+ neighbor, phase2 cache, advancing engine and both graphs. Final
+native unloading reaches EEEE. The22second sample's earlier failed advancement
+measurement remains recorded rather than being relabeled a pass.
+
+The [requirement audit](acceptance/usb-hub-support-eject-input-completion.json)
+and [exact package](acceptance/usb-hub-support-eject-input-package.json) close
+the preparation deliverable. Physical installation/acceptance, owner approval
+of the proposed fallback interaction and publication have not occurred.

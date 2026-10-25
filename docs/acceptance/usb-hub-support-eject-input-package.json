@@ -1,7 +1,7 @@
 {
-  "status": "Validated unpublished0.4.8 hardware package; final exact-runtime controls still in progress",
+  "status": "Validated unpublished0.4.8 exact candidate ready for physical testing; emulator gates complete",
   "version": "0.4.8",
-  "implementation_commit": "e574561",
+  "implementation_commit": "e574561eae0c62e47586f507182ee06d2f06b7ca",
   "rebuild_after_commit": "Both runtime outputs reproduce their exact recorded SHA256 values; source and packaged manifest hashes also match",
   "package_sha256": "a2d4edb2ba73619da88920d55a76879c8dbe54105ccb061d533ba416a651a7aa",
   "package_bytes": 696664,
@@ -40,5 +40,6 @@
   "published": false,
   "catalog_changed": false,
   "physical_deployed": false,
-  "private_package": "local/eject-input/hardware-candidate/mod/dist/usb-hub-support-0.4.8.azmod"
+  "private_package": "local/eject-input/hardware-candidate/mod/dist/usb-hub-support-0.4.8.azmod",
+  "validation": "Pinned SDK1.2.3 package validate: OK after terminal emulator controls; package hash unchanged"
 }
