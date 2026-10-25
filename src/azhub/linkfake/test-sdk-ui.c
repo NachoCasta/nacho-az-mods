@@ -72,6 +72,9 @@ static int fixture_init(const az_core_v1 *core) {
 static void fixture_tick(void) {
     static unsigned ticks;
     if (++ticks%30) return;
+    /* Exercise clipping/painting in both presentations. Real focus transitions
+     * are covered by the selector coordinator test and emulator controls. */
+    eject_touch_only=(ticks/30)&1;
     pthread_mutex_lock(&eject_lock);eject_active=1;pthread_mutex_unlock(&eject_lock);
     lf_core->surface_show(eject_surface,1);
     lf_core->surface_place(eject_surface,(az_rect){280,160,720,500});

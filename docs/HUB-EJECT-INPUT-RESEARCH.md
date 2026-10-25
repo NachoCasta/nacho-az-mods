@@ -88,8 +88,14 @@ retained own-source cache ticket at phase2 and advancing deck1 afterward.
 No audio was captured. An earlier absent sparse-fixture Abcs file produced the
 expected no-file error and is not a valid load regression.
 
-This is a proposed interaction fallback, not a full-encoder replacement or a
-production candidate. An optional owner question asks whether touch fallback is
-acceptable when core filters are unavailable. Production integration, stale
-events from multiple surfaces, healthy-mode preservation, broader regressions,
-extended-duration controls and package validation remain pending.
+This prototype is historical evidence, not a full-encoder replacement. The
+fallback is now integrated into an unpublished0.4.8 candidate. An optional owner
+question about the interaction remains unanswered; integration does not claim
+owner UI approval. Persistent surfaces reject foreign and late events, normal
+healthy input retains the existing encoder modal, and touch mode requests no
+physical focus. Source/sanitizer checks and package validation pass. An
+after-open injection exercises actual SDK quarantine and recovery through touch
+without process restart. A subsequent unforced quarantine on the exact normal
+runtime also opens the touch selector with both cached tracks still loaded.
+Fresh-load/individual eject, startup and extended-duration controls remain
+pending; no physical candidate was installed and no release was published.

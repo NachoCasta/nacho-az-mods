@@ -4,6 +4,11 @@
 #define HUB_EJECT_VIEW_H
 #include <stdatomic.h>
 #include "eject-presentation.h"
+/* UI-thread state. The touch surface never owns physical controls. */
+static int eject_touch_only;
+static int eject_surface_current(const void *owner) {
+    return !owner || *(az_surface *const *)owner==eject_surface;
+}
 /* Bound all text to the supplied surface, including unusually long UTF-8
  * labels and the small areas used by the SDK harness. No heap allocation. */
 static void eject_text_fit(az_draw *draw,az_rect area,int x,int y,const char *text,int size,uint32_t color) {
@@ -28,6 +33,12 @@ static void eject_text_fit(az_draw *draw,az_rect area,int x,int y,const char *te
 }
 static void eject_close(void) {
     pthread_mutex_lock(&eject_lock); eject_active=0; pthread_mutex_unlock(&eject_lock);
+    if (eject_touch_only) {
+        lf_core->surface_show(eject_surface,0);
+        eject_touch_only=0;
+        eject_closing=0;
+        return;
+    }
     /* Keep ownership through the initiating key's release. Otherwise SOURCE can
      * see the held click after focus returns and activate the core's menu row. */
     if (eject_keys_down) {
@@ -74,7 +85,7 @@ static void eject_box(az_draw *draw,az_rect area,int x,int y,int w,int h,uint32_
     else lf_core->fill_rect(draw,x,y,w,h,color);
 }
 static void eject_paint(az_draw *draw,az_rect area,void *unused) {
-    (void)unused;
+    if (!eject_surface_current(unused)) return;
     struct eject_inventory shown; int selected;
     pthread_mutex_lock(&eject_lock); shown=eject_shown; selected=eject_selected; int active=eject_active; pthread_mutex_unlock(&eject_lock);
     if (!active) return;
@@ -83,9 +94,11 @@ static void eject_paint(az_draw *draw,az_rect area,void *unused) {
     const uint32_t bg=0x151719,border=0x4b5055,text=0xf1f2f3,dim=0xa6acb1;
     eject_box(draw,area,area.x,area.y,area.w,area.h,bg,0);
     eject_box(draw,area,area.x,area.y,area.w,area.h,border,1);
-    eject_text_fit(draw,area,area.x+24,area.y+12,"Eject USB",24,text);
+    eject_text_fit(draw,area,area.x+24,area.y+12,
+        eject_touch_only ? "Eject USB - touch controls":"Eject USB",24,text);
     eject_text_fit(draw,area,area.x+24,area.y+52,
 #ifdef LF_SAFE_EJECT
+        eject_touch_only ? "Tap a USB, then Eject. Knob and BACK keep their normal functions.":
         "Select a USB to safely remove. Other USBs stay available.",
 #else
         "Interface preview - no devices will be unmounted",
@@ -112,19 +125,21 @@ static void eject_paint(az_draw *draw,az_rect area,void *unused) {
     }
     if (!shown.count) eject_text_fit(draw,area,area.x+24,area.y+94,"No USB sticks found on this hub",18,dim);
     eject_box(draw,area,area.x+16,area.y+438,area.w-32,1,border,0);
-    eject_text_fit(draw,area,area.x+30,area.y+450,"Cancel / BACK",19,dim);
+    eject_text_fit(draw,area,area.x+30,area.y+450,
+        eject_touch_only ? "Cancel":"Cancel / BACK",19,dim);
     eject_box(draw,area,area.x+400,area.y+446,area.w-424,36,0x30363c,0);
     eject_box(draw,area,area.x+400,area.y+446,area.w-424,36,border,1);
     eject_text_fit(draw,area,area.x+420,area.y+450,"Eject",19,text);
 }
 static int eject_input(const az_event *event,void *unused) {
-    (void)unused;
+    if (!eject_surface_current(unused)) return 1;
     /* X events already queued for a hidden surface can still be delivered by
      * the SDK. Never turn a late tap into a second removal request. */
     pthread_mutex_lock(&eject_lock);
     int active=eject_active;
     pthread_mutex_unlock(&eject_lock);
     if (eject_closing || !active) return 1;
+    if (eject_touch_only && event->kind!=AZ_EV_TAP) return 0;
     if (event->kind==AZ_EV_BACK) { eject_close(); lf_core->log(EJECT_ID,"eject-ui cancel"); return 1; }
     if (event->kind==AZ_EV_KNOB) {
         if (!(eject_ui_turns++%25))
@@ -140,6 +155,7 @@ static int eject_input(const az_event *event,void *unused) {
         return 1;
     }
     if (event->kind==AZ_EV_TAP) {
+        if (event->x<280 || event->x>=1000 || event->y<160 || event->y>=660) return 1;
         if (event->y>=600) {
             if (event->x<640) eject_close(); else eject_request_one();
             return 1;

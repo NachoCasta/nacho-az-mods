@@ -34,10 +34,11 @@ static uint64_t eject_raw_seen_ms, eject_edit_seen_ms;
 /* Both filters run on the same mixer bus thread, raw before editing. */
 static unsigned char eject_physical_counter, eject_physical_keys;
 static int eject_focus_owned;
+static int eject_touch_view;
 static uintptr_t eject_core_text_lo,eject_core_text_hi;
 static fn8 eject_native_select_row;
 static fn8 eject_native_encoder_observer;
-static az_surface *eject_surface;
+static az_surface *eject_surface,*eject_encoder_surface,*eject_touch_surface;
 static void (*eject_native_stop)(void *,uint64_t,uint64_t,unsigned char);
 static char eject_roots[2][PATH_MAX];
 static char eject_root_links[2][PATH_MAX];
@@ -286,13 +287,29 @@ static void eject_open(int port) {
         lf_core->log(EJECT_ID,"eject-ui focus-refused port=%d",port+1); return;
     }
     uint64_t now=eject_clock_ms();
-    if (!hub_input_health_ready(&eject_input_health) || !eject_panel_present()) {
-        lf_core->banner(EJECT_ID,"Hub selector input is unavailable. Restart the mod before retrying.",4000);
+    if (!eject_panel_present()) {
+        lf_core->banner(EJECT_ID,"Hub controls are unavailable. Try USB STOP again.",4000);
         lf_core->log(EJECT_ID,"eject-ui input-unavailable port=%d fault=%u panel=%d raw=%u edited=%u raw-age=%llu edit-age=%llu",
             port+1,hub_input_health_fault(&eject_input_health),eject_panel_present(),eject_seen_raw,eject_seen_edit,
             (unsigned long long)(now-eject_raw_seen_ms),
             (unsigned long long)(now-eject_edit_seen_ms)); return;
     }
+    if (eject_closing) {
+        lf_core->banner(EJECT_ID,"Release the current control before opening the USB selector again.",2500);
+        return;
+    }
+    /* A failed input filter cannot be re-registered at runtime. Touch input is
+     * a separate SDK surface path: leave physical controls with the native UI,
+     * rather than claiming a knob we cannot safely capture and release. */
+    if (eject_touch_only) eject_close();
+    eject_touch_only=!hub_input_health_ready(&eject_input_health);
+    if (eject_touch_only && !eject_touch_surface) {
+        eject_touch_only=0;
+        lf_core->banner(EJECT_ID,"Touch controls are unavailable in this session.",4000);
+        return;
+    }
+    eject_touch_view=lf_core->view();
+    eject_surface=eject_touch_only ? eject_touch_surface:eject_encoder_surface;
     pthread_mutex_lock(&eject_lock);
     hub_eject_refresh(&eject_shown,&eject_live,port,-1);
     eject_port=port; eject_selected=0; eject_active=1;
@@ -303,7 +320,14 @@ static void eject_open(int port) {
     __atomic_store_n(&eject_encoder_turn_calls,0,__ATOMIC_RELAXED);
     lf_core->surface_place(eject_surface,(az_rect){280,160,720,500});
     lf_core->surface_show(eject_surface,1);
-    eject_closing=0; eject_capture=1; eject_pin_guard=1;
+    eject_closing=0;
+    if (eject_touch_only) {
+        lf_core->surface_redraw(eject_surface);
+        lf_core->log(EJECT_ID,"eject-ui touch-selector port=%d count=%d fault=%u",
+            port+1,count,hub_input_health_fault(&eject_input_health));
+        return;
+    }
+    eject_capture=1; eject_pin_guard=1;
     if (!lf_core->surface_focus(eject_surface,1)) {
         eject_keys_down=0; eject_close();
         lf_core->banner(EJECT_ID,"Finish the current control dialog before selecting a hub USB.",3000);
@@ -316,6 +340,7 @@ static void eject_open(int port) {
 static void eject_tick(void) {
     if (!eject_enabled) return;
     uint64_t now=eject_clock_ms();
+    if (eject_touch_only && eject_active && lf_core->view()!=eject_touch_view) eject_close();
     __atomic_store_n(&eject_input_health.armed,1,__ATOMIC_RELEASE);
     unsigned raw=__atomic_load_n(&eject_raw_serial,__ATOMIC_RELAXED);
     unsigned edited=__atomic_load_n(&eject_edit_serial,__ATOMIC_RELAXED);
@@ -323,7 +348,7 @@ static void eject_tick(void) {
     if (edited!=eject_seen_edit) { eject_seen_edit=edited; eject_edit_seen_ms=now; }
     if (eject_capture && (!hub_input_health_ready(&eject_input_health) || !eject_panel_present())) {
         eject_keys_down=0; eject_discard_encoder=1; eject_close();
-        lf_core->banner(EJECT_ID,"Hub selector input stopped. Restart the mod before retrying.",4000);
+        lf_core->banner(EJECT_ID,"Knob input stopped. Press USB STOP again to use touch controls.",4000);
         lf_core->log(EJECT_ID,"eject-ui input observer stopped; ownership released");
     }
     if (eject_closing && (!eject_keys_down || eject_clock_ms()>=eject_close_deadline)) {
@@ -392,9 +417,15 @@ static int eject_init(void) {
     }
     if (!eject_core_text_lo || eject_core_text_hi<=eject_core_text_lo) return -79;
     az_surface_v1 surface={.size=sizeof surface,.layer=AZ_LAYER_TOP,.views=0x7f,
-        .on_paint=eject_paint,.on_input=eject_input};
-    eject_surface=lf_core->surface_create(EJECT_ID,&surface);
-    if (!eject_surface) return -65;
+        .on_paint=eject_paint,.on_input=eject_input,.user=&eject_encoder_surface};
+    eject_encoder_surface=lf_core->surface_create(EJECT_ID,&surface);
+    if (!eject_encoder_surface) return -65;
+    surface.layer=AZ_LAYER_OVER_EP147;
+    surface.user=&eject_touch_surface;
+    eject_touch_surface=lf_core->surface_create(EJECT_ID,&surface);
+    if (!eject_touch_surface)
+        lf_core->log(EJECT_ID,"eject-ui touch surface unavailable; normal input remains enabled");
+    eject_surface=eject_encoder_surface;
     if (lf_core->frame_filter(EJECT_ID,AZ_FILTER_RAW | (1u<<AZ_BUS_MIXER_IN),eject_raw_keys,NULL)) return -68;
     if (lf_core->frame_filter(EJECT_ID,1u<<AZ_BUS_MIXER_IN,eject_filter_keys,NULL)) return -69;
     lf_core->surface_place(eject_surface,(az_rect){280,160,720,500});

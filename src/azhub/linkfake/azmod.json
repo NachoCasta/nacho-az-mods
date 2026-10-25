@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,
@@ -11,8 +11,8 @@
   ],
   "hooks": true,
   "min_core": "1.2.3",
-  "summary": "Hub USB sources available at power-on, including HFS+ libraries.",
-  "description": "Connect up to eight USB sticks through a hub, including HFS+ rekordbox exports. Already-connected hubs recover automatically at power-on. USB numbers follow hub ports; native sources appear first, then hub sources in numeric order. Shows rekordbox names/colors and analyzed waveforms. Press USB STOP to select a stick or hold to eject the hub; wait for confirmation. Experimental Ethernet sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Large libraries may exceed sharing catalog limits. Exact firmware ep147-9e9454e357389ece, kernel4.4.194; core>=1.2.3.",
+  "summary": "USB hubs with startup recovery and reliable touch eject fallback.",
+  "description": "Connect up to eight USB sticks through a hub, including HFS+ exports. Hubs recover at power-on. USB numbers follow hub ports; native sources appear first, then hub sources in numeric order. Shows rekordbox names/colors and waveforms. Press USB STOP to select a stick or hold to eject the hub; wait for confirmation. If knob input stops, use touch controls without restarting. Experimental Ethernet sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Large libraries may exceed sharing limits. Exact firmware ep147-9e9454e357389ece, kernel4.4.194; core>=1.2.3.",
   "license": "GPL-3.0-only",
   "category": "tools"
 }

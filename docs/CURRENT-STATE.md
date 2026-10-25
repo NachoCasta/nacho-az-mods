@@ -27,9 +27,25 @@ SDK focus. It passes genuine forced SDK quarantine,50 open/cancel cycles, native
 view-change closure and loaded FAT eject with retained/advancing cache plus both
 waveform assertions. The native mods USB and HFS+ neighbor stay mounted. This is
 not hours-long or physical acceptance. The owner has an optional behavior-choice
-question pending; the fallback is not integrated into production or packaged.
+question pending; the fallback has now been integrated into an unpublished0.4.8
+candidate, without claiming owner approval of this interaction.
 Production callbacks now also reject late events for an inactive surface; its
 focused tests and SDK UI harness pass all sanitizer modes.
+
+The integrated candidate passes106 portable components in each plain,
+ASan/UBSan and TSan mode, both SDK UI presentations, and10000 faulted reopen
+coordinator cycles per sanitizer mode. A reproducible emulator-only injection
+also quarantines filters after a normal selector opens; the next STOP opens
+touch selection in the same process. The normal exact runtime passes mixed
+FAT/HFS+ loading and waveform assertions, loaded whole-hub eject with both
+retained cache tickets and advancing engines, and native Link Off/On completion
+before each capture. A subsequent unforced SDK timing quarantine in that same
+normal process also opens touch selection successfully. These are emulator
+controls, not physical or hours-long acceptance. Exact-runtime fresh-load,
+individual eject, startup and extended-duration controls remain pending.
+The hardware package validates with unchanged helper/kernel assets; see the
+[candidate receipt](acceptance/usb-hub-support-eject-input-package.json).
+No0.4.8 release, catalog update or physical installation has occurred.
 
 ## Published0.4.7: automatic hub recovery after cold boot
 

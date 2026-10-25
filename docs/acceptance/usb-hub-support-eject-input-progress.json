@@ -1,5 +1,5 @@
 {
-  "status": "active: touch fallback passes forced-quarantine prototype controls; behavior preference, production integration and candidate validation pending",
+  "status": "active: proposed fallback integrated, sanitizer suites pass,0.4.8 package validates; exact-runtime regressions/duration pending",
   "published_baseline": "0.4.7",
   "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
   "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
@@ -139,5 +139,107 @@
     "ASan_UBSan": "pass",
     "TSan": "pass",
     "SDK_UI_harness": "plain10/ASan8/TSan8 checks pass"
+  },
+  "production_integration": {
+    "strategy": "Normal encoder modal while input is healthy; lower-layer touch-only surface after filter observation failure, with native controls unowned",
+    "preference": "Proceeding with the recommended proposed fallback after the optional question remained unanswered; not claiming owner UI approval",
+    "source_checks": {
+      "portable_components_per_mode": 106,
+      "plain": "pass",
+      "ASan_UBSan": "pass",
+      "TSan": "pass",
+      "actual_selector_open_coordinator": "Three modes pass, including10000 faulted reopen cycles and focus/resource refusal",
+      "SDK_UI": "Both presentations, plain10/ASan8/TSan8 checks pass"
+    },
+    "hardware_package": "usb-hub-support-eject-input-package.json",
+    "runtime_regressions": "In progress; no physical installation"
+  },
+  "integrated_fault_after_open": {
+    "runtime_sha256": "305e6b68e2648dc8aa182595f743037f71acea98c4934c66801830e9390bd1d9",
+    "pid": 133263,
+    "reproducible_generator": "src/azhub/research/scripts/prepare-eject-input-fault.py --trigger open",
+    "result": "Normal modal opens first; real SDK quarantines raw/edit callbacks after injected overruns; modal releases ownership and next short STOP opens touch-only selector in same process",
+    "native_control": "After touch cancel the first clockwise detent selects the adjacent source as expected",
+    "private_evidence": [
+      "local/eject-input/fault-after-open-v1/activation.json",
+      "local/favlab-clone/eject-input-after-open-loss.png",
+      "local/favlab-clone/eject-input-after-open-touch.png",
+      "local/favlab-clone/eject-input-after-open-native-turn.png"
+    ]
+  },
+  "integrated_normal_initial": {
+    "runtime_sha256": "e29dacac07738a807e95a438836bedddcf96491a6724315388c5da32648acea5",
+    "pid": 142860,
+    "modal": "Normal selector opens with healthy callbacks;226 captured detents and BACK preserve native SOURCE selection; first following native detent advances one row",
+    "reconnect": "Owned QEMU FAT child removed/re-added; the legacy drive auto-removal required recreating its block backend from the same owned overlay; no parent/native USB replug",
+    "private_evidence": [
+      "local/eject-input/integrated-v1/activation.json",
+      "local/favlab-clone/eject-input-normal-after-100.png",
+      "local/favlab-clone/eject-input-normal-next-native-turn.png"
+    ]
+  },
+  "integrated_normal_regressions": {
+    "runtime_sha256": "e29dacac07738a807e95a438836bedddcf96491a6724315388c5da32648acea5",
+    "pid": 142860,
+    "mixed_load": "FAT Algo mas/content495 and HFS+ De Colores Preview/content33; detailed and overview waveform pixel assertions pass on both decks",
+    "whole_hub_loaded_eject": {
+      "targets": 2,
+      "result": "Both backing mounts and private aliases absent; native mods USB retained",
+      "cache": "Two independent retained phase2 tickets; observer confirms both engine playheads advance with unchanged process",
+      "audio_captured": false,
+      "private_evidence": [
+        "local/eject-input/normal-whole-hub-eject-engine.json",
+        "local/eject-input/normal-whole-hub-eject-mounts.txt"
+      ]
+    },
+    "native_link_cycle": {
+      "pid": 142860,
+      "runtime_sha256": "e29dacac07738a807e95a438836bedddcf96491a6724315388c5da32648acea5",
+      "controls": [
+        {
+          "mode": 0,
+          "epoch": 4,
+          "completion_before_capture": true,
+          "screenshot": "local/favlab-clone/eject-input-normal-cached-link-0.png",
+          "decks": "LLEE"
+        },
+        {
+          "mode": 1,
+          "epoch": 5,
+          "completion_before_capture": true,
+          "screenshot": "local/favlab-clone/eject-input-normal-cached-link-1.png",
+          "decks": "LLEE"
+        }
+      ],
+      "scope": "Native UI mode cycling after both hub sources ejected; caches remain loaded; no actual CDJ or captured audio"
+    },
+    "unforced_sdk_quarantine": {
+      "injected": false,
+      "fault_mask": 1,
+      "result": "SDK reports eight200us timing overruns on the normal exact runtime; next short STOP opens touch-only selector, same PID, both cached tracks still loaded",
+      "private_screenshot": "local/favlab-clone/eject-input-normal-real-quarantine.png",
+      "limitation": "Does not prove the cause of the historical physical incident or the reason the elapsed callback duration exceeded budget"
+    },
+    "fresh_hfs_reconnect_individual_eject": {
+      "preflight": "Native unload reached EEEE before loading the new populated sample",
+      "result": "HFS+ child reconnect restores favlab/USB2; fresh content33 loads and both waveform assertions pass; touch selects USB2 and eject succeeds with native USB retained",
+      "retained_ticket": "Deck2 epoch2/content33 media0x20200000602 phase2 refs1",
+      "engine_advance": "Not proven in this individual control:22second sample reached end before observer; follow-up play/CUE input did not move it",
+      "failed_observation": "First observer invocation used a nonexistent local binary filename; corrected exact ELF then verified retained ticket but failed advancement assertion",
+      "private_evidence": [
+        "local/eject-input/normal-hfs-individual-eject-engine.json",
+        "local/favlab-clone/eject-input-normal-hfs-reload.png",
+        "local/favlab-clone/eject-input-normal-hfs-eject-selector.png"
+      ]
+    },
+    "extended_session": "Owned emulator30minute61cycle open/cancel control running; receipt local/eject-input/soak-normal.json. No result claimed yet.",
+    "pending": [
+      "Current exact-runtime startup recovery",
+      "Native USB fresh-load control",
+      "Extended-session terminal result",
+      "Final source/package audit"
+    ],
+    "physical_installation": false,
+    "published": false
   }
 }

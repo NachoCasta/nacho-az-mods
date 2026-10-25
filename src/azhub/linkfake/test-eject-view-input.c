@@ -45,6 +45,8 @@ static void reset(void) {
     }
     eject_live=eject_shown;eject_selected=0;eject_port=1;eject_active=1;
     eject_closing=0;eject_capture=1;eject_focus_owned=1;eject_pin_guard=0;
+    eject_touch_only=0;
+    eject_surface=(az_surface *)(uintptr_t)1;
     eject_keys_down=0;eject_click_edges=0;eject_click_origin=0;
     submissions=hide_calls=focus_releases=collapse_calls=0;*submitted=0;
 }
@@ -73,5 +75,24 @@ int main(void) {
     assert(eject_input(&event,NULL)==1 && !submissions && hide_calls==1);
     reset();event=(az_event){.kind=AZ_EV_TAP,.x=400,.y=620};
     assert(eject_input(&event,NULL)==1 && !submissions && hide_calls==1 && focus_releases==1);
-    puts("eject view input: physical click proof, exact touch target, held close, late-event refusal, replacement-source refusal and cancel passed");
+    reset();
+    az_surface *previous=(az_surface *)(uintptr_t)2;
+    event=(az_event){.kind=AZ_EV_TAP,.x=800,.y=620};
+    assert(eject_input(&event,&previous)==1 && !submissions && eject_active);
+    event.x=1200;assert(eject_input(&event,NULL)==1 && !submissions && eject_active);
+    event.x=800;event.y=700;assert(eject_input(&event,NULL)==1 && !submissions && eject_active);
+    reset();eject_touch_only=1;eject_capture=0;eject_focus_owned=0;eject_keys_down=0x81;
+    for(int kind=AZ_EV_KNOB;kind<=AZ_EV_BACK;kind++) {
+        if(kind==AZ_EV_TAP) continue;
+        event=(az_event){.kind=kind,.dir=1};
+        assert(eject_input(&event,NULL)==0 && !submissions && eject_selected==0 && !focus_releases);
+    }
+    event=(az_event){.kind=AZ_EV_TAP,.x=850,.y=300};
+    assert(eject_input(&event,NULL)==1 && eject_selected==1);
+    event=(az_event){.kind=AZ_EV_TAP,.x=800,.y=620};
+    assert(eject_input(&event,NULL)==1 && submissions==1 && !strcmp(submitted,"sdc"));
+    assert(!focus_releases && !eject_capture && !eject_closing && hide_calls==1);
+    assert(eject_input(&event,NULL)==1 && submissions==1);
+    puts("eject view input: modal click proof/held close, touch fallback without focus, stale-held keys, queued/foreign/outside events, exact target, replacement refusal and cancel passed");
+    return 0;
 }
