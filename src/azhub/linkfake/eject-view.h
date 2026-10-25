@@ -119,7 +119,12 @@ static void eject_paint(az_draw *draw,az_rect area,void *unused) {
 }
 static int eject_input(const az_event *event,void *unused) {
     (void)unused;
-    if (eject_closing) return 1;
+    /* X events already queued for a hidden surface can still be delivered by
+     * the SDK. Never turn a late tap into a second removal request. */
+    pthread_mutex_lock(&eject_lock);
+    int active=eject_active;
+    pthread_mutex_unlock(&eject_lock);
+    if (eject_closing || !active) return 1;
     if (event->kind==AZ_EV_BACK) { eject_close(); lf_core->log(EJECT_ID,"eject-ui cancel"); return 1; }
     if (event->kind==AZ_EV_KNOB) {
         if (!(eject_ui_turns++%25))

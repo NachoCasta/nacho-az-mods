@@ -1,5 +1,5 @@
 {
-  "status": "active: partial production health recovery tested; permanent SDK quarantine remains unresolved",
+  "status": "active: touch fallback passes forced-quarantine prototype controls; behavior preference, production integration and candidate validation pending",
   "published_baseline": "0.4.7",
   "owner_report": "After extended use, short USB STOP displayed selector input unavailable while hub sources and playback remained functional; photo supplied",
   "historical_physical_cause": "Not proven; current process logs do not contain the reported incident",
@@ -79,5 +79,65 @@
     "quarantine": "Original200us/eight-strike test retained; quarantined filter stays disabled while proposed snapshot remains readable",
     "integration": "Publication modeled separately; actual core dispatcher/API/focus integration and mod runtime not validated",
     "deployed": false
+  },
+  "touch_fallback_prototype": {
+    "runtime_sha256": "df011d25e6364b9cf602059f6cbaa0a5520b038807e6c1973ea698e4584e36fa",
+    "pid": 102476,
+    "fault_injection": "Private emulator-only build intentionally exceeds200us in each of its raw/edit callbacks eight times; the unmodified SDK disables them normally",
+    "behavior": "Lower-layer touch surface requests no SDK focus and does not capture encoder/BACK; ordinary modal selector remains the proposed healthy-input mode",
+    "preference": "Optional user question pending; no production fallback feature or physical candidate deployed",
+    "opens_after_real_quarantine": true,
+    "view_change": "Native BROWSE switches the underlying view and the touch panel closes",
+    "native_encoder": "Native source selection advances while touch selection remains independent",
+    "loaded_eject": {
+      "source": "FAT hub USB1, Algo m\u00e1s content495",
+      "result": "safe-eject success sources0x1; FAT backing and alias absent, native mods USB and HFS+ neighbor retained",
+      "engine": "Exact-core observer confirms advancing deck1, unchanged PID and own retained cache phase2",
+      "audio_captured": false
+    },
+    "waveforms": {
+      "before": {
+        "detail_colored_pixels": 2762,
+        "overview_colored_pixels": 8847
+      },
+      "after_eject": {
+        "detail_colored_pixels": 14275,
+        "overview_colored_pixels": 8695
+      },
+      "both_views_asserted": true
+    },
+    "repeated_open_cancel": {
+      "runtime_sha256": "df011d25e6364b9cf602059f6cbaa0a5520b038807e6c1973ea698e4584e36fa",
+      "pid": 102476,
+      "cycles": 50,
+      "elapsed_seconds": 72.14,
+      "selector_opens": 50,
+      "unexpected_removal_requests": 0,
+      "restart": false,
+      "quarantine": "Both filters intentionally disabled by the real SDK overrun mechanism before testing",
+      "scope": "Repeated-operation control, not hours-long acceptance",
+      "audio_captured": false
+    },
+    "limitations": [
+      "Not hours-long acceptance",
+      "Initial sparse Abcs load failed with expected no-file error; valid populated Algo m\u00e1s was selected afterward and used for assertions",
+      "Running prototype predates the new late-event guard and proposed Cancel-only footer label"
+    ],
+    "private_evidence": [
+      "local/eject-input/touch-prototype-build/activation.json",
+      "local/eject-input/touch-loaded-eject-engine.json",
+      "local/eject-input/touch-repeat-50.json",
+      "local/eject-input/touch-integration-observation.txt",
+      "local/favlab-clone/eject-input-touch-quarantine-selector.png",
+      "local/favlab-clone/eject-input-touch-loaded-ejected.png"
+    ]
+  },
+  "late_surface_event_fix": {
+    "behavior": "Hidden/inactive production surface refuses late queued events, preventing a second removal submission",
+    "test": "New production-callback component covers stale clicks, touch identity, held close, queued taps, replacement-source refusal and cancel",
+    "plain": "pass",
+    "ASan_UBSan": "pass",
+    "TSan": "pass",
+    "SDK_UI_harness": "plain10/ASan8/TSan8 checks pass"
   }
 }

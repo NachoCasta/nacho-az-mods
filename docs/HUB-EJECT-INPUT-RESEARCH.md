@@ -69,3 +69,27 @@ bus dispatcher: full core and mod integration have not been validated.
 No custom core has been built or installed. Core replacement on the physical AZ
 is outside the existing USB Hub Support candidate-install authorization. Any
 such proposal needs a concrete reviewed build and a separate owner decision.
+
+## Mod-only touch fallback experiment
+
+A separate private emulator prototype retains the normal filters but forces
+eight overruns in each callback. The unmodified SDK quarantines both. Short USB
+STOP then opens a touch-only surface below core dialogs. This surface never
+requests SDK focus or captures encoder/BACK; its text explains that those controls
+keep their native functions. Native view changes close the panel. This avoids
+the held-release and encoder-freeze boundary by leaving those inputs unowned,
+rather than claiming exclusive ownership after the filters have failed.
+
+With the same process,50 open/cancel cycles pass in72.14 seconds without new
+removal requests. A populated FAT sample, Algo más/content495, loads with both
+waveforms and ejects through touch. Its backing and private alias disappear;
+the native mods USB and HFS+ neighbor remain. The exact-core observer sees the
+retained own-source cache ticket at phase2 and advancing deck1 afterward.
+No audio was captured. An earlier absent sparse-fixture Abcs file produced the
+expected no-file error and is not a valid load regression.
+
+This is a proposed interaction fallback, not a full-encoder replacement or a
+production candidate. An optional owner question asks whether touch fallback is
+acceptable when core filters are unavailable. Production integration, stale
+events from multiple surfaces, healthy-mode preservation, broader regressions,
+extended-duration controls and package validation remain pending.

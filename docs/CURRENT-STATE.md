@@ -21,6 +21,16 @@ but no framework integration or custom core deployment is validated. See the
 [goal](HUB-EJECT-INPUT-GOAL.md) and
 [progress](acceptance/usb-hub-support-eject-input-progress.json).
 
+A second private prototype instead offers a lower-layer touch panel when input
+filters are unavailable, leaving encoder/BACK with native UI and requesting no
+SDK focus. It passes genuine forced SDK quarantine,50 open/cancel cycles, native
+view-change closure and loaded FAT eject with retained/advancing cache plus both
+waveform assertions. The native mods USB and HFS+ neighbor stay mounted. This is
+not hours-long or physical acceptance. The owner has an optional behavior-choice
+question pending; the fallback is not integrated into production or packaged.
+Production callbacks now also reject late events for an inactive surface; its
+focused tests and SDK UI harness pass all sanitizer modes.
+
 ## Published0.4.7: automatic hub recovery after cold boot
 
 The owner reports that a hub connected before power-on needs reconnection.
