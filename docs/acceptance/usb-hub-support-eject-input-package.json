@@ -1,6 +1,8 @@
 {
   "status": "Validated unpublished0.4.8 hardware package; final exact-runtime controls still in progress",
   "version": "0.4.8",
+  "implementation_commit": "e574561",
+  "rebuild_after_commit": "Both runtime outputs reproduce their exact recorded SHA256 values; source and packaged manifest hashes also match",
   "package_sha256": "a2d4edb2ba73619da88920d55a76879c8dbe54105ccb061d533ba416a651a7aa",
   "package_bytes": 696664,
   "hardware_runtime_sha256": "c35df90775b60c4bff2dbb70bc3606efd82825595bce8e1151152ce2c6953ff2",

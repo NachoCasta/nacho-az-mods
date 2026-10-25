@@ -64,3 +64,34 @@ knob/BACK release state; its touch UP events do not prove button release.
 Existing production code remains unchanged. Do not promote this prototype or
 replace its safety gate with an unconditional open. Preserve this negative
 control when evaluating release ownership and encoder restoration.
+
+## Integrated candidate and remaining gates
+
+The SDK-only experiment above remains rejected. Unpublished candidate0.4.8
+instead keeps the normal encoder modal and its release behavior when filters
+are healthy. After an observation fault, short STOP opens a separate touch
+surface without requesting physical focus. Encoder and BACK retain their native
+functions; native view changes close the touch panel. This interaction is a
+proposed fallback, not an assertion of owner UI approval or full encoder support
+after SDK quarantine. Core timing limits and init-only registration are unchanged.
+
+Both forced after-open quarantine and a subsequent unforced quarantine on the
+normal exact emulator executable allow touch selection without process restart.
+Transient health faults separately recover only after eight consecutive valid
+healthy observations. Missing panel/surface resources, competing focus and
+held-close state retain explicit refusal paths. Late and foreign-surface events
+cannot submit another removal request.
+
+The source implementation is committed locally as `e574561`. Both runtime
+builds reproduce the recorded hashes. All106 portable components pass in each
+plain/ASan+UBSan/TSan mode; actual selector-open coordinator controls and both
+SDK UI presentations also pass. Package validation and diagnostic exclusion pass.
+Mixed FAT/HFS+ waveforms, loaded whole-hub retained cache/advancing engines,
+native Link Off/On and fresh HFS+ reconnect/individual removal have emulator
+evidence. The individual22second sample reached its end before advancement
+observation, so that individual measurement is not a playback pass.
+
+Remaining gates are the terminal extended-session result, current exact-runtime
+startup recovery and native USB fresh-load control, then a requirement audit and
+final candidate receipt. Do not confuse a running soak with a passed duration
+test. Physical installation/acceptance and publication have not occurred.
