@@ -4,6 +4,7 @@ Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |
 |---|---|
+| RMX-IGNITE-FEASIBILITY.md | Public USB send/return feasibility summary, published references and unresolved proof obligations |
 | releases/nachocasta-native-usb-names-0.1.0.md | Published standalone native naming release, exact compatibility and validation limits |
 | acceptance/native-usb-names-0.1.0-publication.json | Anonymous source/assets/catalog verification and successful release/catalog CI |
 | acceptance/native-usb-names-0.1.0-release-package.json | Release archive hashes and byte-identical physically tested executable |
