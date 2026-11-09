@@ -11,6 +11,9 @@ AZ through managed apply: private readiness and native announcement/query
 acknowledgment now succeed with eth0 still unaddressed. Owner confirmation of
 rendered Sources and fresh loading remains pending. See the
 [source visibility goal](HUB-SOURCE-VISIBILITY-GOAL.md).
+Published as [USB Hub Support 0.4.9](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.9);
+the exact package and runtime hashes, source CI and anonymous download checks are
+recorded in the [publication record](acceptance/usb-hub-support-0.4.9-publication.json).
 
 ## Published0.4.8: reliable eject selector
 

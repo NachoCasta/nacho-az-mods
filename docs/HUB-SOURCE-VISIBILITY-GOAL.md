@@ -30,7 +30,7 @@ Raw local diagnostics and the exact USB package remain ignored under
 
 The final 0.4.9 runtime is
 `2c45d96a1bd160fe00fbe516edebbf135841952b68a6dd341ba68cc2a38ae48f`.
-The unpublished package SHA256 is
+The published package SHA256 is
 `d73f51370565563483c051ac19378abe749030314e4f6e8d8cbe2ab5b57e9a57`.
 The native completed mode task bootstraps the existing network-change operation
 when its observed IPv4 is zero and no status template exists. Only that operation's
@@ -95,3 +95,7 @@ No public catalog, release or repository publication was changed.
 The owner requested push and publication after the instrumented physical recovery.
 This authorizes the release and catalog update, without constituting a report of
 physical screen/load acceptance. The exact tested package remains unchanged.
+
+The release and catalog are now published as [0.4.9](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.9).
+See the [publication record](acceptance/usb-hub-support-0.4.9-publication.json) for
+public asset/source checks and CI. Physical screen/load confirmation remains open.

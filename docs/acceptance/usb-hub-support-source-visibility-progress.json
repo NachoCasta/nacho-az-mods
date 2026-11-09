@@ -73,5 +73,12 @@
       "eight-source",
       "prolonged-session hardware"
     ]
+  },
+  "publication": {
+    "authorized_by_owner": true,
+    "version": "0.4.9",
+    "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.9",
+    "exact_package_unchanged": true,
+    "owner_ui_acceptance_still_pending": true
   }
 }

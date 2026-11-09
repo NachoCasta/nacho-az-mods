@@ -1,0 +1,49 @@
+{
+  "version": "0.4.9",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.9",
+  "source_commit": "576587ae5406b0cf244097f9ac2154373a7beb89",
+  "tag_object": "c9f4a30b02e618fdbb1b32768217ecb15a4ecad5",
+  "package_sha256": "d73f51370565563483c051ac19378abe749030314e4f6e8d8cbe2ab5b57e9a57",
+  "runtime_sha256": "2c45d96a1bd160fe00fbe516edebbf135841952b68a6dd341ba68cc2a38ae48f",
+  "anonymous_verification": {
+    "assets": [
+      {
+        "name": "usb-hub-support-0.4.9.azmod",
+        "status": 200,
+        "size": 711142,
+        "sha256": "d73f51370565563483c051ac19378abe749030314e4f6e8d8cbe2ab5b57e9a57"
+      },
+      {
+        "name": "usb-hub-support-0.4.9-icon.png",
+        "status": 200,
+        "size": 945,
+        "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+      }
+    ],
+    "source_manifest_verified": true,
+    "canonical_catalog_version": "0.4.9",
+    "native_usb_names_preserved": true
+  },
+  "source_ci_run": 42538330563,
+  "source_ci_conclusion": "success",
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "catalog_commit": "6b98759ed0d7432218060e5eed56cf0086d42e80",
+  "catalog_ci_conclusion": "success",
+  "sdk_ref": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "compiler": "Preserved ARM64 SDK GCC7.5.0/glibc2.27; explicit QEMU userspace subprocess wrapper",
+  "accepted_package_unchanged": true,
+  "assets_replaced": false,
+  "release_tag_moved": false,
+  "catalog_download_check": "Pinned official azmod-pack repo check NachoCasta/nacho-az-mods --download passes and identifies0.4.9",
+  "screenshots": "Existing approved0.4.5 preview URLs retained; no new screenshot uploads",
+  "physical_scope": "Exact mapped executable active on core1.2.8. Template1152, private readiness, source mount and native announcement/query acknowledgment verified with no Ethernet IPv4. Owner screen/load acceptance remains pending; publication request is not counted as physical UI acceptance.",
+  "emulator_scope": "Exact final runtime: loopback-only app namespace startup with late discovery, Sources/browsing, fresh deck loads and both waveform views, completed native Link On/Off with loaded deck retained, loaded touch eject/reconnect and native USB retention; negative native ingress control rejected. Audio advance and actual-CDJ acceptance unclaimed.",
+  "catalog_ci_run": 42538578206,
+  "catalog_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  }
+}
