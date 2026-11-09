@@ -1,8 +1,9 @@
 # Research map
 
 Completed recovery goal: [Wi-Fi-present source startup recovery](HUB-SOURCE-STARTUP-RECOVERY-GOAL.md).
-Exact unpublished0.4.11 [candidate evidence](acceptance/usb-hub-support-source-startup-recovery-candidate.json)
+Exact0.4.11 [acceptance evidence](acceptance/usb-hub-support-source-startup-recovery-candidate.json)
 and [release notes](releases/usb-hub-support-0.4.11.md).
+[Publication record](acceptance/usb-hub-support-0.4.11-publication.json).
 
 Current UX work: [persistent eject feedback](HUB-EJECT-FEEDBACK-GOAL.md).
 

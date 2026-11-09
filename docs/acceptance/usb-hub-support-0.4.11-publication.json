@@ -1,0 +1,40 @@
+{
+  "version": "0.4.11",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.11",
+  "source_commit": "0c45033da848b3d37f6982198f5181b10892d701",
+  "tag_object": "e574e5e1904f1c1575f8f8f99491f9362f3f7e68",
+  "package_sha256": "7039202d06ea4a2499ee6d240fc998c8ca085dd9308fdcaf51c4153c8379060f",
+  "runtime_sha256": "02fd149b23a13a1d8a32383694b24b8137ead89ca6d5675edb644b795f9778c2",
+  "anonymous_verification": {
+    "assets": [
+      {
+        "name": "usb-hub-support-0.4.11.azmod",
+        "status": 200,
+        "size": 711728,
+        "sha256": "7039202d06ea4a2499ee6d240fc998c8ca085dd9308fdcaf51c4153c8379060f"
+      },
+      {
+        "name": "usb-hub-support-0.4.11-icon.png",
+        "status": 200,
+        "size": 945,
+        "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+      }
+    ],
+    "source_manifest_verified": true
+  },
+  "source_ci_run": 42577670360,
+  "source_ci_conclusion": "success",
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "sdk_ref": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "compiler": "Preserved ARM64 SDK GCC7.5/glibc2.27, explicit QEMU userspace wrapper",
+  "accepted_package_unchanged": true,
+  "assets_replaced": false,
+  "release_tag_moved": false,
+  "physical_scope": "Exact0.4.11 managed activation on firmware ep147-9e9454e357389ece, kernel4.4.194, core1.2.8; CAMI ready and announced/queried; owner explicitly confirms Sources/browsing/fresh loading work. Prior eject UX accepted. Previous suspected crash remains unproven.",
+  "emulator_scope": "Bounded missed-event old/fixed Wi-Fi control, exact ordinary-runtime Wi-Fi/late arrival/Link/load/waveforms/eject/reconnect, usable wired and instrumented no-network controls. No actual-CDJ/long-session acceptance inferred.",
+  "screenshots": "Existing approved0.4.5 URLs retained; no new images uploaded",
+  "catalog_verification": "Pending push and anonymous full-catalog download check"
+}

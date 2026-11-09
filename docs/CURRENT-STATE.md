@@ -1,6 +1,6 @@
 # Current state
 
-## Accepted0.4.11 candidate: source startup recovery with Wi-Fi present
+## Release0.4.11: source startup recovery and persistent eject feedback
 
 The owner accepts the0.4.10 eject UI, then confirms a freshly reconnected,
 mounted hub library still missing from Sources. Read-only native state finds
@@ -11,7 +11,10 @@ control and ordinary-runtime Wi-Fi startup, late arrival, loading, Link and
 individual loaded-eject checks. Full sanitizer/SDK gates pass. After the owner restarted the AZ, the same
 0.4.10 failure was observed again. Exact0.4.11 is now active through managed
 apply: CAMI reaches readiness and announcement/query acknowledgment. The owner confirms physical Sources and fresh loading work. The recovery goal
-is complete;0.4.11 remains unpublished and no prior crash cause is proven.
+is complete; no prior crash cause is proven.
+Published as [USB Hub Support0.4.11](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.11).
+Exact assets and CI are recorded in the
+[publication record](acceptance/usb-hub-support-0.4.11-publication.json).
 See the [current recovery goal](HUB-SOURCE-STARTUP-RECOVERY-GOAL.md).
 
 ## Candidate0.4.10: persistent eject feedback

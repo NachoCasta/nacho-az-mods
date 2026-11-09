@@ -27,13 +27,13 @@
     {
       "id": "usb-hub-support",
       "name": "USB Hub Support",
-      "version": "0.4.9",
+      "version": "0.4.11",
       "author": "NachoCasta",
-      "summary": "USB hubs with offline source recovery and reliable touch eject.",
-      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.9/usb-hub-support-0.4.9-icon.png",
-      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.9/usb-hub-support-0.4.9.azmod",
-      "sha256": "d73f51370565563483c051ac19378abe749030314e4f6e8d8cbe2ab5b57e9a57",
-      "size": 711142,
+      "summary": "USB hubs with source recovery without Ethernet and clear eject progress.",
+      "icon": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.11/usb-hub-support-0.4.11-icon.png",
+      "package": "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.11/usb-hub-support-0.4.11.azmod",
+      "sha256": "7039202d06ea4a2499ee6d240fc998c8ca085dd9308fdcaf51c4153c8379060f",
+      "size": 711728,
       "firmware": [
         "ep147-9e9454e357389ece"
       ],
@@ -43,7 +43,7 @@
       "category": "tools",
       "license": "GPL-3.0-only",
       "min_core": "1.2.3",
-      "description": "Connect up to eight USB sticks through a hub, including HFS+ exports. Hub sources work without Ethernet and recover after power-on. USB numbers follow hub ports, with native sources first. Shows rekordbox names/colors and waveforms. Press USB STOP to select a stick or hold to eject the hub; wait for confirmation. Touch controls remain available if knob input stops. Experimental Ethernet sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Large libraries may exceed sharing limits. Exact firmware ep147-9e9454e357389ece, kernel4.4.194; core>=1.2.3.",
+      "description": "Connect up to eight USB sticks through a hub, including HFS+. Hub sources work without Ethernet and recover at power-on. Native sources appear first, then numbered hub ports. Shows rekordbox names/colors and waveforms. Press USB STOP to select a stick or hold to eject the hub. The eject panel stays visible until safe removal or failure. Use touch if knob input stops. Experimental Ethernet sharing; actual CDJs and Wi-Fi sharing remain unvalidated. Large libraries may exceed sharing limits. Requires firmware ep147-9e9454e357389ece, kernel4.4.194 and core>=1.2.3.",
       "assets_kb": 421,
       "screenshots": [
         "https://github.com/NachoCasta/nacho-az-mods/releases/download/usb-hub-support-0.4.5/usb-hub-support-0.4.5-shot1.png",

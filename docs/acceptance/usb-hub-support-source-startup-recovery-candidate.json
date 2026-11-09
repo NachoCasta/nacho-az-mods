@@ -55,7 +55,7 @@
     "final_state": "Wi-Fi fixture restored, Ethernet unaddressed/no carrier, exact normal candidate active, framework apply done, decksEEEE"
   },
   "physical_candidate": "Exact0.4.11 active on the physical AZ through normal managed apply",
-  "publication": "Not authorized; public0.4.9 unchanged",
+  "publication": "Owner authorized publication after physical acceptance; exact accepted package published as0.4.11. See usb-hub-support-0.4.11-publication.json.",
   "physical_installation": {
     "boot_id": "aad2e521-1b2a-4569-b2bd-52f5dd28c12c",
     "preflight_pid": 5469,
@@ -94,6 +94,6 @@
     "implementation": "Scoped native lifecycle hooks preserve observed properties and OS/saved settings; fallback peers and local subnet consistent, usable wired policy retained. Independent servers/SQL/tagged caches and accepted eject UX retained.",
     "validation": "Full portable/SDK sanitizer gates, pinned package validation, exact ordinary-runtime startup/late-arrival/reconnect/Link/browser/load/waveform/individual/whole-hub eject controls; wired and instrumented no-network controls.",
     "hardware": "Exact USB/staged/approved/mapped SHA matches; backed-up rollback/data, target-only locked atomic approval, normal managed apply on empty decks. Source readiness/announcement/query success and explicit owner Sources/loading acceptance.",
-    "limits": "No physical strict already-observed-Wi-Fi timing repetition, broader hardware/long-session/actual-CDJ acceptance or prior crash cause inferred. Publication not authorized."
+    "limits": "No physical strict already-observed-Wi-Fi timing repetition, broader hardware/long-session/actual-CDJ acceptance or prior crash cause inferred. Publication subsequently authorized and recorded separately."
   }
 }
