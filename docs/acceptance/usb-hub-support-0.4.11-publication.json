@@ -20,7 +20,9 @@
         "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
       }
     ],
-    "source_manifest_verified": true
+    "source_manifest_verified": true,
+    "canonical_catalog_version": "0.4.11",
+    "native_usb_names_preserved": true
   },
   "source_ci_run": 42577670360,
   "source_ci_conclusion": "success",
@@ -36,5 +38,12 @@
   "physical_scope": "Exact0.4.11 managed activation on firmware ep147-9e9454e357389ece, kernel4.4.194, core1.2.8; CAMI ready and announced/queried; owner explicitly confirms Sources/browsing/fresh loading work. Prior eject UX accepted. Previous suspected crash remains unproven.",
   "emulator_scope": "Bounded missed-event old/fixed Wi-Fi control, exact ordinary-runtime Wi-Fi/late arrival/Link/load/waveforms/eject/reconnect, usable wired and instrumented no-network controls. No actual-CDJ/long-session acceptance inferred.",
   "screenshots": "Existing approved0.4.5 URLs retained; no new images uploaded",
-  "catalog_verification": "Pending push and anonymous full-catalog download check"
+  "catalog_verification": "Pinned official azmod-pack repo check NachoCasta/nacho-az-mods --download passes. Anonymous public HEAD identifies0.4.11 and accepted SHA; Native USB Names and existing approved screenshot URLs unchanged.",
+  "catalog_commit": "39a0bc09bd695c10d8dd9887b559916f985b2c2d",
+  "catalog_ci_run": 42578289307,
+  "catalog_ci_conclusion": "success",
+  "catalog_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  }
 }
