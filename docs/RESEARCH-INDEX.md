@@ -1,5 +1,7 @@
 # Research map
 
+Current investigation: [hub source visibility recovery](HUB-SOURCE-VISIBILITY-GOAL.md).
+
 Read CURRENT-STATE.md first. Then:
 
 | Resource | Purpose |

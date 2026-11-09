@@ -50,6 +50,9 @@ static int public_runtime_drain(unsigned slot);
 #include "public-mod-emulator.h"
 #undef HUB_PUBLIC_MOD_REPORT
 #endif
+#ifdef LF_SAFE_EJECT
+#include "local-transport-native.h"
+#endif
 #include "discovery.h"
 #include "kernel-asset.h"
 #include "usb-presence.h"
@@ -135,6 +138,7 @@ static void community_refresh_presence(const char *config) {
 }
 static void community_discovery_poll(void) {
     community_enable_internal_link();
+    hub_refresh_peer_labels();
     if (!getenv("LINKFAKE_AUTODISCOVER")) return;
 #ifdef LF_SAFE_EJECT
     pthread_mutex_lock(&safe_source_mutex);
@@ -249,6 +253,9 @@ static int community_init(const az_core_v1 *core) {
 #ifdef LF_EJECT_UI
     eject_result=eject_install_hooks();
     if (eject_result) return community_abort(eject_result);
+#endif
+#ifdef LF_SAFE_EJECT
+    hub_local_transport_install();
 #endif
     probe_private_admission_install();
     if (lf_hook_failures) return community_abort(-36);

@@ -1,0 +1,77 @@
+{
+  "status": "Exact candidate active on physical AZ; instrumented transport recovery passed; owner UI/load acceptance pending",
+  "physical_runtime_sha256": "c35df90775b60c4bff2dbb70bc3606efd82825595bce8e1151152ce2c6953ff2",
+  "baseline": "Source detected, present and pending; template zero and member not ready, no UDP50002 listener; owner Link Off/On does not recover it.",
+  "baseline_reversal": "Restoring original addressed Ethernet interface and restarting the empty emulator restores template, readiness and acknowledgment. Dummy-address-only restoration was insufficient and is not counted as a pass.",
+  "prototype_v1": "Rejected: constructor-only hook does not run when native zero address never changes.",
+  "prototype_v2": {
+    "sha256": "08d42e4e1ddbb9a704562106dc62694627e1692fd28e291024a586c01dcfcbad",
+    "compiler": "Preserved az-mods-sdk:1, GCC7.5.0 and archived pinned SDK header",
+    "hardware_kernel_refusal": true,
+    "emulator_pid": 49282,
+    "trigger": "Completed native mode task invokes the native network-change operation with a scoped temporary loopback address constructor override.",
+    "native_saved_settings_changed": false,
+    "interface_addresses_assigned_by_mod": false,
+    "external_Link_transmission_during_fallback": "Blocked in mod native-send wrapper; on-wire capture still required.",
+    "results": [
+      "63 hooks loaded",
+      "No eth0 IPv4 remains assigned",
+      "Status template1152 bytes received",
+      "Private member7 ready and library announcement acknowledged",
+      "Rendered HUB USB1 source and populated artist/album/track browser",
+      "Fresh deck1 load of existing test audio fixture",
+      "Rendered detailed and overview waveforms"
+    ],
+    "limitations": [
+      "Older emulator renotifier also announces the hub fixture as native USB2; must correct fixture and repeat independent-source controls.",
+      "No Link On/Off prototype regression yet",
+      "Late hub arrival and absence of every non-loopback IPv4 not yet covered",
+      "No physical candidate build, install or acceptance"
+    ]
+  },
+  "final_candidate": {
+    "version": "0.4.9",
+    "runtime_sha256": "2c45d96a1bd160fe00fbe516edebbf135841952b68a6dd341ba68cc2a38ae48f",
+    "package_sha256": "d73f51370565563483c051ac19378abe749030314e4f6e8d8cbe2ab5b57e9a57",
+    "host_sanitizers": [
+      "plain",
+      "ASan/UBSan",
+      "TSan"
+    ],
+    "offline_emulator_pid": 152828,
+    "checks": [
+      "loopback-only startup with late library discovery",
+      "Sources and populated library",
+      "fresh deck1 load and both waveform views",
+      "native Link On/Off completed with loaded deck retained",
+      "loaded touch eject, backing/alias removed, native USB retained",
+      "reconnect and fresh deck2 load with both waveform views",
+      "negative native ingress rejected; member7 announcement acknowledged"
+    ],
+    "physical": {
+      "pid": 311725,
+      "core": "1.2.8",
+      "activation": "framework Community Mods apply; done; empty decks",
+      "runtime_hash_matches_usb_stage_mapping": true,
+      "approval": "USB backup, exclusive framework lock, exact USB/staged SHA, unrelated entries preserved, atomic rename",
+      "template_bytes": 1152,
+      "link_ready": 1,
+      "mounted": 1,
+      "present": 1,
+      "notify_pending": 0,
+      "announced_at": 1794174456,
+      "queried_at": 1794174457,
+      "fallback_active": 1,
+      "native_link_mode": 0,
+      "eth0_ipv4": false,
+      "owner_ui_and_load": "pending"
+    },
+    "unclaimed": [
+      "audio advance",
+      "physical carrier equivalence",
+      "actual-CDJ",
+      "eight-source",
+      "prolonged-session hardware"
+    ]
+  }
+}

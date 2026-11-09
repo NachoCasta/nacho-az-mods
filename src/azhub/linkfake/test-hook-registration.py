@@ -15,6 +15,7 @@ SDK = os.environ.get('AZ_SDK_INCLUDE', '../../azmod')
 INSTALLERS = {
     'hub_info_directory_install': {0x1978970: 'hub_info_directory_entry'},
     'probe_install': {0xef05c8: 'probe_parse'},
+    'hub_local_transport_install': {0x2479b90: 'hub_local_address'},
     'probe_private_admission_install': {0x13df908: 'probe_network_snapshot', 0x13f22b8: 'probe_operate'},
     'probe_library_ownership_install': {0xf00de0: 'probe_message_destroy', 0xeee540: 'probe_handshake'},
     'probe_mode_recovery_install': {0x140a088: 'probe_mode_complete', 0x1408ef0: 'probe_mode_request', 0x13fa7a8: 'probe_mode_network'},

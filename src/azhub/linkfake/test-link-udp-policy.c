@@ -3,6 +3,12 @@
 #include "link-udp-policy.h"
 int main(void) {
     uint8_t p[1152]={0};memcpy(p,"Qspt1WmJOL",10);
+    assert(probe_udp_local_only_reject(p,sizeof p,1,0));
+    assert(!probe_udp_local_only_reject(p,sizeof p,1,1));
+    assert(!probe_udp_local_only_reject(p,sizeof p,0,0));
+    assert(!probe_udp_local_only_reject(p,9,1,0));
+    assert(!probe_udp_local_only_reject(NULL,sizeof p,1,0));
+    p[0]='!';assert(!probe_udp_local_only_reject(p,sizeof p,1,0));p[0]='Q';
     for (unsigned member=7;member<=8;member++) {
         p[10]=6;p[0x24]=member;p[0x2c]=127;p[0x2d]=77;p[0x2e]=0;p[0x2f]=member;
         assert(!probe_udp_reject(p,54,50000,member));

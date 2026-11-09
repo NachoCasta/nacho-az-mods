@@ -10,6 +10,12 @@
  * Returns 1 to reject. Other protocol formats need a separate audit; this
  * function is deliberately not a complete PRO DJ LINK parser/firewall.
  */
+/* Recovery may open the native IPv4 listeners without an external interface.
+ * In that state protocol traffic must remain on kernel-proven loopback ingress.
+ * This supplements, rather than replaces, private sender-tuple provenance. */
+static int probe_udp_local_only_reject(const uint8_t *p,size_t size,int local_only,int local_ingress) {
+    return local_only && p && size>=10 && !memcmp(p,"Qspt1WmJOL",10) && !local_ingress;
+}
 static int probe_udp_private_number(unsigned n) { return n==7 || n==8; }
 static int probe_udp_private_ip(const uint8_t *ip) {
     return ip[0]==127 && ip[1]==77 && ip[2]==0 && probe_udp_private_number(ip[3]);

@@ -147,6 +147,19 @@ static void lf_log(const char *fmt, ...) {
 static unsigned char hub_default_settings[8]={1,1,1,1,1,1,1,1};
 static _Atomic uint32_t hub_observed_address;
 static uint32_t hub_peer_ips[2];
+static int hub_local_transport_only;
+/* Discovery owns refresh; receive wrappers only read cached atomic labels.
+ * The labels never assign an address to any interface. */
+static int hub_refresh_peer_labels(void) {
+    uint32_t peers[2];
+    if (!hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),peers)) {
+        if (!__atomic_load_n(&hub_local_transport_only,__ATOMIC_ACQUIRE))
+            return __atomic_load_n(&hub_peer_ips[0],__ATOMIC_ACQUIRE)!=0;
+        peers[0]=htonl(0x7f4d0007u);peers[1]=htonl(0x7f4d0008u);
+    }
+    for (unsigned i=0;i<2;++i) __atomic_store_n(&hub_peer_ips[i],peers[i],__ATOMIC_RELEASE);
+    return 1;
+}
 
 static struct fake *fake_by_ip(struct in_addr a) {
     for (int i = 0; i < nfakes; i++)
@@ -393,7 +406,8 @@ static void *injector(void *arg) {
  * Check packet signature as well as address: ordinary Internet traffic passes. */
 static int foreign_link_packet(const void *data,size_t size,const struct sockaddr *peer,socklen_t length) {
     const struct sockaddr_in *a=as_in(peer,length);
-    return lf_runtime_ready() && getenv("LINKFAKE_LOCAL_ONLY") && a && size>=10 &&
+    return lf_runtime_ready() && (getenv("LINKFAKE_LOCAL_ONLY") ||
+           __atomic_load_n(&hub_local_transport_only,__ATOMIC_ACQUIRE)) && a && size>=10 &&
            !memcmp(data,MAGIC,10) && (ntohl(a->sin_addr.s_addr)>>24)!=127;
 }
 ssize_t sendto(int fd, const void *buf, size_t n, int flags, const struct sockaddr *to, socklen_t tl) {
@@ -471,7 +485,7 @@ static void fix_source(struct sockaddr *sa, socklen_t len) {
     struct sockaddr_in *a = (struct sockaddr_in *)as_in(sa, len);
     if (!a || a->sin_addr.s_addr != htonl(INADDR_LOOPBACK)) return;
     struct fake *f = fake_by_port(a->sin_port);
-    if (f) a->sin_addr.s_addr = hub_peer_ips[f->player-7];
+    if (f) a->sin_addr.s_addr = __atomic_load_n(&hub_peer_ips[f->player-7],__ATOMIC_ACQUIRE);
 }
 
 #include "link-udp-ingress.h"
@@ -1138,7 +1152,7 @@ static int linkfake_load_config(void) {
             static const int slots[]={3,7,3,7,8,8,2,2};
             f->player=players[parsed]; f->slot=slots[parsed];
             if (!hub_source_port_available(f->player,f->slot,physical_port)) continue;
-            if (!hub_peer_ips[0] && !hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),hub_peer_ips)) {
+            if (!__atomic_load_n(&hub_peer_ips[0],__ATOMIC_ACQUIRE) && !hub_refresh_peer_labels()) {
                 /* Interface discovery can finish after mod init. Retry on the
                  * normal poll without publishing unusable fixed-subnet peers. */
                 continue;

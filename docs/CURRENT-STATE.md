@@ -1,5 +1,17 @@
 # Current state
 
+## Release0.4.9: hub sources without Ethernet
+
+Read-only physical evidence rules out a missing SQL library for CAMI. The source
+was admitted but awaited native private-member readiness and a status template.
+The exact 0.4.9 candidate passes offline emulator Sources/browsing/loading, both
+waveform views, native Link mode changes and loaded eject/reconnect, plus all
+portable and SDK sanitizer gates. The exact candidate is active on the physical
+AZ through managed apply: private readiness and native announcement/query
+acknowledgment now succeed with eth0 still unaddressed. Owner confirmation of
+rendered Sources and fresh loading remains pending. See the
+[source visibility goal](HUB-SOURCE-VISIBILITY-GOAL.md).
+
 ## Published0.4.8: reliable eject selector
 
 The owner reports selector input unavailable after extended playing, while hub

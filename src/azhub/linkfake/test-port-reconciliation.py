@@ -31,12 +31,14 @@ harness=r"""
 #define lf_log(...) ((void)0)
 """+fake+r"""
 static struct fake fakes[MAX_FAKES];static int nfakes;
-static unsigned hub_observed_address;static unsigned char hub_peer_ips[2]={1,1};
+static unsigned hub_observed_address,hub_peer_ips[2]={1,1};
+static int hub_local_transport_only;
 static int safe_eject_blocked_path(const char *path) {(void)path;return 0;}
-static int hub_network_peers(unsigned address,unsigned char *peers) {(void)address;(void)peers;return 1;}
+static int hub_network_peers(unsigned address,unsigned *peers) {(void)address;peers[0]=htonl(0x0a0002fe);peers[1]=htonl(0x0a0002fd);return 1;}
 static void probe_udp_sender_add(int fd,int player) {(void)fd;(void)player;}
 static const char *media_leaf(int slot) {return slot==3?"usb":slot==7?"usb2":slot==8?"usb3":"sd";}
 """
+harness+='static int hub_refresh_peer_labels(void){'+body(source,'hub_refresh_peer_labels')+'}\n'
 harness+='static int linkfake_load_config(void){'+body(source,'linkfake_load_config')+'}\n'
 harness+='static void community_refresh_presence(const char *config){'+body(community,'community_refresh_presence')+'}\n'
 harness+=r"""

@@ -72,11 +72,20 @@ static unsigned probe_udp_trusted(const struct probe_udp_metadata *metadata) {
     }
     pthread_mutex_unlock(&probe_udp_mutex);return member;
 }
+static int probe_udp_loopback_ingress(const struct probe_udp_metadata *metadata) {
+    const struct sockaddr_in *source=as_in((const void *)&metadata->source,metadata->source_length);
+    unsigned loopback=if_nametoindex("lo");
+    return loopback && !metadata->control_incomplete && metadata->interface_index==loopback &&
+        source && (ntohl(source->sin_addr.s_addr)>>24)==127;
+}
 static int probe_udp_admit(struct probe_udp_endpoint endpoint,const struct probe_udp_metadata *metadata,
     const uint8_t prefix[54],size_t copied,size_t length,unsigned *trusted) {
     *trusted=probe_udp_trusted(metadata);
     size_t required=length<54 ? length:54;
     int rejected=copied<required || probe_udp_reject(prefix,length,endpoint.port,*trusted);
+    if (__atomic_load_n(&hub_local_transport_only,__ATOMIC_ACQUIRE) &&
+        probe_udp_local_only_reject(prefix,copied,1,
+            *trusted || probe_udp_loopback_ingress(metadata))) rejected=1;
     if(rejected) {
         static unsigned notes;
         if(__atomic_fetch_add(&notes,1,__ATOMIC_RELAXED)<24)

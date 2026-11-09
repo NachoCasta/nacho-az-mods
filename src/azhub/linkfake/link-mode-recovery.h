@@ -54,6 +54,9 @@ static uint64_t probe_mode_complete(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     uint64_t result=probe_mode_complete_original(a,b,c,d,e,f,g,h);
     if(lf_runtime_ready() && owner && !*(unsigned char *)(owner+0x4a1) &&
         !*(unsigned char *)(owner+0x4a3)) {
+#ifdef LF_SAFE_EJECT
+        hub_local_transport_kick(owner);
+#endif
         pthread_mutex_lock(&probe_mode_cache_mutex);
         probe_mode_transition_active=0;
         unsigned mode=*(unsigned char *)(owner+0x4a4);
