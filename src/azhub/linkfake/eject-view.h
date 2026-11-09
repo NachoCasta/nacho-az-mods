@@ -118,10 +118,15 @@ static void eject_paint(az_draw *draw,az_rect area,void *unused) {
         eject_text_fit(draw,(az_rect){area.x,area.y,area.w<144 ? area.w:144,area.h},area.x+32,y+9,badge,14,dim);
         snprintf(label,sizeof label,"%s",shown.items[i].label);
 #ifdef LF_SAFE_EJECT
-        if (shown.items[i].state==2) snprintf(label,sizeof label,"%.120s - safe to remove",shown.items[i].label);
-        if (shown.items[i].state==3) snprintf(label,sizeof label,"%.120s - eject failed; retry",shown.items[i].label);
-#endif
+        const char *status=shown.items[i].state==2 ? "Safe to remove":shown.items[i].state==3 ? "Try again":"";
+        az_rect name_area=area;
+        if (*status && name_area.w>190) name_area.w-=190;
+        eject_text_fit(draw,name_area,area.x+154,y+6,label,18,text);
+        if (*status) eject_text_fit(draw,area,area.x+area.w-180,y+8,status,16,
+            shown.items[i].state==2 ? 0x75d6a0:0xffbc73);
+#else
         eject_text_fit(draw,area,area.x+154,y+6,label,18,text);
+#endif
     }
     if (!shown.count) eject_text_fit(draw,area,area.x+24,area.y+94,"No USB sticks found on this hub",18,dim);
     eject_box(draw,area,area.x+16,area.y+438,area.w-32,1,border,0);

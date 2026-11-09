@@ -26,6 +26,8 @@ static int eject_touch_view,panel_present,view_now,allow_focus;
 static unsigned focus_requests,shown;
 static int eject_panel_present(void) {return panel_present;}
 static int view(void) {return view_now;}
+static int eject_notice_dismiss(void) {return 1;}
+static void eject_notice_tick(void) {}
 static int request_focus(az_surface *s,int on) {
     assert(s==eject_encoder_surface);
     if(on) {focus_requests++;return allow_focus;}

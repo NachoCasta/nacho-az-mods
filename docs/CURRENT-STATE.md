@@ -1,5 +1,29 @@
 # Current state
 
+## Accepted0.4.11 candidate: source startup recovery with Wi-Fi present
+
+The owner accepts the0.4.10 eject UI, then confirms a freshly reconnected,
+mounted hub library still missing from Sources. Read-only native state finds
+Wi-Fi IPv4 present but private transport unready, exposing the old nonzero-IP
+bootstrap guard. A bounded QEMU missed-event control reproduces the persistent
+pending state. The complete Ethernet/peer/subnet correction passes the strict
+control and ordinary-runtime Wi-Fi startup, late arrival, loading, Link and
+individual loaded-eject checks. Full sanitizer/SDK gates pass. After the owner restarted the AZ, the same
+0.4.10 failure was observed again. Exact0.4.11 is now active through managed
+apply: CAMI reaches readiness and announcement/query acknowledgment. The owner confirms physical Sources and fresh loading work. The recovery goal
+is complete;0.4.11 remains unpublished and no prior crash cause is proven.
+See the [current recovery goal](HUB-SOURCE-STARTUP-RECOVERY-GOAL.md).
+
+## Candidate0.4.10: persistent eject feedback
+
+The owner requested continuous progress until verified safe removal and clearer
+labels. A supported SDK surface now stays visible through success/failure, with
+the USB name separate and no guessed progress timeout. Host/sanitizer and exact
+emulator delayed/loaded/whole-hub/failure-retry gates pass; an isolated diagnostic
+control also covers genuine SDK quarantine and touch fallback. The exact candidate is active on the physical AZ through managed apply, with
+matched mapped SHA256 and empty decks. The owner accepts the physical eject UI; this candidate-preparation goal is complete. Publication is not authorized. See the [feedback goal](HUB-EJECT-FEEDBACK-GOAL.md) and
+[candidate evidence](acceptance/usb-hub-support-eject-feedback-candidate.json).
+
 ## Release0.4.9: hub sources without Ethernet
 
 Read-only physical evidence rules out a missing SQL library for CAMI. The source

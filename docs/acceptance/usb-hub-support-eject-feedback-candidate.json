@@ -1,0 +1,102 @@
+{
+  "status": "Goal achieved: exact validated candidate installed and active on the physical AZ, ready for owner UX validation",
+  "version": "0.4.10",
+  "runtime_sha256": "7c78f096684fa772e5e7193c500fd3f9f73080fade5073ca29ece9b00a64754e",
+  "package_sha256": "41ecfed2f85f742844ed5b8d3b629fd4d1a08838db185d27bb86cff6c5d844ff",
+  "package_bytes": 711535,
+  "baseline": "Published0.4.9 unchanged; original preparing banner expired after2000ms independently of worker completion",
+  "implementation": {
+    "persistent_surface": "Supported SDK AZ_LAYER_TOP, views0x7f, third surface of allowed four; no physical knob/BACK focus",
+    "progress": "No timeout; cannot dismiss or open a selector while working",
+    "terminal": "Safe to remove or explicit keep-connected failure in the same surface; Done/new selector acknowledges result",
+    "target": "Separate name line and separate selector status column",
+    "safety": "Existing detach, busy, filesystem, persistence and final whole-hub checks preserved; success published after those gates; later remount invalidates old success"
+  },
+  "host": {
+    "portable_components": "Full plain, ASan/UBSan, TSan passes; SDK compile/quietness fixture issues subsequently corrected",
+    "final_actual_panel": "All three modes pass;100000 UI ticks without hiding progress, guarded Done, in-place safe/failure, long-name clipping, mount invalidation and10000 concurrent worker publications",
+    "final_sdk_ui": {
+      "plain": "10 checks passed",
+      "asan_ubsan": "8 checks passed",
+      "tsan": "8 checks passed",
+      "limits": "Functional native teardown not measured by SDK harness; no-io/no-alloc not measured in sanitizer modes"
+    }
+  },
+  "exact_runtime_emulator": {
+    "pid": 479759,
+    "runtime_sha256": "7c78f096684fa772e5e7193c500fd3f9f73080fade5073ca29ece9b00a64754e",
+    "delayed_eject_fixture": "Existing emulator-only AZHUB_EJECT_TEST_PAUSE_MS=6000; progress screenshots at0.5/3/5/9 seconds, then worker success",
+    "individual": "Persistent progress; loaded deck1 cache LEEE retained; backing/alias mounts removed; native mods USB retained; rendered detailed/overview waveform fixture before eject",
+    "whole_hub": "Native STOP hold, verified success, green Safe to remove panel retained until acknowledgement; selector reopening preserves separate target/status columns",
+    "failure_retry": "Temporary read-only raw-device owner causes genuine preflight refusal; failure panel keeps USB connected, mounts retained; owner removed, whole-hub retry succeeds",
+    "audio": "Not captured; no audio-advance claim"
+  },
+  "touch_fallback_diagnostic": {
+    "pid": 498355,
+    "scope": "Separate explicitly emulator-only overrun-control executable; not the distributable runtime",
+    "mechanism": "Existing startup fixture sleeps2ms eight times in each callback; unmodified SDK logs both filters switched off after8 overruns",
+    "result": "Rendered touch selector, individual request, shared persistent progress and Safe to remove panel; native mods USB retained",
+    "core_modified": false
+  },
+  "emulator_cleanup": {
+    "final_runtime_restored": true,
+    "pid": 503395,
+    "runtime_sha256": "7c78f096684fa772e5e7193c500fd3f9f73080fade5073ca29ece9b00a64754e",
+    "decks": "EEEE",
+    "pause_dropin_removed": true,
+    "busy_fixture_removed": true
+  },
+  "package_validation": {
+    "pinned_sdk": "1.2.3,62a156abf3a4789e9e3cdd610fe106227a3a8967",
+    "compiler": "Preserved SDK GCC7.5/glibc2.27 with explicit QEMU userspace wrapper",
+    "assets_identical_to_049": 14,
+    "warning": "Known optional legacy read-only /home/root/settings override",
+    "research_screenshots": "Local ignored only; not packaged or uploaded"
+  },
+  "physical": {
+    "before_pid": 311725,
+    "before_version": "0.4.9",
+    "preflight_decks": "EEEE",
+    "hub_present_at_preflight": false,
+    "rollback_usb": "MODS/backups/eject-feedback-0410",
+    "mod_data_preserved": true,
+    "approval": "Exact USB/staged hashes verified; old list backed up on USB; framework lock held; unrelated entries preserved; atomic target-only replacement",
+    "activation": "Normal managed apply completed;63 hooks loaded; native USB naming mod remains enabled",
+    "owner_ui_acceptance": "Owner confirms the new eject UI looks good and works. Owner separately reports hub USBs again missing from Sources; no full source acceptance inferred.",
+    "after_pid": 810530,
+    "after_version": "0.4.10",
+    "post_reload_decks": "EEEE",
+    "mapped_runtime_sha256": "7c78f096684fa772e5e7193c500fd3f9f73080fade5073ca29ece9b00a64754e",
+    "mapped_hash_matches_candidate": true,
+    "framework_apply_state": "done"
+  },
+  "publication": "Not authorized for0.4.10; release/catalog remain0.4.9",
+  "completion_audit": {
+    "persistent_notice": "Production panel has no timer and no hide between working/safe/failure; guarded dismissal verified by actual-callback tests and rendered emulator controls",
+    "labels": "State title, target and instruction separate; selector state column rendered independently",
+    "removal_safety": "Only feedback publication changed; existing reservation/detach/drain/unmount/persistence/hub-inventory conditions remain before success",
+    "coverage": "Exact runtime covers individual/whole-hub, loaded-cache/native USB retention and real busy refusal/retry; separate diagnostic confirms shared UI after genuine SDK quarantine",
+    "candidate_ready": "Validated package, unchanged assets, restored normal emulator runtime, physical exact-hash managed activation and USB rollback confirmed",
+    "owner_trial": "Explicit next step for owner; this goal prepares the candidate rather than claiming that trial passed",
+    "publication": "0.4.9 remains public;0.4.10 not published"
+  },
+  "subsequent_source_issue": {
+    "scope": "Read-only inspection after owner report; no device changes or restart",
+    "pid": 810530,
+    "hub_discovery_file": "empty",
+    "usb_mounts": "none",
+    "connected_usb": "SanDisk3.2Gen1 on2-1.1.2, device7, sysfs inode18071",
+    "eject_journal": "Exact current connection marked state2 (safe/ejected), label NACHO CHIPS; this inhibits remount/discovery",
+    "mod_state": {
+      "nfakes": 1,
+      "tmpl_len": 0,
+      "hub_local_transport_only": 0,
+      "native_link_mode": 0,
+      "eject_notice_phase": 0
+    },
+    "interpretation": "The current USB is already ejected. Separately, the runtime has never received its status template, so source startup recovery is not fully established for this session. The eject UX success does not establish Sources recovery.",
+    "next": "Observe freshly reconnected mounted library before eject and trace native startup/mode completion; no causal claim about the UX change or corruption",
+    "owner_scope": "Owner indicates source issue can be revisited later"
+  },
+  "subsequent_owner_feedback": "Owner explicitly accepts the physical eject UI; recurring missing hub Sources is a separate confirmed0.4.10 failure under investigation for0.4.11."
+}

@@ -152,10 +152,12 @@ static int hub_local_transport_only;
  * The labels never assign an address to any interface. */
 static int hub_refresh_peer_labels(void) {
     uint32_t peers[2];
-    if (!hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),peers)) {
-        if (!__atomic_load_n(&hub_local_transport_only,__ATOMIC_ACQUIRE))
-            return __atomic_load_n(&hub_peer_ips[0],__ATOMIC_ACQUIRE)!=0;
+    if (__atomic_load_n(&hub_local_transport_only,__ATOMIC_ACQUIRE)) {
+        /* A Wi-Fi address must not leak into the identity of a loopback peer.
+         * Native admission compares transport and member identities. */
         peers[0]=htonl(0x7f4d0007u);peers[1]=htonl(0x7f4d0008u);
+    } else if (!hub_network_peers(__atomic_load_n(&hub_observed_address,__ATOMIC_RELAXED),peers)) {
+        return __atomic_load_n(&hub_peer_ips[0],__ATOMIC_ACQUIRE)!=0;
     }
     for (unsigned i=0;i<2;++i) __atomic_store_n(&hub_peer_ips[i],peers[i],__ATOMIC_RELEASE);
     return 1;

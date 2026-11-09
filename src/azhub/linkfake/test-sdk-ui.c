@@ -33,6 +33,7 @@ static void safe_eject_submit(const struct eject_item *item,int port) {
     atomic_fetch_add(&fixture_requests,1);
 }
 #include "eject-view.h"
+#include "eject-notice.h"
 static void *fixture_worker(void *unused) {
     (void)unused;
     for (unsigned n=0;;n++) {
@@ -63,6 +64,7 @@ static int fixture_init(const az_core_v1 *core) {
         .on_paint=eject_paint,.on_input=eject_input};
     eject_surface=core->surface_create(EJECT_ID,&surface);
     if (!eject_surface) return -1;
+    if (eject_notice_init()) return -3;
     core->surface_place(eject_surface,(az_rect){280,160,720,500});
     core->surface_show(eject_surface,1);
     if (!atomic_exchange(&fixture_worker_started,1) &&
@@ -72,6 +74,13 @@ static int fixture_init(const az_core_v1 *core) {
 static void fixture_tick(void) {
     static unsigned ticks;
     if (++ticks%30) return;
+    switch ((ticks/30)%4) {
+        case 0: eject_notice_begin(NULL,1);break;
+        case 1: eject_notice_finish(1,NULL);break;
+        case 2: eject_notice_invalidate("A long failure reason must stay clipped within the persistent panel.");break;
+        default: eject_notice_dismiss();break;
+    }
+    eject_notice_tick();
     /* Exercise clipping/painting in both presentations. Real focus transitions
      * are covered by the selector coordinator test and emulator controls. */
     eject_touch_only=(ticks/30)&1;

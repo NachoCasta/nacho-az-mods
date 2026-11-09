@@ -337,7 +337,10 @@ static void safe_revalidate_result(const struct eject_item *item) {
     }
     pthread_mutex_unlock(&safe_lock);
     if (changed) safe_persist();
-    if (changed) safe_message("USB mounts changed. Leave it connected and retry ejection.");
+    if (changed) {
+        eject_notice_invalidate("USB mounts changed. Leave it connected and retry ejection.");
+        safe_message("USB mounts changed. Leave it connected and retry ejection.");
+    }
 }
 static void safe_reconcile(void) {
     struct eject_item completed[SAFE_RECORDS]; int count=0;
@@ -724,10 +727,12 @@ static void safe_eject_submit(const struct eject_item *item,int all_port) {
     safe_request=request;
     safe_request.pending=2; /* Reserve admission while publishing preparation. */
     pthread_mutex_unlock(&safe_lock);
-    lf_core->banner(EJECT_ID,"Preparing USB for removal...",2000);
+    eject_notice_begin(item,all_port);
+    eject_notice_tick();
     pthread_mutex_lock(&safe_lock); safe_request.pending=1; pthread_mutex_unlock(&safe_lock);
 }
 static void safe_eject_tick(void) {
+    eject_notice_tick();
     static int mount_fault_announced;
     if (hub_mount_faulted() && !mount_fault_announced) {
         mount_fault_announced=1;
@@ -842,9 +847,8 @@ static void safe_eject_worker_step(void) {
         for (int n=0;n<live.count;n++) if (live.items[n].port==request.all_port && live.items[n].state!=2) {
             snprintf(reason,sizeof reason,"Hub changed during eject. Leave it connected and retry."); goto failed;
         }
-        safe_message("Hub is safe to remove.");
-    } else safe_message("%.96s - safe to remove.",
-                        request.count ? request.items[0].label:"USB");
+    }
+    eject_notice_finish(1,NULL);
     lf_core->log(EJECT_ID,"safe-eject success targets=%d sources=%#x",reserved,sources);
     goto finished;
 failed:
@@ -863,7 +867,8 @@ failed:
     pthread_mutex_unlock(&safe_lock);
     pthread_mutex_unlock(&safe_source_mutex);
     safe_persist();
-    safe_message("%.220s",*reason ? reason:"USB ejection failed. Leave it connected.");
+    eject_notice_finish(0,*reason ? reason:"USB ejection failed. Leave it connected.");
+    lf_core->log(EJECT_ID,"safe-eject failure: %s",reason);
 finished:
     pthread_mutex_unlock(&safe_mount_mutex);
     pthread_mutex_lock(&safe_lock); safe_running=0; pthread_mutex_unlock(&safe_lock);

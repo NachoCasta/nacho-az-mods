@@ -211,6 +211,9 @@ static void eject_stop_hook(void *self,uint64_t a,uint64_t b,unsigned char down)
     } else lf_core->log(EJECT_ID,"eject-ui captured port=%d down=%d action=%d",port+1,!!down,action);
 }
 #include "eject-view.h"
+#ifdef LF_SAFE_EJECT
+#include "eject-notice.h"
+#endif
 static int eject_raw_keys(int bus,unsigned char *frame,int length,void *user) {
     (void)user;
     static unsigned serial,previous_keys;
@@ -282,6 +285,10 @@ static uint64_t eject_select_row_hook(uint64_t a,uint64_t b,uint64_t c,uint64_t 
     return eject_native_select_row(a,b,c,d,e,f,g,h);
 }
 static void eject_open(int port) {
+#ifdef LF_SAFE_EJECT
+    if (!eject_notice_dismiss()) return;
+    eject_notice_tick();
+#endif
     if (lf_core->view()==AZ_VIEW_MENU) {
         lf_core->banner(EJECT_ID,"Close the current menu before selecting a hub USB.",2500);
         lf_core->log(EJECT_ID,"eject-ui focus-refused port=%d",port+1); return;
@@ -426,6 +433,10 @@ static int eject_init(void) {
     if (!eject_touch_surface)
         lf_core->log(EJECT_ID,"eject-ui touch surface unavailable; normal input remains enabled");
     eject_surface=eject_encoder_surface;
+#ifdef LF_SAFE_EJECT
+    int notice_result=eject_notice_init();
+    if (notice_result) return notice_result;
+#endif
     if (lf_core->frame_filter(EJECT_ID,AZ_FILTER_RAW | (1u<<AZ_BUS_MIXER_IN),eject_raw_keys,NULL)) return -68;
     if (lf_core->frame_filter(EJECT_ID,1u<<AZ_BUS_MIXER_IN,eject_filter_keys,NULL)) return -69;
     lf_core->surface_place(eject_surface,(az_rect){280,160,720,500});

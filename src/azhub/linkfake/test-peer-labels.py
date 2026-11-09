@@ -55,7 +55,7 @@ static void assert_member(unsigned member) {
     fix_source((void *)&address,sizeof address);
     assert(address.sin_port==htons(9994+member));
     uint32_t label=ntohl(address.sin_addr.s_addr);
-    assert(label==(member==7 ? 0xc00002feu:0xc00002fdu) || label==(0x7f4d0000u|member));
+    assert(label==(0x7f4d0000u|member));
 }
 int main(void) {
     struct probe_udp_metadata metadata={0};
@@ -70,7 +70,9 @@ int main(void) {
     assert(!hub_refresh_peer_labels() && !hub_peer_ips[0]);
     hub_local_transport_only=1;assert(hub_refresh_peer_labels());
     assert(ntohl(hub_peer_ips[0])==0x7f4d0007 && ntohl(hub_peer_ips[1])==0x7f4d0008);
-    network_available=1;hub_local_transport_only=0;assert(hub_refresh_peer_labels());
+    network_available=1;assert(hub_refresh_peer_labels());
+    assert(ntohl(hub_peer_ips[0])==0x7f4d0007 && ntohl(hub_peer_ips[1])==0x7f4d0008);
+    hub_local_transport_only=0;assert(hub_refresh_peer_labels());
     assert(ntohl(hub_peer_ips[0])==0xc00002fe && ntohl(hub_peer_ips[1])==0xc00002fd);
     network_available=0;assert(hub_refresh_peer_labels());assert(ntohl(hub_peer_ips[0])==0xc00002fe);
     struct sockaddr_in external={.sin_family=AF_INET};external.sin_addr.s_addr=htonl(0xc0000202);
@@ -88,7 +90,7 @@ int main(void) {
     local.sin_addr.s_addr=htonl(INADDR_LOOPBACK);local.sin_port=htons(9999);
     fix_source((void *)&local,sizeof local);assert(local.sin_addr.s_addr==htonl(INADDR_LOOPBACK));
     fix_source((void *)&external,sizeof external);assert(external.sin_addr.s_addr==htonl(0xc0000202));
-    hub_local_transport_only=1;
+    hub_local_transport_only=1;assert(hub_refresh_peer_labels());
     pthread_t thread;assert(!pthread_create(&thread,NULL,writer,NULL));
     unsigned reads=0;
     do {assert_member(7);assert_member(8);++reads;} while(!__atomic_load_n(&finished,__ATOMIC_ACQUIRE) || reads<10000);

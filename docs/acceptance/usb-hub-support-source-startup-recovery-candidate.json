@@ -1,0 +1,99 @@
+{
+  "status": "Goal achieved: exact0.4.11 physically active, source recovery instrumented, owner confirms Sources and fresh loading work",
+  "version": "0.4.11",
+  "runtime_sha256": "02fd149b23a13a1d8a32383694b24b8137ead89ca6d5675edb644b795f9778c2",
+  "package_sha256": "7039202d06ea4a2499ee6d240fc998c8ca085dd9308fdcaf51c4153c8379060f",
+  "package_bytes": 711728,
+  "assets": {
+    "assets/azhub-LICENSE.txt": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/azhub-source.c": "a36f15ab4cdc427f900c1f3d4e97b0b86522c2db52cf1ca18e98ce0b2823fde9",
+    "assets/azhub.ko": "da0ea7a3363f2e8d1908a72dee51f9aaccfca5a989e833018a247b8e61413c9d",
+    "assets/mount-hub.sh": "8ff3a9a0e729cf356a0242a37cd1609760f006d37100daf643dcb14a85fb7d43",
+    "assets/public-dhcp-event-hook.so": "7bb0edfab196523f52e2290256a882c0a3b801b27e6a526c800070d1e57304ec",
+    "assets/recover-hubs.sh": "a890d1cc3a96a271b00a3e3439389b34f9eadb0af6996c1a0228e41dadd9e754",
+    "assets/usb-hub-support-network-helper.so": "0b2e0a02d5473a3032b4d654128ae71491d05265aef20c970c2d3b6b252d12de",
+    "assets/usb_hub_macvlan.ko": "4d59439e1d080f0c2c2dd49b0e41524747d6632f1e6261d18a54a2819784c667",
+    "assets/macvlan-source/build-receipt.json": "f2c598670e1ddd2cbe240eba2797567d64c3f6d8418e8cb34265856306f29c65",
+    "assets/macvlan-source/build-sharing-macvlan.py": "8d55abc4b1752d9bcf485c53ff315052f015e7e8c9b90a84f0ee59641696f429",
+    "assets/macvlan-source/BUILD.md": "d208e948c759aff98deb89360db14175a74c8bdd2b22c66f18cb7dc58111b1af",
+    "assets/macvlan-source/LICENSE": "af8067302947c01fd9eee72befa54c7e3ef8a48fecde7fd71277f2290b2bf0f7",
+    "assets/macvlan-source/macvlan.c": "2aa65660418fa6121ba2b63b16c9540426bc43f83ffd0baf000c0d21662df54a",
+    "assets/macvlan-source/Makefile": "b7a5dd1d8924baa3c44bc31a08ce10d541a98c40ef12a0a75f378150417e0204"
+  },
+  "physical_failure": {
+    "version": "0.4.10",
+    "pid": 810530,
+    "fresh_connection": "2-1.1.3, device8, inode18074; mounted FAT with readable exportLibrary.db and empty eject journal",
+    "source": "present/pending, template0, readiness0, no announcement/query; one completed Link Off epoch",
+    "network": "Wi-Fi observed192.168.1.115/24; Ethernet no IPv4/carrier"
+  },
+  "cause": {
+    "guard": "Nonzero Wi-Fi address incorrectly prevented explicit local bootstrap after a missing native event",
+    "peer_identity": "Fallback peers must retain127.77 identities even when management IPv4 exists",
+    "subnet": "Native operation copied the observed Wi-Fi /24 mask into local127.0.0.1 transport; exact call now receives /8"
+  },
+  "controlled_reproduction": {
+    "scope": "Hardware-refusing emulator-only hook suppresses automatic native network-change calls, allows explicit bootstrap; natural emulator wireless event timing did not reproduce a persistent failure",
+    "old": "Persistent template0/pending with observed Wi-Fi IP already nonzero",
+    "guard_only": "Fallback enabled but readiness still failed",
+    "guard_and_peers": "Still failed with inherited Wi-Fi /24 mask",
+    "complete_fix": "Template1152, readiness1, pending0, announcement/query acknowledged; observed Wi-Fi IP/mask unchanged"
+  },
+  "host": "Full portable and actual SDK plain, ASan/UBSan and TSan gates pass; pinned SDK package validator passes",
+  "ordinary_runtime_emulator": {
+    "wifi_startup": "Ready and announced/queried with observed Wi-Fi /24 preserved and local127/8",
+    "browser_load": "Rendered library, fresh deck1 load and detailed/overview waveforms",
+    "native_link": "On then Off; saved mode verified, native completion logged, same PID949145 and loaded cacheLEEE",
+    "individual_eject": "Persistent Safe to remove panel; hub backing mount absent, native USB retained, cacheLEEE retained",
+    "late_arrival": "Hub absent at startup then attached; PID962839 template1152, readiness1, pending0, announcement/query acknowledged and rendered Sources",
+    "audio": "Not captured; no audio-advance acceptance",
+    "usable_wired": "PID971419: template1152, readiness1, pending0, announcement/query acknowledged, rendered source; fallback0, observed/native192.0.2.2/24 preserved",
+    "restart_interlock": "Rapid restarts activated the framework suspension interlock; supported apply restored the approved mod. No manual clearing of internal framework state.",
+    "no_network": "PID974965: observed0.0.0.0, local127/8, template1152, readiness1, pending0, announcement/query acknowledged. Immediate Source screenshot did not yet contain the hub row; rendered offline acceptance is not inferred.",
+    "whole_hub_eject": "No-network fixture, empty decks: persistent Hub on USB2 Safe to remove; journal safe2, hub backing and all player aliases absent, native USB retained",
+    "reconnect_fresh_load": "After whole-hub eject/reconnect and managed restoration, PID983207: populated native track list, fresh loadLEEE, both waveform views; native unload settledEEEE. Observed Wi-Fi /24 unchanged, local127/8, pending0 and announcement/query acknowledged.",
+    "final_state": "Wi-Fi fixture restored, Ethernet unaddressed/no carrier, exact normal candidate active, framework apply done, decksEEEE"
+  },
+  "physical_candidate": "Exact0.4.11 active on the physical AZ through normal managed apply",
+  "publication": "Not authorized; public0.4.9 unchanged",
+  "physical_installation": {
+    "boot_id": "aad2e521-1b2a-4569-b2bd-52f5dd28c12c",
+    "preflight_pid": 5469,
+    "preflight_decks": "EEEE",
+    "firmware": "ep147-9e9454e357389ece",
+    "kernel": "4.4.194",
+    "core": "1.2.8",
+    "preflight_failure": "Fresh boot0.4.10: CAMI mounted on hub2-1.1.3 at/media/usb/sdb1, template0, readiness0, present/pending, no announcement/query; observed Wi-Fi192.168.1.115/24, Ethernet unaddressed",
+    "crash_evidence": "After owner restart, /tmp/azmod-crash.log had no reported record and /sys/fs/pstore was empty; previous-session crash cause unproven",
+    "rollback_usb": "/media/usb/sda1/MODS/backups/source-recovery-0411",
+    "rollback_archive_sha256": "3d281dc80b8ac3264403d695816688724cb8d02ab3ff49a08f41598ce098c93d",
+    "data_preserved": "data and .data.owner copied from previous mod; previous complete directory retained outside community-mods",
+    "staging": "Normal az-usbload service stages matching USB/internal runtime SHA02fd149b23a13a1d8a32383694b24b8137ead89ca6d5675edb644b795f9778c2; PID5469 remained active before apply",
+    "approval": "Exact USB/staged SHA checks; approval list backed up on USB while framework lock held; unrelated entries hash unchanged; original0644 mode preserved; atomic target-only replacement",
+    "apply": "Normal framework apply completed state=done; PID20044, empty decksEEEE,64 hooks; native USB naming mod remains enabled",
+    "runtime_sha256": "02fd149b23a13a1d8a32383694b24b8137ead89ca6d5675edb644b795f9778c2",
+    "source_after": {
+      "label": "CAMI",
+      "path": "/media/usb/sdb1",
+      "template": 1152,
+      "ready": 1,
+      "mounted": 1,
+      "present": 1,
+      "notify_pending": 0,
+      "announcement": 1794207967,
+      "query": 1794207967
+    },
+    "network_after": "OS Wi-Fi remains192.168.1.115/24 and Ethernet unaddressed. At this post-apply snapshot native observedIPv4/mask are0.0.0.0; native local transport127.0.0.1/8. This physical activation is not the strict nonzero-observed-IP timing control; that control passed in QEMU.",
+    "owner_acceptance": "Owner replied yes it worked fine to the explicit CAMI Sources/browsing/fresh-track-loading validation request.",
+    "follow_up": "At uptime334.29, same boot/PID20044, apply done, deck1 loadedLEEE, hub player07 alias mounted; no crash log record. No agent load command was sent. Owner source identity/UI/audio confirmation still required. Owner subsequently confirms success. Final read-only audit at uptime398.40: same PID20044, apply done, exact USB/staged/mapped runtime, decksEEEE.",
+    "preservation_checks": "Read-only recursive data diff and .data.owner comparison match rollback; all unrelated approval entries hash-identical to locked backup."
+  },
+  "completion_audit": {
+    "physical_failure": "Two physical0.4.10 sessions show mounted readable library, present/pending source, template/readiness0, empty/not-ejected fresh connection and completed native mode.",
+    "reproduction": "Bounded emulator-only missed-event old/fixed control with already observed Wi-Fi IPv4; complete correction required Ethernet guard, consistent loopback peers and matching subnet. Natural wireless driver timing reproduction is not claimed.",
+    "implementation": "Scoped native lifecycle hooks preserve observed properties and OS/saved settings; fallback peers and local subnet consistent, usable wired policy retained. Independent servers/SQL/tagged caches and accepted eject UX retained.",
+    "validation": "Full portable/SDK sanitizer gates, pinned package validation, exact ordinary-runtime startup/late-arrival/reconnect/Link/browser/load/waveform/individual/whole-hub eject controls; wired and instrumented no-network controls.",
+    "hardware": "Exact USB/staged/approved/mapped SHA matches; backed-up rollback/data, target-only locked atomic approval, normal managed apply on empty decks. Source readiness/announcement/query success and explicit owner Sources/loading acceptance.",
+    "limits": "No physical strict already-observed-Wi-Fi timing repetition, broader hardware/long-session/actual-CDJ acceptance or prior crash cause inferred. Publication not authorized."
+  }
+}
