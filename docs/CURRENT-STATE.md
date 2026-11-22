@@ -16,7 +16,8 @@ loading, waveforms, playback, Link On/Off, knob eject). Physical acceptance is n
 claimed. Published as
 [USB Hub Support 0.4.12](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.12).
 See the [investigation](HUB-STARTUP-CRASH-2026-11-21.md) and
-[candidate evidence](acceptance/usb-hub-support-0.4.12-startup-crash-candidate.json).
+[candidate evidence](acceptance/usb-hub-support-0.4.12-startup-crash-candidate.json) and
+[publication record](acceptance/usb-hub-support-0.4.12-publication.json); source and catalog CI pass.
 
 ## Release0.4.11: source startup recovery and persistent eject feedback
 

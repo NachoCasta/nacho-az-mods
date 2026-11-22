@@ -1,0 +1,46 @@
+{
+  "version": "0.4.12",
+  "release_url": "https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.12",
+  "source_commit": "8bbcbcba3bd84e62c66d866a069014137c97989b",
+  "tag_object": "5901de5ccd2cb7b5c4b0520bd04d67b243100521",
+  "package_sha256": "fa559c1847f2316b05e107660c3d1c0358018f640f55a6df03f5296763e3a5a3",
+  "runtime_sha256": "d23170c5eca4a637a84f031189716942ce317a4f8c5521343ab2a16e40cb2167",
+  "runtime_build": "make sharing-runtime-candidate in pinned az-mods-sdk:1; rebuild from git archive of the tagged commit is byte-identical",
+  "anonymous_verification": {
+    "assets": [
+      {
+        "name": "usb-hub-support-0.4.12.azmod",
+        "status": 200,
+        "size": 711704,
+        "sha256": "fa559c1847f2316b05e107660c3d1c0358018f640f55a6df03f5296763e3a5a3"
+      },
+      {
+        "name": "usb-hub-support-0.4.12-icon.png",
+        "status": 200,
+        "size": 945,
+        "sha256": "6a4dbd98de2f599f46435fae360a1d56bed9430beb816141d43641e6008f0bcc"
+      }
+    ],
+    "canonical_catalog_version": "0.4.12",
+    "native_usb_names_preserved": true
+  },
+  "source_ci_run": 44990269727,
+  "source_ci_conclusion": "success",
+  "source_ci_jobs": {
+    "behavior-tests": "success",
+    "sdk-build": "success"
+  },
+  "sdk_ref": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "compiler": "Preserved ARM64 SDK GCC7.5/glibc2.27 (az-mods-sdk:1), QEMU userspace via cached tonistiigi/binfmt registration",
+  "accepted_package_unchanged": true,
+  "assets_replaced": false,
+  "release_tag_moved": false,
+  "physical_scope": "None. 0.4.12 has not been installed on the physical AZ; physical acceptance is not claimed.",
+  "emulator_scope": "Old/fixed forced startup-window controls (2/2 each) and exact shipped-runtime smoke pass: Sources, browse, load, waveforms, playback, Link On/Off, knob eject. Sharing helper behavior matches published 0.4.11 in the same fixture. No actual-CDJ/long-session acceptance inferred.",
+  "screenshots": "Existing approved 0.4.5 URLs retained; no new images uploaded",
+  "catalog_verification": "Pinned official azmod-pack repo check NachoCasta/nacho-az-mods --download passes; public raw catalog lists usb-hub-support 0.4.12 with the accepted SHA and Native USB Names unchanged.",
+  "catalog_commit": "a825a1b",
+  "catalog_ci_run": 44990306724,
+  "catalog_ci_conclusion": "success",
+  "candidate_evidence": "usb-hub-support-0.4.12-startup-crash-candidate.json"
+}
