@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-only */
 #include <assert.h>
 #include <stdint.h>
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "source-metadata.h"
 typedef uint64_t (*fn8)(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static pthread_mutex_t safe_source_mutex=PTHREAD_MUTEX_INITIALIZER;
@@ -18,7 +19,7 @@ static uint64_t original(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,
     if (retire_during_mount) hub_metadata_invalidate(0);
     return 0xcafe;
 }
-static fn8 make_hook(uintptr_t,fn8);
+static fn8 fixture_hook_result(uintptr_t,fn8);
 #include "source-metadata-native.h"
 static unsigned char point[0x40];
 static struct hub_metadata_blob native_get(uintptr_t p) {
@@ -27,7 +28,7 @@ static struct hub_metadata_blob native_get(uintptr_t p) {
     for (size_t i=0;name[i];i++) b.bytes[i*2]=(unsigned char)name[i];
     b.bytes[0x7c]=6;return b;
 }
-static fn8 make_hook(uintptr_t address,fn8 fn) {
+static fn8 fixture_hook_result(uintptr_t address,fn8 fn) {
     assert(address==0x1376c98 && fn==hub_metadata_mount);return original;
 }
 static void word(void *p,size_t offset,uintptr_t value) {memcpy((char *)p+offset,&value,sizeof value);}

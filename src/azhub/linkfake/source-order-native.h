@@ -58,7 +58,7 @@ static uint64_t hub_source_refresh_ordered(uint64_t a,uint64_t b,uint64_t c,uint
 static int hub_source_order_install(void) {
     /* AZ-MODS owns model and controller add. Source's list refresh is separate;
      * validate its model interface before touching presentation-only rows. */
-    hub_source_refresh_original=make_hook(0x1c30340,hub_source_refresh_ordered);
+    make_hook(0x1c30340,hub_source_refresh_ordered,(void **)&hub_source_refresh_original);
     return hub_source_refresh_original ? 0:-92;
 }
 #endif

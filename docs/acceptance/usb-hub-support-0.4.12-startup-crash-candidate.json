@@ -1,0 +1,41 @@
+{
+  "version": "0.4.12",
+  "scope": "Startup hook-publication crash fix; emulator and static evidence only, no physical AZ installation",
+  "investigation": "docs/HUB-STARTUP-CRASH-2026-11-21.md",
+  "runtime_sha256": "d23170c5eca4a637a84f031189716942ce317a4f8c5521343ab2a16e40cb2167",
+  "runtime_bytes": 241968,
+  "runtime_build": "Pinned az-mods-sdk:1 (GCC 7.5) make sharing-runtime-candidate, the same target family as published 0.4.11 (02fd149b...)",
+  "package_sha256": "fa559c1847f2316b05e107660c3d1c0358018f640f55a6df03f5296763e3a5a3",
+  "package_bytes": 711704,
+  "package_staging": "Local local/publishing/usb-hub-support-0.4.12-release/mod: manifest from source, runtime above, every asset/LICENSE/icon byte-copied from the published 0.4.11 package (asset sources unchanged since 8405739)",
+  "package_diff_vs_0.4.11": "Same 18 members and modes; only azmod.json (version) and usb-hub-support.so differ",
+  "validator": "azmod-pack validate OK; only the known optional legacy /home/root/settings read warning",
+  "sdk_commit": "62a156abf3a4789e9e3cdd610fe106227a3a8967",
+  "static_analysis": {
+    "core_1.2.9": "Installer stores trampoline into caller *orig (0x74588) before release-store branch publication (0x7459c); refusals return before either write",
+    "published_0.4.11": "0x237f900 original stored to its global only at 0x1b940 after claim_hook returned; probe_queue_pop calls that slot at 0xdda8 (LR +0xddac)",
+    "shipped_0.4.12": "0x237f900 claim passes x3=0x45d78+0x7f8, the slot probe_queue_pop loads at 0xdd98; 57 claim sites, none with a stack orig"
+  },
+  "emulator_window_controls": {
+    "old_sha256": "c22e0f8d2ac57166e387a50e372e4a4ae34b42a3600851f513e72590cd3b81ff",
+    "old_result": "2/2 original=(nil), status 5 'the deck stopped while this mod was starting', marker froze, NRestarts=1",
+    "fixed_sha256": "0a20a81e589c3900169ae42ddb16ca32210f65961b46747c2fd01dec8dc37725",
+    "fixed_result": "2/2 valid original, window closed, 64 hooks, NRestarts=0",
+    "limit": "Diagnostic builds use production all flags plus the emulator guard, not the sharing target; the publication code is identical"
+  },
+  "host_tests": "test-host.sh WSL clang plain/ASan/TSan exit 0, including test-hook-publication.py",
+  "shipped_runtime_emulator_smoke": {
+    "fixture": "QEMU TCG, firmware ep147-9e9454e357389ece, AZ-MODS set 1.2.9; xHCI hub with usblib.img/hublib2.img qcow2 overlays; volatile EP147 drop-in for telemetry and omission of the emulator patch-37 renotify poller",
+    "mapped_sha256": "d23170c5eca4a637a84f031189716942ce317a4f8c5521343ab2a16e40cb2167",
+    "load": "Algo mas from HUB USB 1: load-request location 0x1010200000602, load-admitted source=0, result=0",
+    "play": "pos 9.336 -> 13.958 s, playing",
+    "link": "On then Off: both hub devices retained, deck 1 kept playing; mode recovery retained=0x80 epochs 2/3",
+    "eject": "Knob selector port=2, HUB_LIB2 safe-eject success, Safe to remove panel; HUB_LIB and playing deck unaffected",
+    "process": "Same PID throughout, NRestarts=0, status 1",
+    "sharing_helper": "Managed helper launches then startup timeout/graceful retirement on Link changes; published 0.4.11 shows the identical pattern in this fixture",
+    "audio": "Not captured"
+  },
+  "scripted_regressions": "test-loaded-eject-regressions.py first check PASS on the plain efb4a0ba build; later checks blocked by historical native-fixture layout assumptions, not run",
+  "physical_AZ_touched": false,
+  "publication_authorized": true
+}

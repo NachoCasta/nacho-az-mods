@@ -324,15 +324,15 @@ static uint64_t probe_queue_allow(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     return result;
 }
 static void probe_queue_install(void) {
-    probe_id_start_original=make_hook(0xaae298,probe_id_start);
-    probe_queue_pop_original=make_hook(0x237f900,probe_queue_pop);
-    probe_id_failure_destroy_original=make_hook(0xaab598,probe_id_failure_destroy);
-    probe_id_failure_delete_original=make_hook(0xaab818,probe_id_failure_delete);
-    probe_allow_destroy_original=make_hook(0xa692e0,probe_allow_destroy);
-    probe_allow_delete_original=make_hook(0xa693c0,probe_allow_delete);
-    probe_queue_destroy_original=make_hook(0xa7c848,probe_queue_destroy);
-    probe_queue_delete_original=make_hook(0xa7c9d8,probe_queue_delete);
-    probe_queue_post_original=make_hook(0x6d1838,probe_queue_post);
-    probe_queue_common_original=make_hook(0xa77390,probe_queue_common);
-    probe_queue_allow_original=make_hook(0xa69db0,probe_queue_allow);
+    make_hook(0xaae298,probe_id_start,(void **)&probe_id_start_original);
+    make_hook(0x237f900,probe_queue_pop,(void **)&probe_queue_pop_original);
+    make_hook(0xaab598,probe_id_failure_destroy,(void **)&probe_id_failure_destroy_original);
+    make_hook(0xaab818,probe_id_failure_delete,(void **)&probe_id_failure_delete_original);
+    make_hook(0xa692e0,probe_allow_destroy,(void **)&probe_allow_destroy_original);
+    make_hook(0xa693c0,probe_allow_delete,(void **)&probe_allow_delete_original);
+    make_hook(0xa7c848,probe_queue_destroy,(void **)&probe_queue_destroy_original);
+    make_hook(0xa7c9d8,probe_queue_delete,(void **)&probe_queue_delete_original);
+    make_hook(0x6d1838,probe_queue_post,(void **)&probe_queue_post_original);
+    make_hook(0xa77390,probe_queue_common,(void **)&probe_queue_common_original);
+    make_hook(0xa69db0,probe_queue_allow,(void **)&probe_queue_allow_original);
 }

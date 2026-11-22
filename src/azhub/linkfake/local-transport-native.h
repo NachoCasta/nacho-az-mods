@@ -72,7 +72,7 @@ static void hub_local_transport_kick(uintptr_t owner) {
     HUB_LOCAL_NETWORK_CHANGE(owner);
 }
 static void hub_local_transport_install(void) {
-    hub_local_address_original=make_hook(0x2479b90,hub_local_address);
-    hub_local_config_original=make_hook(0x13dec28,hub_local_config);
+    make_hook(0x2479b90,hub_local_address,(void **)&hub_local_address_original);
+    make_hook(0x13dec28,hub_local_config,(void **)&hub_local_config_original);
 }
 #endif

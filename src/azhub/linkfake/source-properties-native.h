@@ -72,10 +72,10 @@ static uint64_t hub_native_mount_task_observe(uint64_t a,uint64_t b,uint64_t c,u
     return result;
 }
 static int hub_native_property_observer_install(void) {
-    hub_native_property_original=(hub_native_property_fn)make_hook(0x134f210,(fn8)hub_native_property_observe);
-    hub_native_mount_task_original=make_hook(0x1376c98,hub_native_mount_task_observe);
-    hub_native_storage_update_original=make_hook(0x111d6a0,hub_native_storage_update_observe);
-    hub_native_storage_replace_original=make_hook(0x111d2a0,hub_native_storage_replace_observe);
+    make_hook(0x134f210,(fn8)hub_native_property_observe,(void **)&hub_native_property_original);
+    make_hook(0x1376c98,hub_native_mount_task_observe,(void **)&hub_native_mount_task_original);
+    make_hook(0x111d6a0,hub_native_storage_update_observe,(void **)&hub_native_storage_update_original);
+    make_hook(0x111d2a0,hub_native_storage_replace_observe,(void **)&hub_native_storage_replace_original);
     return hub_native_property_original && hub_native_mount_task_original &&
         hub_native_storage_update_original && hub_native_storage_replace_original ? 0:-93;
 }

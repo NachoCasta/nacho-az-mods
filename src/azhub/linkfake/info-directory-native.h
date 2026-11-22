@@ -53,7 +53,7 @@ static int hub_info_directory_prepare(void) {
     return !memcmp((const void *)0x1978970,expected,sizeof expected);
 }
 static int hub_info_directory_install(void) {
-    hub_info_directory_original=make_hook(0x1978970,hub_info_directory_entry);
+    make_hook(0x1978970,hub_info_directory_entry,(void **)&hub_info_directory_original);
     return hub_info_directory_original ? 0:-95;
 }
 #endif

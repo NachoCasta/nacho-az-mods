@@ -110,6 +110,6 @@ static uint64_t probe_parse(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     return message;
 }
 static void probe_library_ownership_install(void) {
-    probe_message_destroy_original=make_hook(0xf00de0,probe_message_destroy);
-    probe_handshake_original=make_hook(0xeee540,probe_handshake);
+    make_hook(0xf00de0,probe_message_destroy,(void **)&probe_message_destroy_original);
+    make_hook(0xeee540,probe_handshake,(void **)&probe_handshake_original);
 }

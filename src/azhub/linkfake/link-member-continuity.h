@@ -95,6 +95,6 @@ static uint64_t probe_member_clear(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     return 0;
 }
 static void probe_member_continuity_install(void) {
-    probe_member_disconnect_original=make_hook(0x13e0448,probe_member_disconnect);
-    probe_member_clear_original=make_hook(0x13e18d8,probe_member_clear);
+    make_hook(0x13e0448,probe_member_disconnect,(void **)&probe_member_disconnect_original);
+    make_hook(0x13e18d8,probe_member_clear,(void **)&probe_member_clear_original);
 }

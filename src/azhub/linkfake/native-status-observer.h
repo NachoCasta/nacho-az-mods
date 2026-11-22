@@ -67,12 +67,12 @@ static int native_status_observer_install(void) {
      * all eight registers so the trampoline retains these live temporaries.
      * Early rejection paths remain native and are deliberately not observed. */
     int previous_failures=lf_hook_failures;
-    native_status_store_original=make_hook(0x10d324c,native_status_store_observe);
+    make_hook(0x10d324c,native_status_store_observe,(void **)&native_status_store_original);
     if (lf_hook_failures!=previous_failures || !native_status_store_original) {
         native_status_store_original=NULL;
         return -1;
     }
-    native_status_receiver_original=make_hook(0x10cf350,native_status_receiver_observe);
+    make_hook(0x10cf350,native_status_receiver_observe,(void **)&native_status_receiver_original);
     if (lf_hook_failures!=previous_failures || !native_status_receiver_original) {
         native_status_receiver_original=NULL;
         return -1;

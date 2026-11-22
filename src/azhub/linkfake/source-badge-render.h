@@ -131,9 +131,9 @@ static uint64_t source_badge_root(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
 }
 static int source_badge_install(void) {
     if (!source_badge_prepared) return -90;
-    source_badge_base_original=make_hook(0x1c88820,source_badge_base);
-    source_badge_root_original=make_hook(0x1c88900,source_badge_root);
-    source_badge_callback_original=make_hook(0x1c88618,source_badge_callback);
+    make_hook(0x1c88820,source_badge_base,(void **)&source_badge_base_original);
+    make_hook(0x1c88900,source_badge_root,(void **)&source_badge_root_original);
+    make_hook(0x1c88618,source_badge_callback,(void **)&source_badge_callback_original);
     return source_badge_base_original && source_badge_root_original &&
            source_badge_callback_original ? 0:-91;
 }

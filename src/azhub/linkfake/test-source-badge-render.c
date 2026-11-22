@@ -39,12 +39,13 @@ static void assign(uintptr_t *destination,const uintptr_t *source) {
 static uint64_t native_callback(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static uint64_t native_base(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
 static uint64_t native_root(uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t,uint64_t);
-static fn8 make_hook(uintptr_t address,fn8 replacement) {
+static fn8 fixture_hook_result(uintptr_t address,fn8 replacement) {
     assert(replacement);hook_calls++;
     if (address==0x1c88820) return native_base;
     if (address==0x1c88900) return native_root;
     assert(address==0x1c88618);return native_callback;
 }
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "source-badge-render.h"
 struct fixture {
     uintptr_t widget[40],controller[8],closure[2],storage;

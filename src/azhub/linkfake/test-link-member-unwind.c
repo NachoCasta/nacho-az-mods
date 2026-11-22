@@ -19,7 +19,8 @@ static void host_release(void *field) {void *value;memcpy(&value,field,sizeof va
 #define lf_log(...) ((void)0)
 #define LF_MEMBER_CALL_SITE() test_call_site
 #define LF_MEMBER_STRING_RELEASE(value) host_release(value)
-static fn8 make_hook(uintptr_t address,fn8 callback){(void)address;return callback;}
+static fn8 fixture_hook_result(uintptr_t address,fn8 callback){(void)address;return callback;}
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "link-member-continuity.h"
 static unsigned char *owner;
 static unsigned char table[3][HUB_MEMBER_RECORD_SIZE];

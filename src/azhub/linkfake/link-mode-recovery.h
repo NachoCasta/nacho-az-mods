@@ -116,9 +116,9 @@ static void probe_mode_reset_sources(time_t *ready_at,int *waiting) {
 #include "link-member-continuity.h"
 #endif
 static void probe_mode_recovery_install(void) {
-    probe_mode_complete_original=make_hook(0x140a088,probe_mode_complete);
-    probe_mode_request_original=make_hook(0x1408ef0,probe_mode_request);
-    probe_mode_network_original=make_hook(0x13fa7a8,probe_mode_network);
+    make_hook(0x140a088,probe_mode_complete,(void **)&probe_mode_complete_original);
+    make_hook(0x1408ef0,probe_mode_request,(void **)&probe_mode_request_original);
+    make_hook(0x13fa7a8,probe_mode_network,(void **)&probe_mode_network_original);
 #ifdef LF_SAFE_EJECT
     probe_member_continuity_install();
 #endif

@@ -1,5 +1,9 @@
 # Research map
 
+Released fix 0.4.12: [0.4.11 startup null-pointer crash](HUB-STARTUP-CRASH-2026-11-21.md):
+hook-original publication race confirmed in core 1.2.9/0.4.11 binaries, reproduced in the emulator
+(old 2/2 crash, fixed 2/2 survive); `make_hook` now publishes through callback storage.
+
 Completed recovery goal: [Wi-Fi-present source startup recovery](HUB-SOURCE-STARTUP-RECOVERY-GOAL.md).
 Exact0.4.11 [acceptance evidence](acceptance/usb-hub-support-source-startup-recovery-candidate.json)
 and [release notes](releases/usb-hub-support-0.4.11.md).

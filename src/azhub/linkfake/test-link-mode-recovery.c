@@ -21,7 +21,8 @@ static void community_enable_internal_link_unlocked(void) {
 }
 #define lf_log(...) ((void)0)
 static int lf_runtime_ready(void){return 1;}
-static fn8 make_hook(uintptr_t address,fn8 hook){(void)address;return hook;}
+static fn8 fixture_hook_result(uintptr_t address,fn8 hook){(void)address;return hook;}
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "link-mode-recovery.h"
 static uint64_t request(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     (void)a;(void)b;(void)c;(void)d;(void)e;(void)f;(void)g;(void)h;

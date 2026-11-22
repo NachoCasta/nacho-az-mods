@@ -770,31 +770,37 @@ int msgsnd(int q, const void *msgp, size_t sz, int flg) {
  * are replaced by LDR X17,#8 / BR X17 / .quad hook. */
 #include <sys/mman.h>
 typedef uint64_t (*fn8)(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t);
-static void *make_hook(uintptr_t target, void *hook) {
+static void make_hook(uintptr_t target, void *hook, void **original) {
+    void *unused_original=NULL;
+    if (!original) original=&unused_original;
 #ifdef LF_COMMUNITY
-    void *original=NULL;
-    if (lf_core->claim_hook("usb-hub-support",target,hook,&original)) {
+    /* The SDK publishes into callback storage before redirecting native code.
+     * A local result copied after claim_hook returns leaves a live null window. */
+    if (lf_core->claim_hook("usb-hub-support",target,hook,original)) {
         lf_hook_failures++;
-        return (void *)target;
+        *original=(void *)target;
+        return;
     }
-    return original;
+    return;
 #else
     uint32_t *t = (uint32_t *)target;
     uint32_t *tr = mmap(NULL, 4096, PROT_READ | PROT_WRITE | PROT_EXEC, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-    if (tr == MAP_FAILED) return NULL;
+    if (tr == MAP_FAILED) return;
     memcpy(tr, t, 16);
     tr[4] = 0x58000051; /* ldr x17, #8 */
     tr[5] = 0xd61f0220; /* br x17 */
     *(uint64_t *)&tr[6] = target + 16;
     __builtin___clear_cache((char *)tr, (char *)(tr + 8));
     uintptr_t pg = target & ~0xfffUL;
-    if (mprotect((void *)pg, 8192, PROT_READ | PROT_WRITE | PROT_EXEC)) return NULL;
+    if (mprotect((void *)pg, 8192, PROT_READ | PROT_WRITE | PROT_EXEC)) return;
+    __atomic_store_n(original, (void *)tr, __ATOMIC_RELAXED);
+    __atomic_thread_fence(__ATOMIC_RELEASE);
     t[0] = 0x58000051;
     t[1] = 0xd61f0220;
     *(uint64_t *)&t[2] = (uint64_t)hook;
     __builtin___clear_cache((char *)t, (char *)(t + 4));
     mprotect((void *)pg, 8192, PROT_READ | PROT_EXEC);
-    return tr;
+    return;
 #endif
 }
 static const char *jstr(uint64_t p) { /* juce::String / File: first word is the UTF-8 text */
@@ -1035,46 +1041,46 @@ static uint64_t h_client_receive(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uin
 static void probe_install(void) {
     if (getenv("LINKFAKE_HUBSRV")) hub_install();
     if (getenv("LINKFAKE_PRIVATE_TAG_CACHE")) hub_tag_cache_install();
-    if (getenv("LINKFAKE_TRACE_DB_CACHE")) o_db_cache_query=make_hook(0x12552e0,h_db_cache_query);
+    if (getenv("LINKFAKE_TRACE_DB_CACHE")) make_hook(0x12552e0,h_db_cache_query,(void **)&o_db_cache_query);
 #ifdef LF_COMMUNITY
     /* One native trampoline serves logging and private message ownership. */
-    o_dbparse=make_hook(0xef05c8,probe_parse);
-    o_mlookup=make_hook(0xe5e7d8,h_mlookup);
-    o_dispense=make_hook(0x7d6e28,h_dispense);
+    make_hook(0xef05c8,probe_parse,(void **)&o_dbparse);
+    make_hook(0xe5e7d8,h_mlookup,(void **)&o_mlookup);
+    make_hook(0x7d6e28,h_dispense,(void **)&o_dispense);
     if (getenv("LINKFAKE_BROWSER_GUARD")) {
-        o_browser_update=make_hook(0x201f5d8,h_browser_update);
-        o_browser_reply=make_hook(0x1fc9ae0,h_browser_reply);
-        o_browser_event_destroy=make_hook(0x200f0d0,h_browser_event_destroy);
+        make_hook(0x201f5d8,h_browser_update,(void **)&o_browser_update);
+        make_hook(0x1fc9ae0,h_browser_reply,(void **)&o_browser_reply);
+        make_hook(0x200f0d0,h_browser_event_destroy,(void **)&o_browser_event_destroy);
     }
     if (getenv("LINKFAKE_TRACE_CLIENT")) {
-        o_client_receive=make_hook(0xe67678,h_client_receive);
-        o_track_publish=make_hook(0x114dff8,h_track_publish);
+        make_hook(0xe67678,h_client_receive,(void **)&o_client_receive);
+        make_hook(0x114dff8,h_track_publish,(void **)&o_track_publish);
         if (getenv("LINKFAKE_TRACE_CANCEL")) {
-            o_list_cancel=make_hook(0x1142460,h_list_cancel);
-            o_cancel_request=make_hook(0xe61ff0,h_cancel_request);
-            o_request_owner_destroy=make_hook(0x1fd2d08,h_request_owner_destroy);
+            make_hook(0x1142460,h_list_cancel,(void **)&o_list_cancel);
+            make_hook(0xe61ff0,h_cancel_request,(void **)&o_cancel_request);
+            make_hook(0x1fd2d08,h_request_owner_destroy,(void **)&o_request_owner_destroy);
         }
     }
 #else
     if (getenv("LINKFAKE_TRACE_CLIENT")) {
-        o_client_receive=make_hook(0xe67678,h_client_receive);
-        o_track_publish=make_hook(0x114dff8,h_track_publish);
-        o_list_cancel=make_hook(0x1142460,h_list_cancel);
-        o_cancel_request=make_hook(0xe61ff0,h_cancel_request);
-        if (getenv("LINKFAKE_TRACE_CANCEL")) o_request_owner_destroy=make_hook(0x1fd2d08,h_request_owner_destroy);
+        make_hook(0xe67678,h_client_receive,(void **)&o_client_receive);
+        make_hook(0x114dff8,h_track_publish,(void **)&o_track_publish);
+        make_hook(0x1142460,h_list_cancel,(void **)&o_list_cancel);
+        make_hook(0xe61ff0,h_cancel_request,(void **)&o_cancel_request);
+        if (getenv("LINKFAKE_TRACE_CANCEL")) make_hook(0x1fd2d08,h_request_owner_destroy,(void **)&o_request_owner_destroy);
     }
-    o_mlookup = make_hook(0xe5e7d8, h_mlookup);
-    o_warn = make_hook(0x236da70, h_warn);
-    o_dispense = make_hook(0x7d6e28, h_dispense);
+    make_hook(0xe5e7d8, h_mlookup,(void **)&o_mlookup);
+    make_hook(0x236da70, h_warn,(void **)&o_warn);
+    make_hook(0x7d6e28, h_dispense,(void **)&o_dispense);
     if (getenv("LINKFAKE_BROWSER_GUARD")) {
-        o_browser_update=make_hook(0x201f5d8,h_browser_update);
-        o_browser_reply=make_hook(0x1fc9ae0,h_browser_reply);
-        o_browser_event_destroy=make_hook(0x200f0d0,h_browser_event_destroy);
+        make_hook(0x201f5d8,h_browser_update,(void **)&o_browser_update);
+        make_hook(0x1fc9ae0,h_browser_reply,(void **)&o_browser_reply);
+        make_hook(0x200f0d0,h_browser_event_destroy,(void **)&o_browser_event_destroy);
     }
-    o_dbparse = make_hook(0xef05c8, h_dbparse);
-    o_mounted = make_hook(0x1373ca8, h_mounted);
-    o_libopen = make_hook(0x1352ee8, h_libopen);
-    o_slot2sdid = make_hook(0x1116bf0, h_slot2sdid);
+    make_hook(0xef05c8, h_dbparse,(void **)&o_dbparse);
+    make_hook(0x1373ca8, h_mounted,(void **)&o_mounted);
+    make_hook(0x1352ee8, h_libopen,(void **)&o_libopen);
+    make_hook(0x1116bf0, h_slot2sdid,(void **)&o_slot2sdid);
     lf_log("probe hooks: mounted=%p libopen=%p", (void *)o_mounted, (void *)o_libopen);
 #endif
 }

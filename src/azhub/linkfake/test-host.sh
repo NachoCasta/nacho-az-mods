@@ -15,6 +15,7 @@ test -f "$sdk_include/azmod-mod.h" || { echo 'Set AZ_SDK_INCLUDE to the pinned S
 output=$(mktemp -d /tmp/azhub-host-tests.XXXXXX)
 trap 'rm -rf "$output"' EXIT HUP INT TERM
 TEST_CC="$compiler" AZ_SDK_INCLUDE="$sdk_include" python3 ./test-hook-registration.py
+TEST_CC="$compiler" AZ_SDK_INCLUDE="$sdk_include" python3 ./test-hook-publication.py
 TEST_CC="$compiler" python3 ./test-port-reconciliation.py
 TEST_CC="$compiler" python3 ./test-source-media.py
 TEST_CC="$compiler" python3 ./test-source-announcement.py

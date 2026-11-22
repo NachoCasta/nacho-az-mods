@@ -40,7 +40,7 @@ static uint64_t hub_metadata_mount(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     return result;
 }
 static int hub_metadata_install(void) {
-    hub_metadata_mount_original=make_hook(0x1376c98,hub_metadata_mount);
+    make_hook(0x1376c98,hub_metadata_mount,(void **)&hub_metadata_mount_original);
     return hub_metadata_mount_original ? 0:-93;
 }
 #endif

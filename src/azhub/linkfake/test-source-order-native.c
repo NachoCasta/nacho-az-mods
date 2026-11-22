@@ -17,11 +17,12 @@ static uint64_t native_refresh(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     assert(first==expected_first); /* Native refresh must see the final order. */
     calls++;return 0x5678;
 }
-static fn8 make_hook(uintptr_t address,fn8 replacement);
+static fn8 fixture_hook_result(uintptr_t address,fn8 replacement);
 static uintptr_t model_vtable[3]={0,0,0x1c33a70};
 #define HUB_SOURCE_MODEL_VTABLE ((uintptr_t)model_vtable)
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "source-order-native.h"
-static fn8 make_hook(uintptr_t address,fn8 replacement) {
+static fn8 fixture_hook_result(uintptr_t address,fn8 replacement) {
     assert(address==0x1c30340 && replacement==hub_source_refresh_ordered);return native_refresh;
 }
 static void refresh(unsigned char *list) {

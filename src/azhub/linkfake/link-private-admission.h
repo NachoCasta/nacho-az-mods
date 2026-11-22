@@ -52,6 +52,6 @@ static uint64_t probe_operate(uint64_t state, uint64_t event,
 }
 
 static void probe_private_admission_install(void) {
-    probe_network_original=make_hook(0x13df908,probe_network_snapshot);
-    probe_operate_original=make_hook(0x13f22b8,probe_operate);
+    make_hook(0x13df908,probe_network_snapshot,(void **)&probe_network_original);
+    make_hook(0x13f22b8,probe_operate,(void **)&probe_operate_original);
 }

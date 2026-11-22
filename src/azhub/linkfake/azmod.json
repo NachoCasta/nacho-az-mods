@@ -2,7 +2,7 @@
   "azmod": 1,
   "id": "usb-hub-support",
   "name": "USB Hub Support",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "author": "NachoCasta",
   "source": "https://github.com/NachoCasta/nacho-az-mods/tree/main/src/azhub",
   "api": 1,

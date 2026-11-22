@@ -1,5 +1,23 @@
 # Current state
 
+## Release 0.4.12: startup hook-publication crash fix
+
+The owner saw 0.4.11 suspended with "the deck stopped while this mod was
+starting". The retained physical crash record shows a null original-function
+call in `probe_queue_pop` (`0x237f900`). Core 1.2.9 writes `*orig` before making
+a hook live. However, 0.4.11 copied the original into its global only after
+`claim_hook` returned, so a busy UI thread could enter the hook with a null
+pointer. 0.4.12 passes callback storage directly to `claim_hook`.
+
+An emulator-only forced window reproduces the field failure with 0.4.11 sources
+(2/2) and passes with the fix (2/2). The exact shipped sharing runtime
+`d23170c5...` passes host suites and an emulator smoke pass (Sources, browsing,
+loading, waveforms, playback, Link On/Off, knob eject). Physical acceptance is not
+claimed. Published as
+[USB Hub Support 0.4.12](https://github.com/NachoCasta/nacho-az-mods/releases/tag/usb-hub-support-0.4.12).
+See the [investigation](HUB-STARTUP-CRASH-2026-11-21.md) and
+[candidate evidence](acceptance/usb-hub-support-0.4.12-startup-crash-candidate.json).
+
 ## Release0.4.11: source startup recovery and persistent eject feedback
 
 The owner accepts the0.4.10 eject UI, then confirms a freshly reconnected,

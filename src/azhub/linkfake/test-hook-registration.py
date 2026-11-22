@@ -50,7 +50,7 @@ def preprocess(file, flags=()):
 def check(source, directory):
     # Check the entire translation unit, including nested installers, for zero
     # or duplicate literal parser registrations surviving the real build flags.
-    calls = re.findall(r'make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*\)', source)
+    calls = re.findall(r'make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*,', source)
     assert [(a, h) for a, h in calls if int(a, 16) == 0xef05c8] == [('0xef05c8', 'probe_parse')], 'Parser must be claimed exactly once'
     assert [(a, h) for a, h in calls if int(a, 16) == 0x1376c98] == [('0x1376c98', 'hub_metadata_mount')], 'Metadata task body must be claimed exactly once'
     assert [(a, h) for a, h in calls if int(a, 16) == 0x1978970] == [('0x1978970', 'hub_info_directory_entry')], 'Private analysis directory must be claimed exactly once'
@@ -77,13 +77,13 @@ def check(source, directory):
     # missing trampoline assignments and duplicate claims across installers.
     bodies = {name: body(source, name) for name in INSTALLERS}
     returns = {name: 'int' if name == 'hub_info_directory_install' else 'void' for name in bodies}
-    assignments = re.findall(r'(\w+)\s*=\s*make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*\)', '\n'.join(bodies.values()))
+    assignments = [(v,a,c) for a,c,v in re.findall(r'make_hook\s*\(\s*(0x[0-9a-fA-F]+)\s*,\s*(\w+)\s*,\s*\(void \*\*\)\s*&\s*(\w+)\s*\)', '\n'.join(bodies.values()))]
     variables = sorted({a for a, _, _ in assignments} | {'o_dbparse'})
     callbacks = sorted({c for _, _, c in assignments})
     harness = '#include <stdint.h>\n#include <assert.h>\n#include <stdlib.h>\n'
     harness += 'typedef void (*fn)(void); static void native(void) {}\n'
     harness += 'static uintptr_t addresses[256]; static fn handlers[256]; static int count;\n'
-    harness += 'static fn make_hook(uintptr_t a,fn h){assert(count<256); addresses[count]=a; handlers[count++]=h; return native;}\n'
+    harness += 'static void make_hook(uintptr_t a,fn h,void **o){assert(count<256); addresses[count]=a; handlers[count++]=h; *o=(void *)native;}\n'
     harness += '#define getenv(x) ((char *)"1")\n#define lf_log(...) ((void)0)\n'
     harness += 'static void hub_install(void){} static void hub_tag_cache_install(void){}\n'
     harness += ''.join('static fn ' + name + ';\n' for name in variables)
@@ -129,8 +129,8 @@ def main():
         directory = Path(temporary)
         check(supported, directory)
         check_directory_guard(supported, directory)
-        for replacement in ('', 'o_dbparse=make_hook(0xef05c8,probe_parse);' * 2):
-            broken, count = re.subn(r'o_dbparse\s*=\s*make_hook\(0xef05c8,\s*probe_parse\);', replacement, supported)
+        for replacement in ('', 'make_hook(0xef05c8,probe_parse,(void **)&o_dbparse);' * 2):
+            broken, count = re.subn(r'make_hook\(0xef05c8,\s*probe_parse,\s*\(void \*\*\)&o_dbparse\);', replacement, supported)
             assert count == 1
             try:
                 check(broken, directory)
@@ -138,7 +138,7 @@ def main():
                 continue
             raise AssertionError('Regression checker accepted zero/double parser registration')
     historical = preprocess('linkfake.c')
-    assert re.findall(r'make_hook\s*\(0xef05c8,\s*(\w+)\)', historical) == ['h_dbparse']
+    assert re.findall(r'make_hook\s*\(0xef05c8,\s*(\w+)\s*,', historical) == ['h_dbparse']
     # The retained standalone research branch uses GCC atomic builtins on C11
     # atomic objects. Compile it with the GCC family used by the ARM SDK;
     # Clang still preprocesses and executes the supported registration controls.

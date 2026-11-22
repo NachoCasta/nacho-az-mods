@@ -49,5 +49,5 @@ static void hub_tag_cache_install(void) {
      * x0/receiver and real arguments are still intact at these boundaries. */
     const uintptr_t addresses[]={0x1829d38,0x1828978,0x1829620,0x1829990,0x18282d0,0x18285b0,0x1827ff0,0x1827d20};
     void *entries[]={hub_tag_0,hub_tag_1,hub_tag_2,hub_tag_3,hub_tag_4,hub_tag_5,hub_tag_6,hub_tag_7};
-    for (unsigned i=0;i<8;i++) hub_tag_cache_originals[i]=make_hook(addresses[i],entries[i]);
+    for (unsigned i=0;i<8;i++) make_hook(addresses[i],entries[i],(void **)&hub_tag_cache_originals[i]);
 }

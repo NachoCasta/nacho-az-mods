@@ -472,14 +472,14 @@ static void hub_install(void) {
 #ifdef LF_SAFE_EJECT
     if (hub_info_directory_install()) {lf_hook_failures++;return;}
 #endif
-    hub_usb2_original=make_hook(0x1869b48,hub_usb2);
-    hub_usb3_original=make_hook(0x1869e98,hub_usb3);
-    hub_identity_lookup_original=make_hook(0x1981560,hub_identity_lookup);
+    make_hook(0x1869b48,hub_usb2,(void **)&hub_usb2_original);
+    make_hook(0x1869e98,hub_usb3,(void **)&hub_usb3_original);
+    make_hook(0x1981560,hub_identity_lookup,(void **)&hub_identity_lookup_original);
     /* Streaming service activation is unrelated to USB initialization. */
     if (getenv("LINKFAKE_LATE_SERVERS")) {
         hub_factory_original=(hub_factory_fn)0x137bc60;
     } else {
-        hub_factory_original=(hub_factory_fn)make_hook(0x137bc60,hub_factory_entry);
-        hub_holder_original=make_hook(0x13809f0,hub_holder);
+        make_hook(0x137bc60,hub_factory_entry,(void **)&hub_factory_original);
+        make_hook(0x13809f0,hub_holder,(void **)&hub_holder_original);
     }
 }

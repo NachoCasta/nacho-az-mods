@@ -24,7 +24,7 @@ static uint64_t original(uint64_t a,uint64_t b,uint64_t c,uint64_t d,
     uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     ++forwards;memcpy((void *)a,(void *)b,c ? 16:4);return 0x1234;
 }
-static fn8 make_hook(uintptr_t site,fn8 callback) {
+static fn8 fixture_hook_result(uintptr_t site,fn8 callback) {
     assert(callback);
     if (site==0x13dec28) return original_config;
     assert(site==0x2479b90);return original;
@@ -32,6 +32,7 @@ static fn8 make_hook(uintptr_t site,fn8 callback) {
 static void network_change(uintptr_t owner);
 #define HUB_LOCAL_ADDRESS_CALL_SITE() call_site
 #define HUB_LOCAL_NETWORK_CHANGE(owner) network_change(owner)
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "local-transport-native.h"
 static void network_change(uintptr_t owner) {
     ++changes;

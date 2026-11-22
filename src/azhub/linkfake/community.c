@@ -246,7 +246,7 @@ static int community_init(const az_core_v1 *core) {
         {0x427430,recv},{0x4275f0,connect},{0x428620,write}
     };
     for (unsigned i=0;i<sizeof entries/sizeof entries[0];i++)
-        make_hook(entries[i].address,entries[i].hook);
+        make_hook(entries[i].address,entries[i].hook,NULL);
     if (lf_hook_failures) return community_abort(-3);
     if (getenv("LINKFAKE_PROBE")) probe_install();
     if (lf_hook_failures) return community_abort(-4);

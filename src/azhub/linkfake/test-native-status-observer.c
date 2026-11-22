@@ -14,7 +14,7 @@ static const char *kernel_release="6.6.138-dirty";
 static uint64_t original(uint64_t a,uint64_t b,uint64_t c,uint64_t d,uint64_t e,uint64_t f,uint64_t g,uint64_t h) {
     uint64_t actual[]={a,b,c,d,e,f,g,h};assert(!memcmp(actual,expected,sizeof actual));++called;return UINT64_C(0x123456789abcdef0);
 }
-static fn8 make_hook(uintptr_t address,fn8 replacement) {
+static fn8 fixture_hook_result(uintptr_t address,fn8 replacement) {
     assert((address==0x10d324c || address==0x10cf350) && replacement);++hooks;
     if (decline_hook) { ++lf_hook_failures;return (fn8)address; }
     return original;
@@ -22,6 +22,7 @@ static fn8 make_hook(uintptr_t address,fn8 replacement) {
 static int fake_uname(struct utsname *state) { memset(state,0,sizeof *state);strcpy(state->release,kernel_release);return 0; }
 #define uname fake_uname
 #define lf_log(...) (++logs)
+#define make_hook(address,callback,original) (*(original)=(void *)fixture_hook_result(address,callback))
 #include "native-status-observer.h"
 static void observe(unsigned char key[4],unsigned char fields[16]) {
     expected[0]=1;expected[1]=(uintptr_t)key;expected[2]=(uintptr_t)fields;
